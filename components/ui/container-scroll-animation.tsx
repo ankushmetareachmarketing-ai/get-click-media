@@ -3,10 +3,8 @@ import React, { useRef } from "react";
 import { useScroll, useTransform, motion, MotionValue } from "motion/react";
 
 export const ContainerScroll = ({
-  titleComponent,
   children,
 }: {
-  titleComponent: string | React.ReactNode;
   children: React.ReactNode;
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -36,16 +34,17 @@ export const ContainerScroll = ({
 
   return (
     <div
-      className="h-[60rem] md:h-[80rem] flex items-center justify-center relative p-2 md:p-20"
+      className=" flex items-start pt-8 justify-between mb-12"          
       ref={containerRef}
+             
+
     >
       <div
-        className="py-10 md:py-40 w-full relative"
+        className="py-2 md:py-10 w-full relative"
         style={{
           perspective: "1000px",
         }}
       >
-        <Header translate={translate} titleComponent={titleComponent} />
         <Card rotate={rotate} translate={translate} scale={scale}>
           {children}
         </Card>

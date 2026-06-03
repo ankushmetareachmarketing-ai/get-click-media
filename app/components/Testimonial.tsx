@@ -84,7 +84,7 @@ export default function Testimonial() {
               title="Trusted by 5,000+ businesses across India"
               highlight="5,000+ businesses"
               description="Real results from real customers — see how Get Click Media transforms customer communication at scale."
-              align="center"
+              align="left"
               size="lg"
             />
           </div>

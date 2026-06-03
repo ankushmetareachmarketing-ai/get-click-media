@@ -10,7 +10,7 @@ const logos = ["Notion", "mailchimp", "Airtable", "GLITFOOD"];
 const Hero: React.FC = () => {
   return (
     <section
-      className="m-2 rounded-2xl overflow-hidden relative"
+      className="m-1 sm:m-2 rounded-2xl overflow-hidden relative"
       style={{
         background:
           "linear-gradient(130deg, #c7d4f8 0%, #dce6ff 35%, #eef1ff 65%, #f5f7ff 100%)",
@@ -33,9 +33,9 @@ const Hero: React.FC = () => {
       `}</style>
 
       {/* ── Main content ──────────────────────────────────────────── */}
-      <div className="max-w-screen-xl mx-auto px-8 pt-16 pb-32 flex flex-col lg:flex-row items-center gap-12 min-h-[calc(100vh-1rem)]">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-8 pt-24 sm:pt-32 pb-24 sm:pb-32 flex flex-col lg:flex-row items-center gap-8 sm:gap-12 min-h-[calc(100vh-1rem)]">
         {/* Left */}
-        <div className="flex-1 flex flex-col gap-6 z-10">
+        <div className="flex-1 flex flex-col gap-5 sm:gap-6 z-10">
          
 
           <SectionHeading
@@ -47,29 +47,30 @@ const Hero: React.FC = () => {
             size="lg"
           />
 
-          <div className="flex items-center gap-3 flex-wrap">
+          <div className="flex flex-row items-center gap-2 sm:gap-3">
             {/* Button 1 */}
-            <button className="px-6 h-14 min-w-[220px] cursor-pointer rounded-full bg-[linear-gradient(135deg,var(--primary),var(--primary-light))] text-white text-[16px] font-bold shadow-md hover:shadow-lg hover:scale-105 transition-all flex items-center justify-center gap-2">
+            <button className="px-3 sm:px-6 h-9 sm:h-14 sm:min-w-55 cursor-pointer rounded-full bg-[linear-gradient(135deg,var(--primary),var(--primary-light))] text-white text-xs sm:text-[16px] font-bold shadow-md hover:shadow-lg hover:scale-105 transition-all flex items-center justify-center gap-1.5 sm:gap-2">
               <span>Request a demo</span>
-              <span className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[color:var(--primary)] shadow-sm">
-                <ChevronRight size={15} />
+              <span className="w-5 h-5 sm:w-8 sm:h-8 rounded-full bg-white flex items-center justify-center text-primary shadow-sm">
+                <ChevronRight size={11} className="sm:hidden" />
+                <ChevronRight size={15} className="hidden sm:block" />
               </span>
             </button>
 
             {/* Button 2 */}
-            <button className="px-6 h-14 min-w-[220px] cursor-pointer rounded-full bg-white text-black text-[16px] font-bold shadow-md hover:shadow-lg hover:scale-105 transition-all flex items-center justify-center gap-2 border border-[color:var(--border)]">
+            <button className="px-3 sm:px-6 h-9 sm:h-14 sm:min-w-55 cursor-pointer rounded-full bg-white text-black text-xs sm:text-[16px] font-bold shadow-md hover:shadow-lg hover:scale-105 transition-all flex items-center justify-center gap-2 border border-border">
               <span>Explore our services</span>
             </button>
           </div>
-          <div className="mt-6 pt-6 border-t border-white/60">
-            <p className="text-xs text-gray-400 mb-4">
+          <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-white/60">
+            <p className="text-xs text-gray-400 mb-3 sm:mb-4">
               Trusted by 25K+ businesses teams
             </p>
-            <div className="flex items-center gap-8 flex-wrap">
+            <div className="flex items-center gap-4 sm:gap-8 flex-wrap">
               {logos.map((logo) => (
                 <span
                   key={logo}
-                  className="text-sm font-semibold text-gray-400 tracking-tight"
+                  className="text-xs sm:text-sm font-semibold text-gray-400 tracking-tight"
                 >
                   {logo}
                 </span>
@@ -79,16 +80,13 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Right */}
-        <div
-          className="flex-1 flex justify-center items-center relative"
-          style={{ minHeight: 480 }}
-        >
+        <div className="flex-1 flex justify-center items-center relative w-full">
           <Image
             src="/images/heros.png"
             alt="Phone Mockup"
             width={400}
             height={400}
-            className="relative z-10"
+            className="relative z-10 w-52 sm:w-72 md:w-80 lg:w-100 h-auto"
           />
         </div>
       </div>

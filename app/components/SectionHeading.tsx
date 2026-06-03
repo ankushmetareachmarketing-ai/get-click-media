@@ -42,9 +42,9 @@ export default function SectionHeading({
   }[align]
 
   const titleSize = {
-    sm: 'text-2xl sm:text-3xl',
-    md: 'text-[28px] sm:text-4xl',
-    lg: 'text-4xl sm:text-[52px]',
+    sm: 'text-xl sm:text-2xl sm:text-3xl',
+    md: 'text-2xl sm:text-[28px] md:text-4xl',
+    lg: 'text-3xl sm:text-4xl md:text-[52px]',
   }[size]
 
   const renderTitle = () => {
@@ -100,7 +100,7 @@ export default function SectionHeading({
       {/* Description — text-muted from globals */}
       {description && (
         <p
-          className="mt-1 max-w-xl text-[15px] leading-relaxed"
+          className="mt-1 max-w-full sm:max-w-xl text-sm sm:text-[15px] leading-relaxed"
           style={{ color: 'var(--text-muted)' }}
         >
           {description}

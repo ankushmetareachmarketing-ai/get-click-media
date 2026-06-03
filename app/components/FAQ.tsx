@@ -92,7 +92,7 @@ export default function FAQ() {
             title="Everything you need to know"
             highlight="to know"
             description="Can't find your answer? Email us at hello@getclickmedia.in — we reply within a few hours."
-            align="center"
+            align="left"
             size="lg"
           />
         </div>

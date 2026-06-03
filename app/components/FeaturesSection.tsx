@@ -110,7 +110,7 @@ function ServiceCard({ service }: { service: Service }) {
         className={`
           relative rounded-3xl overflow-hidden border
           ${service.bgColor} ${service.borderColor}
-          h-72 sm:h-96 flex items-center justify-center
+          h-96 sm:h-96 flex items-center justify-center
           shadow-sm
         `}
       >

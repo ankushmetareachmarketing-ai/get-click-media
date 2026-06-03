@@ -39,6 +39,8 @@ interface MegaMenuItem {
   description: string;
   featured?: boolean;
   videoLabel?: string;
+  color?: string;
+  bgColor?: string;
 }
 
 interface MegaMenuSection {
@@ -49,6 +51,9 @@ interface MegaMenuSection {
 interface NavItem {
   label: string;
   hasMenu: boolean;
+  sidebarIcon?: React.ReactNode;
+  sidebarColor?: string;
+  sidebarBgColor?: string;
   menu?: {
     sections: MegaMenuSection[];
     featuredCard?: {
@@ -66,11 +71,13 @@ const navItems: NavItem[] = [
   {
     label: "Platform",
     hasMenu: true,
+    sidebarIcon: <Layers size={18} />,
+    sidebarColor: "#6366f1",
+    sidebarBgColor: "#eef2ff",
     menu: {
       featuredCard: {
         title: "Conversation Cloud",
-        description:
-          "AI-powered platform for seamless, omnichannel customer engagement and automation",
+        description: "AI-powered platform for seamless, omnichannel customer engagement and automation",
         cta: "Learn more",
         videoLabel: "What is Conversation Cloud?",
       },
@@ -78,64 +85,25 @@ const navItems: NavItem[] = [
         {
           sectionTitle: "Products",
           items: [
-            {
-              icon: <MessageSquare size={20} />,
-              title: "Communicate",
-              description:
-                "Smart CPaaS platform for seamless, multi-channel messaging and intelligent customer interactions",
-            },
-            {
-              icon: <Megaphone size={20} />,
-              title: "Advertise",
-              description:
-                "Drive engagement with targeted, personalized ads on WhatsApp and other messaging channels",
-            },
-            {
-              icon: <Bot size={20} />,
-              title: "Commerce",
-              description:
-                "Enable end-to-end commerce experiences directly within messaging channels",
-            },
+            { icon: <MessageSquare size={20} />, title: "Communicate", description: "Smart CPaaS platform for seamless, multi-channel messaging", color: "#3b82f6", bgColor: "#eff6ff" },
+            { icon: <Megaphone size={20} />, title: "Advertise", description: "Drive engagement with targeted, personalized ads on WhatsApp", color: "#8b5cf6", bgColor: "#f5f3ff" },
+            { icon: <Bot size={20} />, title: "Commerce", description: "Enable end-to-end commerce experiences within messaging channels", color: "#10b981", bgColor: "#ecfdf5" },
           ],
         },
         {
           sectionTitle: "Capabilities",
           items: [
-            {
-              icon: <Sparkles size={20} />,
-              title: "AI Agents",
-              description: "Autonomous AI agents for intelligent automation",
-            },
-            {
-              icon: <Zap size={20} />,
-              title: "Flow Builder",
-              description: "Visual workflow builder for complex journeys",
-            },
-            {
-              icon: <BarChart2 size={20} />,
-              title: "Analytics",
-              description: "Deep insights across all conversation channels",
-            },
+            { icon: <Sparkles size={20} />, title: "AI Agents", description: "Autonomous AI agents for intelligent automation", color: "#f59e0b", bgColor: "#fffbeb" },
+            { icon: <Zap size={20} />, title: "Flow Builder", description: "Visual workflow builder for complex journeys", color: "#06b6d4", bgColor: "#ecfeff" },
+            { icon: <BarChart2 size={20} />, title: "Analytics", description: "Deep insights across all conversation channels", color: "#6366f1", bgColor: "#eef2ff" },
           ],
         },
         {
           sectionTitle: "Channels",
           items: [
-            {
-              icon: <Phone size={20} />,
-              title: "WhatsApp Business",
-              description: "Reach 2B+ users on the world's largest platform",
-            },
-            {
-              icon: <Mail size={20} />,
-              title: "SMS & RCS",
-              description: "Rich messaging with multimedia support",
-            },
-            {
-              icon: <Globe size={20} />,
-              title: "Web & App Chat",
-              description: "Embed live chat on any digital surface",
-            },
+            { icon: <Phone size={20} />, title: "WhatsApp Business", description: "Reach 2B+ users on the world's largest platform", color: "#22c55e", bgColor: "#f0fdf4" },
+            { icon: <Mail size={20} />, title: "SMS & RCS", description: "Rich messaging with multimedia support", color: "#3b82f6", bgColor: "#eff6ff" },
+            { icon: <Globe size={20} />, title: "Web & App Chat", description: "Embed live chat on any digital surface", color: "#8b5cf6", bgColor: "#f5f3ff" },
           ],
         },
       ],
@@ -144,30 +112,17 @@ const navItems: NavItem[] = [
   {
     label: "AI Offerings",
     hasMenu: true,
+    sidebarIcon: <Sparkles size={18} />,
+    sidebarColor: "#8b5cf6",
+    sidebarBgColor: "#f5f3ff",
     menu: {
       sections: [
         {
           items: [
-            {
-              icon: <Bot size={20} />,
-              title: "ACE LLM",
-              description: "Purpose-built large language model for CX",
-            },
-            {
-              icon: <Sparkles size={20} />,
-              title: "AI Copilot",
-              description: "AI-assisted agent productivity tools",
-            },
-            {
-              icon: <Layers size={20} />,
-              title: "Generative AI Studio",
-              description: "Build and deploy custom AI models",
-            },
-            {
-              icon: <Zap size={20} />,
-              title: "Smart Automation",
-              description: "Intelligent process automation at scale",
-            },
+            { icon: <Bot size={20} />, title: "ACE LLM", description: "Purpose-built large language model for CX", color: "#8b5cf6", bgColor: "#f5f3ff" },
+            { icon: <Sparkles size={20} />, title: "AI Copilot", description: "AI-assisted agent productivity tools", color: "#f59e0b", bgColor: "#fffbeb" },
+            { icon: <Layers size={20} />, title: "Generative AI Studio", description: "Build and deploy custom AI models", color: "#ec4899", bgColor: "#fdf2f8" },
+            { icon: <Zap size={20} />, title: "Smart Automation", description: "Intelligent process automation at scale", color: "#06b6d4", bgColor: "#ecfeff" },
           ],
         },
       ],
@@ -176,46 +131,25 @@ const navItems: NavItem[] = [
   {
     label: "Solutions",
     hasMenu: true,
+    sidebarIcon: <Building2 size={18} />,
+    sidebarColor: "#3b82f6",
+    sidebarBgColor: "#eff6ff",
     menu: {
       sections: [
         {
           sectionTitle: "By Industry",
           items: [
-            {
-              icon: <ShoppingCart size={20} />,
-              title: "Retail & E-commerce",
-              description: "Conversational commerce for modern retail",
-            },
-            {
-              icon: <HeartHandshake size={20} />,
-              title: "Banking & Finance",
-              description: "Secure, compliant customer engagement",
-            },
-            {
-              icon: <Building2 size={20} />,
-              title: "Healthcare",
-              description: "Patient communication reimagined",
-            },
+            { icon: <ShoppingCart size={20} />, title: "Retail & E-commerce", description: "Conversational commerce for modern retail", color: "#f97316", bgColor: "#fff7ed" },
+            { icon: <HeartHandshake size={20} />, title: "Banking & Finance", description: "Secure, compliant customer engagement", color: "#3b82f6", bgColor: "#eff6ff" },
+            { icon: <Building2 size={20} />, title: "Healthcare", description: "Patient communication reimagined", color: "#14b8a6", bgColor: "#f0fdfa" },
           ],
         },
         {
           sectionTitle: "By Use Case",
           items: [
-            {
-              icon: <Users size={20} />,
-              title: "Customer Support",
-              description: "Deflect tickets, delight customers",
-            },
-            {
-              icon: <Star size={20} />,
-              title: "Marketing & Campaigns",
-              description: "Personalised campaigns at scale",
-            },
-            {
-              icon: <Briefcase size={20} />,
-              title: "Sales Enablement",
-              description: "Conversational selling on every channel",
-            },
+            { icon: <Users size={20} />, title: "Customer Support", description: "Deflect tickets, delight customers", color: "#6366f1", bgColor: "#eef2ff" },
+            { icon: <Star size={20} />, title: "Marketing & Campaigns", description: "Personalised campaigns at scale", color: "#f59e0b", bgColor: "#fffbeb" },
+            { icon: <Briefcase size={20} />, title: "Sales Enablement", description: "Conversational selling on every channel", color: "#22c55e", bgColor: "#f0fdf4" },
           ],
         },
       ],
@@ -224,30 +158,17 @@ const navItems: NavItem[] = [
   {
     label: "Resources",
     hasMenu: true,
+    sidebarIcon: <BookOpen size={18} />,
+    sidebarColor: "#f97316",
+    sidebarBgColor: "#fff7ed",
     menu: {
       sections: [
         {
           items: [
-            {
-              icon: <BookOpen size={20} />,
-              title: "Blog",
-              description: "Latest insights and product updates",
-            },
-            {
-              icon: <FileText size={20} />,
-              title: "Whitepapers",
-              description: "In-depth research and guides",
-            },
-            {
-              icon: <Video size={20} />,
-              title: "Webinars",
-              description: "On-demand and upcoming live events",
-            },
-            {
-              icon: <Award size={20} />,
-              title: "Case Studies",
-              description: "Real results from real customers",
-            },
+            { icon: <BookOpen size={20} />, title: "Blog", description: "Latest insights and product updates", color: "#3b82f6", bgColor: "#eff6ff" },
+            { icon: <FileText size={20} />, title: "Whitepapers", description: "In-depth research and guides", color: "#8b5cf6", bgColor: "#f5f3ff" },
+            { icon: <Video size={20} />, title: "Webinars", description: "On-demand and upcoming live events", color: "#ef4444", bgColor: "#fef2f2" },
+            { icon: <Award size={20} />, title: "Case Studies", description: "Real results from real customers", color: "#f59e0b", bgColor: "#fffbeb" },
           ],
         },
       ],
@@ -256,30 +177,17 @@ const navItems: NavItem[] = [
   {
     label: "Company",
     hasMenu: true,
+    sidebarIcon: <Users size={18} />,
+    sidebarColor: "#22c55e",
+    sidebarBgColor: "#f0fdf4",
     menu: {
       sections: [
         {
           items: [
-            {
-              icon: <Building2 size={20} />,
-              title: "About Us",
-              description: "Our story, mission, and team",
-            },
-            {
-              icon: <Users size={20} />,
-              title: "Careers",
-              description: "Join the team building the future of CX",
-            },
-            {
-              icon: <Globe size={20} />,
-              title: "Newsroom",
-              description: "Press releases and media resources",
-            },
-            {
-              icon: <HeartHandshake size={20} />,
-              title: "Contact",
-              description: "Get in touch with our team",
-            },
+            { icon: <Building2 size={20} />, title: "About Us", description: "Our story, mission, and team", color: "#3b82f6", bgColor: "#eff6ff" },
+            { icon: <Users size={20} />, title: "Careers", description: "Join the team building the future of CX", color: "#22c55e", bgColor: "#f0fdf4" },
+            { icon: <Globe size={20} />, title: "Newsroom", description: "Press releases and media resources", color: "#6366f1", bgColor: "#eef2ff" },
+            { icon: <HeartHandshake size={20} />, title: "Contact", description: "Get in touch with our team", color: "#ec4899", bgColor: "#fdf2f8" },
           ],
         },
       ],
@@ -387,6 +295,7 @@ const Header: React.FC = () => {
   const { openModal } = useModalStore();
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const headerRef = useRef<HTMLElement>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -418,17 +327,17 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <header ref={headerRef} className="fixed w-full top-2 z-50 ">
+      <header ref={headerRef} className="fixed w-full top-2 z-9999">
 
-        <div className="bg-white shadow-sm py-2 rounded-full w-[80%] mx-auto mt-3 relative">
-          <div className="max-w-screen-xl mx-auto px-6 flex items-center h-16 gap-8 relative">
+        <div className="bg-white shadow-sm py-1 sm:py-2 rounded-full w-[95%] sm:w-[80%] mx-auto mt-3 relative">
+          <div className="max-w-screen-xl mx-auto px-4 sm:px-6 flex items-center h-12 sm:h-16 gap-4 sm:gap-8 relative">
             <a href="#" className="flex items-center gap-2 flex-shrink-0">
               <Image
                 src="/images/gcm-logo.png"
                 alt="Logo"
                 width={100}
                 height={100}
-                className="w-auto h-10"
+                className="w-auto h-7 sm:h-10"
               />
             </a>
 
@@ -489,12 +398,126 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {mobileOpen && (
-          <div className="lg:hidden bg-white border-t border-gray-100 shadow-xl max-h-[80vh] overflow-y-auto">
-            {/* mobile menu unchanged */}
-          </div>
-        )}
       </header>
+
+      {/* Blurry overlay */}
+      <div
+        className={`lg:hidden fixed inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 ${mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
+        style={{ zIndex: 9998 }}
+        onClick={() => setMobileOpen(false)}
+      />
+
+      {/* Left sidebar drawer */}
+      <div
+        className={`lg:hidden fixed top-0 left-0 h-full w-72 flex flex-col transition-transform duration-300 ease-in-out ${mobileOpen ? "translate-x-0" : "-translate-x-full"}`}
+        style={{ zIndex: 9999, background: "#fff", boxShadow: "4px 0 32px rgba(0,0,0,0.13)" }}
+      >
+        {/* Gradient header */}
+        <div
+          className="px-4 pt-5 pb-4 flex items-center justify-between shrink-0"
+          style={{ background: "linear-gradient(135deg,#6366f1 0%,#8b5cf6 60%,#a78bfa 100%)" }}
+        >
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center">
+              <Sparkles size={16} className="text-white" />
+            </div>
+            <div>
+              <p className="text-white font-bold text-sm leading-tight">Get Click Media</p>
+              <p className="text-white/70 text-[10px]">AI Communication Platform</p>
+            </div>
+          </div>
+          <button
+            className="w-8 h-8 rounded-full bg-white/15 hover:bg-white/25 flex items-center justify-center transition-colors"
+            onClick={() => setMobileOpen(false)}
+          >
+            <X size={16} className="text-white" />
+          </button>
+        </div>
+
+        {/* Nav items */}
+        <nav className="flex-1 overflow-y-auto py-3 px-2.5 flex flex-col gap-0.5">
+          {navItems.map((item) => {
+            const isExpanded = mobileExpanded === item.label;
+            return (
+              <div key={item.label}>
+                <button
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-2xl transition-all duration-200 ${isExpanded ? "bg-gray-50" : "hover:bg-gray-50"}`}
+                  onClick={() => setMobileExpanded(isExpanded ? null : item.label)}
+                >
+                  {/* Colored icon */}
+                  <span
+                    className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 shadow-sm"
+                    style={{ background: item.sidebarBgColor, color: item.sidebarColor }}
+                  >
+                    {item.sidebarIcon}
+                  </span>
+
+                  <span className="flex-1 text-left">
+                    <span className="block text-sm font-semibold text-gray-800">{item.label}</span>
+                  </span>
+
+                  <ChevronDown
+                    size={14}
+                    strokeWidth={isExpanded ? 2.5 : 2}
+                    style={{
+                      transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)",
+                      color: isExpanded ? item.sidebarColor : "#94a3b8",
+                      transition: "transform 0.2s, color 0.2s",
+                      flexShrink: 0,
+                    }}
+                  />
+                </button>
+
+                {isExpanded && (
+                  <div className="mx-2 mb-1 mt-0.5 rounded-2xl overflow-hidden border border-gray-100">
+                    {item.menu?.sections.map((section, si) => (
+                      <div key={si}>
+                        {section.sectionTitle && (
+                          <p className="px-3 pt-2.5 pb-1 text-[9px] font-bold uppercase tracking-widest text-gray-400">
+                            {section.sectionTitle}
+                          </p>
+                        )}
+                        {section.items.map((subItem, ii) => (
+                          <a
+                            key={ii}
+                            href="#"
+                            className="flex items-center gap-2.5 px-3 py-2 hover:bg-gray-50 transition-colors group"
+                            onClick={() => setMobileOpen(false)}
+                          >
+                            <span
+                              className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
+                              style={{ background: subItem.bgColor, color: subItem.color }}
+                            >
+                              {subItem.icon}
+                            </span>
+                            <div className="flex-1 min-w-0">
+                              <p className="text-xs font-semibold text-gray-700 group-hover:text-gray-900 leading-tight">{subItem.title}</p>
+                              <p className="text-[10px] text-gray-400 leading-snug truncate">{subItem.description}</p>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </nav>
+
+        {/* Footer CTA */}
+        <div className="p-3 shrink-0 border-t border-gray-100 space-y-2">
+          <button
+            onClick={() => { openModal(); setMobileOpen(false); }}
+            className="w-full px-4 py-3 rounded-2xl text-white text-sm font-bold shadow-lg flex items-center justify-center gap-2 transition-all hover:scale-[1.02]"
+            style={{ background: "linear-gradient(135deg,#6366f1,#8b5cf6)" }}
+          >
+            <Sparkles size={14} />
+            Request a demo
+          </button>
+          <p className="text-center text-[10px] text-gray-400">Trusted by 25K+ businesses</p>
+        </div>
+      </div>
     </>
   );
 };

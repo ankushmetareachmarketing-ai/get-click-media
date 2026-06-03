@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import {
   Landmark, Gamepad2, Building2, ShoppingCart, Tv2,
   Truck, GraduationCap, Plane, MessageSquare,
-  Bell, Users, Ticket, Heart, Send, Zap, ChevronRight,
+  Bell, Users, Ticket, Heart, Send, Zap, ChevronRight, ChevronLeft,
 } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 
@@ -272,6 +272,7 @@ const industries: Industry[] = [
 const IndustriesSection: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(4);
   const [animKey, setAnimKey]         = useState(0);
+  const tabsScrollRef = useRef<HTMLDivElement>(null);
 
   const handleSelect = (i: number) => {
     if (i === activeIndex) return;
@@ -279,10 +280,13 @@ const IndustriesSection: React.FC = () => {
     setAnimKey(k => k + 1);
   };
 
+  const scrollTabsLeft  = () => tabsScrollRef.current?.scrollBy({ left: -100, behavior: "smooth" });
+  const scrollTabsRight = () => tabsScrollRef.current?.scrollBy({ left: 100,  behavior: "smooth" });
+
   const active = industries[activeIndex];
 
   return (
-    <section className="py-20 px-4 lg:px-16 overflow-hidden bg-white">
+    <section className="py-10 sm:py-20 px-4 lg:px-16 overflow-hidden bg-white">
       <style>{`
         @keyframes slideUpFade {
           from { opacity: 0; transform: translateY(16px) scale(0.98); }
@@ -344,6 +348,34 @@ const IndustriesSection: React.FC = () => {
         .ind-tab:hover .ind-arrow,
         .ind-active .ind-arrow { opacity: 1; transform: translateX(0); }
 
+        @media (max-width: 1023px) {
+          .ind-tab {
+            width: 72px;
+            min-width: 72px;
+            height: 76px;
+            flex-shrink: 0;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 8px 6px;
+            font-size: 10px;
+            gap: 5px;
+            border-radius: 14px;
+            white-space: normal;
+            line-height: 1.25;
+          }
+          .ind-tab:hover:not(.ind-active) { transform: translateY(-2px); }
+          .ind-active { transform: translateY(-2px); }
+          .ind-arrow { display: none; }
+          .ind-icon { width: 26px; height: 26px; border-radius: 7px; }
+          .ind-tab-label { flex: none !important; overflow: visible !important; text-overflow: unset !important; white-space: normal !important; }
+        }
+
+        @media (max-width: 1023px) {
+          .ind-card { padding: 12px; min-height: 160px; gap: 10px; border-radius: 14px; }
+        }
+
         .ind-card {
           background: #fff;
           border-radius: 18px;
@@ -365,64 +397,94 @@ const IndustriesSection: React.FC = () => {
       <div className="max-w-screen-xl mx-auto">
 
         {/* Section heading */}
-        <div className="mb-14">
+        <div className="mb-8 sm:mb-14">
           <SectionHeading
             eyebrow="Industry Solutions"
             title="Your industry, your rules. Build the perfect stack."
             highlight="Build the perfect stack."
             description="A smarter, fully customizable communication system — ready to scale with every channel and vertical."
-            align="center"
-            size="lg"
+
           />
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-5 items-start">
+        <div className="flex flex-col lg:flex-row gap-3 lg:gap-5 items-start">
 
           {/* ── LEFT sidebar ────────────────────────────────────────────── */}
-          <div
-            className="lg:w-64 shrink-0 rounded-2xl p-2.5"
-            style={{ background: "#f8fafc", border: "1.5px solid #e2e8f0" }}
-          >
-            <p
-              className="px-3 mb-2 mt-1"
-              style={{ fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#94a3b8" }}
-            >
-              Industries we serve
-            </p>
+          <div className="w-full lg:w-64 shrink-0">
 
-            <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
-              {industries.map(({ label, Icon, color }, i) => {
-                const isActive = i === activeIndex;
-                return (
-                  <button
-                    key={label}
-                    onClick={() => handleSelect(i)}
-                    className={`ind-tab${isActive ? " ind-active" : ""}`}
-                    style={isActive
-                      ? { background: color, boxShadow: `0 4px 14px ${color}40` }
-                      : {}
-                    }
-                  >
-                    {/* Icon box */}
-                    <span
-                      className="ind-icon"
-                      style={{ background: isActive ? "rgba(255,255,255,0.2)" : `${color}18` }}
+            {/* Mobile: arrow slider */}
+            <div className="flex lg:hidden items-center gap-1.5">
+              <button
+                onClick={scrollTabsLeft}
+                className="shrink-0 w-7 h-7 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-500 hover:bg-gray-50 shadow-sm"
+              >
+                <ChevronLeft size={14} />
+              </button>
+
+              <div
+                ref={tabsScrollRef}
+                className="flex-1 flex flex-row flex-nowrap overflow-x-auto gap-2 py-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              >
+                {industries.map(({ label, Icon, color }, i) => {
+                  const isActive = i === activeIndex;
+                  return (
+                    <button
+                      key={label}
+                      onClick={() => handleSelect(i)}
+                      className={`ind-tab${isActive ? " ind-active" : ""}`}
+                      style={isActive ? { background: color, boxShadow: `0 4px 14px ${color}40` } : {}}
                     >
-                      <Icon size={15} strokeWidth={1.9} style={{ color: isActive ? "#fff" : color }} />
-                    </span>
+                      <span className="ind-icon" style={{ background: isActive ? "rgba(255,255,255,0.2)" : `${color}18` }}>
+                        <Icon size={13} strokeWidth={1.9} style={{ color: isActive ? "#fff" : color }} />
+                      </span>
+                      <span className="ind-tab-label" style={{ flex: 1, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                        {label}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
 
-                    <span style={{ flex: 1, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
-                      {label}
-                    </span>
+              <button
+                onClick={scrollTabsRight}
+                className="shrink-0 w-7 h-7 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-500 hover:bg-gray-50 shadow-sm"
+              >
+                <ChevronRight size={14} />
+              </button>
+            </div>
 
-                    <ChevronRight
-                      size={13}
-                      className="ind-arrow"
-                      style={{ color: isActive ? "rgba(255,255,255,0.8)" : "#cbd5e1" }}
-                    />
-                  </button>
-                );
-              })}
+            {/* Desktop: vertical list */}
+            <div
+              className="hidden lg:block rounded-2xl p-2.5"
+              style={{ background: "#f8fafc", border: "1.5px solid #e2e8f0" }}
+            >
+              <p
+                className="px-3 mb-2 mt-1"
+                style={{ fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#94a3b8" }}
+              >
+                Industries we serve
+              </p>
+              <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
+                {industries.map(({ label, Icon, color }, i) => {
+                  const isActive = i === activeIndex;
+                  return (
+                    <button
+                      key={label}
+                      onClick={() => handleSelect(i)}
+                      className={`ind-tab${isActive ? " ind-active" : ""}`}
+                      style={isActive ? { background: color, boxShadow: `0 4px 14px ${color}40` } : {}}
+                    >
+                      <span className="ind-icon" style={{ background: isActive ? "rgba(255,255,255,0.2)" : `${color}18` }}>
+                        <Icon size={15} strokeWidth={1.9} style={{ color: isActive ? "#fff" : color }} />
+                      </span>
+                      <span className="ind-tab-label" style={{ flex: 1, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                        {label}
+                      </span>
+                      <ChevronRight size={13} className="ind-arrow" style={{ color: isActive ? "rgba(255,255,255,0.8)" : "#cbd5e1" }} />
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
 
@@ -462,7 +524,7 @@ const IndustriesSection: React.FC = () => {
             {/* Cards grid */}
             <div
               key={animKey}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-3"
             >
               {active.useCases.map(({ title, visual }, i) => (
                 <div
@@ -475,7 +537,7 @@ const IndustriesSection: React.FC = () => {
                       className="mt-0.5 shrink-0 rounded-full"
                       style={{ width: 4, minHeight: 18, alignSelf: "stretch", background: active.color, opacity: 0.75, borderRadius: 99 }}
                     />
-                    <p className="text-[13px] font-semibold leading-snug" style={{ color: "#0f172a" }}>
+                    <p className="text-[11px] sm:text-[13px] font-semibold leading-snug" style={{ color: "#0f172a" }}>
                       {title}
                     </p>
                   </div>
@@ -484,8 +546,10 @@ const IndustriesSection: React.FC = () => {
                   <div style={{ height: 1, background: "#f1f5f9" }} />
 
                   {/* Visual area */}
-                  <div className="flex-1 flex items-center justify-center px-1">
-                    {visual}
+                  <div className="flex-1 flex items-center justify-center w-full">
+                    <div className="w-full">
+                      {visual}
+                    </div>
                   </div>
                 </div>
               ))}
