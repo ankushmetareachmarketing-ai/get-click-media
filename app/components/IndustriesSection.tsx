@@ -4,7 +4,7 @@ import React, { useState, useRef } from "react";
 import {
   Landmark, Gamepad2, Building2, ShoppingCart, Tv2,
   Truck, GraduationCap, Plane, MessageSquare,
-  Bell, Users, Ticket, Heart, Send, Zap, ChevronRight, ChevronLeft,
+  Bell, Users, Ticket, Heart, Send, Zap, ChevronRight,
 } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 
@@ -280,13 +280,11 @@ const IndustriesSection: React.FC = () => {
     setAnimKey(k => k + 1);
   };
 
-  const scrollTabsLeft  = () => tabsScrollRef.current?.scrollBy({ left: -100, behavior: "smooth" });
-  const scrollTabsRight = () => tabsScrollRef.current?.scrollBy({ left: 100,  behavior: "smooth" });
 
   const active = industries[activeIndex];
 
   return (
-    <section className="py-10 sm:py-20 px-4 lg:px-16 overflow-hidden bg-white">
+    <section className="py-10 sm:py-20 px-4 lg:px-16 bg-white">
       <style>{`
         @keyframes slideUpFade {
           from { opacity: 0; transform: translateY(16px) scale(0.98); }
@@ -350,26 +348,30 @@ const IndustriesSection: React.FC = () => {
 
         @media (max-width: 1023px) {
           .ind-tab {
-            width: 72px;
-            min-width: 72px;
-            height: 76px;
+            width: auto;
+            min-width: auto;
+            height: 38px;
             flex-shrink: 0;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            padding: 8px 6px;
-            font-size: 10px;
-            gap: 5px;
-            border-radius: 14px;
-            white-space: normal;
-            line-height: 1.25;
+            text-align: left;
+            padding: 0 14px 0 8px;
+            font-size: 12px;
+            font-weight: 600;
+            gap: 7px;
+            border-radius: 999px;
+            white-space: nowrap;
+            line-height: 1;
+            border: 1.5px solid #e2e8f0;
+            background: #fff;
+            color: #475569;
           }
-          .ind-tab:hover:not(.ind-active) { transform: translateY(-2px); }
-          .ind-active { transform: translateY(-2px); }
+          .ind-tab:hover:not(.ind-active) { background: #f8fafc; transform: none; }
+          .ind-active { border-color: transparent; transform: none; }
           .ind-arrow { display: none; }
-          .ind-icon { width: 26px; height: 26px; border-radius: 7px; }
-          .ind-tab-label { flex: none !important; overflow: visible !important; text-overflow: unset !important; white-space: normal !important; }
+          .ind-icon { width: 24px; height: 24px; border-radius: 999px; }
+          .ind-tab-label { flex: none !important; overflow: visible !important; text-overflow: unset !important; white-space: nowrap !important; }
         }
 
         @media (max-width: 1023px) {
@@ -412,18 +414,16 @@ const IndustriesSection: React.FC = () => {
           {/* ── LEFT sidebar ────────────────────────────────────────────── */}
           <div className="w-full lg:w-64 shrink-0">
 
-            {/* Mobile: arrow slider */}
-            <div className="flex lg:hidden items-center gap-1.5">
-              <button
-                onClick={scrollTabsLeft}
-                className="shrink-0 w-7 h-7 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-500 hover:bg-gray-50 shadow-sm"
-              >
-                <ChevronLeft size={14} />
-              </button>
+            {/* Mobile: pill chip slider */}
+            <div className="lg:hidden relative">
+              {/* fade hints on edges */}
+              <div className="absolute left-0 top-0 bottom-0 w-6 bg-linear-to-r from-white to-transparent z-10 pointer-events-none rounded-l-xl" />
+              <div className="absolute right-0 top-0 bottom-0 w-6 bg-linear-to-l from-white to-transparent z-10 pointer-events-none rounded-r-xl" />
 
               <div
                 ref={tabsScrollRef}
-                className="flex-1 flex flex-row flex-nowrap overflow-x-auto gap-2 py-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                className="flex flex-row flex-nowrap overflow-x-scroll gap-2 px-3 py-2"
+                style={{ background: "#f8fafc", borderRadius: 16, border: "1.5px solid #e2e8f0" }}
               >
                 {industries.map(({ label, Icon, color }, i) => {
                   const isActive = i === activeIndex;
@@ -432,25 +432,21 @@ const IndustriesSection: React.FC = () => {
                       key={label}
                       onClick={() => handleSelect(i)}
                       className={`ind-tab${isActive ? " ind-active" : ""}`}
-                      style={isActive ? { background: color, boxShadow: `0 4px 14px ${color}40` } : {}}
+                      style={isActive
+                        ? { background: `linear-gradient(135deg, ${color}, ${color}cc)`, boxShadow: `0 2px 10px ${color}50`, color: "#fff" }
+                        : {}}
                     >
-                      <span className="ind-icon" style={{ background: isActive ? "rgba(255,255,255,0.2)" : `${color}18` }}>
-                        <Icon size={13} strokeWidth={1.9} style={{ color: isActive ? "#fff" : color }} />
+                      <span
+                        className="ind-icon"
+                        style={{ background: isActive ? "rgba(255,255,255,0.22)" : `${color}18` }}
+                      >
+                        <Icon size={12} strokeWidth={2} style={{ color: isActive ? "#fff" : color }} />
                       </span>
-                      <span className="ind-tab-label" style={{ flex: 1, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
-                        {label}
-                      </span>
+                      <span className="ind-tab-label">{label}</span>
                     </button>
                   );
                 })}
               </div>
-
-              <button
-                onClick={scrollTabsRight}
-                className="shrink-0 w-7 h-7 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-500 hover:bg-gray-50 shadow-sm"
-              >
-                <ChevronRight size={14} />
-              </button>
             </div>
 
             {/* Desktop: vertical list */}
@@ -489,7 +485,7 @@ const IndustriesSection: React.FC = () => {
           </div>
 
           {/* ── RIGHT panel ─────────────────────────────────────────────── */}
-          <div className="flex-1 min-w-0">
+          <div className="flex-1 min-w-0 w-full">
 
             {/* Active industry header */}
             <div
