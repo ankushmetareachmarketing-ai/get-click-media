@@ -37,6 +37,7 @@ interface MegaMenuItem {
   icon: React.ReactNode;
   title: string;
   description: string;
+  href?: string;
   featured?: boolean;
   videoLabel?: string;
   color?: string;
@@ -102,7 +103,7 @@ const navItems: NavItem[] = [
           sectionTitle: "Channels",
           items: [
             { icon: <Phone size={20} />, title: "WhatsApp Business", description: "Reach 2B+ users on the world's largest platform", color: "#22c55e", bgColor: "#f0fdf4" },
-            { icon: <Mail size={20} />, title: "SMS & RCS", description: "Rich messaging with multimedia support", color: "#3b82f6", bgColor: "#eff6ff" },
+            { icon: <Mail size={20} />, title: "SMS & RCS", description: "Rich messaging with multimedia support", href: "/bulk-sms-service-provider-india", color: "#3b82f6", bgColor: "#eff6ff" },
             { icon: <Globe size={20} />, title: "Web & App Chat", description: "Embed live chat on any digital surface", color: "#8b5cf6", bgColor: "#f5f3ff" },
           ],
         },
@@ -264,7 +265,7 @@ const MegaMenu: React.FC<MegaMenuProps> = ({ menu, isOpen }) => {
                 {section.items.map((item, ii) => (
                   <a
                     key={ii}
-                    href="#"
+                    href={item.href ?? "#"}
                     className="group flex items-start gap-3 p-3 rounded-xl hover:bg-[color:var(--surface-alt)] transition-colors"
                   >
                     <span className="flex-shrink-0 w-9 h-9 rounded-lg bg-gray-100 group-hover:bg-blue-100 flex items-center justify-center text-gray-500 group-hover:text-[color:var(--primary)] transition-colors">

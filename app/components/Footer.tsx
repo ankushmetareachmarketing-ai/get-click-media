@@ -78,14 +78,14 @@ const SOCIALS = [
 // ── Navigation data ───────────────────────────────────────────────────────────
 
 const PLATFORM = [
-  { label: "WhatsApp Business API",    icon: MessageSquare },
-  { label: "RCS Business Messaging",   icon: Radio },
-  { label: "Bulk SMS",                 icon: Hash },
-  { label: "OTP & Transactional SMS",  icon: ShieldCheck },
-  { label: "Voice & IVR",              icon: Mic2 },
-  { label: "Toll Free Numbers",        icon: Phone },
-  { label: "Email Marketing",          icon: Mail },
-  { label: "AI Chatbots",              icon: Bot },
+  { label: "WhatsApp Business API",    icon: MessageSquare, href: "#" },
+  { label: "RCS Business Messaging",   icon: Radio,         href: "#" },
+  { label: "Bulk SMS",                 icon: Hash,          href: "/bulk-sms-service-provider-india" },
+  { label: "OTP & Transactional SMS",  icon: ShieldCheck,   href: "#" },
+  { label: "Voice & IVR",              icon: Mic2,          href: "#" },
+  { label: "Toll Free Numbers",        icon: Phone,         href: "#" },
+  { label: "Email Marketing",          icon: Mail,          href: "#" },
+  { label: "AI Chatbots",              icon: Bot,           href: "#" },
 ];
 
 const SOLUTIONS = [
@@ -221,8 +221,8 @@ export default function Footer() {
           display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 28,
         }}>
           <NavCol title="Platform">
-            {PLATFORM.map(({ label, icon: Icon }) => (
-              <NavLink key={label} icon={<Icon size={13} />}>{label}</NavLink>
+            {PLATFORM.map(({ label, icon: Icon, href }) => (
+              <NavLink key={label} href={href} icon={<Icon size={13} />}>{label}</NavLink>
             ))}
           </NavCol>
 
@@ -349,11 +349,11 @@ function NavCol({ title, children }: { title: string; children: React.ReactNode 
   );
 }
 
-function NavLink({ icon, children }: { icon?: React.ReactNode; children: React.ReactNode }) {
+function NavLink({ icon, href = "#", children }: { icon?: React.ReactNode; href?: string; children: React.ReactNode }) {
   const [hovered, setHovered] = React.useState(false);
   return (
     <a
-      href="#"
+      href={href}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
