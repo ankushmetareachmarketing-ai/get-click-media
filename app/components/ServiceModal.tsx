@@ -329,7 +329,7 @@ export default function ServiceModal() {
                   <FieldWrap label="Phone Number">
                     <Input
                       type="tel"
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 76699 99219"
                       value={form.phone}
                       onChange={field("phone")}
                       className="h-10 rounded-xl bg-[#f8fafc] border-[#e2e8f0]

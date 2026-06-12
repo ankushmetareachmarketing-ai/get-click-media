@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
           </div>
           <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-white/60">
             <p className="text-xs text-gray-400 mb-3 sm:mb-4">
-              Trusted by 25K+ businesses teams
+              Trusted by 10,000+ businesses
             </p>
             <div className="flex items-center gap-4 sm:gap-8 flex-wrap">
               {logos.map((logo) => (

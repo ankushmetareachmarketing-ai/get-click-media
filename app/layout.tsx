@@ -20,8 +20,37 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: "Get Click Media",
-  description: "AI-Powered Customer Communication Platform for Modern Businesses",
+  title: {
+    default: "Get Click Media | AI-Powered Business Communication Platform",
+    template: "%s | Get Click Media",
+  },
+  description:
+    "AI-Powered Customer Communication Platform for Modern Businesses. WhatsApp API, Bulk SMS, RCS, Voice & Email — trusted by 10,000+ Indian businesses.",
+  metadataBase: new URL("https://getclickmedia.com"),
+  openGraph: {
+    siteName: "Get Click Media",
+    type: "website",
+  },
+};
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Get Click Media",
+  url: "https://getclickmedia.com",
+  logo: "https://getclickmedia.com/images/gcm-logo.png",
+  telephone: "+91-7669999219",
+  email: "hello@getclickmedia.com",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Mumbai",
+    addressCountry: "IN",
+  },
+  sameAs: [
+    "https://www.linkedin.com/company/getclickmedia",
+    "https://twitter.com/getclickmedia",
+    "https://www.instagram.com/getclickmedia",
+  ],
 };
 
 export default function RootLayout({
@@ -35,6 +64,10 @@ export default function RootLayout({
       className={cn("h-full antialiased", manrope.variable, syne.variable)}
     >
       <body className=" font-[var(--font-manrope)]" suppressHydrationWarning>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
         {/* Fixed dot-grid + floating balls — sits behind everything */}
         <GlobalBackground />
         <div className="layout-header"><Header /></div>

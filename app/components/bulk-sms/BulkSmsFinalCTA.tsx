@@ -69,9 +69,8 @@ export default function BulkSmsFinalCTA() {
                 Get Free Demo
               </button>
 
-              {/* TODO: replace 919876543210 with real WhatsApp number */}
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/917669999219"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 sm:gap-2 h-9 sm:h-11 px-3 sm:px-4 rounded-full border border-(--border-subtle) text-(--ink-2) text-xs sm:text-sm font-medium hover:border-primary hover:text-primary hover:bg-blue-50/30 transition-all duration-150 whitespace-nowrap"

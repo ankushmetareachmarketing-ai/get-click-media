@@ -18,7 +18,7 @@ const FAQS = [
       },
       {
         q: "Is Get Click Media suitable for small businesses or only enterprises?",
-        a: "Get Click Media is built to scale with you. Small businesses can start with our free trial and basic plans, while enterprises get dedicated infrastructure, SLAs, and custom integrations. We serve 5,000+ businesses across all sizes.",
+        a: "Get Click Media is built to scale with you. Small businesses can start with our free trial and basic plans, while enterprises get dedicated infrastructure, SLAs, and custom integrations. We serve 10,000+ businesses across all sizes.",
       },
     ],
   },
@@ -91,7 +91,7 @@ export default function FAQ() {
             eyebrow="FAQ"
             title="Everything you need to know"
             highlight="to know"
-            description="Can't find your answer? Email us at hello@getclickmedia.in — we reply within a few hours."
+            description="Can't find your answer? Email us at hello@getclickmedia.com — we reply within a few hours."
             align="left"
             size="lg"
           />
@@ -211,7 +211,7 @@ export default function FAQ() {
           </div>
           <div className="flex gap-3 shrink-0">
             <a
-              href="mailto:hello@getclickmedia.in"
+              href="mailto:hello@getclickmedia.com"
               className="px-5 py-2.5 rounded-xl text-sm font-semibold text-white transition-opacity hover:opacity-80"
               style={{ background: "rgba(255,255,255,0.15)", border: "1.5px solid rgba(255,255,255,0.3)" }}
             >

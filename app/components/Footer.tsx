@@ -98,13 +98,13 @@ const SOLUTIONS = [
 ];
 
 const RESOURCES = [
-  { label: "Blog & Insights",            icon: BookOpen },
-  { label: "Case Studies",               icon: FileText },
-  { label: "API Documentation",          icon: Code2 },
-  { label: "WhatsApp API Pricing India", icon: MessageSquare },
-  { label: "RCS Messaging Guide",        icon: Radio },
-  { label: "DLT Registration Guide",     icon: Layers },
-  { label: "OTP SMS Compliance",         icon: ShieldCheck },
+  { label: "Blog & Insights",            icon: BookOpen,      href: "/blog" },
+  { label: "Case Studies",               icon: FileText,      href: "#" },
+  { label: "API Documentation",          icon: Code2,         href: "#" },
+  { label: "WhatsApp API Pricing India", icon: MessageSquare, href: "#" },
+  { label: "RCS Messaging Guide",        icon: Radio,         href: "#" },
+  { label: "DLT Registration Guide",     icon: Layers,        href: "#" },
+  { label: "OTP SMS Compliance",         icon: ShieldCheck,   href: "#" },
 ];
 
 const COMPANY = [
@@ -115,7 +115,7 @@ const COMPANY = [
 const METRICS = [
   { value: "99.9%",  label: "Platform Uptime",     color: "#38bdf8" },
   { value: "2B+",    label: "Messages Delivered",   color: "#818cf8" },
-  { value: "5,000+", label: "Businesses Served",    color: "#34d399" },
+  { value: "10,000+", label: "Businesses Served",    color: "#34d399" },
   { value: "150+",   label: "Integrations",         color: "#fb923c" },
 ];
 
@@ -182,14 +182,14 @@ export default function Footer() {
           />
 
           <p style={{ fontSize: 13.5, lineHeight: 1.75, color: "#ffffff", margin: 0, maxWidth: 230 }}>
-            AI-Powered Customer Communication Platform for Modern Businesses — trusted by 5,000+ companies across India.
+            AI-Powered Customer Communication Platform for Modern Businesses — trusted by 10,000+ companies across India.
           </p>
 
           {/* Contact */}
           <div style={{ display: "flex", flexDirection: "column", gap: 9 }}>
             {[
-              { Icon: PhoneCall, text: "+91 98765 43210" },
-              { Icon: MailOpen,  text: "hello@getclickmedia.in" },
+              { Icon: PhoneCall, text: "+91 7669999219" },
+              { Icon: MailOpen,  text: "hello@getclickmedia.com" },
               { Icon: MapPin,    text: "Mumbai, India" },
             ].map(({ Icon, text }) => (
               <div key={text} style={{ display: "flex", alignItems: "center", gap: 10 }}>
@@ -233,8 +233,8 @@ export default function Footer() {
           </NavCol>
 
           <NavCol title="Resources">
-            {RESOURCES.map(({ label, icon: Icon }) => (
-              <NavLink key={label} icon={<Icon size={13} />}>{label}</NavLink>
+            {RESOURCES.map(({ label, icon: Icon, href }) => (
+              <NavLink key={label} href={href} icon={<Icon size={13} />}>{label}</NavLink>
             ))}
           </NavCol>
 
@@ -274,8 +274,14 @@ export default function Footer() {
             © {new Date().getFullYear()} Get Click Media Pvt. Ltd. All rights reserved.
           </p>
           <div style={{ display: "flex", gap: 20, flexWrap: "wrap" }}>
-            {["Privacy Policy", "Terms of Service", "Cookie Policy", "Refund Policy", "GDPR"].map(l => (
-              <BottomLink key={l}>{l}</BottomLink>
+            {[
+              { label: "Privacy Policy",   href: "/privacy-policy" },
+              { label: "Terms of Service", href: "/terms-of-service" },
+              { label: "Cookie Policy",    href: "/cookie-policy" },
+              { label: "Refund Policy",    href: "/refund-policy" },
+              { label: "GDPR",             href: "/gdpr" },
+            ].map(({ label, href }) => (
+              <BottomLink key={label} href={href}>{label}</BottomLink>
             ))}
           </div>
         </div>
@@ -403,11 +409,11 @@ function CtaLink({ href, children }: { href: string; children: React.ReactNode }
   );
 }
 
-function BottomLink({ children }: { children: React.ReactNode }) {
+function BottomLink({ href = "#", children }: { href?: string; children: React.ReactNode }) {
   const [hovered, setHovered] = React.useState(false);
   return (
     <a
-      href="#"
+      href={href}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{

@@ -81,8 +81,8 @@ export default function Testimonial() {
           <div className="max-w-2xl w-full">
             <SectionHeading
               eyebrow="Customer Stories"
-              title="Trusted by 5,000+ businesses across India"
-              highlight="5,000+ businesses"
+              title="Trusted by 10,000+ businesses across India"
+              highlight="10,000+ businesses"
               description="Real results from real customers — see how Get Click Media transforms customer communication at scale."
               align="left"
               size="lg"

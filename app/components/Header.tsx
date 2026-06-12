@@ -516,7 +516,7 @@ const Header: React.FC = () => {
             <Sparkles size={14} />
             Request a demo
           </button>
-          <p className="text-center text-[10px] text-gray-400">Trusted by 25K+ businesses</p>
+          <p className="text-center text-[10px] text-gray-400">Trusted by 10,000+ businesses</p>
         </div>
       </div>
     </>
