@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import GlobalBackground from "./components/GlobalBackground";
 import ServiceModal from "./components/ServiceModal";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -33,9 +34,10 @@ export default function RootLayout({
       lang="en"
       className={cn("h-full antialiased", manrope.variable, syne.variable)}
     >
-      <body className="min-h-full flex flex-col font-[var(--font-manrope)]">
+      <body className=" font-[var(--font-manrope)]" suppressHydrationWarning>
         {/* Fixed dot-grid + floating balls — sits behind everything */}
         <GlobalBackground />
+        <div className="layout-header"><Header /></div>
         {children}
         <Footer />
         <ServiceModal />

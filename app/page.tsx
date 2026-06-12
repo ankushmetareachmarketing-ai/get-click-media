@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./components/Header";
 import Hero from "./components/Hero";
 import FeaturesSection from "./components/FeaturesSection";
 import IndustriesSection from "./components/IndustriesSection";
@@ -13,7 +12,6 @@ import FAQ from "./components/FAQ";
 const page = () => {
   return (
     <div>
-      <Header />
       <Hero />
       <FeaturesSection />
       <IndustriesSection />

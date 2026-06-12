@@ -211,7 +211,7 @@ const MegaMenu: React.FC<MegaMenuProps> = ({ menu, isOpen }) => {
   const colCount = menu.sections.length;
 
   return (
-    <div className="w-full">
+    <div className="w-full z-[9999]">
       <div className="flex justify-center">
         <div className="w-3 h-3 bg-white rotate-45 shadow -mb-1.5 z-10 relative border-l border-t border-[color:var(--border)]" />
       </div>
@@ -390,7 +390,7 @@ const Header: React.FC = () => {
           <div
             onMouseEnter={stayOpen}
             onMouseLeave={closeMenu}
-            className="absolute left-0 right-0 top-full mt-2 z-50 px-6"
+            className="absolute left-0 right-0 top-full mt-2 z-9999 px-6"
           >
             <div className="mx-auto max-w-screen-xl">
               <MegaMenu menu={activeNavItem?.menu} isOpen={!!activeNavItem?.menu && activeMenu === activeNavItem.label} />
