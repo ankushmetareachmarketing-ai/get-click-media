@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "Privacy Policy | Get Click Media",
   description:
@@ -128,7 +130,7 @@ export default function PrivacyPolicyPage() {
                 We use essential cookies (required for site functionality), analytics cookies (to
                 understand usage), and marketing cookies (with your consent). You can manage cookie
                 preferences at any time via our Cookie Settings or your browser settings. See our{" "}
-                <a href="/cookie-policy" className="text-primary underline">Cookie Policy</a> for details.
+                <Link href="/cookie-policy" className="text-primary underline">Cookie Policy</Link> for details.
               </p>
             </PolicySection>
 

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "Cookie Policy | Get Click Media",
   description:
@@ -70,7 +72,7 @@ export default function CookiePolicyPage() {
           <p className="text-sm sm:text-base text-(--ink-2) leading-relaxed">
             This Cookie Policy explains how <strong>Get Click Media Pvt. Ltd.</strong> uses cookies
             and similar technologies when you visit getclickmedia.com or use our platform. It
-            supplements our <a href="/privacy-policy" className="text-primary underline">Privacy Policy</a>.
+            supplements our <Link href="/privacy-policy" className="text-primary underline">Privacy Policy</Link>.
           </p>
 
           <section>

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 import { useModalStore } from "@/store/useModalStore";
 import {
   ChevronDown,
@@ -166,7 +167,7 @@ const navItems: NavItem[] = [
       sections: [
         {
           items: [
-            { icon: <BookOpen size={20} />, title: "Blog", description: "Latest insights and product updates", color: "#3b82f6", bgColor: "#eff6ff" },
+            { icon: <BookOpen size={20} />, title: "Blog", description: "Latest insights and product updates", href: "/blog", color: "#3b82f6", bgColor: "#eff6ff" },
             { icon: <FileText size={20} />, title: "Whitepapers", description: "In-depth research and guides", color: "#8b5cf6", bgColor: "#f5f3ff" },
             { icon: <Video size={20} />, title: "Webinars", description: "On-demand and upcoming live events", color: "#ef4444", bgColor: "#fef2f2" },
             { icon: <Award size={20} />, title: "Case Studies", description: "Real results from real customers", color: "#f59e0b", bgColor: "#fffbeb" },
@@ -332,7 +333,7 @@ const Header: React.FC = () => {
 
         <div className="bg-white shadow-sm py-1 sm:py-2 rounded-full w-[95%] sm:w-[80%] mx-auto mt-3 relative">
           <div className="max-w-screen-xl mx-auto px-4 sm:px-6 flex items-center h-12 sm:h-16 gap-4 sm:gap-8 relative">
-            <a href="#" className="flex items-center gap-2 flex-shrink-0">
+            <Link href="/" className="flex items-center gap-2 flex-shrink-0">
               <Image
                 src="/images/gcm-logo.png"
                 alt="Logo"
@@ -340,7 +341,7 @@ const Header: React.FC = () => {
                 height={100}
                 className="w-auto h-7 sm:h-10"
               />
-            </a>
+            </Link>
 
             <nav
               className="hidden lg:flex items-center gap-1 flex-1"
@@ -481,7 +482,7 @@ const Header: React.FC = () => {
                         {section.items.map((subItem, ii) => (
                           <a
                             key={ii}
-                            href="#"
+                            href={subItem.href ?? "#"}
                             className="flex items-center gap-2.5 px-3 py-2 hover:bg-gray-50 transition-colors group"
                             onClick={() => setMobileOpen(false)}
                           >

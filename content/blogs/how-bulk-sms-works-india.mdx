@@ -1,0 +1,143 @@
+---
+title: "How Bulk SMS Works in India: Process, SMS Gateway & Delivery Explained"
+description: "From message submission to delivery on a subscriber's handset, understand the complete bulk SMS process in India — including SMS gateways, DLT scrubbing, telecom routes, and delivery reports."
+slug: "how-bulk-sms-works-india"
+image: "/images/blog/how-bulk-sms-works-india.webp"
+author: "Get Click Media"
+publishedDate: "2026-05-28"
+updatedDate: "2026-05-28"
+category: "Bulk SMS"
+keywords:
+  - "Bulk SMS Process"
+  - "SMS Gateway India"
+  - "how bulk sms works"
+  - "sms gateway india"
+  - "bulk sms delivery"
+  - "trai dlt scrubbing"
+faq:
+  - question: "What is an SMS gateway?"
+    answer: "An SMS gateway is a system that connects bulk SMS software to mobile telecom networks. It acts as a bridge between your business application and the telecom operators (like Airtel, Jio, Vi, BSNL), routing messages through the correct network path for delivery."
+  - question: "What is DLT scrubbing in bulk SMS?"
+    answer: "DLT scrubbing is a mandatory verification process under TRAI regulations where every outgoing SMS is checked against the DLT (Distributed Ledger Technology) database. Messages with unregistered sender IDs or templates are blocked before reaching the telecom operator."
+  - question: "How long does it take for bulk SMS to be delivered?"
+    answer: "Transactional SMS through a direct operator route is typically delivered within 3–10 seconds. Promotional SMS may take slightly longer depending on network load and the time of day. International routes may have delivery times of 1–5 minutes."
+  - question: "What is the difference between a direct route and an indirect route?"
+    answer: "A direct route connects your SMS provider directly to the telecom operator's SMSC, ensuring faster delivery and higher reliability. An indirect (or aggregator) route goes through one or more intermediary providers, which can introduce delays and reduce delivery rates."
+  - question: "What happens if an SMS is not delivered?"
+    answer: "Undelivered messages receive a failure delivery report (DLR) with an error code. Common reasons include invalid numbers, DND filtering, network issues, or DLT non-compliance. Quality SMS providers offer retry logic that automatically attempts redelivery through alternate routes."
+---
+
+You click send on a bulk SMS campaign and within seconds, thousands of customers see your message on their phones. But what actually happens between that click and the notification on a customer's handset? Understanding the bulk SMS delivery process helps you troubleshoot issues, optimise campaigns, and make better decisions about routes and providers. If you are new to the channel, start with [what is bulk SMS service](/blog/what-is-bulk-sms-service) before diving into the technical details here.
+
+## The Bulk SMS Delivery Process: Step by Step
+
+### Step 1: Message Submission
+
+Your campaign begins when you submit a message through an SMS panel or via API. The message payload includes:
+
+- **Recipient list** — the mobile numbers to send to
+- **Sender ID** — your registered 6-character alphanumeric sender name (e.g., GETCLI)
+- **Message content** — your approved DLT template with variable values filled in
+- **Delivery time** — immediate or scheduled
+
+### Step 2: DLT Scrubbing
+
+Before any message leaves the bulk SMS provider's system, it goes through **DLT (Distributed Ledger Technology) scrubbing** — a mandatory verification step introduced by TRAI in 2021.
+
+The scrubbing engine checks:
+
+- Whether your **entity** (business) is registered on the DLT platform
+- Whether your **Sender ID** is approved
+- Whether the **message template** matches a pre-approved template in the DLT database
+- Whether the **template category** (promotional, transactional, OTP) is correctly mapped
+
+Messages that fail scrubbing are **blocked immediately** — they never reach the telecom operator. This is why DLT registration and template approval are non-negotiable steps before launching a campaign.
+
+### Step 3: SMS Gateway Routing
+
+Once a message passes DLT scrubbing, the **SMS gateway** routes it to the appropriate telecom operator's SMSC (Short Message Service Centre). The route chosen depends on the message type:
+
+| Message Type | Route Used | Delivery Window |
+|---|---|---|
+| OTP / Transactional | Direct operator route | 24/7 |
+| Promotional | Promotional route | 9 AM – 9 PM only |
+| Service Implicit | Direct route | 24/7 |
+| International | International aggregator | 24/7 |
+
+### Step 4: Operator SMSC Processing
+
+The telecom operator's SMSC (Short Message Service Centre) receives the message and handles the final delivery steps:
+
+1. **Subscriber lookup** — checks if the mobile number is active and reachable
+2. **DND filtering** — for promotional routes, checks if the number is on the Do Not Disturb registry
+3. **Message queuing** — if the subscriber's phone is off or unreachable, the message is queued and retried for up to 24–72 hours
+4. **Delivery attempt** — the SMSC pushes the message to the subscriber's handset
+
+### Step 5: Delivery Confirmation (DLR)
+
+After the message reaches the handset, the telecom operator sends a **Delivery Receipt (DLR)** back to the SMS gateway. This DLR updates your delivery report with a status:
+
+- **Delivered** — message successfully received on the handset
+- **Failed** — delivery attempt failed (with error code)
+- **Pending** — message is queued and delivery is being retried
+- **Rejected** — message blocked at operator level (DND, template mismatch)
+
+## What is an SMS Gateway?
+
+An SMS gateway is the core technical infrastructure that makes bulk SMS possible. It is a system that:
+
+- Accepts messages from your application (via SMPP, HTTP/REST API, or web panel)
+- Manages connections to multiple telecom operators simultaneously
+- Handles load balancing, failover, and retry logic
+- Provides real-time delivery tracking and reporting
+
+### Direct vs. Indirect Routes
+
+**Direct routes** connect the SMS gateway directly to the telecom operator's SMSC using the SMPP (Short Message Peer-to-Peer) protocol. This is the most reliable and fastest delivery path.
+
+**Indirect (aggregator) routes** pass messages through one or more intermediary providers before reaching the operator. While sometimes cheaper, they introduce latency, reduce delivery rates, and complicate DLR tracking.
+
+For business-critical messages like OTPs and order confirmations, always use a provider with direct operator connections.
+
+## Understanding Delivery Rates
+
+Not every SMS you send will be delivered. Common reasons for non-delivery include:
+
+- **Invalid number** — the mobile number does not exist or is ported and not updated
+- **Phone off** — the subscriber's phone was off during the retry window
+- **DND filtering** — promotional message sent to a DND-registered number
+- **DLT rejection** — template or sender ID not properly registered
+- **Network congestion** — high traffic periods during festive seasons
+- **Number porting delays** — MNP (Mobile Number Portability) routing delays
+
+A quality bulk SMS provider maintains delivery rates above 95% for transactional routes and 85–92% for promotional routes.
+
+## How APIs Connect Your Business Systems
+
+Most businesses integrate bulk SMS into their existing workflows using REST APIs. Common integration patterns include:
+
+### Triggered SMS
+An event in your CRM, e-commerce platform, or application automatically sends an SMS — for example, when an order is placed, a payment fails, or an appointment is booked.
+
+### Scheduled Campaigns
+Your marketing team schedules promotional campaigns through an API or web panel, specifying send time, recipient list, and template.
+
+### Two-Way SMS
+Some providers support two-way SMS where customers can reply to messages, enabling interactive campaigns, surveys, and support flows.
+
+## TRAI DLT: The Regulatory Layer
+
+India's DLT platform, introduced by TRAI in 2019 (operational from 2021), is a blockchain-based system designed to eliminate spam and fraudulent SMS. Every commercial SMS in India must pass through DLT verification.
+
+Key DLT components:
+
+- **PE-ID** (Principal Entity ID) — your unique business identifier on the DLT
+- **Sender ID** — 6-character alphanumeric name (e.g., GETCLI, AMAZON)
+- **Template ID** — unique ID for each approved message template
+- **Header** — the sender name displayed to recipients
+
+Without valid PE-ID, Sender ID, and Template ID, your messages will not pass scrubbing and will be blocked before delivery.
+
+## Conclusion
+
+Bulk SMS delivery in India involves multiple layers: DLT compliance, gateway routing, operator processing, and delivery confirmation. Understanding this process helps you work with your SMS provider more effectively, set realistic delivery expectations, and build campaigns that reach the right people at the right time. Once you understand how the delivery works, explore the [benefits of bulk SMS marketing](/blog/benefits-of-bulk-sms-marketing) and see how it compares to [WhatsApp marketing](/blog/bulk-sms-vs-whatsapp-marketing) for different use cases.

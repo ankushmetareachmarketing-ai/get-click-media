@@ -180,9 +180,11 @@ export default function PageHero({
           <Image
             src={imageSrc}
             alt={imageAlt}
-            width={600}
-            height={480}
+            width={900}
+            height={720}
+            sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 45vw"
             className="w-full max-w-md sm:max-w-lg lg:max-w-xl h-auto object-contain"
+            quality={95}
             priority
           />
         </div>

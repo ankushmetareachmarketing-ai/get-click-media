@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import {
   MessageSquare, Radio, Hash, ShieldCheck, Mic2, Phone,
@@ -174,12 +175,13 @@ export default function Footer() {
 
         {/* ── Brand column ── */}
         <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
-          <Image
-            src="/images/gcm-logo.png"
-            alt="Get Click Media"
-            width={130} height={36}
-            
-          />
+          <Link href="/" style={{ display: "inline-flex" }}>
+            <Image
+              src="/images/gcm-logo.png"
+              alt="Get Click Media"
+              width={130} height={36}
+            />
+          </Link>
 
           <p style={{ fontSize: 13.5, lineHeight: 1.75, color: "#ffffff", margin: 0, maxWidth: 230 }}>
             AI-Powered Customer Communication Platform for Modern Businesses — trusted by 10,000+ companies across India.
@@ -188,11 +190,11 @@ export default function Footer() {
           {/* Contact */}
           <div style={{ display: "flex", flexDirection: "column", gap: 9 }}>
             {[
-              { Icon: PhoneCall, text: "+91 7669999219" },
-              { Icon: MailOpen,  text: "hello@getclickmedia.com" },
-              { Icon: MapPin,    text: "Mumbai, India" },
-            ].map(({ Icon, text }) => (
-              <div key={text} style={{ display: "flex", alignItems: "center", gap: 10 }}>
+              { Icon: PhoneCall, text: "+91 7669999219",         href: "tel:+917669999219" },
+              { Icon: MailOpen,  text: "hello@getclickmedia.com", href: "mailto:hello@getclickmedia.com" },
+              { Icon: MapPin,    text: "Mumbai, India",           href: "#" },
+            ].map(({ Icon, text, href }) => (
+              <a key={text} href={href} style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
                 <span style={{
                   width: 28, height: 28, borderRadius: 8, flexShrink: 0,
                   background: "rgba(37,99,235,0.15)",
@@ -202,7 +204,7 @@ export default function Footer() {
                   <Icon size={14} color="#93c5fd" />
                 </span>
                 <span style={{ fontSize: 13, color: "#ffffff", fontWeight: 500 }}>{text}</span>
-              </div>
+              </a>
             ))}
           </div>
 

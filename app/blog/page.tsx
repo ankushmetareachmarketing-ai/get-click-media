@@ -1,9 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Calendar, Clock, ArrowRight, BookOpen } from "lucide-react";
-import { BLOG_POSTS } from "./data/posts";
+import {
+  getAllBlogPosts,
+  getAllCategories,
+  getCategoryStyle,
+  formatDate,
+} from "@/lib/blogs";
 
 // ── SEO metadata ──────────────────────────────────────────────────────────────
+
+export const revalidate = 86400;
 
 export const metadata = {
   title: "Blog | SMS Marketing, WhatsApp API & Business Communication | Get Click Media",
@@ -35,43 +42,40 @@ export const metadata = {
   },
 };
 
-// ── JSON-LD ───────────────────────────────────────────────────────────────────
-
-const blogSchema = {
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  name: "Get Click Media Blog",
-  description:
-    "Expert insights on bulk SMS, WhatsApp Business API, RCS messaging, and business communication for Indian businesses.",
-  url: "https://getclickmedia.com/blog",
-  publisher: {
-    "@type": "Organization",
-    name: "Get Click Media",
-    logo: {
-      "@type": "ImageObject",
-      url: "https://getclickmedia.com/images/gcm-logo.png",
-    },
-  },
-  blogPost: BLOG_POSTS.map((post) => ({
-    "@type": "BlogPosting",
-    headline: post.title,
-    description: post.excerpt,
-    url: `https://getclickmedia.com/blog/${post.slug}`,
-    datePublished: post.dateISO,
-    image: `https://getclickmedia.com${post.image}`,
-    author: { "@type": "Organization", name: "Get Click Media" },
-    publisher: { "@type": "Organization", name: "Get Click Media" },
-  })),
-};
-
-// ── Category counts for filter pills ─────────────────────────────────────────
-
-const CATEGORIES = ["All", ...Array.from(new Set(BLOG_POSTS.map((p) => p.category)))];
-
 // ── Page ──────────────────────────────────────────────────────────────────────
 
 export default function BlogPage() {
-  const [featured, ...rest] = BLOG_POSTS;
+  const posts = getAllBlogPosts();
+  const [featured, ...rest] = posts;
+  const categories = getAllCategories();
+
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "Get Click Media Blog",
+    description:
+      "Expert insights on bulk SMS, WhatsApp Business API, RCS messaging, and business communication for Indian businesses.",
+    url: "https://getclickmedia.com/blog",
+    publisher: {
+      "@type": "Organization",
+      name: "Get Click Media",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://getclickmedia.com/images/gcm-logo.png",
+      },
+    },
+    blogPost: posts.map((post) => ({
+      "@type": "BlogPosting",
+      headline: post.title,
+      description: post.description,
+      url: `https://getclickmedia.com/blog/${post.slug}`,
+      datePublished: post.publishedDate,
+      image: `https://getclickmedia.com${post.image}`,
+      author: { "@type": "Organization", name: "Get Click Media" },
+    })),
+  };
+
+  if (!featured) return null;
 
   return (
     <>
@@ -81,11 +85,7 @@ export default function BlogPage() {
       />
 
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
-      <section
-        className="relative overflow-hidden pt-32 sm:pt-40 pb-14 sm:pb-20"
-        style={{ background: "var(--surface-hero)" }}
-      >
-        {/* Soft glow */}
+      <section className="relative overflow-hidden pt-32 sm:pt-40 pb-14 sm:pb-20">
         <div
           className="absolute top-0 right-0 w-130 h-130 rounded-full pointer-events-none"
           style={{
@@ -114,8 +114,8 @@ export default function BlogPage() {
           {/* Stats strip */}
           <div className="inline-flex items-center gap-6 sm:gap-10 mt-10 px-6 sm:px-8 py-4 rounded-2xl bg-white border border-(--border-subtle) shadow-(--shadow-card) text-sm">
             {[
-              { value: String(BLOG_POSTS.length) + "+", label: "Articles" },
-              { value: "6", label: "Topics" },
+              { value: `${posts.length}+`, label: "Articles" },
+              { value: `${categories.length}`, label: "Topics" },
               { value: "Weekly", label: "New posts" },
             ].map(({ value, label }) => (
               <div key={label} className="flex flex-col items-center gap-0.5">
@@ -133,15 +133,20 @@ export default function BlogPage() {
       <div className="sticky top-20 z-30 bg-white border-b border-(--border-subtle) shadow-sm">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
           <div className="flex items-center gap-2 overflow-x-auto py-3 scrollbar-none">
-            {CATEGORIES.map((cat) => (
-              <span
-                key={cat}
-                className="flex-none px-3.5 py-1.5 rounded-full text-xs font-semibold border cursor-pointer whitespace-nowrap
-                           first:bg-primary first:text-white first:border-primary
-                           border-(--border-subtle) text-(--ink-3) hover:border-primary hover:text-primary transition-colors"
+            <Link
+              href="/blog"
+              className="flex-none px-3.5 py-1.5 rounded-full text-xs font-semibold border bg-primary text-white border-primary whitespace-nowrap"
+            >
+              All
+            </Link>
+            {categories.map((cat) => (
+              <Link
+                key={cat.slug}
+                href={`/blog/category/${cat.slug}`}
+                className="flex-none px-3.5 py-1.5 rounded-full text-xs font-semibold border border-(--border-subtle) text-(--ink-3) hover:border-primary hover:text-primary transition-colors whitespace-nowrap"
               >
-                {cat}
-              </span>
+                {cat.name}
+              </Link>
             ))}
           </div>
         </div>
@@ -160,19 +165,17 @@ export default function BlogPage() {
             <meta itemProp="author" content="Get Click Media" />
             <Link href={`/blog/${featured.slug}`} className="block">
               <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] rounded-[20px] overflow-hidden border border-(--border-subtle) shadow-(--shadow-card) hover:shadow-(--shadow-card-hover) hover:-translate-y-1 transition-all duration-200 bg-white">
-
                 {/* Image */}
-                <div className="relative aspect-video lg:aspect-auto lg:min-h-90">
+                <div className="relative aspect-video">
                   <Image
                     src={featured.image}
-                    alt={featured.imageAlt}
+                    alt={featured.title}
                     fill
                     sizes="(max-width: 1024px) 100vw, 58vw"
                     className="object-cover"
                     priority
                     itemProp="image"
                   />
-                  {/* Featured badge */}
                   <div className="absolute top-4 left-4">
                     <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary text-white text-[0.625rem] font-bold tracking-widest uppercase shadow-md">
                       ✦ Featured
@@ -183,7 +186,7 @@ export default function BlogPage() {
                 {/* Content */}
                 <div className="flex flex-col justify-center gap-4 p-8 sm:p-10 lg:p-12">
                   <span
-                    className={`self-start inline-flex items-center px-2.5 py-0.5 rounded-full text-[0.6875rem] font-bold border ${featured.categoryStyle}`}
+                    className={`self-start inline-flex items-center px-2.5 py-0.5 rounded-full text-[0.6875rem] font-bold border ${getCategoryStyle(featured.category)}`}
                   >
                     {featured.category}
                   </span>
@@ -199,19 +202,19 @@ export default function BlogPage() {
                     className="text-(--ink-3) text-sm sm:text-[0.9375rem] leading-[1.7] line-clamp-3"
                     itemProp="description"
                   >
-                    {featured.excerpt}
+                    {featured.description}
                   </p>
 
                   <div className="flex flex-wrap items-center gap-4 pt-2 border-t border-(--border-subtle)">
                     <span className="flex items-center gap-1.5 text-xs text-(--ink-4)">
                       <Calendar size={12} aria-hidden="true" />
-                      <time dateTime={featured.dateISO} itemProp="datePublished">
-                        {featured.dateLabel}
+                      <time dateTime={featured.publishedDate} itemProp="datePublished">
+                        {formatDate(featured.publishedDate)}
                       </time>
                     </span>
                     <span className="flex items-center gap-1.5 text-xs text-(--ink-4)">
                       <Clock size={12} aria-hidden="true" />
-                      {featured.readTime}
+                      {featured.readingTime}
                     </span>
                     <span className="ml-auto flex items-center gap-1.5 text-sm font-semibold text-primary group-hover:gap-2.5 transition-all">
                       Read Article <ArrowRight size={14} />
@@ -223,13 +226,15 @@ export default function BlogPage() {
           </article>
 
           {/* Section divider */}
-          <div className="flex items-center gap-4 mb-8 sm:mb-10">
-            <h2 className="text-sm font-bold tracking-widest uppercase text-(--ink-4)">
-              Latest Articles
-            </h2>
-            <div className="flex-1 h-px bg-(--border-subtle)" />
-            <span className="text-xs text-(--ink-4)">{rest.length} articles</span>
-          </div>
+          {rest.length > 0 && (
+            <div className="flex items-center gap-4 mb-8 sm:mb-10">
+              <h2 className="text-sm font-bold tracking-widest uppercase text-(--ink-4)">
+                Latest Articles
+              </h2>
+              <div className="flex-1 h-px bg-(--border-subtle)" />
+              <span className="text-xs text-(--ink-4)">{rest.length} articles</span>
+            </div>
+          )}
 
           {/* Card grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -243,12 +248,11 @@ export default function BlogPage() {
                 <meta itemProp="author" content="Get Click Media" />
                 <Link href={`/blog/${post.slug}`} className="flex flex-col h-full">
                   <div className="flex flex-col h-full rounded-[20px] overflow-hidden border border-(--border-subtle) bg-white shadow-(--shadow-card) hover:shadow-(--shadow-card-hover) hover:-translate-y-1 transition-all duration-200">
-
                     {/* Thumbnail */}
                     <div className="relative aspect-video overflow-hidden">
                       <Image
                         src={post.image}
-                        alt={post.imageAlt}
+                        alt={post.title}
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -259,7 +263,7 @@ export default function BlogPage() {
                     {/* Body */}
                     <div className="flex flex-col flex-1 gap-3 p-5 sm:p-6">
                       <span
-                        className={`self-start inline-flex items-center px-2.5 py-0.5 rounded-full text-[0.6875rem] font-bold border ${post.categoryStyle}`}
+                        className={`self-start inline-flex items-center px-2.5 py-0.5 rounded-full text-[0.6875rem] font-bold border ${getCategoryStyle(post.category)}`}
                       >
                         {post.category}
                       </span>
@@ -275,20 +279,20 @@ export default function BlogPage() {
                         className="text-(--ink-3) text-sm leading-[1.65] line-clamp-3 flex-1"
                         itemProp="description"
                       >
-                        {post.excerpt}
+                        {post.description}
                       </p>
 
                       {/* Footer */}
                       <div className="flex items-center gap-3 pt-3 mt-auto border-t border-(--border-subtle) text-xs text-(--ink-4)">
                         <span className="flex items-center gap-1">
                           <Calendar size={11} aria-hidden="true" />
-                          <time dateTime={post.dateISO} itemProp="datePublished">
-                            {post.dateLabel}
+                          <time dateTime={post.publishedDate} itemProp="datePublished">
+                            {formatDate(post.publishedDate)}
                           </time>
                         </span>
                         <span className="flex items-center gap-1">
                           <Clock size={11} aria-hidden="true" />
-                          {post.readTime}
+                          {post.readingTime}
                         </span>
                         <span className="ml-auto flex items-center gap-0.5 font-semibold text-primary group-hover:gap-1.5 transition-all text-[0.75rem]">
                           Read <ArrowRight size={11} />

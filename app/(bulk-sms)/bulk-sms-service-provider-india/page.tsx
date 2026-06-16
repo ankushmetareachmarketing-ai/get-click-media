@@ -8,6 +8,7 @@ import BulkSmsPricing from "@/app/components/bulk-sms/BulkSmsPricing";
 import BulkSmsDLTCompliance from "@/app/components/bulk-sms/BulkSmsDLTCompliance";
 import BulkSmsFAQ from "@/app/components/bulk-sms/BulkSmsFAQ";
 import BulkSmsFinalCTA from "@/app/components/bulk-sms/BulkSmsFinalCTA";
+import BulkSmsBrandsStrip from "@/app/components/bulk-sms/BulkSmsBrandsStrip";
 
 export const metadata = {
   title: "Bulk SMS Service Provider in India | Get Click Media",
@@ -24,7 +25,7 @@ export const metadata = {
     siteName: "Get Click Media",
     images: [
       {
-        url: "https://getclickmedia.com/images/bulk-sms/bulk-sms-service-provider-india-hero.jpg",
+        url: "https://getclickmedia.com/images/bulk-sms/bulk-sms-service-provider-india-hero.webp",
         width: 1200,
         height: 630,
         alt: "Bulk SMS Service Provider in India — Get Click Media",
@@ -135,15 +136,17 @@ export default function BulkSmsPage() {
         ]}
         primaryCta="Request a Demo"
         secondaryCta="Explore SMS Plans"
-        imageSrc="/images/bulk-sms/bulk-sms-service-provider-india-hero.jpg"
+        imageSrc="/images/bulk-sms/bulk-sms-service-provider-india-hero.webp"
         imageAlt="Bulk SMS Service Provider in India — Get Click Media platform dashboard"
       />
-      <BulkSmsTrustBar />
+      <BulkSmsBrandsStrip />
+      
       <WhatIsBulkSMS />
       <BulkSmsFeatures />
       <BulkSmsUseCases />
       <BulkSmsHowItWorks />
       <BulkSmsPricing />
+      <BulkSmsTrustBar />
       <BulkSmsDLTCompliance />
       <BulkSmsFAQ />
       <BulkSmsFinalCTA />

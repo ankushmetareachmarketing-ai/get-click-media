@@ -71,10 +71,10 @@ export default function WhatIsBulkSMS() {
               <Image
                 src="/images/bulk-sms/small_Covering_All_Your_SMS_Needs_Be_It_Promotional_Or_Transactional_85a655ff7b.webp"
                 alt="Bulk SMS service provider platform showing real-time delivery dashboard for Indian businesses"
-                width={640}
-                height={440}
+                width={2000}
+                height={2000}
                 className="w-full h-auto object-contain"
-                priority={false}
+                priority={true}
               />
               {/* floating badge */}
               <div className="absolute bottom-4 left-4 bg-white rounded-xl shadow-(--shadow-elevated) px-4 py-2.5 flex items-center gap-2.5 border border-(--border-subtle)">

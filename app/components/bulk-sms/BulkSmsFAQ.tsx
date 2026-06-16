@@ -92,7 +92,7 @@ export default function BulkSmsFAQ() {
                   type="button"
                   onClick={() => toggle(index)}
                   aria-expanded={isOpen}
-                  className="w-full flex justify-between items-center py-5 text-left gap-4"
+                  className="w-full flex justify-between items-center py-5 text-left gap-4 cursor-pointer"
                 >
                   <span className="font-semibold text-(--ink-1) text-sm sm:text-base leading-snug transition-colors duration-150">
                     {faq.question}
