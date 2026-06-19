@@ -7,7 +7,7 @@ import {
   MessageSquare, Radio, Hash, ShieldCheck, Mic2, Phone,
   Mail, Bot, Building2, GraduationCap, HeartPulse,
   ShoppingCart, Car, BookOpen, FileText, Code2,
-  Layers, ArrowUpRight, MapPin, PhoneCall, MailOpen,
+  Layers, ArrowUpRight, MapPin, PhoneCall, MailOpen, Zap,
 } from "lucide-react";
 
 // ── Social icons with brand colors ───────────────────────────────────────────
@@ -82,7 +82,8 @@ const PLATFORM = [
   { label: "WhatsApp Business API",    icon: MessageSquare, href: "#" },
   { label: "RCS Business Messaging",   icon: Radio,         href: "#" },
   { label: "Bulk SMS",                 icon: Hash,          href: "/bulk-sms-service-provider-india" },
-  { label: "OTP & Transactional SMS",  icon: ShieldCheck,   href: "#" },
+  { label: "OTP SMS Service",           icon: ShieldCheck,   href: "/otp-sms-service-provider" },
+  { label: "Transactional SMS",         icon: Zap,           href: "/transactional-sms-service" },
   { label: "Voice & IVR",              icon: Mic2,          href: "#" },
   { label: "Toll Free Numbers",        icon: Phone,         href: "#" },
   { label: "Email Marketing",          icon: Mail,          href: "#" },
@@ -105,7 +106,7 @@ const RESOURCES = [
   { label: "WhatsApp API Pricing India", icon: MessageSquare, href: "#" },
   { label: "RCS Messaging Guide",        icon: Radio,         href: "#" },
   { label: "DLT Registration Guide",     icon: Layers,        href: "#" },
-  { label: "OTP SMS Compliance",         icon: ShieldCheck,   href: "#" },
+  { label: "OTP SMS Security Guide",      icon: ShieldCheck,   href: "/blog/otp-sms-security-guide" },
 ];
 
 const COMPANY = [

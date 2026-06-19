@@ -1,48 +1,48 @@
-﻿import { Zap, ShieldCheck, Code2, Rocket, Headphones, MapPin } from "lucide-react";
+import { Zap, ShieldCheck, Code2, BellRing, Headphones, Globe } from "lucide-react";
 
 const features = [
   {
     icon: Zap,
-    title: "99.9% Delivery Rate",
+    title: "99.9% Delivery Uptime",
     description:
-      "Carrier-grade infrastructure ensures your messages reach every recipient across all Indian telecom operators.",
+      "Carrier-grade infrastructure routes your transactional messages with redundant failover across all Indian telecom operators.",
   },
   {
     icon: ShieldCheck,
     title: "DLT Registration Support",
     description:
-      "We handle your complete TRAI DLT setup — entity, header, and template registration included.",
+      "We handle your complete TRAI DLT setup — entity, transactional sender ID, and template registration — so you go live without delays.",
+  },
+  {
+    icon: BellRing,
+    title: "DND-Exempt Delivery",
+    description:
+      "Transactional SMS bypasses the DND registry. Your OTPs, alerts, and service messages reach every customer number, 24 hours a day.",
   },
   {
     icon: Code2,
-    title: "Powerful SMS API",
+    title: "Simple REST API",
     description:
-      "RESTful API with SDKs for Node, Python, PHP and Java. Integrate bulk SMS into any application in minutes.",
+      "Send transactional messages with a single API call. SDKs available for Node.js, Python, PHP, and Java. Integrate in under an hour.",
   },
   {
-    icon: Rocket,
-    title: "Go Live in 24 Hours",
+    icon: Globe,
+    title: "Pan-India Coverage",
     description:
-      "Quick onboarding with pre-verified DLT templates. Start your first campaign within one business day.",
+      "Full coverage across all 22 telecom circles — Airtel, Jio, Vi, BSNL and all MVNOs — with real-time delivery confirmation.",
   },
   {
     icon: Headphones,
     title: "24×7 Dedicated Support",
     description:
-      "Round-the-clock support via phone, email and WhatsApp. Average response time under 2 minutes.",
-  },
-  {
-    icon: MapPin,
-    title: "Pan-India Coverage",
-    description:
-      "Full coverage across all 22 telecom circles — Airtel, Jio, Vi, BSNL and all MVNOs.",
+      "Round-the-clock support via phone, email, and WhatsApp. Average response time under 2 minutes.",
   },
 ];
 
-export default function BulkSmsFeatures() {
+export default function TransactionalSmsFeatures() {
   return (
     <section
-      aria-label="Why choose us — 6 feature cards"
+      aria-label="Why choose us — 6 transactional SMS feature cards"
       className="py-20 sm:py-28 bg-(--surface-1) relative"
       style={{
         backgroundImage: "url('/images/get-click-media-bg.png')",
@@ -58,11 +58,10 @@ export default function BulkSmsFeatures() {
             Why Choose Us
           </span>
           <h2 className="text-[1.75rem] sm:text-[2.25rem] md:text-[2.75rem] [font-family:var(--font-syne)] font-bold leading-[1.1] tracking-[-0.02em] text-(--ink-1)">
-            Why Choose Get Click Media for Bulk SMS in India?
+            Why Choose Get Click Media for Transactional SMS in India?
           </h2>
           <p className="text-(--ink-3) max-w-2xl text-[0.9375rem] leading-[1.65]">
-            Everything you need to run compliant, high-delivery bulk SMS
-            campaigns in India.
+            Everything you need to deliver compliant, high-priority transactional messages across India.
           </p>
         </div>
 

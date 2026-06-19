@@ -1,0 +1,149 @@
+---
+title: "Transactional SMS vs Promotional SMS: Key Differences Explained (India 2026)"
+description: "Understand the difference between transactional and promotional SMS in India. Learn TRAI rules, DND exemptions, timing restrictions, DLT requirements, and which route is right for your business."
+slug: "transactional-vs-promotional-sms"
+image: "/images/blog/transactional-vs-promotional-sms.webp"
+author: "Get Click Media"
+publishedDate: "2026-06-19"
+category: "Bulk SMS"
+keywords:
+  - "transactional SMS vs promotional SMS"
+  - "transactional SMS India"
+  - "promotional SMS India"
+  - "DND exempt SMS"
+  - "TRAI SMS rules India"
+  - "bulk SMS categories India"
+faq:
+  - question: "What is the main difference between transactional and promotional SMS in India?"
+    answer: "Transactional SMS delivers critical, service-related messages (OTPs, alerts, order updates) and can be sent to all numbers including DND-registered ones, 24×7. Promotional SMS delivers marketing content and can only reach non-DND numbers between 9 AM and 9 PM."
+  - question: "Can promotional SMS be sent to DND numbers in India?"
+    answer: "No. Promotional SMS is blocked by telecom operators for DND-registered recipients. Only transactional SMS — sent via the approved transactional route — bypasses DND filtering under TRAI regulations."
+  - question: "What are the timing restrictions for promotional SMS in India?"
+    answer: "TRAI restricts promotional SMS to the window of 9 AM to 9 PM IST. Messages scheduled outside this window are either blocked by the operator or queued until the allowed window begins, depending on the platform."
+  - question: "Do both transactional and promotional SMS need DLT registration?"
+    answer: "Yes. Both categories require TRAI DLT registration — entity, sender ID (header), and message template must all be pre-approved before any commercial SMS can be sent in India, regardless of the route."
+---
+
+Every business sending SMS in India must choose the correct message route — transactional or promotional. Choosing the wrong one is not just a compliance issue; it can result in messages being blocked before they ever reach your customers. This guide breaks down every key difference so you can make the right choice for your use case.
+
+## What the TRAI Says About SMS Categories
+
+TRAI (Telecom Regulatory Authority of India) classifies all commercial SMS into two broad categories under the Telecom Commercial Communications Customer Preference Regulations (TCCCPR):
+
+- **Transactional** — messages that serve an existing customer relationship or respond to a customer action
+- **Promotional** — messages sent for the purpose of selling products, services, or offers
+
+The category determines which telecom route your message travels, who it can reach, and when it can be sent.
+
+## Side-by-Side Comparison
+
+| Feature | Transactional SMS | Promotional SMS |
+|---|---|---|
+| **Purpose** | OTPs, alerts, service messages | Marketing offers, campaigns |
+| **DND delivery** | Yes — bypasses DND filters | No — blocked for DND numbers |
+| **Allowed hours** | 24×7 | 9 AM – 9 PM only |
+| **Sender ID format** | 6-letter alphanumeric (e.g., GCMDIA) | 6-letter alphanumeric |
+| **DLT registration** | Required | Required |
+| **Pricing** | Slightly higher per SMS | Lower per SMS |
+| **Delivery priority** | High (priority carrier queue) | Standard queue |
+
+## Transactional SMS — When to Use It
+
+### Qualifying Message Types
+
+Under TRAI guidelines, a message qualifies as transactional if it:
+
+- Is triggered by a customer-initiated action (login attempt, purchase, password reset)
+- Delivers information the customer has a right to receive (account alert, policy update)
+- Contains no promotional content whatsoever
+
+**Examples that qualify:**
+- `Your OTP is 847291. Valid for 10 minutes. Do not share it. — BANKCO`
+- `Order #ORD-7821 has been dispatched. Track at: example.com/track — SHOPCO`
+- `Dr. Sharma appointment confirmed for 15 Jun at 11:00 AM. — CLINIX`
+- `₹5,000 debited from your account ending 3421. If not you, call 1800-XXX. — HDFCBK`
+
+### Key Advantage: DND Exemption
+
+The most significant advantage of the transactional route is **DND exemption**. In India, over 300 million numbers are registered on the Do Not Disturb (DND) registry. Promotional SMS cannot reach any of these numbers. Transactional SMS can — because TRAI recognises that customers need to receive critical service communications regardless of their DND preference.
+
+This makes the transactional route essential for OTPs, banking alerts, and any message where 100% recipient coverage is required.
+
+## Promotional SMS — When to Use It
+
+### Qualifying Message Types
+
+A message is promotional if its primary intent is to drive a commercial action — a sale, sign-up, or visit — rather than deliver a service obligation.
+
+**Examples that qualify:**
+- `FLAT 40% OFF on all products this weekend only! Shop now: example.com — SHOPCO`
+- `Exclusive offer for you: Get 3 months free on our premium plan. Upgrade today. — SAASCO`
+- `New collection just dropped. Be the first to shop. Visit our store. — BRANDX`
+
+### Timing Restriction: 9 AM – 9 PM Only
+
+TRAI prohibits promotional SMS outside the 9 AM to 9 PM window (IST). Messages scheduled or triggered outside these hours are either blocked or held until the window opens, depending on the SMS provider's configuration.
+
+This restriction protects consumers from late-night and early-morning marketing messages.
+
+### DND Registry Impact on Reach
+
+Before running any promotional campaign, your effective audience is your contact list **minus** all DND-registered numbers. In India, this can reduce deliverable reach by 30–50% for consumer-facing databases.
+
+Plan your campaign volumes accordingly and never attempt to route promotional content through the transactional path — TRAI's scrubbing system detects template mismatches and blocks the message.
+
+## The DLT Requirement — Applies to Both
+
+A common misconception is that only promotional SMS needs DLT registration. **Both routes require it.**
+
+### What You Must Register
+
+1. **Entity** — your company's legal identity on an approved DLT portal (Jio, Airtel, Vi, BSNL, etc.)
+2. **Sender ID (Header)** — the 6-character alphanumeric that appears as the sender name
+3. **Message Template** — the exact content of each SMS you plan to send, with variables declared
+
+### Separate Headers for Each Route
+
+TRAI requires different sender IDs for transactional and promotional messages. You cannot use the same header on both routes. Register separate headers during DLT setup.
+
+### Template Matching Is Enforced
+
+When your message is sent, the telecom operator compares it against your registered template. Any mismatch — even a single extra word or a changed punctuation mark — results in the message being scrubbed before delivery.
+
+## Pricing Difference
+
+Transactional SMS typically costs slightly more per message than promotional SMS. This reflects the higher infrastructure priority — transactional messages are dispatched via dedicated carrier queues with lower latency and higher delivery guarantees.
+
+| Route | Typical Price Range (India) |
+|---|---|
+| Transactional | ₹0.09 – ₹0.15 per SMS |
+| Promotional | ₹0.07 – ₹0.12 per SMS |
+
+Prices vary by volume, provider, and contract terms. Both routes require a minimum commitment in most plans.
+
+## Can One Message Be Both?
+
+No. TRAI does not recognise a hybrid category. If your message contains any promotional content — a discount, an offer, a call-to-action to buy — it must travel as promotional, even if it also contains service information.
+
+**Wrong approach:** Embedding a "₹500 off your next order" message inside an order confirmation — this is promotional content and should be sent as a separate promotional SMS (to non-DND numbers only, during allowed hours).
+
+**Right approach:** Send the order confirmation as transactional, and if you want to promote a follow-up offer, send a separate promotional message to eligible non-DND contacts.
+
+## Choosing the Right Route: Decision Checklist
+
+Use this checklist before sending:
+
+- [ ] Is this message triggered by a customer action or a service obligation? → **Transactional**
+- [ ] Does the message contain any discount, offer, or call-to-buy? → **Promotional**
+- [ ] Must the message reach DND numbers? → **Transactional only**
+- [ ] Will the message be sent outside 9 AM – 9 PM? → **Transactional only**
+- [ ] Is this a bulk marketing campaign to a cold or opted-in list? → **Promotional**
+- [ ] Is this an OTP, banking alert, or delivery update? → **Transactional**
+
+## Summary
+
+The core distinction is intent and customer relationship. Transactional SMS serves the customer; promotional SMS markets to them. Choose transactional for OTPs, alerts, and service messages where delivery to every recipient (including DND) is non-negotiable. Choose promotional for campaigns, offers, and announcements, keeping timing restrictions and DND reach limits in mind.
+
+Both routes require DLT registration. Get Click Media supports both with complete DLT assistance, separate sender IDs, and carrier-grade infrastructure for each route.
+
+→ [Explore Transactional SMS Service](/transactional-sms-service) | [View Bulk SMS Plans](/bulk-sms-service-provider-india#pricing)

@@ -29,6 +29,7 @@ import {
   Play,
   X,
   Menu,
+  ShieldCheck,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -104,7 +105,9 @@ const navItems: NavItem[] = [
           sectionTitle: "Channels",
           items: [
             { icon: <Phone size={20} />, title: "WhatsApp Business", description: "Reach 2B+ users on the world's largest platform", color: "#22c55e", bgColor: "#f0fdf4" },
-            { icon: <Mail size={20} />, title: "SMS & RCS", description: "Rich messaging with multimedia support", href: "/bulk-sms-service-provider-india", color: "#3b82f6", bgColor: "#eff6ff" },
+            { icon: <Mail size={20} />, title: "Bulk SMS", description: "Pan-India bulk messaging at scale", href: "/bulk-sms-service-provider-india", color: "#3b82f6", bgColor: "#eff6ff" },
+            { icon: <ShieldCheck size={20} />, title: "OTP SMS", description: "Sub-second OTP delivery, DND-exempt", href: "/otp-sms-service-provider", color: "#10b981", bgColor: "#ecfdf5" },
+            { icon: <Zap size={20} />, title: "Transactional SMS", description: "Critical alerts and service messages", href: "/transactional-sms-service", color: "#f59e0b", bgColor: "#fffbeb" },
             { icon: <Globe size={20} />, title: "Web & App Chat", description: "Embed live chat on any digital surface", color: "#8b5cf6", bgColor: "#f5f3ff" },
           ],
         },

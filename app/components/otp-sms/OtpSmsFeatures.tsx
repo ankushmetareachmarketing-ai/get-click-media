@@ -1,48 +1,48 @@
-﻿import { Zap, ShieldCheck, Code2, Rocket, Headphones, MapPin } from "lucide-react";
+import { Zap, ShieldCheck, Code2, RefreshCw, Headphones, BarChart2 } from "lucide-react";
 
 const features = [
   {
     icon: Zap,
-    title: "99.9% Delivery Rate",
+    title: "Sub-Second Delivery",
     description:
-      "Carrier-grade infrastructure ensures your messages reach every recipient across all Indian telecom operators.",
+      "OTPs are dispatched over priority transactional routes and typically reach the recipient's handset in under 3 seconds.",
   },
   {
     icon: ShieldCheck,
-    title: "DLT Registration Support",
+    title: "DLT Compliant Transactional Route",
     description:
-      "We handle your complete TRAI DLT setup — entity, header, and template registration included.",
+      "We handle your TRAI DLT entity, sender ID, and template registration — ensuring your OTPs bypass DND filters legally.",
   },
   {
     icon: Code2,
-    title: "Powerful SMS API",
+    title: "Simple REST API",
     description:
-      "RESTful API with SDKs for Node, Python, PHP and Java. Integrate bulk SMS into any application in minutes.",
+      "Send OTPs with a single API call. SDKs available for Node.js, Python, PHP, and Java. Go live in under an hour.",
   },
   {
-    icon: Rocket,
-    title: "Go Live in 24 Hours",
+    icon: RefreshCw,
+    title: "Automatic Retries",
     description:
-      "Quick onboarding with pre-verified DLT templates. Start your first campaign within one business day.",
+      "Failed deliveries are automatically retried across alternate telecom routes to maximise the chance of successful OTP delivery.",
+  },
+  {
+    icon: BarChart2,
+    title: "Real-Time Delivery Reports",
+    description:
+      "Track every OTP — sent, delivered, failed — in real time from your dashboard or via webhook callbacks.",
   },
   {
     icon: Headphones,
     title: "24×7 Dedicated Support",
     description:
-      "Round-the-clock support via phone, email and WhatsApp. Average response time under 2 minutes.",
-  },
-  {
-    icon: MapPin,
-    title: "Pan-India Coverage",
-    description:
-      "Full coverage across all 22 telecom circles — Airtel, Jio, Vi, BSNL and all MVNOs.",
+      "Round-the-clock support via phone, email, and WhatsApp. Average response time under 2 minutes.",
   },
 ];
 
-export default function BulkSmsFeatures() {
+export default function OtpSmsFeatures() {
   return (
     <section
-      aria-label="Why choose us — 6 feature cards"
+      aria-label="Why choose us — 6 OTP SMS feature cards"
       className="py-20 sm:py-28 bg-(--surface-1) relative"
       style={{
         backgroundImage: "url('/images/get-click-media-bg.png')",
@@ -58,11 +58,10 @@ export default function BulkSmsFeatures() {
             Why Choose Us
           </span>
           <h2 className="text-[1.75rem] sm:text-[2.25rem] md:text-[2.75rem] [font-family:var(--font-syne)] font-bold leading-[1.1] tracking-[-0.02em] text-(--ink-1)">
-            Why Choose Get Click Media for Bulk SMS in India?
+            Why Choose Get Click Media for OTP SMS in India?
           </h2>
           <p className="text-(--ink-3) max-w-2xl text-[0.9375rem] leading-[1.65]">
-            Everything you need to run compliant, high-delivery bulk SMS
-            campaigns in India.
+            Everything you need to deliver OTPs reliably, compliantly, and at scale across India.
           </p>
         </div>
 
