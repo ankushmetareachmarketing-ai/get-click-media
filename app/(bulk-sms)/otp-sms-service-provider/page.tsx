@@ -136,7 +136,7 @@ export default function OtpSmsPage() {
         ]}
         primaryCta="Request a Demo"
         secondaryCta="Explore OTP Plans"
-        imageSrc="/images/bulk-sms/bulk-sms-service-provider-india-hero.webp"
+        imageSrc="/images/otp-sms/best-otp-sms-service-provider-india.webp"
         imageAlt="OTP SMS Service Provider in India — Get Click Media platform dashboard"
       />
       <BulkSmsBrandsStrip />
