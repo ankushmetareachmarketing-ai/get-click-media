@@ -1,0 +1,166 @@
+---
+title: "DLT Registration Guide for Businesses in India: Step-by-Step"
+description: "Learn how to register your business on the DLT platform for bulk SMS in India. Complete step-by-step guide covering entity registration, document requirements, and common mistakes to avoid."
+slug: "dlt-registration-guide"
+image: "/images/blog/dlt-registration-guide.webp"
+author: "Get Click Media"
+publishedDate: "2026-06-22"
+updatedDate: "2026-06-22"
+category: "Bulk SMS"
+keywords:
+  - "DLT registration guide"
+  - "DLT registration India"
+  - "bulk SMS DLT registration"
+  - "TRAI DLT platform"
+  - "how to register on DLT"
+faq:
+  - question: "What is DLT registration and why is it mandatory?"
+    answer: "DLT (Distributed Ledger Technology) registration is mandatory under TRAI regulations for any business that wants to send commercial SMS in India. Without DLT registration, your messages will be blocked by telecom operators."
+  - question: "Which DLT platform should I register on?"
+    answer: "You can register on any one of the approved DLT platforms — Vodafone Idea (VI), Airtel, Jio, BSNL, Tata Communications, or Videocon. Registration on one platform is valid across all operators."
+  - question: "How long does DLT registration take?"
+    answer: "Entity registration typically takes 1–3 business days after document submission. Header and template approval can take an additional 2–5 business days depending on the platform and category."
+  - question: "What documents are required for DLT registration?"
+    answer: "You need your GST certificate or business registration proof, PAN card of the entity, authorised signatory ID proof, and a business address proof. For enterprises, board resolution or authorization letter may also be required."
+  - question: "Can I send SMS without DLT registration?"
+    answer: "No. As of 2021, all commercial SMS traffic in India is routed through DLT-verified channels. Messages from unregistered entities or unregistered headers/templates are automatically blocked by the telecom network."
+---
+
+If you have tried sending a bulk SMS campaign in India recently and watched your messages fail delivery, there is a good chance your DLT registration is incomplete. Since TRAI made DLT registration mandatory in 2021, it has become the single most important prerequisite for commercial messaging in India — and yet it trips up businesses at every stage.
+
+This guide walks you through the entire DLT registration process, from understanding why it exists to getting your headers and templates approved and actually sending your first compliant campaign.
+
+## What Is DLT and Why Did TRAI Introduce It?
+
+DLT stands for Distributed Ledger Technology. TRAI introduced the DLT framework to combat spam and SMS fraud that had reached crisis levels in India — billions of unsolicited commercial messages were being sent every year with no way to trace the sender.
+
+Under the DLT framework, every commercial SMS in India must pass through a verified chain:
+
+- The **Principal Entity (PE)** — your business — must be registered
+- The **Telemarketer (TM)** — your SMS service provider — must be registered
+- The **Header (Sender ID)** you use must be registered under your entity
+- The **Template** (the actual message content) must be pre-approved
+
+Every link in this chain is stored on a distributed ledger that any telecom operator can verify in real time. If any link is missing, the message is blocked before it reaches the recipient. For a deeper look at how this chain works end to end, see our [PE-TM Binding Chain Guide](/blog/pe-tm-binding-chain-guide).
+
+## Step 1: Choose Your DLT Platform
+
+You only need to register on one DLT platform — your registration is valid across all telecom operators in India. The approved DLT platforms are:
+
+- **Vodafone Idea (Vilpower)** — vilpower.in
+- **Airtel** — dlt.airtel.in
+- **Jio** — trueconnect.jio.com
+- **BSNL** — smsheader.bsnl.co.in
+- **Tata Communications** — tattatel.co.in
+- **Videocon / ACT** — smartping.com
+
+Most businesses register on Airtel or Vodafone Idea simply because their interfaces are more user-friendly, but there is no functional difference in terms of compliance or delivery.
+
+## Step 2: Gather Your Documents
+
+Before you start the registration form, keep these ready:
+
+**For Private Limited / LLP / Partnership:**
+- GST Registration Certificate
+- PAN Card of the Company
+- Certificate of Incorporation
+- Authorised Signatory Aadhaar and PAN
+- Authorisation Letter / Board Resolution
+
+**For Sole Proprietorship:**
+- GST Certificate (or Shop Establishment Certificate)
+- Proprietor PAN and Aadhaar
+
+**For Government / NGO Entities:**
+- Registration certificate from the relevant authority
+- Authorised signatory proof
+
+Having scanned copies of all documents ready before you begin will save you from a half-completed registration sitting in limbo.
+
+## Step 3: Register as a Principal Entity
+
+Go to your chosen DLT platform and look for the **"New Registration"** or **"Register as Enterprise / Principal Entity"** option.
+
+Fill in:
+1. **Legal entity name** — exactly as it appears on your GST certificate
+2. **Entity type** — Private Limited, LLP, Proprietorship, Government, NGO, etc.
+3. **PAN number**
+4. **GST number**
+5. **Registered address**
+6. **Authorised signatory details**
+7. **Contact email and mobile** — this is where your credentials will be sent, so use a business email
+
+Upload the required documents, review all details, and submit. You will receive a reference number for tracking.
+
+**Approval timeline:** 1–3 business days in most cases. If rejected, the platform will indicate which document or field has an issue.
+
+## Step 4: Register Your Headers (Sender IDs)
+
+Once your entity is approved, log in and go to the **Headers** section.
+
+A header is the 6-character alphabetic sender ID that appears in the "From" field of your SMS — for example, GETCLK, AMAZON, ICICIB.
+
+When registering a header:
+- Choose the **header type**: Transactional, Promotional, or Service (Implicit / Explicit)
+- Enter your desired 6-character header
+- It must clearly represent your brand — GETCLK is acceptable for Get Click Media; ABCXYZ is not
+
+You can register multiple headers under one entity — useful if you have different brands, products, or communication types. For a detailed breakdown of header types and when to use each, refer to our [Sender ID Registration Guide](/blog/sender-id-registration-guide).
+
+## Step 5: Register Your SMS Templates
+
+This is where most businesses spend the most time — and where most compliance issues arise.
+
+Go to the **Templates** section and click **Add New Template**. For each template:
+
+1. **Select the header** it will be sent from
+2. **Choose the category** — Transactional, Promotional, or Service
+3. **Enter the template content** — use `{#var#}` for any dynamic variable
+4. **Add a description** explaining the use case
+
+Example of a correctly formatted template:
+```
+Your OTP for login is {#var#}. Valid for 10 minutes. Do not share with anyone. - GETCLK
+```
+
+The `{#var#}` placeholder is how TRAI-approved templates handle personalisation — the actual value (the OTP, the name, the order number) is substituted at send time. For the full guide on writing templates that get approved quickly, see our [SMS Template Approval Guide](/blog/sms-template-approval-guide).
+
+**Template approval timeline:** 2–5 business days, though many platforms now offer near-instant auto-approval for standard transactional templates.
+
+## Step 6: Connect Your SMS Provider (Telemarketer Binding)
+
+After your entity, headers, and templates are approved, the final step is linking your SMS service provider (the Telemarketer) to your DLT entity.
+
+Your SMS provider will give you their **Telemarketer ID** registered on the DLT platform. You enter this ID in the **TM Binding** section of your DLT account to authorise them to send messages on your behalf.
+
+Without this binding, even a fully registered entity with approved headers and templates cannot send SMS — the network will reject the traffic at the operator level.
+
+## Common Mistakes That Delay or Block Registration
+
+**1. Entity name mismatch:** The name on your DLT registration must match your GST certificate exactly. Even a minor difference — "Pvt. Ltd." vs "Private Limited" — can cause rejection.
+
+**2. Using the wrong template category:** Sending promotional content on a transactional template is a compliance violation that can result in your header being blacklisted. Understand the difference before you submit templates — see [Transactional vs Promotional SMS](/blog/transactional-vs-promotional-sms) for clarity.
+
+**3. Missing dynamic variable syntax:** Any part of your message that changes per recipient must use the `{#var#}` format. Fixed text that looks like it changes (hardcoded phone numbers, for example) will still pass — but if you later try to personalise it, the template won't match.
+
+**4. Template too generic:** Templates like "Get our special offer today" without brand identification or a clear call to action are often rejected. Include your brand name and a specific action.
+
+**5. Not registering enough templates upfront:** Register all the templates you think you will need in the next 6 months. Approval takes a few days each time, and waiting for a template mid-campaign is painful.
+
+## After Registration: What to Check Before Your First Campaign
+
+Before you send a single message, verify:
+
+- [ ] Entity status is **Approved** (not Pending or Under Review)
+- [ ] All headers show **Active** status
+- [ ] All templates are **Approved**
+- [ ] Your SMS provider's TM ID is **bound** to your entity
+- [ ] Your SMS provider has mapped your approved headers and templates on their platform
+
+Once all five are confirmed, your first compliant campaign is ready to go. For a full picture of ongoing compliance obligations beyond registration, read our [TRAI SMS Compliance Guide](/blog/trai-sms-compliance-guide).
+
+## Conclusion
+
+DLT registration is not optional and it is not complicated — it just requires patience and attention to detail. The businesses that struggle with it are almost always the ones who rushed through the process, skipped document verification, or tried to send campaigns before all approvals were in place.
+
+Register once, do it right, and DLT becomes invisible infrastructure that your campaigns run on without a second thought. If you are ready to start sending compliant bulk SMS campaigns, [explore our Bulk SMS Service](/bulk-sms-service-provider-india) to see how Get Click Media handles the technical side.
