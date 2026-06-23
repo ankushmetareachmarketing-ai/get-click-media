@@ -1,0 +1,301 @@
+---
+title: "SMS API Integration Guide for India (2026) — DLT, REST & Code Examples"
+description: "Complete guide to integrating an SMS API in India. Covers DLT registration, REST API setup, Node.js, Python and PHP code examples, delivery webhooks, rate limits, and full TRAI compliance for transactional and promotional SMS."
+slug: "sms-api-integration-guide"
+image: "/images/blog/otp-sms-api-integration-guide.webp"
+author: "Get Click Media"
+publishedDate: "2026-06-23"
+category: "Bulk SMS"
+keywords:
+  - "SMS API integration India"
+  - "SMS API guide India"
+  - "integrate SMS API"
+  - "transactional SMS API India"
+  - "promotional SMS API"
+  - "DLT SMS API"
+  - "SMS gateway API India"
+  - "send SMS programmatically India"
+faq:
+  - question: "What is an SMS API?"
+    answer: "An SMS API (Application Programming Interface) is an HTTP or REST endpoint that allows software applications to send, receive, and track SMS messages programmatically. Businesses call the API from their backend code to deliver transactional alerts, OTPs, or marketing messages to any mobile number without manual intervention."
+  - question: "Is DLT registration mandatory before using an SMS API in India?"
+    answer: "Yes. TRAI mandates DLT (Distributed Ledger Technology) registration for all commercial SMS senders in India. You must register your business entity, sender ID (header), and message templates on a TRAI-authorised DLT portal before any API call can deliver a message. Unregistered SMS is scrubbed at the telecom operator level."
+  - question: "What is the difference between transactional and promotional SMS API routes in India?"
+    answer: "Transactional SMS is used for service messages like OTPs, alerts, and account updates. It bypasses DND filtering and requires a DLT-registered transactional template. Promotional SMS is used for marketing and cannot reach DND-registered numbers. Both require DLT entity and template registration, but they use separate telecom routes."
+  - question: "How fast is SMS delivery via API in India?"
+    answer: "On a transactional route through a reputed gateway like Get Click Media, SMS delivery typically completes in under 3 seconds under normal network conditions. Promotional SMS delivery may take 1–5 minutes depending on carrier load. Priority queue options can reduce latency further for high-volume senders."
+  - question: "Can I integrate an SMS API with my existing application without changing my tech stack?"
+    answer: "Yes. SMS APIs use standard HTTP/REST, so they integrate with any language or framework — Node.js, Python, PHP, Java, Ruby, .NET, and more. You call the API endpoint with a POST request containing the recipient number, message, and authentication credentials. No SDK is required, though most providers offer one for convenience."
+---
+
+An SMS API lets your application send text messages programmatically — from OTP delivery and order confirmations to bulk promotional campaigns — without any manual intervention. In India, successful integration requires understanding TRAI's DLT framework alongside standard REST API practices. This guide covers everything from DLT onboarding to production-ready code.
+
+## What Is an SMS API?
+
+An SMS API is a REST or HTTP interface that accepts an authenticated request from your application and routes the message through a telecom gateway to the recipient's mobile number. The API abstracts away carrier negotiations, DLT compliance checks, and delivery routing — your code simply sends a POST request and receives a message ID in response.
+
+### Key Capabilities of a Modern SMS API
+
+- **Transactional delivery** — OTPs, alerts, account notifications via DND-exempt routes
+- **Promotional campaigns** — batch scheduling, template personalisation, opt-out handling
+- **Delivery reports** — real-time status via webhooks or polling
+- **Unicode support** — regional language SMS (Hindi, Tamil, Telugu, etc.)
+- **Two-way messaging** — inbound SMS via virtual numbers
+- **Analytics** — delivery rates, click-through rates, operator-level reports
+
+## Prerequisites for SMS API Integration in India
+
+Before writing a single line of code, complete these two regulatory steps:
+
+### 1. DLT Entity Registration
+
+The Distributed Ledger Technology (DLT) framework introduced by TRAI in 2021 requires every commercial SMS sender to register their business on a TRAI-authorised DLT portal. Choose any one:
+
+| Portal | Operator | URL |
+|---|---|---|
+| Jio Trueconnect | Reliance Jio | trueconnect.jio.com |
+| Airtel DLT | Airtel | dltconnect.airtel.in |
+| Vi DLT | Vodafone Idea | vilpower.in |
+| BSNL DLT | BSNL | smsid.bsnl.co.in |
+| Tata DLT | Tata Communications | smartping.com |
+
+Registration on any one portal suffices — data syncs across all operators via the shared blockchain. You need your company PAN, GST certificate (if applicable), and a valid business address.
+
+### 2. Sender ID and Template Registration
+
+After entity approval, register:
+
+- **Sender ID (Header)** — a 6-character alphanumeric tag shown as the message sender (e.g., `GCMDIA`). Register under Transactional or Promotional category.
+- **Message Template** — the exact text of every SMS you intend to send, with variables declared as `{#var#}`.
+
+Template example:
+```
+Your order {#var#} has been shipped. Track at {#var#}. — GCMDIA
+```
+
+Template approval takes 1–3 business days. You cannot send any SMS before templates are in **Approved** status.
+
+## Step 1 — Set Up Your SMS Gateway Account
+
+Sign up with Get Click Media and collect:
+
+- **API Key** — authenticates every API request
+- **Sender ID** — your approved DLT header
+- **Template ID** — assigned by DLT after template approval
+
+Store these as environment variables — never hardcode them in source files.
+
+```bash
+GCM_API_KEY=your_api_key_here
+GCM_SENDER_ID=GCMDIA
+GCM_TEMPLATE_ID=your_template_id
+```
+
+## Step 2 — Send Your First SMS
+
+The API accepts a `POST` request to `/sms/send` with a JSON body.
+
+### Node.js (native fetch)
+
+```js
+const sendSms = async ({ to, message, type = "transactional" }) => {
+  const response = await fetch("https://api.getclickmedia.com/sms/send", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "x-api-key": process.env.GCM_API_KEY,
+    },
+    body: JSON.stringify({
+      to,                                    // "919876543210"
+      message,
+      senderId: process.env.GCM_SENDER_ID,
+      templateId: process.env.GCM_TEMPLATE_ID,
+      type,                                  // "transactional" | "promotional"
+    }),
+  });
+
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(`SMS send failed: ${error.message}`);
+  }
+
+  return response.json(); // { messageId, status: "queued" }
+};
+```
+
+### Python (requests)
+
+```python
+import os, requests
+
+def send_sms(to: str, message: str, msg_type: str = "transactional") -> dict:
+    resp = requests.post(
+        "https://api.getclickmedia.com/sms/send",
+        headers={
+            "Content-Type": "application/json",
+            "x-api-key": os.environ["GCM_API_KEY"],
+        },
+        json={
+            "to": to,
+            "message": message,
+            "senderId": os.environ["GCM_SENDER_ID"],
+            "templateId": os.environ["GCM_TEMPLATE_ID"],
+            "type": msg_type,
+        },
+        timeout=10,
+    )
+    resp.raise_for_status()
+    return resp.json()
+```
+
+### PHP (cURL)
+
+```php
+function sendSms(string $to, string $message, string $type = "transactional"): array {
+    $ch = curl_init("https://api.getclickmedia.com/sms/send");
+    curl_setopt_array($ch, [
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POST           => true,
+        CURLOPT_HTTPHEADER     => [
+            "Content-Type: application/json",
+            "x-api-key: " . $_ENV["GCM_API_KEY"],
+        ],
+        CURLOPT_POSTFIELDS => json_encode([
+            "to"         => $to,
+            "message"    => $message,
+            "senderId"   => $_ENV["GCM_SENDER_ID"],
+            "templateId" => $_ENV["GCM_TEMPLATE_ID"],
+            "type"       => $type,
+        ]),
+    ]);
+    $result = curl_exec($ch);
+    curl_close($ch);
+    return json_decode($result, true);
+}
+```
+
+## Step 3 — Send Bulk SMS
+
+For campaigns targeting thousands of recipients, use the batch endpoint:
+
+```js
+const sendBulkSms = async (recipients, message) => {
+  const response = await fetch("https://api.getclickmedia.com/sms/bulk", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "x-api-key": process.env.GCM_API_KEY,
+    },
+    body: JSON.stringify({
+      recipients,           // ["919876543210", "918765432109", ...]
+      message,
+      senderId: process.env.GCM_SENDER_ID,
+      templateId: process.env.GCM_TEMPLATE_ID,
+      type: "promotional",
+      scheduleAt: null,     // ISO 8601 for scheduled send; null = send now
+    }),
+  });
+  return response.json(); // { batchId, queued: 1000, failed: 0 }
+};
+```
+
+## Step 4 — Handle Delivery Reports via Webhooks
+
+Configure your webhook URL in the Get Click Media dashboard. The gateway POSTs a delivery receipt to your endpoint after every message is delivered or fails.
+
+### Webhook Payload
+
+```json
+{
+  "messageId": "gcm_msg_abc123",
+  "to": "919876543210",
+  "status": "delivered",
+  "deliveredAt": "2026-06-23T10:45:12Z",
+  "operator": "Airtel",
+  "batchId": null
+}
+```
+
+### Express.js Webhook Handler
+
+```js
+app.post("/webhooks/sms", express.json(), async (req, res) => {
+  const { messageId, to, status, deliveredAt } = req.body;
+
+  await db.update("sms_log", { status, deliveredAt }, { messageId });
+
+  if (status === "failed") {
+    await alertOpsTeam({ messageId, to });
+  }
+
+  res.sendStatus(200); // Always respond 200 to prevent retries
+});
+```
+
+## Step 5 — Check Delivery Status by Polling
+
+If webhooks are not feasible, poll the status endpoint:
+
+```js
+const getDeliveryStatus = async (messageId) => {
+  const response = await fetch(
+    `https://api.getclickmedia.com/sms/status/${messageId}`,
+    { headers: { "x-api-key": process.env.GCM_API_KEY } }
+  );
+  return response.json();
+  // { messageId, status: "delivered" | "pending" | "failed", operator, deliveredAt }
+};
+```
+
+## Step 6 — Error Handling and Rate Limits
+
+### HTTP Status Codes
+
+| Code | Meaning | Action |
+|---|---|---|
+| 200 | Success | Message queued |
+| 400 | Bad request | Check payload — missing field or invalid number |
+| 401 | Unauthorised | Verify API key |
+| 422 | Template mismatch | Variable count or text doesn't match DLT template |
+| 429 | Rate limit exceeded | Back off and retry after `Retry-After` header |
+| 500 | Gateway error | Retry with exponential backoff |
+
+### Retry Logic (Node.js)
+
+```js
+const sendWithRetry = async (payload, maxRetries = 3) => {
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      return await sendSms(payload);
+    } catch (err) {
+      if (attempt === maxRetries) throw err;
+      await new Promise(r => setTimeout(r, 1000 * Math.pow(2, attempt)));
+    }
+  }
+};
+```
+
+## Security Best Practices
+
+- Store API keys in environment variables or a secrets manager (AWS Secrets Manager, HashiCorp Vault)
+- Never log full message content containing OTPs or PII
+- Validate the `to` number format before calling the API: `^91[6-9]\d{9}$` for Indian mobile numbers
+- Verify webhook authenticity using HMAC signature headers provided by your gateway
+- Rotate API keys quarterly
+
+## Common Mistakes to Avoid
+
+| Mistake | Consequence |
+|---|---|
+| Sending before DLT template is approved | Messages scrubbed; zero delivery |
+| Template variable mismatch | Blocked at operator level |
+| Hardcoding API keys in source code | Credential exposure in version control |
+| No retry logic | Permanent failures on transient errors |
+| Ignoring webhook failures | Silent data loss in delivery tracking |
+| Using promotional route for OTPs | DND blocking; OTP delivery failure |
+
+## Summary
+
+Integrating an SMS API in India is a two-phase process: regulatory compliance via DLT, followed by standard REST API integration. With DLT-approved templates, your messages reach all Indian mobile users — including DND-registered numbers for transactional messages — within seconds. Get Click Media provides a unified API that covers transactional, promotional, OTP, and bulk SMS from a single endpoint with 99.9% uptime SLA.
+
+[Start your free trial](/get-started) or [view SMS API pricing](/bulk-sms-service-provider-india#pricing).

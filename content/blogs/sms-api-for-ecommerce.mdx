@@ -1,0 +1,301 @@
+---
+title: "SMS API for E-commerce in India (2026) — Orders, Cart Recovery & OTP"
+description: "How Indian e-commerce businesses use SMS APIs for order confirmations, live delivery tracking, abandoned cart recovery, OTP verification, and flash sale campaigns. Includes code examples, DLT setup, and conversion benchmarks."
+slug: "sms-api-for-ecommerce"
+image: "/images/blog/benefits-of-bulk-sms-marketing.webp"
+author: "Get Click Media"
+publishedDate: "2026-06-23"
+category: "Bulk SMS"
+keywords:
+  - "SMS API for ecommerce India"
+  - "ecommerce SMS integration India"
+  - "order confirmation SMS API"
+  - "abandoned cart SMS India"
+  - "OTP SMS ecommerce"
+  - "delivery tracking SMS"
+  - "flash sale SMS India"
+  - "WhatsApp SMS ecommerce"
+faq:
+  - question: "Why should Indian e-commerce businesses use SMS API over email?"
+    answer: "SMS open rates in India average 95–98% compared to 15–25% for email. SMS is delivered and read within 3 minutes of receipt on average, while promotional emails may sit unread for hours. For time-sensitive messages like OTPs, delivery alerts, and flash sale notifications, SMS consistently outperforms email in both reach and conversion."
+  - question: "Which SMS messages require DLT registration for e-commerce in India?"
+    answer: "All commercial SMS sent in India requires DLT registration — including order confirmations, delivery tracking, OTPs, and promotional campaigns. E-commerce businesses must register on a TRAI-authorised DLT portal, register their sender ID (header), and get every message template approved before the first message is delivered."
+  - question: "Can SMS reach customers on DND in India for e-commerce alerts?"
+    answer: "Transactional SMS — including OTPs, order confirmations, and delivery alerts — uses a DND-exempt route and reaches all mobile numbers regardless of DND status. Promotional SMS (flash sales, discount offers) cannot reach DND-registered numbers. Segment your message types accordingly and use the correct API route."
+  - question: "What is the ROI of abandoned cart SMS for Indian e-commerce?"
+    answer: "Abandoned cart SMS campaigns in India typically achieve 8–15% recovery rates when sent within 1 hour of cart abandonment. A two-message sequence (1 hour and 24 hours post-abandonment) increases recovery by 40% compared to a single message. Including a discount code in the second message can push recovery rates above 20% for high-intent SKUs."
+  - question: "How do I send personalised order SMS to thousands of customers simultaneously?"
+    answer: "Use the bulk SMS API endpoint with a personalisation parameter. Pass an array of recipient objects, each containing the phone number and variable values for your DLT template. The gateway substitutes variables per recipient at dispatch time. For 1,000 orders, one API call with the batch payload handles all personalisation server-side."
+---
+
+SMS is the highest-reach communication channel for Indian e-commerce. With 95%+ open rates and near-instant delivery, it outperforms email for every time-sensitive touchpoint — order confirmation, delivery tracking, OTP verification, and flash sale alerts. An SMS API integrates directly into your order management, fulfilment, and CRM systems to automate all of these at scale. This guide explains each use case with code, benchmarks, and DLT requirements.
+
+## Why SMS Is Critical for Indian E-commerce
+
+India's e-commerce market serves customers across urban and rural areas with widely varying internet reliability. SMS reaches every mobile number — smartphone or feature phone, 2G or 5G — without an app or internet connection. Key statistics:
+
+- **SMS open rate in India:** 95–98%
+- **Average time to read:** Under 3 minutes
+- **OTP delivery success rate via transactional SMS:** 99%+
+- **Abandoned cart SMS recovery rate:** 8–15% (first hour)
+- **Flash sale SMS CTR:** 3–8% depending on offer relevance
+
+## E-commerce SMS Use Cases and API Implementation
+
+### 1. Order Confirmation SMS
+
+Triggered immediately when a customer places an order. Customers expect instant confirmation — delays erode trust.
+
+**DLT Template (register before use):**
+```
+Dear {#var#}, your order {#var#} for {#var#} has been placed successfully. 
+Estimated delivery: {#var#}. Track at example.com/track. — GCMDIA
+```
+
+**Node.js Integration (triggered from order webhook):**
+
+```js
+// Called by your OMS/webhook when order status = "confirmed"
+const sendOrderConfirmation = async (order) => {
+  await fetch("https://api.getclickmedia.com/v1/sms/send", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "x-api-key": process.env.GCM_API_KEY,
+    },
+    body: JSON.stringify({
+      to: `91${order.customerPhone}`,
+      message: `Dear ${order.customerName}, your order ${order.orderId} for ${order.productName} has been placed successfully. Estimated delivery: ${order.deliveryDate}. Track at example.com/track. — GCMDIA`,
+      senderId: "GCMDIA",
+      templateId: process.env.ORDER_CONFIRM_TEMPLATE_ID,
+      type: "transactional",
+    }),
+  });
+};
+```
+
+---
+
+### 2. Delivery Tracking Updates
+
+Send status updates at each fulfilment milestone: shipped, out for delivery, delivered. Each milestone requires a separate DLT-approved template.
+
+**Shipped Template:**
+```
+Your order {#var#} has been shipped via {#var#}. AWB: {#var#}. 
+Track: {#var#}. — GCMDIA
+```
+
+**Out for Delivery Template:**
+```
+Your order {#var#} is out for delivery today. 
+Delivery by {#var#}. — GCMDIA
+```
+
+**Python — Milestone Dispatcher:**
+
+```python
+MILESTONE_TEMPLATES = {
+    "shipped":          os.environ["SHIPPED_TEMPLATE_ID"],
+    "out_for_delivery": os.environ["OFD_TEMPLATE_ID"],
+    "delivered":        os.environ["DELIVERED_TEMPLATE_ID"],
+}
+
+def send_tracking_sms(order, milestone: str):
+    template_id = MILESTONE_TEMPLATES[milestone]
+    messages = {
+        "shipped": (
+            f"Your order {order['id']} has been shipped via {order['courier']}. "
+            f"AWB: {order['awb']}. Track: example.com/track/{order['awb']}. — GCMDIA"
+        ),
+        "out_for_delivery": (
+            f"Your order {order['id']} is out for delivery today. "
+            f"Delivery by {order['eta']}. — GCMDIA"
+        ),
+        "delivered": (
+            f"Your order {order['id']} has been delivered. "
+            f"Rate your experience: example.com/review/{order['id']}. — GCMDIA"
+        ),
+    }
+
+    requests.post(
+        "https://api.getclickmedia.com/v1/sms/send",
+        headers={"x-api-key": os.environ["GCM_API_KEY"]},
+        json={
+            "to": f"91{order['phone']}",
+            "message": messages[milestone],
+            "senderId": "GCMDIA",
+            "templateId": template_id,
+            "type": "transactional",
+        },
+    )
+```
+
+---
+
+### 3. OTP Verification
+
+OTP SMS is mandatory for account creation, checkout verification, and payment confirmation on most Indian e-commerce platforms.
+
+**DLT Template (transactional, DND-exempt):**
+```
+{#var#} is your OTP for {#var#} on Example. 
+Valid for 10 minutes. Do not share. — GCMDIA
+```
+
+**OTP Generation and Delivery:**
+
+```js
+import { randomInt } from "crypto";
+import bcrypt from "bcrypt";
+import redis from "./redis";
+
+export const sendOtp = async (phone) => {
+  const otp = randomInt(100000, 999999).toString();
+
+  // Store hashed OTP with 10-minute TTL
+  const hash = await bcrypt.hash(otp, 10);
+  await redis.set(`otp:${phone}`, hash, { EX: 600 });
+
+  // Enforce 5 requests/hour rate limit
+  const key = `otp_rate:${phone}`;
+  const attempts = await redis.incr(key);
+  if (attempts === 1) await redis.expire(key, 3600);
+  if (attempts > 5) throw new Error("Rate limit exceeded. Try after 1 hour.");
+
+  await fetch("https://api.getclickmedia.com/v1/sms/send", {
+    method: "POST",
+    headers: { "x-api-key": process.env.GCM_API_KEY, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      to: `91${phone}`,
+      message: `${otp} is your OTP for login on Example. Valid for 10 minutes. Do not share. — GCMDIA`,
+      senderId: "GCMDIA",
+      templateId: process.env.OTP_TEMPLATE_ID,
+      type: "transactional",
+    }),
+  });
+
+  return otp; // Return to store in session for verification
+};
+```
+
+---
+
+### 4. Abandoned Cart Recovery
+
+Cart abandonment rates in India average 70–75%. SMS recovery campaigns sent within 1 hour achieve 8–15% recovery. A two-touch sequence (1 hour + 24 hours) improves this by 40%.
+
+**Recommended Sequence:**
+
+| Message | Timing | Content |
+|---|---|---|
+| Message 1 | 1 hour post-abandonment | Reminder with cart link |
+| Message 2 | 24 hours post-abandonment | Urgency + discount code |
+
+**PHP — Cart Recovery Job:**
+
+```php
+function sendCartRecoverySms(array $cart, int $touchNumber): void {
+    $templates = [
+        1 => ["id" => $_ENV["CART_REMINDER_TEMPLATE_ID"], "message" =>
+            "You left {$cart['product']} in your cart. Complete your purchase: example.com/cart/{$cart['id']}. — GCMDIA"],
+        2 => ["id" => $_ENV["CART_DISCOUNT_TEMPLATE_ID"], "message" =>
+            "Still thinking? Use code SAVE10 for 10% off your cart. Offer expires in 6 hrs: example.com/cart/{$cart['id']}. — GCMDIA"],
+    ];
+
+    $tmpl = $templates[$touchNumber];
+
+    $ch = curl_init("https://api.getclickmedia.com/v1/sms/send");
+    curl_setopt_array($ch, [
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POST           => true,
+        CURLOPT_HTTPHEADER     => ["Content-Type: application/json", "x-api-key: " . $_ENV["GCM_API_KEY"]],
+        CURLOPT_POSTFIELDS     => json_encode([
+            "to"         => "91" . $cart["phone"],
+            "message"    => $tmpl["message"],
+            "senderId"   => "GCMDIA",
+            "templateId" => $tmpl["id"],
+            "type"       => "promotional",
+        ]),
+    ]);
+    curl_exec($ch);
+    curl_close($ch);
+}
+```
+
+---
+
+### 5. Flash Sale and Promotional Campaigns
+
+Bulk promotional SMS to segmented lists drives traffic spikes for sale events. Use the batch endpoint with scheduled dispatch for precise timing.
+
+```js
+const launchFlashSaleSms = async (phoneNumbers, saleDetails) => {
+  const response = await fetch("https://api.getclickmedia.com/v1/sms/bulk", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "x-api-key": process.env.GCM_API_KEY,
+    },
+    body: JSON.stringify({
+      recipients: phoneNumbers,  // Array of "91XXXXXXXXXX" strings
+      message: `${saleDetails.name} is LIVE! Up to ${saleDetails.discount}% off. Shop now: ${saleDetails.url} — GCMDIA`,
+      senderId: "GCMDIA",
+      templateId: process.env.FLASH_SALE_TEMPLATE_ID,
+      type: "promotional",
+      scheduleAt: saleDetails.startTime,  // ISO 8601: "2026-06-24T09:00:00+05:30"
+    }),
+  });
+
+  const { batchId, queued } = await response.json();
+  console.log(`Flash sale SMS queued: ${queued} recipients, batch: ${batchId}`);
+};
+```
+
+**Segmentation Tips for Better ROI:**
+- Target users who viewed the sale category in the past 30 days
+- Exclude users who purchased in the past 7 days (reduces unsubscribes)
+- Send 10–15 minutes before sale start for maximum traffic spike
+- Track UTM parameters on the URL to measure SMS-attributed revenue
+
+---
+
+### 6. Return and Refund Notifications
+
+```
+Your return for order {#var#} has been approved. 
+Refund of {#var#} will credit to your {#var#} in {#var#} working days. — GCMDIA
+```
+
+Automated refund notifications reduce support tickets by 30–40% and improve customer satisfaction scores.
+
+## DLT Template Summary for E-commerce
+
+| Use Case | Route | DND Exempt |
+|---|---|---|
+| Order confirmation | Transactional | Yes |
+| Delivery tracking | Transactional | Yes |
+| OTP verification | Transactional | Yes |
+| Return/refund alert | Transactional | Yes |
+| Abandoned cart | Promotional | No |
+| Flash sale | Promotional | No |
+| Loyalty rewards | Promotional | No |
+
+## Measuring SMS Campaign Performance
+
+Track these KPIs to optimise your SMS strategy:
+
+| KPI | Benchmark (India) |
+|---|---|
+| Transactional delivery rate | >98% |
+| OTP delivery within 5 seconds | >99% |
+| Promotional CTR | 3–8% |
+| Cart recovery rate (1-touch) | 8–12% |
+| Cart recovery rate (2-touch) | 12–18% |
+| Unsubscribe rate (promotional) | <0.5% healthy |
+
+## Summary
+
+An SMS API transforms every fulfilment event into a customer touchpoint — from the moment of purchase through delivery, return, and re-engagement. For Indian e-commerce, DLT-compliant transactional SMS is non-negotiable for OTPs and order alerts; promotional SMS drives campaign ROI when properly segmented. Get Click Media's SMS API handles both routes from a single integration with 99.9% uptime and sub-3-second transactional delivery.
+
+[Integrate SMS into your store today](/get-started) or [view pricing](/bulk-sms-service-provider-india#pricing).
