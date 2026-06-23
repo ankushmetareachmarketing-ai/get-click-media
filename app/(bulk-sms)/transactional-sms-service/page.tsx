@@ -140,7 +140,6 @@ export default function TransactionalSmsPage() {
         imageAlt="Transactional SMS Service in India — Get Click Media platform dashboard"
       />
       <BulkSmsBrandsStrip />
-
       <WhatIsTransactionalSMS />
       <TransactionalSmsFeatures />
       <TransactionalSmsUseCases />

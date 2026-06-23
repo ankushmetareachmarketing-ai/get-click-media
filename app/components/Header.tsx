@@ -26,7 +26,6 @@ import {
   FileText,
   Briefcase,
   Award,
-  Play,
   X,
   Menu,
   ShieldCheck,
@@ -210,79 +209,63 @@ interface MegaMenuProps {
 }
 
 const MegaMenu: React.FC<MegaMenuProps> = ({ menu, isOpen }) => {
-  if (!menu || !isOpen) return null;
-
-  const hasFeatured = !!menu.featuredCard;
-  const colCount = menu.sections.length;
+  if (!menu) return null;
 
   return (
-    <div className="w-full z-[9999]">
-      <div className="flex justify-center">
-        <div className="w-3 h-3 bg-white rotate-45 shadow -mb-1.5 z-10 relative border-l border-t border-[color:var(--border)]" />
+    <div
+      className={`w-full transition-all duration-200 ease-out ${
+        isOpen
+          ? "opacity-100 translate-y-0 pointer-events-auto"
+          : "opacity-0 -translate-y-2 pointer-events-none"
+      }`}
+    >
+      {/* Arrow tip */}
+      <div className="flex justify-start pl-10">
+        <div className="w-3 h-3 bg-white rotate-45 -mb-1.5 z-10 relative border-l border-t border-gray-100 shadow-sm" />
       </div>
 
-      <div className="bg-white rounded-2xl shadow-2xl border border-[color:var(--border)] overflow-hidden">
-        {hasFeatured && (
-          <div className="bg-[linear-gradient(135deg,var(--surface-alt),#eef6ff)] px-6 py-5 border-b border-[color:var(--border)] flex items-start gap-5">
-            <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-[linear-gradient(135deg,var(--primary),var(--primary-light))] flex items-center justify-center shadow-lg">
-              <Sparkles size={22} className="text-white" />
-            </div>
-
-            <div className="flex-1">
-              <h3 className="text-lg font-bold text-gray-900 mb-1">
-                {menu.featuredCard!.title}
-              </h3>
-              <p className="text-sm text-[color:var(--muted)] leading-relaxed max-w-sm">
-                {menu.featuredCard!.description}
-              </p>
-              <a
-                href="#"
-                className="inline-flex items-center gap-1 mt-2 text-sm font-semibold text-[color:var(--primary)] hover:text-[color:var(--primary-light)]"
-              >
-                {menu.featuredCard!.cta} <ChevronRight size={14} />
-              </a>
-            </div>
-
-           
-            <button className="flex-shrink-0 flex items-center gap-2 bg-[linear-gradient(135deg,var(--primary),var(--primary-light))] text-white text-sm font-semibold px-4 py-3 rounded-xl shadow-md hover:shadow-lg transition-all hover:scale-105">
-              <Play size={14} fill="white" />
-              <span className="text-xs leading-tight max-w-[80px]">
-                {menu.featuredCard!.videoLabel}
-              </span>
-            </button>
-          </div>
-        )}
-
+      <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
         <div
-          className="grid p-5 gap-4"
-          style={{ gridTemplateColumns: `repeat(${colCount}, 1fr)` }}
+          className="grid p-3"
+          style={{ gridTemplateColumns: `repeat(${menu.sections.length}, 1fr)` }}
         >
           {menu.sections.map((section, si) => (
-            <div key={si}>
+            <div key={si} className={si > 0 ? "border-l border-gray-50 pl-2" : ""}>
               {section.sectionTitle && (
-                <p className="text-xs font-bold uppercase tracking-widest text-[color:var(--muted)] mb-3 px-1">
+                <p className="text-[9px] font-bold uppercase tracking-widest text-gray-400 px-3 pt-3 pb-2">
                   {section.sectionTitle}
                 </p>
               )}
-
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col gap-0.5 pb-2">
                 {section.items.map((item, ii) => (
                   <a
                     key={ii}
                     href={item.href ?? "#"}
-                    className="group flex items-start gap-3 p-3 rounded-xl hover:bg-[color:var(--surface-alt)] transition-colors"
+                    className="group flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-gray-50 transition-all duration-150 cursor-pointer"
                   >
-                    <span className="flex-shrink-0 w-9 h-9 rounded-lg bg-gray-100 group-hover:bg-blue-100 flex items-center justify-center text-gray-500 group-hover:text-[color:var(--primary)] transition-colors">
+                    {/* Colored icon — highlights on hover */}
+                    <span
+                      className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-all duration-200 group-hover:scale-110 group-hover:shadow-md"
+                      style={{ background: item.bgColor, color: item.color }}
+                    >
                       {item.icon}
                     </span>
-                    <div>
-                      <p className="text-sm font-semibold text-gray-800 group-hover:text-[color:var(--primary)] transition-colors">
+
+                    {/* Title + description */}
+                    <div className="flex-1 min-w-0">
+                      <p className="text-[13px] font-semibold text-gray-700 group-hover:text-gray-900 transition-colors leading-tight">
                         {item.title}
                       </p>
-                      <p className="text-xs text-[color:var(--muted)] leading-relaxed mt-0.5">
+                      <p className="text-[11px] text-gray-400 leading-snug mt-0.5 truncate">
                         {item.description}
                       </p>
                     </div>
+
+                    {/* Animated arrow */}
+                    <ChevronRight
+                      size={12}
+                      className="shrink-0 text-gray-300 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150"
+                    />
                   </a>
                 ))}
               </div>
@@ -299,16 +282,20 @@ const MegaMenu: React.FC<MegaMenuProps> = ({ menu, isOpen }) => {
 const Header: React.FC = () => {
   const { openModal } = useModalStore();
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [lastActiveMenu, setLastActiveMenu] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const headerRef = useRef<HTMLElement>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const activeNavItem = navItems.find((item) => item.label === activeMenu);
+  // Keep last menu in state so exit animation can play before menu disappears
+  const displayNavItem = navItems.find((item) => item.label === (activeMenu ?? lastActiveMenu));
 
   const openMenu = (label: string) => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     setActiveMenu(label);
+    setLastActiveMenu(label);
   };
 
   const closeMenu = () => {
@@ -353,7 +340,7 @@ const Header: React.FC = () => {
               {navItems.map((item) => (
                 <div key={item.label} className="relative">
                   <button
-                    className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                    className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150 cursor-pointer ${
                       activeMenu === item.label
                         ? "text-[color:var(--primary)] bg-blue-50"
                         : "text-gray-700 hover:text-[color:var(--primary)] hover:bg-gray-50"
@@ -384,7 +371,7 @@ const Header: React.FC = () => {
             </div>
 
             <button
-              className="lg:hidden ml-auto p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              className="lg:hidden ml-auto p-2 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer"
               onClick={() => setMobileOpen(!mobileOpen)}
             >
               {mobileOpen ? <X size={22} /> : <Menu size={22} />}
@@ -398,7 +385,7 @@ const Header: React.FC = () => {
             className="absolute left-0 right-0 top-full mt-2 z-9999 px-6"
           >
             <div className="mx-auto max-w-screen-xl">
-              <MegaMenu menu={activeNavItem?.menu} isOpen={!!activeNavItem?.menu && activeMenu === activeNavItem.label} />
+              <MegaMenu menu={displayNavItem?.menu} isOpen={!!activeNavItem} />
             </div>
           </div>
         </div>
@@ -446,7 +433,7 @@ const Header: React.FC = () => {
             return (
               <div key={item.label}>
                 <button
-                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-2xl transition-all duration-200 ${isExpanded ? "bg-gray-50" : "hover:bg-gray-50"}`}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-2xl transition-all duration-200 cursor-pointer ${isExpanded ? "bg-gray-50" : "hover:bg-gray-50"}`}
                   onClick={() => setMobileExpanded(isExpanded ? null : item.label)}
                 >
                   {/* Colored icon */}
