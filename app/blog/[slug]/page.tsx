@@ -16,7 +16,7 @@ import { blogPostMetadata } from "@/lib/seo";
 import { articleSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import FaqAccordion from "@/app/components/blog/FaqAccordion";
 
-export const revalidate = 86400;
+export const revalidate = 3600;
 
 export async function generateStaticParams() {
   return getAllBlogSlugs().map((slug) => ({ slug }));

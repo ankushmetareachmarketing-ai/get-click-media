@@ -39,24 +39,8 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['@tabler/icons-react', 'lucide-react'],
   },
 
-  // Force browsers and CDNs to revalidate HTML pages on every request.
-  // This prevents stale HTML (referencing old CSS/JS hashes) from being served
-  // after a new deployment — the root cause of "Tailwind not loading" in prod.
-  // Next.js already sets immutable caching for /_next/static/* automatically,
-  // so we only override the HTML page rule here.
-  async headers() {
-    return [
-      {
-        source: '/((?!_next/).*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=0, must-revalidate',
-          },
-        ],
-      },
-    ];
-  },
+  // Cache headers are managed in middleware.ts which runs after ISR headers
+  // are set and can reliably override them.  No header config needed here.
 };
 
 export default nextConfig;

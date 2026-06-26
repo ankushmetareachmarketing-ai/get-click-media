@@ -294,7 +294,7 @@ body::after {
 }
 
 /* ─── ENSURE ALL PAGE CONTENT SITS ABOVE THE BACKGROUND ───────────────────── */
-body > *:not(.bg-balls):not(.layout-header) {
+body > *:not(.bg-balls):not(.layout-header):not(.floating-dock-portal) {
   position: relative;
   z-index: 1;
 }

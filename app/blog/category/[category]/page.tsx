@@ -11,7 +11,7 @@ import {
 } from "@/lib/blogs";
 import { categoryPageMetadata } from "@/lib/seo";
 
-export const revalidate = 86400;
+export const revalidate = 3600;
 
 export async function generateStaticParams() {
   const categories = getAllCategories();

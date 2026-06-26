@@ -7,6 +7,7 @@ import {
   GraduationCap, ArrowRight, CheckCircle2,
 } from "lucide-react";
 import { useModalStore } from "@/store/useModalStore";
+import { image } from "motion/react-client";
 
 // ── Tab data ──────────────────────────────────────────────────────────────────
 
@@ -26,6 +27,7 @@ const TABS = [
     clientName: "Aphrodite Buddha Spa",
     clientLogo: "/images/our-clients/logo/aphroditebuddhaspa.png",
     tag: "Hospitality Industry",
+    image: "/images/industries/hospitality.webp",
   },
   {
     label: "Fashion",
@@ -42,6 +44,7 @@ const TABS = [
     clientName: "Brinda Collections",
     clientLogo: "/images/our-clients/logo/brinda.webp",
     tag: "Fashion Industry",
+    image: "/images/industries/fashion.webp",
   },
   {
     label: "Finance",
@@ -58,6 +61,7 @@ const TABS = [
     clientName: "NexusPay",
     clientLogo: "/images/our-clients/logo/nexuspay.png",
     tag: "Finance Industry",
+    image: "/images/industries/finance.webp",
   },
   {
     label: "Retail",
@@ -74,6 +78,7 @@ const TABS = [
     clientName: "Bada Business",
     clientLogo: "/images/our-clients/logo/bada-bussiness.png",
     tag: "Retail Industry",
+    image: "/images/industries/retail.webp",
   },
   {
     label: "Education",
@@ -90,6 +95,7 @@ const TABS = [
     clientName: "GD Goenka",
     clientLogo: "/images/our-clients/logo/gdgoenka.png",
     tag: "Education Industry",
+    image: "/images/industries/education.webp",
   },
 ];
 
@@ -102,7 +108,7 @@ const IndustrySolutions: React.FC = () => {
 
   return (
     <section
-      className="py-14 sm:py-20 px-4 overflow-hidden rounded-tl-4xl rounded-tr-4xl"
+      className="relative py-14 sm:py-20 px-4 overflow-hidden rounded-tl-4xl rounded-tr-4xl"
       style={{
         background:
           "linear-gradient(145deg, #0c1a3a 0%, #0f2356 35%, #0d3b6e 65%, #0a5272 100%)",
@@ -116,7 +122,8 @@ const IndustrySolutions: React.FC = () => {
         .ind-sol-card { animation: fadeSlideUp 0.35s cubic-bezier(0.22,1,0.36,1) both; }
       `}</style>
 
-      <div className="max-w-screen-xl mx-auto">
+      {/* Curvy lines pattern overlay */}
+      <div className="relative z-10 max-w-7xl mx-auto">
 
         {/* ── Header ── */}
         <div className="flex flex-col items-center text-center mb-10 sm:mb-14 gap-3">
@@ -185,9 +192,11 @@ const IndustrySolutions: React.FC = () => {
         {/* ── Content card ── */}
         <div
           key={active}
-          className="ind-sol-card bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl"
+          className="ind-sol-card relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl bg-white"
         >
-          <div className="flex flex-col lg:flex-row">
+          
+
+          <div className="relative z-10 flex flex-col lg:flex-row">
 
             {/* Left — text content */}
             <div className="flex-1 p-7 sm:p-10 flex flex-col justify-between gap-6 lg:max-w-[52%]">
@@ -258,17 +267,14 @@ const IndustrySolutions: React.FC = () => {
             {/* Right — product image */}
             <div
               className="flex-1 relative flex items-end justify-center lg:justify-end overflow-hidden min-h-[220px] sm:min-h-[300px] lg:min-h-0"
-              style={{
-                background:
-                  "linear-gradient(135deg, #e8f0fe 0%, #dbeafe 50%, #e0f2fe 100%)",
-              }}
+
             >
               <Image
-                src="/images/hero/home-page.png"
+                src={tab.image || "/images/industries/hospitality.webp"}
                 alt={`${tab.industry} — Get Click Media platform`}
-                width={900}
-                height={560}
-                className="w-full lg:w-[105%] h-auto object-cover object-top"
+                width={1200}
+                height={800}
+                className="w-full h-auto"
                 priority
                 unoptimized
               />

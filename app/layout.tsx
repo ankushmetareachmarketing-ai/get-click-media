@@ -6,6 +6,7 @@ import GlobalBackground from "./components/GlobalBackground";
 import ServiceModal from "./components/ServiceModal";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import FloatingActions from "./components/FloatingActions";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -63,7 +64,7 @@ export default function RootLayout({
       lang="en"
       className={cn("h-full antialiased", manrope.variable, syne.variable)}
     >
-      <body className=" font-[var(--font-manrope)]" suppressHydrationWarning>
+      <body className=" relative font-[var(--font-manrope)]" suppressHydrationWarning>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
@@ -73,6 +74,7 @@ export default function RootLayout({
         <div className="layout-header"><Header /></div>
         {children}
         <Footer />
+        <FloatingActions />
         <ServiceModal />
       </body>
     </html>

@@ -12,7 +12,8 @@ import Featured from "./components/Featured";
 import BookConsultation from "./components/BookConsultation";
 import FAQ from "./components/FAQ";
 import BulkSmsBrandsStrip from "./components/bulk-sms/BulkSmsBrandsStrip";
-
+import CTABanner from "./components/CTABanner";
+import VideoScrollSection from "./components/VideoScrollSection";
 const page = () => {
   return (
     <div>
@@ -20,9 +21,9 @@ const page = () => {
       <ClientMarquee />
       <FeaturesSection />
       <IndustrySolutions />
-      <Cards />
-      {/* <Scroll /> */}
+      <VideoScrollSection />
       <BookConsultation />
+      <CTABanner />
       <FAQ />
       <Testimonial />
       <Featured />

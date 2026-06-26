@@ -2,49 +2,38 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { ArrowRight, Loader2, CheckCircle2, Sparkles } from "lucide-react";
-import { Input }  from "@/components/ui/input";
-import { Label }  from "@/components/ui/label";
+import { ArrowRight, Loader2, CheckCircle2 } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 
-// ── Types ─────────────────────────────────────────────────────────────────────
-
 interface FormState {
-  name: string;
-  phone: string;
-  email: string;
-  website: string;
-  slot: string;
-  consent: boolean;
+  name: string; phone: string; email: string;
+  website: string; slot: string; consent: boolean;
 }
 type Status = "idle" | "loading" | "success" | "error";
 
 const EMPTY: FormState = {
-  name: "", phone: "", email: "",
-  website: "", slot: "", consent: false,
+  name: "", phone: "", email: "", website: "", slot: "", consent: false,
 };
 
 const SLOTS = [
-  "10:00 AM – 10:30 AM",
-  "11:00 AM – 11:30 AM",
-  "12:00 PM – 12:30 PM",
-  "2:00 PM – 2:30 PM",
-  "3:00 PM – 3:30 PM",
-  "4:00 PM – 4:30 PM",
+  "10:00 AM – 10:30 AM", "11:00 AM – 11:30 AM", "12:00 PM – 12:30 PM",
+  "2:00 PM – 2:30 PM", "3:00 PM – 3:30 PM", "4:00 PM – 4:30 PM",
   "5:00 PM – 5:30 PM",
 ];
 
 const PARTNERS = [
-  { src: "/images/consultation/meta.webp",   name: "Meta Business Partner" },
-  { src: "/images/consultation/bsp.webp",    name: "WhatsApp" },
-  { src: "/images/consultation/google.webp", name: "Google RCS Partner" },
-  { src: "/images/consultation/awards.webp", name: "Award Winning" },
+  { src: "/images/consultation/meta.webp", name: "Business Partner", desc: "Meta Recognized Tech Partner" },
+  { src: "/images/consultation/bsp.webp", name: "Official Business Partner", desc: "WhatsApp Business API Partner" },
+  { src: "/images/consultation/google.webp", name: "Google RCS Partner", desc: "Verified RCS Business Messaging" },
+  { src: "/images/consultation/awards.webp", name: "Awards thats Inspires us", desc: "Trusted for smarter conversations" },
 ];
 
-// ── Component ─────────────────────────────────────────────────────────────────
+// Brand blue: #2563eb / #1e3a8a (matches IndustrySolutions CTA, Hero gradient)
 
 const BookConsultation: React.FC = () => {
-  const [form, setForm]     = useState<FormState>(EMPTY);
+  const [form, setForm] = useState<FormState>(EMPTY);
   const [status, setStatus] = useState<Status>("idle");
 
   const set = (k: keyof FormState) =>
@@ -78,17 +67,20 @@ const BookConsultation: React.FC = () => {
 
         {/* ── Header ── */}
         <div className="flex flex-col items-center text-center mb-10 sm:mb-14 gap-3">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-100 bg-blue-50 text-[#2563eb] text-[11px] font-bold tracking-wide">
-            <Sparkles size={12} />
+
+          {/* Badge — brand blue border, orange quote accents */}
+          <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#b8c8f0] bg-white text-gray-800 text-[13px] font-medium shadow-sm">
+            <span style={{ color: "#f59e0b", fontSize: "20px", lineHeight: 1, fontFamily: "Georgia, serif" }}>&ldquo;</span>
             Let&apos;s Customize this for You
+            <span style={{ color: "#f59e0b", fontSize: "20px", lineHeight: 1, fontFamily: "Georgia, serif" }}>&rdquo;</span>
           </span>
 
           <h2
-            className="text-2xl sm:text-3xl lg:text-[2.5rem] font-bold leading-tight tracking-tight text-gray-900"
+            className="text-2xl sm:text-3xl lg:text-[2.6rem] font-bold leading-tight tracking-tight text-gray-900"
             style={{ fontFamily: "var(--font-syne)" }}
           >
             Create Your Tailored Solution{" "}
-            <span style={{ color: "#f59e0b" }}>✦</span>{" "}
+            <span style={{ color: "#f59e0b", fontSize: "1.2em", fontFamily: "Georgia, serif", verticalAlign: "middle" }}>&rdquo;</span>{" "}
             With Get Click Media
           </h2>
 
@@ -98,7 +90,7 @@ const BookConsultation: React.FC = () => {
           </p>
         </div>
 
-        {/* ── Main card — full width of max-w-screen-xl ── */}
+        {/* ── Main card ── */}
         <div className="bg-white rounded-3xl border border-gray-200 shadow-lg overflow-hidden">
           <div className="flex flex-col lg:flex-row">
 
@@ -124,10 +116,10 @@ const BookConsultation: React.FC = () => {
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-5">
 
-                  {/* Row 1 */}
+                  {/* Row 1 — Name / Phone */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="flex flex-col gap-1.5">
-                      <Label htmlFor="bc-name" className="text-xs font-semibold text-gray-600">
+                      <Label htmlFor="bc-name" className="text-sm font-semibold text-[#2563eb]">
                         Full Name <span className="text-red-500">*</span>
                       </Label>
                       <Input
@@ -137,12 +129,12 @@ const BookConsultation: React.FC = () => {
                       />
                     </div>
                     <div className="flex flex-col gap-1.5">
-                      <Label htmlFor="bc-phone" className="text-xs font-semibold text-gray-600">
+                      <Label htmlFor="bc-phone" className="text-sm font-semibold text-[#2563eb]">
                         Phone Number <span className="text-red-500">*</span>
                       </Label>
                       <div className="flex">
                         <span className="inline-flex items-center px-3 h-11 rounded-l-xl border border-r-0 border-gray-200 bg-gray-50 text-sm text-gray-500 font-medium shrink-0">
-                          +91
+                          +91 :
                         </span>
                         <Input
                           id="bc-phone" required type="tel" placeholder="Phone No"
@@ -153,10 +145,10 @@ const BookConsultation: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Row 2 */}
+                  {/* Row 2 — Email / Website */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="flex flex-col gap-1.5">
-                      <Label htmlFor="bc-email" className="text-xs font-semibold text-gray-600">
+                      <Label htmlFor="bc-email" className="text-sm font-semibold text-[#2563eb]">
                         Official Email <span className="text-red-500">*</span>
                       </Label>
                       <Input
@@ -166,8 +158,8 @@ const BookConsultation: React.FC = () => {
                       />
                     </div>
                     <div className="flex flex-col gap-1.5">
-                      <Label htmlFor="bc-website" className="text-xs font-semibold text-gray-600">
-                        Company Website <span className="text-red-500">*</span>
+                      <Label htmlFor="bc-website" className="text-sm font-semibold text-[#2563eb]">
+                        Company website <span className="text-red-500">*</span>
                       </Label>
                       <Input
                         id="bc-website" required type="url" placeholder="Paste your company URL here"
@@ -179,7 +171,7 @@ const BookConsultation: React.FC = () => {
 
                   {/* Slot */}
                   <div className="flex flex-col gap-1.5">
-                    <Label className="text-xs font-semibold text-gray-600">
+                    <Label className="text-sm font-semibold text-[#2563eb]">
                       Book Your Slot <span className="text-red-500">*</span>
                     </Label>
                     <div className="relative">
@@ -187,14 +179,14 @@ const BookConsultation: React.FC = () => {
                         required
                         value={form.slot}
                         onChange={e => setForm(p => ({ ...p, slot: e.target.value }))}
-                        className="w-full h-11 rounded-xl border border-gray-200 bg-white px-3 pr-9 text-sm text-gray-600 appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-100 focus:border-[#2563eb]"
+                        className="w-full h-11 rounded-xl border border-gray-200 bg-white px-3 pr-9 text-sm text-gray-500 appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-100 focus:border-[#2563eb]"
                       >
                         <option value="" disabled>Select Your Slot</option>
-                        {SLOTS.map(s => (
-                          <option key={s} value={s}>{s}</option>
-                        ))}
+                        {SLOTS.map(s => <option key={s} value={s}>{s}</option>)}
                       </select>
-                      <svg className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-400" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                      <svg className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-400" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="m6 9 6 6 6-6" />
+                      </svg>
                     </div>
                   </div>
 
@@ -216,7 +208,10 @@ const BookConsultation: React.FC = () => {
                     type="submit"
                     disabled={status === "loading" || !form.consent}
                     className="w-fit inline-flex items-center gap-2.5 pl-5 pr-2 h-11 rounded-full font-semibold text-sm text-white cursor-pointer transition-all hover:scale-105 hover:shadow-lg disabled:opacity-60 disabled:cursor-not-allowed"
-                    style={{ background: "linear-gradient(135deg,#1e3a8a,#2563eb)", boxShadow: "0 4px 16px rgba(37,99,235,0.3)" }}
+                    style={{
+                      background: "linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%)",
+                      boxShadow: "0 4px 16px rgba(37,99,235,0.35)",
+                    }}
                   >
                     {status === "loading" ? (
                       <><Loader2 size={14} className="animate-spin" />Scheduling…</>
@@ -233,49 +228,49 @@ const BookConsultation: React.FC = () => {
                   {status === "error" && (
                     <p className="text-xs text-red-500">Something went wrong. Please try again.</p>
                   )}
+
                 </form>
               )}
             </div>
 
             {/* ── Right: Trust panel ── */}
             <div
-              className="lg:w-[400px] xl:w-[440px] shrink-0 flex flex-col gap-8 p-7 sm:p-10"
-              style={{ background: "linear-gradient(145deg,#0c1a3a 0%,#0f2356 60%,#0d3b6e 100%)" }}
+              className="lg:w-105 xl:w-115 shrink-0 flex flex-col gap-6 p-7 sm:p-10"
+              style={{ background: "linear-gradient(145deg, #0c1a3a 0%, #0f2356 60%, #0d3b6e 100%)" }}
             >
-              {/* Heading */}
               <div>
                 <h3
-                  className="text-xl sm:text-2xl font-bold text-white leading-snug mb-3"
+                  className="text-xl sm:text-[1.6rem] font-bold text-white leading-snug mb-2"
                   style={{ fontFamily: "var(--font-syne)" }}
                 >
                   To Book 1:1{" "}
-                  <em style={{ fontStyle: "italic", fontFamily: "Georgia,'Times New Roman',serif", fontWeight: 400, color: "#38bdf8" }}>
+                  <em style={{ fontStyle: "italic", fontFamily: "Georgia,'Times New Roman',serif", fontWeight: 400 }}>
                     Consultation
                   </em>
                 </h3>
                 <p className="text-white/60 text-sm leading-relaxed">
-                  This will be a 30-minute call to understand your needs and give you a glimpse of our platform and offerings.
+                  This will be a 30-minute call to understand your needs better and give you a glimpse
+                  of our product and offerings.
                 </p>
               </div>
 
-              {/* Partner badge grid — real images */}
-              <div className="grid grid-cols-2 gap-3">
-                {PARTNERS.map(({ src, name }) => (
-                  <div
-                    key={name}
-                    className="flex items-center justify-center bg-white rounded-2xl p-4 h-24"
-                  >
-                    <Image
-                      src={src}
-                      alt={name}
-                      width={120}
-                      height={60}
-                      className="w-auto max-h-14 object-contain"
-                      unoptimized
-                    />
-                  </div>
-                ))}
+              {/* Partner grid inside white card */}
+              <div className="bg-white rounded-2xl p-5 flex-1">
+                <div className="grid grid-cols-2 gap-x-4 gap-y-5 h-full">
+                  {PARTNERS.map(({ src, name, desc }) => (
+                    <div key={name} className="flex flex-col items-center justify-center gap-1.5 text-center">
+                      <Image
+                        src={src} alt={name}
+                        width={200} height={100}
+                        className="w-auto max-h-16 object-contain"
+                        unoptimized
+                      />
+
+                    </div>
+                  ))}
+                </div>
               </div>
+
             </div>
 
           </div>
