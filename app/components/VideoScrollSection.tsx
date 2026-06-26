@@ -1,13 +1,13 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { CheckCheck, ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCheck } from "lucide-react";
 
 const SECTIONS = [
   {
     step: "01",
     tag: "WhatsApp Business API",
-    title: "Send Messages That\nActually Get Read",
+    title: "Send Messages That Actually Get Read",
     desc: "Reach every customer on India's most-used app with the official WhatsApp Business API. 98% open rates, rich media, and instant delivery — all from one dashboard.",
     features: [
       "Meta-verified green tick badge",
@@ -17,12 +17,12 @@ const SECTIONS = [
     ],
     video: "/images/video/whatsapp-api.mp4",
     accent: "#25D366",
-    bg: "#f0fdf4",
+    pill: "#f0fdf4",
   },
   {
     step: "02",
     tag: "Live Chat & Support",
-    title: "Never Miss a Customer\nConversation",
+    title: "Never Miss a Customer Conversation",
     desc: "Manage every incoming WhatsApp message from a shared team inbox. Assign chats, trigger smart auto-replies, and close tickets faster than ever.",
     features: [
       "Shared inbox for your entire team",
@@ -32,12 +32,12 @@ const SECTIONS = [
     ],
     video: "/images/video/whatsapp-chat.mp4",
     accent: "#2563eb",
-    bg: "#eff6ff",
+    pill: "#eff6ff",
   },
   {
     step: "03",
     tag: "Campaign Manager",
-    title: "Run Campaigns That\nConvert",
+    title: "Run Campaigns That Convert",
     desc: "Schedule, personalise, and analyse WhatsApp campaigns in minutes. Segment your audience, A/B test messages, and watch your conversion rates climb.",
     features: [
       "Drag-and-drop campaign builder",
@@ -47,12 +47,12 @@ const SECTIONS = [
     ],
     video: "/images/video/whatsapp-manage.mp4",
     accent: "#7c3aed",
-    bg: "#faf5ff",
+    pill: "#faf5ff",
   },
   {
     step: "04",
     tag: "Bulk SMS",
-    title: "Reach Every Phone\nInstantly via SMS",
+    title: "Reach Every Phone Instantly via SMS",
     desc: "Send OTPs, alerts, and promotional messages to any mobile number across India. DLT-compliant, lightning-fast delivery with detailed reports.",
     features: [
       "DLT-registered sender IDs",
@@ -62,239 +62,213 @@ const SECTIONS = [
     ],
     video: "/images/video/bulk-sms.mp4",
     accent: "#ea580c",
-    bg: "#fff7ed",
+    pill: "#fff7ed",
   },
 ];
 
-const N = SECTIONS.length;
-
 export default function VideoScrollSection() {
-  const wrapperRef   = useRef<HTMLDivElement>(null);
-  const contentRefs  = useRef<(HTMLDivElement | null)[]>([]);
-  const videoRefs    = useRef<(HTMLVideoElement | null)[]>([]);
-  const dotRefs      = useRef<(HTMLSpanElement | null)[]>([]);
-  const stepRefs     = useRef<(HTMLSpanElement | null)[]>([]);
-  const progressRef  = useRef<HTMLDivElement>(null);
-  const bgRef        = useRef<HTMLDivElement>(null);
-  const counterRef   = useRef<HTMLSpanElement>(null);
-  const tagRef       = useRef<HTMLSpanElement>(null);
+  const rootRef    = useRef<HTMLDivElement>(null);
+  const headerRef  = useRef<HTMLDivElement>(null);
+  const rowRefs    = useRef<(HTMLDivElement | null)[]>([]);
+  const videoRefs  = useRef<(HTMLVideoElement | null)[]>([]);
 
   useEffect(() => {
-    let st: import("gsap/ScrollTrigger").ScrollTrigger | undefined;
+    let ctx: { revert: () => void } | undefined;
 
     const init = async () => {
-      const gsap = (await import("gsap")).default;
+      const gsap          = (await import("gsap")).default;
       const { ScrollTrigger } = await import("gsap/ScrollTrigger");
       gsap.registerPlugin(ScrollTrigger);
 
-      // ── Initial states ────────────────────────────────────────────────────
-      contentRefs.current.forEach((el, i) =>
-        el && gsap.set(el, { opacity: i === 0 ? 1 : 0, y: i === 0 ? 0 : 48 })
-      );
-      videoRefs.current.forEach((v, i) => {
-        if (!v) return;
-        gsap.set(v, { opacity: i === 0 ? 1 : 0 });
-        if (i === 0) v.play().catch(() => {});
-      });
+      ctx = gsap.context(() => {
 
-      let current = 0;
-
-      const goto = (idx: number) => {
-        if (idx === current) return;
-        const prev = current;
-        current = idx;
-        const s = SECTIONS[idx];
-
-        // Content panels
-        gsap.to(contentRefs.current[prev], { opacity: 0, y: -36, duration: 0.4, ease: "power2.in" });
-        gsap.fromTo(
-          contentRefs.current[idx],
-          { opacity: 0, y: 52 },
-          { opacity: 1, y: 0, duration: 0.65, ease: "power3.out", delay: 0.22 }
-        );
-
-        // Videos
-        gsap.to(videoRefs.current[prev], { opacity: 0, duration: 0.45 });
-        gsap.to(videoRefs.current[idx], {
-          opacity: 1, duration: 0.5, delay: 0.18,
-          onStart: () => {
-            const v = videoRefs.current[idx];
-            if (v) { v.currentTime = 0; v.play().catch(() => {}); }
-          },
-          onComplete: () => videoRefs.current[prev]?.pause(),
-        });
-
-        // Section background tint
-        if (bgRef.current)
-          gsap.to(bgRef.current, { backgroundColor: s.bg, duration: 0.6, ease: "power2.out" });
-
-        // Progress bar
-        gsap.to(progressRef.current, {
-          scaleX: (idx + 1) / N,
-          backgroundColor: s.accent,
-          duration: 0.5, ease: "power2.out",
-        });
-
-        // Step refs (large faded number)
-        stepRefs.current.forEach((el, i) => {
-          if (!el) return;
-          gsap.to(el, { opacity: i === idx ? 0.07 : 0, duration: 0.4 });
-        });
-
-        // Dots
-        dotRefs.current.forEach((dot, i) => {
-          if (!dot) return;
-          gsap.to(dot, {
-            width: i === idx ? 28 : 8,
-            backgroundColor: i === idx ? s.accent : "#cbd5e1",
-            duration: 0.35,
-          });
-        });
-
-        // Counter & tag
-        if (counterRef.current)
-          counterRef.current.textContent = `0${idx + 1} / 0${N}`;
-        if (tagRef.current) {
-          tagRef.current.textContent = s.tag;
-          gsap.to(tagRef.current, { color: s.accent, duration: 0.3 });
+        /* ── Section header ─────────────────────────────────────────────── */
+        if (headerRef.current) {
+          const kids = Array.from(headerRef.current.children);
+          gsap.fromTo(
+            kids,
+            { opacity: 0, y: 36 },
+            {
+              opacity: 1, y: 0,
+              duration: 0.8, stagger: 0.12, ease: "power3.out",
+              scrollTrigger: { trigger: headerRef.current, start: "top 82%" },
+            },
+          );
         }
-      };
 
-      // Init step 0 visuals
-      if (stepRefs.current[0]) gsap.set(stepRefs.current[0], { opacity: 0.07 });
-      stepRefs.current.slice(1).forEach(el => el && gsap.set(el, { opacity: 0 }));
+        /* ── Per-section animations ─────────────────────────────────────── */
+        rowRefs.current.forEach((row, i) => {
+          if (!row) return;
+          const isReversed = i % 2 !== 0;
 
-      // ── ScrollTrigger pin ────────────────────────────────────────────────
-      st = ScrollTrigger.create({
-        trigger: wrapperRef.current,
-        pin: true,
-        pinSpacing: true,
-        start: "top top",
-        end: `+=${(N - 1) * 100}%`,
-        snap: {
-          snapTo: Array.from({ length: N }, (_, i) => i / (N - 1)),
-          duration: { min: 0.3, max: 0.55 },
-          ease: "power2.inOut",
-        },
-        onUpdate(self) {
-          const idx = Math.min(Math.round(self.progress * (N - 1)), N - 1);
-          goto(idx);
-        },
-      });
+          const contentEl  = row.querySelector<HTMLElement>(".vs-content");
+          const videoEl    = row.querySelector<HTMLElement>(".vs-video");
+          const tagEl      = row.querySelector<HTMLElement>(".vs-tag");
+          const headingEl  = row.querySelector<HTMLElement>(".vs-heading");
+          const descEl     = row.querySelector<HTMLElement>(".vs-desc");
+          const featureEls = row.querySelectorAll<HTMLElement>(".vs-feature");
+          const ctaEl      = row.querySelector<HTMLElement>(".vs-cta");
+          const stepEl     = row.querySelector<HTMLElement>(".vs-step");
+
+          const trig = { trigger: row, start: "top 72%", once: true } as const;
+
+          /* Content panel slide-in */
+          if (contentEl)
+            gsap.fromTo(contentEl,
+              { opacity: 0, x: isReversed ? 56 : -56 },
+              { opacity: 1, x: 0, duration: 0.9, ease: "power3.out", scrollTrigger: trig },
+            );
+
+          /* Video panel slide-in + scale */
+          if (videoEl)
+            gsap.fromTo(videoEl,
+              { opacity: 0, x: isReversed ? -56 : 56, scale: 0.94 },
+              { opacity: 1, x: 0, scale: 1, duration: 1, ease: "power3.out", delay: 0.1, scrollTrigger: trig },
+            );
+
+          /* Step number fade */
+          if (stepEl)
+            gsap.fromTo(stepEl,
+              { opacity: 0, y: 20 },
+              { opacity: 1, y: 0, duration: 0.7, ease: "power2.out", delay: 0.05, scrollTrigger: trig },
+            );
+
+          /* Tag badge */
+          if (tagEl)
+            gsap.fromTo(tagEl,
+              { opacity: 0, y: 14 },
+              { opacity: 1, y: 0, duration: 0.55, ease: "power2.out", delay: 0.18, scrollTrigger: trig },
+            );
+
+          /* Heading */
+          if (headingEl)
+            gsap.fromTo(headingEl,
+              { opacity: 0, y: 22 },
+              { opacity: 1, y: 0, duration: 0.7, ease: "power3.out", delay: 0.26, scrollTrigger: trig },
+            );
+
+          /* Desc */
+          if (descEl)
+            gsap.fromTo(descEl,
+              { opacity: 0, y: 16 },
+              { opacity: 1, y: 0, duration: 0.65, ease: "power2.out", delay: 0.35, scrollTrigger: trig },
+            );
+
+          /* Features stagger */
+          if (featureEls.length)
+            gsap.fromTo(featureEls,
+              { opacity: 0, x: isReversed ? 20 : -20 },
+              { opacity: 1, x: 0, duration: 0.5, stagger: 0.09, ease: "power2.out", delay: 0.44, scrollTrigger: trig },
+            );
+
+          /* CTA */
+          if (ctaEl)
+            gsap.fromTo(ctaEl,
+              { opacity: 0, y: 14, scale: 0.96 },
+              { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: "back.out(1.4)", delay: 0.75, scrollTrigger: trig },
+            );
+
+          /* Auto-play video when in view */
+          const vid = videoRefs.current[i];
+          if (vid) {
+            ScrollTrigger.create({
+              trigger: row,
+              start: "top 80%",
+              end: "bottom 20%",
+              onEnter:      () => vid.play().catch(() => {}),
+              onLeave:      () => vid.pause(),
+              onEnterBack:  () => vid.play().catch(() => {}),
+              onLeaveBack:  () => vid.pause(),
+            });
+          }
+        });
+
+      }, rootRef.current!);
     };
 
     init();
-    return () => { st?.kill(); };
+    return () => ctx?.revert();
   }, []);
 
   return (
-    /* Outer full-width section — this is what gets pinned */
-    <section ref={wrapperRef} className="relative w-full overflow-hidden" style={{ height: "100svh" }}>
+    <section ref={rootRef} data-gsap-own="true" className="py-20 sm:py-28 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
-      {/* Animated section bg tint (full-bleed, behind everything) */}
-      <div
-        ref={bgRef}
-        className="absolute inset-0 transition-none"
-        style={{ backgroundColor: SECTIONS[0].bg }}
-      />
-
-      {/* Thin progress bar at very top */}
-      <div className="absolute top-0 left-0 right-0 h-0.75 bg-gray-200 z-30">
-        <div
-          ref={progressRef}
-          className="h-full origin-left"
-          style={{
-            transform: "scaleX(0.25)",
-            transformOrigin: "left center",
-            backgroundColor: SECTIONS[0].accent,
-          }}
-        />
-      </div>
-
-      {/* ── max-w-7xl content wrapper (matches every other section) ── */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 h-full flex flex-col">
-
-        {/* Top bar */}
-        <div className="flex items-center justify-between pt-6 pb-3 shrink-0">
-          <div className="flex items-center gap-3">
-            {/* Section label */}
-            <span className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-widest bg-white/70 backdrop-blur-sm border border-white shadow-sm"
-              style={{ color: SECTIONS[0].accent }}>
-              <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: SECTIONS[0].accent }} />
-              <span ref={tagRef} style={{ color: SECTIONS[0].accent }}>{SECTIONS[0].tag}</span>
-            </span>
-            <h2 className="text-sm sm:text-base font-semibold text-gray-500 hidden md:block">
-              Platform Features
-            </h2>
-          </div>
-          <span ref={counterRef} className="text-xs font-mono text-gray-400 bg-white/60 backdrop-blur-sm px-3 py-1 rounded-full border border-white shadow-sm">
-            01 / 0{N}
+        {/* ── Section header ────────────────────────────────────────────── */}
+        <div ref={headerRef} className="text-center mb-16 sm:mb-24 space-y-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#2563eb] animate-pulse" />
+            Platform Features
           </span>
+          <h2
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight"
+            style={{ fontFamily: "var(--font-syne)" }}
+          >
+            Everything You Need to{" "}
+            <span className="text-[#2563eb]">Communicate at Scale</span>
+          </h2>
+          <p className="text-gray-500 text-lg max-w-2xl mx-auto">
+            One unified platform. Every channel your customers rely on.
+          </p>
         </div>
 
-        {/* ── Main two-column area ── */}
-        <div className="flex-1 flex flex-col lg:flex-row items-center gap-6 lg:gap-12 pb-14 min-h-0">
-
-          {/* LEFT — content panels */}
-          <div className="relative w-full lg:w-[46%] h-full flex items-center">
-
-            {/* Large faded step numbers — decorative */}
-            {SECTIONS.map((s, i) => (
-              <span
-                key={i}
-                ref={el => { stepRefs.current[i] = el; }}
-                className="absolute -left-2 top-1/2 -translate-y-1/2 font-extrabold leading-none select-none pointer-events-none"
-                style={{
-                  fontSize: "clamp(7rem, 16vw, 14rem)",
-                  color: s.accent,
-                  opacity: i === 0 ? 0.07 : 0,
-                  fontFamily: "var(--font-syne)",
-                  zIndex: 0,
-                }}
-              >
-                {s.step}
-              </span>
-            ))}
-
-            {/* Content panels stacked */}
-            {SECTIONS.map((s, i) => (
+        {/* ── Section rows ──────────────────────────────────────────────── */}
+        <div className="space-y-24 sm:space-y-36">
+          {SECTIONS.map((s, i) => {
+            const reversed = i % 2 !== 0;
+            return (
               <div
                 key={i}
-                ref={el => { contentRefs.current[i] = el; }}
-                className="absolute inset-0 flex items-center"
-                style={{ zIndex: 1, pointerEvents: "none" }}
+                ref={el => { rowRefs.current[i] = el; }}
+                className={`flex flex-col ${reversed ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-10 lg:gap-16`}
               >
-                <div className="space-y-5 w-full max-w-md" style={{ pointerEvents: "auto" }}>
 
-                  {/* Tag pill */}
-                  <span
-                    className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider"
-                    style={{ background: s.accent + "18", color: s.accent }}
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full" style={{ background: s.accent }} />
-                    {s.tag}
-                  </span>
+                {/* ── Content ──────────────────────────────────────────── */}
+                <div className="vs-content w-full lg:w-[46%] space-y-6">
 
-                  {/* Title */}
+                  {/* Step + tag row */}
+                  <div className="flex items-center gap-4">
+                    <span
+                      className="vs-step text-5xl font-extrabold leading-none select-none"
+                      style={{ color: s.accent + "22", fontFamily: "var(--font-syne)" }}
+                    >
+                      {s.step}
+                    </span>
+                    <span
+                      className="vs-tag inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider"
+                      style={{ background: s.pill, color: s.accent }}
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full" style={{ background: s.accent }} />
+                      {s.tag}
+                    </span>
+                  </div>
+
+                  {/* Heading */}
                   <h3
-                    className="text-3xl md:text-4xl lg:text-[2.4rem] font-extrabold text-gray-900 leading-tight"
-                    style={{ fontFamily: "var(--font-syne)", whiteSpace: "pre-line" }}
+                    className="vs-heading text-2xl sm:text-3xl lg:text-[2.1rem] font-extrabold text-gray-900 leading-tight"
+                    style={{ fontFamily: "var(--font-syne)" }}
                   >
                     {s.title}
                   </h3>
 
+                  {/* Accent divider */}
+                  <div
+                    className="w-12 h-1 rounded-full"
+                    style={{ background: `linear-gradient(90deg, ${s.accent}, ${s.accent}44)` }}
+                  />
+
                   {/* Desc */}
-                  <p className="text-gray-500 text-sm md:text-base leading-relaxed">{s.desc}</p>
+                  <p className="vs-desc text-gray-500 text-base leading-relaxed">{s.desc}</p>
 
                   {/* Features */}
-                  <ul className="space-y-2.5">
+                  <ul className="space-y-3">
                     {s.features.map(f => (
-                      <li key={f} className="flex items-center gap-3">
+                      <li key={f} className="vs-feature flex items-center gap-3">
                         <span
-                          className="shrink-0 w-5 h-5 rounded-full flex items-center justify-center"
+                          className="shrink-0 w-6 h-6 rounded-full flex items-center justify-center"
                           style={{ background: s.accent + "18" }}
                         >
-                          <CheckCheck className="w-3 h-3" style={{ color: s.accent }} />
+                          <CheckCheck className="w-3.5 h-3.5" style={{ color: s.accent }} />
                         </span>
                         <span className="text-gray-700 text-sm font-medium">{f}</span>
                       </li>
@@ -303,82 +277,74 @@ export default function VideoScrollSection() {
 
                   {/* CTA */}
                   <button
-                    className="group inline-flex items-center gap-2 px-6 py-3 rounded-full text-white text-sm font-semibold shadow-md transition-all duration-200 hover:gap-3 hover:shadow-lg"
+                    className="vs-cta group inline-flex items-center gap-2 px-6 py-3 rounded-full text-white text-sm font-semibold shadow-md transition-all duration-200 hover:gap-3 hover:shadow-lg"
                     style={{ background: `linear-gradient(135deg, ${s.accent}, ${s.accent}bb)` }}
                   >
                     Get Started Free
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </button>
                 </div>
-              </div>
-            ))}
-          </div>
 
-          {/* RIGHT — video card */}
-          <div className="hidden lg:flex w-[54%] h-[85%] shrink-0 flex-col">
-            {/* Card frame */}
-            <div className="relative flex-1 rounded-2xl overflow-hidden shadow-2xl border border-white/60 bg-gray-950">
+                {/* ── Video card ───────────────────────────────────────── */}
+                <div className="vs-video w-full lg:w-[54%]">
+                  <div
+                    className="relative rounded-2xl overflow-hidden shadow-2xl"
+                    style={{
+                      aspectRatio: "16/9",
+                      background: "#0f172a",
+                      boxShadow: `0 32px 80px -12px ${s.accent}33, 0 8px 32px rgba(0,0,0,0.18)`,
+                    }}
+                  >
+                    {/* Browser chrome bar */}
+                    <div
+                      className="absolute top-0 left-0 right-0 h-8 z-10 flex items-center px-3 gap-1.5"
+                      style={{ background: "rgba(15,23,42,0.85)", backdropFilter: "blur(6px)" }}
+                    >
+                      <span className="w-2 h-2 rounded-full bg-red-400/70" />
+                      <span className="w-2 h-2 rounded-full bg-yellow-400/70" />
+                      <span className="w-2 h-2 rounded-full bg-green-400/70" />
+                      <div className="flex-1 mx-3">
+                        <div className="h-3.5 rounded-full bg-white/10 w-48 flex items-center px-2">
+                          <span className="text-white/30 text-[8px] font-mono truncate">getclickmedia.com</span>
+                        </div>
+                      </div>
+                    </div>
 
-              {/* Fake app top-bar for polish */}
-              <div className="absolute top-0 left-0 right-0 h-9 z-20 flex items-center px-4 gap-2"
-                style={{ background: "rgba(0,0,0,0.45)", backdropFilter: "blur(8px)" }}>
-                <span className="w-2.5 h-2.5 rounded-full bg-red-400/80" />
-                <span className="w-2.5 h-2.5 rounded-full bg-yellow-400/80" />
-                <span className="w-2.5 h-2.5 rounded-full bg-green-400/80" />
-                <span className="ml-auto text-white/40 text-[10px] font-mono">getclickmedia.com</span>
-              </div>
-
-              {/* Videos */}
-              {SECTIONS.map((s, i) => (
-                <video
-                  key={i}
-                  ref={el => { videoRefs.current[i] = el; }}
-                  src={s.video}
-                  muted loop playsInline preload="auto"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  style={{ opacity: i === 0 ? 1 : 0 }}
-                />
-              ))}
-
-              {/* Bottom gradient overlay */}
-              <div className="absolute bottom-0 left-0 right-0 h-28 pointer-events-none"
-                style={{ background: "linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 100%)" }} />
-
-              {/* Bottom label */}
-              <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between z-10 pointer-events-none">
-                <div>
-                  <p className="text-white/50 text-[10px] uppercase tracking-widest font-semibold mb-0.5">Now Viewing</p>
-                  <p className="text-white text-sm font-bold">{SECTIONS[0].tag}</p>
-                </div>
-                <div className="flex gap-1.5 items-center">
-                  {SECTIONS.map((s, i) => (
-                    <span
-                      key={i}
-                      ref={el => { dotRefs.current[i] = el; }}
-                      className="block h-2 rounded-full"
-                      style={{
-                        width: i === 0 ? 28 : 8,
-                        backgroundColor: i === 0 ? SECTIONS[0].accent : "#6b7280",
-                      }}
+                    {/* Video */}
+                    <video
+                      ref={el => { videoRefs.current[i] = el; }}
+                      src={s.video}
+                      muted
+                      loop
+                      playsInline
+                      preload="auto"
+                      className="w-full h-full object-cover"
                     />
-                  ))}
+
+                    {/* Subtle bottom gradient */}
+                    <div
+                      className="absolute bottom-0 left-0 right-0 h-20 pointer-events-none"
+                      style={{ background: "linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 100%)" }}
+                    />
+
+                    {/* Tag chip bottom left */}
+                    <div className="absolute bottom-3 left-3 z-10">
+                      <span
+                        className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold text-white backdrop-blur-sm"
+                        style={{ background: s.accent + "cc" }}
+                      >
+                        <span className="w-1 h-1 rounded-full bg-white animate-pulse" />
+                        {s.tag}
+                      </span>
+                    </div>
+                  </div>
                 </div>
+
               </div>
-            </div>
-          </div>
-
+            );
+          })}
         </div>
-      </div>
 
-      {/* Mobile video strip */}
-      <div className="lg:hidden absolute bottom-0 left-0 right-0 h-44 overflow-hidden">
-        {SECTIONS.map((s, i) => (
-          <video key={i} src={s.video} muted loop playsInline autoPlay preload="auto"
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{ opacity: i === 0 ? 1 : 0 }}
-          />
-        ))}
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, white 0%, transparent 30%)" }} />
       </div>
     </section>
   );

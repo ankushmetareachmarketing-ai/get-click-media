@@ -245,7 +245,7 @@ export default function FeaturesSection() {
   const dotCount = isMobile ? totalSlides : isTablet ? totalSlides - 1 : 0
 
   return (
-    <section ref={sectionRef} className="w-full py-16 ">
+    <section ref={sectionRef} data-gsap-own="true" className="w-full py-16 ">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* ── Header ── */}
