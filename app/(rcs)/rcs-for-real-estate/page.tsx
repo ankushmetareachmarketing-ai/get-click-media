@@ -252,24 +252,24 @@ export default function RCSRealEstatePage() {
       {/* JSON-LD Schema */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
-      {/* ── BREADCRUMB ─────────────────────────────────────────────────── */}
-      <nav aria-label="Breadcrumb" className="max-w-7xl mx-auto px-4 sm:px-6 pt-6 pb-2">
-        <ol className="flex items-center gap-2 text-xs text-gray-400">
-          <li><Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link></li>
-          <li aria-hidden>/</li>
-          <li><Link href="/rcs-messaging" className="hover:text-[#2563eb] transition-colors">RCS Messaging</Link></li>
-          <li aria-hidden>/</li>
-          <li className="text-[#2563eb] font-medium">RCS for Real Estate</li>
-        </ol>
-      </nav>
-
       {/* ─────────────────────────────────────────────────────────────────
-          HERO
+          HERO — with breadcrumb inside
       ───────────────────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
+      <section className="relative overflow-hidden mt-2 bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
         <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:40px_40px]" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
+          {/* ── BREADCRUMB INSIDE HERO WITH VISIBLE BACKGROUND ── */}
+          <nav aria-label="Breadcrumb" className="mb-8">
+            <ol className="flex items-center gap-2 text-xs text-white/60 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 w-fit">
+              <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+              <li aria-hidden className="text-white/30">/</li>
+              <li><Link href="/rcs-messaging" className="hover:text-white transition-colors">RCS Messaging</Link></li>
+              <li aria-hidden className="text-white/30">/</li>
+              <li className="text-white font-medium">RCS for Real Estate</li>
+            </ol>
+          </nav>
+
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1 text-center lg:text-left space-y-6">
               <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-semibold tracking-wider uppercase backdrop-blur-sm">
@@ -283,9 +283,9 @@ export default function RCSRealEstatePage() {
               </h1>
 
               <p className="text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">
-                In India's competitive real estate market, the difference between a lead and a site
+                In India&apos;s competitive real estate market, the difference between a lead and a site
                 visit booking often comes down to how quickly and effectively your brand communicates.
-                RCS delivers rich, visual property experiences directly into the customer's native
+                RCS delivers rich, visual property experiences directly into the customer&apos;s native
                 messaging app with Google-verified sender identity.
               </p>
 
@@ -309,15 +309,14 @@ export default function RCSRealEstatePage() {
             </div>
 
             <div className="w-full lg:w-[50%] shrink-0">
-              <div className="relative w-full rounded-2xl overflow-hidden aspect-4/3">
-                <Image
-                  src="/images/rcs/real-estate-hero.webp"
-                  alt="RCS Real Estate messaging showing property cards on mobile phone"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
+              <Image
+                src="/images/rcs/real-estate-hero.webp"
+                alt="RCS Real Estate messaging showing property cards on mobile phone"
+                width={800}
+                height={600}
+                className="w-full h-auto"
+                priority
+              />
             </div>
           </div>
         </div>
@@ -351,7 +350,7 @@ export default function RCSRealEstatePage() {
                 alt="Real estate messaging comparison — SMS vs RCS visual"
                 width={700}
                 height={525}
-                className="w-full h-auto rounded-2xl"
+                className="w-full h-auto"
               />
             </div>
             <div className="flex-1 space-y-6">
@@ -370,21 +369,21 @@ export default function RCSRealEstatePage() {
               <div className="space-y-4">
                 <div className="bg-red-50 rounded-xl p-4 border border-red-100">
                   <h4 className="text-sm font-bold text-red-600 mb-2">✕ Plain SMS cannot show what words cannot sell</h4>
-                  <p className="text-sm text-gray-600">A residential property is sold by the image of the swimming pool, the open-plan living room, the location map. Plain SMS gives you 160 characters and a URL that many buyers won't click. RCS delivers the actual property image with a verified sender badge.</p>
+                  <p className="text-sm text-gray-600">A residential property is sold by the image of the swimming pool, the open-plan living room, the location map. Plain SMS gives you 160 characters and a URL that many buyers won&apos;t click. RCS delivers the actual property image with a verified sender badge.</p>
                 </div>
                 <div className="bg-amber-50 rounded-xl p-4 border border-amber-100">
                   <h4 className="text-sm font-bold text-amber-600 mb-2">✕ WhatsApp opt-in lists miss your most valuable new leads</h4>
-                  <p className="text-sm text-gray-600">The highest-value real estate leads are often first-time enquirers who just submitted a form on 99acres, MagicBricks, or Housing.com. These leads haven't opted into your WhatsApp. RCS reaches them without requiring opt-in — via the carrier network, within seconds.</p>
+                  <p className="text-sm text-gray-600">The highest-value real estate leads are often first-time enquirers who just submitted a form on 99acres, MagicBricks, or Housing.com. These leads haven&apos;t opted into your WhatsApp. RCS reaches them without requiring opt-in — via the carrier network, within seconds.</p>
                 </div>
                 <div className="bg-blue-50 rounded-xl p-4 border border-blue-100">
                   <h4 className="text-sm font-bold text-blue-600 mb-2">✓ Trust is the most expensive thing to build — RCS builds it instantly</h4>
-                  <p className="text-sm text-gray-600">Your brand name, logo, and Google-verified checkmark appear at the top of every message. The buyer knows exactly who is sending the message before they open it. Verified identity is not a nice-to-have — it's the prerequisite for engagement.</p>
+                  <p className="text-sm text-gray-600">Your brand name, logo, and Google-verified checkmark appear at the top of every message. The buyer knows exactly who is sending the message before they open it. Verified identity is not a nice-to-have — it&apos;s the prerequisite for engagement.</p>
                 </div>
               </div>
 
               <div className="bg-[#0f172a] rounded-xl p-4">
                 <p className="text-white/80 text-sm leading-relaxed">
-                  <span className="text-[#38bdf8] font-bold">India context:</span> India's residential real estate market sees over 3 lakh new property launches annually. 
+                  <span className="text-[#38bdf8] font-bold">India context:</span> India&apos;s residential real estate market sees over 3 lakh new property launches annually. 
                   The average enquiry-to-site-visit conversion via SMS is 4–7%. RCS campaigns consistently achieve 
                   <span className="text-white font-bold"> 15–25% enquiry-to-visit conversion</span> for well-targeted campaigns.
                 </p>
@@ -414,7 +413,7 @@ export default function RCSRealEstatePage() {
             {REAL_ESTATE_USE_CASES.map((uc, i) => (
               <div key={uc.title} className={`flex flex-col ${i % 2 !== 0 ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-8 bg-white rounded-2xl p-6 shadow-sm border border-gray-100`}>
                 <div className="w-full lg:w-[40%] shrink-0">
-                  <div className="relative w-full rounded-xl overflow-hidden aspect-4/3">
+                  <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden">
                     <Image
                       src={uc.image}
                       alt={`RCS real estate use case: ${uc.title}`}
@@ -581,14 +580,13 @@ export default function RCSRealEstatePage() {
               </ul>
             </div>
             <div className="w-full lg:w-[44%] shrink-0">
-              <div className="relative w-full rounded-2xl overflow-hidden aspect-4/3">
-                <Image
-                  src="/images/rcs/real-estate-dashboard.webp"
-                  alt="Get Click Media RCS real estate dashboard analytics"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              <Image
+                src="/images/rcs/real-estate-dashboard.webp"
+                alt="Get Click Media RCS real estate dashboard analytics"
+                width={700}
+                height={525}
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>
@@ -625,7 +623,7 @@ export default function RCSRealEstatePage() {
       </section>
 
       {/* ── BOTTOM CTA ───────────────────────────────────────────────────── */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] px-8 sm:px-16 py-16 text-center space-y-6">
             <div className="absolute inset-0 opacity-[0.06] [background-image:linear-gradient(rgba(255,255,255,0.4)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.4)_1px,transparent_1px)] [background-size:32px_32px]" />

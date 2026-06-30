@@ -345,24 +345,24 @@ export default function RCSCommercePage() {
       {/* JSON-LD Schema */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
-      {/* ── BREADCRUMB ─────────────────────────────────────────────────── */}
-      <nav aria-label="Breadcrumb" className="max-w-7xl mx-auto px-4 sm:px-6 pt-6 pb-2">
-        <ol className="flex items-center gap-2 text-xs text-gray-400">
-          <li><Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link></li>
-          <li aria-hidden>/</li>
-          <li><Link href="/rcs-messaging" className="hover:text-[#2563eb] transition-colors">RCS Messaging</Link></li>
-          <li aria-hidden>/</li>
-          <li className="text-[#2563eb] font-medium">RCS for E-commerce</li>
-        </ol>
-      </nav>
-
       {/* ─────────────────────────────────────────────────────────────────
-          HERO
+          HERO — with breadcrumb inside
       ───────────────────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
+      <section className="relative overflow-hidden mt-2 bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
         <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:40px_40px]" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
+          {/* ── BREADCRUMB INSIDE HERO WITH VISIBLE BACKGROUND ── */}
+          <nav aria-label="Breadcrumb" className="mb-8">
+            <ol className="flex items-center gap-2 text-xs text-white/60 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 w-fit">
+              <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+              <li aria-hidden className="text-white/30">/</li>
+              <li><Link href="/rcs-messaging" className="hover:text-white transition-colors">RCS Messaging</Link></li>
+              <li aria-hidden className="text-white/30">/</li>
+              <li className="text-white font-medium">RCS for E-commerce</li>
+            </ol>
+          </nav>
+
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1 text-center lg:text-left space-y-6">
               <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-semibold tracking-wider uppercase backdrop-blur-sm">
@@ -372,11 +372,11 @@ export default function RCSCommercePage() {
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight font-(family-name:--font-syne)">
                 RCS Messaging for E-commerce:<br />
-                <span className="text-[#38bdf8]">Drive Sales, Recover Carts & Retain Customers</span>
+                <span className="text-[#38bdf8]">Drive Sales, Recover Carts &amp; Retain Customers</span>
               </h1>
 
               <p className="text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">
-                India's e-commerce market crossed ₹5 lakh crore in 2025. Every major platform
+                India&apos;s e-commerce market crossed ₹5 lakh crore in 2025. Every major platform
                 is fighting for customer attention — and that attention is being won or lost
                 in the messaging inbox. RCS gives you product carousels, Buy Now buttons,
                 and verified sender identity that customers trust.
@@ -402,15 +402,14 @@ export default function RCSCommercePage() {
             </div>
 
             <div className="w-full lg:w-[50%] shrink-0">
-              <div className="relative w-full rounded-2xl overflow-hidden aspect-4/3">
-                <Image
-                  src="/images/rcs/ecommerce-hero.webp"
-                  alt="RCS E-commerce product carousel on mobile phone"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
+              <Image
+                src="/images/rcs/ecommerce-hero.webp"
+                alt="RCS E-commerce product carousel on mobile phone"
+                width={800}
+                height={600}
+                className="w-full h-auto"
+                priority
+              />
             </div>
           </div>
         </div>
@@ -444,7 +443,7 @@ export default function RCSCommercePage() {
                 alt="E-commerce messaging comparison — SMS vs RCS visual"
                 width={700}
                 height={525}
-                className="w-full h-auto rounded-2xl"
+                className="w-full h-auto"
               />
             </div>
             <div className="flex-1 space-y-6">
@@ -463,11 +462,11 @@ export default function RCSCommercePage() {
               <div className="space-y-4">
                 <div className="bg-red-50 rounded-xl p-4 border border-red-100">
                   <h4 className="text-sm font-bold text-red-600 mb-2">✕ Products cannot be sold by text</h4>
-                  <p className="text-sm text-gray-600">A flash sale on a smartphone, a Diwali collection drop — these are visual purchase decisions. SMS cannot show the product. India's e-commerce CTR on SMS averages 1.5–3%.</p>
+                  <p className="text-sm text-gray-600">A flash sale on a smartphone, a Diwali collection drop — these are visual purchase decisions. SMS cannot show the product. India&apos;s e-commerce CTR on SMS averages 1.5–3%.</p>
                 </div>
                 <div className="bg-amber-50 rounded-xl p-4 border border-amber-100">
                   <h4 className="text-sm font-bold text-amber-600 mb-2">✕ Unverified sender identity destroys trust</h4>
-                  <p className="text-sm text-gray-600">Indian consumers receive dozens of promotional messages daily from unknown sender IDs. RCS puts your brand's verified name and logo at the top of every message — visible before the customer opens it.</p>
+                  <p className="text-sm text-gray-600">Indian consumers receive dozens of promotional messages daily from unknown sender IDs. RCS puts your brand&apos;s verified name and logo at the top of every message — visible before the customer opens it.</p>
                 </div>
                 <div className="bg-blue-50 rounded-xl p-4 border border-blue-100">
                   <h4 className="text-sm font-bold text-blue-600 mb-2">✓ No engagement data means no optimisation</h4>
@@ -477,7 +476,7 @@ export default function RCSCommercePage() {
 
               <div className="bg-[#0f172a] rounded-xl p-4">
                 <p className="text-white/80 text-sm leading-relaxed">
-                  <span className="text-[#38bdf8] font-bold">The opportunity:</span> India's e-commerce market crossed ₹5 lakh crore in 2025. 
+                  <span className="text-[#38bdf8] font-bold">The opportunity:</span> India&apos;s e-commerce market crossed ₹5 lakh crore in 2025. 
                   With RCS, brands can capture attention with visual, shoppable messages that drive 
                   <span className="text-white font-bold"> 5–8× higher revenue per message</span> than SMS.
                 </p>
@@ -517,7 +516,7 @@ export default function RCSCommercePage() {
                   <p><span className="font-semibold text-gray-700">RCS format:</span> <span className="text-gray-500">{uc.solution}</span></p>
                   <p><span className="font-semibold text-gray-700">Result:</span> <span className="text-gray-500">{uc.result}</span></p>
                 </div>
-                <div className="relative w-full rounded-xl overflow-hidden aspect-4/3 mt-2">
+                <div className="relative w-full aspect-[4/3] mt-2 rounded-lg overflow-hidden">
                   <Image
                     src={uc.image}
                     alt={`RCS e-commerce use case: ${uc.title}`}
@@ -694,14 +693,13 @@ export default function RCSCommercePage() {
               </ul>
             </div>
             <div className="w-full lg:w-[44%] shrink-0">
-              <div className="relative w-full rounded-2xl overflow-hidden aspect-4/3">
-                <Image
-                  src="/images/rcs/ecommerce-dashboard.webp"
-                  alt="Get Click Media RCS e-commerce dashboard analytics"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              <Image
+                src="/images/rcs/ecommerce-dashboard.webp"
+                alt="Get Click Media RCS e-commerce dashboard analytics"
+                width={700}
+                height={525}
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>
@@ -738,7 +736,7 @@ export default function RCSCommercePage() {
       </section>
 
       {/* ── BOTTOM CTA ───────────────────────────────────────────────────── */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] px-8 sm:px-16 py-16 text-center space-y-6">
             <div className="absolute inset-0 opacity-[0.06] [background-image:linear-gradient(rgba(255,255,255,0.4)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.4)_1px,transparent_1px)] [background-size:32px_32px]" />

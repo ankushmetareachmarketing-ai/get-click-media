@@ -287,33 +287,31 @@ export default function RCSDelhiNoidaPage() {
       {/* JSON-LD Schema */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
-      {/* ── BREADCRUMB ─────────────────────────────────────────────────── */}
-      <nav aria-label="Breadcrumb" className="max-w-7xl mx-auto px-4 sm:px-6 pt-6 pb-2">
-        <ol className="flex items-center gap-2 text-xs text-gray-400">
-          <li><Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link></li>
-          <li aria-hidden>/</li>
-          <li><Link href="/rcs-messaging" className="hover:text-[#2563eb] transition-colors">RCS Messaging</Link></li>
-          <li aria-hidden>/</li>
-          <li className="text-[#2563eb] font-medium">RCS Messaging Delhi Noida</li>
-        </ol>
-      </nav>
-
       {/* ─────────────────────────────────────────────────────────────────
-          HERO — Distinctive dark gradient with map accent
+          HERO — EXACT SAME AS PREVIOUS PAGES (dark gradient)
       ───────────────────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0a1628] via-[#1a2a5e] to-[#0d2137] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
-        <div className="absolute inset-0 opacity-[0.05]">
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#2563eb]/20 to-transparent" />
-          <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-t from-[#38bdf8]/10 to-transparent" />
-        </div>
+      <section className="relative overflow-hidden mt-2 bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
+        {/* Subtle grid overlay */}
+        <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:40px_40px]" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
+          {/* ── BREADCRUMB — NOW INSIDE HERO WITH VISIBLE BACKGROUND ── */}
+          <nav aria-label="Breadcrumb" className="mb-8">
+            <ol className="flex items-center gap-2 text-xs text-white/60 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 w-fit">
+              <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+              <li aria-hidden className="text-white/30">/</li>
+              <li><Link href="/rcs-messaging" className="hover:text-white transition-colors">RCS Messaging</Link></li>
+              <li aria-hidden className="text-white/30">/</li>
+              <li className="text-white font-medium">RCS Messaging Delhi Noida</li>
+            </ol>
+          </nav>
+
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1 text-center lg:text-left space-y-6">
-              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#2563eb]/20 border border-[#2563eb]/30 backdrop-blur-sm">
-                <MapPin className="w-4 h-4 text-[#38bdf8]" />
-                <span className="text-white/80 text-xs font-semibold tracking-wider uppercase">Serving Delhi-NCR from Noida</span>
-              </div>
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-semibold tracking-wider uppercase backdrop-blur-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#38bdf8] animate-pulse" />
+                RCS Messaging Delhi &amp; Noida
+              </span>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight font-(family-name:--font-syne)">
                 RCS Messaging Service<br />
@@ -328,7 +326,7 @@ export default function RCSDelhiNoidaPage() {
 
               <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                 <Link href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#38bdf8] text-[#0a1628] text-sm font-bold shadow-lg hover:scale-105 transition-transform duration-200">
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#1e3a8a] text-sm font-bold shadow-lg hover:scale-105 transition-transform duration-200">
                   Request a Free Demo <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link href="/contact"
@@ -338,20 +336,19 @@ export default function RCSDelhiNoidaPage() {
               </div>
             </div>
 
-            <div className="w-full lg:w-[45%] shrink-0">
-              <div className="relative w-full rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl shadow-[#2563eb]/20">
-                <Image
-                  src="/images/rcs/delhi-noida-hero.webp"
-                  alt="RCS messaging service in Delhi and Noida - Get Click Media"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
+            <div className="w-full lg:w-[50%] shrink-0">
+              <Image
+                src="/images/rcs/delhi-noida-hero.webp"
+                alt="RCS messaging service in Delhi and Noida - Get Click Media"
+                width={800}
+                height={600}
+                className="w-full h-auto"
+                priority
+              />
             </div>
           </div>
 
-          {/* Stats row */}
+          {/* Stats row — same style as previous pages */}
           <div className="relative mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-white/10">
             {[
               { value: "10,000+", label: "Businesses served across India" },
@@ -373,15 +370,13 @@ export default function RCSDelhiNoidaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col lg:flex-row items-center gap-14">
             <div className="w-full lg:w-1/2">
-              <div className="relative w-full rounded-2xl overflow-hidden aspect-[4/3]">
-                <Image
-                  src="/images/rcs/delhi-ncr-map.webp"
-                  alt="Delhi-NCR RCS coverage map showing high reach across the region"
-                  width={700}
-                  height={525}
-                  className="w-full h-auto rounded-2xl"
-                />
-              </div>
+              <Image
+                src="/images/rcs/delhi-ncr-map.webp"
+                alt="Delhi-NCR RCS coverage map showing high reach across the region"
+                width={700}
+                height={525}
+                className="w-full h-auto"
+              />
             </div>
             <div className="flex-1 space-y-6">
               <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
@@ -533,7 +528,7 @@ export default function RCSDelhiNoidaPage() {
                       </li>
                     ))}
                   </ul>
-                  <div className="relative w-full rounded-xl overflow-hidden aspect-[16/9] mt-2">
+                  <div className="relative w-full aspect-[16/9] mt-2 rounded-lg overflow-hidden">
                     <Image
                       src={industry.image}
                       alt={`RCS messaging use cases for ${industry.title} in Delhi-NCR`}
@@ -618,7 +613,7 @@ export default function RCSDelhiNoidaPage() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {CITY_NOTES.map((city) => (
-              <div key={city.city} className="rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow overflow-hidden bg-gray-50">
+              <div key={city.city} className="border border-gray-200 overflow-hidden bg-gray-50">
                 <div className="relative w-full aspect-[16/9]">
                   <Image
                     src={city.image}
@@ -729,14 +724,13 @@ export default function RCSDelhiNoidaPage() {
               </div>
             </div>
             <div className="w-full lg:w-[44%] shrink-0">
-              <div className="relative w-full rounded-2xl overflow-hidden aspect-[4/3]">
-                <Image
-                  src="/images/rcs/noida-office.webp"
-                  alt="Get Click Media Noida office - RCS messaging headquarters"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              <Image
+                src="/images/rcs/noida-office.webp"
+                alt="Get Click Media Noida office - RCS messaging headquarters"
+                width={700}
+                height={525}
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>
@@ -813,13 +807,11 @@ export default function RCSDelhiNoidaPage() {
         </div>
       </section>
 
-      {/* ── BOTTOM CTA ───────────────────────────────────────────────────── */}
-      <section className="py-20 bg-gray-50">
+      {/* ── BOTTOM CTA — EXACT SAME AS PREVIOUS PAGES ──────────────────── */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#0a1628] via-[#1a2a5e] to-[#0d2137] px-8 sm:px-16 py-16 text-center space-y-6">
-            <div className="absolute inset-0 opacity-[0.05]">
-              <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#2563eb]/20 to-transparent" />
-            </div>
+          <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] px-8 sm:px-16 py-16 text-center space-y-6">
+            <div className="absolute inset-0 opacity-[0.06] [background-image:linear-gradient(rgba(255,255,255,0.4)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.4)_1px,transparent_1px)] [background-size:32px_32px]" />
             <div className="relative space-y-5">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white font-(family-name:--font-syne)">
                 Ready to launch RCS for your Delhi-NCR business?
@@ -830,7 +822,7 @@ export default function RCSDelhiNoidaPage() {
               </p>
               <div className="flex flex-wrap gap-3 justify-center">
                 <Link href="/contact"
-                  className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-[#38bdf8] text-[#0a1628] text-sm font-bold shadow-lg hover:scale-105 transition-transform">
+                  className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-white text-[#1e3a8a] text-sm font-bold shadow-lg hover:scale-105 transition-transform">
                   Request a Demo <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link href="/contact"

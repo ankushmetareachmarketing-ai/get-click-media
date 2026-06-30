@@ -1,14 +1,6 @@
 "use client";
-import React, {
-  useEffect,
-  useRef,
-  useState,
-  createContext,
-} from "react";
-import {
-  IconArrowNarrowLeft,
-  IconArrowNarrowRight,
-} from "@tabler/icons-react";
+import React, { useEffect, useRef, useState, createContext } from "react";
+import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 import { ImageProps } from "next/image";
@@ -18,7 +10,7 @@ interface CarouselProps {
   items: React.ReactElement[];
   initialScroll?: number;
 }
-//Ankush
+
 type Card = {
   src: string;
   title: string;
@@ -56,7 +48,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
     const autoplay = () => {
       if (carouselRef.current) {
         const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-        
+
         // Check if we've reached the end
         if (scrollLeft + clientWidth >= scrollWidth - 10) {
           // Loop back to the beginning
