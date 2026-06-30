@@ -18,7 +18,7 @@ interface CarouselProps {
   items: React.ReactElement[];
   initialScroll?: number;
 }
-
+//Ankush
 type Card = {
   src: string;
   title: string;
