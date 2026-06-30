@@ -75,7 +75,7 @@ const FEATURES = [
 const INDUSTRIES = [
   {
     name: "Banking & Finance",
-    img: "/images/industries/finance.webp",
+    img: "/images/rcs/rcs-for-finance.webp",
     uses: [
       "Credit card offers with an 'Apply Now' button",
       "EMI reminders with a direct 'Pay Now' CTA",
@@ -86,7 +86,7 @@ const INDUSTRIES = [
   },
   {
     name: "E-commerce & Retail",
-    img: "/images/industries/retail.webp",
+    img: "/images/rcs/rcs-for-retail.webp",
     uses: [
       "Flash sale campaigns with product image carousels",
       "Abandoned cart recovery with product photos",
@@ -97,7 +97,7 @@ const INDUSTRIES = [
   },
   {
     name: "Education",
-    img: "/images/industries/edtech.webp",
+    img: "/images/rcs/rcs-for-education.webp",
     uses: [
       "Admission follow-ups with 'Book a Campus Visit'",
       "Exam schedule reminders with downloadable timetable",
@@ -108,7 +108,7 @@ const INDUSTRIES = [
   },
   {
     name: "Healthcare",
-    img: "/images/industries/hospitality.webp",
+    img: "/images/rcs/rcs-for-healthcare.webp",
     uses: [
       "Appointment reminders with Confirm / Reschedule / Cancel replies",
       "Lab report ready with 'Download Report' button",
@@ -118,7 +118,7 @@ const INDUSTRIES = [
   },
   {
     name: "Real Estate",
-    img: "/images/industries/fashion.webp",
+    img: "/images/rcs/rcs-for-real-estate.webp",
     uses: [
       "New project launch with hero property image",
       "Property carousel — multiple units, price and size",
@@ -503,13 +503,14 @@ export default function RCSMessagingPage() {
           <div className="space-y-10">
             {INDUSTRIES.map((ind, i) => (
               <div key={ind.name} className={`flex flex-col ${i % 2 !== 0 ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-10`}>
-                <div className="w-full lg:w-1/2">
-                  <div className="relative w-full rounded-2xl overflow-hidden aspect-4/3">
+                <div className="w-full lg:w-1/2 ">
+                  <div className="w-full rounded-2xl overflow-hidden">
                     <Image
                       src={ind.img}
                       alt={`RCS messaging use case for ${ind.name}`}
-                      fill
-                      className="object-cover"
+                      width={800}
+                      height={600}
+                      className="w-full h-auto rounded-2xl"
                     />
                   </div>
                 </div>
