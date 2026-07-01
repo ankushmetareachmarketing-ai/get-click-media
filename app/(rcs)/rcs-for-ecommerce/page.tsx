@@ -395,7 +395,7 @@ export default function RCSCommercePage() {
 
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10 max-w-md mx-auto lg:mx-0">
                 <p className="text-white/90 text-sm font-medium">
-                  <span className="text-[#38bdf8] font-bold">Headline result:</span> E-commerce brands using RCS for flash sales report 
+                  <span className="text-[#38bdf8] font-bold">Headline result:</span> E-commerce brands using RCS for flash sales report
                   <span className="text-white font-bold"> 5x to 8x higher revenue per message</span> compared to equivalent plain SMS campaigns.
                 </p>
               </div>
@@ -403,7 +403,7 @@ export default function RCSCommercePage() {
 
             <div className="w-full lg:w-[50%] shrink-0">
               <Image
-                src="/images/rcs/ecommerce-hero.webp"
+                src="/images/rcs/ecommerce-hero.png"
                 alt="RCS E-commerce product carousel on mobile phone"
                 width={800}
                 height={600}
@@ -437,13 +437,13 @@ export default function RCSCommercePage() {
       <section className="py-20 sm:py-28 bg-white" id="why-ecommerce">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col lg:flex-row items-center gap-14">
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 relative min-h-[250px] sm:min-h-[350px] lg:min-h-[500px]">
               <Image
                 src="/images/rcs/ecommerce-why-rcs.webp"
                 alt="E-commerce messaging comparison — SMS vs RCS visual"
-                width={700}
-                height={525}
-                className="w-full h-auto"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-contain"
               />
             </div>
             <div className="flex-1 space-y-6">
@@ -454,8 +454,8 @@ export default function RCSCommercePage() {
                 Why E-commerce Messaging in India Needs to Go Beyond SMS
               </h2>
               <p className="text-gray-500 text-base leading-relaxed">
-                SMS changed Indian e-commerce. The ability to send order confirmations, delivery 
-                updates, and promotional alerts instantly gave brands a direct channel. But 
+                SMS changed Indian e-commerce. The ability to send order confirmations, delivery
+                updates, and promotional alerts instantly gave brands a direct channel. But
                 Indian e-commerce has outgrown what SMS can deliver.
               </p>
 
@@ -476,8 +476,8 @@ export default function RCSCommercePage() {
 
               <div className="bg-[#0f172a] rounded-xl p-4">
                 <p className="text-white/80 text-sm leading-relaxed">
-                  <span className="text-[#38bdf8] font-bold">The opportunity:</span> India&apos;s e-commerce market crossed ₹5 lakh crore in 2025. 
-                  With RCS, brands can capture attention with visual, shoppable messages that drive 
+                  <span className="text-[#38bdf8] font-bold">The opportunity:</span> India&apos;s e-commerce market crossed ₹5 lakh crore in 2025.
+                  With RCS, brands can capture attention with visual, shoppable messages that drive
                   <span className="text-white font-bold"> 5–8× higher revenue per message</span> than SMS.
                 </p>
               </div>
@@ -497,7 +497,7 @@ export default function RCSCommercePage() {
               10 High-ROI RCS Use Cases for Indian E-commerce
             </h2>
             <p className="text-gray-400 text-base max-w-2xl mx-auto">
-              Here are the 10 most effective ways Indian e-commerce brands are using RCS 
+              Here are the 10 most effective ways Indian e-commerce brands are using RCS
               to drive measurable revenue.
             </p>
           </div>
@@ -541,7 +541,7 @@ export default function RCSCommercePage() {
               RCS Across the Full E-commerce Marketing Funnel
             </h2>
             <p className="text-gray-400 text-base max-w-2xl mx-auto">
-              RCS maps to every stage of the e-commerce customer lifecycle — from acquisition 
+              RCS maps to every stage of the e-commerce customer lifecycle — from acquisition
               through to retention.
             </p>
           </div>
@@ -584,7 +584,7 @@ export default function RCSCommercePage() {
               RCS vs SMS ROI: Indian E-commerce Flash Sale
             </h2>
             <p className="text-white/50 text-base max-w-2xl mx-auto">
-              A worked ROI example for a typical Indian mid-market e-commerce brand running a 
+              A worked ROI example for a typical Indian mid-market e-commerce brand running a
               flash sale campaign to 1,00,000 opted-in customers.
             </p>
           </div>
@@ -618,9 +618,9 @@ export default function RCSCommercePage() {
 
           <div className="mt-6 bg-white/5 rounded-xl p-5 border border-white/10">
             <p className="text-white/80 text-sm leading-relaxed">
-              <span className="text-[#38bdf8] font-bold">Interpretation:</span> RCS costs ₹8,000 more to send. 
-              It generates <span className="text-white font-bold">₹28,90,800 more in revenue</span>. For every rupee spent on RCS messaging, 
-              the brand earns <span className="text-white font-bold">₹151</span> — vs ₹10 for SMS. The ROI differential is structural, 
+              <span className="text-[#38bdf8] font-bold">Interpretation:</span> RCS costs ₹8,000 more to send.
+              It generates <span className="text-white font-bold">₹28,90,800 more in revenue</span>. For every rupee spent on RCS messaging,
+              the brand earns <span className="text-white font-bold">₹151</span> — vs ₹10 for SMS. The ROI differential is structural,
               driven by visual product presentation, verified trust, and measurable engagement.
             </p>
           </div>
@@ -694,7 +694,7 @@ export default function RCSCommercePage() {
             </div>
             <div className="w-full lg:w-[44%] shrink-0">
               <Image
-                src="/images/rcs/ecommerce-dashboard.webp"
+                src="/images/rcs/ecommerce-dashboard.png"
                 alt="Get Click Media RCS e-commerce dashboard analytics"
                 width={700}
                 height={525}

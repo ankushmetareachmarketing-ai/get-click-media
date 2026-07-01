@@ -319,8 +319,8 @@ export default function RCSDelhiNoidaPage() {
               </h1>
 
               <p className="text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">
-                Get Click Media is one of Delhi-NCR&apos;s leading RCS Business Messaging providers — 
-                headquartered in Noida and serving businesses across Delhi, Noida, Gurugram, 
+                Get Click Media is one of Delhi-NCR&apos;s leading RCS Business Messaging providers —
+                headquartered in Noida and serving businesses across Delhi, Noida, Gurugram,
                 Faridabad, and Greater Noida with enterprise-grade RCS messaging infrastructure.
               </p>
 
@@ -386,7 +386,7 @@ export default function RCSDelhiNoidaPage() {
                 India&apos;s Highest-Opportunity RCS Market
               </h2>
               <p className="text-gray-500 text-base leading-relaxed">
-                Delhi-NCR is the single highest-opportunity geography for RCS messaging in India. 
+                Delhi-NCR is the single highest-opportunity geography for RCS messaging in India.
                 Four structural factors make it the ideal market.
               </p>
 
@@ -427,8 +427,8 @@ export default function RCSDelhiNoidaPage() {
 
               <div className="bg-[#0f172a] rounded-xl p-4">
                 <p className="text-white/80 text-sm leading-relaxed">
-                  <span className="text-[#38bdf8] font-bold">Delhi-NCR RCS coverage:</span> Estimated RCS-reachable audience: 
-                  <span className="text-white font-bold"> 1.8–2.2 crore smartphone users</span> — the largest single-geography 
+                  <span className="text-[#38bdf8] font-bold">Delhi-NCR RCS coverage:</span> Estimated RCS-reachable audience:
+                  <span className="text-white font-bold"> 1.8–2.2 crore smartphone users</span> — the largest single-geography
                   RCS addressable market in India after Mumbai.
                 </p>
               </div>
@@ -485,8 +485,8 @@ export default function RCSDelhiNoidaPage() {
 
           <div className="mt-4 bg-blue-50 rounded-xl p-4 border border-blue-100">
             <p className="text-sm text-blue-700">
-              <span className="font-bold">SEO strategy note:</span> No competitor has a dedicated Delhi-NCR RCS page with local schema, 
-              city-specific content, and geo-targeted keywords. This page is designed to rank for 
+              <span className="font-bold">SEO strategy note:</span> No competitor has a dedicated Delhi-NCR RCS page with local schema,
+              city-specific content, and geo-targeted keywords. This page is designed to rank for
               &apos;RCS messaging Delhi&apos;, &apos;RCS service provider Noida&apos;, and related local queries.
             </p>
           </div>
@@ -504,7 +504,7 @@ export default function RCSDelhiNoidaPage() {
               RCS Messaging for Delhi-NCR Businesses
             </h2>
             <p className="text-gray-400 text-base max-w-2xl mx-auto">
-              Delhi-NCR&apos;s diverse industry landscape creates a wide range of RCS use cases. 
+              Delhi-NCR&apos;s diverse industry landscape creates a wide range of RCS use cases.
               Here are the most active RCS-adopting industries in the region.
             </p>
           </div>
@@ -718,7 +718,7 @@ export default function RCSDelhiNoidaPage() {
 
               <div className="bg-[#0f172a] rounded-xl p-4">
                 <p className="text-white/80 text-sm leading-relaxed">
-                  <span className="text-[#38bdf8] font-bold">Visit us:</span> Get Click Media is headquartered in Noida, Uttar Pradesh. 
+                  <span className="text-[#38bdf8] font-bold">Visit us:</span> Get Click Media is headquartered in Noida, Uttar Pradesh.
                   Delhi-NCR clients can schedule an in-person meeting with our RCS team.
                 </p>
               </div>
@@ -770,7 +770,7 @@ export default function RCSDelhiNoidaPage() {
 
           <div className="bg-[#0f172a] rounded-xl p-5 text-center">
             <p className="text-white/80 text-sm">
-              <span className="text-[#38bdf8] font-bold">Timeline:</span> Most Delhi-NCR clients are live with their first RCS campaign within 
+              <span className="text-[#38bdf8] font-bold">Timeline:</span> Most Delhi-NCR clients are live with their first RCS campaign within
               <span className="text-white font-bold"> 7 to 10 business days</span> of initial contact.
             </p>
           </div>
