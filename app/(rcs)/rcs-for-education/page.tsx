@@ -347,15 +347,14 @@ export default function RCSEducationPage() {
             </div>
 
             <div className="w-full lg:w-[50%] shrink-0">
-              <div className="relative w-full rounded-2xl overflow-hidden aspect-4/3">
-                <Image
-                  src="/images/rcs/education-hero.webp"
-                  alt="RCS Education messaging showing admission and fee reminder cards on mobile phone"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
+              <Image
+                src="/images/rcs/education-hero.webp"
+                alt="RCS Education messaging showing admission and fee reminder cards on mobile phone"
+                width={800}
+                height={600}
+                className="w-full h-auto rounded-2xl"
+                priority
+              />
             </div>
           </div>
 
@@ -455,12 +454,13 @@ export default function RCSEducationPage() {
                   <p><span className="font-semibold text-gray-700">RCS format:</span> <span className="text-gray-500">{uc.solution}</span></p>
                   <p><span className="font-semibold text-gray-700">Result:</span> <span className="text-gray-500">{uc.result}</span></p>
                 </div>
-                <div className="relative w-full rounded-xl overflow-hidden aspect-4/3 mt-2">
+                <div className="mt-2 rounded-xl overflow-hidden">
                   <Image
                     src={uc.image}
                     alt={`RCS education use case: ${uc.title}`}
-                    fill
-                    className="object-cover"
+                    width={800}
+                    height={600}
+                    className="w-full h-auto"
                   />
                 </div>
               </div>
@@ -616,14 +616,13 @@ export default function RCSEducationPage() {
               </ul>
             </div>
             <div className="w-full lg:w-[44%] shrink-0">
-              <div className="relative w-full rounded-2xl overflow-hidden aspect-4/3">
-                <Image
-                  src="/images/rcs/education-dashboard.webp"
-                  alt="Get Click Media RCS education dashboard analytics"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              <Image
+                src="/images/rcs/education-dashboard.webp"
+                alt="Get Click Media RCS education dashboard analytics"
+                width={700}
+                height={525}
+                className="w-full h-auto rounded-2xl"
+              />
             </div>
           </div>
         </div>

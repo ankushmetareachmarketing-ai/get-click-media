@@ -516,12 +516,13 @@ export default function RCSCommercePage() {
                   <p><span className="font-semibold text-gray-700">RCS format:</span> <span className="text-gray-500">{uc.solution}</span></p>
                   <p><span className="font-semibold text-gray-700">Result:</span> <span className="text-gray-500">{uc.result}</span></p>
                 </div>
-                <div className="relative w-full aspect-[4/3] mt-2 rounded-lg overflow-hidden">
+                <div className="mt-2 rounded-lg overflow-hidden">
                   <Image
                     src={uc.image}
                     alt={`RCS e-commerce use case: ${uc.title}`}
-                    fill
-                    className="object-cover"
+                    width={800}
+                    height={600}
+                    className="w-full h-auto"
                   />
                 </div>
               </div>
