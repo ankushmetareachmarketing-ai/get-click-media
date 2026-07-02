@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   ChevronDown,
@@ -105,7 +106,7 @@ const FEATURES = [
   { icon: MousePointerClick, title: "Interactive Buttons & Lists", desc: "Up to 3 quick-reply buttons or 10-item lists per message." },
   { icon: Brain, title: "NLP / AI Intent Recognition", desc: "Understands typos, synonyms, and casual language automatically." },
   { icon: Languages, title: "Multi-Language Support", desc: "Respond in Hindi, English, and regional languages." },
-  { icon: Database, title: "CRM & Order-System Integration", desc: "Pull real-time order status, account balance, or appointment slots.", href: "/whatsapp-crm-integration" },
+  { icon: Database, title: "CRM & Order-System Integration", desc: "Pull real-time order status, account balance, or appointment slots.", href: "/blog/whatsapp-crm-integration" },
   { icon: UserCheck, title: "Human Handoff", desc: "Seamless escalation to a live agent with full chat context preserved." },
   { icon: Radio, title: "Broadcast + Chatbot Combo", desc: "Trigger automated flows directly from broadcast campaigns.", href: "/whatsapp-broadcast" },
   { icon: ImageIcon, title: "Rich Media Support", desc: "Images, PDFs, location pins, and product catalogs in-chat." },
@@ -153,13 +154,13 @@ const FAQS = [
   { q: "What is a WhatsApp chatbot?", a: "An automated messaging system on WhatsApp Business API that handles customer conversations using rule-based flows, AI, or both." },
   { q: "How is a WhatsApp chatbot different from the WhatsApp Business App auto-reply?", a: "The free Business App only supports basic greeting/away messages. A chatbot on the API can hold multi-step conversations, pull live data, and integrate with a CRM.", link: { text: "See WhatsApp Business API vs App", href: "/whatsapp-api-vs-whatsapp-business-app" } },
   { q: "Do I need coding knowledge to build a WhatsApp chatbot?", a: "No — Get Click Media's flow builder is drag-and-drop; no coding is required for standard flows." },
-  { q: "Can a WhatsApp chatbot integrate with my CRM?", a: "Yes, our chatbot integrates with major CRMs and order/database systems to pull real-time data mid-conversation.", link: { text: "See WhatsApp CRM integration", href: "/whatsapp-crm-integration" } },
+  { q: "Can a WhatsApp chatbot integrate with my CRM?", a: "Yes, our chatbot integrates with major CRMs and order/database systems to pull real-time data mid-conversation.", link: { text: "See WhatsApp CRM integration", href: "/blog/whatsapp-crm-integration" } },
   { q: "How long does it take to launch a WhatsApp chatbot?", a: "Typically 5–7 business days, depending on flow complexity and integrations required." },
   { q: "Can the chatbot hand off to a human agent?", a: "Yes — the bot can escalate to a live agent at any point, with full conversation history preserved." },
   { q: "Does the chatbot support Hindi and regional languages?", a: "Yes, our chatbots support Hindi, English, and major regional languages." },
   { q: "What industries use WhatsApp chatbots the most?", a: "E-commerce, banking, healthcare, education, real estate, travel, and logistics are the top adopters in India." },
   { q: "Is there a limit to how many conversations a chatbot can handle?", a: "No — the chatbot can run unlimited concurrent conversations, unlike a human agent team." },
-  { q: "How much does a WhatsApp chatbot cost in India?", a: "Cost depends on conversation volume and flow complexity, plus Meta's per-conversation charges.", link: { text: "See full WhatsApp Business API pricing", href: "/whatsapp-api-pricing-india" } },
+  { q: "How much does a WhatsApp chatbot cost in India?", a: "Cost depends on conversation volume and flow complexity, plus Meta's per-conversation charges.", link: { text: "See full WhatsApp Business API pricing", href: "/blog/whatsapp-api-pricing-india" } },
 ];
 
 /* ── Page ────────────────────────────────────────────────────────────────── */
@@ -182,34 +183,52 @@ export default function WhatsAppChatbotPage() {
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
         <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:40px_40px]" />
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 py-20 sm:py-24 text-center space-y-6">
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-semibold tracking-wider uppercase backdrop-blur-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
-            AI + Rule-Based Automation
-          </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight font-(family-name:--font-syne)">
-            WhatsApp Chatbot<br />
-            <span className="text-[#38bdf8]">AI-Powered Automation for Your Business</span>
-          </h1>
-          <p className="text-white/70 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-            A WhatsApp chatbot handles customer conversations using rule-based flows, AI/NLP, or a hybrid of
-            both — without a human agent on every message. It answers FAQs, qualifies leads, takes orders, and
-            escalates complex queries automatically.
-            <strong className="text-white"> Go-live typically within 5–7 business days.</strong>
-          </p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <Link href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#1e3a8a] text-sm font-bold shadow-lg hover:scale-105 transition-transform duration-200">
-              Get a WhatsApp Chatbot <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-200">
-              Book a Free Demo
-            </Link>
-            <Link href="/whatsapp-api-pricing-india"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-200">
-              View Pricing
-            </Link>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-24">
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="flex-1 text-center lg:text-left space-y-6">
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-semibold tracking-wider uppercase backdrop-blur-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
+                AI + Rule-Based Automation
+              </span>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight font-(family-name:--font-syne)">
+                WhatsApp Chatbot<br />
+                <span className="text-[#38bdf8]">AI-Powered Automation for Your Business</span>
+              </h1>
+              <p className="text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">
+                A WhatsApp chatbot handles customer conversations using rule-based flows, AI/NLP, or a hybrid of
+                both — without a human agent on every message. It answers FAQs, qualifies leads, takes orders, and
+                escalates complex queries automatically.
+                <strong className="text-white"> Go-live typically within 5–7 business days.</strong>
+              </p>
+              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+                <Link href="/contact"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#1e3a8a] text-sm font-bold shadow-lg hover:scale-105 transition-transform duration-200">
+                  Get a WhatsApp Chatbot <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/contact"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-200">
+                  Book a Free Demo
+                </Link>
+                <Link href="/blog/whatsapp-api-pricing-india"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-200">
+                  View Pricing
+                </Link>
+              </div>
+            </div>
+
+            <div className="w-full lg:w-[50%] shrink-0">
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl shadow-blue-950/40 border border-white/10">
+                <video
+                  src="/images/video/whatsapp-chat.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="none"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -234,55 +253,69 @@ export default function WhatsAppChatbotPage() {
 
       {/* ── WHAT IS A WHATSAPP CHATBOT ───────────────────────────────────── */}
       <section className="py-20 sm:py-28 bg-white" id="what-is-a-chatbot">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-14 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
-              What Is a WhatsApp Chatbot?
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-(family-name:--font-syne) max-w-3xl mx-auto">
-              Instant, automatic replies — day or night
-            </h2>
-            <p className="text-gray-500 text-base max-w-2xl mx-auto leading-relaxed">
-              A WhatsApp chatbot sits on top of the WhatsApp Business API and automatically responds to incoming
-              customer messages. Instead of a support agent manually replying to every &ldquo;What are your store
-              hours?&rdquo; or &ldquo;Where is my order?&rdquo;, the chatbot recognizes the intent and responds instantly.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-16">
-            {[
-              "Understand and respond to open-ended customer questions",
-              "Guide users through multi-step flows (booking, ordering, KYC)",
-              "Pull live data from a CRM, order system, or database mid-conversation",
-              "Hand off to a human agent seamlessly when needed",
-              "Operate across unlimited concurrent conversations at once",
-            ].map(item => (
-              <div key={item} className="rounded-xl bg-gray-50 border border-gray-100 p-5 text-sm text-gray-700">
-                {item}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col lg:flex-row items-center gap-14 mb-16">
+            <div className="flex-1 text-center lg:text-left space-y-4">
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
+                What Is a WhatsApp Chatbot?
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
+                Instant, automatic replies — day or night
+              </h2>
+              <p className="text-gray-500 text-base leading-relaxed">
+                A WhatsApp chatbot sits on top of the WhatsApp Business API and automatically responds to incoming
+                customer messages. Instead of a support agent manually replying to every &ldquo;What are your store
+                hours?&rdquo; or &ldquo;Where is my order?&rdquo;, the chatbot recognizes the intent and responds instantly.
+              </p>
+            </div>
+            <div className="w-full lg:w-[42%] shrink-0">
+              <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/whatsapp/whatsapp-bussiness-api.webp"
+                  alt="WhatsApp chatbot conversation on a phone"
+                  fill
+                  className="object-contain"
+                />
               </div>
-            ))}
+            </div>
           </div>
 
-          <h3 className="text-lg font-bold text-gray-900 mb-5 text-center">Rule-Based vs AI WhatsApp Chatbots</h3>
-          <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
-            <table className="w-full text-sm min-w-[560px]">
-              <thead>
-                <tr className="bg-[#0f172a] text-white text-xs uppercase tracking-wider">
-                  <th className="text-left px-5 py-4 font-semibold w-[24%]">Type</th>
-                  <th className="text-left px-4 py-4 font-semibold">How It Works</th>
-                  <th className="text-left px-4 py-4 font-semibold text-[#38bdf8]">Best For</th>
-                </tr>
-              </thead>
-              <tbody>
-                {BOT_TYPES.map((row, i) => (
-                  <tr key={row.type} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                    <td className="px-5 py-3.5 text-gray-900 font-bold">{row.type}</td>
-                    <td className="px-4 py-3.5 text-gray-500">{row.how}</td>
-                    <td className="px-4 py-3.5 text-gray-800 font-medium">{row.best}</td>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-16">
+              {[
+                "Understand and respond to open-ended customer questions",
+                "Guide users through multi-step flows (booking, ordering, KYC)",
+                "Pull live data from a CRM, order system, or database mid-conversation",
+                "Hand off to a human agent seamlessly when needed",
+                "Operate across unlimited concurrent conversations at once",
+              ].map(item => (
+                <div key={item} className="rounded-xl bg-gray-50 border border-gray-100 p-5 text-sm text-gray-700">
+                  {item}
+                </div>
+              ))}
+            </div>
+
+            <h3 className="text-lg font-bold text-gray-900 mb-5 text-center">Rule-Based vs AI WhatsApp Chatbots</h3>
+            <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
+              <table className="w-full text-sm min-w-[560px]">
+                <thead>
+                  <tr className="bg-[#0f172a] text-white text-xs uppercase tracking-wider">
+                    <th className="text-left px-5 py-4 font-semibold w-[24%]">Type</th>
+                    <th className="text-left px-4 py-4 font-semibold">How It Works</th>
+                    <th className="text-left px-4 py-4 font-semibold text-[#38bdf8]">Best For</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {BOT_TYPES.map((row, i) => (
+                    <tr key={row.type} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                      <td className="px-5 py-3.5 text-gray-900 font-bold">{row.type}</td>
+                      <td className="px-4 py-3.5 text-gray-500">{row.how}</td>
+                      <td className="px-4 py-3.5 text-gray-800 font-medium">{row.best}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
@@ -408,7 +441,7 @@ export default function WhatsAppChatbotPage() {
             flows (rule-based vs AI/NLP), and whether CRM integration is required. Meta&apos;s per-conversation
             charges apply on top of the chatbot platform fee.
           </p>
-          <Link href="/whatsapp-api-pricing-india"
+          <Link href="/blog/whatsapp-api-pricing-india"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#2563eb] text-white text-sm font-bold hover:scale-105 transition-transform shadow-md">
             See Full WhatsApp API Pricing <ArrowRight className="w-4 h-4" />
           </Link>
@@ -469,10 +502,10 @@ export default function WhatsAppChatbotPage() {
           <div className="flex flex-wrap gap-3">
             {[
               { label: "WhatsApp Business API", href: "/whatsapp-business-api" },
-              { label: "WhatsApp API Integration", href: "/whatsapp-api-integration" },
-              { label: "WhatsApp CRM Integration", href: "/whatsapp-crm-integration" },
+              { label: "WhatsApp API Integration", href: "/blog/whatsapp-api-integration" },
+              { label: "WhatsApp CRM Integration", href: "/blog/whatsapp-crm-integration" },
               { label: "WhatsApp Automation", href: "/whatsapp-automation" },
-              { label: "WhatsApp API Pricing India", href: "/whatsapp-api-pricing-india" },
+              { label: "WhatsApp API Pricing India", href: "/blog/whatsapp-api-pricing-india" },
               { label: "WhatsApp API for E-commerce", href: "/whatsapp-api-ecommerce" },
               { label: "WhatsApp API for Banking", href: "/whatsapp-api-banking" },
               { label: "WhatsApp API for Healthcare", href: "/whatsapp-api-healthcare" },
@@ -551,7 +584,7 @@ export default function WhatsAppChatbotPage() {
                   className="inline-flex items-center gap-2 px-7 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors">
                   Book a Free Demo
                 </Link>
-                <Link href="/whatsapp-api-pricing-india"
+                <Link href="/blog/whatsapp-api-pricing-india"
                   className="inline-flex items-center gap-2 px-7 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors">
                   View Pricing
                 </Link>

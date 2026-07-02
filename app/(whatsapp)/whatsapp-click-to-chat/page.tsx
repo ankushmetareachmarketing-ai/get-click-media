@@ -120,7 +120,7 @@ const VS_ADS = [
 const FAQS = [
   { q: "What is a WhatsApp Click to Chat link?", a: "A WhatsApp Click to Chat link (wa.me link) is a URL that opens a WhatsApp conversation with a specific phone number when clicked — without the customer needing to save the number first. On desktop, it prompts the user to open WhatsApp Web or the desktop app." },
   { q: "How do I create a WhatsApp Click to Chat link for my business?", a: "The basic format is https://wa.me/[country code][phone number] — e.g. https://wa.me/919876543210. To add a pre-filled message, append ?text= followed by the URL-encoded message. Use the generator above to build yours automatically." },
-  { q: "Is WhatsApp Click to Chat free?", a: "Yes — creating and sharing a wa.me link is completely free. For WhatsApp Business API accounts, conversations that begin from the link are charged at standard conversation rates (service conversations are free for the first 1,000 per month).", link: { text: "See WhatsApp API pricing", href: "/whatsapp-api-pricing-india" } },
+  { q: "Is WhatsApp Click to Chat free?", a: "Yes — creating and sharing a wa.me link is completely free. For WhatsApp Business API accounts, conversations that begin from the link are charged at standard conversation rates (service conversations are free for the first 1,000 per month).", link: { text: "See WhatsApp API pricing", href: "/blog/whatsapp-api-pricing-india" } },
   { q: "Can I use Click to Chat links without WhatsApp Business API?", a: "Yes — Click to Chat works with any WhatsApp number. Without the API you lose automation: no chatbot, no CRM integration, no after-hours responses, no analytics. Past 50 enquiries a day, the API becomes essential.", link: { text: "See WhatsApp Chatbot", href: "/whatsapp-chatbot" } },
   { q: "How do I track conversions from my Click to Chat link?", a: "For API accounts, configure your chatbot to capture the entry point using different pre-filled messages per placement — 'Website Homepage Enquiry' vs 'Instagram Bio Enquiry'. The chatbot logs the entry message and your CRM records the source." },
   { q: "What should I write in the pre-filled message?", a: "Specific enough to give context, short enough that customers send it without editing. Good examples: 'Website Enquiry', 'Enquiry from Instagram'. Keep it under 10 words." },
@@ -347,7 +347,7 @@ https://wa.me/919876543210
           </div>
           <p className="text-center text-sm text-gray-400 mt-6 max-w-2xl mx-auto">
             The complete stack: Click to Chat link → customer clicks → chatbot responds instantly → lead
-            captured in <Link href="/whatsapp-crm-integration" className="text-[#2563eb] underline underline-offset-2">CRM</Link> → automated
+            captured in <Link href="/blog/whatsapp-crm-integration" className="text-[#2563eb] underline underline-offset-2">CRM</Link> → automated
             follow-up begins → human agent handles when qualified.
           </p>
         </div>
@@ -402,16 +402,16 @@ https://wa.me/919876543210
               { label: "WhatsApp Business API", href: "/whatsapp-business-api" },
               { label: "Click to WhatsApp Ads", href: "/whatsapp-click-to-whatsapp-ads" },
               { label: "WhatsApp Chatbot", href: "/whatsapp-chatbot" },
-              { label: "WhatsApp CRM Integration", href: "/whatsapp-crm-integration" },
+              { label: "WhatsApp CRM Integration", href: "/blog/whatsapp-crm-integration" },
               { label: "WhatsApp Marketing Services", href: "/whatsapp-marketing-services" },
-              { label: "WhatsApp API Pricing India", href: "/whatsapp-api-pricing-india" },
-              { label: "WhatsApp API Integration", href: "/whatsapp-api-integration" },
+              { label: "WhatsApp API Pricing India", href: "/blog/whatsapp-api-pricing-india" },
+              { label: "WhatsApp API Integration", href: "/blog/whatsapp-api-integration" },
               { label: "WhatsApp Automation", href: "/whatsapp-automation" },
               { label: "WhatsApp API for E-commerce", href: "/whatsapp-api-ecommerce" },
               { label: "WhatsApp API for Real Estate", href: "/whatsapp-api-real-estate" },
               { label: "WhatsApp API for Healthcare", href: "/whatsapp-api-healthcare" },
               { label: "WhatsApp API for Education", href: "/whatsapp-api-education" },
-              { label: "WhatsApp Green Tick Verification", href: "/whatsapp-green-tick-verification" },
+              { label: "WhatsApp Green Tick Verification", href: "/blog/whatsapp-green-tick-verification" },
             ].map(l => (
               <Link key={l.href} href={l.href}
                 className="px-4 py-2 rounded-full bg-gray-50 border border-gray-200 text-sm font-medium text-gray-600 hover:border-[#2563eb] hover:text-[#2563eb] transition-colors">

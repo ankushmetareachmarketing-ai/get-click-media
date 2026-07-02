@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   ChevronDown,
@@ -150,32 +151,50 @@ export default function WhatsAppMarketingServicesPage() {
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
         <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:40px_40px]" />
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 py-20 sm:py-24 text-center space-y-6">
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-semibold tracking-wider uppercase backdrop-blur-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
-            Official Meta BSP · Full-Service Marketing
-          </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight font-(family-name:--font-syne)">
-            WhatsApp Marketing Services in India<br />
-            <span className="text-[#38bdf8]">Campaigns, Automation &amp; ROI</span>
-          </h1>
-          <p className="text-white/70 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-            Campaign strategy, message templates, broadcast management, chatbot automation, and performance
-            reporting — the complete WhatsApp marketing service for Indian businesses.
-          </p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <Link href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#1e3a8a] text-sm font-bold shadow-lg hover:scale-105 transition-transform duration-200">
-              Start WhatsApp Marketing <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-200">
-              Request Demo
-            </Link>
-            <Link href="/whatsapp-api-pricing-india"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-200">
-              See Pricing
-            </Link>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-24">
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="flex-1 text-center lg:text-left space-y-6">
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-semibold tracking-wider uppercase backdrop-blur-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
+                Official Meta BSP · Full-Service Marketing
+              </span>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight font-(family-name:--font-syne)">
+                WhatsApp Marketing Services in India<br />
+                <span className="text-[#38bdf8]">Campaigns, Automation &amp; ROI</span>
+              </h1>
+              <p className="text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">
+                Campaign strategy, message templates, broadcast management, chatbot automation, and performance
+                reporting — the complete WhatsApp marketing service for Indian businesses.
+              </p>
+              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+                <Link href="/contact"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#1e3a8a] text-sm font-bold shadow-lg hover:scale-105 transition-transform duration-200">
+                  Start WhatsApp Marketing <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/contact"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-200">
+                  Request Demo
+                </Link>
+                <Link href="/blog/whatsapp-api-pricing-india"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-200">
+                  See Pricing
+                </Link>
+              </div>
+            </div>
+
+            <div className="w-full lg:w-[50%] shrink-0">
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl shadow-blue-950/40 border border-white/10">
+                <video
+                  src="/images/video/whatsapp-manage.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="none"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -199,16 +218,32 @@ export default function WhatsAppMarketingServicesPage() {
 
       {/* ── WHY WHATSAPP MARKETING IS DIFFERENT ──────────────────────────── */}
       <section className="py-20 sm:py-28 bg-white" id="what-is-whatsapp-marketing">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-14 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
-              What Is WhatsApp Marketing?
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
-              India&apos;s highest-ROI marketing channel
-            </h2>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col lg:flex-row items-center gap-14 mb-14">
+            <div className="flex-1 text-center lg:text-left space-y-4">
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
+                What Is WhatsApp Marketing?
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
+                India&apos;s highest-ROI marketing channel
+              </h2>
+              <p className="text-gray-500 text-base leading-relaxed">
+                WhatsApp marketing puts your campaigns in the one app Indian consumers check dozens of times a
+                day — rich media, verified sender identity, and two-way replies, all in a single thread.
+              </p>
+            </div>
+            <div className="w-full lg:w-[42%] shrink-0">
+              <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/whatsapp/whatsapp-bussiness-api.webp"
+                  alt="WhatsApp marketing campaign message on a phone"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </div>
           </div>
-          <div className="grid sm:grid-cols-3 gap-5">
+          <div className="max-w-6xl mx-auto grid sm:grid-cols-3 gap-5">
             {WHY_DIFFERENT.map(w => (
               <div key={w.title} className="rounded-2xl bg-gray-50 border border-gray-100 p-6 space-y-2">
                 <h3 className="text-base font-bold text-gray-900">{w.title}</h3>
@@ -450,7 +485,7 @@ export default function WhatsAppMarketingServicesPage() {
           <div className="flex flex-wrap gap-3">
             {[
               { label: "WhatsApp Business API", href: "/whatsapp-business-api" },
-              { label: "WhatsApp API Pricing India", href: "/whatsapp-api-pricing-india" },
+              { label: "WhatsApp API Pricing India", href: "/blog/whatsapp-api-pricing-india" },
               { label: "WhatsApp Chatbot", href: "/whatsapp-chatbot" },
               { label: "WhatsApp Broadcast", href: "/whatsapp-broadcast" },
               { label: "WhatsApp Message Templates", href: "/whatsapp-template-messages" },
@@ -532,7 +567,7 @@ export default function WhatsAppMarketingServicesPage() {
                   className="inline-flex items-center gap-2 px-7 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors">
                   Request Demo
                 </Link>
-                <Link href="/whatsapp-api-pricing-india"
+                <Link href="/blog/whatsapp-api-pricing-india"
                   className="inline-flex items-center gap-2 px-7 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors">
                   See Pricing
                 </Link>
