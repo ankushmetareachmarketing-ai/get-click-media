@@ -159,7 +159,7 @@ const FEATURES = [
     icon: Shield,
     title: "Verified Business Identity (Green Tick)",
     desc: "Your business name appears with Meta's verified checkmark on every message — not a random number. Reduces message ignore rates by 60%+ versus unverified senders.",
-    href: "/whatsapp-green-tick-verification",
+    href: "/blog/whatsapp-green-tick-verification",
   },
   {
     icon: Layers,
@@ -199,7 +199,7 @@ const FEATURES = [
     icon: Globe,
     title: "CRM & Platform Integration",
     desc: "Connect WhatsApp to Salesforce, HubSpot, Zoho, Freshdesk, Shopify, or any custom system via REST API and webhooks.",
-    href: "/whatsapp-crm-integration",
+    href: "/blog/whatsapp-crm-integration",
   },
   {
     icon: Users,
@@ -441,7 +441,7 @@ const FAQS = [
     a: "No — but the first 1,000 service conversations per month are free. Beyond that, Meta charges per 24-hour conversation session. Marketing conversations cost approximately ₹0.80–0.90; utility and authentication conversations cost ₹0.40–0.50. Get Click Media charges a platform fee on top of Meta's rates.",
     link: {
       text: "See our full pricing breakdown",
-      href: "/whatsapp-api-pricing-india",
+      href: "/blog/whatsapp-api-pricing-india",
     },
   },
   {
@@ -622,6 +622,53 @@ export default function WhatsAppBusinessAPIPage() {
               <p className="text-sm text-gray-400">{s.sub}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* ── SEE IT IN ACTION ─────────────────────────────────────────────── */}
+      <section className="py-20 sm:py-28 bg-gray-50" id="see-it-in-action">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col lg:flex-row items-center gap-14">
+            <div className="flex-1 space-y-6">
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
+                See It In Action
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
+                One shared inbox for every WhatsApp conversation
+              </h2>
+              <p className="text-gray-500 text-base leading-relaxed">
+                Every inbound message — from a chatbot escalation, a broadcast reply, or a direct customer
+                query — lands in a single team inbox. Agents see full conversation history, assign chats,
+                and reply with templates or free text, all synced back to your CRM in real time.
+              </p>
+              <ul className="space-y-2 pt-2">
+                {[
+                  "Shared inbox for your entire team",
+                  "Smart routing & agent assignment",
+                  "Quick-reply & canned responses",
+                  "Full chat history synced to CRM",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-gray-700">
+                    <CheckCheck className="w-4 h-4 text-[#2563eb] shrink-0 mt-0.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="w-full lg:w-[54%] shrink-0">
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl shadow-blue-950/10 border border-gray-200">
+                <video
+                  src="/images/video/whatsapp-chat.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="none"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -878,7 +925,7 @@ export default function WhatsAppBusinessAPIPage() {
             support. See the full breakdown — including volume tiers and a cost
             comparison with SMS and RCS — on our{" "}
             <Link
-              href="/whatsapp-api-pricing-india"
+              href="/blog/whatsapp-api-pricing-india"
               className="text-[#2563eb] font-semibold underline underline-offset-2"
             >
               WhatsApp Business API pricing India
@@ -1144,15 +1191,15 @@ export default function WhatsAppBusinessAPIPage() {
               },
               {
                 label: "WhatsApp API Integration",
-                href: "/whatsapp-api-integration",
+                href: "/blog/whatsapp-api-integration",
               },
               {
                 label: "WhatsApp CRM Integration",
-                href: "/whatsapp-crm-integration",
+                href: "/blog/whatsapp-crm-integration",
               },
               {
                 label: "WhatsApp Green Tick Verification",
-                href: "/whatsapp-green-tick-verification",
+                href: "/blog/whatsapp-green-tick-verification",
               },
               { label: "WhatsApp Automation", href: "/whatsapp-automation" },
               { label: "WhatsApp Catalog", href: "/whatsapp-catalog" },

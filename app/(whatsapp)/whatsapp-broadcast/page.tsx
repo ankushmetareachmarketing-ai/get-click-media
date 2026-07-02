@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   ChevronDown,
@@ -122,7 +123,7 @@ const FAQS = [
   { q: "How many people can I send a WhatsApp broadcast to?", a: "Unlike the free Business App's 256-contact limit, Broadcast API has no practical recipient cap — it depends on your messaging tier." },
   { q: "Do recipients need to save my business number to receive a broadcast?", a: "No — unlike the free app, Broadcast API doesn't require recipients to have your number saved." },
   { q: "Can I send any message as a broadcast?", a: "No — broadcasts must use a Meta-approved template. Free-form text broadcasts aren't permitted.", link: { text: "See template message guidelines", href: "/whatsapp-template-messages" } },
-  { q: "How is WhatsApp broadcast messaging priced?", a: "Per conversation window opened, based on template category — marketing, utility, or authentication.", link: { text: "See full WhatsApp API pricing", href: "/whatsapp-api-pricing-india" } },
+  { q: "How is WhatsApp broadcast messaging priced?", a: "Per conversation window opened, based on template category — marketing, utility, or authentication.", link: { text: "See full WhatsApp API pricing", href: "/blog/whatsapp-api-pricing-india" } },
   { q: "Can I track how many people read my broadcast?", a: "Yes — Get Click Media's dashboard provides delivery, read, and reply analytics per campaign." },
   { q: "Is WhatsApp broadcast messaging compliant with Indian regulations?", a: "Yes, when sent to properly opted-in customers using approved templates; Get Click Media ensures campaigns follow Meta's commerce and messaging policies." },
   { q: "Can I personalize broadcast messages for each customer?", a: "Yes — templates support dynamic variables like customer name, order ID, and other personalization fields." },
@@ -148,32 +149,50 @@ export default function WhatsAppBroadcastPage() {
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
         <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:40px_40px]" />
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 py-20 sm:py-24 text-center space-y-6">
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-semibold tracking-wider uppercase backdrop-blur-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
-            No 256-Contact Limit
-          </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight font-(family-name:--font-syne)">
-            WhatsApp Broadcast API<br />
-            <span className="text-[#38bdf8]">Send Bulk Messages to Thousands Instantly</span>
-          </h1>
-          <p className="text-white/70 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-            Send a single approved template message to thousands of customers simultaneously — with segmented
-            targeting, delivery analytics, and no recipient-saved-your-number requirement.
-          </p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <Link href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#1e3a8a] text-sm font-bold shadow-lg hover:scale-105 transition-transform duration-200">
-              Start a Broadcast Campaign <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-200">
-              Book a Free Demo
-            </Link>
-            <Link href="/whatsapp-api-pricing-india"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-200">
-              View Pricing
-            </Link>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-24">
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="flex-1 text-center lg:text-left space-y-6">
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-semibold tracking-wider uppercase backdrop-blur-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
+                No 256-Contact Limit
+              </span>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight font-(family-name:--font-syne)">
+                WhatsApp Broadcast API<br />
+                <span className="text-[#38bdf8]">Send Bulk Messages to Thousands Instantly</span>
+              </h1>
+              <p className="text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">
+                Send a single approved template message to thousands of customers simultaneously — with segmented
+                targeting, delivery analytics, and no recipient-saved-your-number requirement.
+              </p>
+              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+                <Link href="/contact"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#1e3a8a] text-sm font-bold shadow-lg hover:scale-105 transition-transform duration-200">
+                  Start a Broadcast Campaign <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/contact"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-200">
+                  Book a Free Demo
+                </Link>
+                <Link href="/blog/whatsapp-api-pricing-india"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-200">
+                  View Pricing
+                </Link>
+              </div>
+            </div>
+
+            <div className="w-full lg:w-[50%] shrink-0">
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl shadow-blue-950/40 border border-white/10">
+                <video
+                  src="/images/video/whatsapp-manage.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="none"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -318,7 +337,7 @@ export default function WhatsAppBroadcastPage() {
             ))}
           </div>
           <p className="text-center text-sm text-gray-400 mt-8">
-            See the <Link href="/whatsapp-api-pricing-india" className="text-[#2563eb] font-semibold underline underline-offset-2">full WhatsApp Business API pricing breakdown</Link>.
+            See the <Link href="/blog/whatsapp-api-pricing-india" className="text-[#2563eb] font-semibold underline underline-offset-2">full WhatsApp Business API pricing breakdown</Link>.
           </p>
         </div>
       </section>
@@ -378,19 +397,33 @@ export default function WhatsAppBroadcastPage() {
 
       {/* ── WHY GET CLICK MEDIA ──────────────────────────────────────────── */}
       <section className="py-20 sm:py-28 bg-[#0f172a]" id="why-gcm">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-5">
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/10 text-[#38bdf8] text-xs font-bold uppercase tracking-widest">
-            Why Choose Get Click Media
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-(family-name:--font-syne)">
-            We protect your number&apos;s quality rating
-          </h2>
-          <p className="text-white/60 text-base leading-relaxed">
-            Get Click Media is an official Meta Business Solution Provider based in Noida, running WhatsApp
-            Broadcast campaigns for 10,000+ Indian businesses. We manage template approval, audience
-            segmentation, delivery optimization, and quality rating monitoring — so your broadcasts reach
-            customers reliably without risking your number&apos;s messaging tier or quality score.
-          </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col lg:flex-row items-center gap-14">
+            <div className="flex-1 text-center lg:text-left space-y-5">
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/10 text-[#38bdf8] text-xs font-bold uppercase tracking-widest">
+                Why Choose Get Click Media
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-(family-name:--font-syne)">
+                We protect your number&apos;s quality rating
+              </h2>
+              <p className="text-white/60 text-base leading-relaxed">
+                Get Click Media is an official Meta Business Solution Provider based in Noida, running WhatsApp
+                Broadcast campaigns for 10,000+ Indian businesses. We manage template approval, audience
+                segmentation, delivery optimization, and quality rating monitoring — so your broadcasts reach
+                customers reliably without risking your number&apos;s messaging tier or quality score.
+              </p>
+            </div>
+            <div className="w-full lg:w-[44%] shrink-0">
+              <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/whatsapp/whatsapp-bussiness-api.webp"
+                  alt="WhatsApp Broadcast campaign message on a phone"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -404,9 +437,9 @@ export default function WhatsAppBroadcastPage() {
             {[
               { label: "WhatsApp Business API", href: "/whatsapp-business-api" },
               { label: "WhatsApp Message Templates", href: "/whatsapp-template-messages" },
-              { label: "WhatsApp API Pricing India", href: "/whatsapp-api-pricing-india" },
+              { label: "WhatsApp API Pricing India", href: "/blog/whatsapp-api-pricing-india" },
               { label: "WhatsApp Chatbot", href: "/whatsapp-chatbot" },
-              { label: "WhatsApp Green Tick Verification", href: "/whatsapp-green-tick-verification" },
+              { label: "WhatsApp Green Tick Verification", href: "/blog/whatsapp-green-tick-verification" },
               { label: "WhatsApp Automation", href: "/whatsapp-automation" },
             ].map(l => (
               <Link key={l.href} href={l.href}
@@ -481,7 +514,7 @@ export default function WhatsAppBroadcastPage() {
                   className="inline-flex items-center gap-2 px-7 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors">
                   Book a Free Demo
                 </Link>
-                <Link href="/whatsapp-api-pricing-india"
+                <Link href="/blog/whatsapp-api-pricing-india"
                   className="inline-flex items-center gap-2 px-7 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors">
                   View Pricing
                 </Link>
