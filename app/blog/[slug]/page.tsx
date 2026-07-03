@@ -13,7 +13,7 @@ import {
 } from "@/lib/blogs";
 import { renderMdx } from "@/lib/mdx";
 import { blogPostMetadata } from "@/lib/seo";
-import { articleSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
+import { articleSchema, breadcrumbSchema, faqSchema, howToSchema } from "@/lib/schema";
 import FaqAccordion from "@/app/components/blog/FaqAccordion";
 
 export const revalidate = 3600;
@@ -55,6 +55,7 @@ export default async function BlogPostPage({
       { name: post.title, url: `${BASE_URL}/blog/${post.slug}` },
     ]),
     ...(post.faq && post.faq.length > 0 ? [faqSchema(post.faq)] : []),
+    ...(post.howTo && post.howTo.steps.length > 0 ? [howToSchema(post)] : []),
   ];
 
   return (

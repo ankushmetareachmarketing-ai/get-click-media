@@ -7,6 +7,16 @@ export interface FaqItem {
   answer: string
 }
 
+export interface HowToStep {
+  name: string
+  text: string
+}
+
+export interface HowTo {
+  totalTime?: string
+  steps: HowToStep[]
+}
+
 export interface BlogFrontmatter {
   title: string
   description: string
@@ -18,6 +28,7 @@ export interface BlogFrontmatter {
   category: string
   keywords: string[]
   faq?: FaqItem[]
+  howTo?: HowTo
 }
 
 export interface TocItem {

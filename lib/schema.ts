@@ -1,4 +1,4 @@
-import type { BlogPost, FaqItem } from './blogs'
+import type { BlogPost, FaqItem, HowTo } from './blogs'
 
 const BASE_URL = 'https://getclickmedia.com'
 
@@ -45,6 +45,23 @@ export function faqSchema(faqs: FaqItem[]) {
       '@type': 'Question',
       name: faq.question,
       acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  }
+}
+
+export function howToSchema(post: BlogPost) {
+  const howTo = post.howTo as HowTo
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: post.title,
+    description: post.description,
+    ...(howTo.totalTime ? { totalTime: howTo.totalTime } : {}),
+    step: howTo.steps.map((step, index) => ({
+      '@type': 'HowToStep',
+      position: index + 1,
+      name: step.name,
+      text: step.text,
     })),
   }
 }

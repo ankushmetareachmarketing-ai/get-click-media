@@ -733,7 +733,7 @@ export default function WhatsAppBusinessAPIPage() {
           <p className="text-center text-xs text-gray-400 mt-4">
             See the full breakdown:{" "}
             <Link
-              href="/whatsapp-api-vs-whatsapp-business-app"
+              href="/blog/whatsapp-api-vs-whatsapp-business-app"
               className="text-[#2563eb] underline underline-offset-2"
             >
               WhatsApp Business API vs WhatsApp Business App
@@ -1024,7 +1024,7 @@ export default function WhatsAppBusinessAPIPage() {
           <p className="text-center text-sm text-gray-400 mb-16">
             Read the detailed walkthrough:{" "}
             <Link
-              href="/how-to-get-whatsapp-business-api"
+              href="/blog/how-to-get-whatsapp-business-api"
               className="text-[#2563eb] font-semibold underline underline-offset-2"
             >
               How to get WhatsApp Business API
@@ -1151,7 +1151,7 @@ export default function WhatsAppBusinessAPIPage() {
           <p className="text-center text-xs text-gray-400 mt-4">
             Get Click Media is the only provider in NCR offering{" "}
             <Link
-              href="/whatsapp-vs-rcs"
+              href="/blog/whatsapp-vs-rcs"
               className="text-[#2563eb] underline underline-offset-2"
             >
               WhatsApp
