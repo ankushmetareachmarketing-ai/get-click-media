@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, CheckCheck, Shield, Zap, BarChart3, MessageSquare, Layers, Globe, PhoneCall, MapPin, Star, ChevronDown, GraduationCap, BookOpen, School, Users, Calendar, Bell, Award, Clock, TrendingUp, Home, FileText, CreditCard } from "lucide-react";
 
-/* ── SEO Metadata ────────────────────────────────────────────────────────── */
+/* -- SEO Metadata ---------------------------------------------------------- */
 export const metadata: Metadata = {
   title: "RCS Messaging for Education & EdTech in India | Get Click Media",
   description:
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
 };
 
-/* ── JSON-LD Schema ──────────────────────────────────────────────────────── */
+/* -- JSON-LD Schema -------------------------------------------------------- */
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -76,7 +76,7 @@ const schema = {
   ],
 };
 
-// ── Education Use Cases ──────────────────────────────────────────────────
+// -- Education Use Cases --------------------------------------------------
 const EDUCATION_USE_CASES = [
   {
     icon: GraduationCap,
@@ -160,7 +160,7 @@ const EDUCATION_USE_CASES = [
   }
 ];
 
-// ── Segment Strategies ──────────────────────────────────────────────────
+// -- Segment Strategies --------------------------------------------------
 const SEGMENT_STRATEGIES = [
   {
     segment: "K–12 Schools (CBSE, ICSE, State Board)",
@@ -218,7 +218,7 @@ const SEGMENT_STRATEGIES = [
   }
 ];
 
-// ── Performance Benchmarks ──────────────────────────────────────────────
+// -- Performance Benchmarks ----------------------------------------------
 const PERFORMANCE_DATA = [
   { metric: "Admission enquiry follow-up response rate", sms: "4.8%", rcs: "22%", uplift: "4.6x higher" },
   { metric: "Fee payment on-time rate", sms: "41%", rcs: "79%", uplift: "+38 percentage points" },
@@ -232,7 +232,7 @@ const PERFORMANCE_DATA = [
   { metric: "Scholarship application rate (eligible)", sms: "8%", rcs: "31%", uplift: "3.9x higher" }
 ];
 
-// ── Student Lifecycle ───────────────────────────────────────────────────
+// -- Student Lifecycle ---------------------------------------------------
 const LIFECYCLE_STAGES = [
   { stage: "Awareness", type: "Targeted offer card", content: "Programme highlights, rankings, success stories", cta: "Enquire Now", goal: "Generate enquiry" },
   { stage: "Enquiry", type: "Instant follow-up rich card", content: "Campus/course image, USPs, Book Visit button", cta: "Book Visit", goal: "Convert to visit/trial" },
@@ -246,7 +246,7 @@ const LIFECYCLE_STAGES = [
   { stage: "Alumni", type: "Alumni event invitation", content: "Reunion details, Map, RSVP chip", cta: "RSVP Now", goal: "Maintain long-term relationship" }
 ];
 
-// ── FAQ ──────────────────────────────────────────────────────────────────
+// -- FAQ ------------------------------------------------------------------
 const FAQS = [
   {
     q: "How does RCS messaging help education institutions increase admissions?",
@@ -282,21 +282,21 @@ const FAQS = [
   }
 ];
 
-/* ── Page ────────────────────────────────────────────────────────────────── */
+/* -- Page ------------------------------------------------------------------ */
 export default function RCSEducationPage() {
   return (
     <>
       {/* JSON-LD Schema */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
-      {/* ─────────────────────────────────────────────────────────────────
+      {/* -----------------------------------------------------------------
           HERO — with breadcrumb inside
-      ───────────────────────────────────────────────────────────────── */}
+      ----------------------------------------------------------------- */}
       <section className="relative overflow-hidden mt-2 bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
         <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:40px_40px]" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
-          {/* ── BREADCRUMB INSIDE HERO WITH VISIBLE BACKGROUND ── */}
+          {/* -- BREADCRUMB INSIDE HERO WITH VISIBLE BACKGROUND -- */}
           <nav aria-label="Breadcrumb" className="mb-8">
             <ol className="flex items-center gap-2 text-xs text-white/60 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 w-fit">
               <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
@@ -375,7 +375,7 @@ export default function RCSEducationPage() {
         </div>
       </section>
 
-      {/* ── WHY EDUCATION NEEDS RCS ─────────────────────────────────────── */}
+      {/* -- WHY EDUCATION NEEDS RCS --------------------------------------- */}
       <section className="py-20 sm:py-28 bg-white" id="why-education">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col lg:flex-row items-center gap-14">
@@ -424,7 +424,7 @@ export default function RCSEducationPage() {
         </div>
       </section>
 
-      {/* ── 10 USE CASES ──────────────────────────────────────────────────── */}
+      {/* -- 10 USE CASES ---------------------------------------------------- */}
       <section className="py-20 sm:py-28 bg-gray-50" id="use-cases">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14 space-y-4">
@@ -469,7 +469,7 @@ export default function RCSEducationPage() {
         </div>
       </section>
 
-      {/* ── SEGMENT STRATEGIES ───────────────────────────────────────────── */}
+      {/* -- SEGMENT STRATEGIES --------------------------------------------- */}
       <section className="py-20 sm:py-28 bg-white" id="segments">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
@@ -502,7 +502,7 @@ export default function RCSEducationPage() {
         </div>
       </section>
 
-      {/* ── STUDENT LIFECYCLE ───────────────────────────────────────────── */}
+      {/* -- STUDENT LIFECYCLE --------------------------------------------- */}
       <section className="py-20 sm:py-28 bg-gray-50" id="lifecycle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
@@ -541,7 +541,7 @@ export default function RCSEducationPage() {
         </div>
       </section>
 
-      {/* ── PERFORMANCE BENCHMARKS ───────────────────────────────────────── */}
+      {/* -- PERFORMANCE BENCHMARKS ----------------------------------------- */}
       <section className="py-20 sm:py-28 bg-white" id="performance">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
@@ -583,7 +583,7 @@ export default function RCSEducationPage() {
         </div>
       </section>
 
-      {/* ── WHY GET CLICK MEDIA ──────────────────────────────────────────── */}
+      {/* -- WHY GET CLICK MEDIA -------------------------------------------- */}
       <section className="py-20 sm:py-28 bg-gray-50" id="why-gcm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col lg:flex-row items-center gap-14">
@@ -628,7 +628,7 @@ export default function RCSEducationPage() {
         </div>
       </section>
 
-      {/* ── FAQ ──────────────────────────────────────────────────────────── */}
+      {/* -- FAQ ------------------------------------------------------------ */}
       <section className="py-20 sm:py-28 bg-white" id="faq">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
@@ -658,7 +658,7 @@ export default function RCSEducationPage() {
         </div>
       </section>
 
-      {/* ── BOTTOM CTA ───────────────────────────────────────────────────── */}
+      {/* -- BOTTOM CTA ----------------------------------------------------- */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] px-8 sm:px-16 py-16 text-center space-y-6">

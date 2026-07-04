@@ -6,7 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import SectionHeading from './SectionHeading'
 
-// ─── SERVICE DATA ────────────────────────────────────────────────────────────
+// --- SERVICE DATA ------------------------------------------------------------
 const SERVICES = [
   {
     id: 'whatsapp',
@@ -58,7 +58,7 @@ const SERVICES = [
   },
 ]
 
-// ─── TYPES ───────────────────────────────────────────────────────────────────
+// --- TYPES -------------------------------------------------------------------
 interface Service {
   id: string
   title: string
@@ -71,7 +71,7 @@ interface Service {
   href: string
 }
 
-// ─── CARD ────────────────────────────────────────────────────────────────────
+// --- CARD --------------------------------------------------------------------
 function ServiceCard({ service }: { service: Service }) {
   const defaultImgRef = useRef(null)
   const hoverImgRef = useRef(null)
@@ -166,7 +166,7 @@ function ServiceCard({ service }: { service: Service }) {
   )
 }
 
-// ─── MAIN SLIDER ─────────────────────────────────────────────────────────────
+// --- MAIN SLIDER -------------------------------------------------------------
 export default function FeaturesSection() {
   const trackRef = useRef<HTMLDivElement>(null)
   const sectionRef = useRef<HTMLElement>(null)
@@ -248,7 +248,7 @@ export default function FeaturesSection() {
     <section ref={sectionRef} data-gsap-own="true" className="w-full py-16 ">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* ── Header ── */}
+        {/* -- Header -- */}
         <div className="flex items-end justify-between mb-12">
           <SectionHeading
             eyebrow="Our Services"

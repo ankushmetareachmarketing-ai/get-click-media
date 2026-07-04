@@ -5,7 +5,7 @@ import { createPortal } from "react-dom";
 import Image from "next/image";
 import { X, ArrowRight, CheckCircle2, Loader2 } from "lucide-react";
 
-// ── shadcn UI components ──────────────────────────────────────────────────────
+// -- shadcn UI components ------------------------------------------------------
 import { Input }    from "@/components/ui/input";
 import { Label }    from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -20,7 +20,7 @@ import {
 
 import { useModalStore } from "@/store/useModalStore";
 
-// ─────────────────────────────────────────────────────────────────────────────
+// -----------------------------------------------------------------------------
 
 const SERVICES = [
   "WhatsApp Marketing",
@@ -48,7 +48,7 @@ const EMPTY: FormState = {
   company: "", service: "", message: "",
 };
 
-// ─────────────────────────────────────────────────────────────────────────────
+// -----------------------------------------------------------------------------
 
 export default function ServiceModal() {
   const { isOpen, closeModal } = useModalStore();
@@ -111,7 +111,7 @@ export default function ServiceModal() {
   if (!inDOM) return null;
 
   return createPortal(
-    /* ── Backdrop ─────────────────────────────────────────────────────────── */
+    /* -- Backdrop ----------------------------------------------------------- */
     <div
       ref={overlayRef}
       onClick={(e) => { if (e.target === overlayRef.current) closeModal(); }}
@@ -129,7 +129,7 @@ export default function ServiceModal() {
         transition:      "background-color 0.28s ease, backdrop-filter 0.28s ease",
       }}
     >
-      {/* ── Dialog card ──────────────────────────────────────────────────── */}
+      {/* -- Dialog card ---------------------------------------------------- */}
       <div
         role="dialog"
         aria-modal="true"
@@ -149,7 +149,7 @@ export default function ServiceModal() {
           transition:   "transform 0.3s cubic-bezier(.22,1,.36,1), opacity 0.28s ease",
         }}
       >
-        {/* ── Close button ─────────────────────────────────────────────── */}
+        {/* -- Close button ----------------------------------------------- */}
         <button
           onClick={closeModal}
           aria-label="Close"
@@ -184,7 +184,7 @@ export default function ServiceModal() {
           <X size={15} />
         </button>
 
-        {/* ── LEFT — image panel ───────────────────────────────────────── */}
+        {/* -- LEFT — image panel ----------------------------------------- */}
         <div
           style={{
             position:   "relative",
@@ -263,7 +263,7 @@ export default function ServiceModal() {
           </div>
         </div>
 
-        {/* ── RIGHT — form panel ───────────────────────────────────────── */}
+        {/* -- RIGHT — form panel ----------------------------------------- */}
         <div style={{
           flex:       1,
           overflowY:  "auto",
@@ -439,7 +439,7 @@ export default function ServiceModal() {
   );
 }
 
-// ── Sub-components ────────────────────────────────────────────────────────────
+// -- Sub-components ------------------------------------------------------------
 
 function FieldWrap({
   label,

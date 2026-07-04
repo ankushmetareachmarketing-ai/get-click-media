@@ -9,7 +9,7 @@ import {
 import { useModalStore } from "@/store/useModalStore";
 import { image } from "motion/react-client";
 
-// ── Tab data ──────────────────────────────────────────────────────────────────
+// -- Tab data ------------------------------------------------------------------
 
 const TABS = [
   {
@@ -99,7 +99,7 @@ const TABS = [
   },
 ];
 
-// ── Component ─────────────────────────────────────────────────────────────────
+// -- Component -----------------------------------------------------------------
 
 const IndustrySolutions: React.FC = () => {
   const [active, setActive] = useState(2); // Finance selected by default
@@ -125,7 +125,7 @@ const IndustrySolutions: React.FC = () => {
       {/* Curvy lines pattern overlay */}
       <div className="relative z-10 max-w-7xl mx-auto">
 
-        {/* ── Header ── */}
+        {/* -- Header -- */}
         <div className="flex flex-col items-center text-center mb-10 sm:mb-14 gap-3">
 
           {/* Badge */}
@@ -159,7 +159,7 @@ const IndustrySolutions: React.FC = () => {
           </p>
         </div>
 
-        {/* ── Tabs ── */}
+        {/* -- Tabs -- */}
         <div className="flex items-center justify-center mb-8 overflow-x-auto">
           <div className="flex gap-0 border-b border-white/15 min-w-max">
             {TABS.map(({ label, Icon }, i) => {
@@ -189,7 +189,7 @@ const IndustrySolutions: React.FC = () => {
           </div>
         </div>
 
-        {/* ── Content card ── */}
+        {/* -- Content card -- */}
         <div
           key={active}
           className="ind-sol-card relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl bg-white"

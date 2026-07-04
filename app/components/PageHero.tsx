@@ -102,7 +102,7 @@ export default function PageHero({
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 pt-32 sm:pt-40 pb-16 sm:pb-28 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
 
-        {/* ── Left ── */}
+        {/* -- Left -- */}
         <div className="flex-1 flex flex-col gap-4 sm:gap-5">
 
           {/* Breadcrumb */}
@@ -175,7 +175,7 @@ export default function PageHero({
           </div>
         </div>
 
-        {/* ── Right: image ── */}
+        {/* -- Right: image -- */}
         <div className="flex-1 flex justify-center items-end lg:items-center w-full order-last lg:order-0">
           <Image
             src={imageSrc}

@@ -69,7 +69,7 @@ export default async function BlogPostPage({
         />
       ))}
 
-      {/* ── Breadcrumb ────────────────────────────────────────────────────── */}
+      {/* -- Breadcrumb ------------------------------------------------------ */}
       <nav
         aria-label="Breadcrumb"
         className="pt-28 sm:pt-36 pb-4 max-w-7xl mx-auto px-5 sm:px-8"
@@ -93,7 +93,7 @@ export default async function BlogPostPage({
         </ol>
       </nav>
 
-      {/* ── Post header ───────────────────────────────────────────────────── */}
+      {/* -- Post header ----------------------------------------------------- */}
       <header className="pb-8 max-w-7xl mx-auto px-5 sm:px-8">
         <Link
           href={`/blog/category/${categoryToSlug(post.category)}`}
@@ -131,7 +131,7 @@ export default async function BlogPostPage({
         </div>
       </header>
 
-      {/* ── Featured image ────────────────────────────────────────────────── */}
+      {/* -- Featured image -------------------------------------------------- */}
       <div className="max-w-7xl mx-auto px-5 sm:px-8 mb-10 sm:mb-14">
         <div className="relative aspect-video rounded-[20px] overflow-hidden shadow-(--shadow-elevated)">
           <Image
@@ -145,11 +145,11 @@ export default async function BlogPostPage({
         </div>
       </div>
 
-      {/* ── Main layout: article + TOC sidebar ───────────────────────────── */}
+      {/* -- Main layout: article + TOC sidebar ----------------------------- */}
       <div className="max-w-7xl mx-auto px-5 sm:px-8 pb-16 sm:pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_268px] gap-10 xl:gap-14">
 
-          {/* ── Article body ──────────────────────────────────────────────── */}
+          {/* -- Article body ------------------------------------------------ */}
           <article>
             <div className="blog-prose">{mdxContent}</div>
 
@@ -167,7 +167,7 @@ export default async function BlogPostPage({
               </div>
             )}
 
-            {/* ── FAQ Accordion ─────────────────────────────────────────── */}
+            {/* -- FAQ Accordion ------------------------------------------- */}
             {post.faq && post.faq.length > 0 && (
               <section className="mt-12" aria-label="Frequently Asked Questions">
                 <h2 className="text-[1.375rem] sm:text-[1.75rem] [font-family:var(--font-syne)] font-bold text-(--ink-1) mb-6">
@@ -177,7 +177,7 @@ export default async function BlogPostPage({
               </section>
             )}
 
-            {/* ── Prev / Next navigation ────────────────────────────────── */}
+            {/* -- Prev / Next navigation ---------------------------------- */}
             {(prev || next) && (
               <nav
                 aria-label="Post navigation"
@@ -217,7 +217,7 @@ export default async function BlogPostPage({
             )}
           </article>
 
-          {/* ── TOC Sidebar ───────────────────────────────────────────────── */}
+          {/* -- TOC Sidebar ------------------------------------------------- */}
           {post.toc.length > 0 && (
             <aside className="hidden lg:block">
               <div className="sticky top-28">
@@ -262,7 +262,7 @@ export default async function BlogPostPage({
         </div>
       </div>
 
-      {/* ── Related posts ─────────────────────────────────────────────────── */}
+      {/* -- Related posts --------------------------------------------------- */}
       {related.length > 0 && (
         <section className="py-14 sm:py-20 bg-(--surface-1)">
           <div className="max-w-7xl mx-auto px-5 sm:px-8">

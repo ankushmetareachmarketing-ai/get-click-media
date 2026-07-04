@@ -32,7 +32,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 
-// ─── Types ───────────────────────────────────────────────────────────────────
+// --- Types -------------------------------------------------------------------
 
 interface MegaMenuItem {
   icon: React.ReactNode;
@@ -67,7 +67,7 @@ interface NavItem {
   };
 }
 
-// ─── Menu Data ────────────────────────────────────────────────────────────────
+// --- Menu Data ----------------------------------------------------------------
 
 const navItems: NavItem[] = [
   {
@@ -201,7 +201,7 @@ const navItems: NavItem[] = [
 
 
 
-// ─── MegaMenu ─────────────────────────────────────────────────────────────────
+// --- MegaMenu -----------------------------------------------------------------
 
 interface MegaMenuProps {
   menu: NavItem["menu"] | undefined;
@@ -277,7 +277,7 @@ const MegaMenu: React.FC<MegaMenuProps> = ({ menu, isOpen }) => {
   );
 };
 
-// ─── Main Header ──────────────────────────────────────────────────────────────
+// --- Main Header --------------------------------------------------------------
 
 const Header: React.FC = () => {
   const { openModal } = useModalStore();

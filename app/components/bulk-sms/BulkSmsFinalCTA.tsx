@@ -20,7 +20,7 @@ export default function BulkSmsFinalCTA() {
           style={{ background: "linear-gradient(110deg, #ffffff 0%, #ffffff 45%, #fef0e8 100%)" }}
         >
 
-          {/* ── Blobs — bottom on mobile, right column on desktop ── */}
+          {/* -- Blobs — bottom on mobile, right column on desktop -- */}
           <div className="absolute bottom-0 left-0 right-0 h-80 lg:top-0 lg:left-auto lg:h-auto lg:w-105 pointer-events-none" aria-hidden="true">
             <div
               className="absolute top-0 bottom-0 my-auto -right-20 w-120 h-120 rounded-full"
@@ -45,7 +45,7 @@ export default function BulkSmsFinalCTA() {
             />
           </div>
 
-          {/* ── Left: content ── */}
+          {/* -- Left: content -- */}
           <div className="relative z-10 flex flex-col justify-center gap-3 sm:gap-5 p-6 sm:p-12 lg:p-16">
 
             <span className="inline-flex self-start items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-[0.6875rem] font-bold tracking-widest uppercase text-primary">
@@ -86,7 +86,7 @@ export default function BulkSmsFinalCTA() {
             </p>
           </div>
 
-          {/* ── Right: image (no background — blobs above provide the color) ── */}
+          {/* -- Right: image (no background — blobs above provide the color) -- */}
           <div className="relative z-10 flex items-end justify-center min-h-75 sm:min-h-90 lg:min-h-0">
             <Image
               src="/images/bulk-sms/book-free demo-for-bulk-sms-service-provider-in-india.png"

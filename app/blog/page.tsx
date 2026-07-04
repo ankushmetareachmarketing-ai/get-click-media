@@ -8,11 +8,11 @@ import {
   formatDate,
 } from "@/lib/blogs";
 
-// ── Config ────────────────────────────────────────────────────────────────────
+// -- Config --------------------------------------------------------------------
 
 const POSTS_PER_PAGE = 10;
 
-// ── SEO metadata ──────────────────────────────────────────────────────────────
+// -- SEO metadata --------------------------------------------------------------
 
 export const revalidate = 3600;
 
@@ -61,7 +61,7 @@ export async function generateMetadata({
   };
 }
 
-// ── Pagination bar ────────────────────────────────────────────────────────────
+// -- Pagination bar ------------------------------------------------------------
 
 function Pagination({ page, totalPages }: { page: number; totalPages: number }) {
   if (totalPages <= 1) return null;
@@ -139,7 +139,7 @@ function Pagination({ page, totalPages }: { page: number; totalPages: number }) 
   );
 }
 
-// ── Page ──────────────────────────────────────────────────────────────────────
+// -- Page ----------------------------------------------------------------------
 
 export default async function BlogPage({
   searchParams,
@@ -190,7 +190,7 @@ export default async function BlogPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
       />
 
-      {/* ── Hero (page 1 only) ─────────────────────────────────────────────── */}
+      {/* -- Hero (page 1 only) ----------------------------------------------- */}
       {page === 1 ? (
         <section className="relative overflow-hidden pt-32 sm:pt-40 pb-14 sm:pb-20">
           <div
@@ -253,7 +253,7 @@ export default async function BlogPage({
         </section>
       )}
 
-      {/* ── Category filter pills ─────────────────────────────────────────── */}
+      {/* -- Category filter pills ------------------------------------------- */}
       <div className="sticky top-20 z-30 bg-white border-b border-(--border-subtle) shadow-sm">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
           <div className="flex items-center gap-2 overflow-x-auto py-3 scrollbar-none">
@@ -276,7 +276,7 @@ export default async function BlogPage({
         </div>
       </div>
 
-      {/* ── Posts ─────────────────────────────────────────────────────────── */}
+      {/* -- Posts ----------------------------------------------------------- */}
       <section id="posts" className="py-14 sm:py-20 bg-(--surface-0)">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
 
@@ -400,7 +400,7 @@ export default async function BlogPage({
         </div>
       </section>
 
-      {/* ── Newsletter CTA ────────────────────────────────────────────────── */}
+      {/* -- Newsletter CTA -------------------------------------------------- */}
       <section className="py-14 sm:py-20 bg-(--surface-1)">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
           <div
