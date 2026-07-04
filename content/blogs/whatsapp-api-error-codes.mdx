@@ -1,0 +1,137 @@
+---
+title: "WhatsApp API Error Codes — Complete Reference and Troubleshooting Guide"
+description: "Complete WhatsApp Business API error code reference — 400, 429, 130429, 131030, 131047, 131051, 132000, and more. What each code means, why it happens, and the exact fix, with Node.js retry-logic code samples."
+slug: "whatsapp-api-error-codes"
+image: "/images/blog/whatsapp-api-error-codes.webp"
+author: "Get Click Media"
+publishedDate: "2026-07-05"
+updatedDate: "2026-07-05"
+category: "WhatsApp"
+keywords:
+  - "whatsapp api error codes"
+  - "whatsapp api error codes list"
+  - "whatsapp business api errors"
+  - "whatsapp api troubleshoot"
+  - "whatsapp api 131030 error"
+  - "whatsapp api error handling india"
+faq:
+  - question: "What does error code 131030 mean?"
+    answer: "Error 131030 means the template name in your API call does not exist or is not approved in your WhatsApp Business Account. Causes: typo in template name, template has not been submitted for approval yet, template was rejected by Meta, or template was approved but in a different language code than specified. Fix: check the exact template name in Meta Business Manager > WhatsApp Manager > Message Templates."
+  - question: "What does error code 131047 mean?"
+    answer: "Error 131047 means you attempted to send a free-text (non-template) message to a customer more than 24 hours after their last message. WhatsApp only allows free-text messages within the 24-hour service conversation window. Outside this window, only pre-approved template messages can be sent. Fix: use a template message instead of free text."
+  - question: "What should I do when I receive error code 429?"
+    answer: "Error 429 means you have exceeded the API rate limit. Check the Retry-After header in the response — it specifies how many seconds to wait before retrying. Implement exponential backoff in your application. If you consistently hit 429, your message volume may exceed your current plan limits — contact Get Click Media to upgrade your messaging tier."
+  - question: "Why do I get error 131005 (no permission to send)?"
+    answer: "Error 131005 means the customer has blocked your WhatsApp business number or has opted out of receiving messages. You cannot message customers who have blocked you. Remove this number from your contact list and do not attempt further sends. If this error appears frequently, review your message quality and opt-out rates — high opt-outs indicate messaging frequency or content issues."
+---
+
+WhatsApp Business API error codes are numeric codes returned in the API response when a request fails. Common error codes include: 400 (bad request — invalid payload), 429 (rate limit exceeded — implement backoff), 130429 (rate limit on the business account), 131030 (template not found or not approved), 131047 (re-engagement message outside the 24-hour window), 131051 (message not sent — invalid phone number), and 132000 (template parameter count mismatch). Each error includes a `message` field with a human-readable description.
+
+This reference is maintained by Get Click Media's technical support team from real production incident patterns across our WhatsApp Business API client base — it complements the [WhatsApp API documentation](/blog/whatsapp-api-documentation) with the troubleshooting detail engineers need when a send fails.
+
+## Error Response Structure
+
+```json title="Error response format — every failed API call returns this structure"
+{
+  "error": {
+    "code": 131030,
+    "message": "(#131030) Template name does not exist in the translation",
+    "type": "OAuthException",
+    "fbtrace_id": "AbCdEf123456"
+  }
+}
+
+// HTTP status code also indicates error category:
+// 400 Bad Request    — fix your payload, do not retry
+// 401 Unauthorized    — fix authentication credentials
+// 429 Too Many Req    — rate limited, backoff and retry
+// 500 Server Error    — Meta server issue, retry with backoff
+```
+
+## Complete Error Code Reference
+
+| Error code | HTTP status | Meaning | Action required |
+|---|---|---|---|
+| 400 | 400 | Bad request — malformed JSON or missing required field | Check request payload structure. See API docs for required fields. |
+| 401 | 401 | Unauthorized — invalid or expired API key | Regenerate API key in GCM dashboard. Check Authorization header. |
+| 403 | 403 | Forbidden — account does not have permission for this action | Check WABA permissions. Contact GCM if action should be permitted. |
+| 404 | 404 | Resource not found — `message_id`, `media_id`, or template not found | Verify the ID is correct. Template may have been deleted. |
+| 429 | 429 | Rate limit exceeded — too many requests per second | Implement exponential backoff. Wait `Retry-After` header duration. |
+| 130429 | 429 | Business account rate limit — daily conversation limit reached | Account has hit daily messaging tier limit. Tier upgrades automatically over time. |
+| 131000 | 400 | Generic error — message could not be sent | Check all required fields. Verify phone number format (E.164). |
+| 131005 | 400 | No permission to send message to this phone number | Customer may have blocked your number or opted out. |
+| 131008 | 400 | Required parameter missing | Add the missing parameter. Error message specifies which field. |
+| 131009 | 400 | Invalid parameter value | Fix the invalid value. Check field format requirements in API docs. |
+| 131021 | 400 | Recipient phone number not in allowed list | Development accounts only — add number to test number list in Meta BM. |
+| 131026 | 400 | Message undeliverable — recipient unreachable | Number may be off-network or not a valid WhatsApp number. Check with `GET /contacts/{phone}`. |
+| 131030 | 400 | Template not found or not approved | Verify template name spelling. Check approval status in Meta BM > Templates. |
+| 131031 | 400 | Template paused due to quality | Template quality score too low. Improve message content and opt-in quality. |
+| 131045 | 400 | Phone number not registered on Cloud API | Number registration not completed. Contact GCM onboarding team. |
+| 131047 | 400 | Re-engagement message outside 24-hour window | Only template messages (not free-text) can be sent outside the 24-hour window. |
+| 131051 | 400 | Message type not supported by recipient | Some older WhatsApp versions may not support interactive messages. Use text fallback. |
+| 131052 | 400 | Media download failed | Media URL not publicly accessible or URL expired. Use `/media` endpoint to pre-upload. |
+| 132000 | 400 | Template parameter count mismatch | Number of variables in API call does not match template definition. |
+| 132001 | 400 | Template header format mismatch | Header type in API call (image/text/document) does not match approved template header. |
+| 133000 | 400 | Sender and recipient are the same | Cannot send a message to your own business number. |
+| 500 | 500 | Internal server error — Meta infrastructure issue | Retry with exponential backoff. Log `fbtrace_id` for escalation. |
+
+## Error Handling Code Pattern — Node.js
+
+```js title="Robust error handling with retry logic"
+async function sendWhatsApp(to, template, vars, retries = 3) {
+  try {
+    const response = await axios.post(
+      'https://api.getclickmedia.com/v2/whatsapp/messages',
+      { to, type: 'template', template: { name: template, language: { code: 'en' },
+        components: [{ type: 'body', parameters: vars }] } },
+      { headers: { Authorization: `Bearer ${process.env.GCM_API_KEY}`,
+                   'X-Phone-Number-ID': process.env.GCM_PHONE_ID } }
+    );
+    return response.data;
+  } catch (err) {
+    const code = err.response?.data?.error?.code;
+    const status = err.response?.status;
+
+    // Do NOT retry these — fix the payload
+    if ([131030, 131008, 131009, 132000, 132001].includes(code)) {
+      console.error(`Non-retryable error ${code}: fix payload`);
+      throw err;
+    }
+
+    // Rate limit — wait and retry
+    if (status === 429 && retries > 0) {
+      const wait = parseInt(err.response.headers['retry-after'] || '5') * 1000;
+      await new Promise(r => setTimeout(r, wait));
+      return sendWhatsApp(to, template, vars, retries - 1);
+    }
+
+    // Server error — exponential backoff
+    if (status >= 500 && retries > 0) {
+      await new Promise(r => setTimeout(r, (4 - retries) * 2000));
+      return sendWhatsApp(to, template, vars, retries - 1);
+    }
+
+    throw err; // Give up after retries exhausted
+  }
+}
+```
+
+## Frequently Asked Questions — WhatsApp API Error Codes
+
+**What does error code 131030 mean?**
+Error 131030 means the template name in your API call does not exist or is not approved in your WhatsApp Business Account. Causes: typo in template name, template has not been submitted for approval yet, template was rejected by Meta, or template was approved but in a different language code than specified. Fix: check the exact template name in Meta Business Manager > WhatsApp Manager > Message Templates.
+
+**What does error code 131047 mean?**
+Error 131047 means you attempted to send a free-text (non-template) message to a customer more than 24 hours after their last message. WhatsApp only allows free-text messages within the 24-hour service conversation window. Outside this window, only pre-approved template messages can be sent. Fix: use a template message instead of free text.
+
+**What should I do when I receive error code 429?**
+Error 429 means you have exceeded the API rate limit. Check the `Retry-After` header in the response — it specifies how many seconds to wait before retrying. Implement exponential backoff in your application. If you consistently hit 429, your message volume may exceed your current plan limits — contact Get Click Media to upgrade your messaging tier.
+
+**Why do I get error 131005 (no permission to send)?**
+Error 131005 means the customer has blocked your WhatsApp business number or has opted out of receiving messages. You cannot message customers who have blocked you. Remove this number from your contact list and do not attempt further sends. If this error appears frequently, review your message quality and opt-out rates — high opt-outs indicate messaging frequency or content issues.
+
+## Get Started
+
+For deeper context on the failure modes above, see [WhatsApp API rate limits](/blog/whatsapp-api-rate-limits) for tier and throughput limits, [WhatsApp webhooks](/blog/whatsapp-webhooks) for delivery status events, and [WhatsApp API security](/blog/whatsapp-api-security) for credential and signature issues.
+
+**Get [WhatsApp Business API](/whatsapp-business-api)** — [Read API Docs](/blog/whatsapp-api-documentation) · [Get API Access](/contact) · [Talk to Technical Team](/contact)
