@@ -23,7 +23,7 @@ import {
   Truck,
 } from "lucide-react";
 
-/* ── SEO Metadata ────────────────────────────────────────────────────────── */
+/* -- SEO Metadata ---------------------------------------------------------- */
 export const metadata: Metadata = {
   title: "WhatsApp Chatbot — AI-Powered Automation for Your Business | Get Click Media",
   description:
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
 };
 
-/* ── JSON-LD Schema ──────────────────────────────────────────────────────── */
+/* -- JSON-LD Schema -------------------------------------------------------- */
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -163,13 +163,13 @@ const FAQS = [
   { q: "How much does a WhatsApp chatbot cost in India?", a: "Cost depends on conversation volume and flow complexity, plus Meta's per-conversation charges.", link: { text: "See full WhatsApp Business API pricing", href: "/blog/whatsapp-api-pricing-india" } },
 ];
 
-/* ── Page ────────────────────────────────────────────────────────────────── */
+/* -- Page ------------------------------------------------------------------ */
 export default function WhatsAppChatbotPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
-      {/* ── BREADCRUMB ─────────────────────────────────────────────────── */}
+      {/* -- BREADCRUMB --------------------------------------------------- */}
       <nav aria-label="Breadcrumb" className="max-w-7xl mx-auto px-4 sm:px-6 pt-6 pb-2">
         <ol className="flex items-center gap-2 text-xs text-gray-400 flex-wrap">
           <li><Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link></li>
@@ -180,7 +180,7 @@ export default function WhatsAppChatbotPage() {
         </ol>
       </nav>
 
-      {/* ── HERO ─────────────────────────────────────────────────────────── */}
+      {/* -- HERO ----------------------------------------------------------- */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
         <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:40px_40px]" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-24">
@@ -233,7 +233,7 @@ export default function WhatsAppChatbotPage() {
         </div>
       </section>
 
-      {/* ── DIRECT ANSWER / AEO BLOCK ────────────────────────────────────── */}
+      {/* -- DIRECT ANSWER / AEO BLOCK -------------------------------------- */}
       <section className="py-10 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="rounded-2xl border-l-4 border-[#2563eb] bg-blue-50/60 px-6 py-5">
@@ -251,7 +251,7 @@ export default function WhatsAppChatbotPage() {
         </div>
       </section>
 
-      {/* ── WHAT IS A WHATSAPP CHATBOT ───────────────────────────────────── */}
+      {/* -- WHAT IS A WHATSAPP CHATBOT ------------------------------------- */}
       <section className="py-20 sm:py-28 bg-white" id="what-is-a-chatbot">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col lg:flex-row items-center gap-14 mb-16">
@@ -320,7 +320,7 @@ export default function WhatsAppChatbotPage() {
         </div>
       </section>
 
-      {/* ── FEATURES ─────────────────────────────────────────────────────── */}
+      {/* -- FEATURES ------------------------------------------------------- */}
       <section className="py-20 sm:py-28 bg-[#0f172a]" id="features">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14 space-y-4">
@@ -348,7 +348,7 @@ export default function WhatsAppChatbotPage() {
         </div>
       </section>
 
-      {/* ── BENEFITS ─────────────────────────────────────────────────────── */}
+      {/* -- BENEFITS ------------------------------------------------------- */}
       <section className="py-20 sm:py-24 bg-white" id="benefits">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14 space-y-4">
@@ -370,7 +370,7 @@ export default function WhatsAppChatbotPage() {
         </div>
       </section>
 
-      {/* ── USE CASES BY INDUSTRY ────────────────────────────────────────── */}
+      {/* -- USE CASES BY INDUSTRY ------------------------------------------ */}
       <section className="py-20 sm:py-28 bg-gray-50" id="use-cases">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14 space-y-4">
@@ -395,7 +395,7 @@ export default function WhatsAppChatbotPage() {
         </div>
       </section>
 
-      {/* ── HOW IT WORKS ─────────────────────────────────────────────────── */}
+      {/* -- HOW IT WORKS --------------------------------------------------- */}
       <section className="py-20 sm:py-28 bg-[#0f172a]" id="how-it-works">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14 space-y-4">
@@ -427,7 +427,7 @@ export default function WhatsAppChatbotPage() {
         </div>
       </section>
 
-      {/* ── PRICING ──────────────────────────────────────────────────────── */}
+      {/* -- PRICING -------------------------------------------------------- */}
       <section className="py-20 sm:py-24 bg-white" id="pricing">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-5">
           <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
@@ -448,7 +448,7 @@ export default function WhatsAppChatbotPage() {
         </div>
       </section>
 
-      {/* ── SETUP PROCESS ────────────────────────────────────────────────── */}
+      {/* -- SETUP PROCESS -------------------------------------------------- */}
       <section className="py-20 sm:py-28 bg-gray-50" id="setup">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14 space-y-4">
@@ -473,7 +473,7 @@ export default function WhatsAppChatbotPage() {
         </div>
       </section>
 
-      {/* ── WHY GET CLICK MEDIA ──────────────────────────────────────────── */}
+      {/* -- WHY GET CLICK MEDIA -------------------------------------------- */}
       <section className="py-20 sm:py-28 bg-white" id="why-gcm">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-5">
           <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
@@ -493,7 +493,7 @@ export default function WhatsAppChatbotPage() {
         </div>
       </section>
 
-      {/* ── RELATED LINKS ────────────────────────────────────────────────── */}
+      {/* -- RELATED LINKS -------------------------------------------------- */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-6 font-(family-name:--font-syne)">
@@ -521,7 +521,7 @@ export default function WhatsAppChatbotPage() {
         </div>
       </section>
 
-      {/* ── FAQ ──────────────────────────────────────────────────────────── */}
+      {/* -- FAQ ------------------------------------------------------------ */}
       <section className="py-20 sm:py-28 bg-white" id="faq">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
@@ -562,7 +562,7 @@ export default function WhatsAppChatbotPage() {
         </div>
       </section>
 
-      {/* ── BOTTOM CTA ───────────────────────────────────────────────────── */}
+      {/* -- BOTTOM CTA ----------------------------------------------------- */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] px-8 sm:px-16 py-16 text-center space-y-6">

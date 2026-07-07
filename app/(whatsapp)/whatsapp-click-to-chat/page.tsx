@@ -10,7 +10,7 @@ import {
   MessageCircleQuestion,
   ShoppingBag,
   Tag,
-  Instagram,
+  AtSign,
   MapPin,
   Mail,
   CreditCard,
@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 import LinkGenerator from "./LinkGenerator";
 
-/* ── SEO Metadata ────────────────────────────────────────────────────────── */
+/* -- SEO Metadata ---------------------------------------------------------- */
 export const metadata: Metadata = {
   title: "WhatsApp Click to Chat — Generate Your wa.me Link | Get Click Media",
   description:
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
 };
 
-/* ── JSON-LD Schema ──────────────────────────────────────────────────────── */
+/* -- JSON-LD Schema -------------------------------------------------------- */
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -165,7 +165,7 @@ const PLACEMENTS = [
   },
   { icon: Tag, place: "Pricing Page", lift: "Pricing page lead rate +40%" },
   {
-    icon: Instagram,
+    icon: AtSign,
     place: "Instagram & Facebook Bio",
     lift: "15–25% of bio clicks go to WhatsApp",
   },
@@ -336,7 +336,7 @@ const FAQS = [
   },
 ];
 
-/* ── Page ────────────────────────────────────────────────────────────────── */
+/* -- Page ------------------------------------------------------------------ */
 export default function WhatsAppClickToChatPage() {
   return (
     <>
@@ -369,7 +369,7 @@ export default function WhatsAppClickToChatPage() {
         </ol>
       </nav>
 
-      {/* ── HERO + GENERATOR ─────────────────────────────────────────────── */}
+      {/* -- HERO + GENERATOR ----------------------------------------------- */}
       <section
         id="link-generator"
         className="relative overflow-hidden bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl"
@@ -414,7 +414,7 @@ export default function WhatsAppClickToChatPage() {
         </div>
       </section>
 
-      {/* ── DIRECT ANSWER ────────────────────────────────────────────────── */}
+      {/* -- DIRECT ANSWER -------------------------------------------------- */}
       <section className="py-10 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="rounded-2xl border-l-4 border-[#2563eb] bg-blue-50/60 px-6 py-5">
@@ -431,7 +431,7 @@ export default function WhatsAppClickToChatPage() {
         </div>
       </section>
 
-      {/* ── URL FORMAT ───────────────────────────────────────────────────── */}
+      {/* -- URL FORMAT ----------------------------------------------------- */}
       <section className="py-20 sm:py-28 bg-white" id="url-format">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 space-y-4">
@@ -468,7 +468,7 @@ https://wa.me/919876543210
         </div>
       </section>
 
-      {/* ── CLICK TO CHAT VS SAVE NUMBER ─────────────────────────────────── */}
+      {/* -- CLICK TO CHAT VS SAVE NUMBER ----------------------------------- */}
       <section className="py-20 sm:py-24 bg-gray-50" id="vs-save-number">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 space-y-4">
@@ -521,7 +521,7 @@ https://wa.me/919876543210
         </div>
       </section>
 
-      {/* ── PLACEMENTS ───────────────────────────────────────────────────── */}
+      {/* -- PLACEMENTS ----------------------------------------------------- */}
       <section className="py-20 sm:py-28 bg-white" id="placements">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14 space-y-4">
@@ -549,7 +549,7 @@ https://wa.me/919876543210
         </div>
       </section>
 
-      {/* ── USE CASES ────────────────────────────────────────────────────── */}
+      {/* -- USE CASES ------------------------------------------------------ */}
       <section className="py-20 sm:py-28 bg-[#0f172a]" id="use-cases">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14 space-y-4">
@@ -579,7 +579,7 @@ https://wa.me/919876543210
         </div>
       </section>
 
-      {/* ── WITH VS WITHOUT API ──────────────────────────────────────────── */}
+      {/* -- WITH VS WITHOUT API -------------------------------------------- */}
       <section className="py-20 sm:py-24 bg-white" id="with-api">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
@@ -649,7 +649,7 @@ https://wa.me/919876543210
         </div>
       </section>
 
-      {/* ── VS CLICK TO WHATSAPP ADS ─────────────────────────────────────── */}
+      {/* -- VS CLICK TO WHATSAPP ADS --------------------------------------- */}
       <section className="py-20 sm:py-24 bg-gray-50" id="vs-ads">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 space-y-4">
@@ -705,7 +705,7 @@ https://wa.me/919876543210
         </div>
       </section>
 
-      {/* ── RELATED LINKS ────────────────────────────────────────────────── */}
+      {/* -- RELATED LINKS -------------------------------------------------- */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-6 font-(family-name:--font-syne)">
@@ -772,7 +772,7 @@ https://wa.me/919876543210
         </div>
       </section>
 
-      {/* ── FAQ ──────────────────────────────────────────────────────────── */}
+      {/* -- FAQ ------------------------------------------------------------ */}
       <section className="py-20 sm:py-28 bg-gray-50" id="faq">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
@@ -818,7 +818,7 @@ https://wa.me/919876543210
         </div>
       </section>
 
-      {/* ── BOTTOM CTA ───────────────────────────────────────────────────── */}
+      {/* -- BOTTOM CTA ----------------------------------------------------- */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] px-8 sm:px-16 py-16 text-center space-y-6">

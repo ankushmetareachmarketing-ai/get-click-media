@@ -19,7 +19,7 @@ import {
   Store,
 } from "lucide-react";
 
-/* ── SEO Metadata ────────────────────────────────────────────────────────── */
+/* -- SEO Metadata ---------------------------------------------------------- */
 export const metadata: Metadata = {
   title: "WhatsApp Broadcast API — Send Bulk Messages to Thousands Instantly | Get Click Media",
   description:
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
 };
 
-/* ── JSON-LD Schema ──────────────────────────────────────────────────────── */
+/* -- JSON-LD Schema -------------------------------------------------------- */
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -129,13 +129,13 @@ const FAQS = [
   { q: "Can I personalize broadcast messages for each customer?", a: "Yes — templates support dynamic variables like customer name, order ID, and other personalization fields." },
 ];
 
-/* ── Page ────────────────────────────────────────────────────────────────── */
+/* -- Page ------------------------------------------------------------------ */
 export default function WhatsAppBroadcastPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
-      {/* ── BREADCRUMB ─────────────────────────────────────────────────── */}
+      {/* -- BREADCRUMB --------------------------------------------------- */}
       <nav aria-label="Breadcrumb" className="max-w-7xl mx-auto px-4 sm:px-6 pt-6 pb-2">
         <ol className="flex items-center gap-2 text-xs text-gray-400 flex-wrap">
           <li><Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link></li>
@@ -146,7 +146,7 @@ export default function WhatsAppBroadcastPage() {
         </ol>
       </nav>
 
-      {/* ── HERO ─────────────────────────────────────────────────────────── */}
+      {/* -- HERO ----------------------------------------------------------- */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
         <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:40px_40px]" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-24">
@@ -197,7 +197,7 @@ export default function WhatsAppBroadcastPage() {
         </div>
       </section>
 
-      {/* ── DIRECT ANSWER / AEO BLOCK ────────────────────────────────────── */}
+      {/* -- DIRECT ANSWER / AEO BLOCK -------------------------------------- */}
       <section className="py-10 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="rounded-2xl border-l-4 border-[#2563eb] bg-blue-50/60 px-6 py-5">
@@ -216,7 +216,7 @@ export default function WhatsAppBroadcastPage() {
         </div>
       </section>
 
-      {/* ── WHAT IS BROADCAST API ────────────────────────────────────────── */}
+      {/* -- WHAT IS BROADCAST API ------------------------------------------ */}
       <section className="py-20 sm:py-28 bg-white" id="what-is-broadcast">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 space-y-4">
@@ -251,7 +251,7 @@ export default function WhatsAppBroadcastPage() {
         </div>
       </section>
 
-      {/* ── COMPARISON ───────────────────────────────────────────────────── */}
+      {/* -- COMPARISON ----------------------------------------------------- */}
       <section className="py-20 sm:py-24 bg-gray-50" id="comparison">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
@@ -285,7 +285,7 @@ export default function WhatsAppBroadcastPage() {
         </div>
       </section>
 
-      {/* ── FEATURES ─────────────────────────────────────────────────────── */}
+      {/* -- FEATURES ------------------------------------------------------- */}
       <section className="py-20 sm:py-28 bg-[#0f172a]" id="features">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14 space-y-4">
@@ -313,7 +313,7 @@ export default function WhatsAppBroadcastPage() {
         </div>
       </section>
 
-      {/* ── PRICING LOGIC ────────────────────────────────────────────────── */}
+      {/* -- PRICING LOGIC -------------------------------------------------- */}
       <section className="py-20 sm:py-24 bg-white" id="pricing">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
@@ -342,7 +342,7 @@ export default function WhatsAppBroadcastPage() {
         </div>
       </section>
 
-      {/* ── HOW TO SEND A BROADCAST ──────────────────────────────────────── */}
+      {/* -- HOW TO SEND A BROADCAST ---------------------------------------- */}
       <section className="py-20 sm:py-28 bg-gray-50" id="how-to">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14 space-y-4">
@@ -370,7 +370,7 @@ export default function WhatsAppBroadcastPage() {
         </div>
       </section>
 
-      {/* ── USE CASES ────────────────────────────────────────────────────── */}
+      {/* -- USE CASES ------------------------------------------------------ */}
       <section className="py-20 sm:py-28 bg-white" id="use-cases">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14 space-y-4">
@@ -395,7 +395,7 @@ export default function WhatsAppBroadcastPage() {
         </div>
       </section>
 
-      {/* ── WHY GET CLICK MEDIA ──────────────────────────────────────────── */}
+      {/* -- WHY GET CLICK MEDIA -------------------------------------------- */}
       <section className="py-20 sm:py-28 bg-[#0f172a]" id="why-gcm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col lg:flex-row items-center gap-14">
@@ -427,7 +427,7 @@ export default function WhatsAppBroadcastPage() {
         </div>
       </section>
 
-      {/* ── RELATED LINKS ────────────────────────────────────────────────── */}
+      {/* -- RELATED LINKS -------------------------------------------------- */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-6 font-(family-name:--font-syne)">
@@ -451,7 +451,7 @@ export default function WhatsAppBroadcastPage() {
         </div>
       </section>
 
-      {/* ── FAQ ──────────────────────────────────────────────────────────── */}
+      {/* -- FAQ ------------------------------------------------------------ */}
       <section className="py-20 sm:py-28 bg-white" id="faq">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
@@ -492,7 +492,7 @@ export default function WhatsAppBroadcastPage() {
         </div>
       </section>
 
-      {/* ── BOTTOM CTA ───────────────────────────────────────────────────── */}
+      {/* -- BOTTOM CTA ----------------------------------------------------- */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] px-8 sm:px-16 py-16 text-center space-y-6">

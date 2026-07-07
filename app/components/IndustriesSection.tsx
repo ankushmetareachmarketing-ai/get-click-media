@@ -8,11 +8,11 @@ import {
 } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 
-// ── Types ─────────────────────────────────────────────────────────────────────
+// -- Types ---------------------------------------------------------------------
 interface UseCase { title: string; visual: React.ReactNode; }
 interface Industry { label: string; Icon: React.ElementType; color: string; useCases: UseCase[]; }
 
-// ── Mini visuals ──────────────────────────────────────────────────────────────
+// -- Mini visuals --------------------------------------------------------------
 
 const BubbleChat = ({ color1, color2 }: { color1: string; color2: string }) => (
   <div className="flex flex-col gap-2.5 w-full">
@@ -190,7 +190,7 @@ const TravelVisual = () => (
   </div>
 );
 
-// ── Data ──────────────────────────────────────────────────────────────────────
+// -- Data ----------------------------------------------------------------------
 
 const industries: Industry[] = [
   {
@@ -267,7 +267,7 @@ const industries: Industry[] = [
   },
 ];
 
-// ── Component ─────────────────────────────────────────────────────────────────
+// -- Component -----------------------------------------------------------------
 
 const IndustriesSection: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(4);
@@ -411,7 +411,7 @@ const IndustriesSection: React.FC = () => {
 
         <div className="flex flex-col lg:flex-row gap-3 lg:gap-5 items-start">
 
-          {/* ── LEFT sidebar ────────────────────────────────────────────── */}
+          {/* -- LEFT sidebar ---------------------------------------------- */}
           <div className="w-full lg:w-64 shrink-0">
 
             {/* Mobile: pill chip slider */}
@@ -484,7 +484,7 @@ const IndustriesSection: React.FC = () => {
             </div>
           </div>
 
-          {/* ── RIGHT panel ─────────────────────────────────────────────── */}
+          {/* -- RIGHT panel ----------------------------------------------- */}
           <div className="flex-1 min-w-0 w-full">
 
             {/* Active industry header */}

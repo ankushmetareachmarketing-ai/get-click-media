@@ -8,7 +8,7 @@ export default function WhatIsTransactionalSMS() {
 
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
 
-          {/* ── Left: text ── */}
+          {/* -- Left: text -- */}
           <div className="flex-1 flex flex-col gap-5">
 
             <span className="inline-flex self-start items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-[0.6875rem] font-bold tracking-widest uppercase text-primary">
@@ -61,7 +61,7 @@ export default function WhatIsTransactionalSMS() {
             </div>
           </div>
 
-          {/* ── Right: image ── */}
+          {/* -- Right: image -- */}
           <div className="flex-1 w-full">
             <div className="relative overflow-hidden">
               <Image

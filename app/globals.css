@@ -140,7 +140,7 @@
   }
 }
 
-/* ─── FONT FAMILIES ────────────────────────────────────────────────────────── */
+/* --- FONT FAMILIES ---------------------------------------------------------- */
 * {
   font-family: var(--font-manrope), sans-serif;
 }
@@ -149,7 +149,7 @@ body {
   font-family: var(--font-manrope), sans-serif;
 }
 
-/* ─── ANIMATED BACKGROUND ──────────────────────────────────────────────────── */
+/* --- ANIMATED BACKGROUND ---------------------------------------------------- */
 
 /*
  * The body gets the dot-grid via a CSS background-image.
@@ -183,7 +183,7 @@ body::after {
     radial-gradient(ellipse 30% 100% at 100% 50%, rgba(248,250,252,0.75) 0%, transparent 100%);
 }
 
-/* ─── FLOATING BALLS WRAPPER ───────────────────────────────────────────────── */
+/* --- FLOATING BALLS WRAPPER ------------------------------------------------- */
 /* Place <div id="bg-balls" aria-hidden="true"></div> as the first child of <body>
    OR use the GlobalBackground component below.                                  */
 
@@ -277,7 +277,7 @@ body::after {
   100% { transform: translate(0px,   0px)   scale(1);    }
 }
 
-/* ─── MARQUEE ANIMATIONS ───────────────────────────────────────────────────── */
+/* --- MARQUEE ANIMATIONS ----------------------------------------------------- */
 @keyframes marquee-left {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
@@ -293,13 +293,13 @@ body::after {
   animation: marquee-right var(--marquee-speed, 45s) linear infinite;
 }
 
-/* ─── ENSURE ALL PAGE CONTENT SITS ABOVE THE BACKGROUND ───────────────────── */
+/* --- ENSURE ALL PAGE CONTENT SITS ABOVE THE BACKGROUND --------------------- */
 body > *:not(.bg-balls):not(.layout-header):not(.floating-dock-portal) {
   position: relative;
   z-index: 1;
 }
 
-/* ─── DARK MODE ────────────────────────────────────────────────────────────── */
+/* --- DARK MODE -------------------------------------------------------------- */
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
@@ -348,7 +348,7 @@ body > *:not(.bg-balls):not(.layout-header):not(.floating-dock-portal) {
   }
 }
 
-/* ─── BLOG PROSE STYLES ────────────────────────────────────────────────────── */
+/* --- BLOG PROSE STYLES ------------------------------------------------------ */
 .blog-prose {
   font-size: 1.0625rem;
   line-height: 1.8;

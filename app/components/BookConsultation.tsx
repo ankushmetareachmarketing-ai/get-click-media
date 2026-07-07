@@ -65,7 +65,7 @@ const BookConsultation: React.FC = () => {
     <section className="py-14 sm:py-20 px-4 bg-[#f8fafc]">
       <div className="max-w-screen-xl mx-auto">
 
-        {/* ── Header ── */}
+        {/* -- Header -- */}
         <div className="flex flex-col items-center text-center mb-10 sm:mb-14 gap-3">
 
           {/* Badge — brand blue border, orange quote accents */}
@@ -90,11 +90,11 @@ const BookConsultation: React.FC = () => {
           </p>
         </div>
 
-        {/* ── Main card ── */}
+        {/* -- Main card -- */}
         <div className="bg-white rounded-3xl border border-gray-200 shadow-lg overflow-hidden">
           <div className="flex flex-col lg:flex-row">
 
-            {/* ── Left: Form ── */}
+            {/* -- Left: Form -- */}
             <div className="flex-1 p-7 sm:p-10">
 
               {status === "success" ? (
@@ -233,7 +233,7 @@ const BookConsultation: React.FC = () => {
               )}
             </div>
 
-            {/* ── Right: Trust panel ── */}
+            {/* -- Right: Trust panel -- */}
             <div
               className="lg:w-105 xl:w-115 shrink-0 flex flex-col gap-6 p-7 sm:p-10"
               style={{ background: "linear-gradient(145deg, #0c1a3a 0%, #0f2356 60%, #0d3b6e 100%)" }}

@@ -53,7 +53,7 @@ const InnerPageHero = ({
     >
       <div className="max-w-screen-xl mx-auto px-4 sm:px-8 pt-24 sm:pt-32 pb-24 sm:pb-32 flex flex-col lg:flex-row items-center gap-10 sm:gap-12 min-h-[calc(100vh-1rem)]">
 
-        {/* ── Left: text ── */}
+        {/* -- Left: text -- */}
         <div className="flex-1 flex flex-col gap-5 sm:gap-6 z-10">
           {eyebrow && (
             <span className="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full bg-white/70 border border-white/80 text-xs font-semibold text-[color:var(--primary)] shadow-sm backdrop-blur-sm">
@@ -87,7 +87,7 @@ const InnerPageHero = ({
           </div>
         </div>
 
-        {/* ── Right: image (desktop) / Bottom: image (mobile) ── */}
+        {/* -- Right: image (desktop) / Bottom: image (mobile) -- */}
         <div className="flex-1 flex justify-center items-end lg:items-center relative w-full order-last lg:order-none">
           <Image
             src={imageSrc}
@@ -99,7 +99,7 @@ const InnerPageHero = ({
         </div>
       </div>
 
-      {/* ── Wave ── */}
+      {/* -- Wave -- */}
       <div className="absolute bottom-0 left-0 right-0 pointer-events-none">
         <svg
           viewBox="0 0 1440 100"

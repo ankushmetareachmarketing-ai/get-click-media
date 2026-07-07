@@ -11,7 +11,7 @@ import {
 } from "motion/react";
 import { useRef, useState } from "react";
 
-// ── Horizontal dock (original Aceternity behaviour) ───────────────────────────
+// -- Horizontal dock (original Aceternity behaviour) ---------------------------
 
 type DockItem = { title: string; icon: React.ReactNode; href: string; onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void };
 
@@ -88,7 +88,7 @@ function IconContainerH({
   );
 }
 
-// ── Vertical dock (for fixed right-side usage) ────────────────────────────────
+// -- Vertical dock (for fixed right-side usage) --------------------------------
 
 export const FloatingDockVertical = ({
   items,

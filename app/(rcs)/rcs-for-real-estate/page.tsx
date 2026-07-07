@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, CheckCheck, Zap, Shield, BarChart3, MessageSquare, Layers, Globe, PhoneCall, MapPin, Star, ChevronDown, Home, DollarSign, Users, Calendar, Bell, TrendingUp } from "lucide-react";
 
-/* ── SEO Metadata ────────────────────────────────────────────────────────── */
+/* -- SEO Metadata ---------------------------------------------------------- */
 export const metadata: Metadata = {
   title: "RCS Messaging for Real Estate: Drive Site Visits & Bookings | Get Click Media",
   description:
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
 };
 
-/* ── JSON-LD Schema ──────────────────────────────────────────────────────── */
+/* -- JSON-LD Schema -------------------------------------------------------- */
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -88,7 +88,7 @@ const schema = {
   ],
 };
 
-// ── Real Estate Use Cases ────────────────────────────────────────────────
+// -- Real Estate Use Cases ------------------------------------------------
 const REAL_ESTATE_USE_CASES = [
   {
     icon: Home,
@@ -156,7 +156,7 @@ const REAL_ESTATE_USE_CASES = [
   }
 ];
 
-// ── Customer Journey ──────────────────────────────────────────────────────
+// -- Customer Journey ------------------------------------------------------
 const CUSTOMER_JOURNEY = [
   { stage: "Enquiry received (0–5 min)", type: "Rich card", content: "Hero image + USPs + [Book Site Visit] [Call Now] [View Floor Plans]", goal: "Immediate engagement while lead is hottest" },
   { stage: "Site visit booked", type: "Confirmation card", content: "Date, time, address, [Add to Calendar] [Get Directions]", goal: "Reduce no-shows, set expectations" },
@@ -169,7 +169,7 @@ const CUSTOMER_JOURNEY = [
   { stage: "Post-possession", type: "Move-in support", content: "Carousel: utility guides, RWA info, next project teaser", goal: "Generate referrals, seed next purchase" },
 ];
 
-// ── Performance Data ──────────────────────────────────────────────────────
+// -- Performance Data ------------------------------------------------------
 const PERFORMANCE_DATA = [
   { metric: "Open rate", sms: "32%", rcs: "74%", improvement: "2.3x higher" },
   { metric: "Site visit booking rate (from send)", sms: "4–7%", rcs: "15–25%", improvement: "3–4x higher" },
@@ -181,7 +181,7 @@ const PERFORMANCE_DATA = [
   { metric: "Brand recall (7-day post-send)", sms: "18%", rcs: "54%", improvement: "3x higher" },
 ];
 
-// ── Segment Strategy ─────────────────────────────────────────────────────
+// -- Segment Strategy -----------------------------------------------------
 const SEGMENT_STRATEGIES = [
   {
     segment: "Affordable housing (under ₹40 Lakh)",
@@ -245,21 +245,21 @@ const FAQS = [
   }
 ];
 
-/* ── Page ────────────────────────────────────────────────────────────────── */
+/* -- Page ------------------------------------------------------------------ */
 export default function RCSRealEstatePage() {
   return (
     <>
       {/* JSON-LD Schema */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
-      {/* ─────────────────────────────────────────────────────────────────
+      {/* -----------------------------------------------------------------
           HERO — with breadcrumb inside
-      ───────────────────────────────────────────────────────────────── */}
+      ----------------------------------------------------------------- */}
       <section className="relative overflow-hidden mt-2 bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
         <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:40px_40px]" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
-          {/* ── BREADCRUMB INSIDE HERO WITH VISIBLE BACKGROUND ── */}
+          {/* -- BREADCRUMB INSIDE HERO WITH VISIBLE BACKGROUND -- */}
           <nav aria-label="Breadcrumb" className="mb-8">
             <ol className="flex items-center gap-2 text-xs text-white/60 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 w-fit">
               <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
@@ -322,7 +322,7 @@ export default function RCSRealEstatePage() {
         </div>
       </section>
 
-      {/* ── STATS BAR ────────────────────────────────────────────────────── */}
+      {/* -- STATS BAR ------------------------------------------------------ */}
       <section className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 grid grid-cols-1 sm:grid-cols-4 gap-8 text-center">
           {[
@@ -340,7 +340,7 @@ export default function RCSRealEstatePage() {
         </div>
       </section>
 
-      {/* ── WHY REAL ESTATE NEEDS RCS ──────────────────────────────────── */}
+      {/* -- WHY REAL ESTATE NEEDS RCS ------------------------------------ */}
       <section className="py-20 sm:py-28 bg-white" id="why-real-estate">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col lg:flex-row items-center gap-14">
@@ -393,7 +393,7 @@ export default function RCSRealEstatePage() {
         </div>
       </section>
 
-      {/* ── 8 USE CASES ──────────────────────────────────────────────────── */}
+      {/* -- 8 USE CASES ---------------------------------------------------- */}
       <section className="py-20 sm:py-28 bg-gray-50" id="use-cases">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14 space-y-4">
@@ -441,7 +441,7 @@ export default function RCSRealEstatePage() {
         </div>
       </section>
 
-      {/* ── CUSTOMER JOURNEY ────────────────────────────────────────────── */}
+      {/* -- CUSTOMER JOURNEY ---------------------------------------------- */}
       <section className="py-20 sm:py-28 bg-white" id="customer-journey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14 space-y-4">
@@ -475,7 +475,7 @@ export default function RCSRealEstatePage() {
         </div>
       </section>
 
-      {/* ── PERFORMANCE DATA ────────────────────────────────────────────── */}
+      {/* -- PERFORMANCE DATA ---------------------------------------------- */}
       <section className="py-20 sm:py-28 bg-[#0f172a]" id="performance">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14 space-y-4">
@@ -521,7 +521,7 @@ export default function RCSRealEstatePage() {
         </div>
       </section>
 
-      {/* ── SEGMENT STRATEGIES ──────────────────────────────────────────── */}
+      {/* -- SEGMENT STRATEGIES -------------------------------------------- */}
       <section className="py-20 sm:py-28 bg-white" id="segments">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14 space-y-4">
@@ -547,7 +547,7 @@ export default function RCSRealEstatePage() {
         </div>
       </section>
 
-      {/* ── WHY GET CLICK MEDIA ──────────────────────────────────────────── */}
+      {/* -- WHY GET CLICK MEDIA -------------------------------------------- */}
       <section className="py-20 sm:py-28 bg-gray-50" id="why-gcm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col lg:flex-row items-center gap-14">
@@ -592,7 +592,7 @@ export default function RCSRealEstatePage() {
         </div>
       </section>
 
-      {/* ── FAQ ──────────────────────────────────────────────────────────── */}
+      {/* -- FAQ ------------------------------------------------------------ */}
       <section className="py-20 sm:py-28 bg-white" id="faq">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
@@ -622,7 +622,7 @@ export default function RCSRealEstatePage() {
         </div>
       </section>
 
-      {/* ── BOTTOM CTA ───────────────────────────────────────────────────── */}
+      {/* -- BOTTOM CTA ----------------------------------------------------- */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] px-8 sm:px-16 py-16 text-center space-y-6">

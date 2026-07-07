@@ -10,7 +10,7 @@ import {
   Layers, ArrowUpRight, MapPin, PhoneCall, MailOpen, Zap,
 } from "lucide-react";
 
-// ── Social icons with brand colors ───────────────────────────────────────────
+// -- Social icons with brand colors -------------------------------------------
 
 const SOCIALS = [
   {
@@ -76,7 +76,7 @@ const SOCIALS = [
   },
 ];
 
-// ── Navigation data ───────────────────────────────────────────────────────────
+// -- Navigation data -----------------------------------------------------------
 
 const PLATFORM = [
   { label: "WhatsApp Business API",    icon: MessageSquare, href: "#" },
@@ -121,7 +121,7 @@ const METRICS = [
   { value: "150+",   label: "Integrations",         color: "#fb923c" },
 ];
 
-// ── Footer ────────────────────────────────────────────────────────────────────
+// -- Footer --------------------------------------------------------------------
 
 export default function Footer() {
   return (
@@ -141,7 +141,7 @@ export default function Footer() {
         pointerEvents: "none",
       }}/>
 
-      {/* ── Stats strip ──────────────────────────────────────────────────── */}
+      {/* -- Stats strip ---------------------------------------------------- */}
       <div style={{ borderBottom: "1px solid rgba(255,255,255,0.06)", position: "relative" }}>
         <div className="ft-stats" style={{
           maxWidth: 1280, margin: "0 auto", padding: "32px 40px",
@@ -168,13 +168,13 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* ── Main body ─────────────────────────────────────────────────────── */}
+      {/* -- Main body ------------------------------------------------------- */}
       <div className="ft-main" style={{
         maxWidth: 1280, margin: "0 auto", padding: "52px 40px 40px",
         display: "grid", gridTemplateColumns: "260px 1fr", gap: 56, position: "relative",
       }}>
 
-        {/* ── Brand column ── */}
+        {/* -- Brand column -- */}
         <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
           <Link href="/" style={{ display: "inline-flex" }}>
             <Image
@@ -219,7 +219,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* ── Nav columns ── */}
+        {/* -- Nav columns -- */}
         <div className="ft-nav" style={{
           display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 28,
         }}>
@@ -265,7 +265,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* ── Bottom bar ──────────────────────────────────────────────────── */}
+      {/* -- Bottom bar ---------------------------------------------------- */}
       <div style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
         <div style={{
           maxWidth: 1280, margin: "0 auto",
@@ -305,7 +305,7 @@ export default function Footer() {
   );
 }
 
-// ── Sub-components ────────────────────────────────────────────────────────────
+// -- Sub-components ------------------------------------------------------------
 
 function SocialBtn({
   label, color, bg, hoverBg, children,

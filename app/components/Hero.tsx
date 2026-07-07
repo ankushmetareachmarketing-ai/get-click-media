@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
         }
       `}</style>
 
-      {/* ── Content with side shapes ── */}
+      {/* -- Content with side shapes -- */}
       <div className="relative w-full pt-28 sm:pt-32 lg:pt-40 pb-4 sm:pb-6 lg:pb-8">
 
         {/* Left shape — hidden on mobile */}
@@ -121,7 +121,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* ── Dashboard image ── */}
+      {/* -- Dashboard image -- */}
 
       {/* Mobile image — wider + bottom fade shadow */}
       <div className="relative sm:hidden mt-2 overflow-hidden">

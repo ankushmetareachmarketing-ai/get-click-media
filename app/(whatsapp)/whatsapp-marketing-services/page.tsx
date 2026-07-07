@@ -18,7 +18,7 @@ import {
   FileCheck,
 } from "lucide-react";
 
-/* ── SEO Metadata ────────────────────────────────────────────────────────── */
+/* -- SEO Metadata ---------------------------------------------------------- */
 export const metadata: Metadata = {
   title: "WhatsApp Marketing Services in India — Campaigns, Automation & ROI | Get Click Media",
   description:
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
 };
 
-/* ── JSON-LD Schema ──────────────────────────────────────────────────────── */
+/* -- JSON-LD Schema -------------------------------------------------------- */
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -132,7 +132,7 @@ const FAQS = [
   { q: "How does Get Click Media measure WhatsApp marketing performance?", a: "Delivery rate, read rate, CTR per button, conversion rate, revenue per campaign, cost per conversion, and opt-out rate — with monthly reports benchmarked against industry data." },
 ];
 
-/* ── Page ────────────────────────────────────────────────────────────────── */
+/* -- Page ------------------------------------------------------------------ */
 export default function WhatsAppMarketingServicesPage() {
   return (
     <>
@@ -148,7 +148,7 @@ export default function WhatsAppMarketingServicesPage() {
         </ol>
       </nav>
 
-      {/* ── HERO ─────────────────────────────────────────────────────────── */}
+      {/* -- HERO ----------------------------------------------------------- */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
         <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:40px_40px]" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-24">
@@ -199,7 +199,7 @@ export default function WhatsAppMarketingServicesPage() {
         </div>
       </section>
 
-      {/* ── DIRECT ANSWER ────────────────────────────────────────────────── */}
+      {/* -- DIRECT ANSWER -------------------------------------------------- */}
       <section className="py-10 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="rounded-2xl border-l-4 border-[#2563eb] bg-blue-50/60 px-6 py-5">
@@ -216,7 +216,7 @@ export default function WhatsAppMarketingServicesPage() {
         </div>
       </section>
 
-      {/* ── WHY WHATSAPP MARKETING IS DIFFERENT ──────────────────────────── */}
+      {/* -- WHY WHATSAPP MARKETING IS DIFFERENT ---------------------------- */}
       <section className="py-20 sm:py-28 bg-white" id="what-is-whatsapp-marketing">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col lg:flex-row items-center gap-14 mb-14">
@@ -254,7 +254,7 @@ export default function WhatsAppMarketingServicesPage() {
         </div>
       </section>
 
-      {/* ── 3 TYPES ──────────────────────────────────────────────────────── */}
+      {/* -- 3 TYPES -------------------------------------------------------- */}
       <section className="py-20 sm:py-24 bg-gray-50" id="types">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
@@ -292,7 +292,7 @@ export default function WhatsAppMarketingServicesPage() {
         </div>
       </section>
 
-      {/* ── 8 CAMPAIGN TYPES ─────────────────────────────────────────────── */}
+      {/* -- 8 CAMPAIGN TYPES ----------------------------------------------- */}
       <section className="py-20 sm:py-28 bg-[#0f172a]" id="campaigns">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14 space-y-4">
@@ -318,7 +318,7 @@ export default function WhatsAppMarketingServicesPage() {
         </div>
       </section>
 
-      {/* ── LIFECYCLE ────────────────────────────────────────────────────── */}
+      {/* -- LIFECYCLE ------------------------------------------------------ */}
       <section className="py-20 sm:py-28 bg-white" id="lifecycle">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
@@ -354,7 +354,7 @@ export default function WhatsAppMarketingServicesPage() {
         </div>
       </section>
 
-      {/* ── WHAT YOU GET ─────────────────────────────────────────────────── */}
+      {/* -- WHAT YOU GET --------------------------------------------------- */}
       <section className="py-20 sm:py-28 bg-gray-50" id="services">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14 space-y-4">
@@ -379,7 +379,7 @@ export default function WhatsAppMarketingServicesPage() {
         </div>
       </section>
 
-      {/* ── COMPARISON ───────────────────────────────────────────────────── */}
+      {/* -- COMPARISON ----------------------------------------------------- */}
       <section className="py-20 sm:py-24 bg-white" id="comparison">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
@@ -424,7 +424,7 @@ export default function WhatsAppMarketingServicesPage() {
         </div>
       </section>
 
-      {/* ── COMPLIANCE ───────────────────────────────────────────────────── */}
+      {/* -- COMPLIANCE ----------------------------------------------------- */}
       <section className="py-20 sm:py-28 bg-[#0f172a]" id="compliance">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
@@ -476,7 +476,7 @@ export default function WhatsAppMarketingServicesPage() {
         </div>
       </section>
 
-      {/* ── RELATED LINKS ────────────────────────────────────────────────── */}
+      {/* -- RELATED LINKS -------------------------------------------------- */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-6 font-(family-name:--font-syne)">
@@ -505,7 +505,7 @@ export default function WhatsAppMarketingServicesPage() {
         </div>
       </section>
 
-      {/* ── FAQ ──────────────────────────────────────────────────────────── */}
+      {/* -- FAQ ------------------------------------------------------------ */}
       <section className="py-20 sm:py-28 bg-white" id="faq">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
@@ -546,7 +546,7 @@ export default function WhatsAppMarketingServicesPage() {
         </div>
       </section>
 
-      {/* ── BOTTOM CTA ───────────────────────────────────────────────────── */}
+      {/* -- BOTTOM CTA ----------------------------------------------------- */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] px-8 sm:px-16 py-16 text-center space-y-6">

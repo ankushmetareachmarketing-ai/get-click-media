@@ -65,7 +65,7 @@ export default async function CategoryPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* ── Hero ──────────────────────────────────────────────────────────── */}
+      {/* -- Hero ------------------------------------------------------------ */}
       <section className="pt-32 sm:pt-40 pb-12 sm:pb-16">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
           {/* Breadcrumb */}
@@ -120,7 +120,7 @@ export default async function CategoryPage({
         </div>
       </section>
 
-      {/* ── Posts grid ───────────────────────────────────────────────────── */}
+      {/* -- Posts grid ----------------------------------------------------- */}
       <section className="pb-20 pt-8 bg-(--surface-0)">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
           {posts.length === 0 ? (

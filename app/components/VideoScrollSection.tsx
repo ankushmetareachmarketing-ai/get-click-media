@@ -82,7 +82,7 @@ export default function VideoScrollSection() {
 
       ctx = gsap.context(() => {
 
-        /* ── Section header ─────────────────────────────────────────────── */
+        /* -- Section header ----------------------------------------------- */
         if (headerRef.current) {
           const kids = Array.from(headerRef.current.children);
           gsap.fromTo(
@@ -96,7 +96,7 @@ export default function VideoScrollSection() {
           );
         }
 
-        /* ── Per-section animations ─────────────────────────────────────── */
+        /* -- Per-section animations --------------------------------------- */
         rowRefs.current.forEach((row, i) => {
           if (!row) return;
           const isReversed = i % 2 !== 0;
@@ -194,7 +194,7 @@ export default function VideoScrollSection() {
     <section ref={rootRef} data-gsap-own="true" className="py-20 sm:py-28 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
-        {/* ── Section header ────────────────────────────────────────────── */}
+        {/* -- Section header ---------------------------------------------- */}
         <div ref={headerRef} className="text-center mb-16 sm:mb-24 space-y-4">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
             <span className="w-1.5 h-1.5 rounded-full bg-[#2563eb] animate-pulse" />
@@ -212,7 +212,7 @@ export default function VideoScrollSection() {
           </p>
         </div>
 
-        {/* ── Section rows ──────────────────────────────────────────────── */}
+        {/* -- Section rows ------------------------------------------------ */}
         <div className="space-y-24 sm:space-y-36">
           {SECTIONS.map((s, i) => {
             const reversed = i % 2 !== 0;
@@ -223,7 +223,7 @@ export default function VideoScrollSection() {
                 className={`flex flex-col ${reversed ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-10 lg:gap-16`}
               >
 
-                {/* ── Content ──────────────────────────────────────────── */}
+                {/* -- Content -------------------------------------------- */}
                 <div className="vs-content w-full lg:w-[46%] space-y-6">
 
                   {/* Step + tag row */}
@@ -285,7 +285,7 @@ export default function VideoScrollSection() {
                   </button>
                 </div>
 
-                {/* ── Video card ───────────────────────────────────────── */}
+                {/* -- Video card ----------------------------------------- */}
                 <div className="vs-video w-full lg:w-[54%]">
                   <div
                     className="relative rounded-2xl overflow-hidden shadow-2xl"

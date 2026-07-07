@@ -58,7 +58,7 @@ export default function BulkSmsBrandsStrip() {
       <div className="max-w-7xl mx-auto px-5 sm:px-8 py-6 sm:py-8">
         <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10">
 
-          {/* ── Left: stat ── */}
+          {/* -- Left: stat -- */}
           <div className="flex-none sm:border-r sm:border-(--border-subtle) sm:pr-10">
             <div className="flex flex-col sm:flex-row items-center sm:items-center gap-3 sm:gap-5 text-center sm:text-left px-5 py-3 sm:px-0 sm:py-0 rounded-2xl sm:rounded-none bg-linear-to-r from-blue-50 to-indigo-50 sm:bg-none border border-blue-100 sm:border-0">
               <p className="text-[2.75rem] sm:text-[3rem] [font-family:var(--font-syne)] font-extrabold leading-none tracking-tight text-transparent bg-clip-text bg-[linear-gradient(135deg,var(--primary),var(--primary-light))]">
@@ -70,7 +70,7 @@ export default function BulkSmsBrandsStrip() {
             </div>
           </div>
 
-          {/* ── Right: scrolling logo marquee ── */}
+          {/* -- Right: scrolling logo marquee -- */}
           <div className="flex-1 w-full overflow-hidden relative">
             {/* Fade masks */}
             <div

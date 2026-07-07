@@ -13,7 +13,7 @@ export default function GSAPPageAnimations() {
 
       ctx = gsap.context(() => {
 
-        // ── Hero entrance (runs on load, no scroll trigger) ─────────────────
+        // -- Hero entrance (runs on load, no scroll trigger) -----------------
         const hero = document.querySelector<HTMLElement>("section[class*='rounded-2xl']");
         if (hero) {
           const center = hero.querySelector<HTMLElement>('[class*="flex-col"][class*="items-center"]');
@@ -26,7 +26,7 @@ export default function GSAPPageAnimations() {
           }
         }
 
-        // ── Section heading areas on scroll ─────────────────────────────────
+        // -- Section heading areas on scroll ---------------------------------
         // Only targets the badge + h2 + subtitle paragraph group (text-center blocks)
         document
           .querySelectorAll<HTMLElement>("section:not([data-gsap-own]) [class*='text-center']")
@@ -44,7 +44,7 @@ export default function GSAPPageAnimations() {
             );
           });
 
-        // ── Each section's main content block ───────────────────────────────
+        // -- Each section's main content block -------------------------------
         // Animate the whole inner container as one unit — not individual elements
         document
           .querySelectorAll<HTMLElement>("section:not([data-gsap-own]) > div")
