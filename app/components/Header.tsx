@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useModalStore } from "@/store/useModalStore";
 import {
   ChevronDown,
@@ -29,8 +30,18 @@ import {
   X,
   Menu,
   ShieldCheck,
+  Home,
+  MapPin,
 } from "lucide-react";
-import Image from "next/image";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
 
 // --- Types -------------------------------------------------------------------
 
@@ -39,8 +50,6 @@ interface MegaMenuItem {
   title: string;
   description: string;
   href?: string;
-  featured?: boolean;
-  videoLabel?: string;
   color?: string;
   bgColor?: string;
 }
@@ -87,27 +96,96 @@ const navItems: NavItem[] = [
         {
           sectionTitle: "Products",
           items: [
-            { icon: <MessageSquare size={20} />, title: "Communicate", description: "Smart CPaaS platform for seamless, multi-channel messaging", color: "#3b82f6", bgColor: "#eff6ff" },
-            { icon: <Megaphone size={20} />, title: "Advertise", description: "Drive engagement with targeted, personalized ads on WhatsApp", color: "#8b5cf6", bgColor: "#f5f3ff" },
-            { icon: <Bot size={20} />, title: "Commerce", description: "Enable end-to-end commerce experiences within messaging channels", color: "#10b981", bgColor: "#ecfdf5" },
-          ],
-        },
-        {
-          sectionTitle: "Capabilities",
-          items: [
-            { icon: <Sparkles size={20} />, title: "AI Agents", description: "Autonomous AI agents for intelligent automation", color: "#f59e0b", bgColor: "#fffbeb" },
-            { icon: <Zap size={20} />, title: "Flow Builder", description: "Visual workflow builder for complex journeys", color: "#06b6d4", bgColor: "#ecfeff" },
-            { icon: <BarChart2 size={20} />, title: "Analytics", description: "Deep insights across all conversation channels", color: "#6366f1", bgColor: "#eef2ff" },
+            { icon: <MessageSquare size={20} />, title: "Communicate", description: "Smart CPaaS platform for seamless, multi-channel messaging", href: "/whatsapp-business-api", color: "#3b82f6", bgColor: "#eff6ff" },
+            { icon: <Megaphone size={20} />, title: "Advertise", description: "Drive engagement with targeted, personalized ads on WhatsApp", href: "/whatsapp-marketing-services", color: "#8b5cf6", bgColor: "#f5f3ff" },
+            { icon: <Bot size={20} />, title: "Commerce", description: "Enable end-to-end commerce experiences within messaging channels", href: "/whatsapp-click-to-chat", color: "#10b981", bgColor: "#ecfdf5" },
           ],
         },
         {
           sectionTitle: "Channels",
           items: [
-            { icon: <Phone size={20} />, title: "WhatsApp Business", description: "Reach 2B+ users on the world's largest platform", color: "#22c55e", bgColor: "#f0fdf4" },
+            { icon: <Globe size={20} />, title: "WhatsApp Business API", description: "Reach 2B+ users on the world's largest platform", href: "/whatsapp-business-api", color: "#22c55e", bgColor: "#f0fdf4" },
+            { icon: <Video size={20} />, title: "WhatsApp Broadcast", description: "Send high-impact WhatsApp campaigns", href: "/whatsapp-broadcast", color: "#ef4444", bgColor: "#fef2f2" },
+            { icon: <Bot size={20} />, title: "WhatsApp Chatbot", description: "Automate conversations with intelligent bots", href: "/whatsapp-chatbot", color: "#10b981", bgColor: "#ecfdf5" },
+            { icon: <Zap size={20} />, title: "WhatsApp Click-to-Chat", description: "Start chats instantly from any channel", href: "/whatsapp-click-to-chat", color: "#f59e0b", bgColor: "#fffbeb" },
+            { icon: <Sparkles size={20} />, title: "WhatsApp Marketing Services", description: "Grow engagement with campaigns and support", href: "/whatsapp-marketing-services", color: "#06b6d4", bgColor: "#ecfeff" },
+          ],
+        },
+        {
+          sectionTitle: "SMS & Messaging",
+          items: [
             { icon: <Mail size={20} />, title: "Bulk SMS", description: "Pan-India bulk messaging at scale", href: "/bulk-sms-service-provider-india", color: "#3b82f6", bgColor: "#eff6ff" },
             { icon: <ShieldCheck size={20} />, title: "OTP SMS", description: "Sub-second OTP delivery, DND-exempt", href: "/otp-sms-service-provider", color: "#10b981", bgColor: "#ecfdf5" },
             { icon: <Zap size={20} />, title: "Transactional SMS", description: "Critical alerts and service messages", href: "/transactional-sms-service", color: "#f59e0b", bgColor: "#fffbeb" },
-            { icon: <Globe size={20} />, title: "Web & App Chat", description: "Embed live chat on any digital surface", color: "#8b5cf6", bgColor: "#f5f3ff" },
+            { icon: <Globe size={20} />, title: "Web & App Chat", description: "Embed live chat on any digital surface", href: "/whatsapp-chatbot", color: "#8b5cf6", bgColor: "#f5f3ff" },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    label: "WhatsApp",
+    hasMenu: true,
+    sidebarIcon: <MessageSquare size={18} />,
+    sidebarColor: "#22c55e",
+    sidebarBgColor: "#ecfdf5",
+    menu: {
+      sections: [
+        {
+          sectionTitle: "WhatsApp Pages",
+          items: [
+            { icon: <Globe size={20} />, title: "WhatsApp Business API", description: "Official WhatsApp Business API integration", href: "/whatsapp-business-api", color: "#3b82f6", bgColor: "#eff6ff" },
+            { icon: <Globe size={20} />, title: "WhatsApp Business API Provider India", description: "India-focused WhatsApp API provider services", href: "/whatsapp-business-api-provider-india", color: "#8b5cf6", bgColor: "#f5f3ff" },
+            { icon: <Video size={20} />, title: "WhatsApp Broadcast", description: "Send bulk WhatsApp campaigns and updates.", href: "/whatsapp-broadcast", color: "#ef4444", bgColor: "#fef2f2" },
+            { icon: <Bot size={20} />, title: "WhatsApp Chatbot", description: "Automate conversations with intelligent chatbots.", href: "/whatsapp-chatbot", color: "#10b981", bgColor: "#ecfdf5" },
+            { icon: <Zap size={20} />, title: "WhatsApp Click-to-Chat", description: "One-click chat entry from any channel.", href: "/whatsapp-click-to-chat", color: "#f59e0b", bgColor: "#fffbeb" },
+            { icon: <Sparkles size={20} />, title: "WhatsApp Marketing Services", description: "Grow engagement with campaigns and support.", href: "/whatsapp-marketing-services", color: "#06b6d4", bgColor: "#ecfeff" },
+            { icon: <Building2 size={20} />, title: "WhatsApp API Banking", description: "Banking-grade WhatsApp solutions.", href: "/whatsapp-api-banking", color: "#3b82f6", bgColor: "#eff6ff" },
+            { icon: <ShoppingCart size={20} />, title: "WhatsApp API Ecommerce", description: "Commerce solutions for online stores.", href: "/whatsapp-api-ecommerce", color: "#f97316", bgColor: "#fff7ed" },
+            { icon: <BookOpen size={20} />, title: "WhatsApp API Education", description: "Education engagement through WhatsApp.", href: "/whatsapp-api-education", color: "#8b5cf6", bgColor: "#f5f3ff" },
+            { icon: <Users size={20} />, title: "WhatsApp API Healthcare", description: "Secure patient outreach via WhatsApp.", href: "/whatsapp-api-healthcare", color: "#14b8a6", bgColor: "#f0fdfa" },
+            { icon: <Building2 size={20} />, title: "WhatsApp API Real Estate", description: "Real estate lead generation on WhatsApp.", href: "/whatsapp-api-real-estate", color: "#3b82f6", bgColor: "#eff6ff" },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    label: "RCS",
+    hasMenu: true,
+    sidebarIcon: <Globe size={18} />,
+    sidebarColor: "#0ea5e9",
+    sidebarBgColor: "#ecfeff",
+    menu: {
+      sections: [
+        {
+          sectionTitle: "RCS Pages",
+          items: [
+            { icon: <Building2 size={20} />, title: "RCS for Banking", description: "Conversational RCS experiences for finance.", href: "/rcs-for-banking", color: "#3b82f6", bgColor: "#eff6ff" },
+            { icon: <ShoppingCart size={20} />, title: "RCS for Ecommerce", description: "RCS commerce messaging that converts.", href: "/rcs-for-ecommerce", color: "#f97316", bgColor: "#fff7ed" },
+            { icon: <BookOpen size={20} />, title: "RCS for Education", description: "Student engagement through RCS.", href: "/rcs-for-education", color: "#8b5cf6", bgColor: "#f5f3ff" },
+            { icon: <Home size={20} />, title: "RCS for Real Estate", description: "RCS alerts and lead nurturing for property.", href: "/rcs-for-real-estate", color: "#14b8a6", bgColor: "#f0fdfa" },
+            { icon: <MessageSquare size={20} />, title: "RCS Messaging", description: "Rich conversational messaging for brands.", href: "/rcs-messaging", color: "#22c55e", bgColor: "#ecfdf5" },
+            { icon: <MapPin size={20} />, title: "RCS Messaging Delhi Noida", description: "Local RCS services for Delhi and Noida.", href: "/rcs-messaging-delhi-noida", color: "#f59e0b", bgColor: "#fffbeb" },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    label: "Bulk SMS",
+    hasMenu: true,
+    sidebarIcon: <Mail size={18} />,
+    sidebarColor: "#3b82f6",
+    sidebarBgColor: "#eff6ff",
+    menu: {
+      sections: [
+        {
+          sectionTitle: "Bulk SMS Pages",
+          items: [
+            { icon: <Mail size={20} />, title: "Bulk SMS Service Provider India", description: "High-volume SMS campaigns across India.", href: "/bulk-sms-service-provider-india", color: "#3b82f6", bgColor: "#eff6ff" },
+            { icon: <ShieldCheck size={20} />, title: "OTP SMS Service Provider", description: "Fast OTP delivery for secure authentication.", href: "/otp-sms-service-provider", color: "#10b981", bgColor: "#ecfdf5" },
+            { icon: <Zap size={20} />, title: "Transactional SMS Service", description: "Reliable transactional SMS for alerts and OTPs.", href: "/transactional-sms-service", color: "#f59e0b", bgColor: "#fffbeb" },
           ],
         },
       ],
@@ -123,10 +201,10 @@ const navItems: NavItem[] = [
       sections: [
         {
           items: [
-            { icon: <Bot size={20} />, title: "ACE LLM", description: "Purpose-built large language model for CX", color: "#8b5cf6", bgColor: "#f5f3ff" },
-            { icon: <Sparkles size={20} />, title: "AI Copilot", description: "AI-assisted agent productivity tools", color: "#f59e0b", bgColor: "#fffbeb" },
-            { icon: <Layers size={20} />, title: "Generative AI Studio", description: "Build and deploy custom AI models", color: "#ec4899", bgColor: "#fdf2f8" },
-            { icon: <Zap size={20} />, title: "Smart Automation", description: "Intelligent process automation at scale", color: "#06b6d4", bgColor: "#ecfeff" },
+            { icon: <Bot size={20} />, title: "ACE LLM", description: "Purpose-built large language model for CX", href: "/blog", color: "#8b5cf6", bgColor: "#f5f3ff" },
+            { icon: <Sparkles size={20} />, title: "AI Copilot", description: "AI-assisted agent productivity tools", href: "/blog", color: "#f59e0b", bgColor: "#fffbeb" },
+            { icon: <Layers size={20} />, title: "Generative AI Studio", description: "Build and deploy custom AI models", href: "/blog", color: "#ec4899", bgColor: "#fdf2f8" },
+            { icon: <Zap size={20} />, title: "Smart Automation", description: "Intelligent process automation at scale", href: "/blog", color: "#06b6d4", bgColor: "#ecfeff" },
           ],
         },
       ],
@@ -141,19 +219,28 @@ const navItems: NavItem[] = [
     menu: {
       sections: [
         {
-          sectionTitle: "By Industry",
+          sectionTitle: "WhatsApp Solutions",
           items: [
-            { icon: <ShoppingCart size={20} />, title: "Retail & E-commerce", description: "Conversational commerce for modern retail", color: "#f97316", bgColor: "#fff7ed" },
-            { icon: <HeartHandshake size={20} />, title: "Banking & Finance", description: "Secure, compliant customer engagement", color: "#3b82f6", bgColor: "#eff6ff" },
-            { icon: <Building2 size={20} />, title: "Healthcare", description: "Patient communication reimagined", color: "#14b8a6", bgColor: "#f0fdfa" },
+            { icon: <ShoppingCart size={20} />, title: "WhatsApp API Ecommerce", description: "Commerce solutions for online stores.", href: "/whatsapp-api-ecommerce", color: "#f97316", bgColor: "#fff7ed" },
+            { icon: <Building2 size={20} />, title: "WhatsApp API Real Estate", description: "Real estate lead generation on WhatsApp.", href: "/whatsapp-api-real-estate", color: "#3b82f6", bgColor: "#eff6ff" },
+            { icon: <BookOpen size={20} />, title: "WhatsApp API Education", description: "Education engagement through WhatsApp.", href: "/whatsapp-api-education", color: "#14b8a6", bgColor: "#f0fdfa" },
           ],
         },
         {
-          sectionTitle: "By Use Case",
+          sectionTitle: "RCS Solutions",
           items: [
-            { icon: <Users size={20} />, title: "Customer Support", description: "Deflect tickets, delight customers", color: "#6366f1", bgColor: "#eef2ff" },
-            { icon: <Star size={20} />, title: "Marketing & Campaigns", description: "Personalised campaigns at scale", color: "#f59e0b", bgColor: "#fffbeb" },
-            { icon: <Briefcase size={20} />, title: "Sales Enablement", description: "Conversational selling on every channel", color: "#22c55e", bgColor: "#f0fdf4" },
+            { icon: <Building2 size={20} />, title: "RCS for Banking", description: "Conversational RCS experiences for finance.", href: "/rcs-for-banking", color: "#3b82f6", bgColor: "#eff6ff" },
+            { icon: <ShoppingCart size={20} />, title: "RCS for Ecommerce", description: "RCS commerce messaging that converts.", href: "/rcs-for-ecommerce", color: "#f97316", bgColor: "#fff7ed" },
+            { icon: <BookOpen size={20} />, title: "RCS for Education", description: "Student engagement through RCS.", href: "/rcs-for-education", color: "#8b5cf6", bgColor: "#f5f3ff" },
+            { icon: <Building2 size={20} />, title: "RCS for Real Estate", description: "RCS alerts and lead nurturing for property.", href: "/rcs-for-real-estate", color: "#14b8a6", bgColor: "#f0fdfa" },
+          ],
+        },
+        {
+          sectionTitle: "SMS Solutions",
+          items: [
+            { icon: <Mail size={20} />, title: "Bulk SMS Service Provider India", description: "High-volume SMS campaigns across India.", href: "/bulk-sms-service-provider-india", color: "#3b82f6", bgColor: "#eff6ff" },
+            { icon: <ShieldCheck size={20} />, title: "OTP SMS Service Provider", description: "Fast OTP delivery for secure authentication.", href: "/otp-sms-service-provider", color: "#10b981", bgColor: "#ecfdf5" },
+            { icon: <Zap size={20} />, title: "Transactional SMS Service", description: "Reliable transactional SMS for alerts and OTPs.", href: "/transactional-sms-service", color: "#f59e0b", bgColor: "#fffbeb" },
           ],
         },
       ],
@@ -170,9 +257,9 @@ const navItems: NavItem[] = [
         {
           items: [
             { icon: <BookOpen size={20} />, title: "Blog", description: "Latest insights and product updates", href: "/blog", color: "#3b82f6", bgColor: "#eff6ff" },
-            { icon: <FileText size={20} />, title: "Whitepapers", description: "In-depth research and guides", color: "#8b5cf6", bgColor: "#f5f3ff" },
-            { icon: <Video size={20} />, title: "Webinars", description: "On-demand and upcoming live events", color: "#ef4444", bgColor: "#fef2f2" },
-            { icon: <Award size={20} />, title: "Case Studies", description: "Real results from real customers", color: "#f59e0b", bgColor: "#fffbeb" },
+            { icon: <FileText size={20} />, title: "Whitepapers", description: "In-depth research and guides", href: "/blog", color: "#8b5cf6", bgColor: "#f5f3ff" },
+            { icon: <Video size={20} />, title: "Webinars", description: "On-demand and upcoming live events", href: "/blog", color: "#ef4444", bgColor: "#fef2f2" },
+            { icon: <Award size={20} />, title: "Case Studies", description: "Real results from real customers", href: "/blog", color: "#f59e0b", bgColor: "#fffbeb" },
           ],
         },
       ],
@@ -188,10 +275,10 @@ const navItems: NavItem[] = [
       sections: [
         {
           items: [
-            { icon: <Building2 size={20} />, title: "About Us", description: "Our story, mission, and team", color: "#3b82f6", bgColor: "#eff6ff" },
-            { icon: <Users size={20} />, title: "Careers", description: "Join the team building the future of CX", color: "#22c55e", bgColor: "#f0fdf4" },
-            { icon: <Globe size={20} />, title: "Newsroom", description: "Press releases and media resources", color: "#6366f1", bgColor: "#eef2ff" },
-            { icon: <HeartHandshake size={20} />, title: "Contact", description: "Get in touch with our team", color: "#ec4899", bgColor: "#fdf2f8" },
+            { icon: <Building2 size={20} />, title: "About Us", description: "Our story, mission, and team", href: "/", color: "#3b82f6", bgColor: "#eff6ff" },
+            { icon: <Users size={20} />, title: "Careers", description: "Join the team building the future of CX", href: "/", color: "#22c55e", bgColor: "#f0fdf4" },
+            { icon: <Globe size={20} />, title: "Newsroom", description: "Press releases and media resources", href: "/", color: "#6366f1", bgColor: "#eef2ff" },
+            { icon: <HeartHandshake size={20} />, title: "Contact", description: "Get in touch with our team", href: "/", color: "#ec4899", bgColor: "#fdf2f8" },
           ],
         },
       ],
@@ -199,80 +286,54 @@ const navItems: NavItem[] = [
   },
 ];
 
+// --- Mega menu content (renders inside shadcn's NavigationMenuContent) --------
 
-
-// --- MegaMenu -----------------------------------------------------------------
-
-interface MegaMenuProps {
-  menu: NavItem["menu"] | undefined;
-  isOpen: boolean;
-}
-
-const MegaMenu: React.FC<MegaMenuProps> = ({ menu, isOpen }) => {
-  if (!menu) return null;
-
+const MegaMenuContent: React.FC<{ menu: NonNullable<NavItem["menu"]> }> = ({ menu }) => {
   return (
     <div
-      className={`w-full transition-all duration-200 ease-out ${
-        isOpen
-          ? "opacity-100 translate-y-0 pointer-events-auto"
-          : "opacity-0 -translate-y-2 pointer-events-none"
-      }`}
+      className="grid p-3 w-[820px] max-w-[92vw] cursor-pointer"
+      style={{ gridTemplateColumns: `repeat(${menu.sections.length}, 1fr)` }}
     >
-      {/* Arrow tip */}
-      <div className="flex justify-start pl-10">
-        <div className="w-3 h-3 bg-white rotate-45 -mb-1.5 z-10 relative border-l border-t border-gray-100 shadow-sm" />
-      </div>
-
-      <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-        <div
-          className="grid p-3"
-          style={{ gridTemplateColumns: `repeat(${menu.sections.length}, 1fr)` }}
-        >
-          {menu.sections.map((section, si) => (
-            <div key={si} className={si > 0 ? "border-l border-gray-50 pl-2" : ""}>
-              {section.sectionTitle && (
-                <p className="text-[9px] font-bold uppercase tracking-widest text-gray-400 px-3 pt-3 pb-2">
-                  {section.sectionTitle}
-                </p>
-              )}
-              <div className="flex flex-col gap-0.5 pb-2">
-                {section.items.map((item, ii) => (
-                  <a
-                    key={ii}
-                    href={item.href ?? "#"}
-                    className="group flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-gray-50 transition-all duration-150 cursor-pointer"
+      {menu.sections.map((section, si) => (
+        <div key={si} className={cn(si > 0 && "border-l border-gray-50 pl-2")}>
+          {section.sectionTitle && (
+            <p className="text-[9px] font-bold uppercase tracking-widest text-gray-400 px-3 pt-3 pb-2">
+              {section.sectionTitle}
+            </p>
+          )}
+          <div className="flex flex-col gap-0.5 pb-2">
+            {section.items.map((item, ii) => (
+              <NavigationMenuLink key={ii} asChild>
+                <Link
+                  href={item.href ?? "#"}
+                  className="group flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-gray-50 transition-all duration-150 cursor-pointer"
+                >
+                  <span
+                    className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-all duration-200 group-hover:scale-110 group-hover:shadow-md"
+                    style={{ background: item.bgColor, color: item.color }}
                   >
-                    {/* Colored icon — highlights on hover */}
-                    <span
-                      className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-all duration-200 group-hover:scale-110 group-hover:shadow-md"
-                      style={{ background: item.bgColor, color: item.color }}
-                    >
-                      {item.icon}
-                    </span>
+                    {item.icon}
+                  </span>
 
-                    {/* Title + description */}
-                    <div className="flex-1 min-w-0">
-                      <p className="text-[13px] font-semibold text-gray-700 group-hover:text-gray-900 transition-colors leading-tight">
-                        {item.title}
-                      </p>
-                      <p className="text-[11px] text-gray-400 leading-snug mt-0.5 truncate">
-                        {item.description}
-                      </p>
-                    </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[13px] font-semibold text-gray-700 group-hover:text-gray-900 transition-colors leading-tight">
+                      {item.title}
+                    </p>
+                    <p className="text-[11px] text-gray-400 leading-snug mt-0.5 truncate">
+                      {item.description}
+                    </p>
+                  </div>
 
-                    {/* Animated arrow */}
-                    <ChevronRight
-                      size={12}
-                      className="shrink-0 text-gray-300 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150"
-                    />
-                  </a>
-                ))}
-              </div>
-            </div>
-          ))}
+                  <ChevronRight
+                    size={12}
+                    className="shrink-0 text-gray-300 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150"
+                  />
+                </Link>
+              </NavigationMenuLink>
+            ))}
+          </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 };
@@ -281,49 +342,15 @@ const MegaMenu: React.FC<MegaMenuProps> = ({ menu, isOpen }) => {
 
 const Header: React.FC = () => {
   const { openModal } = useModalStore();
-  const [activeMenu, setActiveMenu] = useState<string | null>(null);
-  const [lastActiveMenu, setLastActiveMenu] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
-  const headerRef = useRef<HTMLElement>(null);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  const activeNavItem = navItems.find((item) => item.label === activeMenu);
-  // Keep last menu in state so exit animation can play before menu disappears
-  const displayNavItem = navItems.find((item) => item.label === (activeMenu ?? lastActiveMenu));
-
-  const openMenu = (label: string) => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    setActiveMenu(label);
-    setLastActiveMenu(label);
-  };
-
-  const closeMenu = () => {
-    timeoutRef.current = setTimeout(() => setActiveMenu(null), 120);
-  };
-
-  const stayOpen = () => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-  };
-
-  useEffect(() => {
-    const handleClick = (e: MouseEvent) => {
-      if (headerRef.current && !headerRef.current.contains(e.target as Node)) {
-        setActiveMenu(null);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClick);
-    return () => document.removeEventListener("mousedown", handleClick);
-  }, []);
 
   return (
     <>
-      <header ref={headerRef} className="fixed w-full top-2 z-9999">
-
+      <header className="fixed w-full top-2 z-[9999]" style={{ zIndex: 9999 }}>
         <div className="bg-white shadow-sm py-1 sm:py-2 rounded-full w-[95%] sm:w-[80%] mx-auto mt-3 relative">
           <div className="max-w-screen-xl mx-auto px-4 sm:px-6 flex items-center h-12 sm:h-16 gap-4 sm:gap-8 relative">
-            <Link href="/" className="flex items-center gap-2 flex-shrink-0">
+            <Link href="/" className="flex items-center gap-2 flex-shrink-0 cursor-pointer">
               <Image
                 src="/images/gcm-logo.png"
                 alt="Logo"
@@ -333,36 +360,61 @@ const Header: React.FC = () => {
               />
             </Link>
 
-            <nav
-              className="hidden lg:flex items-center gap-1 flex-1"
-              onMouseLeave={closeMenu}
+            {/* Desktop nav — fully driven by shadcn's NavigationMenu primitives.
+                viewport={true} makes the component render its own internal
+                viewport automatically — do NOT add a second one manually,
+                that causes duplicated/overlapping panels. */}
+            <NavigationMenu
+              viewport={true}
+              className={cn(
+                "hidden lg:flex relative max-w-none flex-1 items-center justify-start",
+                // style the auto-injected viewport (the floating panel) directly
+                "[&_[data-slot=navigation-menu-viewport]]:!bg-white",
+                "[&_[data-slot=navigation-menu-viewport]]:!rounded-2xl",
+                "[&_[data-slot=navigation-menu-viewport]]:!border",
+                "[&_[data-slot=navigation-menu-viewport]]:!border-gray-100",
+                "[&_[data-slot=navigation-menu-viewport]]:!shadow-xl",
+                "[&_[data-slot=navigation-menu-viewport]]:!mt-2"
+              )}
             >
-              {navItems.map((item) => (
-                <div key={item.label} className="relative">
-                  <button
-                    className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150 cursor-pointer ${
-                      activeMenu === item.label
-                        ? "text-[color:var(--primary)] bg-blue-50"
-                        : "text-gray-700 hover:text-[color:var(--primary)] hover:bg-gray-50"
-                    }`}
-                    onMouseEnter={() => item.hasMenu && openMenu(item.label)}
-                  >
-                    {item.label}
-                    {item.hasMenu && (
-                      <ChevronDown
-                        size={14}
-                        className={`transition-transform duration-200 ${
-                          activeMenu === item.label ? "rotate-180" : ""
-                        }`}
-                      />
+              <NavigationMenuList className="gap-1">
+                {navItems.map((item) => (
+                  <NavigationMenuItem key={item.label}>
+                    {item.hasMenu && item.menu ? (
+                      <>
+                        <NavigationMenuTrigger
+                          className={cn(
+                            "px-3 py-2 rounded-lg text-sm font-medium bg-transparent cursor-pointer",
+                            "text-gray-700 hover:text-[color:var(--primary)] hover:bg-gray-50",
+                            "data-[state=open]:text-[color:var(--primary)] data-[state=open]:bg-blue-50"
+                          )}
+                        >
+                          {item.label}
+                        </NavigationMenuTrigger>
+                        <NavigationMenuContent>
+                          <MegaMenuContent menu={item.menu} />
+                        </NavigationMenuContent>
+                      </>
+                    ) : (
+                      <NavigationMenuLink asChild>
+                        <Link
+                          href="#"
+                          className="px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-[color:var(--primary)] hover:bg-gray-50 cursor-pointer"
+                        >
+                          {item.label}
+                        </Link>
+                      </NavigationMenuLink>
                     )}
-                  </button>
-                </div>
-              ))}
-            </nav>
+                  </NavigationMenuItem>
+                ))}
+              </NavigationMenuList>
+            </NavigationMenu>
 
             <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
-              <button onClick={openModal} className="px-6 cursor-pointer py-3 rounded-full bg-[linear-gradient(135deg,var(--primary),var(--primary-light))] text-white text-[16px] font-bold shadow-md hover:shadow-lg hover:scale-105 transition-all flex items-center gap-2">
+              <button
+                onClick={openModal}
+                className="px-6 cursor-pointer py-3 rounded-full bg-[linear-gradient(135deg,var(--primary),var(--primary-light))] text-white text-[16px] font-bold shadow-md hover:shadow-lg hover:scale-105 transition-all flex items-center gap-2"
+              >
                 Request a demo
                 <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[color:var(--primary)] shadow-sm">
                   <ChevronRight size={15} />
@@ -377,19 +429,7 @@ const Header: React.FC = () => {
               {mobileOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
-
-          {/* Mega menu aligned to parent header width */}
-          <div
-            onMouseEnter={stayOpen}
-            onMouseLeave={closeMenu}
-            className="absolute left-0 right-0 top-full mt-2 z-9999 px-6"
-          >
-            <div className="mx-auto max-w-screen-xl">
-              <MegaMenu menu={displayNavItem?.menu} isOpen={!!activeNavItem} />
-            </div>
-          </div>
         </div>
-
       </header>
 
       {/* Blurry overlay */}
@@ -404,7 +444,6 @@ const Header: React.FC = () => {
         className={`lg:hidden fixed top-0 left-0 h-full w-72 flex flex-col transition-transform duration-300 ease-in-out ${mobileOpen ? "translate-x-0" : "-translate-x-full"}`}
         style={{ zIndex: 9999, background: "#fff", boxShadow: "4px 0 32px rgba(0,0,0,0.13)" }}
       >
-        {/* Gradient header */}
         <div
           className="px-4 pt-5 pb-4 flex items-center justify-between shrink-0"
           style={{ background: "linear-gradient(135deg,#6366f1 0%,#8b5cf6 60%,#a78bfa 100%)" }}
@@ -419,14 +458,13 @@ const Header: React.FC = () => {
             </div>
           </div>
           <button
-            className="w-8 h-8 rounded-full bg-white/15 hover:bg-white/25 flex items-center justify-center transition-colors"
+            className="w-8 h-8 rounded-full bg-white/15 hover:bg-white/25 flex items-center justify-center transition-colors cursor-pointer"
             onClick={() => setMobileOpen(false)}
           >
             <X size={16} className="text-white" />
           </button>
         </div>
 
-        {/* Nav items */}
         <nav className="flex-1 overflow-y-auto py-3 px-2.5 flex flex-col gap-0.5">
           {navItems.map((item) => {
             const isExpanded = mobileExpanded === item.label;
@@ -436,7 +474,6 @@ const Header: React.FC = () => {
                   className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-2xl transition-all duration-200 cursor-pointer ${isExpanded ? "bg-gray-50" : "hover:bg-gray-50"}`}
                   onClick={() => setMobileExpanded(isExpanded ? null : item.label)}
                 >
-                  {/* Colored icon */}
                   <span
                     className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 shadow-sm"
                     style={{ background: item.sidebarBgColor, color: item.sidebarColor }}
@@ -470,10 +507,10 @@ const Header: React.FC = () => {
                           </p>
                         )}
                         {section.items.map((subItem, ii) => (
-                          <a
+                          <Link
                             key={ii}
                             href={subItem.href ?? "#"}
-                            className="flex items-center gap-2.5 px-3 py-2 hover:bg-gray-50 transition-colors group"
+                            className="flex items-center gap-2.5 px-3 py-2 hover:bg-gray-50 transition-colors group cursor-pointer"
                             onClick={() => setMobileOpen(false)}
                           >
                             <span
@@ -486,7 +523,7 @@ const Header: React.FC = () => {
                               <p className="text-xs font-semibold text-gray-700 group-hover:text-gray-900 leading-tight">{subItem.title}</p>
                               <p className="text-[10px] text-gray-400 leading-snug truncate">{subItem.description}</p>
                             </div>
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     ))}
@@ -497,11 +534,10 @@ const Header: React.FC = () => {
           })}
         </nav>
 
-        {/* Footer CTA */}
         <div className="p-3 shrink-0 border-t border-gray-100 space-y-2">
           <button
             onClick={() => { openModal(); setMobileOpen(false); }}
-            className="w-full px-4 py-3 rounded-2xl text-white text-sm font-bold shadow-lg flex items-center justify-center gap-2 transition-all hover:scale-[1.02]"
+            className="w-full px-4 py-3 rounded-2xl text-white text-sm font-bold shadow-lg flex items-center justify-center gap-2 transition-all hover:scale-[1.02] cursor-pointer"
             style={{ background: "linear-gradient(135deg,#6366f1,#8b5cf6)" }}
           >
             <Sparkles size={14} />

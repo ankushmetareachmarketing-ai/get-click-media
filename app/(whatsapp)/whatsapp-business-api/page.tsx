@@ -637,9 +637,11 @@ export default function WhatsAppBusinessAPIPage() {
                 One shared inbox for every WhatsApp conversation
               </h2>
               <p className="text-gray-500 text-base leading-relaxed">
-                Every inbound message — from a chatbot escalation, a broadcast reply, or a direct customer
-                query — lands in a single team inbox. Agents see full conversation history, assign chats,
-                and reply with templates or free text, all synced back to your CRM in real time.
+                Every inbound message — from a chatbot escalation, a broadcast
+                reply, or a direct customer query — lands in a single team
+                inbox. Agents see full conversation history, assign chats, and
+                reply with templates or free text, all synced back to your CRM
+                in real time.
               </p>
               <ul className="space-y-2 pt-2">
                 {[
@@ -648,7 +650,10 @@ export default function WhatsAppBusinessAPIPage() {
                   "Quick-reply & canned responses",
                   "Full chat history synced to CRM",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-gray-700">
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 text-sm text-gray-700"
+                  >
                     <CheckCheck className="w-4 h-4 text-[#2563eb] shrink-0 mt-0.5" />
                     {item}
                   </li>
