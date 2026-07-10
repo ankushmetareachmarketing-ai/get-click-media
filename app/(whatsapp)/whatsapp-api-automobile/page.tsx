@@ -215,34 +215,60 @@ export default function WhatsAppAPIAutomobilePage() {
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
         <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:40px_40px]" />
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 py-20 sm:py-24 text-center space-y-6">
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-semibold tracking-wider uppercase backdrop-blur-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
-            Automobile WhatsApp API
-          </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight font-(family-name:--font-syne)">
-            WhatsApp Business API for Automobile Dealers<br />
-            <span className="text-[#38bdf8]">Test Drive Booking, Service Reminders and Lead Nurture India</span>
-          </h1>
-          <p className="text-white/70 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-            WhatsApp Business API for automobile dealers and OEMs enables automated test drive booking,
-            service appointment reminders, EMI pre-approval alerts, new model launch campaigns, and
-            post-sales relationship management. Get Click Media integrates WhatsApp with DMS platforms
-            and automotive CRMs — tripling test drive conversions and reducing service no-shows by 40%.
-          </p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <Link href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#1e3a8a] text-sm font-bold shadow-lg hover:scale-105 transition-transform duration-200">
-              Book a Demo <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link href="/whatsapp-api-pricing-india"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-200">
-              View Pricing
-            </Link>
-            <Link href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-200">
-              Start WhatsApp Onboarding
-            </Link>
+
+        <div className="relative max-w-7xl mx-auto px-6 py-16 lg:py-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+
+            {/* Left Content */}
+            <div>
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-semibold tracking-wider uppercase backdrop-blur-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
+                Automobile WhatsApp API
+              </span>
+
+              <h1 className="mt-5 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight font-(family-name:--font-syne)">
+                WhatsApp Business API <br />
+                for Automobile Dealers
+              </h1>
+
+              <p className="mt-5 text-white/75 text-base sm:text-lg leading-relaxed max-w-xl">
+                Automate test drive bookings, service reminders, EMI updates, and customer support with WhatsApp Business API integrated with your CRM or DMS.
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#1e3a8a] text-sm font-bold shadow-lg hover:scale-105 transition-transform"
+                >
+                  Book a Demo
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+
+                <Link
+                  href="/whatsapp-api-pricing-india"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors"
+                >
+                  View Pricing
+                </Link>
+
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors"
+                >
+                  Start Onboarding
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Image */}
+            <div className="flex justify-center lg:justify-end">
+              <img
+                src="/images/whatsapp/automobile/whatsapp-api-for-automotive.webp"
+                alt="WhatsApp Business API for Automobile Dealers"
+                className="w-full max-w-lg"
+              />
+            </div>
+
           </div>
         </div>
       </section>
@@ -260,7 +286,23 @@ export default function WhatsAppAPIAutomobilePage() {
             </p>
           </div>
 
-          <div className="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-100">
+          <div className="mt-6 flex flex-wrap gap-3 justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#2563eb] text-white text-sm font-semibold hover:bg-[#1d4ed8] transition-colors"
+            >
+              Get Started Now
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/whatsapp-api-pricing-india"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border-2 border-gray-200 text-gray-700 text-sm font-semibold hover:border-[#2563eb] hover:text-[#2563eb] transition-colors"
+            >
+              View Pricing
+            </Link>
+          </div>
+
+          <div className="mt-6 p-6 bg-blue-50 rounded-xl border border-blue-100">
             <p className="text-sm text-blue-800 leading-relaxed">
               <AlertTriangle className="w-4 h-4 inline mr-2 text-blue-500" />
               India is the <strong>third-largest automobile market</strong> globally, selling 4+ million
@@ -280,7 +322,7 @@ export default function WhatsAppAPIAutomobilePage() {
       </section>
 
       {/* ── STATS BAR ────────────────────────────────────────────────────── */}
-      <section className="bg-white border-b border-gray-100">
+      <section className="bg-gray-50 border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
           {[
             { value: "3x", label: "Test drive booking rate vs phone follow-up" },
@@ -293,6 +335,15 @@ export default function WhatsAppAPIAutomobilePage() {
               <p className="text-sm font-medium text-gray-600">{s.label}</p>
             </div>
           ))}
+        </div>
+        <div className="pb-6 text-center">
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 text-sm text-[#2563eb] font-semibold hover:underline"
+          >
+            Get these results for your dealership
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </section>
 
@@ -331,11 +382,20 @@ export default function WhatsAppAPIAutomobilePage() {
                   <span>Post-service CSAT and Google review collection</span>
                 </li>
               </ul>
+              <div className="pt-2">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#2563eb] text-white text-sm font-semibold hover:bg-[#1d4ed8] transition-colors"
+                >
+                  Schedule a Demo
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
             <div className="w-full lg:w-[50%] shrink-0">
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+              <div className="relative w-full">
                 <Image
-                  src="/images/whatsapp/automobile-dashboard.webp"
+                  src="/images/whatsapp/automobile/automobile-dashboard.png"
                   alt="WhatsApp API Automobile dashboard — test drive booking, service reminders, model launch campaigns, and finance pre-approval"
                   width={700}
                   height={500}
@@ -348,7 +408,7 @@ export default function WhatsAppAPIAutomobilePage() {
       </section>
 
       {/* ── WHY AUTOMOBILE NEEDS WHATSAPP ────────────────────────────────── */}
-      <section className="py-20 sm:py-24 bg-white" id="why-automobile">
+      <section className="py-20 sm:py-24 bg-gray-50" id="why-automobile">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
@@ -379,11 +439,20 @@ export default function WhatsAppAPIAutomobilePage() {
               </p>
             </div>
           </div>
+          <div className="mt-8 text-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#2563eb] text-white text-sm font-semibold hover:bg-[#1d4ed8] transition-colors"
+            >
+              Transform Your Dealership
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* ── USE CASES ────────────────────────────────────────────────────── */}
-      <section className="py-20 sm:py-28 bg-gray-50" id="use-cases">
+      <section className="py-20 sm:py-28 bg-white" id="use-cases">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14 space-y-4">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
@@ -396,9 +465,9 @@ export default function WhatsAppAPIAutomobilePage() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {USE_CASES.map((uc) => (
-              <div key={uc.title} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow space-y-3">
+              <div key={uc.title} className="bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-[#2563eb] hover:shadow-md transition-all space-y-3">
                 <div className="flex items-center gap-3">
-                  <span className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
+                  <span className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
                     <uc.icon className="w-4 h-4 text-[#2563eb]" />
                   </span>
                   <h3 className="text-base font-bold text-gray-900 font-(family-name:--font-syne)">{uc.title}</h3>
@@ -411,11 +480,21 @@ export default function WhatsAppAPIAutomobilePage() {
               </div>
             ))}
           </div>
+
+          <div className="mt-10 text-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#2563eb] text-white text-sm font-semibold hover:bg-[#1d4ed8] transition-colors"
+            >
+              Implement These Automations
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* ── IMAGE SECTION: WhatsApp Test Drive Preview ───────────────────── */}
-      <section className="py-16 bg-white border-t border-gray-100">
+      <section className="py-16 bg-gray-50 border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
             <div className="flex-1 space-y-4">
@@ -449,11 +528,20 @@ export default function WhatsAppAPIAutomobilePage() {
                   <span>Dealer location and directions via Google Maps</span>
                 </li>
               </ul>
+              <div className="pt-2">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#2563eb] text-white text-sm font-semibold hover:bg-[#1d4ed8] transition-colors"
+                >
+                  Start Automating Test Drives
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
             <div className="w-full lg:w-[40%] shrink-0">
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-xl border border-gray-200 max-w-sm mx-auto">
+              <div className="relative w-full">
                 <Image
-                  src="/images/whatsapp/automobile-test-drive.webp"
+                  src="/images/whatsapp/automobile/automobile-test-drive.webp"
                   alt="WhatsApp test drive booking preview — model brochure, variant comparison, and one-tap test drive booking"
                   width={400}
                   height={700}
@@ -466,7 +554,7 @@ export default function WhatsAppAPIAutomobilePage() {
       </section>
 
       {/* ── PERFORMANCE BENCHMARKS ──────────────────────────────────────── */}
-      <section className="py-20 sm:py-28 bg-gray-50" id="performance">
+      <section className="py-20 sm:py-28 bg-white" id="performance">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
@@ -498,21 +586,30 @@ export default function WhatsAppAPIAutomobilePage() {
               </tbody>
             </table>
           </div>
+          <div className="mt-8 text-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#2563eb] text-white text-sm font-semibold hover:bg-[#1d4ed8] transition-colors"
+            >
+              Get These Results for Your Dealership
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* ── IMAGE SECTION: DMS Integration ──────────────────────────────── */}
-      <section className="py-16 bg-white border-b border-gray-100">
+      <section className="py-16 bg-gray-50 border-y border-gray-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="w-full lg:w-[50%] shrink-0">
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+              <div className="relative w-full">
                 <Image
-                  src="/images/whatsapp/automobile-dms-integration.webp"
+                  src="/images/whatsapp/automobile/automobile-dms-integration.webp"
                   alt="WhatsApp API DMS integration — Automate, CDK Global for automobile dealer management"
                   width={700}
                   height={450}
-                  className="w-full h-auto"
+                  className="w-full h-auto object-cover"
                 />
               </div>
             </div>
@@ -531,7 +628,7 @@ export default function WhatsAppAPIAutomobilePage() {
               </p>
               <div className="flex flex-wrap gap-3">
                 {["Automate", "CDK Global", "Custom DMS", "CarDekho leads", "CarWale leads", "Service triggers"].map((item) => (
-                  <span key={item} className="px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-lg text-xs font-medium text-gray-700">
+                  <span key={item} className="px-3 py-1.5 bg-gray-100 border border-gray-200 rounded-lg text-xs font-medium text-gray-700">
                     {item}
                   </span>
                 ))}
@@ -539,6 +636,15 @@ export default function WhatsAppAPIAutomobilePage() {
               <p className="text-xs text-gray-400 mt-2">
                 Setup takes 3-5 days after WhatsApp API onboarding is complete.
               </p>
+              <div className="pt-2">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#2563eb] text-white text-sm font-semibold hover:bg-[#1d4ed8] transition-colors"
+                >
+                  Start DMS Integration
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -566,11 +672,20 @@ export default function WhatsAppAPIAutomobilePage() {
               </div>
             ))}
           </div>
+          <div className="mt-12 text-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#0f172a] text-sm font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Explore All Capabilities
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* ── FAQ ──────────────────────────────────────────────────────────── */}
-      <section className="py-20 sm:py-28 bg-white" id="faq">
+      <section className="py-20 sm:py-28 bg-gray-50" id="faq">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
@@ -584,7 +699,7 @@ export default function WhatsAppAPIAutomobilePage() {
             {FAQS.map((faq, i) => (
               <details
                 key={i}
-                className="group rounded-2xl bg-gray-50 border border-gray-100 shadow-sm open:shadow-md transition-shadow"
+                className="group rounded-2xl bg-white border border-gray-200 shadow-sm open:shadow-md transition-shadow"
               >
                 <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
                   <span className="text-sm font-semibold text-gray-900 leading-snug">{faq.q}</span>
@@ -596,11 +711,20 @@ export default function WhatsAppAPIAutomobilePage() {
               </details>
             ))}
           </div>
+          <div className="mt-8 text-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#2563eb] text-white text-sm font-semibold hover:bg-[#1d4ed8] transition-colors"
+            >
+              Still Have Questions? Contact Us
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* ── RELATED LINKS ────────────────────────────────────────────────── */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-6 font-(family-name:--font-syne)">
             Related WhatsApp Business API resources
@@ -619,16 +743,25 @@ export default function WhatsAppAPIAutomobilePage() {
               { label: "WhatsApp API for Banking", href: "/whatsapp-api-banking" },
             ].map(l => (
               <Link key={l.href} href={l.href}
-                className="px-4 py-2 rounded-full bg-white border border-gray-200 text-sm font-medium text-gray-600 hover:border-[#2563eb] hover:text-[#2563eb] transition-colors">
+                className="px-4 py-2 rounded-full bg-gray-50 border border-gray-200 text-sm font-medium text-gray-600 hover:border-[#2563eb] hover:text-[#2563eb] hover:bg-white transition-colors">
                 {l.label}
               </Link>
             ))}
+          </div>
+          <div className="mt-6 text-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 text-sm text-[#2563eb] font-semibold hover:underline"
+            >
+              Need help choosing the right solution?
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
 
       {/* ── BOTTOM CTA ───────────────────────────────────────────────────── */}
-      <section className="py-20 bg-white">
+      <section className="py-20 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] px-8 sm:px-16 py-16 text-center space-y-6">
             <div className="absolute inset-0 opacity-[0.06] [background-image:linear-gradient(rgba(255,255,255,0.4)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.4)_1px,transparent_1px)] [background-size:32px_32px]" />

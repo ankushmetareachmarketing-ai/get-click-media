@@ -25,6 +25,7 @@ import {
   Store,
   Car,
 } from "lucide-react";
+import HeroLeadForm from "@/app/components/HeroLeadForm";
 
 /* -- SEO Metadata ---------------------------------------------------------- */
 export const metadata: Metadata = {
@@ -514,10 +515,23 @@ export default function WhatsAppBusinessAPIPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1 text-center lg:text-left space-y-6">
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-semibold tracking-wider uppercase backdrop-blur-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
-                Official Meta Business Solution Provider
-              </span>
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-semibold tracking-wider backdrop-blur-sm">
+                <Link href="/" className="hover:text-primary transition-colors">
+                  Home
+                </Link>
+
+                <span className="text-white/60">/</span>
+
+                <Link href="/products" className="hover:text-primary transition-colors">
+                  Products
+                </Link>
+
+                <span className="text-white/60">/</span>
+
+                <span className="text-white/90">
+                  WhatsApp Business API
+                </span>
+              </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight font-(family-name:--font-syne)">
                 WhatsApp Business API
@@ -563,10 +577,10 @@ export default function WhatsAppBusinessAPIPage() {
             <div className="w-full lg:w-[50%] shrink-0">
               <div className="relative w-full rounded-2xl overflow-hidden aspect-4/3">
                 <Image
-                  src="/images/whatsapp/whatsapp-bussiness-api.webp"
+                  src="/images/whatsapp/whatsapp-bussinss-api-provider-india.png"
                   alt="WhatsApp Business API rich message on a phone"
                   fill
-                  className="object-contain"
+                  className="object-contain scale-130 "
                   priority
                 />
               </div>
@@ -661,15 +675,12 @@ export default function WhatsAppBusinessAPIPage() {
               </ul>
             </div>
             <div className="w-full lg:w-[54%] shrink-0">
-              <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl shadow-blue-950/10 border border-gray-200">
-                <video
-                  src="/images/video/whatsapp-chat.mp4"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="none"
-                  className="absolute inset-0 w-full h-full object-cover"
+              <div className="relative w-full rounded-2xl aspect-[4/3] ">
+                <Image
+                  src="/images/whatsapp/whatsapp-business-api-provider.webp"
+                  alt="WhatsApp Business API shared inbox screenshot"
+                  fill
+                  className="object-cover"
                 />
               </div>
             </div>
@@ -1231,6 +1242,7 @@ export default function WhatsAppBusinessAPIPage() {
           </div>
         </div>
       </section>
+      <HeroLeadForm />
 
       {/* -- FAQ ------------------------------------------------------------ */}
       <section className="py-20 sm:py-28 bg-white" id="faq">
