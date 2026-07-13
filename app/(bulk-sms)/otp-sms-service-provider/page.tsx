@@ -59,7 +59,7 @@ const serviceSchema = {
     logo: "https://getclickmedia.com/images/gcm-logo.png",
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+91-7669999219",
+      telephone: "+91-9667694088",
       contactType: "customer support",
       areaServed: "IN",
       availableLanguage: ["English", "Hindi"],
@@ -97,7 +97,7 @@ const orgSchema = {
   name: "Get Click Media",
   url: "https://getclickmedia.com",
   logo: "https://getclickmedia.com/images/gcm-logo.png",
-  telephone: "+91-7669999219",
+  telephone: "+91-9667694088",
   email: "hello@getclickmedia.com",
   address: {
     "@type": "PostalAddress",

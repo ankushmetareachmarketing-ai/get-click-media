@@ -70,7 +70,7 @@ export default function OtpSmsFinalCTA() {
               </button>
 
               <a
-                href="https://wa.me/917669999219"
+                href="https://wa.me/919667694088"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 sm:gap-2 h-9 sm:h-11 px-3 sm:px-4 rounded-full border border-(--border-subtle) text-(--ink-2) text-xs sm:text-sm font-medium hover:border-primary hover:text-primary hover:bg-blue-50/30 transition-all duration-150 whitespace-nowrap"

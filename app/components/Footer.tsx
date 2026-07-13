@@ -191,7 +191,7 @@ export default function Footer() {
           {/* Contact */}
           <div style={{ display: "flex", flexDirection: "column", gap: 9 }}>
             {[
-              { Icon: PhoneCall, text: "+91 7669999219",         href: "tel:+917669999219" },
+              { Icon: PhoneCall, text: "+91 9667694088",         href: "tel:+919667694088" },
               { Icon: MailOpen,  text: "hello@getclickmedia.com", href: "mailto:hello@getclickmedia.com" },
               { Icon: MapPin,    text: "Mumbai, India",           href: "#" },
             ].map(({ Icon, text, href }) => (

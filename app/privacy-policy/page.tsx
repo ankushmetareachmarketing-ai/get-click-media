@@ -11,7 +11,7 @@ export const metadata = {
 const LAST_UPDATED = "June 1, 2025";
 const COMPANY = "Get Click Media Pvt. Ltd.";
 const EMAIL = "hello@getclickmedia.com";
-const PHONE = "+91 7669999219";
+const PHONE = "+91 9667694088";
 
 export default function PrivacyPolicyPage() {
   return (
