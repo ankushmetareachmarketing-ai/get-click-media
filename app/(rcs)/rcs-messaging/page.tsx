@@ -403,7 +403,7 @@ export default function RCSMessagingPage() {
           </div>
           <GradientCardCarousel
             cards={FEATURES.map((f) => ({
-              icon: <f.icon className="w-5 h-5" />,
+              icon: <f.icon className="w-7 h-7" />,
               title: f.title,
               description: f.desc,
             }))}

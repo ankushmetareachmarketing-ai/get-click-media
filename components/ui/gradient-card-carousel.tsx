@@ -16,6 +16,22 @@ export interface GradientCarouselCard {
 }
 
 /**
+ * Light card background paired with a deeper, saturated icon tone —
+ * cycled per card so a row never looks monochrome. Icon gradients are
+ * one notch darker than the card wash so the badge pops off the page.
+ */
+const PALETTE = [
+  { gradient: "from-blue-50 via-white to-sky-50", icon: "from-blue-500 to-blue-600", shadow: "shadow-blue-500/30" },
+  { gradient: "from-purple-50 via-white to-fuchsia-50", icon: "from-purple-500 to-fuchsia-600", shadow: "shadow-purple-500/30" },
+  { gradient: "from-emerald-50 via-white to-teal-50", icon: "from-emerald-500 to-teal-600", shadow: "shadow-emerald-500/30" },
+  { gradient: "from-amber-50 via-white to-orange-50", icon: "from-amber-500 to-orange-600", shadow: "shadow-amber-500/30" },
+  { gradient: "from-rose-50 via-white to-pink-50", icon: "from-rose-500 to-pink-600", shadow: "shadow-rose-500/30" },
+  { gradient: "from-cyan-50 via-white to-blue-50", icon: "from-cyan-500 to-blue-600", shadow: "shadow-cyan-500/30" },
+  { gradient: "from-indigo-50 via-white to-violet-50", icon: "from-indigo-500 to-violet-600", shadow: "shadow-indigo-500/30" },
+  { gradient: "from-lime-50 via-white to-emerald-50", icon: "from-lime-500 to-emerald-600", shadow: "shadow-lime-500/30" },
+];
+
+/**
  * A horizontally-swipeable row of light-gradient cards. Uses native CSS
  * scroll-snap instead of a JS drag/carousel library — free on mobile,
  * works with touch out of the box, no motion library needed for the
@@ -41,19 +57,27 @@ export function GradientCardCarousel({
     <div className={cn("relative", className)}>
       <div
         ref={trackRef}
-        className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 -mx-5 px-5 sm:-mx-8 sm:px-8 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pt-8 pb-4 -mx-5 px-5 sm:-mx-8 sm:px-8 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
         {cards.map((card, i) => {
+          const palette = PALETTE[i % PALETTE.length];
           const cardClassName = cn(
-            "group relative snap-start shrink-0 w-[78%] sm:w-[46%] lg:w-[30%] rounded-2xl border border-blue-100/60 p-6 sm:p-7",
+            "group relative snap-start shrink-0 w-[78%] sm:w-[46%] lg:w-[30%] rounded-2xl border border-black/5 p-6 sm:p-7 pt-12 sm:pt-14",
             "bg-gradient-to-br shadow-(--shadow-card) transition-all duration-200 hover:-translate-y-1 hover:shadow-(--shadow-card-hover)",
             card.href && "hover:border-primary/40",
-            card.gradient ?? "from-blue-50 via-white to-sky-50"
+            card.gradient ?? palette.gradient
           );
           const content = (
             <>
               {card.icon && (
-                <span className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-white text-primary shadow-(--shadow-card)">
+                <span
+                  className={cn(
+                    "absolute -top-5 left-6 inline-flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br text-white",
+                    "shadow-lg ring-1 ring-white/70 ring-inset",
+                    palette.icon,
+                    palette.shadow
+                  )}
+                >
                   {card.icon}
                 </span>
               )}

@@ -3,19 +3,23 @@ import Link from "next/link";
 import Image from "next/image";
 import DarkHero from "@/app/components/DarkHero";
 import { GradientCardCarousel } from "@/components/ui/gradient-card-carousel";
+import { PremiumFeatureGrid } from "@/components/ui/premium-feature-grid";
+import { ResponsiveTable } from "@/components/ui/responsive-table";
+import { MarketingCta } from "@/components/ui/marketing-cta";
+import { BentoGrid, BentoCard } from "@/components/ui/bento-grid";
+import { AccordionList } from "@/components/ui/accordion-list";
+import ClientMarquee from "@/app/components/ClientMarquee";
+import Testimonial from "@/app/components/Testimonial";
+import WhatsappStatBand from "@/app/components/whatsapp/WhatsappStatBand";
 import {
-  ArrowRight,
   CheckCheck,
-  Zap,
-  Shield,
   BarChart3,
-  MessageSquare,
-  Layers,
-  Globe,
   Bot,
-  Users,
-  Workflow,
-  ChevronDown,
+  Megaphone,
+  LayoutTemplate,
+  MousePointerClick,
+  Inbox,
+  ShoppingBag,
   Landmark,
   ShoppingCart,
   GraduationCap,
@@ -26,6 +30,11 @@ import {
   ShieldCheck,
   Store,
   Car,
+  TrendingUp,
+  MessageSquareText,
+  Clock,
+  MessagesSquare,
+  PiggyBank,
 } from "lucide-react";
 import HeroLeadForm from "@/app/components/HeroLeadForm";
 
@@ -159,57 +168,54 @@ const schema = {
 
 const FEATURES = [
   {
-    icon: Shield,
-    title: "Verified Business Identity (Green Tick)",
-    desc: "Your business name appears with Meta's verified checkmark on every message — not a random number. Reduces message ignore rates by 60%+ versus unverified senders.",
-    href: "/blog/whatsapp-green-tick-verification",
-  },
-  {
-    icon: Layers,
-    title: "Rich Media Messages",
-    desc: "Send images, PDFs, videos, and documents natively in the chat — a product photo, policy document, or payment receipt, without an external link.",
-  },
-  {
-    icon: MessageSquare,
-    title: "Interactive Message Buttons",
-    desc: "Up to 3 CTA buttons or 10 quick-reply chips per message. 'Buy Now', 'Track Order', 'Pay Now' — one tap, dramatically higher conversion vs plain text.",
-  },
-  {
     icon: Bot,
     title: "WhatsApp Chatbot Automation",
-    desc: "Multi-step conversational flows that qualify leads, take orders, book appointments, and resolve support tickets 24/7 — escalating to a live agent when needed.",
-    href: "/whatsapp-chatbot",
+    description: "Automate FAQs, lead qualification and support with intelligent conversational flows.",
+    accent: "orange",
   },
   {
-    icon: Zap,
-    title: "WhatsApp Broadcast (Bulk Messaging)",
-    desc: "Send personalised messages to thousands of opted-in customers at once — flash sales, reminders, and shipment updates, all in a single send.",
-    href: "/whatsapp-broadcast",
+    icon: Megaphone,
+    title: "Bulk Broadcast Messaging",
+    description: "Reach thousands of opted-in customers instantly with personalised, high-deliverability campaigns.",
+    accent: "pink",
+  },
+  {
+    icon: LayoutTemplate,
+    title: "Message Templates",
+    description: "Pre-approved utility, marketing and OTP templates — submitted and managed on your behalf.",
+    accent: "blue",
+  },
+  {
+    icon: MousePointerClick,
+    title: "Click-to-WhatsApp Ads",
+    description: "Turn Meta ad clicks straight into WhatsApp conversations that convert far faster than landing pages.",
+    accent: "cyan",
+  },
+  {
+    icon: Inbox,
+    title: "Shared Team Inbox",
+    description: "Multiple agents, one inbox — with routing rules, assignment and SLA tracking built in.",
+    accent: "indigo",
+  },
+  {
+    icon: ShoppingBag,
+    title: "WhatsApp Catalog",
+    description: "A full product catalogue customers can browse, ask about and buy — without leaving the chat.",
+    accent: "green",
   },
   {
     icon: BarChart3,
-    title: "Message Templates",
-    desc: "WhatsApp requires pre-approved templates for outbound messages. Get Click Media submits and manages utility, marketing, and authentication templates on your behalf.",
-    href: "/whatsapp-template-messages",
+    title: "Campaign Analytics",
+    description: "Delivery, read and click data on every message, so every campaign gets measurably better.",
+    accent: "purple",
   },
   {
-    icon: Workflow,
-    title: "WhatsApp Flows & Product Catalog",
-    desc: "In-chat forms for bookings and lead capture, plus a full product catalogue customers can browse and buy from — without leaving WhatsApp.",
-    href: "/whatsapp-catalog",
+    icon: ShieldCheck,
+    title: "Enterprise Security",
+    description: "End-to-end encryption, role-based access and audit logs that satisfy enterprise compliance.",
+    accent: "red",
   },
-  {
-    icon: Globe,
-    title: "CRM & Platform Integration",
-    desc: "Connect WhatsApp to Salesforce, HubSpot, Zoho, Freshdesk, Shopify, or any custom system via REST API and webhooks.",
-    href: "/blog/whatsapp-crm-integration",
-  },
-  {
-    icon: Users,
-    title: "Multi-Agent Shared Inbox",
-    desc: "Multiple agents handle conversations from one shared inbox — with routing rules, agent assignment, and SLA tracking.",
-  },
-];
+] as const;
 
 const COMPARISON_APP_API = [
   {
@@ -482,6 +488,15 @@ const FAQS = [
   },
 ];
 
+/* -- Shared layout tokens --------------------------------------------------- */
+const CONTAINER = "max-w-7xl mx-auto px-6 sm:px-12 lg:px-20";
+const SECTION_PADDING = "py-16 sm:py-20 lg:py-[100px]";
+const H2_LIGHT = "text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight";
+const H2_DARK = "text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight";
+const SYNE_FONT: React.CSSProperties = { fontFamily: "var(--font-syne)" };
+const EYEBROW_LIGHT = "inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest";
+const EYEBROW_DARK = "inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/10 text-[#38bdf8] text-xs font-bold uppercase tracking-widest";
+
 /* -- Page ------------------------------------------------------------------ */
 export default function WhatsAppBusinessAPIPage() {
   return (
@@ -493,9 +508,10 @@ export default function WhatsAppBusinessAPIPage() {
       />
 
       {/* -----------------------------------------------------------------
-          HERO
+          HERO — "What is this?"
       ----------------------------------------------------------------- */}
       <DarkHero
+        theme="light"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "WhatsApp Business API" },
@@ -509,82 +525,53 @@ export default function WhatsAppBusinessAPIPage() {
             offering WhatsApp Business API to over 10,000 businesses across
             India — automated, rich, interactive messaging at scale,
             delivered straight to any WhatsApp user.
-            <strong className="text-white">
+            <strong className="text-gray-900">
               {" "}
               Setup takes 3–5 business days. Pricing starts at ₹0.40 per
               conversation.
             </strong>
           </>
         }
-        primaryCta={{ label: "Get WhatsApp API", href: "/contact" }}
+        primaryCta={{ label: "Get WhatsApp API" }}
         secondaryCta={{ label: "View Pricing", href: "#pricing" }}
         imageSrc="/images/whatsapp/whatsapp-business-api-provider-india.png"
         imageAlt="WhatsApp Business API rich message preview on a phone, showing interactive buttons and carousel"
         trustLine="Official Meta BSP · 3–5 Day Setup · 10,000+ Businesses Served · Noida, India"
+        stats={[
+          { value: "98%", label: "Message Open Rate" },
+          { value: "10,000+", label: "Businesses Served" },
+          { value: "3–5 Days", label: "Go-Live Timeline" },
+          { value: "24×7", label: "Support" },
+        ]}
       />
 
-      {/* -- DIRECT ANSWER / AEO BLOCK -------------------------------------- */}
-      <section className="py-10 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="rounded-2xl border-l-4 border-[#2563eb] bg-blue-50/60 px-6 py-5">
-            <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-              <strong className="text-gray-900">WhatsApp Business API</strong>{" "}
-              is Meta&apos;s enterprise messaging platform that lets businesses
-              send automated, rich, interactive messages at scale via WhatsApp —
-              including text, images, carousels, action buttons, and chatbot
-              flows — delivered to any WhatsApp user without requiring a
-              separate app install. Get Click Media, an official Meta Business
-              Solution Provider based in Noida, sets up WhatsApp Business API
-              for Indian businesses in 3 to 5 business days, with pricing
-              starting at ₹0.40 per conversation.
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* -- TRUST LOGOS ------------------------------------------------------ */}
+      <ClientMarquee />
 
-      {/* -- STATS BAR ------------------------------------------------------ */}
-      <section className="bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
-          {[
-            {
-              value: "98%",
-              label: "Message Open Rate",
-              sub: "vs 20–25% for email, 30–35% for SMS",
-            },
-            {
-              value: "10,000+",
-              label: "Businesses Served",
-              sub: "across banking, e-commerce, healthcare & more",
-            },
-            {
-              value: "3–5 days",
-              label: "Go-Live Timeline",
-              sub: "from onboarding start to first live message",
-            },
-          ].map((s) => (
-            <div key={s.value} className="space-y-1">
-              <p className="text-4xl font-extrabold text-[#2563eb] font-(family-name:--font-syne)">
-                {s.value}
-              </p>
-              <p className="text-base font-bold text-gray-900">{s.label}</p>
-              <p className="text-sm text-gray-400">{s.sub}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* -- TRUST STAT BAND — icons + key numbers, right under the hero ---- */}
+      <WhatsappStatBand />
 
-      {/* -- SEE IT IN ACTION ----------------------------------------------- */}
-      <section className="py-20 sm:py-28 bg-gray-50" id="see-it-in-action">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      {/* -- SEE IT IN ACTION — concrete "what is this" proof --------------- */}
+      <section className={cnJoin(SECTION_PADDING, "bg-blue-50/40")} id="see-it-in-action">
+        <div className={CONTAINER}>
           <div className="flex flex-col lg:flex-row items-center gap-14">
+            <div className="w-full lg:w-[54%] shrink-0">
+              <div className="relative w-full rounded-2xl aspect-[4/3] overflow-hidden">
+                <Image
+                  src="/images/whatsapp/whatsapp-business-api-provider.webp"
+                  alt="WhatsApp Business API shared inbox screenshot"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 90vw, 54vw"
+                />
+              </div>
+            </div>
             <div className="flex-1 space-y-6">
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
-                See It In Action
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
+              <span className={EYEBROW_LIGHT}>See It In Action</span>
+              <h2 className={H2_LIGHT} style={SYNE_FONT}>
                 One shared inbox for every WhatsApp conversation
               </h2>
-              <p className="text-gray-500 text-base leading-relaxed">
+              <p className="text-gray-500 text-base leading-[1.7]">
                 Every inbound message — from a chatbot escalation, a broadcast
                 reply, or a direct customer query — lands in a single team
                 inbox. Agents see full conversation history, assign chats, and
@@ -600,87 +587,48 @@ export default function WhatsAppBusinessAPIPage() {
                 ].map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-3 text-sm text-gray-700"
+                    className="flex items-start gap-3 text-base text-gray-700"
                   >
-                    <CheckCheck className="w-4 h-4 text-[#2563eb] shrink-0 mt-0.5" />
+                    <CheckCheck className="w-4 h-4 text-[#2563eb] shrink-0 mt-1" />
                     {item}
                   </li>
                 ))}
               </ul>
-            </div>
-            <div className="w-full lg:w-[54%] shrink-0">
-              <div className="relative w-full rounded-2xl aspect-[4/3] ">
-                <Image
-                  src="/images/whatsapp/whatsapp-business-api-provider.webp"
-                  alt="WhatsApp Business API shared inbox screenshot"
-                  fill
-                  className="object-cover"
-                />
+              <div className="pt-2">
+                <MarketingCta label="See How It Works" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* -- WHAT IS WHATSAPP BUSINESS API --------------------------------- */}
-      <section className="py-20 sm:py-28 bg-white" id="what-is-whatsapp-api">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      {/* -- WHAT IS WHATSAPP BUSINESS API — deeper "what is this" ---------- */}
+      <section className={cnJoin(SECTION_PADDING, "bg-white")} id="what-is-whatsapp-api">
+        <div className={CONTAINER}>
           <div className="text-center mb-14 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
-              What Is WhatsApp Business API?
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight font-(family-name:--font-syne) max-w-3xl mx-auto">
+            <span className={EYEBROW_LIGHT}>What Is WhatsApp Business API?</span>
+            <h2 className={cnJoin(H2_LIGHT, "max-w-3xl mx-auto")} style={SYNE_FONT}>
               The backbone behind every automated WhatsApp message you receive
             </h2>
-            <p className="text-gray-500 text-base max-w-2xl mx-auto leading-relaxed">
-              WhatsApp Business API — also called the WhatsApp Business Platform
-              or WABA — is Meta&apos;s official enterprise-grade solution for
-              businesses that need to talk to customers at scale on WhatsApp.
-              It&apos;s what powers every automated message you get from banks,
-              e-commerce platforms, airlines, and healthcare providers in India.
-              Unlike the free WhatsApp Business App, the API has no device
-              limit, no manual messaging requirement, and no cap on messages
-              sent. If the App is a bicycle, the API is a truck built for a
-              national logistics operation.
+            <p className="text-gray-500 text-base max-w-[680px] mx-auto leading-[1.7]">
+              WhatsApp Business API (or WABA) is Meta&apos;s enterprise platform
+              for messaging customers at scale — it powers every automated
+              message you get from banks, e-commerce, and healthcare providers
+              in India, with no device limit or message cap.
             </p>
           </div>
 
-          <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
-            <table className="w-full text-sm min-w-[600px]">
-              <thead>
-                <tr className="bg-[#0f172a] text-white text-xs uppercase tracking-wider">
-                  <th className="text-left px-5 py-4 font-semibold w-[34%]">
-                    Feature
-                  </th>
-                  <th className="text-center px-4 py-4 font-semibold">
-                    WhatsApp Business App
-                  </th>
-                  <th className="text-center px-4 py-4 font-semibold text-[#38bdf8]">
-                    WhatsApp Business API
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {COMPARISON_APP_API.map((row, i) => (
-                  <tr
-                    key={row.feature}
-                    className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}
-                  >
-                    <td className="px-5 py-3.5 text-gray-700 font-medium">
-                      {row.feature}
-                    </td>
-                    <td className="px-4 py-3.5 text-center text-gray-500">
-                      {row.app}
-                    </td>
-                    <td className="px-4 py-3.5 text-center text-gray-800 font-medium">
-                      {row.api}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-center text-xs text-gray-400 mt-4">
+          <ResponsiveTable
+            caption="WhatsApp Business App vs WhatsApp Business API"
+            highlightColumnKey="api"
+            columns={[
+              { key: "feature", label: "Feature" },
+              { key: "app", label: "WhatsApp Business App", align: "center" },
+              { key: "api", label: "WhatsApp Business API", align: "center" },
+            ]}
+            rows={COMPARISON_APP_API}
+          />
+          <p className="text-center text-sm text-gray-400 mt-4">
             See the full breakdown:{" "}
             <Link
               href="/blog/whatsapp-api-vs-whatsapp-business-app"
@@ -692,17 +640,96 @@ export default function WhatsAppBusinessAPIPage() {
         </div>
       </section>
 
-      {/* -- HOW IT WORKS --------------------------------------------------- */}
-      <section className="py-20 sm:py-28 bg-[#0f172a]" id="how-it-works">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      {/* -- BENEFITS — "Why should I care?" --------------------------------- */}
+      <section className={cnJoin(SECTION_PADDING, "bg-blue-50/40")} id="benefits">
+        <div className={CONTAINER}>
           <div className="text-center mb-14 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/10 text-[#38bdf8] text-xs font-bold uppercase tracking-widest">
-              How It Works
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-(family-name:--font-syne)">
+            <span className={EYEBROW_LIGHT}>Why WhatsApp API for Indian Businesses</span>
+            <h2 className={H2_LIGHT} style={SYNE_FONT}>
+              10,000+ Indian businesses already use it — here&apos;s why
+            </h2>
+          </div>
+          <BentoGrid className="lg:grid-cols-3 lg:auto-rows-[minmax(11rem,auto)]">
+            <BentoCard
+              icon={TrendingUp}
+              name="Highest open rates of any channel in India"
+              description="WhatsApp achieves 98% open rates in India, versus 20–25% for email and 30–35% for SMS — your customers open every message."
+              className="lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-3"
+              background={
+                <div className="absolute inset-x-6 bottom-0 h-36 sm:h-44">
+                  <Image
+                    src="/images/whatsapp/whatsapp-business-api-provider-india.png"
+                    alt=""
+                    fill
+                    className="object-contain object-bottom opacity-90"
+                  />
+                </div>
+              }
+            />
+            <BentoCard
+              icon={MessageSquareText}
+              name="Rich, trusted communication that converts"
+              description="A verified message with your logo, product image, and a 'Buy Now' button outperforms a plain SMS link by 5x to 8x on click-through rate."
+              className="lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-2"
+            />
+            <BentoCard
+              icon={Clock}
+              name="No DND or time restrictions for service messages"
+              description="Service-category messages like OTPs and appointment reminders can be sent any time — no TRAI DND filtering for non-promotional content."
+              className="lg:col-start-3 lg:col-end-4 lg:row-start-2 lg:row-end-3"
+            />
+            <BentoCard
+              icon={MessagesSquare}
+              name="Two-way conversations at scale"
+              description="Customers can reply, ask questions, or place orders in the same thread — with chatbot automation scaling this to thousands of conversations."
+              className="lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4"
+            />
+            <BentoCard
+              icon={PiggyBank}
+              name="Lower cost per conversion than paid ads"
+              description="Indian businesses report cost-per-conversion 60–80% lower than equivalent Google or Meta ad campaigns for WhatsApp-led nurturing."
+              className="lg:col-start-2 lg:col-end-3 lg:row-start-3 lg:row-end-4"
+            />
+            <BentoCard
+              icon={BarChart3}
+              name="Complete analytics visibility"
+              description="Delivery, read, and click tracking on every message — data that email, SMS, and phone calls simply cannot provide."
+              className="lg:col-start-3 lg:col-end-4 lg:row-start-3 lg:row-end-4"
+            />
+          </BentoGrid>
+        </div>
+      </section>
+
+      {/* -- USE CASES BY INDUSTRY — "Why should I care?" (relevance) ------- */}
+      <section className={cnJoin(SECTION_PADDING, "bg-gray-50")} id="use-cases">
+        <div className={CONTAINER}>
+          <div className="text-center mb-14 space-y-4">
+            <span className={EYEBROW_LIGHT}>Industry Use Cases</span>
+            <h2 className={H2_LIGHT} style={SYNE_FONT}>
+              WhatsApp Business API across every industry
+            </h2>
+          </div>
+          <GradientCardCarousel
+            cards={INDUSTRIES.map((ind) => ({
+              icon: <ind.icon className="w-7 h-7" />,
+              title: ind.name,
+              description: ind.body,
+              footnote: ind.result,
+              href: ind.href,
+            }))}
+          />
+        </div>
+      </section>
+
+      {/* -- HOW IT WORKS — mechanism ---------------------------------------- */}
+      <section className={cnJoin(SECTION_PADDING, "bg-[#0f172a]")} id="how-it-works">
+        <div className={CONTAINER}>
+          <div className="text-center mb-14 space-y-4 mx-auto lg:w-[40%]">
+            <span className={EYEBROW_DARK}>How It Works</span>
+            <h2 className={H2_DARK} style={SYNE_FONT}>
               How a message travels from your app to your customer
             </h2>
-            <p className="text-white/50 text-base max-w-2xl mx-auto">
+            <p className="text-white/50 text-base leading-[1.7]">
               Understanding the architecture helps you plan your integration
               correctly.
             </p>
@@ -712,7 +739,7 @@ export default function WhatsAppBusinessAPIPage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
               {HOW_IT_WORKS.map((s) => (
                 <div key={s.n} className="text-center space-y-3">
-                  <div className="w-14 h-14 rounded-full bg-[#2563eb] text-white font-extrabold text-lg flex items-center justify-center mx-auto font-(family-name:--font-syne) shadow-lg shadow-blue-900/40">
+                  <div className="w-14 h-14 rounded-full bg-[#2563eb] text-white font-bold text-lg flex items-center justify-center mx-auto shadow-lg shadow-blue-900/40" style={SYNE_FONT}>
                     {s.n}
                   </div>
                   <h3 className="text-sm font-bold text-white">{s.title}</h3>
@@ -726,263 +753,32 @@ export default function WhatsAppBusinessAPIPage() {
         </div>
       </section>
 
-      {/* -- FEATURES ------------------------------------------------------- */}
-      <section className="py-20 sm:py-28 bg-white" id="features">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-14 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
-              WhatsApp Business API Features
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
-              Everything your business needs to run WhatsApp at scale
-            </h2>
-          </div>
-          <GradientCardCarousel
-            cards={FEATURES.map((f) => ({
-              icon: <f.icon className="w-5 h-5" />,
-              title: f.title,
-              description: f.desc,
-              href: f.href,
-            }))}
-          />
-        </div>
-      </section>
+      {/* -- FEATURES — "What do I get?" -------------------------------------- */}
+      <PremiumFeatureGrid
+        id="features"
+        badge="WhatsApp Business API Features"
+        heading={["Everything your business needs", "to grow on WhatsApp"]}
+        description="Automate customer conversations, marketing and support from one platform."
+        features={FEATURES.map((f) => ({
+          icon: <f.icon className="h-6 w-6" aria-hidden="true" />,
+          title: f.title,
+          description: f.description,
+          accent: f.accent,
+        }))}
+      />
 
-      {/* -- BENEFITS ------------------------------------------------------- */}
-      <section className="py-20 sm:py-24 bg-[#0f172a]" id="benefits">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-14 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/10 text-[#38bdf8] text-xs font-bold uppercase tracking-widest">
-              Why WhatsApp API for Indian Businesses
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-(family-name:--font-syne)">
-              10,000+ Indian businesses already use it — here&apos;s why
-            </h2>
-          </div>
-          <div className="grid sm:grid-cols-2 gap-6">
-            {[
-              {
-                title: "Highest open rates of any channel in India",
-                body: "WhatsApp achieves 98% open rates in India, versus 20–25% for email and 30–35% for SMS — your customers open every message.",
-              },
-              {
-                title: "Rich, trusted communication that converts",
-                body: "A verified message with your logo, product image, and a 'Buy Now' button outperforms a plain SMS link by 5x to 8x on click-through rate.",
-              },
-              {
-                title: "No DND or time restrictions for service messages",
-                body: "Service-category messages like OTPs and appointment reminders can be sent any time — no TRAI DND filtering for non-promotional content.",
-              },
-              {
-                title: "Two-way conversations at scale",
-                body: "Customers can reply, ask questions, or place orders in the same thread — with chatbot automation scaling this to thousands of conversations.",
-              },
-              {
-                title: "Lower cost per conversion than paid ads",
-                body: "Indian businesses report cost-per-conversion 60–80% lower than equivalent Google or Meta ad campaigns for WhatsApp-led nurturing.",
-              },
-              {
-                title: "Complete analytics visibility",
-                body: "Delivery, read, and click tracking on every message — data that email, SMS, and phone calls simply cannot provide.",
-              },
-            ].map((b) => (
-              <div
-                key={b.title}
-                className="rounded-2xl bg-white/5 border border-white/10 p-6 space-y-2"
-              >
-                <h3 className="text-base font-bold text-white">{b.title}</h3>
-                <p className="text-sm text-white/50 leading-relaxed">
-                  {b.body}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* -- CONVERSATION CATEGORIES / PRICING ----------------------------- */}
-      <section className="py-20 sm:py-28 bg-white" id="conversation-types">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
-              Conversation Categories
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
-              WhatsApp API pricing in India — by conversation type
-            </h2>
-            <p className="text-gray-500 text-base max-w-2xl mx-auto">
-              Pricing is based on 24-hour conversation sessions, not individual
-              messages. Meta provides 1,000 free service conversations per month
-              to every account.
-            </p>
-          </div>
-          <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
-            <table className="w-full text-sm min-w-[560px]">
-              <thead>
-                <tr className="bg-[#0f172a] text-white text-xs uppercase tracking-wider">
-                  <th className="text-left px-5 py-4 font-semibold">
-                    Category
-                  </th>
-                  <th className="text-left px-4 py-4 font-semibold">
-                    When It&apos;s Used
-                  </th>
-                  <th className="text-left px-4 py-4 font-semibold">
-                    Who Initiates
-                  </th>
-                  <th className="text-left px-4 py-4 font-semibold">
-                    India Rate
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {CONVERSATION_TYPES.map((row, i) => (
-                  <tr
-                    key={row.cat}
-                    className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}
-                  >
-                    <td className="px-5 py-3.5 text-gray-900 font-bold">
-                      {row.cat}
-                    </td>
-                    <td className="px-4 py-3.5 text-gray-600">{row.when}</td>
-                    <td className="px-4 py-3.5 text-gray-600">{row.who}</td>
-                    <td className="px-4 py-3.5 text-[#2563eb] font-semibold whitespace-nowrap">
-                      {row.price}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-center text-sm text-gray-400 mt-6">
-            Get Click Media charges a platform fee on top of Meta&apos;s
-            conversation charges for API access, campaign management, and
-            support. See the full breakdown — including volume tiers and a cost
-            comparison with SMS and RCS — on our{" "}
-            <Link
-              href="/blog/whatsapp-api-pricing-india"
-              className="text-[#2563eb] font-semibold underline underline-offset-2"
-            >
-              WhatsApp Business API pricing India
-            </Link>{" "}
-            page.
-          </p>
-        </div>
-      </section>
-
-      {/* -- USE CASES BY INDUSTRY ------------------------------------------- */}
-      <section className="py-20 sm:py-28 bg-gray-50" id="use-cases">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-14 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
-              Industry Use Cases
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
-              WhatsApp Business API across every industry
-            </h2>
-          </div>
-          <GradientCardCarousel
-            cards={INDUSTRIES.map((ind) => ({
-              icon: <ind.icon className="w-5 h-5" />,
-              title: ind.name,
-              description: ind.body,
-              footnote: ind.result,
-              href: ind.href,
-              gradient: "from-emerald-50 via-white to-blue-50",
-            }))}
-          />
-        </div>
-      </section>
-
-      {/* -- HOW TO GET WHATSAPP API ---------------------------------------- */}
-      <section className="py-20 sm:py-28 bg-white" id="pricing">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-14 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
-              How to Get WhatsApp Business API
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
-              3 steps with Get Click Media — you never talk to Meta directly
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6 mb-10">
-            {[
-              {
-                n: "01",
-                title: "Business Verification",
-                body: "We guide you through Meta Business Manager verification — submitting your registration documents and website. Most businesses finish in 1–3 business days.",
-              },
-              {
-                n: "02",
-                title: "WABA Setup",
-                body: "We create your WhatsApp Business Account, link your phone number, submit your brand assets, and get your initial templates approved by Meta.",
-              },
-              {
-                n: "03",
-                title: "Platform Access & First Campaign",
-                body: "You get dashboard or REST API access. Our onboarding team configures your webhook and supports your first live send.",
-              },
-            ].map((s) => (
-              <div
-                key={s.n}
-                className="relative rounded-2xl border-2 border-blue-100 bg-blue-50/40 p-7 space-y-4"
-              >
-                <span className="absolute -top-4 left-6 w-8 h-8 rounded-full bg-[#2563eb] text-white text-xs font-black flex items-center justify-center font-(family-name:--font-syne)">
-                  {s.n}
-                </span>
-                <h3 className="text-base font-bold text-gray-900 pt-2">
-                  {s.title}
-                </h3>
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  {s.body}
-                </p>
-              </div>
-            ))}
-          </div>
-          <p className="text-center text-sm text-gray-400 mb-16">
-            Read the detailed walkthrough:{" "}
-            <Link
-              href="/blog/how-to-get-whatsapp-business-api"
-              className="text-[#2563eb] font-semibold underline underline-offset-2"
-            >
-              How to get WhatsApp Business API
-            </Link>
-          </p>
-
-          <div className="rounded-2xl bg-[#0f172a] p-8 sm:p-10 flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div className="space-y-2 text-center sm:text-left">
-              <h3 className="text-lg font-bold text-white">
-                Flexible pricing for every business size
-              </h3>
-              <p className="text-white/50 text-sm max-w-lg">
-                Per-conversation pricing based on category and volume. All plans
-                include template management, CRM integration assistance, and
-                24×7 support.
-              </p>
-            </div>
-            <Link
-              href="/contact"
-              className="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#1e3a8a] text-sm font-bold hover:scale-105 transition-transform shadow-md"
-            >
-              Talk to Sales <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* -- WHY GET CLICK MEDIA -------------------------------------------- */}
-      <section className="py-20 sm:py-28 bg-gray-50" id="why-gcm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      {/* -- WHY GET CLICK MEDIA — "Can I trust this?" ----------------------- */}
+      <section className={cnJoin(SECTION_PADDING, "bg-gray-50")} id="why-gcm">
+        <div className={CONTAINER}>
           <div className="flex flex-col lg:flex-row items-center gap-14">
             <div className="flex-1 space-y-6">
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
-                Why Choose Get Click Media?
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
+              <span className={EYEBROW_LIGHT}>Why Choose Get Click Media?</span>
+              <h2 className={H2_LIGHT} style={SYNE_FONT}>
                 A direct Meta partner.
                 <br />
                 Not a reseller.
               </h2>
-              <p className="text-gray-500 text-base leading-relaxed">
+              <p className="text-gray-500 text-base leading-[1.7]">
                 Get Click Media is an authorised{" "}
                 <strong className="text-gray-800">
                   WhatsApp Business API provider
@@ -990,6 +786,17 @@ export default function WhatsAppBusinessAPIPage() {
                 — we have direct access to the platform and onboard your
                 business with Meta&apos;s official authorisation.
               </p>
+              <div className="flex flex-wrap items-center gap-2.5">
+                {["Official Meta BSP", "Noida, India", "24×7 Support"].map((b) => (
+                  <span
+                    key={b}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-(--border-subtle) bg-white px-3.5 py-1.5 text-xs font-semibold text-(--ink-2)"
+                  >
+                    <ShieldCheck className="w-3.5 h-3.5 text-primary" aria-hidden="true" />
+                    {b}
+                  </span>
+                ))}
+              </div>
               {WHY_GCM.map((p) => (
                 <div
                   key={p.title}
@@ -999,14 +806,14 @@ export default function WhatsAppBusinessAPIPage() {
                     <CheckCheck className="w-3.5 h-3.5 text-white" />
                   </span>
                   <div>
-                    <p className="text-sm font-bold text-gray-900">{p.title}</p>
-                    <p className="text-sm text-gray-500 mt-0.5">{p.body}</p>
+                    <p className="text-base font-bold text-gray-900">{p.title}</p>
+                    <p className="text-base text-gray-500 mt-0.5 leading-[1.7]">{p.body}</p>
                   </div>
                 </div>
               ))}
             </div>
             <div className="w-full lg:w-[44%] shrink-0">
-              <div className="relative w-full rounded-2xl overflow-hidden aspect-4/3">
+              <div className="relative w-full rounded-2xl overflow-hidden aspect-4/3 shadow-(--shadow-elevated)">
                 <Image
                   src="/images/whatsapp/direct-meta-partner.webp"
                   alt="Get Click Media WhatsApp Business API dashboard"
@@ -1019,53 +826,29 @@ export default function WhatsAppBusinessAPIPage() {
         </div>
       </section>
 
-      {/* -- PROVIDER COMPARISON -------------------------------------------- */}
-      <section className="py-20 sm:py-24 bg-white" id="comparison">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+      {/* -- CUSTOMER REVIEWS — "Can I trust this?" -------------------------- */}
+      <Testimonial />
+
+      {/* -- PROVIDER COMPARISON — "Can I trust this?" ----------------------- */}
+      <section className={cnJoin(SECTION_PADDING, "bg-gray-50")} id="comparison">
+        <div className={CONTAINER}>
           <div className="text-center mb-12 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
-              Full Comparison
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
+            <span className={EYEBROW_LIGHT}>Full Comparison</span>
+            <h2 className={H2_LIGHT} style={SYNE_FONT}>
               Get Click Media vs Other WhatsApp API Providers in India
             </h2>
           </div>
-          <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
-            <table className="w-full text-sm min-w-[560px]">
-              <thead>
-                <tr className="bg-[#0f172a] text-white text-xs uppercase tracking-wider">
-                  <th className="text-left px-5 py-4 font-semibold w-[40%]">
-                    Feature
-                  </th>
-                  <th className="text-center px-4 py-4 font-semibold text-[#38bdf8]">
-                    Get Click Media
-                  </th>
-                  <th className="text-center px-4 py-4 font-semibold">
-                    WATI / Twilio / Reseller
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {PROVIDER_COMPARISON.map((row, i) => (
-                  <tr
-                    key={row.feature}
-                    className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}
-                  >
-                    <td className="px-5 py-3.5 text-gray-700 font-medium">
-                      {row.feature}
-                    </td>
-                    <td className="px-4 py-3.5 text-center text-[#2563eb] font-bold">
-                      {row.gcm}
-                    </td>
-                    <td className="px-4 py-3.5 text-center text-gray-500 text-xs">
-                      {row.others}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-center text-xs text-gray-400 mt-4">
+          <ResponsiveTable
+            caption="Get Click Media vs other WhatsApp API providers in India"
+            highlightColumnKey="gcm"
+            columns={[
+              { key: "feature", label: "Feature" },
+              { key: "gcm", label: "Get Click Media", align: "center" },
+              { key: "others", label: "WATI / Twilio / Reseller", align: "center" },
+            ]}
+            rows={PROVIDER_COMPARISON}
+          />
+          <p className="text-center text-sm text-gray-400 mt-4">
             Get Click Media is the only provider in NCR offering{" "}
             <Link
               href="/blog/whatsapp-vs-rcs"
@@ -1092,10 +875,120 @@ export default function WhatsAppBusinessAPIPage() {
         </div>
       </section>
 
+      {/* -- CONVERSATION CATEGORIES / PRICING — "How much?" ----------------- */}
+      <section className={cnJoin(SECTION_PADDING, "bg-white")} id="pricing">
+        <div className={CONTAINER}>
+          <div className="text-center mb-12 space-y-4">
+            <span className={EYEBROW_LIGHT}>Conversation Categories</span>
+            <h2 className={H2_LIGHT} style={SYNE_FONT}>
+              WhatsApp API pricing in India — by conversation type
+            </h2>
+            <p className="text-gray-500 text-base max-w-[680px] mx-auto leading-[1.7]">
+              Pricing is based on 24-hour conversation sessions, not individual
+              messages. Meta provides 1,000 free service conversations per month
+              to every account.
+            </p>
+          </div>
+          <ResponsiveTable
+            caption="WhatsApp API pricing in India by conversation type"
+            highlightColumnKey="price"
+            columns={[
+              { key: "cat", label: "Category" },
+              { key: "when", label: "When It's Used" },
+              { key: "who", label: "Who Initiates" },
+              { key: "price", label: "India Rate" },
+            ]}
+            rows={CONVERSATION_TYPES}
+          />
+          <p className="text-center text-base text-gray-400 mt-6">
+            Get Click Media charges a platform fee on top of Meta&apos;s
+            conversation charges for API access, campaign management, and
+            support. See the full breakdown — including volume tiers and a cost
+            comparison with SMS and RCS — on our{" "}
+            <Link
+              href="/blog/whatsapp-api-pricing-india"
+              className="text-[#2563eb] font-semibold underline underline-offset-2"
+            >
+              WhatsApp Business API pricing India
+            </Link>{" "}
+            page.
+          </p>
+        </div>
+      </section>
+
+      {/* -- HOW TO GET WHATSAPP API — "How do I start?" --------------------- */}
+      <section className={cnJoin(SECTION_PADDING, "bg-blue-50/30")} id="get-started">
+        <div className={CONTAINER}>
+          <div className="text-center mb-14 space-y-4">
+            <span className={EYEBROW_LIGHT}>How to Get WhatsApp Business API</span>
+            <h2 className={H2_LIGHT} style={SYNE_FONT}>
+              3 steps with Get Click Media — you never talk to Meta directly
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 mb-10">
+            {[
+              {
+                n: "01",
+                title: "Business Verification",
+                body: "We guide you through Meta Business Manager verification — submitting your registration documents and website. Most businesses finish in 1–3 business days.",
+              },
+              {
+                n: "02",
+                title: "WABA Setup",
+                body: "We create your WhatsApp Business Account, link your phone number, submit your brand assets, and get your initial templates approved by Meta.",
+              },
+              {
+                n: "03",
+                title: "Platform Access & First Campaign",
+                body: "You get dashboard or REST API access. Our onboarding team configures your webhook and supports your first live send.",
+              },
+            ].map((s) => (
+              <div
+                key={s.n}
+                className="relative rounded-2xl border-2 border-blue-100 bg-white p-7 space-y-4"
+              >
+                <span className="absolute -top-4 left-6 w-8 h-8 rounded-full bg-[#2563eb] text-white text-xs font-black flex items-center justify-center" style={SYNE_FONT}>
+                  {s.n}
+                </span>
+                <h3 className="text-base font-bold text-gray-900 pt-2">
+                  {s.title}
+                </h3>
+                <p className="text-base text-gray-500 leading-[1.7]">
+                  {s.body}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-sm text-gray-400 mb-16">
+            Read the detailed walkthrough:{" "}
+            <Link
+              href="/blog/how-to-get-whatsapp-business-api"
+              className="text-[#2563eb] font-semibold underline underline-offset-2"
+            >
+              How to get WhatsApp Business API
+            </Link>
+          </p>
+
+          <div className="rounded-2xl bg-[#0f172a] p-8 sm:p-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div className="space-y-2 text-center sm:text-left">
+              <h3 className="text-lg font-bold text-white">
+                Flexible pricing for every business size
+              </h3>
+              <p className="text-white/50 text-base max-w-lg leading-[1.7]">
+                Per-conversation pricing based on category and volume. All plans
+                include template management, CRM integration assistance, and
+                24×7 support.
+              </p>
+            </div>
+            <MarketingCta label="Talk to Sales" tone="dark" className="shrink-0" />
+          </div>
+        </div>
+      </section>
+
       {/* -- RELATED GUIDES / INTERNAL LINKS ------------------------------- */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-6 font-(family-name:--font-syne)">
+        <div className={CONTAINER}>
+          <h2 className="text-xl font-bold text-gray-900 mb-6" style={SYNE_FONT}>
             Explore the WhatsApp Business API guide
           </h2>
           <div className="flex flex-wrap gap-3">
@@ -1146,30 +1039,32 @@ export default function WhatsAppBusinessAPIPage() {
       <HeroLeadForm />
 
       {/* -- FAQ ------------------------------------------------------------ */}
-      <section className="py-20 sm:py-28 bg-white" id="faq">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+      <section className={cnJoin(SECTION_PADDING, "bg-white")} id="faq">
+        <div className={CONTAINER}>
           <div className="text-center mb-12 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
-              Frequently Asked Questions
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
+            <span className={EYEBROW_LIGHT}>Frequently Asked Questions</span>
+            <h2 className={H2_LIGHT} style={SYNE_FONT}>
               Got questions about WhatsApp Business API in India?
             </h2>
           </div>
-          <div className="space-y-3">
-            {FAQS.map((faq, i) => (
-              <details
-                key={i}
-                className="group rounded-2xl bg-gray-50 border border-gray-100 shadow-sm open:shadow-md transition-shadow"
-              >
-                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
-                  <span className="text-sm font-semibold text-gray-900 leading-snug">
-                    {faq.q}
-                  </span>
-                  <ChevronDown className="w-4 h-4 text-gray-400 shrink-0 transition-transform group-open:rotate-180" />
-                </summary>
-                <div className="px-6 pb-5">
-                  <p className="text-sm text-gray-500 leading-relaxed">
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
+            <div className="hidden lg:block lg:w-[36%] shrink-0 lg:sticky lg:top-24">
+              <div className="relative w-full rounded-2xl overflow-hidden aspect-[4/5]">
+                <Image
+                  src="/images/whatsapp/whatsapp-business-api-provider-india.png"
+                  alt="WhatsApp Business API rich message preview on a phone"
+                  fill
+                  className="object-cover"
+                  sizes="36vw"
+                />
+              </div>
+            </div>
+            <AccordionList
+              className="flex-1 w-full"
+              items={FAQS.map((faq) => ({
+                question: faq.q,
+                answer: (
+                  <p className="text-base text-gray-500 leading-[1.7]">
                     {faq.a}
                     {faq.link && (
                       <>
@@ -1184,44 +1079,20 @@ export default function WhatsAppBusinessAPIPage() {
                       </>
                     )}
                   </p>
-                </div>
-              </details>
-            ))}
+                ),
+              }))}
+            />
           </div>
         </div>
       </section>
 
-      {/* -- BOTTOM CTA ----------------------------------------------------- */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] px-8 sm:px-16 py-16 text-center space-y-6">
-            <div className="absolute inset-0 opacity-[0.06] [background-image:linear-gradient(rgba(255,255,255,0.4)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.4)_1px,transparent_1px)] [background-size:32px_32px]" />
-            <div className="relative space-y-5">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white font-(family-name:--font-syne)">
-                Ready to get WhatsApp Business API?
-              </h2>
-              <p className="text-white/60 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-                Official Meta BSP · 3–5 Day Setup · 10,000+ Businesses Served ·
-                Noida, India. Our team responds within 2 hours on business days.
-              </p>
-              <div className="flex flex-wrap gap-3 justify-center">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-white text-[#1e3a8a] text-sm font-bold shadow-lg hover:scale-105 transition-transform"
-                >
-                  Get WhatsApp API <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 px-7 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors"
-                >
-                  Request a Free Demo
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  
     </>
   );
+}
+
+/** Tiny local join helper — avoids importing `cn` just for two-string concatenation
+ *  in the many inline `className={cnJoin(...)}` spots above. */
+function cnJoin(...parts: Array<string | false | undefined>) {
+  return parts.filter(Boolean).join(" ");
 }
