@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope, Syne } from "next/font/google";
+import { Manrope, Syne, Montserrat } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import GlobalBackground from "./components/GlobalBackground";
@@ -18,6 +18,14 @@ const syne = Syne({
   subsets: ["latin"],
   variable: "--font-syne",
   weight: ["400", "500", "600", "700", "800"],
+});
+
+// Description/body copy (paragraphs) — distinct from the Syne display
+// headings and the Manrope UI chrome, per the brand's typographic hierarchy.
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -62,7 +70,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full antialiased", manrope.variable, syne.variable)}
+      className={cn("h-full antialiased", manrope.variable, syne.variable, montserrat.variable)}
     >
       <body className=" relative font-[var(--font-manrope)]" suppressHydrationWarning>
         <script

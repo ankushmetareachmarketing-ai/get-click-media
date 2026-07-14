@@ -149,6 +149,12 @@ body {
   font-family: var(--font-manrope), sans-serif;
 }
 
+/* Description/body copy reads better in Montserrat than the UI-chrome
+   Manrope — headings stay on Syne (set explicitly per-heading elsewhere). */
+p {
+  font-family: var(--font-montserrat), sans-serif;
+}
+
 /* --- ANIMATED BACKGROUND ---------------------------------------------------- */
 
 /*
@@ -291,6 +297,20 @@ body::after {
 }
 .animate-marquee-right {
   animation: marquee-right var(--marquee-speed, 45s) linear infinite;
+}
+
+/* --- SPOTLIGHT HERO GLOW ----------------------------------------------------
+   One-shot fade-in (not a loop) so it costs nothing on mobile and never
+   fights prefers-reduced-motion. */
+@keyframes spotlight-fade {
+  0%   { opacity: 0; transform: translateY(-8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-spotlight-fade {
+  animation: spotlight-fade 1.6s ease forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-spotlight-fade { animation: none; opacity: 1; }
 }
 
 /* --- ENSURE ALL PAGE CONTENT SITS ABOVE THE BACKGROUND --------------------- */

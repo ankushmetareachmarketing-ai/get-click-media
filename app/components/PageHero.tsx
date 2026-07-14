@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Home } from "lucide-react";
 import { useModalStore } from "@/store/useModalStore";
+import { Spotlight } from "@/components/ui/spotlight";
 
 export interface BreadcrumbItem {
   label: string;
@@ -89,15 +90,10 @@ export default function PageHero({
         />
       )}
 
-      {/* Light blue glow — top-right */}
-      <div
-        className="absolute top-0 right-0 w-130 h-130 rounded-full pointer-events-none"
-        style={{
-          background: "radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%)",
-          transform: "translate(20%, -30%)",
-        }}
-        aria-hidden="true"
-      />
+      {/* Spotlight glow — replaces the old flat gradient-blob look with a
+          designed, angled, blurred glow (fades in once on mount, no loop). */}
+      <Spotlight className="-top-20 left-0 lg:left-20" fill="#2563eb" fillOpacity={0.5} />
+      <Spotlight className="top-10 right-0 lg:right-10 rotate-180" fill="#38bdf8" fillOpacity={0.4} />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 pt-32 sm:pt-40 pb-16 sm:pb-28 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
@@ -158,7 +154,7 @@ export default function PageHero({
           <div className="flex items-center gap-2 sm:gap-3 pt-1">
             <button
               onClick={openModal}
-              className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 h-9 sm:h-12 rounded-full bg-[linear-gradient(135deg,var(--primary),var(--primary-light))] text-white text-xs sm:text-sm font-bold shadow-(--shadow-card) hover:shadow-(--shadow-card-hover) hover:scale-105 transition-all duration-200 cursor-pointer whitespace-nowrap"
+              className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 h-11 sm:h-12 rounded-full bg-[linear-gradient(135deg,var(--primary),var(--primary-light))] text-white text-xs sm:text-sm font-bold shadow-(--shadow-card) hover:shadow-(--shadow-card-hover) hover:scale-105 transition-all duration-200 cursor-pointer whitespace-nowrap"
             >
               {primaryCta}
               <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white/20 flex items-center justify-center">
@@ -168,7 +164,7 @@ export default function PageHero({
 
             <Link
               href={secondaryCtaHref}
-              className="inline-flex items-center justify-center px-3 sm:px-6 h-9 sm:h-12 rounded-full border border-(--border-subtle) bg-white text-(--ink-2) text-xs sm:text-sm font-semibold hover:border-primary hover:text-primary hover:bg-blue-50/30 transition-all duration-150 whitespace-nowrap"
+              className="inline-flex items-center justify-center px-3 sm:px-6 h-11 sm:h-12 rounded-full border border-(--border-subtle) bg-white text-(--ink-2) text-xs sm:text-sm font-semibold hover:border-primary hover:text-primary hover:bg-blue-50/30 transition-all duration-150 whitespace-nowrap"
             >
               {secondaryCta}
             </Link>

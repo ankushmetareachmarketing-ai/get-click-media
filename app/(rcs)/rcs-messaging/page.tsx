@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, CheckCheck, Zap, Shield, BarChart3, MessageSquare, Layers, Globe, PhoneCall, MapPin, Star, ChevronDown } from "lucide-react";
+import DarkHero from "@/app/components/DarkHero";
+import { GradientCardCarousel } from "@/components/ui/gradient-card-carousel";
 
 /* -- SEO Metadata ---------------------------------------------------------- */
 export const metadata: Metadata = {
@@ -183,73 +185,31 @@ export default function RCSMessagingPage() {
       {/* JSON-LD Schema */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
-      {/* -- BREADCRUMB --------------------------------------------------- */}
-      <nav aria-label="Breadcrumb" className="max-w-7xl mx-auto px-4 sm:px-6 pt-6 pb-2">
-        <ol className="flex items-center gap-2 text-xs text-gray-400">
-          <li><Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link></li>
-          <li aria-hidden>/</li>
-          <li className="text-[#2563eb] font-medium">RCS Messaging</li>
-        </ol>
-      </nav>
-
       {/* -----------------------------------------------------------------
           HERO
       ----------------------------------------------------------------- */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
-        {/* Subtle grid overlay */}
-        <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:40px_40px]" />
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-
-            {/* Left copy */}
-            <div className="flex-1 text-center lg:text-left space-y-6">
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-semibold tracking-wider uppercase backdrop-blur-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#38bdf8] animate-pulse" />
-                Next-Generation Business Messaging
-              </span>
-
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight font-(family-name:--font-syne)">
-                RCS Messaging Service<br />
-                <span className="text-[#38bdf8]">for Indian Businesses</span>
-              </h1>
-
-              <p className="text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">
-                India is moving beyond plain text SMS. With RCS Business Messaging, your brand can send
-                rich, interactive messages — images, carousels, action buttons, and a verified sender
-                identity — right inside your customer's default messaging app.
-                <strong className="text-white"> No app downloads. No opt-in friction.</strong>
-              </p>
-
-              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-                <Link href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#1e3a8a] text-sm font-bold shadow-lg hover:scale-105 transition-transform duration-200">
-                  Request a Free Demo <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link href="#pricing"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-200">
-                  See RCS Pricing
-                </Link>
-              </div>
-
-              <p className="text-white/40 text-xs">Trusted by 10,000+ businesses across India</p>
-            </div>
-
-            {/* Right — hero image */}
-            <div className="w-full lg:w-[50%] shrink-0">
-              <div className="relative w-full rounded-2xl overflow-hidden aspect-4/3">
-                <Image
-                  src="/images/rcs/rcs-service-provider-india.png"
-                  alt="RCS Business Message on Android phone"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <DarkHero
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "RCS Messaging" },
+        ]}
+        eyebrow="Next-Generation Business Messaging"
+        title="RCS Messaging Service"
+        highlight="for Indian Businesses"
+        description={
+          <>
+            India is moving beyond plain text SMS. With RCS Business Messaging, your brand can send
+            rich, interactive messages — images, carousels, action buttons, and a verified sender
+            identity — right inside your customer&apos;s default messaging app.
+            <strong className="text-white"> No app downloads. No opt-in friction.</strong>
+          </>
+        }
+        primaryCta={{ label: "Request a Free Demo", href: "/contact" }}
+        secondaryCta={{ label: "See RCS Pricing", href: "#pricing" }}
+        imageSrc="/images/rcs/rcs-service-provider-india.png"
+        imageAlt="RCS Business Message on Android phone showing rich cards, carousel, and action buttons"
+        trustLine="Trusted by 10,000+ businesses across India"
+      />
 
       {/* -- STATS BAR ------------------------------------------------------ */}
       <section className="bg-white border-b border-gray-100">
@@ -441,17 +401,13 @@ export default function RCSMessagingPage() {
               Everything your business messages can do
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {FEATURES.map(f => (
-              <div key={f.title} className="rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors p-6 space-y-3">
-                <span className="w-10 h-10 rounded-xl bg-[#2563eb]/20 flex items-center justify-center">
-                  <f.icon className="w-5 h-5 text-[#38bdf8]" />
-                </span>
-                <h3 className="text-base font-bold text-white">{f.title}</h3>
-                <p className="text-sm text-white/50 leading-relaxed">{f.desc}</p>
-              </div>
-            ))}
-          </div>
+          <GradientCardCarousel
+            cards={FEATURES.map((f) => ({
+              icon: <f.icon className="w-5 h-5" />,
+              title: f.title,
+              description: f.desc,
+            }))}
+          />
         </div>
       </section>
 

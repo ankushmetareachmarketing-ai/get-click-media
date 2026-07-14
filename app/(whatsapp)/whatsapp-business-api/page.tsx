@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import DarkHero from "@/app/components/DarkHero";
+import { GradientCardCarousel } from "@/components/ui/gradient-card-carousel";
 import {
   ArrowRight,
   CheckCheck,
@@ -490,104 +492,36 @@ export default function WhatsAppBusinessAPIPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
-      {/* -- BREADCRUMB --------------------------------------------------- */}
-      <nav
-        aria-label="Breadcrumb"
-        className="max-w-7xl mx-auto px-4 sm:px-6 pt-6 pb-2"
-      >
-        <ol className="flex items-center gap-2 text-xs text-gray-400">
-          <li>
-            <Link href="/" className="hover:text-[#2563eb] transition-colors">
-              Home
-            </Link>
-          </li>
-          <li aria-hidden>/</li>
-          <li className="text-[#2563eb] font-medium">WhatsApp Business API</li>
-        </ol>
-      </nav>
-
       {/* -----------------------------------------------------------------
           HERO
       ----------------------------------------------------------------- */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
-        <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:40px_40px]" />
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="flex-1 text-center lg:text-left space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-semibold tracking-wider backdrop-blur-sm">
-                <Link href="/" className="hover:text-primary transition-colors">
-                  Home
-                </Link>
-
-                <span className="text-white/60">/</span>
-
-                <Link href="/products" className="hover:text-primary transition-colors">
-                  Products
-                </Link>
-
-                <span className="text-white/60">/</span>
-
-                <span className="text-white/90">
-                  WhatsApp Business API
-                </span>
-              </div>
-
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight font-(family-name:--font-syne)">
-                WhatsApp Business API
-                <br />
-                <span className="text-[#38bdf8]">
-                  Official Provider in India
-                </span>
-              </h1>
-
-              <p className="text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">
-                Get Click Media is an official Meta BSP headquartered in Noida,
-                offering WhatsApp Business API to over 10,000 businesses across
-                India — automated, rich, interactive messaging at scale,
-                delivered straight to any WhatsApp user.
-                <strong className="text-white">
-                  {" "}
-                  Setup takes 3–5 business days. Pricing starts at ₹0.40 per
-                  conversation.
-                </strong>
-              </p>
-
-              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#1e3a8a] text-sm font-bold shadow-lg hover:scale-105 transition-transform duration-200"
-                >
-                  Get WhatsApp API <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="#pricing"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-200"
-                >
-                  View Pricing
-                </Link>
-              </div>
-
-              <p className="text-white/40 text-xs">
-                Official Meta BSP · 3–5 Day Setup · 10,000+ Businesses Served ·
-                Noida, India
-              </p>
-            </div>
-
-            <div className="w-full lg:w-[50%] shrink-0">
-              <div className="relative w-full rounded-2xl overflow-hidden aspect-4/3">
-                <Image
-                  src="/images/whatsapp/whatsapp-bussinss-api-provider-india.png"
-                  alt="WhatsApp Business API rich message on a phone"
-                  fill
-                  className="object-contain scale-130 "
-                  priority
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <DarkHero
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "WhatsApp Business API" },
+        ]}
+        eyebrow="Official Meta Business Solution Provider"
+        title="WhatsApp Business API"
+        highlight="Official Provider in India"
+        description={
+          <>
+            Get Click Media is an official Meta BSP headquartered in Noida,
+            offering WhatsApp Business API to over 10,000 businesses across
+            India — automated, rich, interactive messaging at scale,
+            delivered straight to any WhatsApp user.
+            <strong className="text-white">
+              {" "}
+              Setup takes 3–5 business days. Pricing starts at ₹0.40 per
+              conversation.
+            </strong>
+          </>
+        }
+        primaryCta={{ label: "Get WhatsApp API", href: "/contact" }}
+        secondaryCta={{ label: "View Pricing", href: "#pricing" }}
+        imageSrc="/images/whatsapp/whatsapp-business-api-provider-india.png"
+        imageAlt="WhatsApp Business API rich message preview on a phone, showing interactive buttons and carousel"
+        trustLine="Official Meta BSP · 3–5 Day Setup · 10,000+ Businesses Served · Noida, India"
+      />
 
       {/* -- DIRECT ANSWER / AEO BLOCK -------------------------------------- */}
       <section className="py-10 bg-white">
@@ -803,30 +737,14 @@ export default function WhatsAppBusinessAPIPage() {
               Everything your business needs to run WhatsApp at scale
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {FEATURES.map((f) => {
-              const Card = (
-                <div className="h-full rounded-2xl bg-gray-50 border border-gray-100 hover:border-blue-200 hover:shadow-md transition-all p-6 space-y-3">
-                  <span className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center">
-                    <f.icon className="w-5 h-5 text-[#2563eb]" />
-                  </span>
-                  <h3 className="text-base font-bold text-gray-900">
-                    {f.title}
-                  </h3>
-                  <p className="text-sm text-gray-500 leading-relaxed">
-                    {f.desc}
-                  </p>
-                </div>
-              );
-              return f.href ? (
-                <Link key={f.title} href={f.href}>
-                  {Card}
-                </Link>
-              ) : (
-                <div key={f.title}>{Card}</div>
-              );
-            })}
-          </div>
+          <GradientCardCarousel
+            cards={FEATURES.map((f) => ({
+              icon: <f.icon className="w-5 h-5" />,
+              title: f.title,
+              description: f.desc,
+              href: f.href,
+            }))}
+          />
         </div>
       </section>
 
@@ -962,33 +880,16 @@ export default function WhatsAppBusinessAPIPage() {
               WhatsApp Business API across every industry
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {INDUSTRIES.map((ind) => {
-              const Card = (
-                <div className="h-full rounded-2xl bg-white border border-gray-100 hover:border-blue-200 hover:shadow-md transition-all p-6 space-y-3">
-                  <span className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center">
-                    <ind.icon className="w-5 h-5 text-[#2563eb]" />
-                  </span>
-                  <h3 className="text-base font-bold text-gray-900">
-                    {ind.name}
-                  </h3>
-                  <p className="text-sm text-gray-500 leading-relaxed">
-                    {ind.body}
-                  </p>
-                  <p className="text-xs font-bold text-green-600">
-                    {ind.result}
-                  </p>
-                </div>
-              );
-              return ind.href ? (
-                <Link key={ind.name} href={ind.href}>
-                  {Card}
-                </Link>
-              ) : (
-                <div key={ind.name}>{Card}</div>
-              );
-            })}
-          </div>
+          <GradientCardCarousel
+            cards={INDUSTRIES.map((ind) => ({
+              icon: <ind.icon className="w-5 h-5" />,
+              title: ind.name,
+              description: ind.body,
+              footnote: ind.result,
+              href: ind.href,
+              gradient: "from-emerald-50 via-white to-blue-50",
+            }))}
+          />
         </div>
       </section>
 
