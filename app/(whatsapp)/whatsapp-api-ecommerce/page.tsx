@@ -1,30 +1,16 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Image from "next/image";
 import {
-  ArrowRight,
-  CheckCheck,
-  ShieldCheck,
-  Users,
-  Clock,
-  Headphones,
-  Building2,
-  ChevronDown,
-  AlertTriangle,
-  ShoppingCart,
   Package,
-  Truck,
-  Repeat,
+  ShoppingCart,
   Star,
+  Repeat,
   Tag,
   RefreshCw,
-  MessageSquare,
-  Settings,
   Database,
-  Globe,
+  Settings,
   CreditCard,
-  BarChart3,
 } from "lucide-react";
+import { IndustryPageTemplate } from "../_templates/industry-page-template";
 
 /* ── SEO Metadata ────────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
@@ -190,469 +176,147 @@ const FAQS = [
   },
 ];
 
+const RELATED_LINKS = [
+  { label: "WhatsApp Business API", href: "/whatsapp-business-api" },
+  { label: "WhatsApp Catalog", href: "/whatsapp-catalog" },
+  { label: "WhatsApp Commerce", href: "/whatsapp-commerce" },
+  { label: "WhatsApp Automation", href: "/whatsapp-automation" },
+  { label: "WhatsApp Chatbot", href: "/whatsapp-chatbot" },
+  { label: "WhatsApp CRM Integration", href: "/whatsapp-crm-integration" },
+  { label: "Click to WhatsApp Ads", href: "/whatsapp-click-to-whatsapp-ads" },
+  { label: "WhatsApp API for E-commerce", href: "/whatsapp-api-ecommerce" },
+  { label: "WhatsApp API for Real Estate", href: "/whatsapp-api-real-estate" },
+  { label: "WhatsApp API for Healthcare", href: "/whatsapp-api-healthcare" },
+];
+
 /* ── Page ────────────────────────────────────────────────────────────────── */
 export default function WhatsAppAPIEcommercePage() {
   return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-
-      {/* ── BREADCRUMB ─────────────────────────────────────────────────── */}
-      <nav aria-label="Breadcrumb" className="max-w-7xl mx-auto px-4 sm:px-6 pt-6 pb-2">
-        <ol className="flex items-center gap-2 text-xs text-gray-400 flex-wrap">
-          <li><Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link></li>
-          <li aria-hidden>/</li>
-          <li><Link href="/whatsapp-business-api" className="hover:text-[#2563eb] transition-colors">WhatsApp Business API</Link></li>
-          <li aria-hidden>/</li>
-          <li className="text-[#2563eb] font-medium">E-commerce</li>
-        </ol>
-      </nav>
-
-      {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
-        <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:40px_40px]" />
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 py-20 sm:py-24 text-center space-y-6">
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-semibold tracking-wider uppercase backdrop-blur-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
-            E-commerce WhatsApp API
-          </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight font-(family-name:--font-syne)">
-            WhatsApp Business API for E-commerce<br />
-            <span className="text-[#38bdf8]">Order Updates, Cart Recovery &amp; D2C Growth India</span>
-          </h1>
-          <p className="text-white/70 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-            WhatsApp Business API for e-commerce enables Indian online retailers and D2C brands to automate
-            order confirmations, shipping updates, cart abandonment recovery, product recommendations, and
-            review collection. Get Click Media integrates WhatsApp with Shopify, WooCommerce, and custom OMS
-            platforms — reducing cart abandonment by 18-26% and increasing repeat purchase rates by 35%.
-          </p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <Link href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#1e3a8a] text-sm font-bold shadow-lg hover:scale-105 transition-transform duration-200">
-              Book a Demo <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link href="/whatsapp-api-pricing-india"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-200">
-              View Pricing
-            </Link>
-            <Link href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-200">
-              Start WhatsApp Onboarding
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ── DIRECT ANSWER / AEO BLOCK ────────────────────────────────────── */}
-      <section className="py-10 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="rounded-2xl border-l-4 border-[#2563eb] bg-blue-50/60 px-6 py-5">
-            <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-              WhatsApp Business API for e-commerce enables Indian online retailers and D2C brands to automate
-              order confirmations, shipping updates, cart abandonment recovery, product recommendations, and
-              review collection.
-              <strong className="text-gray-900"> Get Click Media integrates WhatsApp with Shopify, WooCommerce,</strong>
-              and custom OMS platforms — reducing cart abandonment by 18-26% and increasing repeat purchase rates by 35%.
-            </p>
-          </div>
-
-          <div className="mt-8 p-6 bg-red-50 rounded-xl border border-red-100">
-            <p className="text-sm text-red-800 leading-relaxed">
-              <AlertTriangle className="w-4 h-4 inline mr-2 text-red-500" />
-              Indian e-commerce brands lose an estimated <strong>₹95,000 crore annually</strong> to cart
-              abandonment. Traditional cart recovery channels — email (4-6% recovery) and retargeting ads
-              (2-3% conversion) — leave significant revenue on the table. WhatsApp cart recovery messages
-              with product images, prices, and one-tap checkout links achieve <strong>18-26% recovery rates</strong>
-              — 4x to 6x higher than email.
-            </p>
-          </div>
-
-          <p className="text-gray-500 text-sm leading-relaxed mt-6">
-            India's e-commerce market processes over 15 million orders daily. Order communication via email
-            achieves 20-25% open rates — meaning 75-80% of customers do not see their order updates.
-            WhatsApp achieves 98% open rates. For Indian D2C brands, the difference in customer experience
-            between email and WhatsApp order communication is not incremental — it is transformational.
-          </p>
-        </div>
-      </section>
-
-      {/* ── STATS BAR ────────────────────────────────────────────────────── */}
-      <section className="bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
-          {[
-            { value: "98%", label: "Order notification open rate vs 22% email" },
-            { value: "26%", label: "Cart recovery rate via WhatsApp vs 6% email" },
-            { value: "35%", label: "Increase in repeat purchase rate" },
-            { value: "60%", label: "Reduction in order-related support tickets" },
-          ].map(s => (
-            <div key={s.value} className="space-y-1">
-              <p className="text-3xl sm:text-4xl font-extrabold text-[#2563eb] font-(family-name:--font-syne)">{s.value}</p>
-              <p className="text-sm font-medium text-gray-600">{s.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ── IMAGE SECTION: E-commerce Dashboard ────────────────────────── */}
-      <section className="py-16 bg-white border-b border-gray-100">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="flex-1 space-y-4">
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-50 text-green-700 text-xs font-bold uppercase tracking-widest">
-                Order Management Hub
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
-                Complete WhatsApp API platform <br className="hidden sm:inline" />
-                <span className="text-[#2563eb]">for e-commerce brands</span>
-              </h2>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Manage all customer communication from a single dashboard — order confirmations, shipping
-                updates, cart recovery, review collection, and replenishment reminders — with full integration
-                to your e-commerce platform.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-3 text-sm text-gray-600">
-                  <CheckCheck className="w-4 h-4 text-[#25D366] shrink-0 mt-0.5" />
-                  <span>Automated order confirmation and tracking updates</span>
-                </li>
-                <li className="flex items-start gap-3 text-sm text-gray-600">
-                  <CheckCheck className="w-4 h-4 text-[#25D366] shrink-0 mt-0.5" />
-                  <span>Cart recovery sequence with product images and discounts</span>
-                </li>
-                <li className="flex items-start gap-3 text-sm text-gray-600">
-                  <CheckCheck className="w-4 h-4 text-[#25D366] shrink-0 mt-0.5" />
-                  <span>Post-purchase review collection with star ratings</span>
-                </li>
-                <li className="flex items-start gap-3 text-sm text-gray-600">
-                  <CheckCheck className="w-4 h-4 text-[#25D366] shrink-0 mt-0.5" />
-                  <span>Replenishment reminders for repeat purchases</span>
-                </li>
-              </ul>
-            </div>
-            <div className="w-full lg:w-[50%] shrink-0">
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-xl border border-gray-200">
-                <Image
-                  src="/images/whatsapp/ecommerce-dashboard.webp"
-                  alt="WhatsApp API E-commerce dashboard — order confirmations, cart recovery, review collection, and replenishment reminders"
-                  width={700}
-                  height={500}
-                  className="w-full h-auto"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── WHY ECOMMERCE NEEDS WHATSAPP ───────────────────────────────── */}
-      <section className="py-20 sm:py-24 bg-white" id="why-ecommerce">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
-              Why E-commerce Needs WhatsApp
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
-              Why E-commerce and D2C Businesses in India Need WhatsApp API
-            </h2>
-          </div>
-          <div className="space-y-6 text-gray-600 leading-relaxed">
-            <p>
-              Indian e-commerce brands lose an estimated <strong>₹95,000 crore annually</strong> to cart
-              abandonment. Traditional cart recovery channels — email (4-6% recovery) and retargeting ads
-              (2-3% conversion) — leave significant revenue on the table.
-            </p>
-            <p>
-              WhatsApp cart recovery messages with product images, prices, and one-tap checkout links achieve
-              <strong> 18-26% recovery rates</strong> — 4x to 6x higher than email. With <strong>98% order
-              notification open rates</strong> and <strong>35% increase in repeat purchases</strong>, WhatsApp
-              is rapidly becoming the standard for e-commerce customer communication in India.
-            </p>
-            <div className="bg-blue-50 rounded-xl p-5 border border-blue-100">
-              <p className="text-sm text-blue-800 font-medium">
-                💡 <strong>Key insight:</strong> Order communication via email achieves 20-25% open rates —
-                meaning 75-80% of customers do not see their order updates. WhatsApp achieves 98% open rates.
-                For Indian D2C brands, the difference is not incremental — it is transformational.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── USE CASES ────────────────────────────────────────────────────── */}
-      <section className="py-20 sm:py-28 bg-gray-50" id="use-cases">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-14 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
-              Use Cases
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
-              WhatsApp API Use Cases for E-commerce — 6 Automations
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {USE_CASES.map((uc) => (
-              <div key={uc.title} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow space-y-3">
-                <div className="flex items-center gap-3">
-                  <span className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
-                    <uc.icon className="w-4 h-4 text-[#2563eb]" />
-                  </span>
-                  <h3 className="text-base font-bold text-gray-900 font-(family-name:--font-syne)">{uc.title}</h3>
-                </div>
-                <div className="space-y-2 text-sm">
-                  <p><span className="font-semibold text-gray-700">Trigger:</span> <span className="text-gray-500">{uc.trigger}</span></p>
-                  <p><span className="font-semibold text-gray-700">WhatsApp message sent:</span> <span className="text-gray-500">{uc.message}</span></p>
-                  <p><span className="font-semibold text-gray-700">Business result:</span> <span className="text-green-600">{uc.result}</span></p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── IMAGE SECTION: WhatsApp Cart Recovery Preview ──────────────── */}
-      <section className="py-16 bg-white border-t border-gray-100">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
-            <div className="flex-1 space-y-4">
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-50 text-green-700 text-xs font-bold uppercase tracking-widest">
-                Cart Recovery Automation
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
-                WhatsApp cart recovery <br className="hidden sm:inline" />
-                <span className="text-[#2563eb]">that actually recovers revenue</span>
-              </h2>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Interactive WhatsApp cart recovery messages with product images, prices, and one-tap checkout
-                links. A 3-message sequence (1hr, 24hr, 48hr) with escalating urgency and discount offers
-                achieves 18-26% recovery rates — 4x to 6x higher than email.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-3 text-sm text-gray-600">
-                  <CheckCheck className="w-4 h-4 text-[#25D366] shrink-0 mt-0.5" />
-                  <span>Product image and price in every recovery message</span>
-                </li>
-                <li className="flex items-start gap-3 text-sm text-gray-600">
-                  <CheckCheck className="w-4 h-4 text-[#25D366] shrink-0 mt-0.5" />
-                  <span>Social proof — how many people bought this item</span>
-                </li>
-                <li className="flex items-start gap-3 text-sm text-gray-600">
-                  <CheckCheck className="w-4 h-4 text-[#25D366] shrink-0 mt-0.5" />
-                  <span>Discount offer escalation at 48 hours</span>
-                </li>
-                <li className="flex items-start gap-3 text-sm text-gray-600">
-                  <CheckCheck className="w-4 h-4 text-[#25D366] shrink-0 mt-0.5" />
-                  <span>One-tap checkout link directly to cart</span>
-                </li>
-              </ul>
-            </div>
-            <div className="w-full lg:w-[40%] shrink-0">
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-xl border border-gray-200 max-w-sm mx-auto">
-                <Image
-                  src="/images/whatsapp/ecommerce-cart-recovery.webp"
-                  alt="WhatsApp cart recovery message preview — product image, price, discount offer, and one-tap checkout link"
-                  width={400}
-                  height={700}
-                  className="w-full h-auto"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── PERFORMANCE BENCHMARKS ──────────────────────────────────────── */}
-      <section className="py-20 sm:py-28 bg-gray-50" id="performance">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
-              Performance Benchmarks
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
-              Real results from Indian e-commerce brands
-            </h2>
-          </div>
-          <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
-            <table className="w-full text-sm min-w-[600px]">
-              <thead>
-                <tr className="bg-[#0f172a] text-white text-xs uppercase tracking-wider">
-                  <th className="text-left px-5 py-4 font-semibold">Metric</th>
-                  <th className="text-center px-4 py-4 font-semibold text-red-400">Before WhatsApp API</th>
-                  <th className="text-center px-4 py-4 font-semibold text-[#38bdf8]">After WhatsApp API</th>
-                  <th className="text-left px-4 py-4 font-semibold text-white/60">Source</th>
-                </tr>
-              </thead>
-              <tbody>
-                {PERFORMANCE_DATA.map((row, i) => (
-                  <tr key={row.metric} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                    <td className="px-5 py-3.5 font-medium text-gray-900">{row.metric}</td>
-                    <td className="px-4 py-3.5 text-center text-red-400">{row.before}</td>
-                    <td className="px-4 py-3.5 text-center text-[#38bdf8]">{row.after}</td>
-                    <td className="px-4 py-3.5 text-xs text-gray-500">{row.source}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* ── IMAGE SECTION: Shopify Integration ──────────────────────────── */}
-      <section className="py-16 bg-white border-b border-gray-100">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="w-full lg:w-[50%] shrink-0">
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-xl border border-gray-200">
-                <Image
-                  src="/images/whatsapp/ecommerce-shopify-integration.webp"
-                  alt="WhatsApp API Shopify integration — native plugin for order sync, catalog sync, and customer data sync"
-                  width={700}
-                  height={450}
-                  className="w-full h-auto"
-                />
-              </div>
-            </div>
-            <div className="flex-1 space-y-4">
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-50 text-purple-700 text-xs font-bold uppercase tracking-widest">
-                Native Integration
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
-                Connect WhatsApp with <br className="hidden sm:inline" />
-                <span className="text-[#2563eb]">Shopify and WooCommerce</span>
-              </h2>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Get Click Media's native plugins for Shopify and WooCommerce connect your store to WhatsApp
-                in real time — product catalog syncs automatically, orders trigger WhatsApp notifications,
-                and customer interactions are synced back to your e-commerce platform.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                {["Shopify native plugin", "WooCommerce plugin", "Custom OMS API", "Product catalog sync", "Order trigger automation"].map((item) => (
-                  <span key={item} className="px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-lg text-xs font-medium text-gray-700">
-                    {item}
-                  </span>
-                ))}
-              </div>
-              <p className="text-xs text-gray-400 mt-2">
-                Setup takes 1-2 hours after WhatsApp API onboarding is complete.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── CAPABILITIES ──────────────────────────────────────────────────── */}
-      <section className="py-20 sm:py-28 bg-[#0f172a]" id="capabilities">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-14 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/10 text-[#38bdf8] text-xs font-bold uppercase tracking-widest">
-              Platform Capabilities
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-(family-name:--font-syne)">
-              Get Click Media&apos;s WhatsApp API Capabilities for E-commerce
-            </h2>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {CAPABILITIES.map(c => (
-              <div key={c.title} className="rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors p-6 space-y-3">
-                <span className="w-10 h-10 rounded-xl bg-[#2563eb]/20 flex items-center justify-center">
-                  <c.icon className="w-5 h-5 text-[#38bdf8]" />
-                </span>
-                <h3 className="text-sm font-bold text-white leading-snug">{c.title}</h3>
-                <p className="text-xs text-white/50 leading-relaxed">{c.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── FAQ ──────────────────────────────────────────────────────────── */}
-      <section className="py-20 sm:py-28 bg-white" id="faq">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
-              Frequently Asked Questions
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
-              WhatsApp API for E-commerce
-            </h2>
-          </div>
-          <div className="space-y-3">
-            {FAQS.map((faq, i) => (
-              <details
-                key={i}
-                className="group rounded-2xl bg-gray-50 border border-gray-100 shadow-sm open:shadow-md transition-shadow"
-              >
-                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
-                  <span className="text-sm font-semibold text-gray-900 leading-snug">{faq.q}</span>
-                  <ChevronDown className="w-4 h-4 text-gray-400 shrink-0 transition-transform group-open:rotate-180" />
-                </summary>
-                <div className="px-6 pb-5">
-                  <p className="text-sm text-gray-500 leading-relaxed">{faq.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── RELATED LINKS ────────────────────────────────────────────────── */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-6 font-(family-name:--font-syne)">
-            Related WhatsApp Business API resources
-          </h2>
-          <div className="flex flex-wrap gap-3">
-            {[
-              { label: "WhatsApp Business API", href: "/whatsapp-business-api" },
-              { label: "WhatsApp Catalog", href: "/whatsapp-catalog" },
-              { label: "WhatsApp Commerce", href: "/whatsapp-commerce" },
-              { label: "WhatsApp Automation", href: "/whatsapp-automation" },
-              { label: "WhatsApp Chatbot", href: "/whatsapp-chatbot" },
-              { label: "WhatsApp CRM Integration", href: "/whatsapp-crm-integration" },
-              { label: "Click to WhatsApp Ads", href: "/whatsapp-click-to-whatsapp-ads" },
-              { label: "WhatsApp API for E-commerce", href: "/whatsapp-api-ecommerce" },
-              { label: "WhatsApp API for Real Estate", href: "/whatsapp-api-real-estate" },
-              { label: "WhatsApp API for Healthcare", href: "/whatsapp-api-healthcare" },
-            ].map(l => (
-              <Link key={l.href} href={l.href}
-                className="px-4 py-2 rounded-full bg-white border border-gray-200 text-sm font-medium text-gray-600 hover:border-[#2563eb] hover:text-[#2563eb] transition-colors">
-                {l.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── BOTTOM CTA ───────────────────────────────────────────────────── */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] px-8 sm:px-16 py-16 text-center space-y-6">
-            <div className="absolute inset-0 opacity-[0.06] [background-image:linear-gradient(rgba(255,255,255,0.4)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.4)_1px,transparent_1px)] [background-size:32px_32px]" />
-            <div className="relative space-y-5">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white font-(family-name:--font-syne)">
-                Ready to transform e-commerce communication with WhatsApp?
-              </h2>
-              <p className="text-white/60 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-                Get Click Media provides WhatsApp API for e-commerce with Shopify, WooCommerce, and custom OMS
-                integration — automated order updates, cart recovery, and review collection.
-              </p>
-              <div className="flex flex-wrap gap-3 justify-center">
-                <Link href="/contact"
-                  className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-white text-[#1e3a8a] text-sm font-bold shadow-lg hover:scale-105 transition-transform">
-                  Book a Demo <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link href="/whatsapp-api-pricing-india"
-                  className="inline-flex items-center gap-2 px-7 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors">
-                  View Pricing
-                </Link>
-                <Link href="/contact"
-                  className="inline-flex items-center gap-2 px-7 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors">
-                  Start Onboarding
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+    <IndustryPageTemplate
+      breadcrumbLabel="E-commerce"
+      heroEyebrow="E-commerce WhatsApp API"
+      heroTitle="WhatsApp Business API for E-commerce"
+      heroHighlight="Order Updates, Cart Recovery & D2C Growth India"
+      heroDescription={
+        <>
+          WhatsApp Business API for e-commerce enables Indian online retailers and D2C brands to
+          automate order confirmations, shipping updates, cart abandonment recovery, product
+          recommendations, and review collection.
+          <strong className="text-gray-900"> Get Click Media integrates WhatsApp with Shopify, WooCommerce, and custom OMS platforms — reducing cart abandonment by 18-26% and increasing repeat purchase rates by 35%.</strong>
+        </>
+      }
+      heroImage="/images/whatsapp/ecommerce/whatsapp-bussiness-api-for-ecommerce.png"
+      heroImageAlt="WhatsApp Business API for E-commerce — order updates, cart recovery, and D2C growth dashboard"
+      heroTrustLine="Official Meta BSP · Native Shopify & WooCommerce integration · Razorpay, PayU & UPI payments · India-based support"
+      stats={[
+        { value: "98%", label: "Order notification open rate vs 22% email" },
+        { value: "26%", label: "Cart recovery rate via WhatsApp vs 6% email" },
+        { value: "35%", label: "Increase in repeat purchase rate" },
+        { value: "60%", label: "Reduction in order-related support tickets" },
+      ]}
+      aeoParagraph={
+        <>
+          WhatsApp Business API for e-commerce enables Indian online retailers and D2C brands to automate
+          order confirmations, shipping updates, cart abandonment recovery, product recommendations, and
+          review collection.
+          <strong className="text-gray-900"> Get Click Media integrates WhatsApp with Shopify, WooCommerce,</strong> and
+          custom OMS platforms — reducing cart abandonment by 18-26% and increasing repeat purchase rates by 35%.
+        </>
+      }
+      insightCallout={
+        <>
+          Indian e-commerce brands lose an estimated <strong>₹95,000 crore annually</strong> to cart
+          abandonment. Traditional cart recovery channels — email (4-6% recovery) and retargeting ads
+          (2-3% conversion) — leave significant revenue on the table. WhatsApp cart recovery messages
+          with product images, prices, and one-tap checkout links achieve{" "}
+          <strong>18-26% recovery rates</strong> — 4x to 6x higher than email.
+        </>
+      }
+      whyIndustryTitle="Why E-commerce and D2C Businesses in India Need WhatsApp API"
+      whyIndustryParagraphs={[
+        <>
+          Indian e-commerce brands lose an estimated <strong>₹95,000 crore annually</strong> to cart
+          abandonment. Traditional cart recovery channels — email (4-6% recovery) and retargeting ads
+          (2-3% conversion) — leave significant revenue on the table.
+        </>,
+        <>
+          WhatsApp cart recovery messages with product images, prices, and one-tap checkout links
+          achieve <strong>18-26% recovery rates</strong> — 4x to 6x higher than email. With{" "}
+          <strong>98% order notification open rates</strong> and{" "}
+          <strong>35% increase in repeat purchases</strong>, WhatsApp is rapidly becoming the standard
+          for e-commerce customer communication in India.
+        </>,
+      ]}
+      whyIndustryInsight={
+        <>
+          💡 <strong>Key insight:</strong> Order communication via email achieves 20-25% open rates —
+          meaning 75-80% of customers do not see their order updates. WhatsApp achieves 98% open rates.
+          For Indian D2C brands, the difference is not incremental — it is transformational.
+        </>
+      }
+      imageSections={[
+        {
+          eyebrow: "Order Management Hub",
+          title: (
+            <>
+              Complete WhatsApp API platform <span className="text-[#2563eb]">for e-commerce brands</span>
+            </>
+          ),
+          description:
+            "Manage all customer communication from a single dashboard — order confirmations, shipping updates, cart recovery, review collection, and replenishment reminders — with full integration to your e-commerce platform.",
+          bullets: [
+            "Automated order confirmation and tracking updates",
+            "Cart recovery sequence with product images and discounts",
+            "Post-purchase review collection with star ratings",
+            "Replenishment reminders for repeat purchases",
+          ],
+          image: "/images/whatsapp/ecommerce/whatsapp-bussiness-api-for-ecommerce-dashboard.webp",
+          imageAlt: "WhatsApp API E-commerce dashboard — order confirmations, cart recovery, review collection, and replenishment reminders",
+        },
+        {
+          eyebrow: "Cart Recovery Automation",
+          title: (
+            <>
+              WhatsApp cart recovery <span className="text-[#2563eb]">that actually recovers revenue</span>
+            </>
+          ),
+          description:
+            "Interactive WhatsApp cart recovery messages with product images, prices, and one-tap checkout links. A 3-message sequence (1hr, 24hr, 48hr) with escalating urgency and discount offers achieves 18-26% recovery rates — 4x to 6x higher than email.",
+          bullets: [
+            "Product image and price in every recovery message",
+            "Social proof — how many people bought this item",
+            "Discount offer escalation at 48 hours",
+            "One-tap checkout link directly to cart",
+          ],
+          image: "/images/whatsapp/ecommerce/whatsapp-cart-recovery-message-preview.webp",
+          imageAlt: "WhatsApp cart recovery message preview — product image, price, discount offer, and one-tap checkout link",
+          imageSide: "left",
+        },
+        {
+          eyebrow: "Native Integration",
+          title: (
+            <>
+              Connect WhatsApp with <span className="text-[#2563eb]">Shopify and WooCommerce</span>
+            </>
+          ),
+          description:
+            "Get Click Media's native plugins for Shopify and WooCommerce connect your store to WhatsApp in real time — product catalog syncs automatically, orders trigger WhatsApp notifications, and customer interactions are synced back to your e-commerce platform. Setup takes 1-2 hours after WhatsApp API onboarding is complete.",
+          bullets: ["Shopify native plugin", "WooCommerce plugin", "Custom OMS API", "Product catalog sync", "Order trigger automation"],
+          image: "/images/whatsapp/ecommerce/whatsapp-api-shopify-woocommerce-integration.webp",
+          imageAlt: "WhatsApp API Shopify and WooCommerce integration — native plugin for order sync, catalog sync, and customer data sync",
+          imageSide: "left",
+        },
+      ]}
+      useCasesTitle="WhatsApp API Use Cases for E-commerce — 6 Automations"
+      useCases={USE_CASES}
+      performanceData={PERFORMANCE_DATA}
+      capabilitiesTitle="Get Click Media's WhatsApp API Capabilities for E-commerce"
+      capabilities={CAPABILITIES}
+      faqs={FAQS}
+      relatedLinks={RELATED_LINKS}
+      bottomCtaTitle="Ready to transform e-commerce communication with WhatsApp?"
+      bottomCtaDescription="Get Click Media provides WhatsApp API for e-commerce with Shopify, WooCommerce, and custom OMS integration — automated order updates, cart recovery, and review collection."
+      schema={schema}
+    />
   );
 }

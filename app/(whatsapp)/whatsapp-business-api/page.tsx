@@ -6,10 +6,12 @@ import { GradientCardCarousel } from "@/components/ui/gradient-card-carousel";
 import { PremiumFeatureGrid } from "@/components/ui/premium-feature-grid";
 import { ResponsiveTable } from "@/components/ui/responsive-table";
 import { MarketingCta } from "@/components/ui/marketing-cta";
+import { GlowCtaBanner } from "@/components/ui/glow-cta-banner";
 import { BentoGrid, BentoCard } from "@/components/ui/bento-grid";
 import { AccordionList } from "@/components/ui/accordion-list";
+import { TestimonialsGrid } from "@/components/ui/testimonials-grid";
+import { SectionPattern } from "@/components/ui/section-pattern";
 import ClientMarquee from "@/app/components/ClientMarquee";
-import Testimonial from "@/app/components/Testimonial";
 import WhatsappStatBand from "@/app/components/whatsapp/WhatsappStatBand";
 import {
   CheckCheck,
@@ -488,6 +490,63 @@ const FAQS = [
   },
 ];
 
+const WHATSAPP_TESTIMONIALS = [
+  {
+    image: "https://randomuser.me/api/portraits/women/68.jpg",
+    name: "Ananya Iyer",
+    role: "Head of Growth, UrbanCart",
+    text: "Our WhatsApp chatbot now handles 70% of order-status queries automatically — support tickets dropped by half in the first month.",
+  },
+  {
+    image: "https://randomuser.me/api/portraits/men/46.jpg",
+    name: "Karthik Rao",
+    role: "Marketing Lead, FreshMart Foods",
+    text: "Broadcast campaigns on WhatsApp get us 40% higher click-through than our email newsletter ever did, at a fraction of the cost.",
+  },
+  {
+    image: "https://randomuser.me/api/portraits/women/21.jpg",
+    name: "Simran Kaur",
+    role: "Ops Manager, QuickLoan Finance",
+    text: "Get Click Media got our OTP and utility templates approved in under two days. Onboarding was the smoothest API integration we've done.",
+  },
+  {
+    image: "https://randomuser.me/api/portraits/men/62.jpg",
+    name: "Vikram Desai",
+    role: "Support Lead, TechFix Solutions",
+    text: "The shared inbox means our whole team sees full conversation history — no more asking customers to repeat themselves after a handoff.",
+  },
+  {
+    image: "https://randomuser.me/api/portraits/women/33.jpg",
+    name: "Neha Bhatt",
+    role: "Performance Marketing, StyleHub",
+    text: "Click-to-WhatsApp ads convert almost twice as well as our landing pages. Customers chat instead of bouncing off a form.",
+  },
+  {
+    image: "https://randomuser.me/api/portraits/men/29.jpg",
+    name: "Arjun Nair",
+    role: "Founder, LocalBazaar",
+    text: "Customers now browse and buy straight from our WhatsApp catalog — no separate app, no friction, just a chat.",
+  },
+  {
+    image: "https://randomuser.me/api/portraits/women/52.jpg",
+    name: "Dr. Meera Pillai",
+    role: "Clinic Director, CarePlus Wellness",
+    text: "Appointment reminders on WhatsApp cut our no-show rate noticeably within weeks — patients simply engage with it more than SMS.",
+  },
+  {
+    image: "https://randomuser.me/api/portraits/men/71.jpg",
+    name: "Rajesh Kumar",
+    role: "Collections Head, SafeLoan NBFC",
+    text: "EMI reminder delivery and read-rates on WhatsApp are far better than SMS ever gave us — collections follow-up got measurably easier.",
+  },
+  {
+    image: "https://randomuser.me/api/portraits/women/12.jpg",
+    name: "Divya Menon",
+    role: "CMO, TravelNest",
+    text: "Delivery and read analytics on every campaign gives us real ROI data we never had with SMS. Budget conversations are so much easier now.",
+  },
+];
+
 /* -- Shared layout tokens --------------------------------------------------- */
 const CONTAINER = "max-w-7xl mx-auto px-6 sm:px-12 lg:px-20";
 const SECTION_PADDING = "py-16 sm:py-20 lg:py-[100px]";
@@ -552,8 +611,9 @@ export default function WhatsAppBusinessAPIPage() {
       <WhatsappStatBand />
 
       {/* -- SEE IT IN ACTION — concrete "what is this" proof --------------- */}
-      <section className={cnJoin(SECTION_PADDING, "bg-blue-50/40")} id="see-it-in-action">
-        <div className={CONTAINER}>
+      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-blue-50/40")} id="see-it-in-action">
+        <SectionPattern tone="gold" />
+        <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="flex flex-col lg:flex-row items-center gap-14">
             <div className="w-full lg:w-[54%] shrink-0">
               <div className="relative w-full rounded-2xl aspect-[4/3] overflow-hidden">
@@ -603,8 +663,9 @@ export default function WhatsAppBusinessAPIPage() {
       </section>
 
       {/* -- WHAT IS WHATSAPP BUSINESS API — deeper "what is this" ---------- */}
-      <section className={cnJoin(SECTION_PADDING, "bg-white")} id="what-is-whatsapp-api">
-        <div className={CONTAINER}>
+      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="what-is-whatsapp-api">
+        <SectionPattern tone="light" />
+        <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
             <span className={EYEBROW_LIGHT}>What Is WhatsApp Business API?</span>
             <h2 className={cnJoin(H2_LIGHT, "max-w-3xl mx-auto")} style={SYNE_FONT}>
@@ -641,8 +702,9 @@ export default function WhatsAppBusinessAPIPage() {
       </section>
 
       {/* -- BENEFITS — "Why should I care?" --------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "bg-blue-50/40")} id="benefits">
-        <div className={CONTAINER}>
+      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-blue-50/40")} id="benefits">
+        <SectionPattern tone="gold" />
+        <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
             <span className={EYEBROW_LIGHT}>Why WhatsApp API for Indian Businesses</span>
             <h2 className={H2_LIGHT} style={SYNE_FONT}>
@@ -655,15 +717,13 @@ export default function WhatsAppBusinessAPIPage() {
               name="Highest open rates of any channel in India"
               description="WhatsApp achieves 98% open rates in India, versus 20–25% for email and 30–35% for SMS — your customers open every message."
               className="lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-3"
-              background={
-                <div className="absolute inset-x-6 bottom-0 h-36 sm:h-44">
-                  <Image
-                    src="/images/whatsapp/whatsapp-business-api-provider-india.png"
-                    alt=""
-                    fill
-                    className="object-contain object-bottom opacity-90"
-                  />
-                </div>
+              image={
+                <Image
+                  src="/images/whatsapp/whatsapp-bussiness-api.webp"
+                  alt="WhatsApp Business API broadcast and catalog messages shown on a phone"
+                  fill
+                  className="object-contain object-bottom"
+                />
               }
             />
             <BentoCard
@@ -701,8 +761,9 @@ export default function WhatsAppBusinessAPIPage() {
       </section>
 
       {/* -- USE CASES BY INDUSTRY — "Why should I care?" (relevance) ------- */}
-      <section className={cnJoin(SECTION_PADDING, "bg-gray-50")} id="use-cases">
-        <div className={CONTAINER}>
+      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-gray-50")} id="use-cases">
+        <SectionPattern tone="teal" />
+        <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
             <span className={EYEBROW_LIGHT}>Industry Use Cases</span>
             <h2 className={H2_LIGHT} style={SYNE_FONT}>
@@ -722,8 +783,9 @@ export default function WhatsAppBusinessAPIPage() {
       </section>
 
       {/* -- HOW IT WORKS — mechanism ---------------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "bg-[#0f172a]")} id="how-it-works">
-        <div className={CONTAINER}>
+      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-[#0f172a]")} id="how-it-works">
+        <SectionPattern tone="green" opacity={0.08} />
+        <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4 mx-auto lg:w-[40%]">
             <span className={EYEBROW_DARK}>How It Works</span>
             <h2 className={H2_DARK} style={SYNE_FONT}>
@@ -768,9 +830,10 @@ export default function WhatsAppBusinessAPIPage() {
       />
 
       {/* -- WHY GET CLICK MEDIA — "Can I trust this?" ----------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "bg-gray-50")} id="why-gcm">
-        <div className={CONTAINER}>
-          <div className="flex flex-col lg:flex-row items-center gap-14">
+      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-gray-50")} id="why-gcm">
+        <SectionPattern tone="teal" />
+        <div className={cnJoin(CONTAINER, "relative z-10")}>
+          <div className="flex flex-col lg:flex-row lg:items-start gap-14">
             <div className="flex-1 space-y-6">
               <span className={EYEBROW_LIGHT}>Why Choose Get Click Media?</span>
               <h2 className={H2_LIGHT} style={SYNE_FONT}>
@@ -812,7 +875,7 @@ export default function WhatsAppBusinessAPIPage() {
                 </div>
               ))}
             </div>
-            <div className="w-full lg:w-[44%] shrink-0">
+            <div className="w-full lg:w-[44%] shrink-0 lg:sticky lg:top-24">
               <div className="relative w-full rounded-2xl overflow-hidden aspect-4/3 shadow-(--shadow-elevated)">
                 <Image
                   src="/images/whatsapp/direct-meta-partner.webp"
@@ -827,11 +890,23 @@ export default function WhatsAppBusinessAPIPage() {
       </section>
 
       {/* -- CUSTOMER REVIEWS — "Can I trust this?" -------------------------- */}
-      <Testimonial />
+      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="testimonials">
+        <SectionPattern tone="light" />
+        <div className={cnJoin(CONTAINER, "relative z-10")}>
+          <div className="text-center mb-12 space-y-4">
+            <span className={EYEBROW_LIGHT}>Customer Stories</span>
+            <h2 className={H2_LIGHT} style={SYNE_FONT}>
+              Trusted by businesses running WhatsApp API at scale
+            </h2>
+          </div>
+          <TestimonialsGrid testimonials={WHATSAPP_TESTIMONIALS} maxDisplayed={6} />
+        </div>
+      </section>
 
       {/* -- PROVIDER COMPARISON — "Can I trust this?" ----------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "bg-gray-50")} id="comparison">
-        <div className={CONTAINER}>
+      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-gray-50")} id="comparison">
+        <SectionPattern tone="teal" />
+        <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-12 space-y-4">
             <span className={EYEBROW_LIGHT}>Full Comparison</span>
             <h2 className={H2_LIGHT} style={SYNE_FONT}>
@@ -876,8 +951,9 @@ export default function WhatsAppBusinessAPIPage() {
       </section>
 
       {/* -- CONVERSATION CATEGORIES / PRICING — "How much?" ----------------- */}
-      <section className={cnJoin(SECTION_PADDING, "bg-white")} id="pricing">
-        <div className={CONTAINER}>
+      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="pricing">
+        <SectionPattern tone="light" />
+        <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-12 space-y-4">
             <span className={EYEBROW_LIGHT}>Conversation Categories</span>
             <h2 className={H2_LIGHT} style={SYNE_FONT}>
@@ -917,8 +993,9 @@ export default function WhatsAppBusinessAPIPage() {
       </section>
 
       {/* -- HOW TO GET WHATSAPP API — "How do I start?" --------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "bg-blue-50/30")} id="get-started">
-        <div className={CONTAINER}>
+      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-blue-50/30")} id="get-started">
+        <SectionPattern tone="gold" />
+        <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
             <span className={EYEBROW_LIGHT}>How to Get WhatsApp Business API</span>
             <h2 className={H2_LIGHT} style={SYNE_FONT}>
@@ -969,25 +1046,18 @@ export default function WhatsAppBusinessAPIPage() {
             </Link>
           </p>
 
-          <div className="rounded-2xl bg-[#0f172a] p-8 sm:p-10 flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div className="space-y-2 text-center sm:text-left">
-              <h3 className="text-lg font-bold text-white">
-                Flexible pricing for every business size
-              </h3>
-              <p className="text-white/50 text-base max-w-lg leading-[1.7]">
-                Per-conversation pricing based on category and volume. All plans
-                include template management, CRM integration assistance, and
-                24×7 support.
-              </p>
-            </div>
-            <MarketingCta label="Talk to Sales" tone="dark" className="shrink-0" />
-          </div>
+          <GlowCtaBanner
+            title="Flexible pricing for every business size"
+            description="Per-conversation pricing based on category and volume. All plans include template management, CRM integration assistance, and 24×7 support."
+            ctaLabel="Talk to Sales"
+          />
         </div>
       </section>
 
       {/* -- RELATED GUIDES / INTERNAL LINKS ------------------------------- */}
-      <section className="py-16 bg-gray-50">
-        <div className={CONTAINER}>
+      <section className="relative overflow-hidden py-16 bg-gray-50">
+        <SectionPattern tone="teal" />
+        <div className={cnJoin(CONTAINER, "relative z-10")}>
           <h2 className="text-xl font-bold text-gray-900 mb-6" style={SYNE_FONT}>
             Explore the WhatsApp Business API guide
           </h2>
@@ -1049,12 +1119,12 @@ export default function WhatsAppBusinessAPIPage() {
           </div>
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
             <div className="hidden lg:block lg:w-[36%] shrink-0 lg:sticky lg:top-24">
-              <div className="relative w-full rounded-2xl overflow-hidden aspect-[4/5]">
+              <div className="relative w-full rounded-2xl aspect-[4/5]">
                 <Image
-                  src="/images/whatsapp/whatsapp-business-api-provider-india.png"
+                  src="/images/whatsapp/ask-question-whatsapp-api.png"
                   alt="WhatsApp Business API rich message preview on a phone"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   sizes="36vw"
                 />
               </div>
@@ -1086,7 +1156,7 @@ export default function WhatsAppBusinessAPIPage() {
         </div>
       </section>
 
-  
+
     </>
   );
 }

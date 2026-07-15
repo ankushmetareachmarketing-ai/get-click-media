@@ -106,6 +106,8 @@ export interface BentoCardProps {
   className?: string;
   /** Optional decorative layer (image, gradient, pattern) behind the content. */
   background?: ReactNode;
+  /** A real, visible image block in normal flow at the bottom of the card (not faded/absolute). */
+  image?: ReactNode;
   href?: string;
   cta?: string;
   /** Which kind of section background this card sits on. */
@@ -124,6 +126,7 @@ export const BentoCard = ({
   icon: Icon,
   className,
   background,
+  image,
   href,
   cta,
   tone = "light",
@@ -142,7 +145,7 @@ export const BentoCard = ({
     >
       {background && <div className="absolute inset-0">{background}</div>}
 
-      <div className="relative z-10 flex flex-col gap-2 p-6 transition-transform duration-300 group-hover:-translate-y-1">
+      <div className="relative z-10 flex flex-1 flex-col gap-2 p-6 transition-transform duration-300 group-hover:-translate-y-1">
         <Icon
           className={cn(
             "h-9 w-9 mb-1 transition-transform duration-300 group-hover:scale-90",
@@ -160,6 +163,7 @@ export const BentoCard = ({
           {name}
         </h3>
         <p className={cn("text-sm leading-relaxed", isDark ? "text-white/50" : "text-(--ink-3)")}>{description}</p>
+        {image && <div className="relative mt-2 flex-1 min-h-24">{image}</div>}
       </div>
 
       {href && cta && (

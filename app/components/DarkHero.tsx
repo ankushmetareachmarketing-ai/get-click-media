@@ -130,7 +130,7 @@ export default function DarkHero({
           </nav>
         )}
 
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+        <div className="flex flex-col-reverse lg:flex-row items-center gap-12">
           {/* Left copy */}
           <div className="flex-1 text-center lg:text-left space-y-6">
             <span
@@ -230,9 +230,16 @@ export default function DarkHero({
           </div>
 
           {/* Right — hero image, smaller share so the copy column gets more width */}
-          <div className="w-full lg:w-[38%] shrink-0">
-            <div className="relative w-full rounded-2xl overflow-hidden aspect-4/3">
-              <Image src={imageSrc} alt={imageAlt} fill className="object-cover" priority sizes="(max-width: 1024px) 90vw, 38vw" />
+          <div className="w-full lg:w-[45%] shrink-0">
+            <div className="relative w-full rounded-2xl overflow-hidden aspect-[4/3] ">
+              <Image
+                src={imageSrc}
+                alt={imageAlt}
+                fill
+                className="object-contain"
+                priority
+                sizes="(max-width: 1024px) 90vw, 38vw"
+              />
             </div>
           </div>
         </div>

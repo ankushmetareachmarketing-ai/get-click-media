@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import DarkHero from "@/app/components/DarkHero";
+import ClientMarquee from "@/app/components/ClientMarquee";
+import HeroLeadForm from "@/app/components/HeroLeadForm";
+import { ResponsiveTable } from "@/components/ui/responsive-table";
+import { AccordionList } from "@/components/ui/accordion-list";
+import { GlowCtaBanner } from "@/components/ui/glow-cta-banner";
+import { MarketingCta } from "@/components/ui/marketing-cta";
+import { BentoGrid, BentoCard } from "@/components/ui/bento-grid";
+import { SectionPattern } from "@/components/ui/section-pattern";
 import {
-  ArrowRight,
   CheckCheck,
   ShieldCheck,
   MapPin,
@@ -20,7 +28,6 @@ import {
   Truck,
   Store,
   Car,
-  ChevronDown,
   AlertTriangle,
 } from "lucide-react";
 
@@ -356,7 +363,7 @@ const INDUSTRIES = [
     enable: "Lead-to-showroom conversion automation",
     uses: "Test drive booking, service reminders, EMI alerts, new model launches",
   },
-];
+] as const;
 
 const ONBOARDING = [
   {
@@ -458,18 +465,21 @@ const INCLUDED = [
 
 const BUSINESS_SIZES = [
   {
+    icon: Users,
     tag: "Under ₹10 crore ARR",
     title: "Startups & D2C brands",
     body: "A growth-tier plan with no minimum monthly commitment — you pay for what you use. Shopify and WooCommerce plugins mean cart recovery and order confirmation flows can go live in under an hour without writing code.",
     stat: "Cart abandonment recovery on WhatsApp: 18–26% vs 4–6% for email. Review requests: 5x higher submission rate than email.",
   },
   {
+    icon: Building2,
     tag: "₹10 crore – ₹200 crore ARR",
     title: "Mid-market businesses",
     body: "Pre-built connectors for Salesforce, HubSpot, Zoho, Freshdesk, and LeadSquared. For custom integrations, our API is fully documented with code samples in four languages.",
     stat: "Highest-ROI move: replacing SMS campaigns with WhatsApp for opted-in segments — 5x to 8x CTR uplift at comparable per-message cost.",
   },
   {
+    icon: Landmark,
     tag: "₹200 crore+ ARR or 1M+ customers",
     title: "Enterprise",
     body: "Dedicated infrastructure, custom SLAs, a named enterprise account manager, and monthly business reviews. Supports 1,000+ messages per second, with SEBI, IRDAI, and RBI audit documentation for regulated industries.",
@@ -514,6 +524,15 @@ const FAQS = [
   },
 ];
 
+/* -- Shared layout tokens --------------------------------------------------- */
+const CONTAINER = "max-w-7xl mx-auto px-6 sm:px-12 lg:px-20";
+const SECTION_PADDING = "py-16 sm:py-20 lg:py-[100px]";
+const H2_LIGHT = "text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight";
+const H2_DARK = "text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight";
+const SYNE_FONT: React.CSSProperties = { fontFamily: "var(--font-syne)" };
+const EYEBROW_LIGHT = "inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest";
+const EYEBROW_DARK = "inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/10 text-[#38bdf8] text-xs font-bold uppercase tracking-widest";
+
 /* -- Page ------------------------------------------------------------------ */
 export default function WhatsAppProviderIndiaPage() {
   return (
@@ -523,93 +542,53 @@ export default function WhatsAppProviderIndiaPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
-      {/* -- BREADCRUMB --------------------------------------------------- */}
-      <nav
-        aria-label="Breadcrumb"
-        className="max-w-7xl mx-auto px-4 sm:px-6 pt-6 pb-2"
-      >
-        <ol className="flex items-center gap-2 text-xs text-gray-400 flex-wrap">
-          <li>
-            <Link href="/" className="hover:text-[#2563eb] transition-colors">
-              Home
-            </Link>
-          </li>
-          <li aria-hidden>/</li>
-          <li>
-            <Link
-              href="/whatsapp-business-api"
-              className="hover:text-[#2563eb] transition-colors"
-            >
-              WhatsApp Business API
-            </Link>
-          </li>
-          <li aria-hidden>/</li>
-          <li className="text-[#2563eb] font-medium">Provider India</li>
-        </ol>
-      </nav>
+      {/* -----------------------------------------------------------------
+          HERO — "What is this?"
+      ----------------------------------------------------------------- */}
+      <DarkHero
+        theme="light"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "WhatsApp Business API", href: "/whatsapp-business-api" },
+          { label: "Provider India" },
+        ]}
+        eyebrow="Official Meta Business Solution Provider"
+        title="WhatsApp Business API Provider in India"
+        highlight="Official Meta BSP"
+        description={
+          <>
+            Get Click Media is an official WhatsApp Business API provider in
+            India, authorised by Meta as a Business Solution Provider.
+            Headquartered in Noida, we onboard businesses across India with
+            complete setup support, template management, and dedicated
+            account management.
+            <strong className="text-gray-900"> Setup takes 3 to 5 business days.</strong>
+          </>
+        }
+        primaryCta={{ label: "Get WhatsApp API Now" }}
+        secondaryCta={{ label: "View Pricing", href: "/blog/whatsapp-api-pricing-india" }}
+        imageSrc="/images/whatsapp/direct-meta-partner.webp"
+        imageAlt="Get Click Media, an official Meta Business Solution Provider dashboard"
+        trustLine="Noida · Official Meta BSP · 10,000+ Businesses · 3–5 Day Setup"
+        stats={[
+          { value: "10,000+", label: "Businesses Onboarded" },
+          { value: "3–5 Days", label: "Go-Live Timeline" },
+          { value: "1–3 Days", label: "Template Approval SLA" },
+          { value: "24×7", label: "Support" },
+        ]}
+      />
 
-      {/* -- HERO ----------------------------------------------------------- */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
-        <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:40px_40px]" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-24">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="flex-1 text-center lg:text-left space-y-6">
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-semibold tracking-wider uppercase backdrop-blur-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
-                Official Meta Business Solution Provider
-              </span>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight font-(family-name:--font-syne)">
-                WhatsApp Business API Provider in India<br />
-                <span className="text-[#38bdf8]">Official Meta BSP</span>
-              </h1>
-              <p className="text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">
-                Get Click Media is an official WhatsApp Business API provider in India, authorised by Meta as a
-                Business Solution Provider. Headquartered in Noida, we onboard businesses across India with
-                complete setup support, template management, and dedicated account management.
-                <strong className="text-white"> Setup takes 3 to 5 business days.</strong>
-              </p>
-              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-                <Link href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#1e3a8a] text-sm font-bold shadow-lg hover:scale-105 transition-transform duration-200">
-                  Get WhatsApp API Now <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-200">
-                  Request a Free Consultation
-                </Link>
-                <Link href="/blog/whatsapp-api-pricing-india"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-200">
-                  View Pricing
-                </Link>
-              </div>
-              <p className="text-white/40 text-xs">Noida · Official Meta BSP · 10,000+ Businesses · 3–5 Day Setup</p>
-            </div>
+      {/* -- TRUST LOGOS ------------------------------------------------------ */}
+      <ClientMarquee />
 
-            <div className="w-full lg:w-[50%] shrink-0">
-              <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-2xl shadow-blue-950/40">
-                <Image
-                  src="/images/whatsapp/direct-meta-partner.webp"
-                  alt="Get Click Media, an official Meta Business Solution Provider dashboard"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* -- DIRECT ANSWER / AEO BLOCK -------------------------------------- */}
-      <section className="py-10 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      {/* -- DIRECT ANSWER / AEO BLOCK ---------------------------------------- */}
+      <section className="relative overflow-hidden py-10 bg-white">
+        <SectionPattern tone="light" />
+        <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-12">
           <div className="rounded-2xl border-l-4 border-[#2563eb] bg-blue-50/60 px-6 py-5">
-            <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+            <p className="text-base text-gray-700 leading-[1.7]">
               Get Click Media is an official{" "}
-              <Link
-                href="/whatsapp-business-api"
-                className="text-[#2563eb] underline underline-offset-2"
-              >
+              <Link href="/whatsapp-business-api" className="text-[#2563eb] underline underline-offset-2">
                 WhatsApp Business API
               </Link>{" "}
               provider in India, authorised by Meta as a Business Solution
@@ -619,15 +598,15 @@ export default function WhatsAppProviderIndiaPage() {
               dedicated account management. Setup takes 3 to 5 business days.
             </p>
           </div>
-          <p className="text-gray-500 text-base leading-relaxed mt-8">
-            Choosing the right WhatsApp Business API provider in India is one of
-            the most important decisions in your business messaging strategy.
-            Not all providers are equal — the difference between an official
-            Meta BSP and an unauthorised reseller is the difference between a
-            stable, compliant, scalable solution and a risk to your business
-            communications.
+          <p className="text-gray-500 text-base leading-[1.7] mt-8">
+            Choosing the right WhatsApp Business API provider in India is one
+            of the most important decisions in your business messaging
+            strategy. Not all providers are equal — the difference between an
+            official Meta BSP and an unauthorised reseller is the difference
+            between a stable, compliant, scalable solution and a risk to your
+            business communications.
           </p>
-          <p className="text-gray-500 text-base leading-relaxed mt-4">
+          <p className="text-gray-500 text-base leading-[1.7] mt-4">
             This page explains exactly what to look for in a WhatsApp API
             provider in India, why Get Click Media is the right choice for
             Indian businesses, what the onboarding process looks like, and how
@@ -636,30 +615,33 @@ export default function WhatsAppProviderIndiaPage() {
         </div>
       </section>
 
-      {/* -- WHAT IS A BSP -------------------------------------------------- */}
-      <section className="py-20 sm:py-24 bg-white" id="what-is-a-bsp">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      {/* -- WHAT IS A BSP — "What is this?" ---------------------------------- */}
+      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="what-is-a-bsp">
+        <SectionPattern tone="light" />
+        <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="flex flex-col lg:flex-row items-center gap-14 mb-16">
             <div className="flex-1 text-center lg:text-left space-y-4">
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
-                What Is a WhatsApp BSP?
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
+              <span className={EYEBROW_LIGHT}>What Is a WhatsApp BSP?</span>
+              <h2 className={H2_LIGHT} style={SYNE_FONT}>
                 A WhatsApp Business Solution Provider, explained
               </h2>
-              <p className="text-gray-500 text-base leading-relaxed">
-                A WhatsApp Business Solution Provider (BSP) is a company officially authorised by Meta to provide
-                access to the WhatsApp Business API on behalf of businesses. BSPs sit between Meta&apos;s
-                infrastructure and the end businesses that want to use WhatsApp for customer communication.
-                Businesses cannot access the API directly from Meta — they must work through an authorised BSP,
-                which handles account setup, verification, template approval, infrastructure, and ongoing support.
+              <p className="text-gray-500 text-base leading-[1.7]">
+                A WhatsApp Business Solution Provider (BSP) is a company
+                officially authorised by Meta to provide access to the
+                WhatsApp Business API on behalf of businesses. BSPs sit
+                between Meta&apos;s infrastructure and the end businesses that
+                want to use WhatsApp for customer communication. Businesses
+                cannot access the API directly from Meta — they must work
+                through an authorised BSP, which handles account setup,
+                verification, template approval, infrastructure, and ongoing
+                support.
               </p>
             </div>
             <div className="w-full lg:w-[42%] shrink-0">
               <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden">
                 <Image
-                  src="/images/whatsapp/whatsapp-bussiness-api.webp"
-                  alt="WhatsApp Business API rich message on a phone"
+                  src="/images/whatsapp/whatsapp-business-solution-provider.webp"
+                  alt="WhatsApp Business Solution Provider"
                   fill
                   className="object-contain"
                 />
@@ -670,37 +652,16 @@ export default function WhatsAppProviderIndiaPage() {
           <h3 className="text-lg font-bold text-gray-900 mb-5 text-center">
             Official BSP vs unofficial reseller — the critical difference
           </h3>
-          <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
-            <table className="w-full text-sm min-w-[640px]">
-              <thead>
-                <tr className="bg-[#0f172a] text-white text-xs uppercase tracking-wider">
-                  <th className="text-left px-5 py-4 font-semibold w-[26%]">
-                    Aspect
-                  </th>
-                  <th className="text-left px-4 py-4 font-semibold text-[#38bdf8]">
-                    Official Meta BSP (Get Click Media)
-                  </th>
-                  <th className="text-left px-4 py-4 font-semibold">
-                    Unofficial reseller / grey-market provider
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {BSP_VS_RESELLER.map((row, i) => (
-                  <tr
-                    key={row.aspect}
-                    className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}
-                  >
-                    <td className="px-5 py-3.5 text-gray-700 font-medium">
-                      {row.aspect}
-                    </td>
-                    <td className="px-4 py-3.5 text-gray-800">{row.gcm}</td>
-                    <td className="px-4 py-3.5 text-gray-500">{row.other}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <ResponsiveTable
+            caption="Official Meta BSP vs unofficial reseller / grey-market provider"
+            highlightColumnKey="gcm"
+            columns={[
+              { key: "aspect", label: "Aspect" },
+              { key: "gcm", label: "Official Meta BSP (Get Click Media)" },
+              { key: "other", label: "Unofficial Reseller / Grey-Market Provider" },
+            ]}
+            rows={BSP_VS_RESELLER}
+          />
 
           <div className="mt-8 flex items-start gap-4 rounded-2xl border border-red-100 bg-red-50/60 px-6 py-5 max-w-4xl mx-auto">
             <AlertTriangle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
@@ -708,97 +669,57 @@ export default function WhatsAppProviderIndiaPage() {
               <strong>Important:</strong> Always verify that your WhatsApp API
               provider is listed in Meta&apos;s official BSP directory before
               signing up. Using an unofficial provider risks your WhatsApp
-              account being suspended without warning — and losing access to all
-              your customer conversations.
+              account being suspended without warning — and losing access to
+              all your customer conversations.
             </p>
           </div>
         </div>
       </section>
 
-      {/* -- WHY GCM -------------------------------------------------------- */}
-      <section className="py-20 sm:py-28 bg-[#0f172a]" id="why-gcm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      {/* -- WHY GCM — "Why should I care?" ------------------------------------ */}
+      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-[#0f172a]")} id="why-gcm">
+        <SectionPattern tone="green" opacity={0.08} />
+        <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/10 text-[#38bdf8] text-xs font-bold uppercase tracking-widest">
-              Why Choose Get Click Media
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-(family-name:--font-syne)">
+            <span className={EYEBROW_DARK}>Why Choose Get Click Media</span>
+            <h2 className={H2_DARK} style={SYNE_FONT}>
               India&apos;s trusted WhatsApp Business API provider
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <BentoGrid className="sm:grid-cols-2 lg:grid-cols-4">
             {WHY_GCM.map((f) => (
-              <div
-                key={f.title}
-                className="rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors p-6 space-y-3"
-              >
-                <span className="w-10 h-10 rounded-xl bg-[#2563eb]/20 flex items-center justify-center">
-                  <f.icon className="w-5 h-5 text-[#38bdf8]" />
-                </span>
-                <h3 className="text-sm font-bold text-white leading-snug">
-                  {f.title}
-                </h3>
-                <p className="text-xs text-white/50 leading-relaxed">
-                  {f.body}
-                </p>
-              </div>
+              <BentoCard key={f.title} icon={f.icon} name={f.title} description={f.body} tone="dark" />
             ))}
-          </div>
+          </BentoGrid>
         </div>
       </section>
 
-      {/* -- HOW TO CHOOSE A PROVIDER --------------------------------------- */}
-      <section className="py-20 sm:py-28 bg-white" id="how-to-choose">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      {/* -- HOW TO CHOOSE A PROVIDER — "Can I trust this?" -------------------- */}
+      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="how-to-choose">
+        <SectionPattern tone="light" />
+        <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-12">
           <div className="text-center mb-12 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
-              How to Choose the Right Provider
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
+            <span className={EYEBROW_LIGHT}>How to Choose the Right Provider</span>
+            <h2 className={H2_LIGHT} style={SYNE_FONT}>
               A checklist for evaluating any WhatsApp API provider
             </h2>
-            <p className="text-gray-500 text-base max-w-2xl mx-auto">
+            <p className="text-gray-500 text-base max-w-2xl mx-auto leading-[1.7]">
               The Indian WhatsApp API provider market has dozens of players —
               official BSPs, resellers, and grey-market providers. Use this
               checklist before signing up with anyone.
             </p>
           </div>
-          <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
-            <table className="w-full text-sm min-w-[640px]">
-              <thead>
-                <tr className="bg-[#0f172a] text-white text-xs uppercase tracking-wider">
-                  <th className="text-left px-5 py-4 font-semibold w-[26%]">
-                    Evaluation Criteria
-                  </th>
-                  <th className="text-left px-4 py-4 font-semibold text-[#38bdf8]">
-                    Get Click Media
-                  </th>
-                  <th className="text-left px-4 py-4 font-semibold">
-                    What to Ask Competitors
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {CHECKLIST.map((row, i) => (
-                  <tr
-                    key={row.criteria}
-                    className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}
-                  >
-                    <td className="px-5 py-3.5 text-gray-700 font-medium">
-                      {row.criteria}
-                    </td>
-                    <td className="px-4 py-3.5 text-green-600 font-semibold">
-                      {row.gcm}
-                    </td>
-                    <td className="px-4 py-3.5 text-gray-500 italic">
-                      {row.ask}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-center text-xs text-gray-400 mt-4">
+          <ResponsiveTable
+            caption="Checklist for evaluating a WhatsApp API provider"
+            highlightColumnKey="gcm"
+            columns={[
+              { key: "criteria", label: "Evaluation Criteria" },
+              { key: "gcm", label: "Get Click Media" },
+              { key: "ask", label: "What to Ask Competitors" },
+            ]}
+            rows={CHECKLIST}
+          />
+          <p className="text-center text-sm text-gray-400 mt-4">
             Read more:{" "}
             <Link
               href="/blog/best-whatsapp-api-providers-india"
@@ -807,50 +728,42 @@ export default function WhatsAppProviderIndiaPage() {
               best WhatsApp API providers in India
             </Link>
           </p>
+          <div className="flex justify-center mt-8">
+            <MarketingCta label="Get Your Free Provider Comparison" />
+          </div>
         </div>
       </section>
 
-      {/* -- INDUSTRIES ----------------------------------------------------- */}
-      <section className="py-20 sm:py-28 bg-gray-50" id="industries">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      {/* -- INDUSTRIES — "Why should I care?" (relevance) --------------------- */}
+      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-gray-50")} id="industries">
+        <SectionPattern tone="teal" />
+        <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
-              Industries We Serve
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
+            <span className={EYEBROW_LIGHT}>Industries We Serve</span>
+            <h2 className={H2_LIGHT} style={SYNE_FONT}>
               Purpose-built for every major Indian industry
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <BentoGrid className="sm:grid-cols-2 lg:grid-cols-3">
             {INDUSTRIES.map((ind) => (
-              <div
+              <BentoCard
                 key={ind.name}
-                className="rounded-2xl bg-white border border-gray-100 hover:border-blue-200 hover:shadow-md transition-all p-6 space-y-3"
-              >
-                <span className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center">
-                  <ind.icon className="w-5 h-5 text-[#2563eb]" />
-                </span>
-                <h3 className="text-base font-bold text-gray-900">
-                  {ind.name}
-                </h3>
-                <p className="text-sm text-gray-600">{ind.enable}</p>
-                <p className="text-xs text-gray-400 leading-relaxed">
-                  {ind.uses}
-                </p>
-              </div>
+                icon={ind.icon}
+                name={ind.name}
+                description={`${ind.enable}. ${ind.uses}.`}
+              />
             ))}
-          </div>
+          </BentoGrid>
         </div>
       </section>
 
-      {/* -- ONBOARDING PROCESS --------------------------------------------- */}
-      <section className="py-20 sm:py-28 bg-white" id="onboarding">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      {/* -- ONBOARDING PROCESS — "How do I start?" ---------------------------- */}
+      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="onboarding">
+        <SectionPattern tone="light" />
+        <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
-              Onboarding Process
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
+            <span className={EYEBROW_LIGHT}>Onboarding Process</span>
+            <h2 className={H2_LIGHT} style={SYNE_FONT}>
               From sign-up to first live campaign — exactly what happens
             </h2>
           </div>
@@ -860,16 +773,17 @@ export default function WhatsAppProviderIndiaPage() {
                 key={s.n}
                 className="relative rounded-2xl border-2 border-blue-100 bg-blue-50/40 p-7 space-y-3"
               >
-                <span className="absolute -top-4 left-6 w-8 h-8 rounded-full bg-[#2563eb] text-white text-xs font-black flex items-center justify-center font-(family-name:--font-syne)">
+                <span
+                  className="absolute -top-4 left-6 w-8 h-8 rounded-full bg-[#2563eb] text-white text-xs font-black flex items-center justify-center"
+                  style={SYNE_FONT}
+                >
                   {s.n}
                 </span>
                 <p className="text-[11px] font-bold uppercase tracking-wider text-[#2563eb] pt-2">
                   {s.when}
                 </p>
                 <h3 className="text-base font-bold text-gray-900">{s.title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  {s.body}
-                </p>
+                <p className="text-base text-gray-500 leading-[1.7]">{s.body}</p>
               </div>
             ))}
           </div>
@@ -885,71 +799,52 @@ export default function WhatsAppProviderIndiaPage() {
         </div>
       </section>
 
-      {/* -- WHAT'S INCLUDED ------------------------------------------------ */}
-      <section className="py-20 sm:py-24 bg-gray-50" id="included">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+      {/* -- WHAT'S INCLUDED — "What do I get?" -------------------------------- */}
+      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-gray-50")} id="included">
+        <SectionPattern tone="teal" />
+        <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-12">
           <div className="text-center mb-12 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
-              What&apos;s Included
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
+            <span className={EYEBROW_LIGHT}>What&apos;s Included</span>
+            <h2 className={H2_LIGHT} style={SYNE_FONT}>
               Every plan includes all of this — no add-on fees
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 gap-4">
+          <BentoGrid className="sm:grid-cols-2 lg:grid-cols-3">
             {INCLUDED.map((row) => (
-              <div
-                key={row.item}
-                className="flex items-start gap-3 rounded-xl bg-white border border-gray-100 p-5"
-              >
-                <CheckCheck className="w-4 h-4 text-[#2563eb] shrink-0 mt-1" />
-                <div>
-                  <p className="text-sm font-bold text-gray-900">{row.item}</p>
-                  <p className="text-xs text-gray-500 mt-0.5">{row.detail}</p>
-                </div>
-              </div>
+              <BentoCard key={row.item} icon={CheckCheck} name={row.item} description={row.detail} />
             ))}
-          </div>
+          </BentoGrid>
         </div>
       </section>
 
-      {/* -- BUSINESS SIZES ------------------------------------------------- */}
-      <section className="py-20 sm:py-28 bg-white" id="business-sizes">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      {/* -- BUSINESS SIZES — "Is this for me?" --------------------------------- */}
+      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="business-sizes">
+        <SectionPattern tone="light" />
+        <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
-              For Every Business Size
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
+            <span className={EYEBROW_LIGHT}>For Every Business Size</span>
+            <h2 className={H2_LIGHT} style={SYNE_FONT}>
               Get Click Media scales with you
             </h2>
           </div>
-          <div className="grid lg:grid-cols-3 gap-6">
+          <BentoGrid className="lg:grid-cols-3">
             {BUSINESS_SIZES.map((b) => (
-              <div
+              <BentoCard
                 key={b.title}
-                className="rounded-2xl bg-gray-50 border border-gray-100 p-7 space-y-4"
-              >
-                <span className="inline-block px-3 py-1 rounded-full bg-blue-100 text-[#2563eb] text-xs font-bold">
-                  {b.tag}
-                </span>
-                <h3 className="text-lg font-bold text-gray-900">{b.title}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  {b.body}
-                </p>
-                <p className="text-xs text-green-600 font-semibold leading-relaxed">
-                  {b.stat}
-                </p>
-              </div>
+                icon={b.icon}
+                name={`${b.title} — ${b.tag}`}
+                description={`${b.body} ${b.stat}`}
+              />
             ))}
-          </div>
+          </BentoGrid>
         </div>
       </section>
 
       {/* -- RELATED LINKS -------------------------------------------------- */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-6 font-(family-name:--font-syne)">
+      <section className="relative overflow-hidden py-16 bg-gray-50">
+        <SectionPattern tone="teal" />
+        <div className={cnJoin(CONTAINER, "relative z-10")}>
+          <h2 className="text-xl font-bold text-gray-900 mb-6" style={SYNE_FONT}>
             Related WhatsApp Business API resources
           </h2>
           <div className="flex flex-wrap gap-3">
@@ -991,90 +886,62 @@ export default function WhatsAppProviderIndiaPage() {
         </div>
       </section>
 
+      <HeroLeadForm />
+
       {/* -- FAQ ------------------------------------------------------------ */}
-      <section className="py-20 sm:py-28 bg-white" id="faq">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="faq">
+        <SectionPattern tone="light" />
+        <div className="relative z-10 max-w-3xl mx-auto px-6 sm:px-12">
           <div className="text-center mb-12 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
-              Frequently Asked Questions
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-(family-name:--font-syne)">
+            <span className={EYEBROW_LIGHT}>Frequently Asked Questions</span>
+            <h2 className={H2_LIGHT} style={SYNE_FONT}>
               Questions about choosing a WhatsApp API provider
             </h2>
           </div>
-          <div className="space-y-3">
-            {FAQS.map((faq, i) => (
-              <details
-                key={i}
-                className="group rounded-2xl bg-gray-50 border border-gray-100 shadow-sm open:shadow-md transition-shadow"
-              >
-                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
-                  <span className="text-sm font-semibold text-gray-900 leading-snug">
-                    {faq.q}
-                  </span>
-                  <ChevronDown className="w-4 h-4 text-gray-400 shrink-0 transition-transform group-open:rotate-180" />
-                </summary>
-                <div className="px-6 pb-5">
-                  <p className="text-sm text-gray-500 leading-relaxed">
-                    {faq.a}
-                    {faq.link && (
-                      <>
-                        {" "}
-                        <Link
-                          href={faq.link.href}
-                          className="text-[#2563eb] underline underline-offset-2"
-                        >
-                          {faq.link.text}
-                        </Link>
-                        .
-                      </>
-                    )}
-                  </p>
-                </div>
-              </details>
-            ))}
-          </div>
+          <AccordionList
+            items={FAQS.map((faq) => ({
+              question: faq.q,
+              answer: (
+                <p className="text-base text-gray-500 leading-[1.7]">
+                  {faq.a}
+                  {faq.link && (
+                    <>
+                      {" "}
+                      <Link href={faq.link.href} className="text-[#2563eb] underline underline-offset-2">
+                        {faq.link.text}
+                      </Link>
+                      .
+                    </>
+                  )}
+                </p>
+              ),
+            }))}
+          />
         </div>
       </section>
 
-      {/* -- BOTTOM CTA ----------------------------------------------------- */}
+      {/* -- BOTTOM CTA ------------------------------------------------------ */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] px-8 sm:px-16 py-16 text-center space-y-6">
-            <div className="absolute inset-0 opacity-[0.06] [background-image:linear-gradient(rgba(255,255,255,0.4)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.4)_1px,transparent_1px)] [background-size:32px_32px]" />
-            <div className="relative space-y-5">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white font-(family-name:--font-syne)">
-                Get WhatsApp Business API from India&apos;s Official Meta BSP
-              </h2>
-              <p className="text-white/60 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-                Noida · Official Meta BSP · 10,000+ Businesses · 3–5 Day Setup.
-                Our team responds within 2 hours on business days. For urgent
-                enquiries, call our Noida office directly.
-              </p>
-              <div className="flex flex-wrap gap-3 justify-center">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-white text-[#1e3a8a] text-sm font-bold shadow-lg hover:scale-105 transition-transform"
-                >
-                  Get WhatsApp API Now <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 px-7 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors"
-                >
-                  Request a Free Consultation
-                </Link>
-                <Link
-                  href="/blog/whatsapp-api-pricing-india"
-                  className="inline-flex items-center gap-2 px-7 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors"
-                >
-                  View Pricing
-                </Link>
-              </div>
-            </div>
-          </div>
+        <div className={CONTAINER}>
+          <GlowCtaBanner
+            title="Get WhatsApp Business API from India's Official Meta BSP"
+            description="Noida · Official Meta BSP · 10,000+ Businesses · 3–5 Day Setup. Our team responds within 2 hours on business days."
+            ctaLabel="Get WhatsApp API Now"
+          />
+          <p className="text-center text-sm text-gray-400 mt-6">
+            See the full breakdown:{" "}
+            <Link href="/blog/whatsapp-api-pricing-india" className="text-[#2563eb] underline underline-offset-2">
+              WhatsApp API pricing in India
+            </Link>
+          </p>
         </div>
       </section>
     </>
   );
+}
+
+/** Tiny local join helper — avoids importing `cn` just for two-string concatenation
+ *  in the many inline `className={cnJoin(...)}` spots above. */
+function cnJoin(...parts: Array<string | false | undefined>) {
+  return parts.filter(Boolean).join(" ");
 }
