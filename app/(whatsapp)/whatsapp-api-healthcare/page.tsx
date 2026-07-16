@@ -271,7 +271,7 @@ export default function WhatsAppAPIHealthcarePage() {
             "Multilingual support — Hindi, Tamil, Telugu, Kannada, Marathi, Bengali",
             "DPDP 2023 compliant with India-hosted data infrastructure",
           ],
-          image: "/images/dashboard.png",
+          image: "/images/whatsapp/healthcare/whatsapp-api-platform-healthcare.png",
           imageAlt: "WhatsApp API Healthcare dashboard — patient appointment reminders, lab report notifications, and prescription refill automation",
         },
         {
@@ -289,7 +289,7 @@ export default function WhatsAppAPIHealthcarePage() {
             "Prescription refill requests with home delivery options",
             "Post-discharge follow-ups with symptom reporting",
           ],
-          image: "/images/rcs/what-is-rcs.png",
+          image: "/images/whatsapp/healthcare/whatsapp-healthcare-message-preview.png",
           imageAlt: "WhatsApp healthcare message preview — appointment reminder with confirm, reschedule buttons and lab report notification",
           imageSide: "left",
         },
@@ -303,7 +303,7 @@ export default function WhatsAppAPIHealthcarePage() {
           description:
             "Get Click Media integrates with your Hospital Management System (HMS), Lab Information System (LIS), and patient CRM — enabling automated patient communication without disrupting existing clinical workflows. Integration setup typically takes 5-7 business days after WhatsApp API onboarding is complete.",
           bullets: ["Practo", "eHospital", "Meddbase", "HMS via HL7 FHIR", "LIS webhook", "Custom REST API"],
-          image: "/images/rcs/rcs-service-provider-india.png",
+          image: "/images/whatsapp/healthcare/whatsapp-api-healthcare-integration-architecture.png",
           imageAlt: "WhatsApp API healthcare integration architecture — HMS, LIS, and CRM integration with patient communication",
         },
       ]}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import DarkHero from "@/app/components/DarkHero";
 import ClientMarquee from "@/app/components/ClientMarquee";
 import HeroLeadForm from "@/app/components/HeroLeadForm";
@@ -203,7 +204,7 @@ export default function WhatsAppMarketingServicesPage() {
       <ClientMarquee />
 
       {/* -- DIRECT ANSWER ---------------------------------------------------- */}
-      <section className="relative overflow-hidden py-10 bg-white">
+      <section className="relative py-10">
         <SectionPattern tone="light" />
         <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-12">
           <div className="rounded-2xl border-l-4 border-[#2563eb] bg-blue-50/60 px-6 py-5">
@@ -225,7 +226,7 @@ export default function WhatsAppMarketingServicesPage() {
       </section>
 
       {/* -- WHY WHATSAPP MARKETING IS DIFFERENT — "What is this?" ----------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="what-is-whatsapp-marketing">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="what-is-whatsapp-marketing">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="flex flex-col lg:flex-row items-center gap-14 mb-14">
@@ -264,7 +265,7 @@ export default function WhatsAppMarketingServicesPage() {
       </section>
 
       {/* -- 3 TYPES — "How does it work" ------------------------------------ */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-gray-50")} id="types">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="types">
         <SectionPattern tone="teal" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-12">
           <div className="text-center mb-12 space-y-4">
@@ -291,8 +292,8 @@ export default function WhatsAppMarketingServicesPage() {
       </section>
 
       {/* -- 8 CAMPAIGN TYPES — "What do I get?" ------------------------------ */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-[#0f172a]")} id="campaigns">
-        <SectionPattern tone="green" opacity={0.08} />
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="campaigns">
+        <SectionPattern tone="green" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
             <span className={EYEBROW_DARK}>High-ROI Campaign Types</span>
@@ -315,7 +316,7 @@ export default function WhatsAppMarketingServicesPage() {
       </section>
 
       {/* -- LIFECYCLE --------------------------------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="lifecycle">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="lifecycle">
         <SectionPattern tone="light" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-12">
           <div className="text-center mb-12 space-y-4">
@@ -339,7 +340,7 @@ export default function WhatsAppMarketingServicesPage() {
       </section>
 
       {/* -- WHAT YOU GET ------------------------------------------------------ */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-gray-50")} id="services">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="services">
         <SectionPattern tone="teal" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
@@ -364,7 +365,7 @@ export default function WhatsAppMarketingServicesPage() {
       </section>
 
       {/* -- COMPARISON --------------------------------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="comparison">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="comparison">
         <SectionPattern tone="light" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-12">
           <div className="text-center mb-12 space-y-4">
@@ -406,8 +407,8 @@ export default function WhatsAppMarketingServicesPage() {
       </section>
 
       {/* -- COMPLIANCE — "Can I trust this?" ----------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-[#0f172a]")} id="compliance">
-        <SectionPattern tone="green" opacity={0.08} />
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="compliance">
+        <SectionPattern tone="green" />
         <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-12">
           <div className="text-center mb-12 space-y-4">
             <span className={EYEBROW_DARK}>
@@ -460,7 +461,7 @@ export default function WhatsAppMarketingServicesPage() {
       </section>
 
       {/* -- RELATED LINKS -------------------------------------------------- */}
-      <section className="relative overflow-hidden py-16 bg-gray-50">
+      <section className="relative py-16">
         <SectionPattern tone="teal" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <h2 className="text-xl font-bold text-gray-900 mb-6" style={SYNE_FONT}>
@@ -495,34 +496,48 @@ export default function WhatsAppMarketingServicesPage() {
       <HeroLeadForm />
 
       {/* -- FAQ ------------------------------------------------------------ */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="faq">
-        <SectionPattern tone="light" />
-        <div className="relative z-10 max-w-3xl mx-auto px-6 sm:px-12">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="faq">
+        <SectionPattern tone="gold" />
+        <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-12 space-y-4">
             <span className={EYEBROW_LIGHT}>Frequently Asked Questions</span>
             <h2 className={H2_LIGHT} style={SYNE_FONT}>
               Questions about WhatsApp Marketing in India
             </h2>
           </div>
-          <AccordionList
-            items={FAQS.map((faq) => ({
-              question: faq.q,
-              answer: (
-                <p className="text-base text-gray-500 leading-[1.7]">
-                  {faq.a}
-                  {faq.link && (
-                    <>
-                      {" "}
-                      <Link href={faq.link.href} className="text-[#2563eb] underline underline-offset-2">
-                        {faq.link.text}
-                      </Link>
-                      .
-                    </>
-                  )}
-                </p>
-              ),
-            }))}
-          />
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
+            <div className="hidden lg:block lg:w-[36%] shrink-0 lg:sticky lg:top-24">
+              <div className="relative w-full rounded-2xl aspect-[4/5]">
+                <Image
+                  src="/images/whatsapp/ask-question-whatsapp-api.png"
+                  alt="Ask a question about WhatsApp marketing in India"
+                  fill
+                  className="object-contain"
+                  sizes="36vw"
+                />
+              </div>
+            </div>
+            <AccordionList
+              className="flex-1 w-full"
+              items={FAQS.map((faq) => ({
+                question: faq.q,
+                answer: (
+                  <p className="text-base text-gray-500 leading-[1.7]">
+                    {faq.a}
+                    {faq.link && (
+                      <>
+                        {" "}
+                        <Link href={faq.link.href} className="text-[#2563eb] underline underline-offset-2">
+                          {faq.link.text}
+                        </Link>
+                        .
+                      </>
+                    )}
+                  </p>
+                ),
+              }))}
+            />
+          </div>
         </div>
       </section>
 

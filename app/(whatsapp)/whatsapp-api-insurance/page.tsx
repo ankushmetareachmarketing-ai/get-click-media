@@ -206,7 +206,7 @@ export default function WhatsAppAPIInsurancePage() {
           <strong className="text-gray-900"> Get Click Media integrates WhatsApp with insurance CRMs and policy management systems — improving renewal rates by 31% and reducing claims call centre volume by 40%.</strong>
         </>
       }
-      heroImage="/images/rcs/rcs-for-finance.webp"
+      heroImage="/images/whatsapp/insurance/whatsapp-api-insurance.webp"
       heroImageAlt="WhatsApp API for Insurance — policy renewal reminders, premium alerts, and claims status updates dashboard"
       heroTrustLine="Official Meta BSP · Policy management system integration · IRDAI-aligned templates · India-based support"
       stats={[
@@ -271,7 +271,7 @@ export default function WhatsAppAPIInsurancePage() {
             "Secure document collection via WhatsApp Flows",
             "IRDAI-compliant templates with disclosure language",
           ],
-          image: "/images/dashboard.png",
+          image: "/images/whatsapp/insurance/whatsapp-api-service-insurance.webp",
           imageAlt: "WhatsApp API Insurance dashboard — policy renewal reminders, premium due alerts, claims status, and document collection",
         },
         {
@@ -289,7 +289,7 @@ export default function WhatsAppAPIInsurancePage() {
             "5-message sequence (60/30/7/3/due date days)",
             "Coverage gap warning in final notice",
           ],
-          image: "/images/rcs/banking-insurance-renewal.webp",
+          image: "/images/whatsapp/insurance/whatsapp-insurance-renewal-preview.webp",
           imageAlt: "WhatsApp insurance renewal reminder preview — policy details, premium amount, and Renew Now button with one-tap payment",
           imageSide: "left",
         },
@@ -303,7 +303,7 @@ export default function WhatsAppAPIInsurancePage() {
           description:
             "Get Click Media integrates with leading insurance systems — Majesco and custom PMS — enabling automated WhatsApp communication for renewal triggers, premium due alerts, and claims status updates. IRDAI-compliant with full audit trails and disclosure language.",
           bullets: ["Majesco", "Custom PMS", "Renewal triggers", "Premium due alerts", "Claims status webhooks"],
-          image: "/images/rcs/rcs-service-provider-india.png",
+          image: "/images/whatsapp/insurance/whatsapp-api-insurance-integration.png",
           imageAlt: "WhatsApp API policy management system integration — Majesco, custom PMS for insurance communication",
         },
       ]}

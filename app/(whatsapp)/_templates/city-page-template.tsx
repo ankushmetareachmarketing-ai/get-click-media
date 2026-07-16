@@ -139,7 +139,7 @@ export function CityPageTemplate({
       <ClientMarquee />
 
       {/* -- DIRECT ANSWER / AEO BLOCK --------------------------------------- */}
-      <section className="relative overflow-hidden py-10 bg-white">
+      <section className="relative py-10">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="max-w-[680px] mx-auto rounded-2xl border-l-4 border-[#2563eb] bg-blue-50/60 px-6 py-5">
@@ -154,7 +154,7 @@ export function CityPageTemplate({
       </section>
 
       {/* -- WHY THIS CITY ---------------------------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-gray-50")} id="why-city">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="why-city">
         <SectionPattern tone="teal" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="flex flex-col lg:flex-row items-start gap-14">
@@ -188,7 +188,7 @@ export function CityPageTemplate({
       </section>
 
       {/* -- TOP INDUSTRIES ---------------------------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="industries">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="industries">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
@@ -229,7 +229,7 @@ export function CityPageTemplate({
       </section>
 
       {/* -- GCM'S SERVICE IN THIS CITY ---------------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-gray-50")} id="gcm-service">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="gcm-service">
         <SectionPattern tone="teal" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="flex flex-col lg:flex-row-reverse items-start gap-14">
@@ -264,7 +264,7 @@ export function CityPageTemplate({
       </section>
 
       {/* -- CLIENT USE CASES --------------------------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="use-cases">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="use-cases">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-12 space-y-4">
@@ -287,8 +287,8 @@ export function CityPageTemplate({
       </section>
 
       {/* -- AREAS SERVED --------------------------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-[#0f172a]")} id="areas-served">
-        <SectionPattern tone="green" opacity={0.08} />
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="areas-served">
+        <SectionPattern tone="green" />
         <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-12 lg:px-20 text-center space-y-8">
           <span className={EYEBROW_DARK}>Areas We Serve</span>
           <h2 className={H2_DARK} style={SYNE_FONT}>
@@ -312,21 +312,37 @@ export function CityPageTemplate({
       <HeroLeadForm />
 
       {/* -- FAQ ------------------------------------------------------------ */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="faq">
-        <SectionPattern tone="light" />
-        <div className="relative z-10 max-w-3xl mx-auto px-6 sm:px-12 lg:px-20">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="faq">
+        <SectionPattern tone="gold" />
+        <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-12 space-y-4">
             <span className={EYEBROW_LIGHT}>Frequently Asked Questions</span>
             <h2 className={H2_LIGHT} style={SYNE_FONT}>
               WhatsApp Business API in {breadcrumbLabel}
             </h2>
           </div>
-          <AccordionList items={faqs.map((f) => ({ question: f.q, answer: <p className="text-base text-gray-500 leading-[1.7]">{f.a}</p> }))} />
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
+            <div className="hidden lg:block lg:w-[36%] shrink-0 lg:sticky lg:top-24">
+              <div className="relative w-full rounded-2xl aspect-[4/5]">
+                <Image
+                  src="/images/whatsapp/whatsapp-api-question.png"
+                  alt={`Ask a question about WhatsApp Business API in ${breadcrumbLabel}`}
+                  fill
+                  className="object-contain"
+                  sizes="36vw"
+                />
+              </div>
+            </div>
+            <AccordionList
+              className="flex-1 w-full"
+              items={faqs.map((f) => ({ question: f.q, answer: <p className="text-base text-gray-500 leading-[1.7]">{f.a}</p> }))}
+            />
+          </div>
         </div>
       </section>
 
       {/* -- RELATED LINKS ---------------------------------------------------- */}
-      <section className="relative overflow-hidden py-16 bg-gray-50">
+      <section className="relative py-16">
         <SectionPattern tone="teal" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <h2 className="text-xl font-bold text-gray-900 mb-6" style={SYNE_FONT}>

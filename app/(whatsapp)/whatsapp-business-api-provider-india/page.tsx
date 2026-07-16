@@ -582,7 +582,7 @@ export default function WhatsAppProviderIndiaPage() {
       <ClientMarquee />
 
       {/* -- DIRECT ANSWER / AEO BLOCK ---------------------------------------- */}
-      <section className="relative overflow-hidden py-10 bg-white">
+      <section className="relative py-10">
         <SectionPattern tone="light" />
         <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-12">
           <div className="rounded-2xl border-l-4 border-[#2563eb] bg-blue-50/60 px-6 py-5">
@@ -616,7 +616,7 @@ export default function WhatsAppProviderIndiaPage() {
       </section>
 
       {/* -- WHAT IS A BSP — "What is this?" ---------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="what-is-a-bsp">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="what-is-a-bsp">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="flex flex-col lg:flex-row items-center gap-14 mb-16">
@@ -677,8 +677,8 @@ export default function WhatsAppProviderIndiaPage() {
       </section>
 
       {/* -- WHY GCM — "Why should I care?" ------------------------------------ */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-[#0f172a]")} id="why-gcm">
-        <SectionPattern tone="green" opacity={0.08} />
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="why-gcm">
+        <SectionPattern tone="green" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
             <span className={EYEBROW_DARK}>Why Choose Get Click Media</span>
@@ -695,7 +695,7 @@ export default function WhatsAppProviderIndiaPage() {
       </section>
 
       {/* -- HOW TO CHOOSE A PROVIDER — "Can I trust this?" -------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="how-to-choose">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="how-to-choose">
         <SectionPattern tone="light" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-12">
           <div className="text-center mb-12 space-y-4">
@@ -735,7 +735,7 @@ export default function WhatsAppProviderIndiaPage() {
       </section>
 
       {/* -- INDUSTRIES — "Why should I care?" (relevance) --------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-gray-50")} id="industries">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="industries">
         <SectionPattern tone="teal" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
@@ -758,7 +758,7 @@ export default function WhatsAppProviderIndiaPage() {
       </section>
 
       {/* -- ONBOARDING PROCESS — "How do I start?" ---------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="onboarding">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="onboarding">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
@@ -800,7 +800,7 @@ export default function WhatsAppProviderIndiaPage() {
       </section>
 
       {/* -- WHAT'S INCLUDED — "What do I get?" -------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-gray-50")} id="included">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="included">
         <SectionPattern tone="teal" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-12">
           <div className="text-center mb-12 space-y-4">
@@ -818,7 +818,7 @@ export default function WhatsAppProviderIndiaPage() {
       </section>
 
       {/* -- BUSINESS SIZES — "Is this for me?" --------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="business-sizes">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="business-sizes">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
@@ -841,7 +841,7 @@ export default function WhatsAppProviderIndiaPage() {
       </section>
 
       {/* -- RELATED LINKS -------------------------------------------------- */}
-      <section className="relative overflow-hidden py-16 bg-gray-50">
+      <section className="relative py-16">
         <SectionPattern tone="teal" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <h2 className="text-xl font-bold text-gray-900 mb-6" style={SYNE_FONT}>
@@ -889,34 +889,48 @@ export default function WhatsAppProviderIndiaPage() {
       <HeroLeadForm />
 
       {/* -- FAQ ------------------------------------------------------------ */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="faq">
-        <SectionPattern tone="light" />
-        <div className="relative z-10 max-w-3xl mx-auto px-6 sm:px-12">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="faq">
+        <SectionPattern tone="gold" />
+        <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-12 space-y-4">
             <span className={EYEBROW_LIGHT}>Frequently Asked Questions</span>
             <h2 className={H2_LIGHT} style={SYNE_FONT}>
               Questions about choosing a WhatsApp API provider
             </h2>
           </div>
-          <AccordionList
-            items={FAQS.map((faq) => ({
-              question: faq.q,
-              answer: (
-                <p className="text-base text-gray-500 leading-[1.7]">
-                  {faq.a}
-                  {faq.link && (
-                    <>
-                      {" "}
-                      <Link href={faq.link.href} className="text-[#2563eb] underline underline-offset-2">
-                        {faq.link.text}
-                      </Link>
-                      .
-                    </>
-                  )}
-                </p>
-              ),
-            }))}
-          />
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
+            <div className="hidden lg:block lg:w-[36%] shrink-0 lg:sticky lg:top-24">
+              <div className="relative w-full rounded-2xl aspect-[4/5]">
+                <Image
+                  src="/images/whatsapp/whatsapp-api-question.png"
+                  alt="Ask a question about choosing a WhatsApp API provider"
+                  fill
+                  className="object-contain"
+                  sizes="36vw"
+                />
+              </div>
+            </div>
+            <AccordionList
+              className="flex-1 w-full"
+              items={FAQS.map((faq) => ({
+                question: faq.q,
+                answer: (
+                  <p className="text-base text-gray-500 leading-[1.7]">
+                    {faq.a}
+                    {faq.link && (
+                      <>
+                        {" "}
+                        <Link href={faq.link.href} className="text-[#2563eb] underline underline-offset-2">
+                          {faq.link.text}
+                        </Link>
+                        .
+                      </>
+                    )}
+                  </p>
+                ),
+              }))}
+            />
+          </div>
         </div>
       </section>
 

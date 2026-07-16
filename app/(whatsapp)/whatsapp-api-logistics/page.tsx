@@ -207,7 +207,7 @@ export default function WhatsAppAPILogisticsPage() {
           <strong className="text-gray-900"> Get Click Media integrates WhatsApp with TMS and WMS platforms — reducing failed delivery rates by 34% and customer support calls by 55%.</strong>
         </>
       }
-      heroImage="/images/rcs/ecommerce-order-tracking.webp"
+      heroImage="/images/whatsapp/logistics/whatsapp-api-for-logistics.png"
       heroImageAlt="WhatsApp API for Logistics — shipment tracking, delivery alerts, and fleet management dashboard"
       heroTrustLine="Official Meta BSP · TMS & WMS integration · Real-time tracking · India-based support"
       stats={[
@@ -274,7 +274,7 @@ export default function WhatsAppAPILogisticsPage() {
             "Failed delivery recovery with instant rescheduling",
             "Proof of delivery with photo and timestamp",
           ],
-          image: "/images/dashboard.png",
+          image: "/images/whatsapp/logistics/whatsapp-api-logistics.webp",
           imageAlt: "WhatsApp API Logistics dashboard — shipment tracking, delivery alerts, failed delivery recovery, and POD automation",
         },
         {
@@ -292,7 +292,7 @@ export default function WhatsAppAPILogisticsPage() {
             "Reschedule delivery with preferred time selection",
             "Delivery instructions for agent (gate code, floor)",
           ],
-          image: "/images/rcs/ecommerce-delivery.webp",
+          image: "/images/whatsapp/logistics/whatsapp-logistics-delivery-alert.png",
           imageAlt: "WhatsApp delivery alert preview — out-for-delivery with confirm, reschedule, and delivery instructions buttons",
           imageSide: "left",
         },
@@ -306,7 +306,7 @@ export default function WhatsAppAPILogisticsPage() {
           description:
             "Get Click Media integrates with leading logistics platforms — FarEye, Locus, Shiprocket, and custom TMS systems — enabling automated WhatsApp communication at every shipment milestone from pickup to final delivery. Setup takes 3-5 days after WhatsApp API onboarding is complete.",
           bullets: ["FarEye", "Locus", "Shiprocket", "Custom TMS", "WMS integration", "REST API webhooks"],
-          image: "/images/rcs/rcs-service-provider-india.png",
+          image: "/images/whatsapp/logistics/whatsapp-api-logistics-integration-architecture.webp",
           imageAlt: "WhatsApp API TMS integration — FarEye, Locus, Shiprocket, and custom TMS platforms",
         },
       ]}
