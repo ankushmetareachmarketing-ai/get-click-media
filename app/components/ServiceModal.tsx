@@ -6,10 +6,10 @@ import Image from "next/image";
 import { X, ArrowRight, CheckCircle2, Loader2 } from "lucide-react";
 
 // -- shadcn UI components ------------------------------------------------------
-import { Input }    from "@/components/ui/input";
-import { Label }    from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Button }   from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Select,
   SelectContent,
@@ -52,12 +52,12 @@ const EMPTY: FormState = {
 
 export default function ServiceModal() {
   const { isOpen, closeModal } = useModalStore();
-  const [form, setForm]     = useState<FormState>(EMPTY);
+  const [form, setForm] = useState<FormState>(EMPTY);
   const [status, setStatus] = useState<Status>("idle");
   const [visible, setVisible] = useState(false);   // controls CSS transition
-  const [inDOM,   setInDOM]   = useState(false);   // controls portal mount
-  const overlayRef  = useRef<HTMLDivElement>(null);
-  const firstRef    = useRef<HTMLInputElement>(null);
+  const [inDOM, setInDOM] = useState(false);   // controls portal mount
+  const overlayRef = useRef<HTMLDivElement>(null);
+  const firstRef = useRef<HTMLInputElement>(null);
 
   /* mount → fade-in */
   useEffect(() => {
@@ -116,17 +116,17 @@ export default function ServiceModal() {
       ref={overlayRef}
       onClick={(e) => { if (e.target === overlayRef.current) closeModal(); }}
       style={{
-        position:        "fixed",
-        inset:           0,
-        zIndex:          9999,
-        display:         "flex",
-        alignItems:      "center",
-        justifyContent:  "center",
-        padding:         "16px",
+        position: "fixed",
+        inset: 0,
+        zIndex: 9999,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "16px",
         backgroundColor: `rgba(15,23,42,${visible ? 0.6 : 0})`,
-        backdropFilter:  visible ? "blur(6px)" : "none",
+        backdropFilter: visible ? "blur(6px)" : "none",
         WebkitBackdropFilter: visible ? "blur(6px)" : "none",
-        transition:      "background-color 0.28s ease, backdrop-filter 0.28s ease",
+        transition: "background-color 0.28s ease, backdrop-filter 0.28s ease",
       }}
     >
       {/* -- Dialog card ---------------------------------------------------- */}
@@ -135,18 +135,18 @@ export default function ServiceModal() {
         aria-modal="true"
         aria-label="Service inquiry"
         style={{
-          position:     "relative",
-          display:      "flex",
-          width:        "100%",
-          maxWidth:     "860px",
-          maxHeight:    "90vh",
+          position: "relative",
+          display: "flex",
+          width: "100%",
+          maxWidth: "860px",
+          maxHeight: "90vh",
           borderRadius: "20px",
-          overflow:     "hidden",
-          background:   "#ffffff",
-          boxShadow:    "0 32px 80px rgba(37,99,235,0.18), 0 8px 32px rgba(0,0,0,0.14)",
-          transform:    visible ? "translateY(0) scale(1)"   : "translateY(28px) scale(0.97)",
-          opacity:      visible ? 1 : 0,
-          transition:   "transform 0.3s cubic-bezier(.22,1,.36,1), opacity 0.28s ease",
+          overflow: "hidden",
+          background: "#ffffff",
+          boxShadow: "0 32px 80px rgba(37,99,235,0.18), 0 8px 32px rgba(0,0,0,0.14)",
+          transform: visible ? "translateY(0) scale(1)" : "translateY(28px) scale(0.97)",
+          opacity: visible ? 1 : 0,
+          transition: "transform 0.3s cubic-bezier(.22,1,.36,1), opacity 0.28s ease",
         }}
       >
         {/* -- Close button ----------------------------------------------- */}
@@ -154,21 +154,21 @@ export default function ServiceModal() {
           onClick={closeModal}
           aria-label="Close"
           style={{
-            position:        "absolute",
-            top:             14,
-            right:           14,
-            zIndex:          10,
-            width:           32,
-            height:          32,
-            borderRadius:    "50%",
-            border:          "1.5px solid #e2e8f0",
-            background:      "#f8fafc",
-            cursor:          "pointer",
-            display:         "flex",
-            alignItems:      "center",
-            justifyContent:  "center",
-            color:           "#64748b",
-            transition:      "all 0.15s",
+            position: "absolute",
+            top: 14,
+            right: 14,
+            zIndex: 10,
+            width: 32,
+            height: 32,
+            borderRadius: "50%",
+            border: "1.5px solid #e2e8f0",
+            background: "#f8fafc",
+            cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#64748b",
+            transition: "all 0.15s",
           }}
           onMouseEnter={e => {
             (e.currentTarget as HTMLButtonElement).style.background = "#fee2e2";
@@ -187,10 +187,10 @@ export default function ServiceModal() {
         {/* -- LEFT — image panel ----------------------------------------- */}
         <div
           style={{
-            position:   "relative",
-            width:      "320px",
+            position: "relative",
+            width: "320px",
             flexShrink: 0,
-            display:    "none",
+            display: "none",
           }}
           className="sm:block"
         >
@@ -199,75 +199,28 @@ export default function ServiceModal() {
 
         {/* Real image panel (visible on sm+) */}
         <div className="relative hidden sm:block shrink-0 w-75"
-             style={{ minHeight: "100%" }}>
+          style={{ minHeight: "100%" }}>
           <Image
-            src="/images/heros.png"
+            src="/images/ask-question-whatsapp-api.png"
             alt="Grow with Get Click Media"
             fill
-            className="object-cover object-center"
+            className="object-contain object-center"
             priority
           />
           {/* Dark-to-transparent gradient at bottom */}
           <div
             style={{
-              position:   "absolute",
-              inset:       0,
-              background: "linear-gradient(to top, rgba(15,23,42,0.72) 0%, rgba(15,23,42,0.1) 55%, transparent 100%)",
+              position: "absolute",
+              inset: 0,
             }}
           />
-          {/* Top badge */}
-          <div style={{ position: "absolute", top: 18, left: 18 }}>
-            <span style={{
-              display:         "inline-flex",
-              alignItems:      "center",
-              gap:             6,
-              background:      "rgba(255,255,255,0.18)",
-              border:          "1px solid rgba(255,255,255,0.32)",
-              backdropFilter:  "blur(8px)",
-              borderRadius:    999,
-              padding:         "5px 13px",
-              fontSize:        11,
-              fontWeight:      600,
-              color:           "#fff",
-              letterSpacing:   "0.02em",
-            }}>
-              ✦ Trusted by 500+ brands
-            </span>
-          </div>
-          {/* Bottom caption */}
-          <div style={{
-            position: "absolute",
-            bottom:   0,
-            left:     0,
-            right:    0,
-            padding:  "24px 22px",
-          }}>
-            <p style={{
-              margin:      0,
-              color:       "#fff",
-              fontWeight:  800,
-              fontSize:    20,
-              lineHeight:  1.3,
-            }}>
-              Let&rsquo;s grow your<br />
-              <span style={{ color: "#7dd3fc" }}>business together</span>
-            </p>
-            <p style={{
-              margin:    "6px 0 0",
-              color:     "rgba(255,255,255,0.75)",
-              fontSize:  12,
-              lineHeight: 1.5,
-            }}>
-              Free strategy call · No obligation · Reply in 24 h
-            </p>
-          </div>
         </div>
 
         {/* -- RIGHT — form panel ----------------------------------------- */}
         <div style={{
-          flex:       1,
-          overflowY:  "auto",
-          padding:    "32px 28px 28px",
+          flex: 1,
+          overflowY: "auto",
+          padding: "32px 28px 28px",
           background: "#fff",
         }}>
           {status === "success" ? (
@@ -277,17 +230,17 @@ export default function ServiceModal() {
               {/* Heading */}
               <div style={{ marginBottom: 22 }}>
                 <h2 style={{
-                  margin:     0,
-                  fontSize:   20,
+                  margin: 0,
+                  fontSize: 20,
                   fontWeight: 800,
-                  color:      "var(--foreground)",
+                  color: "var(--foreground)",
                 }}>
                   Get a free consultation
                 </h2>
                 <p style={{
-                  margin:    "4px 0 0",
-                  fontSize:  13,
-                  color:     "var(--text-muted)",
+                  margin: "4px 0 0",
+                  fontSize: 13,
+                  color: "var(--text-muted)",
                 }}>
                   Fill in the details below — our team will reach out shortly.
                 </p>
@@ -297,7 +250,7 @@ export default function ServiceModal() {
 
                 {/* Row 1 */}
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}
-                     className="grid-cols-1 sm:grid-cols-2">
+                  className="grid-cols-1 sm:grid-cols-2">
                   <FieldWrap label="Full Name" required>
                     <Input
                       ref={firstRef}
@@ -325,7 +278,7 @@ export default function ServiceModal() {
 
                 {/* Row 2 */}
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}
-                     className="grid-cols-1 sm:grid-cols-2">
+                  className="grid-cols-1 sm:grid-cols-2">
                   <FieldWrap label="Phone Number">
                     <Input
                       type="tel"
@@ -394,13 +347,13 @@ export default function ServiceModal() {
                 {/* Error */}
                 {status === "error" && (
                   <p style={{
-                    margin:       0,
-                    fontSize:     13,
-                    color:        "#dc2626",
-                    background:   "#fef2f2",
-                    border:       "1px solid #fecaca",
+                    margin: 0,
+                    fontSize: 13,
+                    color: "#dc2626",
+                    background: "#fef2f2",
+                    border: "1px solid #fecaca",
                     borderRadius: 12,
-                    padding:      "10px 14px",
+                    padding: "10px 14px",
                   }}>
                     Something went wrong — please try again.
                   </p>
@@ -410,7 +363,7 @@ export default function ServiceModal() {
                 <Button
                   type="submit"
                   disabled={status === "loading"}
-                  className="w-full h-11 rounded-xl text-[15px] font-semibold gap-2 text-white
+                  className="w-full h-11 rounded-xl cursor-pointer text-[15px] font-semibold gap-2 text-white
                              bg-linear-to-r from-[#1e3a8a] via-[#2563eb] to-[#38bdf8]
                              hover:opacity-90 hover:shadow-lg hover:-translate-y-0.5
                              transition-all duration-200 disabled:opacity-60 border-0"
@@ -420,15 +373,6 @@ export default function ServiceModal() {
                     : <>Send My Inquiry <ArrowRight size={16} /></>
                   }
                 </Button>
-
-                <p style={{
-                  textAlign:  "center",
-                  fontSize:   11,
-                  color:      "#94a3b8",
-                  margin:     "2px 0 0",
-                }}>
-                  🔒 Your information is never shared with third parties.
-                </p>
               </form>
             </>
           )}
@@ -453,11 +397,11 @@ function FieldWrap({
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
       <Label style={{
-        fontSize:      11,
-        fontWeight:    700,
+        fontSize: 11,
+        fontWeight: 700,
         textTransform: "uppercase",
         letterSpacing: "0.05em",
-        color:         "#64748b",
+        color: "#64748b",
       }}>
         {label}
         {required && <span style={{ color: "#ef4444", marginLeft: 2 }}>*</span>}
@@ -470,22 +414,22 @@ function FieldWrap({
 function SuccessScreen({ name, onClose }: { name: string; onClose: () => void }) {
   return (
     <div style={{
-      display:        "flex",
-      flexDirection:  "column",
-      alignItems:     "center",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
       justifyContent: "center",
-      textAlign:      "center",
-      gap:            16,
-      padding:        "40px 16px",
+      textAlign: "center",
+      gap: 16,
+      padding: "40px 16px",
     }}>
       <div style={{
-        width:        72,
-        height:       72,
+        width: 72,
+        height: 72,
         borderRadius: "50%",
-        background:   "#eff6ff",
-        border:       "2px solid #bfdbfe",
-        display:      "flex",
-        alignItems:   "center",
+        background: "#eff6ff",
+        border: "2px solid #bfdbfe",
+        display: "flex",
+        alignItems: "center",
         justifyContent: "center",
       }}>
         <CheckCircle2 size={34} color="#2563eb" />
@@ -495,10 +439,10 @@ function SuccessScreen({ name, onClose }: { name: string; onClose: () => void })
           You&rsquo;re all set!
         </h3>
         <p style={{
-          margin:    "6px 0 0",
-          fontSize:  13.5,
-          color:     "#475569",
-          maxWidth:  260,
+          margin: "6px 0 0",
+          fontSize: 13.5,
+          color: "#475569",
+          maxWidth: 260,
           lineHeight: 1.6,
         }}>
           Hey <strong>{name || "there"}</strong>! We&apos;ve received your inquiry and will be in touch within 24 hours.
