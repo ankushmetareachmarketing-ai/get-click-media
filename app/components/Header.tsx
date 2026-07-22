@@ -143,11 +143,33 @@ const navItems: NavItem[] = [
     sidebarBgColor: "#eff6ff",
     sections: [
       {
+        sectionTitle: "Core Services",
         layout: "cards",
         items: [
           { icon: <Mail size={16} />, title: "Bulk SMS Provider India", description: "High-volume SMS campaigns across India", href: "/bulk-sms-service-provider-india", color: "#3b82f6", bgColor: "#eff6ff" },
           { icon: <ShieldCheck size={16} />, title: "OTP SMS", description: "Fast OTP delivery for secure authentication", href: "/otp-sms-service-provider", color: "#10b981", bgColor: "#ecfdf5" },
           { icon: <Zap size={16} />, title: "Transactional SMS", description: "Reliable delivery for alerts and updates", href: "/transactional-sms-service", color: "#f59e0b", bgColor: "#fffbeb" },
+        ],
+      },
+      {
+        sectionTitle: "By Industry",
+        layout: "links",
+        items: [
+          { title: "Real Estate", href: "/bulk-sms-for-real-estate" },
+          { title: "Schools", href: "/bulk-sms-for-schools" },
+          { title: "Hospitals", href: "/bulk-sms-for-hospitals" },
+          { title: "Banking", href: "/bulk-sms-for-banking" },
+          { title: "Ecommerce", href: "/bulk-sms-for-ecommerce" },
+          { title: "Travel Agencies", href: "/bulk-sms-for-travel-industry" },
+        ],
+      },
+      {
+        sectionTitle: "Pricing",
+        layout: "links",
+        items: [
+          { title: "Bulk SMS Pricing India", href: "/bulk-sms-pricing-india" },
+          { title: "OTP SMS Pricing", href: "/otp-sms-pricing" },
+          { title: "Transactional SMS Pricing", href: "/transactional-sms-pricing" },
         ],
       },
     ],
