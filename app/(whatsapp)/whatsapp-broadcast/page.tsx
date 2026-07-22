@@ -195,7 +195,7 @@ export default function WhatsAppBroadcastPage() {
       <ClientMarquee />
 
       {/* -- DIRECT ANSWER / AEO BLOCK --------------------------------------- */}
-      <section className="relative overflow-hidden py-10 bg-white">
+      <section className="relative py-10">
         <SectionPattern tone="light" />
         <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-12">
           <div className="rounded-2xl border-l-4 border-[#2563eb] bg-blue-50/60 px-6 py-5">
@@ -220,7 +220,7 @@ export default function WhatsAppBroadcastPage() {
       </section>
 
       {/* -- WHAT IS BROADCAST API — deeper "what is this" ------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="what-is-broadcast">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="what-is-broadcast">
         <SectionPattern tone="light" />
         <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-12">
           <div className="text-center mb-10 space-y-4">
@@ -254,7 +254,7 @@ export default function WhatsAppBroadcastPage() {
       </section>
 
       {/* -- COMPARISON -------------------------------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-gray-50")} id="comparison">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="comparison">
         <SectionPattern tone="teal" />
         <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-12">
           <div className="text-center mb-12 space-y-4">
@@ -291,7 +291,7 @@ export default function WhatsAppBroadcastPage() {
       />
 
       {/* -- PRICING LOGIC — "How much?" ---------------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="pricing">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="pricing">
         <SectionPattern tone="light" />
         <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-12">
           <div className="text-center mb-12 space-y-4">
@@ -326,7 +326,7 @@ export default function WhatsAppBroadcastPage() {
       </section>
 
       {/* -- HOW TO SEND A BROADCAST — "How do I start?" ------------------------ */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-gray-50")} id="how-to">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="how-to">
         <SectionPattern tone="teal" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
@@ -367,7 +367,7 @@ export default function WhatsAppBroadcastPage() {
       </section>
 
       {/* -- USE CASES — "Why should I care?" (relevance) ----------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="use-cases">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="use-cases">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
@@ -385,8 +385,8 @@ export default function WhatsAppBroadcastPage() {
       </section>
 
       {/* -- WHY GET CLICK MEDIA — "Can I trust this?" -------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-[#0f172a]")} id="why-gcm">
-        <SectionPattern tone="green" opacity={0.08} />
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="why-gcm">
+        <SectionPattern tone="green" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="flex flex-col lg:flex-row items-start gap-14">
             <div className="flex-1 text-center lg:text-left space-y-5">
@@ -419,7 +419,7 @@ export default function WhatsAppBroadcastPage() {
       </section>
 
       {/* -- RELATED LINKS -------------------------------------------------- */}
-      <section className="relative overflow-hidden py-16 bg-gray-50">
+      <section className="relative py-16">
         <SectionPattern tone="teal" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <h2 className="text-xl font-bold text-gray-900 mb-6" style={SYNE_FONT}>
@@ -449,8 +449,8 @@ export default function WhatsAppBroadcastPage() {
       <HeroLeadForm />
 
       {/* -- FAQ ------------------------------------------------------------ */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="faq">
-        <SectionPattern tone="light" />
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="faq">
+        <SectionPattern tone="gold" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-12 space-y-4">
             <span className={EYEBROW_LIGHT}>Frequently Asked Questions</span>

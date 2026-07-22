@@ -148,7 +148,7 @@ export function IndustryPageTemplate({
       <ClientMarquee />
 
       {/* -- DIRECT ANSWER / AEO BLOCK --------------------------------------- */}
-      <section className="relative overflow-hidden py-10 bg-white">
+      <section className="relative py-10">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="max-w-[680px] mx-auto rounded-2xl border-l-4 border-[#2563eb] bg-blue-50/60 px-6 py-5">
@@ -163,7 +163,7 @@ export function IndustryPageTemplate({
       </section>
 
       {/* -- WHY THIS INDUSTRY NEEDS WHATSAPP ---------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="why-industry">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="why-industry">
         <SectionPattern tone="light" />
         <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-12 lg:px-20">
           <div className="text-center mb-12 space-y-4">
@@ -189,7 +189,7 @@ export function IndustryPageTemplate({
       {imageSections.map((section, i) => (
         <section
           key={section.eyebrow}
-          className={cnJoin("relative overflow-hidden py-16", i % 2 === 0 ? "bg-gray-50" : "bg-white", "border-y border-(--border-subtle)")}
+          className={cnJoin("relative py-16", "border-y border-(--border-subtle)")}
         >
           <SectionPattern tone={i % 2 === 0 ? "teal" : "light"} />
           <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-12 lg:px-20">
@@ -210,7 +210,7 @@ export function IndustryPageTemplate({
                 </ul>
               </div>
               <div className="w-full lg:w-[45%] shrink-0 lg:sticky lg:top-24">
-                <div className="relative w-full rounded-2xl overflow-hidden shadow-(--shadow-elevated)">
+                <div className="relative w-full rounded-2xl overflow-hidden ">
                   <Image src={section.image} alt={section.imageAlt} width={700} height={500} className="w-full h-auto" />
                 </div>
               </div>
@@ -220,7 +220,7 @@ export function IndustryPageTemplate({
       ))}
 
       {/* -- USE CASES ---------------------------------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-gray-50")} id="use-cases">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="use-cases">
         <SectionPattern tone="teal" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
@@ -243,7 +243,7 @@ export function IndustryPageTemplate({
       </section>
 
       {/* -- PERFORMANCE BENCHMARKS --------------------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="performance">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="performance">
         <SectionPattern tone="light" />
         <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-12 lg:px-20">
           <div className="text-center mb-12 space-y-4">
@@ -267,8 +267,8 @@ export function IndustryPageTemplate({
       </section>
 
       {/* -- CAPABILITIES --------------------------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-[#0f172a]")} id="capabilities">
-        <SectionPattern tone="green" opacity={0.08} />
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="capabilities">
+        <SectionPattern tone="green" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
             <span className={EYEBROW_DARK}>Platform Capabilities</span>
@@ -287,21 +287,37 @@ export function IndustryPageTemplate({
       <HeroLeadForm />
 
       {/* -- FAQ ------------------------------------------------------------ */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="faq">
-        <SectionPattern tone="light" />
-        <div className="relative z-10 max-w-3xl mx-auto px-6 sm:px-12 lg:px-20">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="faq">
+        <SectionPattern tone="gold" />
+        <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-12 space-y-4">
             <span className={EYEBROW_LIGHT}>Frequently Asked Questions</span>
             <h2 className={H2_LIGHT} style={SYNE_FONT}>
               WhatsApp API for {breadcrumbLabel}
             </h2>
           </div>
-          <AccordionList items={faqs.map((f) => ({ question: f.q, answer: <p className="text-base text-gray-500 leading-[1.7]">{f.a}</p> }))} />
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
+            <div className="hidden lg:block lg:w-[36%] shrink-0 lg:sticky lg:top-24">
+              <div className="relative w-full rounded-2xl aspect-[4/5]">
+                <Image
+                  src="/images/whatsapp/ask-question-whatsapp-api.png"
+                  alt={`Ask a question about WhatsApp API for ${breadcrumbLabel}`}
+                  fill
+                  className="object-contain"
+                  sizes="36vw"
+                />
+              </div>
+            </div>
+            <AccordionList
+              className="flex-1 w-full"
+              items={faqs.map((f) => ({ question: f.q, answer: <p className="text-base text-gray-500 leading-[1.7]">{f.a}</p> }))}
+            />
+          </div>
         </div>
       </section>
 
       {/* -- RELATED LINKS ---------------------------------------------------- */}
-      <section className="relative overflow-hidden py-16 bg-gray-50">
+      <section className="relative py-16">
         <SectionPattern tone="teal" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <h2 className="text-xl font-bold text-gray-900 mb-6" style={SYNE_FONT}>

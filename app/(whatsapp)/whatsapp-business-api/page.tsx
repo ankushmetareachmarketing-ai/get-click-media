@@ -611,7 +611,7 @@ export default function WhatsAppBusinessAPIPage() {
       <WhatsappStatBand />
 
       {/* -- SEE IT IN ACTION — concrete "what is this" proof --------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-blue-50/40")} id="see-it-in-action">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="see-it-in-action">
         <SectionPattern tone="gold" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="flex flex-col lg:flex-row items-center gap-14">
@@ -663,7 +663,7 @@ export default function WhatsAppBusinessAPIPage() {
       </section>
 
       {/* -- WHAT IS WHATSAPP BUSINESS API — deeper "what is this" ---------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="what-is-whatsapp-api">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="what-is-whatsapp-api">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
@@ -702,7 +702,7 @@ export default function WhatsAppBusinessAPIPage() {
       </section>
 
       {/* -- BENEFITS — "Why should I care?" --------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-blue-50/40")} id="benefits">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="benefits">
         <SectionPattern tone="gold" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
@@ -761,7 +761,7 @@ export default function WhatsAppBusinessAPIPage() {
       </section>
 
       {/* -- USE CASES BY INDUSTRY — "Why should I care?" (relevance) ------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-gray-50")} id="use-cases">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="use-cases">
         <SectionPattern tone="teal" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
@@ -783,8 +783,8 @@ export default function WhatsAppBusinessAPIPage() {
       </section>
 
       {/* -- HOW IT WORKS — mechanism ---------------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-[#0f172a]")} id="how-it-works">
-        <SectionPattern tone="green" opacity={0.08} />
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="how-it-works">
+        <SectionPattern tone="green" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4 mx-auto lg:w-[40%]">
             <span className={EYEBROW_DARK}>How It Works</span>
@@ -830,7 +830,7 @@ export default function WhatsAppBusinessAPIPage() {
       />
 
       {/* -- WHY GET CLICK MEDIA — "Can I trust this?" ----------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-gray-50")} id="why-gcm">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="why-gcm">
         <SectionPattern tone="teal" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="flex flex-col lg:flex-row lg:items-start gap-14">
@@ -863,7 +863,7 @@ export default function WhatsAppBusinessAPIPage() {
               {WHY_GCM.map((p) => (
                 <div
                   key={p.title}
-                  className="flex items-start gap-4 p-4 rounded-xl hover:bg-white transition-colors"
+                  className="flex items-start gap-4 p-4 rounded-xl bg-white transition-colors"
                 >
                   <span className="w-6 h-6 rounded-full bg-[#2563eb] flex items-center justify-center shrink-0 mt-0.5">
                     <CheckCheck className="w-3.5 h-3.5 text-white" />
@@ -890,7 +890,7 @@ export default function WhatsAppBusinessAPIPage() {
       </section>
 
       {/* -- CUSTOMER REVIEWS — "Can I trust this?" -------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="testimonials">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="testimonials">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-12 space-y-4">
@@ -904,7 +904,7 @@ export default function WhatsAppBusinessAPIPage() {
       </section>
 
       {/* -- PROVIDER COMPARISON — "Can I trust this?" ----------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-gray-50")} id="comparison">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="comparison">
         <SectionPattern tone="teal" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-12 space-y-4">
@@ -951,7 +951,7 @@ export default function WhatsAppBusinessAPIPage() {
       </section>
 
       {/* -- CONVERSATION CATEGORIES / PRICING — "How much?" ----------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="pricing">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="pricing">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-12 space-y-4">
@@ -993,7 +993,7 @@ export default function WhatsAppBusinessAPIPage() {
       </section>
 
       {/* -- HOW TO GET WHATSAPP API — "How do I start?" --------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-blue-50/30")} id="get-started">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="get-started">
         <SectionPattern tone="gold" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
@@ -1055,7 +1055,7 @@ export default function WhatsAppBusinessAPIPage() {
       </section>
 
       {/* -- RELATED GUIDES / INTERNAL LINKS ------------------------------- */}
-      <section className="relative overflow-hidden py-16 bg-gray-50">
+      <section className="relative py-16">
         <SectionPattern tone="teal" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <h2 className="text-xl font-bold text-gray-900 mb-6" style={SYNE_FONT}>
@@ -1109,8 +1109,9 @@ export default function WhatsAppBusinessAPIPage() {
       <HeroLeadForm />
 
       {/* -- FAQ ------------------------------------------------------------ */}
-      <section className={cnJoin(SECTION_PADDING, "bg-white")} id="faq">
-        <div className={CONTAINER}>
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="faq">
+        <SectionPattern tone="gold" />
+        <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-12 space-y-4">
             <span className={EYEBROW_LIGHT}>Frequently Asked Questions</span>
             <h2 className={H2_LIGHT} style={SYNE_FONT}>

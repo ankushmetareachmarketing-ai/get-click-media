@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   MousePointerClick,
   Home,
@@ -170,7 +171,7 @@ export default function WhatsAppClickToChatPage() {
           interactive tool in place of the image, so this section hand-matches
           DarkHero's light theme (same bg-white/border, same eyebrow/h1/CTA
           styling) with LinkGenerator standing in for the hero image. -------- */}
-      <section id="link-generator" className="relative overflow-hidden mt-2 mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl bg-white border border-(--border-subtle)">
+      <section id="link-generator" className="relative mt-2 mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl bg-white border border-(--border-subtle)">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
           <nav aria-label="Breadcrumb" className="mb-8">
             <ol className="flex items-center gap-2 text-xs text-gray-500 bg-gray-100 rounded-full px-4 py-2 w-fit">
@@ -212,7 +213,7 @@ export default function WhatsAppClickToChatPage() {
       <ClientMarquee />
 
       {/* -- DIRECT ANSWER ---------------------------------------------------- */}
-      <section className="relative overflow-hidden py-10 bg-white">
+      <section className="relative py-10">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="max-w-[680px] mx-auto rounded-2xl border-l-4 border-[#2563eb] bg-blue-50/60 px-6 py-5">
@@ -228,7 +229,7 @@ export default function WhatsAppClickToChatPage() {
       </section>
 
       {/* -- URL FORMAT ------------------------------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="url-format">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="url-format">
         <SectionPattern tone="light" />
         <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-12 lg:px-20">
           <div className="text-center mb-10 space-y-4">
@@ -261,7 +262,7 @@ https://wa.me/919876543210
       </section>
 
       {/* -- CLICK TO CHAT VS SAVE NUMBER --------------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-gray-50")} id="vs-save-number">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="vs-save-number">
         <SectionPattern tone="teal" />
         <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-12 lg:px-20">
           <div className="text-center mb-10 space-y-4">
@@ -287,7 +288,7 @@ https://wa.me/919876543210
       </section>
 
       {/* -- PLACEMENTS ---------------------------------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="placements">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="placements">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
@@ -305,8 +306,8 @@ https://wa.me/919876543210
       </section>
 
       {/* -- USE CASES ------------------------------------------------------------ */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-[#0f172a]")} id="use-cases">
-        <SectionPattern tone="green" opacity={0.08} />
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="use-cases">
+        <SectionPattern tone="green" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
             <span className={EYEBROW_DARK}>Pre-Filled Message Examples</span>
@@ -327,7 +328,7 @@ https://wa.me/919876543210
       </section>
 
       {/* -- WITH VS WITHOUT API --------------------------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="with-api">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="with-api">
         <SectionPattern tone="light" />
         <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-12 lg:px-20">
           <div className="text-center mb-12 space-y-4">
@@ -361,7 +362,7 @@ https://wa.me/919876543210
       </section>
 
       {/* -- VS CLICK TO WHATSAPP ADS ------------------------------------------------ */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-gray-50")} id="vs-ads">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="vs-ads">
         <SectionPattern tone="teal" />
         <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-12 lg:px-20">
           <div className="text-center mb-10 space-y-4">
@@ -391,7 +392,7 @@ https://wa.me/919876543210
       </section>
 
       {/* -- RELATED LINKS -------------------------------------------------------- */}
-      <section className="relative overflow-hidden py-16 bg-white">
+      <section className="relative py-16">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <h2 className="text-xl font-bold text-gray-900 mb-6" style={SYNE_FONT}>
@@ -414,35 +415,48 @@ https://wa.me/919876543210
       <HeroLeadForm />
 
       {/* -- FAQ ------------------------------------------------------------------ */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-gray-50")} id="faq">
-        <SectionPattern tone="teal" />
-        <div className="relative z-10 max-w-3xl mx-auto px-6 sm:px-12 lg:px-20">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="faq">
+        <SectionPattern tone="gold" />
+        <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-12 space-y-4">
             <span className={EYEBROW_LIGHT}>Frequently Asked Questions</span>
             <h2 className={H2_LIGHT} style={SYNE_FONT}>
               Questions about WhatsApp Click to Chat
             </h2>
           </div>
-          <AccordionList
-            className="bg-white"
-            items={FAQS.map((faq) => ({
-              question: faq.q,
-              answer: (
-                <p className="text-base text-gray-500 leading-[1.7]">
-                  {faq.a}
-                  {faq.link && (
-                    <>
-                      {" "}
-                      <Link href={faq.link.href} className="text-[#2563eb] underline underline-offset-2">
-                        {faq.link.text}
-                      </Link>
-                      .
-                    </>
-                  )}
-                </p>
-              ),
-            }))}
-          />
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
+            <div className="hidden lg:block lg:w-[36%] shrink-0 lg:sticky lg:top-24">
+              <div className="relative w-full rounded-2xl aspect-[4/5]">
+                <Image
+                  src="/images/whatsapp/ask-question-whatsapp-api.png"
+                  alt="Ask a question about WhatsApp Click to Chat"
+                  fill
+                  className="object-contain"
+                  sizes="36vw"
+                />
+              </div>
+            </div>
+            <AccordionList
+              className="flex-1 w-full bg-white"
+              items={FAQS.map((faq) => ({
+                question: faq.q,
+                answer: (
+                  <p className="text-base text-gray-500 leading-[1.7]">
+                    {faq.a}
+                    {faq.link && (
+                      <>
+                        {" "}
+                        <Link href={faq.link.href} className="text-[#2563eb] underline underline-offset-2">
+                          {faq.link.text}
+                        </Link>
+                        .
+                      </>
+                    )}
+                  </p>
+                ),
+              }))}
+            />
+          </div>
         </div>
       </section>
 

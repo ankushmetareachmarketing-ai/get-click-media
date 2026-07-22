@@ -232,7 +232,7 @@ export default function WhatsAppChatbotPage() {
       <ClientMarquee />
 
       {/* -- DIRECT ANSWER / AEO BLOCK --------------------------------------- */}
-      <section className="relative overflow-hidden py-10 bg-white">
+      <section className="relative py-10">
         <SectionPattern tone="light" />
         <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-12">
           <div className="rounded-2xl border-l-4 border-[#2563eb] bg-blue-50/60 px-6 py-5">
@@ -256,7 +256,7 @@ export default function WhatsAppChatbotPage() {
       </section>
 
       {/* -- WHAT IS A WHATSAPP CHATBOT — deeper "what is this" -------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="what-is-a-chatbot">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="what-is-a-chatbot">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="flex flex-col lg:flex-row items-center gap-14 mb-16">
@@ -334,7 +334,7 @@ export default function WhatsAppChatbotPage() {
       />
 
       {/* -- BENEFITS — "Why should I care?" ---------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="benefits">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="benefits">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
@@ -352,7 +352,7 @@ export default function WhatsAppChatbotPage() {
       </section>
 
       {/* -- USE CASES BY INDUSTRY — "Why should I care?" (relevance) -------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-gray-50")} id="use-cases">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="use-cases">
         <SectionPattern tone="teal" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
@@ -370,8 +370,8 @@ export default function WhatsAppChatbotPage() {
       </section>
 
       {/* -- HOW IT WORKS — mechanism ----------------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-[#0f172a]")} id="how-it-works">
-        <SectionPattern tone="green" opacity={0.08} />
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="how-it-works">
+        <SectionPattern tone="green" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4 mx-auto lg:w-[50%]">
             <span className={EYEBROW_DARK}>How It Works</span>
@@ -402,7 +402,7 @@ export default function WhatsAppChatbotPage() {
       </section>
 
       {/* -- PRICING — "How much?" --------------------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-blue-50/30")} id="pricing">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="pricing">
         <SectionPattern tone="gold" />
         <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-12 text-center space-y-5">
           <span className={EYEBROW_LIGHT}>
@@ -424,7 +424,7 @@ export default function WhatsAppChatbotPage() {
       </section>
 
       {/* -- SETUP PROCESS — "How do I start?" --------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="setup">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="setup">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
@@ -456,7 +456,7 @@ export default function WhatsAppChatbotPage() {
       </section>
 
       {/* -- WHY GET CLICK MEDIA — "Can I trust this?" ------------------------ */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-gray-50")} id="why-gcm">
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="why-gcm">
         <SectionPattern tone="teal" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="flex flex-col lg:flex-row items-start gap-14">
@@ -500,7 +500,7 @@ export default function WhatsAppChatbotPage() {
       </section>
 
       {/* -- RELATED LINKS ---------------------------------------------------- */}
-      <section className="relative overflow-hidden py-16 bg-white">
+      <section className="relative py-16">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <h2 className="text-xl font-bold text-gray-900 mb-6" style={SYNE_FONT}>
@@ -534,8 +534,8 @@ export default function WhatsAppChatbotPage() {
       <HeroLeadForm />
 
       {/* -- FAQ ---------------------------------------------------------------- */}
-      <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-gray-50")} id="faq">
-        <SectionPattern tone="teal" />
+      <section className={cnJoin(SECTION_PADDING, "relative")} id="faq">
+        <SectionPattern tone="gold" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-12 space-y-4">
             <span className={EYEBROW_LIGHT}>Frequently Asked Questions</span>

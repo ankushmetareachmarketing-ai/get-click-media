@@ -12,31 +12,30 @@ const PATTERNS = {
 export type SectionPatternTone = keyof typeof PATTERNS;
 
 /**
- * Full-bleed, low-opacity doodle-pattern texture dropped behind a section's
- * content. Tiled (not stretched) so the doodle icons stay a readable size
- * instead of one giant cropped blow-up of the source image. Give the section
- * `relative overflow-hidden` and its content wrapper `relative z-10` so the
- * pattern sits behind everything.
+ * Full-bleed, low-opacity, single (non-repeating) doodle-pattern image used
+ * AS a section's background — do not pair this with a Tailwind bg-color
+ * class on the section. Give the section `relative overflow-hidden` and its
+ * content wrapper `relative z-10` so the pattern sits behind everything.
+ *
+ * The "green" tone is always laid over its own dark navy base (baked in
+ * here) since it's used on sections with white text — without a dark base,
+ * a low-opacity image alone would read as near-white and make that text
+ * unreadable.
  */
 export function SectionPattern({
   tone,
-  opacity = 0.08,
-  tileSize = 500,
+  opacity = 0.12,
 }: {
   tone: SectionPatternTone;
   opacity?: number;
-  tileSize?: number;
 }) {
   return (
-    <div
-      aria-hidden="true"
-      className="pointer-events-none absolute inset-0 z-0"
-      style={{
-        backgroundImage: `url(${PATTERNS[tone]})`,
-        backgroundRepeat: "repeat",
-        backgroundSize: `${tileSize}px auto`,
-        opacity,
-      }}
-    />
+    <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+      {tone === "green" && <div className="absolute inset-0 bg-[#0f172a]" />}
+      <div
+        className="absolute inset-0 bg-no-repeat bg-cover bg-center"
+        style={{ backgroundImage: `url(${PATTERNS[tone]})`, opacity }}
+      />
+    </div>
   );
 }
