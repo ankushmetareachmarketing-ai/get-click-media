@@ -3,6 +3,7 @@
 import React from "react";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
+import { Magnetic } from "@/components/motion/Magnetic";
 
 const Hero: React.FC = () => {
   return (
@@ -57,7 +58,7 @@ const Hero: React.FC = () => {
               Desktop: full two-part badge (unchanged)
           */}
           {/* Mobile badge */}
-          <div className="flex sm:hidden items-center gap-2 px-3 py-1.5 rounded-full border border-[#b8c8f0] bg-white/70 backdrop-blur-sm">
+          <div data-reveal="fade-down" className="flex sm:hidden items-center gap-2 px-3 py-1.5 rounded-full border border-[#b8c8f0] bg-white/70 backdrop-blur-sm">
             <span className="bg-[linear-gradient(135deg,var(--primary),var(--primary-light))] text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full whitespace-nowrap shrink-0">
               What&apos;s New
             </span>
@@ -67,7 +68,7 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Desktop badge */}
-          <div className="hidden sm:flex flex-row items-center gap-2 px-3 py-1 rounded-full border border-[#b8c8f0] bg-white/70 backdrop-blur-sm">
+          <div data-reveal="fade-down" className="hidden sm:flex flex-row items-center gap-2 px-3 py-1 rounded-full border border-[#b8c8f0] bg-white/70 backdrop-blur-sm">
             <span className="bg-[linear-gradient(135deg,var(--primary),var(--primary-light))] text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full whitespace-nowrap shrink-0">
               What&apos;s New
             </span>
@@ -77,7 +78,11 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Heading */}
-          <h1 className="text-[1.35rem] sm:text-[2rem] md:text-[2.6rem] lg:text-[3rem] leading-[1.15] tracking-[-0.02em]">
+          <h1
+            data-reveal="fade-up"
+            data-reveal-delay="0.1"
+            className="text-[1.35rem] sm:text-[2rem] md:text-[2.6rem] lg:text-[3rem] leading-[1.15] tracking-[-0.02em]"
+          >
             <span className="font-bold text-gray-900 [font-family:var(--font-syne)]">Next-Gen </span>
             <em style={{ fontStyle: "italic", fontFamily: "Georgia,'Times New Roman',serif", fontWeight: 300, color: "#6b7280" }}>
               CPaaS Platform for
@@ -90,7 +95,11 @@ const Hero: React.FC = () => {
           </h1>
 
           {/* Description — shorter on mobile */}
-          <p className="text-gray-500 text-[11px] sm:text-sm lg:text-[15px] leading-relaxed max-w-65 sm:max-w-md lg:max-w-lg">
+          <p
+            data-reveal="fade-up"
+            data-reveal-delay="0.2"
+            className="text-gray-500 text-[11px] sm:text-sm lg:text-[15px] leading-relaxed max-w-65 sm:max-w-md lg:max-w-lg"
+          >
             {/* Mobile text */}
             <span className="sm:hidden">
               WhatsApp, RCS, SMS &amp; Voice — all from one unified platform.
@@ -103,13 +112,20 @@ const Hero: React.FC = () => {
           </p>
 
           {/* CTA buttons */}
-          <div className="flex items-center justify-center gap-2 sm:gap-3 mt-1">
-            <button className="inline-flex items-center gap-1.5 sm:gap-2 pl-3.5 sm:pl-5 pr-1 sm:pr-1.5 h-9 sm:h-10 lg:h-11 rounded-full bg-gray-900 text-white text-[11px] sm:text-sm font-semibold hover:bg-gray-800 hover:scale-105 transition-all duration-200 cursor-pointer">
-              <span>Let&apos;s Connect</span>
-              <span className="w-6 h-6 sm:w-6 sm:h-6 lg:w-7 lg:h-7 rounded-full bg-white flex items-center justify-center shrink-0">
-                <ChevronRight size={11} className="text-gray-900" />
-              </span>
-            </button>
+          <div
+            data-reveal="fade-up"
+            data-reveal-delay="0.3"
+            data-reveal-stagger="0.08"
+            className="flex items-center justify-center gap-2 sm:gap-3 mt-1"
+          >
+            <Magnetic strength={0.25}>
+              <button className="inline-flex items-center gap-1.5 sm:gap-2 pl-3.5 sm:pl-5 pr-1 sm:pr-1.5 h-9 sm:h-10 lg:h-11 rounded-full bg-gray-900 text-white text-[11px] sm:text-sm font-semibold hover:bg-gray-800 hover:scale-105 transition-all duration-200 cursor-pointer">
+                <span>Let&apos;s Connect</span>
+                <span className="w-6 h-6 sm:w-6 sm:h-6 lg:w-7 lg:h-7 rounded-full bg-white flex items-center justify-center shrink-0">
+                  <ChevronRight size={11} className="text-gray-900" />
+                </span>
+              </button>
+            </Magnetic>
 
             <button className="inline-flex items-center gap-1.5 sm:gap-2 pl-3.5 sm:pl-5 pr-1 sm:pr-1.5 h-9 sm:h-10 lg:h-11 rounded-full bg-white border border-gray-200 text-gray-900 text-[11px] sm:text-sm font-semibold hover:border-gray-400 hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm">
               <span>Book a Demo</span>
@@ -124,7 +140,7 @@ const Hero: React.FC = () => {
       {/* -- Dashboard image -- */}
 
       {/* Mobile image — wider + bottom fade shadow */}
-      <div className="relative sm:hidden mt-2 overflow-hidden">
+      <div data-reveal="scale-in" data-reveal-delay="0.35" className="relative sm:hidden mt-2 overflow-hidden">
         <Image
           src="/images/hero-mob.webp"
           alt="Get Click Media platform on mobile"
@@ -144,7 +160,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Desktop image — home-page.png (unchanged) */}
-      <div className="hidden sm:flex sm:mt-0 justify-center">
+      <div data-reveal="scale-in" data-reveal-delay="0.35" className="hidden sm:flex sm:mt-0 justify-center">
         <Image
           src="/images/hero/home-page.png"
           alt="Get Click Media unified communication platform dashboard"

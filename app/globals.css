@@ -313,8 +313,28 @@ body::after {
   .animate-spotlight-fade { animation: none; opacity: 1; }
 }
 
+/* --- LENIS SMOOTH SCROLL ----------------------------------------------------
+   Recommended-by-Lenis overrides so its RAF-driven scroll never fights the
+   browser's own `scroll-behavior: smooth` (anchor links) or iframes. See
+   components/motion/SmoothScroll.tsx for the JS side of this wiring. */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
 /* --- ENSURE ALL PAGE CONTENT SITS ABOVE THE BACKGROUND --------------------- */
-body > *:not(.bg-balls):not(.layout-header):not(.floating-dock-portal) {
+body > *:not(.bg-balls):not(.layout-header):not(.floating-dock-portal):not(.gsap-fixed-ui) {
   position: relative;
   z-index: 1;
 }
@@ -366,6 +386,34 @@ body > *:not(.bg-balls):not(.layout-header):not(.floating-dock-portal) {
   html {
     @apply font-sans;
   }
+}
+
+/* --- PAGE PRELOADER ----------------------------------------------------------
+   Rendered directly in the root layout (not a client component) so it paints
+   on the very first frame, before JS hydrates. A tiny inline script (see
+   layout.tsx) hides it once the window "load" event fires. */
+#gcm-preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+#gcm-preloader img {
+  width: 220px;
+  height: 220px;
+}
+
+#gcm-preloader.gcm-preloader-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 /* --- BLOG PROSE STYLES ------------------------------------------------------ */

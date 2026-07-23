@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import { useModalStore } from "@/store/useModalStore";
+import { Magnetic } from "@/components/motion/Magnetic";
 
 interface InnerPageHeroProps {
   eyebrow?: string;
@@ -56,30 +57,40 @@ const InnerPageHero = ({
         {/* -- Left: text -- */}
         <div className="flex-1 flex flex-col gap-5 sm:gap-6 z-10">
           {eyebrow && (
-            <span className="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full bg-white/70 border border-white/80 text-xs font-semibold text-[color:var(--primary)] shadow-sm backdrop-blur-sm">
+            <span data-reveal="fade-up" className="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full bg-white/70 border border-white/80 text-xs font-semibold text-[color:var(--primary)] shadow-sm backdrop-blur-sm">
               {eyebrow}
             </span>
           )}
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-[var(--font-syne)] text-gray-900 leading-tight">
+          <h1
+            data-reveal="fade-up"
+            data-reveal-delay="0.1"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold font-[var(--font-syne)] text-gray-900 leading-tight"
+          >
             {renderTitle()}
           </h1>
 
-          <p className="text-sm sm:text-base text-gray-600 leading-relaxed max-w-lg">
+          <p
+            data-reveal="fade-up"
+            data-reveal-delay="0.2"
+            className="text-sm sm:text-base text-gray-600 leading-relaxed max-w-lg"
+          >
             {description}
           </p>
 
-          <div className="flex flex-row items-center gap-2 sm:gap-3 flex-wrap">
-            <button
-              onClick={openModal}
-              className="px-4 sm:px-6 h-10 sm:h-14 sm:min-w-52 cursor-pointer rounded-full bg-[linear-gradient(135deg,var(--primary),var(--primary-light))] text-white text-xs sm:text-base font-bold shadow-md hover:shadow-lg hover:scale-105 transition-all flex items-center justify-center gap-1.5 sm:gap-2"
-            >
-              <span>{primaryCta}</span>
-              <span className="w-5 h-5 sm:w-8 sm:h-8 rounded-full bg-white flex items-center justify-center text-[color:var(--primary)] shadow-sm">
-                <ChevronRight size={11} className="sm:hidden" />
-                <ChevronRight size={15} className="hidden sm:block" />
-              </span>
-            </button>
+          <div data-reveal="fade-up" data-reveal-delay="0.3" className="flex flex-row items-center gap-2 sm:gap-3 flex-wrap">
+            <Magnetic strength={0.25}>
+              <button
+                onClick={openModal}
+                className="px-4 sm:px-6 h-10 sm:h-14 sm:min-w-52 cursor-pointer rounded-full bg-[linear-gradient(135deg,var(--primary),var(--primary-light))] text-white text-xs sm:text-base font-bold shadow-md hover:shadow-lg hover:scale-105 transition-all flex items-center justify-center gap-1.5 sm:gap-2"
+              >
+                <span>{primaryCta}</span>
+                <span className="w-5 h-5 sm:w-8 sm:h-8 rounded-full bg-white flex items-center justify-center text-[color:var(--primary)] shadow-sm">
+                  <ChevronRight size={11} className="sm:hidden" />
+                  <ChevronRight size={15} className="hidden sm:block" />
+                </span>
+              </button>
+            </Magnetic>
 
             <button className="px-4 sm:px-6 h-10 sm:h-14 sm:min-w-52 cursor-pointer rounded-full bg-white text-black text-xs sm:text-base font-bold shadow-md hover:shadow-lg hover:scale-105 transition-all flex items-center justify-center gap-2 border border-[color:var(--border)]">
               <span>{secondaryCta}</span>
@@ -88,7 +99,11 @@ const InnerPageHero = ({
         </div>
 
         {/* -- Right: image (desktop) / Bottom: image (mobile) -- */}
-        <div className="flex-1 flex justify-center items-end lg:items-center relative w-full order-last lg:order-none">
+        <div
+          data-reveal="scale-in"
+          data-reveal-delay="0.15"
+          className="flex-1 flex justify-center items-end lg:items-center relative w-full order-last lg:order-none"
+        >
           <Image
             src={imageSrc}
             alt={imageAlt}

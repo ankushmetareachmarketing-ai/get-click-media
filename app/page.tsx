@@ -14,11 +14,9 @@ import FAQ from "./components/FAQ";
 import BulkSmsBrandsStrip from "./components/bulk-sms/BulkSmsBrandsStrip";
 import CTABanner from "./components/CTABanner";
 import VideoScrollSection from "./components/VideoScrollSection";
-import GSAPPageAnimations from "./components/GSAPPageAnimations";
 const page = () => {
   return (
     <div>
-      <GSAPPageAnimations />
       <Hero />
       <ClientMarquee />
       <FeaturesSection />

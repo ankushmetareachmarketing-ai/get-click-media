@@ -255,34 +255,32 @@ export default function RCSRealEstatePage() {
       {/* -----------------------------------------------------------------
           HERO — with breadcrumb inside
       ----------------------------------------------------------------- */}
-      <section className="relative overflow-hidden mt-2 bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
-        <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:40px_40px]" />
-
+      <section className="relative overflow-hidden mt-2 bg-white bg-[radial-gradient(130%_130%_at_100%_100%,#5b7fe8_0%,#93aef0_25%,#d6e2ff_55%,#ffffff_85%)] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
           {/* -- BREADCRUMB INSIDE HERO WITH VISIBLE BACKGROUND -- */}
           <nav aria-label="Breadcrumb" className="mb-8">
-            <ol className="flex items-center gap-2 text-xs text-white/60 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 w-fit">
-              <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-              <li aria-hidden className="text-white/30">/</li>
-              <li><Link href="/rcs-messaging" className="hover:text-white transition-colors">RCS Messaging</Link></li>
-              <li aria-hidden className="text-white/30">/</li>
-              <li className="text-white font-medium">RCS for Real Estate</li>
+            <ol className="flex items-center gap-2 text-xs text-gray-500 bg-white/70 backdrop-blur-sm rounded-full px-4 py-2 w-fit">
+              <li><Link href="/" className="hover:text-gray-900 transition-colors">Home</Link></li>
+              <li aria-hidden className="text-gray-300">/</li>
+              <li><Link href="/rcs-messaging" className="hover:text-gray-900 transition-colors">RCS Messaging</Link></li>
+              <li aria-hidden className="text-gray-300">/</li>
+              <li className="text-gray-900 font-medium">RCS for Real Estate</li>
             </ol>
           </nav>
 
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1 text-center lg:text-left space-y-6">
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-semibold tracking-wider uppercase backdrop-blur-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#38bdf8] animate-pulse" />
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-[#2563eb] text-xs font-semibold tracking-wider uppercase backdrop-blur-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#2563eb] animate-pulse" />
                 Real Estate RCS Messaging
               </span>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight font-(family-name:--font-syne)">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight font-(family-name:--font-syne)">
                 RCS Messaging for Real Estate:<br />
-                <span className="text-[#38bdf8]">Convert More Leads into Site Visits</span>
+                <span className="text-[#2563eb]">Convert More Leads into Site Visits</span>
               </h1>
 
-              <p className="text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">
+              <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-xl">
                 In India&apos;s competitive real estate market, the difference between a lead and a site
                 visit booking often comes down to how quickly and effectively your brand communicates.
                 RCS delivers rich, visual property experiences directly into the customer&apos;s native
@@ -291,19 +289,19 @@ export default function RCSRealEstatePage() {
 
               <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                 <Link href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#1e3a8a] text-sm font-bold shadow-lg hover:scale-105 transition-transform duration-200">
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-500 text-white text-sm font-bold shadow-lg hover:scale-105 transition-transform duration-200">
                   Request a Free Demo <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-200">
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-300 bg-white text-gray-700 text-sm font-semibold hover:bg-gray-50 transition-colors duration-200">
                   Talk to Our RCS Team
                 </Link>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10 max-w-md mx-auto lg:mx-0">
-                <p className="text-white/90 text-sm font-medium">
-                  <span className="text-[#38bdf8] font-bold">Quick result:</span> Real estate developers using RCS for site visit campaigns report 
-                  <span className="text-white font-bold"> 3x to 5x higher booking rates</span> compared to equivalent plain SMS campaigns.
+              <div className="bg-blue-50/60 backdrop-blur-sm rounded-xl p-4 border border-blue-100 max-w-md mx-auto lg:mx-0">
+                <p className="text-gray-700 text-sm font-medium">
+                  <span className="text-[#2563eb] font-bold">Quick result:</span> Real estate developers using RCS for site visit campaigns report
+                  <span className="text-gray-900 font-bold"> 3x to 5x higher booking rates</span> compared to equivalent plain SMS campaigns.
                 </p>
               </div>
             </div>

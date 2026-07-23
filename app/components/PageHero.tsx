@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ChevronRight, Home } from "lucide-react";
 import { useModalStore } from "@/store/useModalStore";
 import { Spotlight } from "@/components/ui/spotlight";
+import { Magnetic } from "@/components/motion/Magnetic";
 
 export interface BreadcrumbItem {
   label: string;
@@ -102,7 +103,7 @@ export default function PageHero({
         <div className="flex-1 flex flex-col gap-4 sm:gap-5">
 
           {/* Breadcrumb */}
-          <nav aria-label="Breadcrumb">
+          <nav data-reveal="fade-down" aria-label="Breadcrumb">
             <ol
               className="flex items-center flex-wrap gap-1 text-xs text-(--ink-4)"
               itemScope
@@ -135,32 +136,42 @@ export default function PageHero({
 
           {/* Eyebrow */}
           {eyebrow && (
-            <span className="inline-flex items-center self-start gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-[0.6875rem] font-bold tracking-widest uppercase text-primary">
+            <span data-reveal="fade-up" className="inline-flex items-center self-start gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-[0.6875rem] font-bold tracking-widest uppercase text-primary">
               {eyebrow}
             </span>
           )}
 
           {/* H1 */}
-          <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] [font-family:var(--font-syne)] font-bold text-(--ink-1) leading-[1.1] tracking-[-0.02em]">
+          <h1
+            data-reveal="fade-up"
+            data-reveal-delay="0.1"
+            className="text-3xl sm:text-4xl lg:text-[2.75rem] [font-family:var(--font-syne)] font-bold text-(--ink-1) leading-[1.1] tracking-[-0.02em]"
+          >
             {renderTitle()}
           </h1>
 
           {/* Description */}
-          <p className="text-[0.9375rem] sm:text-base text-(--ink-3) leading-[1.65] max-w-lg">
+          <p
+            data-reveal="fade-up"
+            data-reveal-delay="0.2"
+            className="text-[0.9375rem] sm:text-base text-(--ink-3) leading-[1.65] max-w-lg"
+          >
             {description}
           </p>
 
           {/* CTAs */}
-          <div className="flex items-center gap-2 sm:gap-3 pt-1">
-            <button
-              onClick={openModal}
-              className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 h-11 sm:h-12 rounded-full bg-[linear-gradient(135deg,var(--primary),var(--primary-light))] text-white text-xs sm:text-sm font-bold shadow-(--shadow-card) hover:shadow-(--shadow-card-hover) hover:scale-105 transition-all duration-200 cursor-pointer whitespace-nowrap"
-            >
-              {primaryCta}
-              <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white/20 flex items-center justify-center">
-                <ChevronRight size={12} />
-              </span>
-            </button>
+          <div data-reveal="fade-up" data-reveal-delay="0.3" className="flex items-center gap-2 sm:gap-3 pt-1">
+            <Magnetic strength={0.25}>
+              <button
+                onClick={openModal}
+                className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 h-11 sm:h-12 rounded-full bg-[linear-gradient(135deg,var(--primary),var(--primary-light))] text-white text-xs sm:text-sm font-bold shadow-(--shadow-card) hover:shadow-(--shadow-card-hover) hover:scale-105 transition-all duration-200 cursor-pointer whitespace-nowrap"
+              >
+                {primaryCta}
+                <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white/20 flex items-center justify-center">
+                  <ChevronRight size={12} />
+                </span>
+              </button>
+            </Magnetic>
 
             <Link
               href={secondaryCtaHref}
@@ -172,7 +183,11 @@ export default function PageHero({
         </div>
 
         {/* -- Right: image -- */}
-        <div className="flex-1 flex justify-center items-end lg:items-center w-full order-last lg:order-0">
+        <div
+          data-reveal="scale-in"
+          data-reveal-delay="0.15"
+          className="flex-1 flex justify-center items-end lg:items-center w-full order-last lg:order-0"
+        >
           <Image
             src={imageSrc}
             alt={imageAlt}

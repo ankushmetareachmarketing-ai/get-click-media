@@ -290,35 +290,32 @@ export default function RCSDelhiNoidaPage() {
       {/* -----------------------------------------------------------------
           HERO — EXACT SAME AS PREVIOUS PAGES (dark gradient)
       ----------------------------------------------------------------- */}
-      <section className="relative overflow-hidden mt-2 bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
-        {/* Subtle grid overlay */}
-        <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:40px_40px]" />
-
+      <section className="relative overflow-hidden mt-2 bg-white bg-[radial-gradient(130%_130%_at_100%_100%,#5b7fe8_0%,#93aef0_25%,#d6e2ff_55%,#ffffff_85%)] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
           {/* -- BREADCRUMB — NOW INSIDE HERO WITH VISIBLE BACKGROUND -- */}
           <nav aria-label="Breadcrumb" className="mb-8">
-            <ol className="flex items-center gap-2 text-xs text-white/60 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 w-fit">
-              <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-              <li aria-hidden className="text-white/30">/</li>
-              <li><Link href="/rcs-messaging" className="hover:text-white transition-colors">RCS Messaging</Link></li>
-              <li aria-hidden className="text-white/30">/</li>
-              <li className="text-white font-medium">RCS Messaging Delhi Noida</li>
+            <ol className="flex items-center gap-2 text-xs text-gray-500 bg-white/70 backdrop-blur-sm rounded-full px-4 py-2 w-fit">
+              <li><Link href="/" className="hover:text-gray-900 transition-colors">Home</Link></li>
+              <li aria-hidden className="text-gray-300">/</li>
+              <li><Link href="/rcs-messaging" className="hover:text-gray-900 transition-colors">RCS Messaging</Link></li>
+              <li aria-hidden className="text-gray-300">/</li>
+              <li className="text-gray-900 font-medium">RCS Messaging Delhi Noida</li>
             </ol>
           </nav>
 
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1 text-center lg:text-left space-y-6">
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-semibold tracking-wider uppercase backdrop-blur-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#38bdf8] animate-pulse" />
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-[#2563eb] text-xs font-semibold tracking-wider uppercase backdrop-blur-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#2563eb] animate-pulse" />
                 RCS Messaging Delhi &amp; Noida
               </span>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight font-(family-name:--font-syne)">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight font-(family-name:--font-syne)">
                 RCS Messaging Service<br />
-                <span className="text-[#38bdf8]">in Delhi &amp; Noida</span>
+                <span className="text-[#2563eb]">in Delhi &amp; Noida</span>
               </h1>
 
-              <p className="text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">
+              <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-xl">
                 Get Click Media is one of Delhi-NCR&apos;s leading RCS Business Messaging providers —
                 headquartered in Noida and serving businesses across Delhi, Noida, Gurugram,
                 Faridabad, and Greater Noida with enterprise-grade RCS messaging infrastructure.
@@ -326,11 +323,11 @@ export default function RCSDelhiNoidaPage() {
 
               <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                 <Link href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#1e3a8a] text-sm font-bold shadow-lg hover:scale-105 transition-transform duration-200">
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-500 text-white text-sm font-bold shadow-lg hover:scale-105 transition-transform duration-200">
                   Request a Free Demo <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-200">
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-300 bg-white text-gray-700 text-sm font-semibold hover:bg-gray-50 transition-colors duration-200">
                   Call Our Noida Office
                 </Link>
               </div>
@@ -349,7 +346,7 @@ export default function RCSDelhiNoidaPage() {
           </div>
 
           {/* Stats row — same style as previous pages */}
-          <div className="relative mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-white/10">
+          <div className="relative mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-gray-200">
             {[
               { value: "10,000+", label: "Businesses served across India" },
               { value: "350–450M", label: "RCS-reachable devices in India" },
@@ -357,8 +354,8 @@ export default function RCSDelhiNoidaPage() {
               { value: "Noida", label: "GCM headquarters, NCR" }
             ].map((stat, i) => (
               <div key={i} className="text-center space-y-1">
-                <p className="text-xl sm:text-2xl font-extrabold text-[#38bdf8] font-(family-name:--font-syne)">{stat.value}</p>
-                <p className="text-xs text-white/40">{stat.label}</p>
+                <p className="text-xl sm:text-2xl font-extrabold text-[#2563eb] font-(family-name:--font-syne)">{stat.value}</p>
+                <p className="text-xs text-gray-400">{stat.label}</p>
               </div>
             ))}
           </div>

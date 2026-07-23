@@ -22,48 +22,10 @@ export const metadata: Metadata = {
   },
 };
 
-/* -- JSON-LD Schema -------------------------------------------------------- */
-const schema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://getclickmedia.com" },
-        { "@type": "ListItem", position: 2, name: "RCS Messaging", item: "https://getclickmedia.com/rcs-messaging" },
-      ],
-    },
-    {
-      "@type": "Service",
-      name: "RCS Messaging Service",
-      provider: { "@type": "Organization", name: "Get Click Media", url: "https://getclickmedia.com" },
-      areaServed: { "@type": "Country", name: "India" },
-      serviceType: "RCS Business Messaging",
-      url: "https://getclickmedia.com/rcs-messaging",
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question", name: "What is RCS messaging and how is it different from SMS?",
-          acceptedAnswer: { "@type": "Answer", text: "RCS (Rich Communication Services) is the next-generation upgrade to standard SMS. While SMS is limited to 160 characters of plain text, RCS lets businesses send rich, interactive messages with images, carousels, action buttons, and verified sender branding — all inside the customer's native messaging app without any app download." }
-        },
-        {
-          "@type": "Question", name: "Does RCS work on all phones in India?",
-          acceptedAnswer: { "@type": "Answer", text: "RCS works on Android devices using Google Messages (most Android phones in India) and on iPhones running iOS 18+. For devices that don't support RCS, Get Click Media automatically sends an SMS fallback." }
-        },
-        {
-          "@type": "Question", name: "Is RCS available on Jio, Airtel, and Vi networks?",
-          acceptedAnswer: { "@type": "Answer", text: "Yes. Jio, Airtel, and Vi all support RCS. Get Click Media has direct carrier integrations with all three for reliable RCS delivery." }
-        },
-        {
-          "@type": "Question", name: "Do I need TRAI DLT registration for RCS?",
-          acceptedAnswer: { "@type": "Answer", text: "RCS Business Messaging doesn't require TRAI DLT registration, but does require Google brand verification — a one-time process that Get Click Media handles end-to-end." }
-        },
-      ],
-    },
-  ],
-};
+/* -- EEAT -------------------------------------------------------------------
+   Visible near the H1 per the RCS content brief; bump this whenever
+   pricing/coverage claims on this page are re-verified. */
+const LAST_UPDATED = "July 2026";
 
 const FEATURES = [
   { icon: Shield, title: "Verified Sender Identity", desc: "Your brand name, logo, and a verified checkmark appear on every message — customers know it's really you, not a random sender ID they can't place." },
@@ -163,6 +125,22 @@ const FAQS = [
     q: "How does RCS compare to WhatsApp Business API for Indian businesses?",
     a: "They're complementary, not competing. WhatsApp is strongest for two-way support conversations. RCS reaches all Android (and now iOS 18) users through their native messaging app with no opt-in required — making it stronger for broad outbound campaigns. Get Click Media supports both channels from a single platform.",
   },
+  {
+    q: "What is the full form of RCS?",
+    a: "RCS stands for Rich Communication Services — a GSMA-standardised messaging protocol built as the modern successor to SMS, with rich media, branded sender identity, and interactive buttons built into the standard.",
+  },
+  {
+    q: "What is Google RCS Business Messaging (RBM)?",
+    a: "Google RCS Business Messaging — often shortened to Google RBM — is Google's specific product implementation of the RCS standard, used to send verified, rich messages to Android users through Google Messages. See our dedicated Google RCS Business Messaging guide for the full breakdown.",
+  },
+  {
+    q: "What are RCS rich cards?",
+    a: "Rich cards are interactive message templates that combine an image, short text, and action buttons — like 'Book Now' or 'View Offer' — in a single message, rendered natively inside the customer's messaging app.",
+  },
+  {
+    q: "Is RCS messaging secure?",
+    a: "RCS messages support end-to-end encryption between Google Messages users, and Google's brand verification process helps prevent spoofing — a meaningful security advantage over plain SMS, where sender IDs are easy to fake.",
+  },
 ];
 
 const COMPARISON = [
@@ -178,6 +156,56 @@ const COMPARISON = [
   { feature: "Best for", rcs: "Rich campaigns", sms: "OTPs, alerts", wa: "Two-way support" },
 ];
 
+/* -- JSON-LD Schema ---------------------------------------------------------
+   FAQPage mainEntity is generated from FAQS above (not retyped) so the
+   schema can never drift from the visible on-page copy. */
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://getclickmedia.com" },
+        { "@type": "ListItem", position: 2, name: "RCS Messaging", item: "https://getclickmedia.com/rcs-messaging" },
+      ],
+    },
+    {
+      "@type": "Service",
+      name: "RCS Messaging Service",
+      provider: { "@type": "Organization", name: "Get Click Media", url: "https://getclickmedia.com" },
+      areaServed: { "@type": "Country", name: "India" },
+      serviceType: "RCS Business Messaging",
+      url: "https://getclickmedia.com/rcs-messaging",
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://getclickmedia.com/rcs-messaging",
+      url: "https://getclickmedia.com/rcs-messaging",
+      name: "RCS Messaging Service for Indian Businesses | Get Click Media",
+      primaryImageOfPage: { "@type": "ImageObject", url: "https://getclickmedia.com/images/rcs/rcs-service-provider-india.png" },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: FAQS.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+  ],
+};
+
+const RELATED_LINKS = [
+  { label: "RCS Service Provider India", href: "/rcs-service-provider-india" },
+  { label: "RCS Pricing India", href: "/rcs-pricing-india" },
+  { label: "RCS API", href: "/rcs-api" },
+  { label: "Google RCS Business Messaging", href: "/google-rcs-business-messaging" },
+  { label: "RCS for Banking", href: "/rcs-for-banking" },
+  { label: "RCS for E-commerce", href: "/rcs-for-ecommerce" },
+  { label: "RCS for Education", href: "/rcs-for-education" },
+  { label: "RCS for Real Estate", href: "/rcs-for-real-estate" },
+];
+
 /* -- Page ------------------------------------------------------------------ */
 export default function RCSMessagingPage() {
   return (
@@ -189,6 +217,7 @@ export default function RCSMessagingPage() {
           HERO
       ----------------------------------------------------------------- */}
       <DarkHero
+        theme="gradient"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "RCS Messaging" },
@@ -201,7 +230,7 @@ export default function RCSMessagingPage() {
             India is moving beyond plain text SMS. With RCS Business Messaging, your brand can send
             rich, interactive messages — images, carousels, action buttons, and a verified sender
             identity — right inside your customer&apos;s default messaging app.
-            <strong className="text-white"> No app downloads. No opt-in friction.</strong>
+            <strong className="text-gray-900"> No app downloads. No opt-in friction.</strong>
           </>
         }
         primaryCta={{ label: "Request a Free Demo", href: "/contact" }}
@@ -210,6 +239,13 @@ export default function RCSMessagingPage() {
         imageAlt="RCS Business Message on Android phone showing rich cards, carousel, and action buttons"
         trustLine="Trusted by 10,000+ businesses across India"
       />
+
+      {/* -- EEAT: last-updated strip ---------------------------------------- */}
+      <div className="bg-white border-b border-gray-100">
+        <p className="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 text-center text-xs text-gray-400">
+          Last updated: {LAST_UPDATED} · Reviewed by the Get Click Media RCS team
+        </p>
+      </div>
 
       {/* -- STATS BAR ------------------------------------------------------ */}
       <section className="bg-white border-b border-gray-100">
@@ -391,13 +427,23 @@ export default function RCSMessagingPage() {
       </section>
 
       {/* -- FEATURES ------------------------------------------------------- */}
-      <section className="py-20 sm:py-28 bg-[#0f172a]" id="features">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section
+        className="py-20 sm:py-28 bg-(--surface-1) relative"
+        id="features"
+        style={{
+          backgroundImage: "url('/images/get-click-media-bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="absolute inset-0 bg-white/80 pointer-events-none" aria-hidden="true" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/10 text-[#38bdf8] text-xs font-bold uppercase tracking-widest">
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-primary text-xs font-bold uppercase tracking-widest">
               RCS Features
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-(family-name:--font-syne)">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-(--ink-1) font-(family-name:--font-syne)">
               Everything your business messages can do
             </h2>
           </div>
@@ -655,6 +701,26 @@ export default function RCSMessagingPage() {
                   <p className="text-sm text-gray-500 leading-relaxed">{faq.a}</p>
                 </div>
               </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* -- RELATED RCS RESOURCES ------------------------------------------- */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-6 font-(family-name:--font-syne)">
+            Related RCS resources
+          </h2>
+          <div className="flex flex-wrap gap-3">
+            {RELATED_LINKS.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className="px-4 py-2 rounded-full bg-white border border-gray-200 text-sm font-medium text-gray-600 hover:border-[#2563eb] hover:text-[#2563eb] transition-colors"
+              >
+                {l.label}
+              </Link>
             ))}
           </div>
         </div>

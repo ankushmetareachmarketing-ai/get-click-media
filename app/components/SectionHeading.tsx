@@ -1,6 +1,7 @@
 'use client'
 
 import { cn } from '@/lib/utils'
+import { Reveal } from '@/components/motion/Reveal'
 
 interface SectionHeadingProps {
   eyebrow?: string
@@ -65,7 +66,7 @@ export default function SectionHeading({
   }
 
   return (
-    <div className={cn('flex flex-col gap-3', alignClass, className)}>
+    <Reveal preset="fade-up" stagger className={cn('flex flex-col gap-3', alignClass, className)}>
 
       {/* Eyebrow pill — uses --accent + --accent-foreground from globals */}
       {eyebrow && (
@@ -106,6 +107,6 @@ export default function SectionHeading({
           {description}
         </p>
       )}
-    </div>
+    </Reveal>
   )
 }

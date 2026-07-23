@@ -143,10 +143,15 @@ export default function Footer() {
 
       {/* -- Stats strip ---------------------------------------------------- */}
       <div style={{ borderBottom: "1px solid rgba(255,255,255,0.06)", position: "relative" }}>
-        <div className="ft-stats" style={{
-          maxWidth: 1280, margin: "0 auto", padding: "32px 40px",
-          display: "grid", gridTemplateColumns: "repeat(4,1fr)",
-        }}>
+        <div
+          className="ft-stats"
+          data-reveal="fade-up"
+          data-reveal-stagger="0.08"
+          style={{
+            maxWidth: 1280, margin: "0 auto", padding: "32px 40px",
+            display: "grid", gridTemplateColumns: "repeat(4,1fr)",
+          }}
+        >
           {METRICS.map(({ value, label, color }, i) => (
             <div key={label} style={{
               textAlign: "center",
@@ -175,7 +180,7 @@ export default function Footer() {
       }}>
 
         {/* -- Brand column -- */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
+        <div data-reveal="fade-up" style={{ display: "flex", flexDirection: "column", gap: 22 }}>
           <Link href="/" style={{ display: "inline-flex" }}>
             <Image
               src="/images/gcm-logo.png"
@@ -220,9 +225,14 @@ export default function Footer() {
         </div>
 
         {/* -- Nav columns -- */}
-        <div className="ft-nav" style={{
-          display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 28,
-        }}>
+        <div
+          className="ft-nav"
+          data-reveal="fade-up"
+          data-reveal-stagger="0.06"
+          style={{
+            display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 28,
+          }}
+        >
           <NavCol title="Platform">
             {PLATFORM.map(({ label, icon: Icon, href }) => (
               <NavLink key={label} href={href} icon={<Icon size={13} />}>{label}</NavLink>

@@ -32,8 +32,12 @@ export interface DarkHeroProps {
   imageAlt: string;
   trustLine?: string;
   stats?: DarkHeroStat[];
-  /** Defaults to "dark" — the original navy-gradient look every other page already uses. */
-  theme?: "dark" | "light";
+  /**
+   * Defaults to "dark" — the original navy-gradient look every other page already uses.
+   * "gradient" is a soft lavender-to-blue diagonal wash (RCS pages) — same light-text
+   * treatment as "light" but with a colored background instead of white + blob glows.
+   */
+  theme?: "dark" | "light" | "gradient";
 }
 
 /**
@@ -61,22 +65,27 @@ export default function DarkHero({
   const openModal = useModalStore((s) => s.openModal);
   const handlePrimaryClick = primaryCta.onClick ?? openModal;
   const isLight = theme === "light";
+  const isGradient = theme === "gradient";
+  // "light" and "gradient" share the same dark-text-on-light-canvas treatment —
+  // they only differ in what the canvas itself looks like (see below).
+  const isLightText = isLight || isGradient;
 
   return (
     <section
       className={cn(
         "relative overflow-hidden mt-2 mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl",
-        isLight
-          ? "bg-white border border-(--border-subtle)"
-          : "bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af]"
+        isLight && "bg-white border border-(--border-subtle)",
+        isGradient && "bg-white bg-[radial-gradient(130%_130%_at_100%_100%,#5b7fe8_0%,#93aef0_25%,#d6e2ff_55%,#ffffff_85%)]",
+        !isLightText && "bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af]"
       )}
     >
-      {isLight ? (
+      {isLight && (
         <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute -top-[30%] -right-[20%] h-[85%] w-[65%] rounded-full bg-[#25D366] opacity-[0.10] blur-[100px]" />
           <div className="absolute -bottom-[35%] -left-[20%] h-[85%] w-[65%] rounded-full bg-blue-500 opacity-[0.20] blur-[100px]" />
         </div>
-      ) : (
+      )}
+      {!isLightText && (
         <>
           {/* Spotlight glow — the depth/premium touch a flat gradient card lacks.
               Dark canvas is exactly what Aceternity's default opacity is tuned for. */}
@@ -86,12 +95,15 @@ export default function DarkHero({
       )}
 
       {/* Drifting grid lines, brighter in a radial patch that follows the cursor —
-          sits above the color wash (z-10) so the lines stay crisp over it. */}
-      <AnimatedGridBackground
-        lineClassName={isLight ? "text-slate-400" : "text-white"}
-        baseOpacity={isLight ? 0.08 : 0.05}
-        revealOpacity={isLight ? 0.3 : 0.4}
-      />
+          sits above the color wash (z-10) so the lines stay crisp over it. Skipped
+          for "gradient" — the soft wash is the whole visual, a grid competes with it. */}
+      {!isGradient && (
+        <AnimatedGridBackground
+          lineClassName={isLight ? "text-slate-400" : "text-white"}
+          baseOpacity={isLight ? 0.08 : 0.05}
+          revealOpacity={isLight ? 0.3 : 0.4}
+        />
+      )}
 
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
         {breadcrumbs && breadcrumbs.length > 0 && (
@@ -99,13 +111,14 @@ export default function DarkHero({
             <ol
               className={cn(
                 "flex items-center gap-2 text-xs rounded-full px-4 py-2 w-fit flex-wrap",
-                isLight ? "text-gray-500 bg-gray-100" : "text-white/60 bg-white/10 backdrop-blur-sm"
+                isLightText ? "text-gray-500 bg-gray-100" : "text-white/60 bg-white/10 backdrop-blur-sm",
+                isGradient && "bg-white/70"
               )}
             >
               {breadcrumbs.map((crumb, i) => (
                 <React.Fragment key={i}>
                   {i > 0 && (
-                    <span aria-hidden className={isLight ? "text-gray-300" : "text-white/30"}>
+                    <span aria-hidden className={isLightText ? "text-gray-300" : "text-white/30"}>
                       /
                     </span>
                   )}
@@ -114,12 +127,12 @@ export default function DarkHero({
                     {crumb.href ? (
                       <Link
                         href={crumb.href}
-                        className={cn("transition-colors", isLight ? "hover:text-gray-900" : "hover:text-white")}
+                        className={cn("transition-colors", isLightText ? "hover:text-gray-900" : "hover:text-white")}
                       >
                         {crumb.label}
                       </Link>
                     ) : (
-                      <span className={cn("font-medium", isLight ? "text-gray-900" : "text-white")}>
+                      <span className={cn("font-medium", isLightText ? "text-gray-900" : "text-white")}>
                         {crumb.label}
                       </span>
                     )}
@@ -136,25 +149,25 @@ export default function DarkHero({
             <span
               className={cn(
                 "inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase",
-                isLight
+                isLightText
                   ? "bg-blue-50 border border-blue-100 text-[#2563eb]"
                   : "bg-white/10 border border-white/20 text-white backdrop-blur-sm"
               )}
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
+              <span className={cn("w-1.5 h-1.5 rounded-full animate-pulse", isGradient ? "bg-[#2563eb]" : "bg-[#25D366]")} />
               {eyebrow}
             </span>
 
             <h1
               className={cn(
                 "text-3xl sm:text-4xl lg:text-4xl font-bold leading-tight",
-                isLight ? "text-gray-900" : "text-white"
+                isLightText ? "text-gray-900" : "text-white"
               )}
               style={{ fontFamily: "var(--font-syne)" }}
             >
               {title}
               {highlight && (
-                <span className={cn("block sm:inline", isLight ? "text-[#2563eb]" : "text-[#38bdf8]")}>
+                <span className={cn("block sm:inline", isLightText ? "text-[#2563eb]" : "text-[#38bdf8]")}>
                   {" "}
                   {highlight}
                 </span>
@@ -164,7 +177,7 @@ export default function DarkHero({
             <p
               className={cn(
                 "text-base sm:text-md leading-relaxed max-w-xl mx-auto lg:mx-0",
-                isLight ? "text-gray-500" : "text-white/70"
+                isLightText ? "text-gray-500" : "text-white/70"
               )}
             >
               {description}
@@ -176,7 +189,7 @@ export default function DarkHero({
                   href={primaryCta.href}
                   className={cn(
                     "inline-flex items-center gap-2 px-6 h-11 sm:h-12 rounded-full text-sm font-bold shadow-lg hover:scale-105 transition-transform duration-200",
-                    isLight
+                    isLightText
                       ? "bg-gradient-to-r from-blue-600 to-blue-500 text-white"
                       : "bg-white text-[#1e3a8a]"
                   )}
@@ -188,7 +201,7 @@ export default function DarkHero({
                   onClick={handlePrimaryClick}
                   className={cn(
                     "inline-flex items-center gap-2 px-6 h-11 sm:h-12 rounded-full text-sm font-bold shadow-lg hover:scale-105 transition-transform duration-200 cursor-pointer",
-                    isLight
+                    isLightText
                       ? "bg-gradient-to-r from-blue-600 to-blue-500 text-white"
                       : "bg-white text-[#1e3a8a]"
                   )}
@@ -201,7 +214,7 @@ export default function DarkHero({
                   href={secondaryCta.href}
                   className={cn(
                     "inline-flex items-center gap-2 px-6 h-11 sm:h-12 rounded-full border text-sm font-semibold transition-colors duration-200",
-                    isLight
+                    isLightText
                       ? "border-(--border-subtle) bg-white text-gray-700 hover:bg-gray-50"
                       : "border-white/30 text-white hover:bg-white/10"
                   )}
@@ -214,7 +227,7 @@ export default function DarkHero({
                   href={tertiaryCta.href}
                   className={cn(
                     "inline-flex items-center gap-2 px-6 h-11 sm:h-12 rounded-full border text-sm font-semibold transition-colors duration-200",
-                    isLight
+                    isLightText
                       ? "border-(--border-subtle) text-gray-700 hover:bg-gray-50"
                       : "border-white/30 text-white hover:bg-white/10"
                   )}
@@ -225,7 +238,7 @@ export default function DarkHero({
             </div>
 
             {trustLine && (
-              <p className={cn("text-xs", isLight ? "text-gray-400" : "text-white/40")}>{trustLine}</p>
+              <p className={cn("text-xs", isLightText ? "text-gray-400" : "text-white/40")}>{trustLine}</p>
             )}
           </div>
 

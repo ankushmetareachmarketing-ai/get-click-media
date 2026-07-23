@@ -7,6 +7,9 @@ import ServiceModal from "./components/ServiceModal";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import FloatingActions from "./components/FloatingActions";
+import SmoothScroll from "@/components/motion/SmoothScroll";
+import RevealInit from "@/components/motion/RevealInit";
+import ScrollProgressBar from "@/components/motion/ScrollProgressBar";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -77,8 +80,48 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         />
+
+        {/* Full-page preloader — shown on the initial hard load only (persists
+            hidden across client-side <Link> navigations since this layout
+            doesn't remount). Hidden by the inline script below once the
+            window has fully loaded, with a safety timeout in case "load"
+            never fires. */}
+        <div id="gcm-preloader" role="status" aria-label="Loading">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/loader.svg" alt="" width={96} height={96} />
+        </div>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){
+              var start = Date.now();
+              var MIN_MS = 3000;
+              function hide(){
+                var el = document.getElementById('gcm-preloader');
+                if (!el) return;
+                var wait = Math.max(0, MIN_MS - (Date.now() - start));
+                setTimeout(function(){
+                  el.classList.add('gcm-preloader-hidden');
+                  setTimeout(function(){ el.remove(); }, 450);
+                }, wait);
+              }
+              if (document.readyState === 'complete') hide();
+              else window.addEventListener('load', hide);
+              setTimeout(hide, 6000);
+            })();`,
+          }}
+        />
+
         {/* Fixed dot-grid + floating balls — sits behind everything */}
         <GlobalBackground />
+
+        {/* Global animation system — Lenis smooth scroll synced to GSAP's
+            ticker, the site-wide data-reveal scroll engine, and the top
+            scroll-progress bar. All three are no-ops under
+            prefers-reduced-motion. See lib/animation + components/motion. */}
+        <SmoothScroll />
+        <RevealInit />
+        <ScrollProgressBar />
+
         <div className="layout-header"><Header /></div>
         {children}
         <Footer />
