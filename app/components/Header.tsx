@@ -134,6 +134,16 @@ const navItems: NavItem[] = [
           { icon: <MapPin size={16} />, title: "RCS Delhi & Noida", description: "Local RCS services for Delhi-NCR", href: "/rcs-messaging-delhi-noida", color: "#f59e0b", bgColor: "#fffbeb" },
         ],
       },
+      {
+        sectionTitle: "Resources",
+        layout: "links",
+        items: [
+          { title: "RCS Service Provider India", href: "/rcs-service-provider-india" },
+          { title: "RCS Pricing India", href: "/rcs-pricing-india" },
+          { title: "RCS API", href: "/rcs-api" },
+          { title: "Google RCS Business Messaging", href: "/google-rcs-business-messaging" },
+        ],
+      },
     ],
   },
   {
@@ -207,7 +217,7 @@ const MegaMenuContent: React.FC<{ sections: MegaMenuSection[] }> = ({ sections }
                 <NavigationMenuLink key={ii} asChild>
                   <Link
                     href={item.href}
-                    className="block px-3 py-2 rounded-md text-sm text-foreground/80 hover:bg-accent hover:text-accent-foreground transition-colors whitespace-nowrap"
+                    className="block px-3 py-2 rounded-md text-sm text-foreground/80 hover:bg-accent hover:text-accent-foreground transition-colors"
                   >
                     {item.title}
                   </Link>
