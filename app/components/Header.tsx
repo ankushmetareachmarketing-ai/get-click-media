@@ -144,6 +144,16 @@ const navItems: NavItem[] = [
           { title: "Google RCS Business Messaging", href: "/google-rcs-business-messaging" },
         ],
       },
+      {
+        sectionTitle: "Platform",
+        layout: "links",
+        items: [
+          { title: "Business Messaging Platform", href: "/business-messaging-platform" },
+          { title: "Enterprise Messaging Platform", href: "/enterprise-messaging-platform" },
+          { title: "Customer Engagement Platform", href: "/customer-engagement-platform" },
+          { title: "Conversational Messaging Platform", href: "/conversational-messaging-platform" },
+        ],
+      },
     ],
   },
   {
