@@ -25,7 +25,7 @@ const CTABanner: React.FC = () => {
       onMouseLeave={() => setMouse({ x: -9999, y: -9999 })}
       className="relative overflow-hidden mx-1 sm:mx-2 my-6 rounded-2xl sm:rounded-3xl py-16 sm:py-20 px-4"
     >
-      {/* Keyframes — kept in <style> since blobs need named animations */}
+      {/* Keyframes- kept in <style> since blobs need named animations */}
       <style>{`
         @keyframes blob1 {
           0%,100% { transform: translate(0%,0%) scale(1); }
@@ -47,19 +47,19 @@ const CTABanner: React.FC = () => {
       {/* Base gradient */}
       <div className="absolute inset-0 [background:linear-gradient(125deg,#0c1a3a_0%,#1e3a8a_50%,#1e40af_100%)]" />
 
-      {/* Blob 1 — sky cyan, top-left */}
+      {/* Blob 1- sky cyan, top-left */}
       <div
         aria-hidden="true"
         className="absolute pointer-events-none top-[-10%] left-[-5%] w-[55%] h-[160%] blur-[48px] [background:radial-gradient(ellipse,rgba(56,189,248,0.28)_0%,transparent_65%)] animate-[blob1_12s_ease-in-out_infinite]"
       />
 
-      {/* Blob 2 — brand blue, bottom-right */}
+      {/* Blob 2- brand blue, bottom-right */}
       <div
         aria-hidden="true"
         className="absolute pointer-events-none bottom-[-20%] right-[-10%] w-[60%] h-[180%] blur-[52px] [background:radial-gradient(ellipse,rgba(37,99,235,0.32)_0%,transparent_65%)] animate-[blob2_16s_ease-in-out_infinite]"
       />
 
-      {/* Blob 3 — light blue, centre drift */}
+      {/* Blob 3- light blue, centre drift */}
       <div
         aria-hidden="true"
         className="absolute pointer-events-none top-[20%] left-[30%] w-[45%] h-[130%] blur-[44px] [background:radial-gradient(ellipse,rgba(96,165,250,0.20)_0%,transparent_65%)] animate-[blob3_10s_ease-in-out_infinite]"
@@ -71,7 +71,7 @@ const CTABanner: React.FC = () => {
         className="absolute inset-0 pointer-events-none bg-[url('/images/curve.webp')] bg-contain bg-center opacity-[0.18]"
       />
 
-      {/* Cursor glow — must stay inline: position comes from React state */}
+      {/* Cursor glow- must stay inline: position comes from React state */}
       <div
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none"

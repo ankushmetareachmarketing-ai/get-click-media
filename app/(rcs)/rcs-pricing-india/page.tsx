@@ -15,14 +15,14 @@ import { PricingPageTemplate } from "@/app/(bulk-sms)/_templates/pricing-page-te
 export const metadata: Metadata = {
   title: "RCS Messaging Pricing in India (2026) | Get Click Media",
   description:
-    "RCS Business Messaging pricing in India explained — conversation-based charges, rich card costs & ROI vs SMS. Transparent guidance, no hidden fees. Get a custom quote.",
+    "RCS Business Messaging pricing in India explained- conversation-based charges, rich card costs & ROI vs SMS. Transparent guidance, no hidden fees. Get a custom quote.",
   keywords:
     "RCS pricing India, RCS cost India, RCS messaging cost, RCS conversation pricing, RCS per message cost, RCS API pricing, RCS messaging rates India, RCS vs SMS cost",
   alternates: { canonical: "https://getclickmedia.com/rcs-pricing-india" },
   openGraph: {
     title: "RCS Messaging Pricing in India (2026 Guide)",
     description:
-      "Understand RCS conversation-based pricing, rich card costs, and ROI compared to SMS — with transparent guidance from Get Click Media.",
+      "Understand RCS conversation-based pricing, rich card costs, and ROI compared to SMS- with transparent guidance from Get Click Media.",
     url: "https://getclickmedia.com/rcs-pricing-india",
     type: "website",
   },
@@ -89,7 +89,7 @@ const COMPARISON_ROWS = [
 
 const FACTORS = [
   { icon: Layers, title: "Message category", desc: "Authentication/OTP, transactional, and promotional messages are typically priced differently within a conversation-based model." },
-  { icon: BarChart3, title: "Monthly conversation volume", desc: "Higher monthly volume generally unlocks better per-conversation rates — worth revisiting your plan as volume grows." },
+  { icon: BarChart3, title: "Monthly conversation volume", desc: "Higher monthly volume generally unlocks better per-conversation rates- worth revisiting your plan as volume grows." },
   { icon: Repeat, title: "SMS fallback rate", desc: "How often messages fall back to SMS (non-RCS devices) affects your blended cost, since fallback sends are billed at SMS rates." },
   { icon: MessageSquare, title: "Rich media complexity", desc: "Carousels and multi-button rich cards may be priced differently from simple text-plus-image messages depending on your plan." },
   { icon: CalendarClock, title: "Contract term", desc: "Annual commitments and prepaid volume typically unlock better rates than pay-as-you-go billing." },
@@ -108,11 +108,11 @@ const CAPABILITIES = [
 const FAQS = [
   {
     q: "How is RCS messaging priced in India?",
-    a: "RCS is typically billed per conversation — a defined messaging window — with rates varying by message category: promotional, transactional, or OTP/authentication. Contact our sales team for a quote based on your expected category mix and volume.",
+    a: "RCS is typically billed per conversation- a defined messaging window- with rates varying by message category: promotional, transactional, or OTP/authentication. Contact our sales team for a quote based on your expected category mix and volume.",
   },
   {
     q: "Is RCS more expensive than SMS?",
-    a: "Per-message, RCS generally costs more than plain SMS, but the rich-media format typically drives materially higher engagement — often improving overall campaign ROI even at a higher per-send cost.",
+    a: "Per-message, RCS generally costs more than plain SMS, but the rich-media format typically drives materially higher engagement- often improving overall campaign ROI even at a higher per-send cost.",
   },
   {
     q: "What is a 'conversation' in RCS pricing?",
@@ -128,7 +128,7 @@ const FAQS = [
   },
   {
     q: "Is there a minimum spend for RCS messaging?",
-    a: "Plans scale with your usage rather than a fixed minimum — talk to our sales team and we'll recommend a structure suited to your expected volume.",
+    a: "Plans scale with your usage rather than a fixed minimum- talk to our sales team and we'll recommend a structure suited to your expected volume.",
   },
   {
     q: "How does RCS pricing compare to WhatsApp Business API pricing?",
@@ -136,7 +136,7 @@ const FAQS = [
   },
   {
     q: "Can I get a custom RCS pricing plan for high volume?",
-    a: "Yes — enterprise and high-volume senders can request custom conversation rates, dedicated infrastructure, and a custom SLA. Contact our team for a tailored quote.",
+    a: "Yes- enterprise and high-volume senders can request custom conversation rates, dedicated infrastructure, and a custom SLA. Contact our team for a tailored quote.",
   },
   {
     q: "Does RCS pricing include brand verification?",
@@ -144,7 +144,7 @@ const FAQS = [
   },
   {
     q: "What happens if RCS delivery fails and falls back to SMS?",
-    a: "When a message falls back to SMS because the recipient's device or network doesn't support RCS, it's typically billed at standard SMS rates rather than the RCS conversation rate — we'll confirm the exact structure for your plan.",
+    a: "When a message falls back to SMS because the recipient's device or network doesn't support RCS, it's typically billed at standard SMS rates rather than the RCS conversation rate- we'll confirm the exact structure for your plan.",
   },
 ];
 
@@ -210,14 +210,15 @@ export default function RCSPricingIndiaPage() {
       heroHighlight="Pricing in India"
       heroDescription={
         <>
-          Transparent, conversation-based RCS pricing guidance for Indian businesses — with
+          Transparent, conversation-based RCS pricing guidance for Indian businesses- with
           category-specific rates for <strong className="text-gray-900">OTP, transactional, and promotional</strong>{" "}
           messaging, and no hidden fees.
         </>
       }
       heroImage="/images/rcs/rcs-service-provider-india.png"
-      heroImageAlt="RCS messaging pricing in India — conversation-based rate structure"
+      heroImageAlt="RCS messaging pricing in India- conversation-based rate structure"
       heroTrustLine="Conversation-based pricing · SMS fallback included · Transparent, custom quotes"
+      eeatLine="Written by the Get Click Media Pvt. Ltd. Team · Last updated: July 2026 · Reviewed by the Get Click Media RCS team"
       stats={[
         { value: "3", label: "Message categories: OTP, transactional, promotional" },
         { value: "24hr", label: "Typical conversation billing window" },
@@ -227,15 +228,24 @@ export default function RCSPricingIndiaPage() {
       aeoParagraph={
         <>
           RCS Business Messaging in India is priced on a{" "}
-          <strong className="text-gray-900">conversation-based model</strong> — a defined messaging
-          window billed as a single unit — with rates that vary by message category (OTP,
-          transactional, or promotional). Exact rates depend on your volume and category mix;{" "}
+          <strong className="text-gray-900">conversation-based model</strong>- a defined messaging
+          window billed as a single unit- the same structure documented in{" "}
+          <a
+            href="https://developers.google.com/business-communications"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#2563eb] underline underline-offset-2"
+          >
+            Google&apos;s own RCS Business Messaging documentation
+          </a>
+          , with rates that vary by message category (OTP, transactional, or promotional). Exact
+          rates depend on your volume and category mix;{" "}
           <strong className="text-gray-900">contact our team for a custom quote</strong>.
         </>
       }
       insightCallout={
         <>
-          The biggest lever on your effective RCS cost isn&apos;t the plan name — it&apos;s your SMS
+          The biggest lever on your effective RCS cost isn&apos;t the plan name- it&apos;s your SMS
           fallback rate and category mix. Businesses running mostly transactional flows with a low
           fallback rate typically see a more predictable blended cost than those running broad
           promotional campaigns to a mixed-device audience. Ask your sales contact to model this
@@ -243,11 +253,11 @@ export default function RCSPricingIndiaPage() {
         </>
       }
       tiersTitle="RCS Pricing Plans for Indian Businesses"
-      tiersSubtitle="Every plan includes SMS fallback and delivery reporting — no hidden charges."
+      tiersSubtitle="Every plan includes SMS fallback and delivery reporting- no hidden charges."
       tiers={TIERS}
-      tiersDisclaimer="Pricing is volume- and category-based and quoted per business. Contact our sales team for exact rates — figures shown are illustrative plan tiers, not published rates."
+      tiersDisclaimer="Pricing is volume- and category-based and quoted per business. Contact our sales team for exact rates- figures shown are illustrative plan tiers, not published rates."
       slabTitle="RCS Conversation Pricing by Message Category"
-      slabSubtitle="RCS conversations are typically priced differently depending on category — get an exact quote for your mix."
+      slabSubtitle="RCS conversations are typically priced differently depending on category- get an exact quote for your mix."
       slabCaption="RCS pricing by message category"
       slabColumns={[
         { key: "category", label: "Message Category" },
@@ -256,7 +266,7 @@ export default function RCSPricingIndiaPage() {
       ]}
       slabRows={CATEGORY_ROWS}
       comparisonTitle="RCS Cost vs. Other Business Messaging Channels in India"
-      comparisonSubtitle="Indicative market ranges for India — actual Get Click Media rates depend on your volume and category mix."
+      comparisonSubtitle="Indicative market ranges for India- actual Get Click Media rates depend on your volume and category mix."
       comparisonCaption="Cost comparison of business messaging channels in India"
       comparisonColumns={[
         { key: "channel", label: "Channel" },
@@ -269,7 +279,7 @@ export default function RCSPricingIndiaPage() {
       factors={FACTORS}
       capabilitiesTitle="What's Included in Every Get Click Media RCS Plan"
       capabilities={CAPABILITIES}
-      faqHeading="RCS Pricing in India — FAQs"
+      faqHeading="RCS Pricing in India- FAQs"
       faqs={FAQS}
       relatedLinksHeading="Related RCS resources"
       relatedLinks={RELATED_LINKS}

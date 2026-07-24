@@ -4,25 +4,15 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useModalStore } from "@/store/useModalStore";
+import { HugeiconsIcon } from "@hugeicons/react";
 import {
-  ChevronDown,
-  ChevronRight,
-  MessageSquare,
-  Bot,
-  Zap,
-  Globe,
-  Mail,
-  BookOpen,
-  Building2,
-  ShoppingCart,
-  Home,
-  Sparkles,
-  Video,
-  ShieldCheck,
-  MapPin,
-  X,
-  Menu,
-} from "lucide-react";
+  ChevronDownIcon,
+  ChevronRightIcon,
+  Cancel01Icon,
+  Menu01Icon,
+  Call02Icon,
+  SparklesIcon,
+} from "@hugeicons/core-free-icons";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -32,6 +22,24 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+
+// --- Menu content icons --------------------------------------------------------
+// Every nav/mega-menu content icon is one of our own image assets in
+// /public/images/header-icon- no icon library glyphs in the header content
+// itself (functional chrome- hamburger, close, chevrons, the Talk Now phone
+// glyph- has no matching asset in that folder, so those stay as hugeicons).
+function MenuIcon({ src, size = 20 }: { src: string; size?: number }) {
+  return (
+    <Image
+      src={`/images/header-icon/${src}`}
+      alt=""
+      width={size}
+      height={size}
+      className="shrink-0"
+      unoptimized
+    />
+  );
+}
 
 // --- Types -------------------------------------------------------------------
 
@@ -66,7 +74,7 @@ interface NavItem {
 const navItems: NavItem[] = [
   {
     label: "WhatsApp",
-    sidebarIcon: <MessageSquare size={18} />,
+    sidebarIcon: <MenuIcon src="whatsapp.svg" size={20} />,
     sidebarColor: "#22c55e",
     sidebarBgColor: "#ecfdf5",
     sections: [
@@ -74,51 +82,51 @@ const navItems: NavItem[] = [
         sectionTitle: "Platform",
         layout: "cards",
         items: [
-          { icon: <Globe size={16} />, title: "WhatsApp Business API", description: "Official Meta BSP integration for India", href: "/whatsapp-business-api", color: "#22c55e", bgColor: "#ecfdf5" },
-          { icon: <Building2 size={16} />, title: "Provider in India", description: "Official Meta Business Solution Provider", href: "/whatsapp-business-api-provider-india", color: "#3b82f6", bgColor: "#eff6ff" },
-          { icon: <Video size={16} />, title: "WhatsApp Broadcast", description: "Send high-impact bulk campaigns", href: "/whatsapp-broadcast", color: "#ef4444", bgColor: "#fef2f2" },
-          { icon: <Bot size={16} />, title: "WhatsApp Chatbot", description: "Automate conversations with AI bots", href: "/whatsapp-chatbot", color: "#8b5cf6", bgColor: "#f5f3ff" },
-          { icon: <Zap size={16} />, title: "Click-to-Chat", description: "Start chats instantly from any channel", href: "/whatsapp-click-to-chat", color: "#f59e0b", bgColor: "#fffbeb" },
-          { icon: <Sparkles size={16} />, title: "Marketing Services", description: "Campaigns, support, and growth", href: "/whatsapp-marketing-services", color: "#06b6d4", bgColor: "#ecfeff" },
+          { icon: <MenuIcon src="whatsapp.svg" />, title: "WhatsApp Business API", description: "Official Meta BSP integration for India", href: "/whatsapp-business-api", color: "#22c55e", bgColor: "#ecfdf5" },
+          { icon: <MenuIcon src="building-3.svg" />, title: "Provider in India", description: "Official Meta Business Solution Provider", href: "/whatsapp-business-api-provider-india", color: "#3b82f6", bgColor: "#eff6ff" },
+          { icon: <MenuIcon src="voice-square.svg" />, title: "WhatsApp Broadcast", description: "Send high-impact bulk campaigns", href: "/whatsapp-broadcast", color: "#ef4444", bgColor: "#fef2f2" },
+          { icon: <MenuIcon src="message-AI.svg" />, title: "WhatsApp Chatbot", description: "Automate conversations with AI bots", href: "/whatsapp-chatbot", color: "#8b5cf6", bgColor: "#f5f3ff" },
+          { icon: <MenuIcon src="message-question.svg" />, title: "Click-to-Chat", description: "Start chats instantly from any channel", href: "/whatsapp-click-to-chat", color: "#f59e0b", bgColor: "#fffbeb" },
+          { icon: <MenuIcon src="status-up.svg" />, title: "Marketing Services", description: "Campaigns, support, and growth", href: "/whatsapp-marketing-services", color: "#06b6d4", bgColor: "#ecfeff" },
         ],
       },
       {
         sectionTitle: "By Industry",
         layout: "links",
         items: [
-          { title: "Real Estate", href: "/whatsapp-api-real-estate" },
-          { title: "Healthcare", href: "/whatsapp-api-healthcare" },
-          { title: "Education", href: "/whatsapp-api-education" },
-          { title: "Banking", href: "/whatsapp-api-banking" },
-          { title: "E-commerce", href: "/whatsapp-api-ecommerce" },
-          { title: "Insurance", href: "/whatsapp-api-insurance" },
-          { title: "Retail", href: "/whatsapp-api-retail" },
-          { title: "Logistics", href: "/whatsapp-api-logistics" },
-          { title: "Travel", href: "/whatsapp-api-travel" },
-          { title: "Automobile", href: "/whatsapp-api-automobile" },
+          { icon: <MenuIcon src="building-3.svg" size={16} />, title: "Real Estate", href: "/whatsapp-api-real-estate" },
+          { icon: <MenuIcon src="heart-add.svg" size={16} />, title: "Healthcare", href: "/whatsapp-api-healthcare" },
+          { icon: <MenuIcon src="edtech.svg" size={16} />, title: "Education", href: "/whatsapp-api-education" },
+          { icon: <MenuIcon src="usd-coin-(usdc).svg" size={16} />, title: "Banking", href: "/whatsapp-api-banking" },
+          { icon: <MenuIcon src="shopping-cart.svg" size={16} />, title: "E-commerce", href: "/whatsapp-api-ecommerce" },
+          { icon: <MenuIcon src="security-safe.svg" size={16} />, title: "Insurance", href: "/whatsapp-api-insurance" },
+          { icon: <MenuIcon src="bag-2.svg" size={16} />, title: "Retail", href: "/whatsapp-api-retail" },
+          { icon: <MenuIcon src="scan-barcode.svg" size={16} />, title: "Logistics", href: "/whatsapp-api-logistics" },
+          { icon: <MenuIcon src="airplane-square.svg" size={16} />, title: "Travel", href: "/whatsapp-api-travel" },
+          { icon: <MenuIcon src="calculator.svg" size={16} />, title: "Automobile", href: "/whatsapp-api-automobile" },
         ],
       },
       {
         sectionTitle: "By City",
         layout: "links",
         items: [
-          { title: "Delhi", href: "/whatsapp-api-delhi" },
-          { title: "Noida", href: "/whatsapp-api-noida" },
-          { title: "Gurgaon", href: "/whatsapp-api-gurgaon" },
-          { title: "Mumbai", href: "/whatsapp-api-mumbai" },
-          { title: "Bangalore", href: "/whatsapp-api-bangalore" },
-          { title: "Hyderabad", href: "/whatsapp-api-hyderabad" },
-          { title: "Pune", href: "/whatsapp-api-pune" },
-          { title: "Chennai", href: "/whatsapp-api-chennai" },
-          { title: "Jaipur", href: "/whatsapp-api-jaipur" },
-          { title: "Ahmedabad", href: "/whatsapp-api-ahmedabad" },
+          { icon: <MenuIcon src="flag.svg" size={16} />, title: "Delhi", href: "/whatsapp-api-delhi" },
+          { icon: <MenuIcon src="flag.svg" size={16} />, title: "Noida", href: "/whatsapp-api-noida" },
+          { icon: <MenuIcon src="flag.svg" size={16} />, title: "Gurgaon", href: "/whatsapp-api-gurgaon" },
+          { icon: <MenuIcon src="flag.svg" size={16} />, title: "Mumbai", href: "/whatsapp-api-mumbai" },
+          { icon: <MenuIcon src="flag.svg" size={16} />, title: "Bangalore", href: "/whatsapp-api-bangalore" },
+          { icon: <MenuIcon src="flag.svg" size={16} />, title: "Hyderabad", href: "/whatsapp-api-hyderabad" },
+          { icon: <MenuIcon src="flag.svg" size={16} />, title: "Pune", href: "/whatsapp-api-pune" },
+          { icon: <MenuIcon src="flag.svg" size={16} />, title: "Chennai", href: "/whatsapp-api-chennai" },
+          { icon: <MenuIcon src="flag.svg" size={16} />, title: "Jaipur", href: "/whatsapp-api-jaipur" },
+          { icon: <MenuIcon src="flag.svg" size={16} />, title: "Ahmedabad", href: "/whatsapp-api-ahmedabad" },
         ],
       },
     ],
   },
   {
     label: "RCS",
-    sidebarIcon: <Globe size={18} />,
+    sidebarIcon: <MenuIcon src="messages.svg" size={20} />,
     sidebarColor: "#0ea5e9",
     sidebarBgColor: "#ecfeff",
     sections: [
@@ -126,12 +134,12 @@ const navItems: NavItem[] = [
         sectionTitle: "RCS Messaging",
         layout: "cards",
         items: [
-          { icon: <MessageSquare size={16} />, title: "RCS Messaging", description: "Rich conversational messaging for brands", href: "/rcs-messaging", color: "#22c55e", bgColor: "#ecfdf5" },
-          { icon: <Building2 size={16} />, title: "RCS for Banking", description: "Conversational RCS experiences for finance", href: "/rcs-for-banking", color: "#3b82f6", bgColor: "#eff6ff" },
-          { icon: <ShoppingCart size={16} />, title: "RCS for E-commerce", description: "RCS commerce messaging that converts", href: "/rcs-for-ecommerce", color: "#f97316", bgColor: "#fff7ed" },
-          { icon: <BookOpen size={16} />, title: "RCS for Education", description: "Student engagement through RCS", href: "/rcs-for-education", color: "#8b5cf6", bgColor: "#f5f3ff" },
-          { icon: <Home size={16} />, title: "RCS for Real Estate", description: "Alerts and lead nurturing for property", href: "/rcs-for-real-estate", color: "#14b8a6", bgColor: "#f0fdfa" },
-          { icon: <MapPin size={16} />, title: "RCS Delhi & Noida", description: "Local RCS services for Delhi-NCR", href: "/rcs-messaging-delhi-noida", color: "#f59e0b", bgColor: "#fffbeb" },
+          { icon: <MenuIcon src="messages.svg" />, title: "RCS Messaging", description: "Rich conversational messaging for brands", href: "/rcs-messaging", color: "#22c55e", bgColor: "#ecfdf5" },
+          { icon: <MenuIcon src="usd-coin-(usdc).svg" />, title: "RCS for Banking", description: "Conversational RCS experiences for finance", href: "/rcs-for-banking", color: "#3b82f6", bgColor: "#eff6ff" },
+          { icon: <MenuIcon src="shopping-cart.svg" />, title: "RCS for E-commerce", description: "RCS commerce messaging that converts", href: "/rcs-for-ecommerce", color: "#f97316", bgColor: "#fff7ed" },
+          { icon: <MenuIcon src="edtech.svg" />, title: "RCS for Education", description: "Student engagement through RCS", href: "/rcs-for-education", color: "#8b5cf6", bgColor: "#f5f3ff" },
+          { icon: <MenuIcon src="building-3.svg" />, title: "RCS for Real Estate", description: "Alerts and lead nurturing for property", href: "/rcs-for-real-estate", color: "#14b8a6", bgColor: "#f0fdfa" },
+          { icon: <MenuIcon src="flag.svg" />, title: "RCS Delhi & Noida", description: "Local RCS services for Delhi-NCR", href: "/rcs-messaging-delhi-noida", color: "#f59e0b", bgColor: "#fffbeb" },
         ],
       },
       {
@@ -158,7 +166,7 @@ const navItems: NavItem[] = [
   },
   {
     label: "Bulk SMS",
-    sidebarIcon: <Mail size={18} />,
+    sidebarIcon: <MenuIcon src="sms.svg" size={20} />,
     sidebarColor: "#3b82f6",
     sidebarBgColor: "#eff6ff",
     sections: [
@@ -166,21 +174,21 @@ const navItems: NavItem[] = [
         sectionTitle: "Core Services",
         layout: "cards",
         items: [
-          { icon: <Mail size={16} />, title: "Bulk SMS Provider India", description: "High-volume SMS campaigns across India", href: "/bulk-sms-service-provider-india", color: "#3b82f6", bgColor: "#eff6ff" },
-          { icon: <ShieldCheck size={16} />, title: "OTP SMS", description: "Fast OTP delivery for secure authentication", href: "/otp-sms-service-provider", color: "#10b981", bgColor: "#ecfdf5" },
-          { icon: <Zap size={16} />, title: "Transactional SMS", description: "Reliable delivery for alerts and updates", href: "/transactional-sms-service", color: "#f59e0b", bgColor: "#fffbeb" },
+          { icon: <MenuIcon src="sms.svg" />, title: "Bulk SMS Provider India", description: "High-volume SMS campaigns across India", href: "/bulk-sms-service-provider-india", color: "#3b82f6", bgColor: "#eff6ff" },
+          { icon: <MenuIcon src="security-safe.svg" />, title: "OTP SMS", description: "Fast OTP delivery for secure authentication", href: "/otp-sms-service-provider", color: "#10b981", bgColor: "#ecfdf5" },
+          { icon: <MenuIcon src="document-text.svg" />, title: "Transactional SMS", description: "Reliable delivery for alerts and updates", href: "/transactional-sms-service", color: "#f59e0b", bgColor: "#fffbeb" },
         ],
       },
       {
         sectionTitle: "By Industry",
         layout: "links",
         items: [
-          { title: "Real Estate", href: "/bulk-sms-for-real-estate" },
-          { title: "Schools", href: "/bulk-sms-for-schools" },
-          { title: "Hospitals", href: "/bulk-sms-for-hospitals" },
-          { title: "Banking", href: "/bulk-sms-for-banking" },
-          { title: "Ecommerce", href: "/bulk-sms-for-ecommerce" },
-          { title: "Travel Agencies", href: "/bulk-sms-for-travel-industry" },
+          { icon: <MenuIcon src="building-3.svg" size={16} />, title: "Real Estate", href: "/bulk-sms-for-real-estate" },
+          { icon: <MenuIcon src="book-2.svg" size={16} />, title: "Schools", href: "/bulk-sms-for-schools" },
+          { icon: <MenuIcon src="heart-add.svg" size={16} />, title: "Hospitals", href: "/bulk-sms-for-hospitals" },
+          { icon: <MenuIcon src="usd-coin-(usdc).svg" size={16} />, title: "Banking", href: "/bulk-sms-for-banking" },
+          { icon: <MenuIcon src="shopping-cart.svg" size={16} />, title: "Ecommerce", href: "/bulk-sms-for-ecommerce" },
+          { icon: <MenuIcon src="airplane-square.svg" size={16} />, title: "Travel Agencies", href: "/bulk-sms-for-travel-industry" },
         ],
       },
       {
@@ -202,54 +210,58 @@ const navItems: NavItem[] = [
 
 // --- Mega menu content (renders inside shadcn's NavigationMenuContent) --------
 
-// Each column gets the same comfortable track width — wide enough that a "links"
-// column's two sub-columns never truncate the longest label (e.g. "E-commerce",
-// "Ahmedabad"), so the panel's total width scales with column count, not a fixed px.
-const COLUMN_WIDTH = "minmax(230px,260px)";
+// Columns stretch evenly to fill the full-width viewport (the viewport now
+// spans the whole navbar, not just the trigger's own width) instead of
+// shrinking to a fixed track- a bigger, airier panel edge-to-edge.
+const COLUMN_WIDTH = "minmax(240px,1fr)";
 
 const MegaMenuContent: React.FC<{ sections: MegaMenuSection[] }> = ({ sections }) => {
   return (
     <div
-      className="inline-grid gap-4 p-4 max-w-[92vw]"
+      className="grid w-full gap-10 p-8"
       style={{ gridTemplateColumns: sections.map(() => COLUMN_WIDTH).join(" ") }}
     >
       {sections.map((section, si) => (
-        <div key={si} className={cn(si > 0 && "border-l border-border pl-4")}>
+        <div key={si} className={cn(si > 0 && "border-l border-border pl-8")}>
           {section.sectionTitle && (
-            <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground px-3 pb-2">
+            <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground px-3 pb-3">
               {section.sectionTitle}
             </p>
           )}
 
           {section.layout === "links" ? (
-            <div className="grid grid-cols-2 gap-x-2 gap-y-0.5">
+            <div className="grid grid-cols-2 gap-x-3 gap-y-1">
               {section.items.map((item, ii) => (
                 <NavigationMenuLink key={ii} asChild>
                   <Link
                     href={item.href}
-                    className="block px-3 py-2 rounded-md text-sm text-foreground/80 hover:bg-accent hover:text-accent-foreground transition-colors"
+                    className="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm text-foreground/80 hover:bg-accent hover:text-accent-foreground transition-colors"
                   >
+                    {item.icon && <span className="shrink-0 opacity-70">{item.icon}</span>}
                     {item.title}
                   </Link>
                 </NavigationMenuLink>
               ))}
             </div>
           ) : (
-            <div className="flex flex-col gap-0.5">
+            <div className="flex flex-col gap-1">
               {section.items.map((item, ii) => (
                 <NavigationMenuLink key={ii} asChild>
                   <Link
                     href={item.href}
-                    className="flex items-start gap-2.5 px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors"
+                    className="flex items-start gap-3.5 px-3 py-3 rounded-xl hover:bg-accent hover:text-accent-foreground transition-colors"
                   >
-                    <span className="mt-0.5 shrink-0" style={{ color: item.color }}>
+                    <span
+                      className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0"
+                      style={{ background: item.bgColor }}
+                    >
                       {item.icon}
                     </span>
 
-                    <div className="min-w-0">
-                      <p className="text-sm font-medium leading-tight">{item.title}</p>
+                    <div className="min-w-0 pt-1">
+                      <p className="text-[15px] font-semibold leading-tight">{item.title}</p>
                       {item.description && (
-                        <p className="text-xs text-muted-foreground leading-snug mt-0.5 truncate">
+                        <p className="text-[13px] text-muted-foreground leading-snug mt-1">
                           {item.description}
                         </p>
                       )}
@@ -287,9 +299,9 @@ const Header: React.FC = () => {
               />
             </Link>
 
-            {/* Desktop nav — fully driven by shadcn's NavigationMenu primitives.
+            {/* Desktop nav- fully driven by shadcn's NavigationMenu primitives.
                 viewport={true} makes the component render its own internal
-                viewport automatically — do NOT add a second one manually,
+                viewport automatically- do NOT add a second one manually,
                 that causes duplicated/overlapping panels. */}
             <NavigationMenu
               viewport={true}
@@ -338,22 +350,30 @@ const Header: React.FC = () => {
             </NavigationMenu>
 
             <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
+
               <button
                 onClick={openModal}
-                className="px-6 cursor-pointer py-3 rounded-full bg-[linear-gradient(135deg,var(--primary),var(--primary-light))] text-white text-[16px] font-bold shadow-md hover:shadow-lg hover:scale-105 transition-all flex items-center gap-2"
+                className="w-40 cursor-pointer py-2.5 rounded-full bg-[linear-gradient(135deg,var(--primary),var(--primary-light))] text-white text-[15px] font-bold shadow-md hover:shadow-lg hover:scale-105 transition-all flex items-center justify-center gap-2"
               >
                 Request a demo
-                <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[color:var(--primary)] shadow-sm">
-                  <ChevronRight size={15} />
+                <div className="w-6 h-6 rounded-full bg-white flex items-center justify-center text-[color:var(--primary)] shadow-sm shrink-0">
+                  <HugeiconsIcon icon={ChevronRightIcon} size={13} />
                 </div>
               </button>
+              <Link
+                href="tel:+919667694088"
+                className="w-40 cursor-pointer py-2.5 rounded-full bg-black text-white text-[15px] font-bold shadow-md hover:opacity-90 transition-all flex items-center justify-center gap-2"
+              >
+                <HugeiconsIcon icon={Call02Icon} size={17} strokeWidth={2} />
+                Talk Now
+              </Link>
             </div>
 
             <button
               className="lg:hidden ml-auto p-2 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer"
               onClick={() => setMobileOpen(!mobileOpen)}
             >
-              {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+              {mobileOpen ? <HugeiconsIcon icon={Cancel01Icon} size={22} /> : <HugeiconsIcon icon={Menu01Icon} size={22} />}
             </button>
           </div>
         </div>
@@ -377,7 +397,7 @@ const Header: React.FC = () => {
         >
           <div className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center">
-              <Sparkles size={16} className="text-white" />
+              <HugeiconsIcon icon={SparklesIcon} size={16} className="text-white" />
             </div>
             <div>
               <p className="text-white font-bold text-sm leading-tight">Get Click Media</p>
@@ -388,7 +408,7 @@ const Header: React.FC = () => {
             className="w-8 h-8 rounded-full bg-white/15 hover:bg-white/25 flex items-center justify-center transition-colors cursor-pointer"
             onClick={() => setMobileOpen(false)}
           >
-            <X size={16} className="text-white" />
+            <HugeiconsIcon icon={Cancel01Icon} size={16} className="text-white" />
           </button>
         </div>
 
@@ -403,7 +423,7 @@ const Header: React.FC = () => {
                   onClick={() => setMobileOpen(false)}
                 >
                   <span className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 shadow-sm bg-orange-50 text-orange-500">
-                    <BookOpen size={18} />
+                    <MenuIcon src="book-2.svg" size={18} />
                   </span>
                   <span className="flex-1 text-left text-sm font-semibold text-gray-800">{item.label}</span>
                 </Link>
@@ -428,7 +448,8 @@ const Header: React.FC = () => {
                     <span className="block text-sm font-semibold text-gray-800">{item.label}</span>
                   </span>
 
-                  <ChevronDown
+                  <HugeiconsIcon
+                    icon={ChevronDownIcon}
                     size={14}
                     strokeWidth={isExpanded ? 2.5 : 2}
                     style={{
@@ -495,12 +516,19 @@ const Header: React.FC = () => {
         </nav>
 
         <div className="p-3 shrink-0 border-t border-gray-100 space-y-2">
+          <a
+            href="tel:+919667694088"
+            className="w-full px-4 py-3 rounded-2xl text-white text-sm font-bold bg-black shadow-md flex items-center justify-center gap-2 transition-all hover:opacity-90 cursor-pointer"
+          >
+            <HugeiconsIcon icon={Call02Icon} size={15} />
+            Talk Now
+          </a>
           <button
             onClick={() => { openModal(); setMobileOpen(false); }}
             className="w-full px-4 py-3 rounded-2xl text-white text-sm font-bold shadow-lg flex items-center justify-center gap-2 transition-all hover:scale-[1.02] cursor-pointer"
             style={{ background: "linear-gradient(135deg,#6366f1,#8b5cf6)" }}
           >
-            <Sparkles size={14} />
+            <HugeiconsIcon icon={SparklesIcon} size={14} />
             Request a demo
           </button>
           <p className="text-center text-[10px] text-gray-400">Trusted by 10,000+ businesses</p>

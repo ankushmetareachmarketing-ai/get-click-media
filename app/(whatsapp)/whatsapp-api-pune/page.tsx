@@ -12,14 +12,14 @@ import { CityPageTemplate } from "../_templates/city-page-template";
 
 /* ── SEO Metadata ────────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: "WhatsApp Business API in Pune — Official Meta BSP | Get Click Media",
+  title: "WhatsApp Business API in Pune- Official Meta BSP | Get Click Media",
   description:
     "Get Click Media provides WhatsApp Business API in Pune as an official Meta Business Solution Provider. 3-5 day onboarding with Salesforce, HubSpot, and custom CRM integrations for Pune's IT, automotive, education, and healthcare businesses.",
   keywords:
     "WhatsApp Business API Pune, whatsapp api provider pune, whatsapp business api pune, whatsapp marketing pune, whatsapp chatbot pune, whatsapp api service pune maharashtra",
   alternates: { canonical: "https://getclickmedia.com/whatsapp-api-pune" },
   openGraph: {
-    title: "WhatsApp Business API in Pune — Official Meta BSP | Get Click Media",
+    title: "WhatsApp Business API in Pune- Official Meta BSP | Get Click Media",
     description:
       "Get Click Media provides WhatsApp Business API in Pune as an official Meta Business Solution Provider, with 3-5 day onboarding for Pune's IT, automotive, education, and healthcare businesses.",
     url: "https://getclickmedia.com/whatsapp-api-pune",
@@ -68,22 +68,22 @@ const schema = {
         {
           "@type": "Question",
           name: "Does Get Click Media offer WhatsApp API in Pune?",
-          acceptedAnswer: { "@type": "Answer", text: "Yes. Get Click Media provides WhatsApp Business API across Pune including Hinjewadi, Magarpatta, Kharadi, Wakad, Baner, Koregaon Park, Viman Nagar, Kothrud, and Pimpri-Chinchwad. All onboarding is remote — no in-person requirement." },
+          acceptedAnswer: { "@type": "Answer", text: "Yes. Get Click Media provides WhatsApp Business API across Pune including Hinjewadi, Magarpatta, Kharadi, Wakad, Baner, Koregaon Park, Viman Nagar, Kothrud, and Pimpri-Chinchwad. All onboarding is remote- no in-person requirement." },
         },
         {
           "@type": "Question",
           name: "What are the most common WhatsApp API use cases for Pune's IT companies?",
-          acceptedAnswer: { "@type": "Answer", text: "Pune's IT companies use WhatsApp API most commonly for B2B lead qualification (chatbot on website or CTWA ads), candidate sourcing and interview scheduling for HR, client project milestone updates, and employee communication (leave approval, attendance, payslip). GCM integrates with Salesforce, HubSpot, and Zoho — the CRM platforms most used by Pune IT companies." },
+          acceptedAnswer: { "@type": "Answer", text: "Pune's IT companies use WhatsApp API most commonly for B2B lead qualification (chatbot on website or CTWA ads), candidate sourcing and interview scheduling for HR, client project milestone updates, and employee communication (leave approval, attendance, payslip). GCM integrates with Salesforce, HubSpot, and Zoho- the CRM platforms most used by Pune IT companies." },
         },
         {
           "@type": "Question",
           name: "How does WhatsApp API benefit automotive dealers in Pune?",
-          acceptedAnswer: { "@type": "Answer", text: "Pune's automotive dealers (two-wheelers and four-wheelers — Chakan is India's automotive hub) use WhatsApp for test drive booking, service reminders, new model launch campaigns, and vehicle delivery notifications. GCM's DMS integration connects with Automate and custom dealer management systems common in Pune's automotive dealerships." },
+          acceptedAnswer: { "@type": "Answer", text: "Pune's automotive dealers (two-wheelers and four-wheelers- Chakan is India's automotive hub) use WhatsApp for test drive booking, service reminders, new model launch campaigns, and vehicle delivery notifications. GCM's DMS integration connects with Automate and custom dealer management systems common in Pune's automotive dealerships." },
         },
         {
           "@type": "Question",
           name: "Is WhatsApp API used by Pune's educational institutions?",
-          acceptedAnswer: { "@type": "Answer", text: "Yes — Pune's high density of engineering colleges, MBA institutions, and coaching institutes makes education one of the top WhatsApp API use cases in the city. Admission chatbot, fee reminders, exam schedule, and campus placement notifications via WhatsApp are common GCM deployments for Pune educational institutions." },
+          acceptedAnswer: { "@type": "Answer", text: "Yes- Pune's high density of engineering colleges, MBA institutions, and coaching institutes makes education one of the top WhatsApp API use cases in the city. Admission chatbot, fee reminders, exam schedule, and campus placement notifications via WhatsApp are common GCM deployments for Pune educational institutions." },
         },
       ],
     },
@@ -145,37 +145,37 @@ const INDUSTRIES = [
 
 const CAPABILITIES = [
   { label: "Onboarding timeline", value: "3 to 5 business days from consultation to first live WhatsApp message" },
-  { label: "Meta BSP status", value: "Official Meta Business Solution Provider — GCM manages your full WhatsApp Business Account registration" },
+  { label: "Meta BSP status", value: "Official Meta Business Solution Provider- GCM manages your full WhatsApp Business Account registration" },
   { label: "Local support", value: "India-based support team available 9 AM to 7 PM IST, Monday to Saturday. WhatsApp support available." },
-  { label: "Pricing", value: "Same as national rates — marketing Rs 0.79-0.91/conv, utility Rs 0.14-0.17/conv. Platform fee based on volume." },
+  { label: "Pricing", value: "Same as national rates- marketing Rs 0.79-0.91/conv, utility Rs 0.14-0.17/conv. Platform fee based on volume." },
   { label: "Languages supported", value: "Hindi + English + regional language chatbot flows as required by your customer base" },
   { label: "Integration partners", value: "Shopify, WooCommerce, Salesforce, HubSpot, Zoho, LeadSquared, and custom systems" },
 ];
 
 const CLIENT_USE_CASES = [
-  { sector: "IT company — Hinjewadi", automation: "B2B lead qualification chatbot + Salesforce integration", result: "MQL-to-SQL 2.5x. Sales cycle -25%." },
-  { sector: "Automotive dealer — Pimpri-Chinchwad", automation: "Test drive automation + service reminder", result: "Test drive +2.8x. Service retention +32%." },
-  { sector: "Engineering college — Shivajinagar", automation: "Admission chatbot + fee collection + placement notification", result: "Admission conversion 3x. Fee on-time +40%." },
-  { sector: "Multi-speciality hospital — Baner", automation: "Appointment automation + health check campaigns", result: "No-show -35%. Package revenue +28%." },
-  { sector: "D2C startup — Koregaon Park", automation: "Cart recovery + festive campaign + loyalty", result: "Cart recovery 22%. Repeat purchase +35%." },
+  { sector: "IT company- Hinjewadi", automation: "B2B lead qualification chatbot + Salesforce integration", result: "MQL-to-SQL 2.5x. Sales cycle -25%." },
+  { sector: "Automotive dealer- Pimpri-Chinchwad", automation: "Test drive automation + service reminder", result: "Test drive +2.8x. Service retention +32%." },
+  { sector: "Engineering college- Shivajinagar", automation: "Admission chatbot + fee collection + placement notification", result: "Admission conversion 3x. Fee on-time +40%." },
+  { sector: "Multi-speciality hospital- Baner", automation: "Appointment automation + health check campaigns", result: "No-show -35%. Package revenue +28%." },
+  { sector: "D2C startup- Koregaon Park", automation: "Cart recovery + festive campaign + loyalty", result: "Cart recovery 22%. Repeat purchase +35%." },
 ];
 
 const FAQS = [
   {
     q: "Does Get Click Media offer WhatsApp API in Pune?",
-    a: "Yes. Get Click Media provides WhatsApp Business API across Pune including Hinjewadi, Magarpatta, Kharadi, Wakad, Baner, Koregaon Park, Viman Nagar, Kothrud, and Pimpri-Chinchwad. All onboarding is remote — no in-person requirement.",
+    a: "Yes. Get Click Media provides WhatsApp Business API across Pune including Hinjewadi, Magarpatta, Kharadi, Wakad, Baner, Koregaon Park, Viman Nagar, Kothrud, and Pimpri-Chinchwad. All onboarding is remote- no in-person requirement.",
   },
   {
     q: "What are the most common WhatsApp API use cases for Pune's IT companies?",
-    a: "Pune's IT companies use WhatsApp API most commonly for: B2B lead qualification (chatbot on website or CTWA ads), candidate sourcing and interview scheduling for HR, client project milestone updates, and employee communication (leave approval, attendance, payslip). GCM integrates with Salesforce, HubSpot, and Zoho — the CRM platforms most used by Pune IT companies.",
+    a: "Pune's IT companies use WhatsApp API most commonly for: B2B lead qualification (chatbot on website or CTWA ads), candidate sourcing and interview scheduling for HR, client project milestone updates, and employee communication (leave approval, attendance, payslip). GCM integrates with Salesforce, HubSpot, and Zoho- the CRM platforms most used by Pune IT companies.",
   },
   {
     q: "How does WhatsApp API benefit automotive dealers in Pune?",
-    a: "Pune's automotive dealers (two-wheelers and four-wheelers — Chakan is India's automotive hub) use WhatsApp for test drive booking, service reminders, new model launch campaigns, and vehicle delivery notifications. GCM's DMS integration connects with Automate and custom dealer management systems common in Pune's automotive dealerships.",
+    a: "Pune's automotive dealers (two-wheelers and four-wheelers- Chakan is India's automotive hub) use WhatsApp for test drive booking, service reminders, new model launch campaigns, and vehicle delivery notifications. GCM's DMS integration connects with Automate and custom dealer management systems common in Pune's automotive dealerships.",
   },
   {
     q: "Is WhatsApp API used by Pune's educational institutions?",
-    a: "Yes — Pune's high density of engineering colleges, MBA institutions (Symbiosis, IIPM Pune), and coaching institutes makes education one of the top WhatsApp API use cases in the city. Admission chatbot, fee reminders, exam schedule, and campus placement notifications via WhatsApp are common GCM deployments for Pune educational institutions.",
+    a: "Yes- Pune's high density of engineering colleges, MBA institutions (Symbiosis, IIPM Pune), and coaching institutes makes education one of the top WhatsApp API use cases in the city. Admission chatbot, fee reminders, exam schedule, and campus placement notifications via WhatsApp are common GCM deployments for Pune educational institutions.",
   },
 ];
 
@@ -198,7 +198,7 @@ export default function WhatsAppAPIPunePage() {
       breadcrumbLabel="Pune"
       heroEyebrow="WhatsApp Business API Pune"
       heroTitle="WhatsApp Business API"
-      heroHighlight="in Pune — Official Meta BSP"
+      heroHighlight="in Pune- Official Meta BSP"
       heroDescription={
         <>
           Get Click Media provides WhatsApp Business API in Pune as an official Meta Business Solution
@@ -208,24 +208,24 @@ export default function WhatsAppAPIPunePage() {
         </>
       }
       heroImage="/images/whatsapp/whatsapp-bussiness-api.webp"
-      heroImageAlt="WhatsApp Business API for Pune businesses — rich message preview on a phone"
+      heroImageAlt="WhatsApp Business API for Pune businesses- rich message preview on a phone"
       heroTrustLine="Official Meta BSP · 3–5 Day Setup · Salesforce & HubSpot ready · India-based support"
       stats={[
         { value: "#1", label: "Highest engineering college density in India" },
         { value: "3 corridors", label: "Hinjewadi, Magarpatta, Kharadi IT hubs" },
         { value: "3–5 days", label: "Onboarding timeline" },
-        { value: "100%", label: "Remote onboarding — no in-person visit required" },
+        { value: "100%", label: "Remote onboarding- no in-person visit required" },
       ]}
       aeoParagraphs={[
         "Get Click Media provides WhatsApp Business API in Pune as an official Meta Business Solution Provider. Pune's IT and manufacturing industries, education sector (home to India's highest density of engineering colleges), real estate growth, and healthcare network are the primary WhatsApp API segments in the city. GCM delivers 3 to 5 day onboarding for Pune businesses with Salesforce, HubSpot, and custom CRM integrations.",
-        "Pune is Maharashtra's second-largest city and one of India's fastest-growing IT destinations — with Hinjewadi, Magarpatta, and Kharadi forming major IT corridors housing TCS, Infosys, Wipro, and hundreds of tech companies. The city is also India's automotive hub (Chakan, Pimpri-Chinchwad) and has the highest density of engineering and management colleges in any Indian city.",
-        "Pune's cosmopolitan, educated, and digitally active population makes it an ideal market for WhatsApp Business API — consumer engagement rates in Pune consistently match or exceed Mumbai and Bangalore for equivalent campaigns.",
+        "Pune is Maharashtra's second-largest city and one of India's fastest-growing IT destinations- with Hinjewadi, Magarpatta, and Kharadi forming major IT corridors housing TCS, Infosys, Wipro, and hundreds of tech companies. The city is also India's automotive hub (Chakan, Pimpri-Chinchwad) and has the highest density of engineering and management colleges in any Indian city.",
+        "Pune's cosmopolitan, educated, and digitally active population makes it an ideal market for WhatsApp Business API- consumer engagement rates in Pune consistently match or exceed Mumbai and Bangalore for equivalent campaigns.",
       ]}
       whyCity={{
         eyebrow: "Why Pune Businesses Choose WhatsApp API",
         title: "A cosmopolitan, education-driven market for WhatsApp automation",
         description:
-          "Pune's business landscape is shaped by a digital-first consumer base — smartphone penetration, WhatsApp usage rates, and e-commerce adoption are all above India's national average. Businesses that deploy WhatsApp Business API in Pune report faster lead conversion, higher customer retention, and lower support costs compared to SMS and email alternatives.",
+          "Pune's business landscape is shaped by a digital-first consumer base- smartphone penetration, WhatsApp usage rates, and e-commerce adoption are all above India's national average. Businesses that deploy WhatsApp Business API in Pune report faster lead conversion, higher customer retention, and lower support costs compared to SMS and email alternatives.",
         image: "/images/whatsapp/direct-meta-partner.webp",
         points: [
           { icon: Code2, title: "Major IT and automotive hub", desc: "Hinjewadi, Magarpatta, and Kharadi's IT corridors alongside Chakan and Pimpri-Chinchwad's automotive manufacturing base drive heavy WhatsApp adoption." },
@@ -240,10 +240,10 @@ export default function WhatsAppAPIPunePage() {
         title: "Get Click Media's WhatsApp API Service in Pune",
         description: (
           <>
-            Get Click Media provides WhatsApp API to Pune businesses remotely — full onboarding without
+            Get Click Media provides WhatsApp API to Pune businesses remotely- full onboarding without
             in-person requirement. Pune&apos;s IT companies appreciate GCM&apos;s
             <strong className="text-gray-900"> developer-friendly API, comprehensive documentation, and
-            pre-built integrations with Salesforce and HubSpot</strong> — the dominant CRM platforms in
+            pre-built integrations with Salesforce and HubSpot</strong>- the dominant CRM platforms in
             Pune&apos;s enterprise IT market.
           </>
         ),
@@ -255,7 +255,7 @@ export default function WhatsAppAPIPunePage() {
       faqs={FAQS}
       relatedLinks={RELATED_LINKS}
       bottomCtaTitle="Ready to launch WhatsApp API for your Pune business?"
-      bottomCtaDescription="Get Click Media manages Meta business verification, template approval, and CRM integration — fully remote, no in-person visit required."
+      bottomCtaDescription="Get Click Media manages Meta business verification, template approval, and CRM integration- fully remote, no in-person visit required."
       schema={schema}
     />
   );

@@ -11,7 +11,7 @@ const STATS = [
 ];
 
 /**
- * Clean, icon-led stat strip right under the hero — four numbers, no CTA,
+ * Clean, icon-led stat strip right under the hero- four numbers, no CTA,
  * count-up on scroll into view.
  */
 export default function WhatsappStatBand() {

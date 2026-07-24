@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   BadgeCheck,
   Smartphone,
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Google RCS Business Messaging Explained",
     description:
-      "A clear guide to Google's RCS Business Messaging (RBM) product — how it works, verification, and how Indian businesses can start using it.",
+      "A clear guide to Google's RCS Business Messaging (RBM) product- how it works, verification, and how Indian businesses can start using it.",
     url: "https://getclickmedia.com/google-rcs-business-messaging",
     type: "website",
   },
@@ -36,11 +37,11 @@ const LAST_UPDATED = "July 2026";
 
 const RBM_FEATURES = [
   { icon: LayoutTemplate, title: "Rich cards", desc: "A branded image, headline, description, and up to two action buttons in a single message." },
-  { icon: Layers, title: "Carousels", desc: "Multiple rich cards a user can swipe through horizontally — ideal for showcasing several products or offers." },
+  { icon: Layers, title: "Carousels", desc: "Multiple rich cards a user can swipe through horizontally- ideal for showcasing several products or offers." },
   { icon: Reply, title: "Suggested replies & actions", desc: "Tappable quick-reply chips and action buttons (call, open URL, view location) that cut the funnel from message to action." },
   { icon: BadgeCheck, title: "Verified sender badge", desc: "Your business name and logo appear on every message once brand verification is complete, in place of a generic phone number." },
-  { icon: CheckCheck, title: "Read receipts", desc: "See delivery and read status per message, the way you would in a native chat app — not possible with plain SMS." },
-  { icon: Smartphone, title: "Native Google Messages delivery", desc: "Messages arrive in the customer's default Android messaging app — no separate app install required." },
+  { icon: CheckCheck, title: "Read receipts", desc: "See delivery and read status per message, the way you would in a native chat app- not possible with plain SMS." },
+  { icon: Smartphone, title: "Native Google Messages delivery", desc: "Messages arrive in the customer's default Android messaging app- no separate app install required." },
 ];
 
 const RBM_VS_APPLE_ROWS = [
@@ -56,7 +57,7 @@ const FAQS = [
   },
   {
     q: "What does RBM stand for?",
-    a: "RBM stands for Rich Business Messaging — Google's specific branding for its RCS Business Messaging product.",
+    a: "RBM stands for Rich Business Messaging- Google's specific branding for its RCS Business Messaging product.",
   },
   {
     q: "How is Google RBM different from generic RCS?",
@@ -68,7 +69,7 @@ const FAQS = [
   },
   {
     q: "Does Google RBM require a verified sender badge?",
-    a: "Yes — verification is required before your messages can display your brand name and logo instead of a generic phone number.",
+    a: "Yes- verification is required before your messages can display your brand name and logo instead of a generic phone number.",
   },
   {
     q: "Is Google RBM available in India?",
@@ -76,11 +77,11 @@ const FAQS = [
   },
   {
     q: "How does Google RBM compare to Apple Messages for Business?",
-    a: "Both offer rich, branded messaging, but they run on separate platforms — Android/Google Messages versus iOS/iMessage — with different registration processes (Business Communications Console vs. Apple Business Register).",
+    a: "Both offer rich, branded messaging, but they run on separate platforms- Android/Google Messages versus iOS/iMessage- with different registration processes (Business Communications Console vs. Apple Business Register).",
   },
   {
     q: "Can I use one RCS provider for both Google RBM and general RCS delivery?",
-    a: "Yes — providers like Get Click Media handle Google RBM agent registration as part of standard RCS onboarding, so you don't need to manage the Google console relationship separately.",
+    a: "Yes- providers like Get Click Media handle Google RBM agent registration as part of standard RCS onboarding, so you don't need to manage the Google console relationship separately.",
   },
   {
     q: "What features does Google RBM support?",
@@ -88,7 +89,7 @@ const FAQS = [
   },
   {
     q: "Is there a cost to register as a Google RBM agent?",
-    a: "Registration requirements and any associated costs are set by Google and can change — ask your onboarding contact for the current process when you sign up.",
+    a: "Registration requirements and any associated costs are set by Google and can change- ask your onboarding contact for the current process when you sign up.",
   },
 ];
 
@@ -97,6 +98,7 @@ const RELATED_LINKS = [
   { label: "RCS Service Provider India", href: "/rcs-service-provider-india" },
   { label: "RCS Pricing India", href: "/rcs-pricing-india" },
   { label: "RCS API", href: "/rcs-api" },
+  { label: "Rich Business Messaging (RBM)", href: "/rich-business-messaging" },
 ];
 
 const schema = {
@@ -154,8 +156,8 @@ export default function GoogleRcsBusinessMessagingPage() {
         highlight="Explained"
         description={
           <>
-            Google RCS Business Messaging — often shortened to{" "}
-            <strong className="text-gray-900">Google RBM</strong> — is Google&apos;s own
+            Google RCS Business Messaging- often shortened to{" "}
+            <strong className="text-gray-900">Google RBM</strong>- is Google&apos;s own
             implementation of the RCS standard, delivered natively through Google Messages on
             Android.
           </>
@@ -167,10 +169,10 @@ export default function GoogleRcsBusinessMessagingPage() {
         trustLine="Google brand verification handled as part of onboarding"
       />
 
-      {/* -- EEAT: last-updated strip ---------------------------------------- */}
+      {/* -- EEAT: byline + last-updated strip -------------------------------- */}
       <div className="bg-white border-b border-gray-100">
         <p className="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 text-center text-xs text-gray-400">
-          Last updated: {LAST_UPDATED} · Reviewed by the Get Click Media RCS team
+          Written by the Get Click Media Pvt. Ltd. Team · Last updated: {LAST_UPDATED} · Reviewed by the Get Click Media RCS team
         </p>
       </div>
 
@@ -183,7 +185,7 @@ export default function GoogleRcsBusinessMessagingPage() {
           <div className="max-w-[680px] mx-auto rounded-2xl border-l-4 border-[#2563eb] bg-blue-50/60 px-6 py-5">
             <p className="text-base leading-[1.7] text-gray-700">
               <strong className="text-gray-900">RBM</strong> stands for Rich Business
-              Messaging — it&apos;s Google&apos;s specific product name for its implementation of
+              Messaging- it&apos;s Google&apos;s specific product name for its implementation of
               the open RCS Business Messaging standard. Verified businesses use it to send rich
               cards, carousels, and suggested-action messages to Android users through the
               Google Messages app, with a verified sender badge in place of a generic number.
@@ -207,8 +209,18 @@ export default function GoogleRcsBusinessMessagingPage() {
           <p>
             <strong className="text-gray-900">Google Messages app delivery.</strong> Once a
             business is registered and verified as an RBM agent, its messages are delivered
-            natively inside Google Messages — the default messaging app on most Android phones
-            in India — with no separate app download required by the customer.
+            natively inside Google Messages- the default messaging app on most Android phones
+            in India- with no separate app download required by the customer. Google RBM is
+            built on top of the{" "}
+            <a
+              href="https://www.gsma.com/futurenetworks/rcs/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#2563eb] underline underline-offset-2"
+            >
+              GSMA&apos;s RCS Universal Profile
+            </a>
+            , the open standard that carriers like Jio and Airtel implement on their networks.
           </p>
           <p>
             <strong className="text-gray-900">Verified sender status.</strong> Before a business
@@ -239,7 +251,7 @@ export default function GoogleRcsBusinessMessagingPage() {
               What You Can Send with Google RBM
             </h2>
             <p className="text-gray-500 text-base max-w-2xl mx-auto">
-              Agent setup happens once, inside Google&apos;s Business Communications Console —
+              Agent setup happens once, inside Google&apos;s Business Communications Console-
               after that, every feature below is available to your verified sender identity.
             </p>
           </div>
@@ -325,7 +337,7 @@ export default function GoogleRcsBusinessMessagingPage() {
             ))}
           </ol>
           <p className="text-sm text-gray-500 mt-6 text-center">
-            Get Click Media handles this entire process as part of standard RCS onboarding —{" "}
+            Get Click Media handles this entire process as part of standard RCS onboarding-{" "}
             <Link href="/rcs-service-provider-india" className="text-[#2563eb] underline underline-offset-2">
               see our RCS service provider page
             </Link>{" "}
@@ -337,7 +349,7 @@ export default function GoogleRcsBusinessMessagingPage() {
       {/* -- FAQ ------------------------------------------------------------ */}
       <section className="relative py-16 sm:py-20 lg:py-[100px] bg-gray-50" id="faq">
         <SectionPattern tone="gold" />
-        <div className="relative z-10 max-w-3xl mx-auto px-6 sm:px-12 lg:px-20">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-12 lg:px-20">
           <div className="text-center mb-12 space-y-4">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
               Frequently Asked Questions
@@ -346,7 +358,23 @@ export default function GoogleRcsBusinessMessagingPage() {
               Google RCS Business Messaging FAQs
             </h2>
           </div>
-          <AccordionList items={FAQS.map((f) => ({ question: f.q, answer: <p className="text-base text-gray-500 leading-[1.7]">{f.a}</p> }))} />
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
+            <div className="hidden lg:block lg:w-[36%] shrink-0 lg:sticky lg:top-24">
+              <div className="relative w-full rounded-2xl overflow-hidden aspect-4/5">
+                <Image
+                  src="/images/rcs/rcs-service-provider-india.png"
+                  alt="Ask a question about Google RCS Business Messaging"
+                  fill
+                  className="object-cover"
+                  sizes="36vw"
+                />
+              </div>
+            </div>
+            <AccordionList
+              className="flex-1 w-full"
+              items={FAQS.map((f) => ({ question: f.q, answer: <p className="text-base text-gray-500 leading-[1.7]">{f.a}</p> }))}
+            />
+          </div>
         </div>
       </section>
 

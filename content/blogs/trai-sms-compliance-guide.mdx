@@ -26,7 +26,7 @@ faq:
     answer: "Recipients can opt out by replying STOP or by registering on the DND portal. You must process opt-out requests within 24 hours and remove opted-out numbers from your promotional lists. Sending promotional messages to opted-out numbers after they have requested removal is a violation."
 ---
 
-Running bulk SMS campaigns in India without understanding TRAI's compliance rules is one of the fastest ways to get your Sender ID blacklisted and your campaigns blocked. Yet many businesses — especially those new to the channel — treat compliance as something their SMS provider handles entirely, without realising what the rules actually require from them.
+Running bulk SMS campaigns in India without understanding TRAI's compliance rules is one of the fastest ways to get your Sender ID blacklisted and your campaigns blocked. Yet many businesses- especially those new to the channel- treat compliance as something their SMS provider handles entirely, without realising what the rules actually require from them.
 
 This guide is your complete reference for TRAI SMS compliance: what the regulations cover, what they require from you as a business, and how to build a compliant operation that scales without running into regulatory trouble.
 
@@ -48,13 +48,13 @@ Understanding these five pillars is the foundation of SMS compliance.
 
 The most fundamental requirement. Every business sending commercial SMS in India must be registered as a Principal Entity on an approved DLT platform, with all headers (Sender IDs) and message templates pre-approved.
 
-The DLT system ensures traceability — every commercial message can be traced back to a registered entity, sent through a registered Telemarketer, using a registered header and template. If any element is unregistered, the message is blocked.
+The DLT system ensures traceability- every commercial message can be traced back to a registered entity, sent through a registered Telemarketer, using a registered header and template. If any element is unregistered, the message is blocked.
 
 For the full DLT setup process, see our [DLT Registration Guide](/blog/dlt-registration-guide). For how the entity-provider relationship is authorised, see the [PE-TM Binding Chain Guide](/blog/pe-tm-binding-chain-guide).
 
 **Your compliance obligations:**
 - Keep entity registration active and details updated
-- Register all headers before use — never send from an unregistered Sender ID
+- Register all headers before use- never send from an unregistered Sender ID
 - Submit and get approval for all templates before campaigns go live
 - Ensure your SMS provider (Telemarketer) is bound to your entity
 
@@ -71,7 +71,7 @@ The National DND Registry is TRAI's database of subscribers who have opted out o
 
 **The rule is simple:** Promotional and explicit-consent messages cannot go to DND-registered numbers. Transactional and Service Implicit messages can reach DND numbers because they contain information the subscriber needs, not unsolicited marketing.
 
-**How scrubbing works:** A quality SMS provider scrubs your recipient list against the DND registry automatically before sending. This is not optional — it is a required step in the compliant send pipeline. If your provider does not mention DND scrubbing, ask about it explicitly.
+**How scrubbing works:** A quality SMS provider scrubs your recipient list against the DND registry automatically before sending. This is not optional- it is a required step in the compliant send pipeline. If your provider does not mention DND scrubbing, ask about it explicitly.
 
 **Your compliance obligation:** Do not knowingly send promotional content to DND numbers. Maintain clean lists and work with a provider that runs DND checks.
 
@@ -79,9 +79,9 @@ The National DND Registry is TRAI's database of subscribers who have opted out o
 
 TRAI's consent framework distinguishes between different levels of permission:
 
-**Implicit consent** applies when a customer has an existing relationship with your business — they have purchased from you, signed up for your service, or initiated a transaction. You can send service and transactional messages without explicit opt-in, within the scope of that relationship.
+**Implicit consent** applies when a customer has an existing relationship with your business- they have purchased from you, signed up for your service, or initiated a transaction. You can send service and transactional messages without explicit opt-in, within the scope of that relationship.
 
-**Explicit consent** is required for promotional communications beyond the implied relationship. Recipients must have actively opted in — through a form, SMS keyword, IVR, or other consent capture mechanism.
+**Explicit consent** is required for promotional communications beyond the implied relationship. Recipients must have actively opted in- through a form, SMS keyword, IVR, or other consent capture mechanism.
 
 **How to capture and document consent:**
 - Website sign-up with SMS opt-in checkbox (with timestamp and IP logged)
@@ -89,7 +89,7 @@ TRAI's consent framework distinguishes between different levels of permission:
 - IVR confirmation during onboarding
 - In-store consent form with signature
 
-TRAI requires that consent records be maintained and producible if challenged. A complaint from a recipient claiming they never consented can result in investigation — your ability to show documented consent is your defence.
+TRAI requires that consent records be maintained and producible if challenged. A complaint from a recipient claiming they never consented can result in investigation- your ability to show documented consent is your defence.
 
 **Your compliance obligation:** Maintain a consent database with source, date, and method for each subscriber. Never assume consent because someone gave you their phone number for a different purpose.
 
@@ -97,7 +97,7 @@ TRAI requires that consent records be maintained and producible if challenged. A
 
 **Promotional SMS:** Allowed only between **9:00 AM and 9:00 PM**. Messages scheduled outside this window must be queued for the next available window.
 
-**Transactional SMS:** No time restriction — an OTP at 2 AM is perfectly compliant. Common sense applies for non-urgent transactional messages (triggering a payment receipt at 3 AM is technically allowed but not advisable).
+**Transactional SMS:** No time restriction- an OTP at 2 AM is perfectly compliant. Common sense applies for non-urgent transactional messages (triggering a payment receipt at 3 AM is technically allowed but not advisable).
 
 **Frequency rules:** TRAI does not specify an exact frequency cap, but the regulations reference "reasonable" frequency. In practice, sending multiple promotional messages per day to the same recipient is a fast path to DND registration and spam complaints.
 
@@ -117,7 +117,7 @@ Every promotional and service explicit SMS must include a clear opt-out mechanis
 
 **What "processed within 24 hours" means in practice:** The number must be added to your suppression list and removed from all promotional campaign audiences within 24 hours of the opt-out reply or DND registration.
 
-Failing to process opt-outs promptly is one of the most common compliance violations — and one of the most defensible from a regulatory standpoint, because the evidence is in your message logs.
+Failing to process opt-outs promptly is one of the most common compliance violations- and one of the most defensible from a regulatory standpoint, because the evidence is in your message logs.
 
 **Your compliance obligation:**
 - Maintain a suppression list alongside your contact database
@@ -133,7 +133,7 @@ Beyond the process requirements, TRAI and the DLT framework set content standard
 - Unsolicited financial product promotions (loans, insurance) without prior consent
 - Messages impersonating government agencies, TRAI, or financial regulators
 - Lottery, contest, or prize claims that require payment to claim
-- Phishing content — messages directing recipients to fake sites to capture credentials
+- Phishing content- messages directing recipients to fake sites to capture credentials
 - Any content classified as SPAM under the regulations
 
 **Required content elements for promotional SMS:**
@@ -152,14 +152,14 @@ TRAI's enforcement mechanism works through the Telecom operators and the DLT pla
 | First violation | Warning to Telemarketer, remediation required |
 | Repeated minor violations | Financial penalty on Telemarketer (passed to PE) |
 | Serious violation (DND breach, spam) | Sender ID suspension for 30–90 days |
-| Repeated serious violations | PE entity blacklisted — complete debarment |
+| Repeated serious violations | PE entity blacklisted- complete debarment |
 | Fraud or impersonation | Permanent debarment + potential legal action |
 
 The Principal Entity carries the reputational and operational risk. Your SMS provider may face fines, but it is your brand's Sender ID that gets suspended, and your customers who stop receiving your messages during a suspension period.
 
 ## Building a Compliance-First SMS Operation
 
-Compliance does not mean constraints — it means building the right habits from day one. Here is a practical checklist:
+Compliance does not mean constraints- it means building the right habits from day one. Here is a practical checklist:
 
 **Registration:**
 - [ ] DLT entity registered and approved
@@ -179,13 +179,13 @@ Compliance does not mean constraints — it means building the right habits from
 - [ ] Frequency capped at reasonable levels (1–2 per week per recipient)
 
 **Ongoing monitoring:**
-- [ ] Review DLR reports after every campaign — high failure rates may signal DND or template issues
-- [ ] Monitor opt-out rate trends — a rising opt-out rate signals content or frequency problems
+- [ ] Review DLR reports after every campaign- high failure rates may signal DND or template issues
+- [ ] Monitor opt-out rate trends- a rising opt-out rate signals content or frequency problems
 - [ ] Check Sender ID status on DLT platform monthly
 
 ## How Your SMS Provider Helps With Compliance
 
-A good SMS provider is not just infrastructure — they are a compliance partner. Get Click Media's platform includes:
+A good SMS provider is not just infrastructure- they are a compliance partner. Get Click Media's platform includes:
 
 - **Automatic DND scrubbing** before every send
 - **Template ID mapping** to ensure messages match approved templates
@@ -199,6 +199,6 @@ But the provider can only do so much. The content you send, the consent you capt
 
 TRAI SMS compliance is not complicated once you understand the five pillars: DLT registration, DND scrubbing, consent management, sending hours, and opt-out handling. Most violations come from businesses that either did not know the rules or took shortcuts assuming they would not get caught.
 
-The businesses that run compliant SMS operations consistently see better delivery rates, lower opt-out rates, and longer subscriber lists — because their recipients trust them. Compliance is not just about avoiding penalties; it is about building a channel that works for years.
+The businesses that run compliant SMS operations consistently see better delivery rates, lower opt-out rates, and longer subscriber lists- because their recipients trust them. Compliance is not just about avoiding penalties; it is about building a channel that works for years.
 
 If you want to run compliant bulk SMS campaigns with the technical infrastructure handled for you, [explore Get Click Media's Bulk SMS Service](/bulk-sms-service-provider-india) and let our team walk you through what DLT compliance looks like on our platform.

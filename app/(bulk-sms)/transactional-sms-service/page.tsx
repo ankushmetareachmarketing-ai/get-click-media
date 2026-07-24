@@ -28,7 +28,7 @@ export const metadata = {
         url: "https://getclickmedia.com/images/bulk-sms/bulk-sms-service-provider-india-hero.webp",
         width: 1200,
         height: 630,
-        alt: "Transactional SMS Service in India — Get Click Media",
+        alt: "Transactional SMS Service in India- Get Click Media",
       },
     ],
   },
@@ -129,7 +129,7 @@ export default function TransactionalSmsPage() {
         eyebrow="Transactional SMS Services"
         title="Best Transactional SMS Service Provider in India"
         highlight="Transactional SMS Service Provider"
-        description="Send OTPs, account alerts, and critical service messages to every customer — DND or not — with 99.9% delivery uptime and real-time delivery reports across India."
+        description="Send OTPs, account alerts, and critical service messages to every customer- DND or not- with 99.9% delivery uptime and real-time delivery reports across India."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Transactional SMS Service in India" },
@@ -137,7 +137,7 @@ export default function TransactionalSmsPage() {
         primaryCta="Request a Demo"
         secondaryCta="Explore Plans"
         imageSrc="/images/bulk-sms/transactional-sms-service-provider.webp"
-        imageAlt="Transactional SMS Service in India — Get Click Media platform dashboard"
+        imageAlt="Transactional SMS Service in India- Get Click Media platform dashboard"
       />
       <BulkSmsBrandsStrip />
       <WhatIsTransactionalSMS />

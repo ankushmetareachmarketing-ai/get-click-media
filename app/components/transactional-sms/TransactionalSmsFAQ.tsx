@@ -7,7 +7,7 @@ const faqs = [
   {
     question: "What is transactional SMS and how is it different from promotional SMS?",
     answer:
-      "Transactional SMS delivers critical, service-related information — OTPs, account alerts, order updates, appointment reminders — and can be sent to all numbers including DND-registered ones, 24×7. Promotional SMS delivers marketing offers and can only reach non-DND numbers between 9 AM and 9 PM. Both require TRAI DLT registration.",
+      "Transactional SMS delivers critical, service-related information- OTPs, account alerts, order updates, appointment reminders- and can be sent to all numbers including DND-registered ones, 24×7. Promotional SMS delivers marketing offers and can only reach non-DND numbers between 9 AM and 9 PM. Both require TRAI DLT registration.",
   },
   {
     question: "Can transactional SMS be sent to DND numbers in India?",
@@ -22,7 +22,7 @@ const faqs = [
   {
     question: "What types of messages qualify as transactional SMS in India?",
     answer:
-      "TRAI defines transactional SMS as messages triggered by a customer action or a service obligation — OTPs, bank transaction alerts, order confirmations, appointment reminders, delivery updates, policy renewal notices, and flight status updates. Marketing offers, sale announcements, and promotional content do not qualify.",
+      "TRAI defines transactional SMS as messages triggered by a customer action or a service obligation- OTPs, bank transaction alerts, order confirmations, appointment reminders, delivery updates, policy renewal notices, and flight status updates. Marketing offers, sale announcements, and promotional content do not qualify.",
   },
   {
     question: "How quickly can I go live with transactional SMS?",
@@ -37,7 +37,7 @@ const faqs = [
   {
     question: "What delivery rate can I expect for transactional SMS?",
     answer:
-      "Get Click Media delivers transactional SMS via carrier-grade infrastructure with a 99.9% delivery uptime SLA. Messages are routed through redundant connections to all major Indian telecom operators — Airtel, Jio, Vi, and BSNL — with automatic failover if a primary route is congested.",
+      "Get Click Media delivers transactional SMS via carrier-grade infrastructure with a 99.9% delivery uptime SLA. Messages are routed through redundant connections to all major Indian telecom operators- Airtel, Jio, Vi, and BSNL- with automatic failover if a primary route is congested.",
   },
   {
     question: "How much does transactional SMS cost in India?",

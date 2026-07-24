@@ -15,7 +15,7 @@ export default function Cards() {
           eyebrow="Communication Channels"
           title="One Platform. Every Customer Touchpoint."
           highlight="Every Customer Touchpoint."
-          description="WhatsApp, RCS, SMS, Voice, Email and AI Chatbots — all unified in one dashboard."
+          description="WhatsApp, RCS, SMS, Voice, Email and AI Chatbots- all unified in one dashboard."
          
         />
       </div>

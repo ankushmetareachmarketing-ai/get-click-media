@@ -7,14 +7,14 @@ import { ArrowRight, CheckCheck, Shield, Zap, BarChart3, MessageSquare, Layers, 
 export const metadata: Metadata = {
   title: "RCS Messaging for Education & EdTech in India | Get Click Media",
   description:
-    "RCS messaging for Indian schools, colleges, coaching institutes, and edtech platforms — admission campaigns, fee reminders, exam alerts, result notifications, and parent communication. Get a free demo.",
+    "RCS messaging for Indian schools, colleges, coaching institutes, and edtech platforms- admission campaigns, fee reminders, exam alerts, result notifications, and parent communication. Get a free demo.",
   keywords:
     "RCS for Education, RCS for Schools, RCS for EdTech India, RCS Education Messaging, RCS for Coaching Institutes India, Education RCS India",
   alternates: { canonical: "https://getclickmedia.com/rcs-for-education" },
   openGraph: {
     title: "RCS Messaging for Education & EdTech in India | Get Click Media",
     description:
-      "RCS messaging for Indian schools, colleges, coaching institutes, and edtech platforms — admission campaigns, fee reminders, exam alerts, result notifications, and parent communication.",
+      "RCS messaging for Indian schools, colleges, coaching institutes, and edtech platforms- admission campaigns, fee reminders, exam alerts, result notifications, and parent communication.",
     url: "https://getclickmedia.com/rcs-for-education",
     type: "website",
   },
@@ -37,7 +37,7 @@ const schema = {
         "@type": "Country",
         "name": "India"
       },
-      "serviceType": "RCS Business Messaging — Education and EdTech",
+      "serviceType": "RCS Business Messaging- Education and EdTech",
       "url": "https://getclickmedia.com/rcs-for-education"
     },
     {
@@ -69,7 +69,7 @@ const schema = {
         },
         {
           "@type": "Question", "name": "Does RCS work for coaching institutes?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Coaching institutes use RCS for admission follow-up, fee collection, exam timetables, result communication, and batch start reminders — with verified sender identity differentiating them from competitors." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Coaching institutes use RCS for admission follow-up, fee collection, exam timetables, result communication, and batch start reminders- with verified sender identity differentiating them from competitors." }
         }
       ]
     }
@@ -81,7 +81,7 @@ const EDUCATION_USE_CASES = [
   {
     icon: GraduationCap,
     title: "Admission Enquiry Follow-Up",
-    scenario: "Prospective students/parents who submitted enquiry form online or offline. Within 5 minutes of enquiry submission — highest conversion window.",
+    scenario: "Prospective students/parents who submitted enquiry form online or offline. Within 5 minutes of enquiry submission- highest conversion window.",
     solution: "Rich card: campus/institute image, programme name, key USPs (faculty, placement, rankings), 3 buttons: 'Book Campus Visit', 'Download Prospectus', 'Call Admissions'.",
     result: "Enquiry-to-visit conversion: 22% vs SMS 4.8%. Cost per enrolled student: 58% lower. Read rate within 5 min: 91%.",
     image: "/images/rcs/education-admission.webp"
@@ -106,7 +106,7 @@ const EDUCATION_USE_CASES = [
     icon: Award,
     title: "Result Notification",
     scenario: "All students (and parents for K–12) on result declaration day. Fastest possible trigger on result publication.",
-    solution: "Rich card: institution logo + verified, student name, result summary (Pass/Distinction/Fail — not detailed marks for privacy), 2 buttons: 'View Full Result' (links to portal), 'Download Marksheet'.",
+    solution: "Rich card: institution logo + verified, student name, result summary (Pass/Distinction/Fail- not detailed marks for privacy), 2 buttons: 'View Full Result' (links to portal), 'Download Marksheet'.",
     result: "Result page visits via RCS button: 89% vs 41% via SMS link. Marksheet downloads: 3.2x higher. Parent-student engagement post-result: highest RCS message type open rate (94%).",
     image: "/images/rcs/education-result.webp"
   },
@@ -153,7 +153,7 @@ const EDUCATION_USE_CASES = [
   {
     icon: Bell,
     title: "Trial Class / Demo Session Invitation",
-    scenario: "New leads who have not yet enrolled — top-of-funnel conversion use case. 24 hours after lead capture or 1 week after initial enquiry with no booking.",
+    scenario: "New leads who have not yet enrolled- top-of-funnel conversion use case. 24 hours after lead capture or 1 week after initial enquiry with no booking.",
     solution: "Rich card: teacher/faculty image or classroom image, trial class details (subject, date, time, mode), 3 buttons: 'Book Free Trial', 'View Curriculum', 'Ask a Question' (two-way reply trigger).",
     result: "Trial booking rate: 28% vs email 5.2%. Trial-to-enrolment conversion: 41% (highest conversion rate of any education RCS campaign type). 'Ask a Question' triggers 14% of leads to start 2-way conversation.",
     image: "/images/rcs/education-trial-class.webp"
@@ -201,7 +201,7 @@ const SEGMENT_STRATEGIES = [
     strategies: [
       "Day 7 re-engagement RCS raises completion 45%",
       "Free trial invitation carousel drives 28% trial booking rate",
-      "RCS delivered to messaging app — no email open required",
+      "RCS delivered to messaging app- no email open required",
       "3-touch renewal series via RCS drives 28% higher renewal",
       "Course recommendation carousel generates 18% enrolment"
     ]
@@ -250,35 +250,35 @@ const LIFECYCLE_STAGES = [
 const FAQS = [
   {
     q: "How does RCS messaging help education institutions increase admissions?",
-    a: "RCS transforms admission enquiry follow-up from a plain SMS to a visually rich, verified message — with campus image, programme highlights, and a 'Book Campus Visit' button — delivered within minutes of enquiry. This visual differentiation, combined with verified sender identity and one-tap booking, drives enquiry-to-visit conversion rates of 18–28% vs 4–8% for plain SMS. Coaching institutes report cost-per-enrolled-student reductions of 55–65% after deploying RCS admission follow-up."
+    a: "RCS transforms admission enquiry follow-up from a plain SMS to a visually rich, verified message- with campus image, programme highlights, and a 'Book Campus Visit' button- delivered within minutes of enquiry. This visual differentiation, combined with verified sender identity and one-tap booking, drives enquiry-to-visit conversion rates of 18–28% vs 4–8% for plain SMS. Coaching institutes report cost-per-enrolled-student reductions of 55–65% after deploying RCS admission follow-up."
   },
   {
     q: "Can RCS be used for fee collection in schools?",
-    a: "Yes. RCS fee reminders with a Pay Now button are one of the highest-ROI education RCS use cases. Schools report on-time fee collection rate improvements of 60–70% after switching from SMS to RCS reminders. The Pay Now button eliminates the friction of copying a bank account number or navigating to a payment portal — 74% of RCS-triggered fee payments are completed via the button without any additional admin communication."
+    a: "Yes. RCS fee reminders with a Pay Now button are one of the highest-ROI education RCS use cases. Schools report on-time fee collection rate improvements of 60–70% after switching from SMS to RCS reminders. The Pay Now button eliminates the friction of copying a bank account number or navigating to a payment portal- 74% of RCS-triggered fee payments are completed via the button without any additional admin communication."
   },
   {
     q: "Can schools send RCS messages to parents?",
-    a: "Yes. Parents are the primary audience for K–12 school RCS messaging — fee reminders, exam schedules, result notifications, PTM requests, and emergency communications all target parents. RCS verified sender identity (school logo and name on every message) dramatically improves parent trust and engagement compared to unidentifiable SMS Sender IDs."
+    a: "Yes. Parents are the primary audience for K–12 school RCS messaging- fee reminders, exam schedules, result notifications, PTM requests, and emergency communications all target parents. RCS verified sender identity (school logo and name on every message) dramatically improves parent trust and engagement compared to unidentifiable SMS Sender IDs."
   },
   {
     q: "How does RCS help edtech platforms reduce student dropout?",
-    a: "RCS re-engagement messages — triggered when a student has not logged in for 7 or more days — show the student's enrolled course image, their last completed module, and a progress visual with a 'Continue Learning' button. These messages reach students in their native messaging app without requiring an app switch or login. A three-touch re-engagement series (day 7, day 14, day 21) improves course completion rates by up to 45% vs no re-engagement communication."
+    a: "RCS re-engagement messages- triggered when a student has not logged in for 7 or more days- show the student's enrolled course image, their last completed module, and a progress visual with a 'Continue Learning' button. These messages reach students in their native messaging app without requiring an app switch or login. A three-touch re-engagement series (day 7, day 14, day 21) improves course completion rates by up to 45% vs no re-engagement communication."
   },
   {
     q: "Does RCS work for coaching institutes like Allen, FIITJEE, and Aakash?",
-    a: "Yes. Coaching institutes are among the highest-volume RCS users in Indian education. Key use cases include admission enquiry follow-up (campus image + selection stats + Book Visit button), fee collection, exam timetable notification, result communication, and batch start reminders. Coaching institutes that compete on the same keywords as each other — JEE, NEET, UPSC — find that RCS visual differentiation creates a meaningful first-impression advantage."
+    a: "Yes. Coaching institutes are among the highest-volume RCS users in Indian education. Key use cases include admission enquiry follow-up (campus image + selection stats + Book Visit button), fee collection, exam timetable notification, result communication, and batch start reminders. Coaching institutes that compete on the same keywords as each other- JEE, NEET, UPSC- find that RCS visual differentiation creates a meaningful first-impression advantage."
   },
   {
     q: "Can RCS messages carry exam timetables and admit cards?",
-    a: "Yes. RCS supports PDF file attachments delivered natively in the message — no link, no external portal required. An exam timetable or admit card can be sent as an attached PDF that the student or parent downloads with a single tap. Timetable download rates via RCS reach 78% within 2 hours of send — compared to 28% for equivalent SMS-with-link notifications."
+    a: "Yes. RCS supports PDF file attachments delivered natively in the message- no link, no external portal required. An exam timetable or admit card can be sent as an attached PDF that the student or parent downloads with a single tap. Timetable download rates via RCS reach 78% within 2 hours of send- compared to 28% for equivalent SMS-with-link notifications."
   },
   {
     q: "Is student and parent data safe with RCS messaging via Get Click Media?",
-    a: "Yes. Get Click Media's RCS platform processes student and parent data exclusively on India-hosted infrastructure. We comply with India's Digital Personal Data Protection Act 2023 — with data minimisation, consent management, and opt-out handling built into the platform. No student data is transferred outside India, and audit logs are maintained for all data processing activities. Parent and student opt-out requests are honoured immediately."
+    a: "Yes. Get Click Media's RCS platform processes student and parent data exclusively on India-hosted infrastructure. We comply with India's Digital Personal Data Protection Act 2023- with data minimisation, consent management, and opt-out handling built into the platform. No student data is transferred outside India, and audit logs are maintained for all data processing activities. Parent and student opt-out requests are honoured immediately."
   },
   {
     q: "What is the minimum budget for an education institution to start with RCS?",
-    a: "There is no minimum spend. An individual coaching institute sending 2,000 admission follow-up messages per month pays approximately ₹400–500 per month at standard RCS rates — with a typical ROI of 15x to 25x from improved enquiry-to-admission conversion. Large edtech platforms and university networks with millions of monthly messages receive enterprise pricing. Get Click Media works with institutions of all sizes — from single-branch coaching institutes to national university networks."
+    a: "There is no minimum spend. An individual coaching institute sending 2,000 admission follow-up messages per month pays approximately ₹400–500 per month at standard RCS rates- with a typical ROI of 15x to 25x from improved enquiry-to-admission conversion. Large edtech platforms and university networks with millions of monthly messages receive enterprise pricing. Get Click Media works with institutions of all sizes- from single-branch coaching institutes to national university networks."
   }
 ];
 
@@ -290,7 +290,7 @@ export default function RCSEducationPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       {/* -----------------------------------------------------------------
-          HERO — with breadcrumb inside
+          HERO- with breadcrumb inside
       ----------------------------------------------------------------- */}
       <section className="relative overflow-hidden mt-2 bg-white bg-[radial-gradient(130%_130%_at_100%_100%,#5b7fe8_0%,#93aef0_25%,#d6e2ff_55%,#ffffff_85%)] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
@@ -319,7 +319,7 @@ export default function RCSEducationPage() {
 
               <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-xl">
                 From CBSE schools and engineering colleges to JEE coaching institutes
-                and edtech unicorns — RCS transforms education communication with
+                and edtech unicorns- RCS transforms education communication with
                 verified rich cards, Pay Now buttons, exam timetables, and instant
                 result notifications. Drive admissions, engage learners, retain students.
               </p>
@@ -380,7 +380,7 @@ export default function RCSEducationPage() {
             <div className="w-full lg:w-1/2">
               <Image
                 src="/images/rcs/education-why-rcs.webp"
-                alt="Education messaging comparison — SMS vs RCS visual"
+                alt="Education messaging comparison- SMS vs RCS visual"
                 width={700}
                 height={525}
                 className="w-full h-auto rounded-2xl"
@@ -397,15 +397,15 @@ export default function RCSEducationPage() {
               <div className="space-y-4">
                 <div className="bg-red-50 rounded-xl p-4 border border-red-100">
                   <h4 className="text-sm font-bold text-red-600 mb-2">✕ The admission conversion problem</h4>
-                  <p className="text-sm text-gray-600">Over 3 crore new admission enquiries annually — but conversion averages 4–8%. The gap is a communication problem: plain SMS with address and phone number doesn't differentiate. RCS delivers campus images, faculty credentials, and one-tap booking.</p>
+                  <p className="text-sm text-gray-600">Over 3 crore new admission enquiries annually- but conversion averages 4–8%. The gap is a communication problem: plain SMS with address and phone number doesn't differentiate. RCS delivers campus images, faculty credentials, and one-tap booking.</p>
                 </div>
                 <div className="bg-amber-50 rounded-xl p-4 border border-amber-100">
                   <h4 className="text-sm font-bold text-amber-600 mb-2">✕ The parent communication trust gap</h4>
-                  <p className="text-sm text-gray-600">Parents receive dozens of messages from unidentifiable Sender IDs. RCS puts the school's verified name and logo on every message — parents immediately recognise the sender and trust the communication.</p>
+                  <p className="text-sm text-gray-600">Parents receive dozens of messages from unidentifiable Sender IDs. RCS puts the school's verified name and logo on every message- parents immediately recognise the sender and trust the communication.</p>
                 </div>
                 <div className="bg-blue-50 rounded-xl p-4 border border-blue-100">
                   <h4 className="text-sm font-bold text-blue-600 mb-2">✓ The student engagement and retention problem in EdTech</h4>
-                  <p className="text-sm text-gray-600">Course completion rates average 12–18%. RCS enables personalised, visual re-engagement with progress bars and Continue buttons — reaching students in their messaging app without login or app switch.</p>
+                  <p className="text-sm text-gray-600">Course completion rates average 12–18%. RCS enables personalised, visual re-engagement with progress bars and Continue buttons- reaching students in their messaging app without login or app switch.</p>
                 </div>
               </div>
 
@@ -596,8 +596,8 @@ export default function RCSEducationPage() {
                 {[
                   { title: "School management system integrations", desc: "Integrates with Fedena, Entab, iSkool, MyClassboard. Fee due triggers, exam schedule publishes, result declarations auto-trigger RCS." },
                   { title: "University ERP and LMS integrations", desc: "Connects with Moodle, Canvas, Blackboard, Oracle Student Cloud, SAP Student Lifecycle Management for enrollment confirmations, grade releases." },
-                  { title: "EdTech platform webhook support", desc: "Triggers RCS when a student completes a module, subscription renews/lapses, or live class is about to start — handles high-volume concurrent triggers." },
-                  { title: "Personalisation at scale", desc: "Dynamic fields — student name, class, section, fee amount, exam date, course name, progress percentage, result grade — from a single campaign." },
+                  { title: "EdTech platform webhook support", desc: "Triggers RCS when a student completes a module, subscription renews/lapses, or live class is about to start- handles high-volume concurrent triggers." },
+                  { title: "Personalisation at scale", desc: "Dynamic fields- student name, class, section, fee amount, exam date, course name, progress percentage, result grade- from a single campaign." },
                   { title: "Multilingual support", desc: "Unicode message content in English, Hindi, and 12+ regional languages. Communicate with parents in their preferred language." },
                   { title: "Compliance with DPDP 2023", desc: "Data minimisation and consent management. No student data processed beyond necessary. Opt-out requests honoured immediately with full audit trail." },
                 ].map(p => (
@@ -628,7 +628,7 @@ export default function RCSEducationPage() {
 
       {/* -- FAQ ------------------------------------------------------------ */}
       <section className="py-20 sm:py-28 bg-white" id="faq">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
               Frequently Asked Questions
@@ -637,21 +637,34 @@ export default function RCSEducationPage() {
               RCS Messaging for Education in India
             </h2>
           </div>
-          <div className="space-y-3">
-            {FAQS.map((faq, i) => (
-              <details
-                key={i}
-                className="group rounded-2xl bg-gray-50 border border-gray-100 shadow-sm open:shadow-md transition-shadow"
-              >
-                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
-                  <span className="text-sm font-semibold text-gray-900 leading-snug">{faq.q}</span>
-                  <ChevronDown className="w-4 h-4 text-gray-400 shrink-0 transition-transform group-open:rotate-180" />
-                </summary>
-                <div className="px-6 pb-5">
-                  <p className="text-sm text-gray-500 leading-relaxed">{faq.a}</p>
-                </div>
-              </details>
-            ))}
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
+            <div className="hidden lg:block lg:w-[36%] shrink-0 lg:sticky lg:top-24">
+              <div className="relative w-full rounded-2xl overflow-hidden aspect-4/5">
+                <Image
+                  src="/images/rcs/education-dashboard.webp"
+                  alt="Ask a question about RCS messaging for education"
+                  fill
+                  className="object-cover"
+                  sizes="36vw"
+                />
+              </div>
+            </div>
+            <div className="flex-1 w-full space-y-3">
+              {FAQS.map((faq, i) => (
+                <details
+                  key={i}
+                  className="group rounded-2xl bg-gray-50 border border-gray-100 shadow-sm open:shadow-md transition-shadow"
+                >
+                  <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
+                    <span className="text-sm font-semibold text-gray-900 leading-snug">{faq.q}</span>
+                    <ChevronDown className="w-4 h-4 text-gray-400 shrink-0 transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-5">
+                    <p className="text-sm text-gray-500 leading-relaxed">{faq.a}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
           </div>
         </div>
       </section>

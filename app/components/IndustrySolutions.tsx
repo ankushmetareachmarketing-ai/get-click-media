@@ -18,7 +18,7 @@ const TABS = [
     industry: "Hospitality & Hotels",
     headline: "Drive bookings, delight guests, build loyalty.",
     description:
-      "Get Click Media helps hospitality brands deliver instant booking confirmations, personalised offers and post-stay follow-ups across WhatsApp, SMS and RCS — all from one unified platform.",
+      "Get Click Media helps hospitality brands deliver instant booking confirmations, personalised offers and post-stay follow-ups across WhatsApp, SMS and RCS- all from one unified platform.",
     highlights: [
       "Booking confirmation in under 2 seconds",
       "WhatsApp check-in & upsell alerts",
@@ -35,7 +35,7 @@ const TABS = [
     industry: "Fashion & Lifestyle",
     headline: "Turn browsers into buyers with smart messaging.",
     description:
-      "Send flash-sale alerts, abandoned-cart recovery messages and loyalty reward nudges through WhatsApp and SMS. Reach shoppers at exactly the right moment — every time.",
+      "Send flash-sale alerts, abandoned-cart recovery messages and loyalty reward nudges through WhatsApp and SMS. Reach shoppers at exactly the right moment- every time.",
     highlights: [
       "Abandoned cart recovery campaigns",
       "Flash sale broadcasts at scale",
@@ -52,7 +52,7 @@ const TABS = [
     industry: "Finance & Fintech",
     headline: "Secure, compliant communication at scale.",
     description:
-      "Deliver OTPs, fraud alerts, EMI reminders and account updates instantly to millions of customers with a 99.9% uptime SLA and DLT compliance built right in — no extra setup needed.",
+      "Deliver OTPs, fraud alerts, EMI reminders and account updates instantly to millions of customers with a 99.9% uptime SLA and DLT compliance built right in- no extra setup needed.",
     highlights: [
       "Sub-second OTP & 2FA delivery",
       "DLT-compliant transactional routes",
@@ -67,7 +67,7 @@ const TABS = [
     label: "Retail",
     Icon: ShoppingCart,
     industry: "Retail & E-Commerce",
-    headline: "From browse to buy — messaging that converts.",
+    headline: "From browse to buy- messaging that converts.",
     description:
       "Automate order confirmations, delivery tracking, flash sale blasts and review collection across every channel. Scale to millions of messages with zero infrastructure headaches.",
     highlights: [
@@ -86,7 +86,7 @@ const TABS = [
     industry: "Education & Ed-Tech",
     headline: "Keep students, parents and faculty in the loop.",
     description:
-      "Send exam schedules, result announcements, attendance alerts and fee reminders via WhatsApp, SMS and RCS. Build a connected campus community effortlessly — at any scale.",
+      "Send exam schedules, result announcements, attendance alerts and fee reminders via WhatsApp, SMS and RCS. Build a connected campus community effortlessly- at any scale.",
     highlights: [
       "Exam schedule & result alerts",
       "Fee payment reminders & receipts",
@@ -198,7 +198,7 @@ const IndustrySolutions: React.FC = () => {
 
           <div className="relative z-10 flex flex-col lg:flex-row">
 
-            {/* Left — text content */}
+            {/* Left- text content */}
             <div className="flex-1 p-7 sm:p-10 flex flex-col justify-between gap-6 lg:max-w-[52%]">
 
               {/* Client identity */}
@@ -264,14 +264,14 @@ const IndustrySolutions: React.FC = () => {
               </div>
             </div>
 
-            {/* Right — product image */}
+            {/* Right- product image */}
             <div
               className="flex-1 relative flex items-end justify-center lg:justify-end overflow-hidden min-h-[220px] sm:min-h-[300px] lg:min-h-0"
 
             >
               <Image
                 src={tab.image || "/images/industries/hospitality.webp"}
-                alt={`${tab.industry} — Get Click Media platform`}
+                alt={`${tab.industry}- Get Click Media platform`}
                 width={1200}
                 height={800}
                 className="w-full h-auto"

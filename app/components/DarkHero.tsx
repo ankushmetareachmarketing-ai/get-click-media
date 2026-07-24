@@ -33,19 +33,19 @@ export interface DarkHeroProps {
   trustLine?: string;
   stats?: DarkHeroStat[];
   /**
-   * Defaults to "dark" — the original navy-gradient look every other page already uses.
-   * "gradient" is a soft lavender-to-blue diagonal wash (RCS pages) — same light-text
+   * Defaults to "dark"- the original navy-gradient look every other page already uses.
+   * "gradient" is a soft lavender-to-blue diagonal wash (RCS pages)- same light-text
    * treatment as "light" but with a colored background instead of white + blob glows.
    */
   theme?: "dark" | "light" | "gradient";
 }
 
 /**
- * The one hero used by every RCS and WhatsApp page — previously copy-pasted
+ * The one hero used by every RCS and WhatsApp page- previously copy-pasted
  * inline into 32 separate files with tiny drift between them. Centralised
  * here so every page gets the same premium treatment and future fixes apply
  * once. `theme="light"` swaps the navy gradient for a white canvas with soft
- * pastel glow blobs — everything else about the layout is unchanged.
+ * pastel glow blobs- everything else about the layout is unchanged.
  */
 export default function DarkHero({
   breadcrumbs,
@@ -66,7 +66,7 @@ export default function DarkHero({
   const handlePrimaryClick = primaryCta.onClick ?? openModal;
   const isLight = theme === "light";
   const isGradient = theme === "gradient";
-  // "light" and "gradient" share the same dark-text-on-light-canvas treatment —
+  // "light" and "gradient" share the same dark-text-on-light-canvas treatment-
   // they only differ in what the canvas itself looks like (see below).
   const isLightText = isLight || isGradient;
 
@@ -87,16 +87,16 @@ export default function DarkHero({
       )}
       {!isLightText && (
         <>
-          {/* Spotlight glow — the depth/premium touch a flat gradient card lacks.
+          {/* Spotlight glow- the depth/premium touch a flat gradient card lacks.
               Dark canvas is exactly what Aceternity's default opacity is tuned for. */}
           <Spotlight className="-top-16 left-0 lg:left-20" fill="#38bdf8" />
           <Spotlight className="top-0 right-0 lg:right-0 rotate-180" fill="#818cf8" fillOpacity={0.15} />
         </>
       )}
 
-      {/* Drifting grid lines, brighter in a radial patch that follows the cursor —
+      {/* Drifting grid lines, brighter in a radial patch that follows the cursor-
           sits above the color wash (z-10) so the lines stay crisp over it. Skipped
-          for "gradient" — the soft wash is the whole visual, a grid competes with it. */}
+          for "gradient"- the soft wash is the whole visual, a grid competes with it. */}
       {!isGradient && (
         <AnimatedGridBackground
           lineClassName={isLight ? "text-slate-400" : "text-white"}
@@ -242,7 +242,7 @@ export default function DarkHero({
             )}
           </div>
 
-          {/* Right — hero image, smaller share so the copy column gets more width */}
+          {/* Right- hero image, smaller share so the copy column gets more width */}
           <div className="w-full lg:w-[45%] shrink-0">
             <div className="relative w-full rounded-2xl overflow-hidden aspect-[4/3] ">
               <Image

@@ -10,7 +10,7 @@ const SCANNED_ATTR = "data-reveal-done";
 
 /**
  * Zero-JS-authoring scroll reveal engine. Mounted once in the root layout.
- * Any element anywhere in the app — existing page or one added tomorrow —
+ * Any element anywhere in the app- existing page or one added tomorrow-
  * gets scroll-triggered entrance animation just by carrying `data-reveal`:
  *
  *   <div data-reveal="fade-up">...</div>
@@ -20,7 +20,7 @@ const SCANNED_ATTR = "data-reveal-done";
  *   <div data-reveal="scale-in" data-reveal-delay="0.15" data-reveal-repeat>
  *
  * This is what every new page/component "automatically inherits" without
- * touching layout code — no hook, no import, just the attribute.
+ * touching layout code- no hook, no import, just the attribute.
  */
 export default function RevealInit() {
   const pathname = usePathname();
@@ -30,7 +30,7 @@ export default function RevealInit() {
 
     const gsap = getGsap();
 
-    // Drop ScrollTriggers whose trigger element no longer exists (previous route) —
+    // Drop ScrollTriggers whose trigger element no longer exists (previous route)-
     // this is the engine's garbage collection; RevealInit itself never unmounts.
     ScrollTrigger.getAll().forEach((st) => {
       if (st.trigger && !document.body.contains(st.trigger)) st.kill();

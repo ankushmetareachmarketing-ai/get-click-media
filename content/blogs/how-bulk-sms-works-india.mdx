@@ -1,6 +1,6 @@
 ---
 title: "How Bulk SMS Works in India: Process, SMS Gateway & Delivery Explained"
-description: "From message submission to delivery on a subscriber's handset, understand the complete bulk SMS process in India — including SMS gateways, DLT scrubbing, telecom routes, and delivery reports."
+description: "From message submission to delivery on a subscriber's handset, understand the complete bulk SMS process in India- including SMS gateways, DLT scrubbing, telecom routes, and delivery reports."
 slug: "how-bulk-sms-works-india"
 image: "/images/blog/how-bulk-sms-works-india.webp"
 author: "Get Click Media"
@@ -35,14 +35,14 @@ You click send on a bulk SMS campaign and within seconds, thousands of customers
 
 Your campaign begins when you submit a message through an SMS panel or via API. The message payload includes:
 
-- **Recipient list** — the mobile numbers to send to
-- **Sender ID** — your registered 6-character alphanumeric sender name (e.g., GETCLI)
-- **Message content** — your approved DLT template with variable values filled in
-- **Delivery time** — immediate or scheduled
+- **Recipient list**- the mobile numbers to send to
+- **Sender ID**- your registered 6-character alphanumeric sender name (e.g., GETCLI)
+- **Message content**- your approved DLT template with variable values filled in
+- **Delivery time**- immediate or scheduled
 
 ### Step 2: DLT Scrubbing
 
-Before any message leaves the bulk SMS provider's system, it goes through **DLT (Distributed Ledger Technology) scrubbing** — a mandatory verification step introduced by TRAI in 2021.
+Before any message leaves the bulk SMS provider's system, it goes through **DLT (Distributed Ledger Technology) scrubbing**- a mandatory verification step introduced by TRAI in 2021.
 
 The scrubbing engine checks:
 
@@ -51,7 +51,7 @@ The scrubbing engine checks:
 - Whether the **message template** matches a pre-approved template in the DLT database
 - Whether the **template category** (promotional, transactional, OTP) is correctly mapped
 
-Messages that fail scrubbing are **blocked immediately** — they never reach the telecom operator. This is why DLT registration and template approval are non-negotiable steps before launching a campaign.
+Messages that fail scrubbing are **blocked immediately**- they never reach the telecom operator. This is why DLT registration and template approval are non-negotiable steps before launching a campaign.
 
 ### Step 3: SMS Gateway Routing
 
@@ -68,19 +68,19 @@ Once a message passes DLT scrubbing, the **SMS gateway** routes it to the approp
 
 The telecom operator's SMSC (Short Message Service Centre) receives the message and handles the final delivery steps:
 
-1. **Subscriber lookup** — checks if the mobile number is active and reachable
-2. **DND filtering** — for promotional routes, checks if the number is on the Do Not Disturb registry
-3. **Message queuing** — if the subscriber's phone is off or unreachable, the message is queued and retried for up to 24–72 hours
-4. **Delivery attempt** — the SMSC pushes the message to the subscriber's handset
+1. **Subscriber lookup**- checks if the mobile number is active and reachable
+2. **DND filtering**- for promotional routes, checks if the number is on the Do Not Disturb registry
+3. **Message queuing**- if the subscriber's phone is off or unreachable, the message is queued and retried for up to 24–72 hours
+4. **Delivery attempt**- the SMSC pushes the message to the subscriber's handset
 
 ### Step 5: Delivery Confirmation (DLR)
 
 After the message reaches the handset, the telecom operator sends a **Delivery Receipt (DLR)** back to the SMS gateway. This DLR updates your delivery report with a status:
 
-- **Delivered** — message successfully received on the handset
-- **Failed** — delivery attempt failed (with error code)
-- **Pending** — message is queued and delivery is being retried
-- **Rejected** — message blocked at operator level (DND, template mismatch)
+- **Delivered**- message successfully received on the handset
+- **Failed**- delivery attempt failed (with error code)
+- **Pending**- message is queued and delivery is being retried
+- **Rejected**- message blocked at operator level (DND, template mismatch)
 
 ## What is an SMS Gateway?
 
@@ -103,12 +103,12 @@ For business-critical messages like OTPs and order confirmations, always use a p
 
 Not every SMS you send will be delivered. Common reasons for non-delivery include:
 
-- **Invalid number** — the mobile number does not exist or is ported and not updated
-- **Phone off** — the subscriber's phone was off during the retry window
-- **DND filtering** — promotional message sent to a DND-registered number
-- **DLT rejection** — template or sender ID not properly registered
-- **Network congestion** — high traffic periods during festive seasons
-- **Number porting delays** — MNP (Mobile Number Portability) routing delays
+- **Invalid number**- the mobile number does not exist or is ported and not updated
+- **Phone off**- the subscriber's phone was off during the retry window
+- **DND filtering**- promotional message sent to a DND-registered number
+- **DLT rejection**- template or sender ID not properly registered
+- **Network congestion**- high traffic periods during festive seasons
+- **Number porting delays**- MNP (Mobile Number Portability) routing delays
 
 A quality bulk SMS provider maintains delivery rates above 95% for transactional routes and 85–92% for promotional routes.
 
@@ -117,7 +117,7 @@ A quality bulk SMS provider maintains delivery rates above 95% for transactional
 Most businesses integrate bulk SMS into their existing workflows using REST APIs. Common integration patterns include:
 
 ### Triggered SMS
-An event in your CRM, e-commerce platform, or application automatically sends an SMS — for example, when an order is placed, a payment fails, or an appointment is booked.
+An event in your CRM, e-commerce platform, or application automatically sends an SMS- for example, when an order is placed, a payment fails, or an appointment is booked.
 
 ### Scheduled Campaigns
 Your marketing team schedules promotional campaigns through an API or web panel, specifying send time, recipient list, and template.
@@ -131,10 +131,10 @@ India's DLT platform, introduced by TRAI in 2019 (operational from 2021), is a b
 
 Key DLT components:
 
-- **PE-ID** (Principal Entity ID) — your unique business identifier on the DLT
-- **Sender ID** — 6-character alphanumeric name (e.g., GETCLI, AMAZON)
-- **Template ID** — unique ID for each approved message template
-- **Header** — the sender name displayed to recipients
+- **PE-ID** (Principal Entity ID)- your unique business identifier on the DLT
+- **Sender ID**- 6-character alphanumeric name (e.g., GETCLI, AMAZON)
+- **Template ID**- unique ID for each approved message template
+- **Header**- the sender name displayed to recipients
 
 Without valid PE-ID, Sender ID, and Template ID, your messages will not pass scrubbing and will be blocked before delivery.
 

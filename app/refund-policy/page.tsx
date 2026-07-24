@@ -94,7 +94,7 @@ export default function RefundPolicyPage() {
           <RefundSection title="7. How to Request a Refund">
             <p>To request a refund, email us at{" "}
               <a href={`mailto:${EMAIL}`} className="text-primary underline">{EMAIL}</a>{" "}
-              with the subject line &ldquo;Refund Request — [Your Account Email]&rdquo; and include:
+              with the subject line &ldquo;Refund Request- [Your Account Email]&rdquo; and include:
             </p>
             <ul>
               <li>Your registered account email and name.</li>

@@ -1,5 +1,5 @@
 ---
-title: "WhatsApp API Rate Limits — Complete Guide for Indian Developers"
+title: "WhatsApp API Rate Limits- Complete Guide for Indian Developers"
 description: "WhatsApp Business API has per-second throughput limits and daily messaging tier limits that scale from 1,000 to unlimited conversations. Learn both systems, Meta's tier progression, quality score factors, and a proven warm-up schedule."
 slug: "whatsapp-api-rate-limits"
 image: "/images/blog/whatsapp-api-rate-limits.webp"
@@ -16,48 +16,48 @@ keywords:
   - "whatsapp business api daily limit india"
 faq:
   - question: "What happens when I hit the WhatsApp API rate limit?"
-    answer: "When you exceed the per-second throughput limit, the API returns HTTP 429 with a Retry-After header. When you hit the daily conversation tier limit, subsequent API calls return error 130429. In both cases, use exponential backoff and retry. Get Click Media's platform queues messages automatically when rate limits are approached — you do not need to manage this manually when using the campaign dashboard."
+    answer: "When you exceed the per-second throughput limit, the API returns HTTP 429 with a Retry-After header. When you hit the daily conversation tier limit, subsequent API calls return error 130429. In both cases, use exponential backoff and retry. Get Click Media's platform queues messages automatically when rate limits are approached- you do not need to manage this manually when using the campaign dashboard."
   - question: "How do I increase my WhatsApp API daily message limit?"
-    answer: "Daily limits increase automatically through Meta's tier progression system — no application required. Send consistently at high quality (low block rate, low opt-out rate, high read rate) and your tier progresses within 7 days of reaching the volume threshold. Get Click Media monitors your tier status and alerts you when you are approaching your current limit, and provides a warm-up plan to help you progress safely."
+    answer: "Daily limits increase automatically through Meta's tier progression system- no application required. Send consistently at high quality (low block rate, low opt-out rate, high read rate) and your tier progresses within 7 days of reaching the volume threshold. Get Click Media monitors your tier status and alerts you when you are approaching your current limit, and provides a warm-up plan to help you progress safely."
   - question: "Are OTP messages subject to the same rate limits?"
     answer: "OTP messages (authentication-category templates) are subject to the same per-second throughput limits but typically have different daily volume patterns than marketing campaigns. For businesses with high OTP volume (fintech, banking), Get Click Media offers a dedicated OTP queue with priority routing to ensure sub-second delivery even during campaign sends."
   - question: "Can I send unlimited messages on WhatsApp API?"
-    answer: "Tier 4 accounts have no daily limit on business-initiated conversations. Reaching Tier 4 requires sustained high-volume, high-quality sending over approximately 1 to 2 months. The per-second throughput limit still applies — Enterprise plan customers on GCM have throughput limits of 1,000+ messages per second, sufficient for most Indian enterprise use cases."
+    answer: "Tier 4 accounts have no daily limit on business-initiated conversations. Reaching Tier 4 requires sustained high-volume, high-quality sending over approximately 1 to 2 months. The per-second throughput limit still applies- Enterprise plan customers on GCM have throughput limits of 1,000+ messages per second, sufficient for most Indian enterprise use cases."
 ---
 
 WhatsApp Business API has two types of rate limits: per-second throughput limits (API-level, typically 80-100 messages/second on Growth tier) and daily conversation limits (business-account-level, starting at 1,000 business-initiated conversations per 24 hours for new accounts and scaling automatically through Tier 2 at 10,000/day, Tier 3 at 1,00,000/day, and Tier 4 unlimited). Hitting a rate limit returns HTTP 429. Get Click Media's platform manages rate limits on your behalf with automatic queuing.
 
-This guide is based on Meta's published messaging tier framework and Get Click Media's live throughput data across its Indian client base — use it alongside [WhatsApp API documentation](/blog/whatsapp-api-documentation) when planning campaign volume.
+This guide is based on Meta's published messaging tier framework and Get Click Media's live throughput data across its Indian client base- use it alongside [WhatsApp API documentation](/blog/whatsapp-api-documentation) when planning campaign volume.
 
 ## Two Different Rate Limit Systems
 
 | Rate limit type | What it controls | Who sets it | How to increase it |
 |---|---|---|---|
-| API throughput (per-second) | Maximum messages per second — typically 80-100/sec on Growth | Get Click Media platform limit | Upgrade plan with GCM |
-| Messaging tier (per-day) | Business-initiated conversations per 24 hours | Meta — per WABA | Automatic tier progression based on quality + volume |
+| API throughput (per-second) | Maximum messages per second- typically 80-100/sec on Growth | Get Click Media platform limit | Upgrade plan with GCM |
+| Messaging tier (per-day) | Business-initiated conversations per 24 hours | Meta- per WABA | Automatic tier progression based on quality + volume |
 
-## Meta Messaging Tiers — How They Work
+## Meta Messaging Tiers- How They Work
 
-New WhatsApp Business API accounts start at Tier 1 (1,000 business-initiated conversations per day). Tiers progress automatically — no manual application required:
+New WhatsApp Business API accounts start at Tier 1 (1,000 business-initiated conversations per day). Tiers progress automatically- no manual application required:
 
 | Tier | Daily business-initiated conversations | Requirement to reach | How long it takes |
 |---|---|---|---|
-| Tier 1 (new) | 1,000 per 24 hours | Automatic — all new accounts start here | Day 1 |
+| Tier 1 (new) | 1,000 per 24 hours | Automatic- all new accounts start here | Day 1 |
 | Tier 2 | 10,000 per 24 hours | Send 1,000+ conversations AND maintain quality score in 7 days | 7–14 days with consistent sending |
 | Tier 3 | 1,00,000 per 24 hours | Send 10,000+ conversations AND maintain quality in 7 days | 2–4 weeks of growth |
 | Tier 4 (Unlimited) | Unlimited | Send 1,00,000+ conversations AND maintain quality in 7 days | 1–2 months of growth |
 
 > Only business-initiated conversations count. Service conversations (where the customer messages you first) do NOT count against your daily tier limit. Only your outbound business-initiated messages (using approved templates) count towards the tier limit. This means high-support-volume businesses can handle unlimited inbound service conversations regardless of tier.
 
-## Quality Score — What Affects Your Tier
+## Quality Score- What Affects Your Tier
 
 Meta monitors your messaging quality score continuously. A low quality score can reduce your messaging tier or pause your account.
 
 | Quality signal | Good signal | Bad signal |
 |---|---|---|
-| Customer block rate | Under 0.5% of recipients block you | Over 2% — indicates unwanted messaging |
-| Opt-out rate | Under 1% per campaign | Over 5% — indicates poor audience targeting or frequency |
-| Message read rate | Above 60% | Below 20% — indicates low engagement |
+| Customer block rate | Under 0.5% of recipients block you | Over 2%- indicates unwanted messaging |
+| Opt-out rate | Under 1% per campaign | Over 5%- indicates poor audience targeting or frequency |
+| Message read rate | Above 60% | Below 20%- indicates low engagement |
 | Spam reports | Minimal | Any significant volume triggers review |
 
 ## Handling Rate Limits in Code
@@ -66,7 +66,7 @@ Meta monitors your messaging quality score continuously. A low quality score can
 const queue = require('bull'); // or any queue library
 const messageQueue = new queue('whatsapp-messages');
 
-// Add messages to queue — handles backpressure
+// Add messages to queue- handles backpressure
 async function queueMessage(to, template, vars) {
   await messageQueue.add({ to, template, vars }, {
     attempts: 5,
@@ -82,42 +82,42 @@ messageQueue.process(80, async (job) => {
   } catch (err) {
     if (err.response?.status === 429) {
       const retryAfter = err.response.headers['retry-after'] || 5;
-      throw new Error(`Rate limited — retry after ${retryAfter}s`);
+      throw new Error(`Rate limited- retry after ${retryAfter}s`);
     }
     throw err;
   }
 });
 
-// For campaigns: use /messages/batch endpoint — handles rate limiting server-side
+// For campaigns: use /messages/batch endpoint- handles rate limiting server-side
 ```
 
-## Warm-Up Strategy — Reaching Higher Tiers Quickly
+## Warm-Up Strategy- Reaching Higher Tiers Quickly
 
 Get Click Media recommends this warm-up schedule for new accounts to reach Tier 3 within 3 to 4 weeks:
 
 | Week | Daily send volume | Focus | Expected result |
 |---|---|---|---|
-| Week 1 | 200–500 conversations/day | High-quality opted-in list — existing customers only | Establish baseline quality score |
-| Week 2 | 500–1,500 conversations/day | Expand to full opted-in customer base — monitor quality | Tier 2 eligibility building |
-| Week 3 | 1,500–8,000 conversations/day | Full campaign sends — maintain quality above threshold | Tier 2 auto-upgrade likely |
+| Week 1 | 200–500 conversations/day | High-quality opted-in list- existing customers only | Establish baseline quality score |
+| Week 2 | 500–1,500 conversations/day | Expand to full opted-in customer base- monitor quality | Tier 2 eligibility building |
+| Week 3 | 1,500–8,000 conversations/day | Full campaign sends- maintain quality above threshold | Tier 2 auto-upgrade likely |
 | Week 4+ | 8,000–80,000 conversations/day | Scale to full volume with quality monitoring | Tier 3 progression begins |
 
-## Frequently Asked Questions — WhatsApp API Rate Limits
+## Frequently Asked Questions- WhatsApp API Rate Limits
 
 **What happens when I hit the WhatsApp API rate limit?**
-When you exceed the per-second throughput limit, the API returns HTTP 429 with a `Retry-After` header. When you hit the daily conversation tier limit, subsequent API calls return error 130429. In both cases, use exponential backoff and retry. Get Click Media's platform queues messages automatically when rate limits are approached — you do not need to manage this manually when using the campaign dashboard.
+When you exceed the per-second throughput limit, the API returns HTTP 429 with a `Retry-After` header. When you hit the daily conversation tier limit, subsequent API calls return error 130429. In both cases, use exponential backoff and retry. Get Click Media's platform queues messages automatically when rate limits are approached- you do not need to manage this manually when using the campaign dashboard.
 
 **How do I increase my WhatsApp API daily message limit?**
-Daily limits increase automatically through Meta's tier progression system — no application required. Send consistently at high quality (low block rate, low opt-out rate, high read rate) and your tier progresses within 7 days of reaching the volume threshold. Get Click Media monitors your tier status and alerts you when you are approaching your current limit, and provides a warm-up plan to help you progress safely.
+Daily limits increase automatically through Meta's tier progression system- no application required. Send consistently at high quality (low block rate, low opt-out rate, high read rate) and your tier progresses within 7 days of reaching the volume threshold. Get Click Media monitors your tier status and alerts you when you are approaching your current limit, and provides a warm-up plan to help you progress safely.
 
 **Are OTP messages subject to the same rate limits?**
 OTP messages (authentication-category templates) are subject to the same per-second throughput limits but typically have different daily volume patterns than marketing campaigns. For businesses with high OTP volume (fintech, banking), Get Click Media offers a dedicated OTP queue with priority routing to ensure sub-second delivery even during campaign sends.
 
 **Can I send unlimited messages on WhatsApp API?**
-Tier 4 accounts have no daily limit on business-initiated conversations. Reaching Tier 4 requires sustained high-volume, high-quality sending over approximately 1 to 2 months. The per-second throughput limit still applies — Enterprise plan customers on GCM have throughput limits of 1,000+ messages per second, sufficient for most Indian enterprise use cases.
+Tier 4 accounts have no daily limit on business-initiated conversations. Reaching Tier 4 requires sustained high-volume, high-quality sending over approximately 1 to 2 months. The per-second throughput limit still applies- Enterprise plan customers on GCM have throughput limits of 1,000+ messages per second, sufficient for most Indian enterprise use cases.
 
 ## Get Started
 
 For related failure handling, see [WhatsApp API error codes](/blog/whatsapp-api-error-codes) for the full 429/130429 response reference, and [WhatsApp API documentation](/blog/whatsapp-api-documentation) for the batch send endpoint used in high-volume campaigns.
 
-**Get [WhatsApp Business API](/whatsapp-business-api)** — [Read API Docs](/blog/whatsapp-api-documentation) · [Get API Access](/contact) · [Talk to Technical Team](/contact)
+**Get [WhatsApp Business API](/whatsapp-business-api)**- [Read API Docs](/blog/whatsapp-api-documentation) · [Get API Access](/contact) · [Talk to Technical Team](/contact)

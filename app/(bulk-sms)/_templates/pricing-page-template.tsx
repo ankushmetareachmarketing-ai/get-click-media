@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import type { LucideIcon } from "lucide-react";
 import { Check } from "lucide-react";
 import DarkHero from "@/app/components/DarkHero";
@@ -57,6 +58,8 @@ export interface PricingPageTemplateProps {
   heroImage: string;
   heroImageAlt: string;
   heroTrustLine?: string;
+  /** Optional EEAT byline/last-updated strip rendered right below the hero. */
+  eeatLine?: ReactNode;
   stats: { value: string; label: string }[];
   aeoParagraph: ReactNode;
   insightCallout?: ReactNode;
@@ -105,6 +108,7 @@ export function PricingPageTemplate({
   heroImage,
   heroImageAlt,
   heroTrustLine,
+  eeatLine,
   stats,
   aeoParagraph,
   insightCallout,
@@ -158,6 +162,14 @@ export function PricingPageTemplate({
         trustLine={heroTrustLine}
         stats={stats}
       />
+
+      {eeatLine && (
+        <div className="bg-white border-b border-gray-100">
+          <p className="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 text-center text-xs text-gray-400">
+            {eeatLine}
+          </p>
+        </div>
+      )}
 
       <ClientMarquee />
 
@@ -303,14 +315,24 @@ export function PricingPageTemplate({
       {/* -- FAQ ------------------------------------------------------------ */}
       <section className={cnJoin(SECTION_PADDING, "relative overflow-hidden bg-white")} id="faq">
         <SectionPattern tone="light" />
-        <div className="relative z-10 max-w-3xl mx-auto px-6 sm:px-12 lg:px-20">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-12 lg:px-20">
           <div className="text-center mb-12 space-y-4">
             <span className={EYEBROW_LIGHT}>Frequently Asked Questions</span>
             <h2 className={H2_LIGHT} style={SYNE_FONT}>
               {faqHeading}
             </h2>
           </div>
-          <AccordionList items={faqs.map((f) => ({ question: f.q, answer: <p className="text-base text-gray-500 leading-[1.7]">{f.a}</p> }))} />
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
+            <div className="hidden lg:block lg:w-[36%] shrink-0 lg:sticky lg:top-24">
+              <div className="relative w-full rounded-2xl overflow-hidden aspect-4/5">
+                <Image src={heroImage} alt={`Ask a question about ${breadcrumbLabel}`} fill className="object-cover" sizes="36vw" />
+              </div>
+            </div>
+            <AccordionList
+              className="flex-1 w-full"
+              items={faqs.map((f) => ({ question: f.q, answer: <p className="text-base text-gray-500 leading-[1.7]">{f.a}</p> }))}
+            />
+          </div>
         </div>
       </section>
 

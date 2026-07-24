@@ -16,14 +16,14 @@ import {
 import { PricingPageTemplate } from "../_templates/pricing-page-template";
 
 export const metadata: Metadata = {
-  title: "Bulk SMS Pricing in India 2026 — Per-SMS Rates & Plans | Get Click Media",
+  title: "Bulk SMS Pricing in India 2026- Per-SMS Rates & Plans | Get Click Media",
   description:
     "Bulk SMS pricing in India starts at ₹0.09 per SMS on the Growth plan. Compare Starter, Growth, and Enterprise plans, volume-based rates, and see how SMS pricing compares to WhatsApp, RCS, and voice.",
   keywords:
     "bulk sms pricing india, bulk sms rates india, bulk sms cost per sms, sms pricing plans india, cheapest bulk sms provider india, sms api pricing india",
   alternates: { canonical: "https://getclickmedia.com/bulk-sms-pricing-india" },
   openGraph: {
-    title: "Bulk SMS Pricing in India 2026 — Per-SMS Rates & Plans",
+    title: "Bulk SMS Pricing in India 2026- Per-SMS Rates & Plans",
     description:
       "Bulk SMS pricing in India starts at ₹0.09 per SMS. Compare plans, volume-based rates, and channel cost comparisons.",
     url: "https://getclickmedia.com/bulk-sms-pricing-india",
@@ -44,7 +44,7 @@ const schema = {
     },
     {
       "@type": "Product",
-      name: "Bulk SMS Service — Get Click Media",
+      name: "Bulk SMS Service- Get Click Media",
       description: "Bulk SMS service for promotional and transactional messaging in India with TRAI DLT compliance support and 99.9% delivery uptime.",
       offers: {
         "@type": "AggregateOffer",
@@ -79,7 +79,7 @@ const schema = {
           name: "Is there a minimum purchase requirement for bulk SMS?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "No fixed minimum purchase is required to start — pricing scales with your monthly volume across Starter, Growth, and Enterprise tiers, and you can begin on the Starter plan with as few as a few hundred SMS. There is no setup fee on any plan; DLT registration assistance is included.",
+            text: "No fixed minimum purchase is required to start- pricing scales with your monthly volume across Starter, Growth, and Enterprise tiers, and you can begin on the Starter plan with as few as a few hundred SMS. There is no setup fee on any plan; DLT registration assistance is included.",
           },
         },
         {
@@ -87,7 +87,7 @@ const schema = {
           name: "Why does transactional SMS sometimes cost more than promotional SMS?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Transactional SMS runs on a DND-exempt route with priority delivery and typically routes through more direct, higher-reliability operator connections — that extra reliability and DND-exempt access carries a modest premium over standard promotional routing in some pricing structures. Get Click Media prices both routes at the same per-SMS rate across its Starter, Growth, and Enterprise plans, so there's no separate markup for transactional delivery.",
+            text: "Transactional SMS runs on a DND-exempt route with priority delivery and typically routes through more direct, higher-reliability operator connections- that extra reliability and DND-exempt access carries a modest premium over standard promotional routing in some pricing structures. Get Click Media prices both routes at the same per-SMS rate across its Starter, Growth, and Enterprise plans, so there's no separate markup for transactional delivery.",
           },
         },
         {
@@ -103,7 +103,7 @@ const schema = {
           name: "How does bulk SMS pricing compare to WhatsApp and RCS pricing in India?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Bulk SMS is generally the lowest per-message cost among business messaging channels in India — roughly ₹0.06-0.12 per SMS versus an indicative ₹0.30-0.90 per conversation for WhatsApp Business API (Meta's conversation-based pricing varies by category) and ₹0.15-0.35 per message for RCS. SMS trades richer media and two-way chat for universal reach and the lowest cost per send, which is why most businesses run SMS as the baseline channel and layer WhatsApp or RCS on top for richer engagement.",
+            text: "Bulk SMS is generally the lowest per-message cost among business messaging channels in India- roughly ₹0.06-0.12 per SMS versus an indicative ₹0.30-0.90 per conversation for WhatsApp Business API (Meta's conversation-based pricing varies by category) and ₹0.15-0.35 per message for RCS. SMS trades richer media and two-way chat for universal reach and the lowest cost per send, which is why most businesses run SMS as the baseline channel and layer WhatsApp or RCS on top for richer engagement.",
           },
         },
       ],
@@ -179,7 +179,7 @@ const COMPARISON_ROWS = [
 ];
 
 const FACTORS = [
-  { icon: Layers, title: "Monthly SMS volume", desc: "Price per SMS drops as your monthly volume slab increases — from ₹0.12 at low volume to ₹0.06-0.07 at 5,00,000+ SMS/month" },
+  { icon: Layers, title: "Monthly SMS volume", desc: "Price per SMS drops as your monthly volume slab increases- from ₹0.12 at low volume to ₹0.06-0.07 at 5,00,000+ SMS/month" },
   { icon: Route, title: "Route type", desc: "Transactional (DND-exempt) and promotional routes are priced identically on Get Click Media plans, but route quality (direct vs shared operator) affects enterprise-tier pricing" },
   { icon: FileCheck2, title: "DLT registration status", desc: "TRAI-mandated entity, sender ID (header), and template registration are one-time setup steps; GCM includes assistance at no extra platform fee" },
   { icon: FileText, title: "Message content & length", desc: "Unicode SMS (regional languages, emoji) counts as multiple segments per message compared to plain-text English, affecting per-send cost" },
@@ -190,7 +190,7 @@ const FACTORS = [
 const CAPABILITIES = [
   { icon: ShieldCheck, title: "DLT registration support", desc: "Entity, header, and template registration assistance included at no extra platform fee on every plan" },
   { icon: BarChart3, title: "Real-time delivery reports", desc: "Live delivery, read, and failure-rate dashboards so you always know exactly what you're paying for" },
-  { icon: Webhook, title: "REST API & webhooks", desc: "Full API access for sending, scheduling, and receiving delivery-status callbacks — no extra integration fee" },
+  { icon: Webhook, title: "REST API & webhooks", desc: "Full API access for sending, scheduling, and receiving delivery-status callbacks- no extra integration fee" },
   { icon: Ban, title: "No hidden charges", desc: "No platform setup fee, no charge for undelivered messages, and no minimum commitment on Starter and Growth plans" },
   { icon: Headset, title: "24×7 support (Growth & Enterprise)", desc: "Phone and priority ticket support for time-critical delivery issues, with a dedicated account manager" },
   { icon: UserCog, title: "Custom SLA (Enterprise)", desc: "Guaranteed uptime SLA, dedicated infrastructure, and on-site integration support for high-volume senders" },
@@ -203,11 +203,11 @@ const FAQS = [
   },
   {
     q: "Is there a minimum purchase requirement for bulk SMS?",
-    a: "No fixed minimum purchase is required to start — pricing scales with your monthly volume across Starter, Growth, and Enterprise tiers, and you can begin on the Starter plan with as few as a few hundred SMS. There is no setup fee on any plan; DLT registration assistance is included.",
+    a: "No fixed minimum purchase is required to start- pricing scales with your monthly volume across Starter, Growth, and Enterprise tiers, and you can begin on the Starter plan with as few as a few hundred SMS. There is no setup fee on any plan; DLT registration assistance is included.",
   },
   {
     q: "Why does transactional SMS sometimes cost more than promotional SMS?",
-    a: "Transactional SMS runs on a DND-exempt route with priority delivery and typically routes through more direct, higher-reliability operator connections — that extra reliability and DND-exempt access carries a modest premium over standard promotional routing in some pricing structures. Get Click Media prices both routes at the same per-SMS rate across its Starter, Growth, and Enterprise plans, so there's no separate markup for transactional delivery.",
+    a: "Transactional SMS runs on a DND-exempt route with priority delivery and typically routes through more direct, higher-reliability operator connections- that extra reliability and DND-exempt access carries a modest premium over standard promotional routing in some pricing structures. Get Click Media prices both routes at the same per-SMS rate across its Starter, Growth, and Enterprise plans, so there's no separate markup for transactional delivery.",
   },
   {
     q: "Are there hidden charges in bulk SMS pricing?",
@@ -215,7 +215,7 @@ const FAQS = [
   },
   {
     q: "How does bulk SMS pricing compare to WhatsApp and RCS pricing in India?",
-    a: "Bulk SMS is generally the lowest per-message cost among business messaging channels in India — roughly ₹0.06-0.12 per SMS versus an indicative ₹0.30-0.90 per conversation for WhatsApp Business API (Meta's conversation-based pricing varies by category) and ₹0.15-0.35 per message for RCS. SMS trades richer media and two-way chat for universal reach and the lowest cost per send, which is why most businesses run SMS as the baseline channel and layer WhatsApp or RCS on top for richer engagement.",
+    a: "Bulk SMS is generally the lowest per-message cost among business messaging channels in India- roughly ₹0.06-0.12 per SMS versus an indicative ₹0.30-0.90 per conversation for WhatsApp Business API (Meta's conversation-based pricing varies by category) and ₹0.15-0.35 per message for RCS. SMS trades richer media and two-way chat for universal reach and the lowest cost per send, which is why most businesses run SMS as the baseline channel and layer WhatsApp or RCS on top for richer engagement.",
   },
 ];
 
@@ -239,13 +239,13 @@ export default function BulkSmsPricingIndiaPage() {
       heroHighlight="Per-SMS Rates & Plans"
       heroDescription={
         <>
-          Transparent, volume-based bulk SMS pricing for Indian businesses — starting at{" "}
+          Transparent, volume-based bulk SMS pricing for Indian businesses- starting at{" "}
           <strong className="text-gray-900">₹0.09 per SMS</strong> with no setup fee and DLT
           registration support included on every plan.
         </>
       }
       heroImage="/images/bulk-sms/bulk-sms-service-provider-india-hero.webp"
-      heroImageAlt="Bulk SMS pricing in India — plan comparison dashboard"
+      heroImageAlt="Bulk SMS pricing in India- plan comparison dashboard"
       heroTrustLine="No setup fee · DLT registration included · GST-exclusive, transparent per-SMS rates"
       stats={[
         { value: "₹0.09", label: "Starting price per SMS (Growth plan)" },
@@ -264,7 +264,7 @@ export default function BulkSmsPricingIndiaPage() {
       }
       insightCallout={
         <>
-          The biggest lever on your effective SMS cost isn't the plan name — it's monthly volume.
+          The biggest lever on your effective SMS cost isn't the plan name- it's monthly volume.
           Businesses sending under 10,000 SMS/month pay close to ₹0.12/SMS, while those crossing
           5,00,000 SMS/month can bring that down to ₹0.06-0.07/SMS. If your volume is growing
           month over month, it's worth re-checking your slab every quarter rather than staying on
@@ -285,7 +285,7 @@ export default function BulkSmsPricingIndiaPage() {
       ]}
       slabRows={SLAB_ROWS}
       comparisonTitle="Bulk SMS Cost vs. Other Business Messaging Channels in India"
-      comparisonSubtitle="Indicative market ranges for India — SMS remains the lowest per-message cost with the widest reach."
+      comparisonSubtitle="Indicative market ranges for India- SMS remains the lowest per-message cost with the widest reach."
       comparisonCaption="Cost comparison of business messaging channels in India"
       comparisonColumns={[
         { key: "channel", label: "Channel" },
@@ -299,7 +299,7 @@ export default function BulkSmsPricingIndiaPage() {
       factors={FACTORS}
       capabilitiesTitle="What's Included in Every Get Click Media Plan"
       capabilities={CAPABILITIES}
-      faqHeading="Bulk SMS Pricing in India — FAQs"
+      faqHeading="Bulk SMS Pricing in India- FAQs"
       faqs={FAQS}
       relatedLinks={RELATED_LINKS}
       bottomCtaTitle="Ready to see your exact bulk SMS rate?"

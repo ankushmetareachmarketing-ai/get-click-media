@@ -8,7 +8,7 @@ import { prefersReducedMotion } from "@/lib/animation/config";
 
 /**
  * Mounts once in the root layout. Drives Lenis smooth scroll off GSAP's
- * ticker so Lenis and ScrollTrigger stay on the same clock — the standard
+ * ticker so Lenis and ScrollTrigger stay on the same clock- the standard
  * Lenis+GSAP wiring (lenis.raf inside gsap.ticker, ScrollTrigger.update on
  * every Lenis scroll event, ticker.lagSmoothing(0) so tab-switch jank never
  * produces a giant catch-up jump).

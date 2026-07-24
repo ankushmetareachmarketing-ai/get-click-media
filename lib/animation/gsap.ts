@@ -1,6 +1,6 @@
 /**
  * Single shared GSAP instance for the whole app. GSAP + its plugins must only
- * be registered once — importing "gsap" fresh in every component works, but
+ * be registered once- importing "gsap" fresh in every component works, but
  * registerPlugin() is idempotent-unsafe with fast refresh in dev, so this
  * module is the one place that does it. Everything else imports gsap from here.
  */

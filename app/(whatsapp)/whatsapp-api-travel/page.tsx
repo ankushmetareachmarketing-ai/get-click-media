@@ -16,14 +16,14 @@ import { IndustryPageTemplate } from "../_templates/industry-page-template";
 
 /* ── SEO Metadata ────────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: "WhatsApp API for Travel and Tourism — Booking Confirmation, Itinerary and Support India | Get Click Media",
+  title: "WhatsApp API for Travel and Tourism- Booking Confirmation, Itinerary and Support India | Get Click Media",
   description:
     "WhatsApp Business API for travel enables Indian tour operators, OTAs, and travel agencies to automate booking confirmations, itinerary delivery, visa document collection, pre-trip briefings, and in-trip support.",
   keywords:
     "WhatsApp API for Travel India, WhatsApp Travel Agency India, WhatsApp Booking Confirmation Travel, WhatsApp Tour Operator India, Travel WhatsApp Automation India, WhatsApp Itinerary India",
   alternates: { canonical: "https://getclickmedia.com/whatsapp-api-travel" },
   openGraph: {
-    title: "WhatsApp API for Travel and Tourism — Booking Confirmation, Itinerary and Support India",
+    title: "WhatsApp API for Travel and Tourism- Booking Confirmation, Itinerary and Support India",
     description:
       "WhatsApp Business API for travel enables Indian tour operators, OTAs, and travel agencies to automate booking confirmations, itinerary delivery, visa document collection, pre-trip briefings, and in-trip support.",
     url: "https://getclickmedia.com/whatsapp-api-travel",
@@ -71,17 +71,17 @@ const schema = {
         {
           "@type": "Question",
           name: "How does WhatsApp improve travel booking conversion in India?",
-          acceptedAnswer: { "@type": "Answer", text: "WhatsApp responds to travel enquiries instantly — within seconds of a prospect submitting a form or clicking a WhatsApp ad. The chatbot captures destination interest, sends relevant package options with images and pricing, and routes the prospect to a consultant for personalised assistance. This immediate engagement — vs the 4-6 hour email response common in Indian travel agencies — increases enquiry-to-booking conversion by 2.5x." },
+          acceptedAnswer: { "@type": "Answer", text: "WhatsApp responds to travel enquiries instantly- within seconds of a prospect submitting a form or clicking a WhatsApp ad. The chatbot captures destination interest, sends relevant package options with images and pricing, and routes the prospect to a consultant for personalised assistance. This immediate engagement- vs the 4-6 hour email response common in Indian travel agencies- increases enquiry-to-booking conversion by 2.5x." },
         },
         {
           "@type": "Question",
           name: "Can WhatsApp send flight and hotel booking confirmations?",
-          acceptedAnswer: { "@type": "Answer", text: "Yes. Get Click Media integrates with your booking system — when a booking is confirmed, WhatsApp automatically sends a comprehensive confirmation including: booking reference, passenger names, flight details, hotel name and address, check-in and check-out dates, and a complete document checklist for the trip." },
+          acceptedAnswer: { "@type": "Answer", text: "Yes. Get Click Media integrates with your booking system- when a booking is confirmed, WhatsApp automatically sends a comprehensive confirmation including: booking reference, passenger names, flight details, hotel name and address, check-in and check-out dates, and a complete document checklist for the trip." },
         },
         {
           "@type": "Question",
           name: "How does WhatsApp support work for travellers during a trip?",
-          acceptedAnswer: { "@type": "Answer", text: "A dedicated WhatsApp number (or your existing business number) acts as the in-trip support channel. Common queries — hotel directions, local transport, restaurant recommendations — are handled by a chatbot FAQ. Emergencies — medical, lost documents, flight changes — are immediately escalated to a live agent. WhatsApp enables 24/7 support without requiring 24/7 staffing." },
+          acceptedAnswer: { "@type": "Answer", text: "A dedicated WhatsApp number (or your existing business number) acts as the in-trip support channel. Common queries- hotel directions, local transport, restaurant recommendations- are handled by a chatbot FAQ. Emergencies- medical, lost documents, flight changes- are immediately escalated to a live agent. WhatsApp enables 24/7 support without requiring 24/7 staffing." },
         },
         {
           "@type": "Question",
@@ -119,7 +119,7 @@ const USE_CASES = [
   {
     icon: FileText,
     title: "Visa and Documentation Follow-Up",
-    trigger: "Visa application requirement identified at booking — trigger at Day -45 and -30",
+    trigger: "Visa application requirement identified at booking- trigger at Day -45 and -30",
     message: "Visa requirement checklist. Embassy appointment booking guidance. Document upload via WhatsApp Flow (passport scan, photo, bank statement).",
     result: "Visa document submission on time +55%. Last-minute visa panic -70%.",
   },
@@ -150,10 +150,10 @@ const PERFORMANCE_DATA = [
 
 // ── Capabilities ──────────────────────────────────────────────────────────
 const CAPABILITIES = [
-  { icon: Database, title: "Booking system integration", desc: "Rezdy, TravelCarma, custom booking engines — confirmation trigger, itinerary generation" },
-  { icon: FileText, title: "Document collection", desc: "WhatsApp Flows for passport, visa, insurance document upload — structured data to backend" },
+  { icon: Database, title: "Booking system integration", desc: "Rezdy, TravelCarma, custom booking engines- confirmation trigger, itinerary generation" },
+  { icon: FileText, title: "Document collection", desc: "WhatsApp Flows for passport, visa, insurance document upload- structured data to backend" },
   { icon: Headphones, title: "In-trip support", desc: "24/7 WhatsApp chatbot for common in-trip queries + agent handoff for emergencies" },
-  { icon: Globe, title: "Multi-language", desc: "Hindi, English — destination-specific language support for international trips" },
+  { icon: Globe, title: "Multi-language", desc: "Hindi, English- destination-specific language support for international trips" },
   { icon: CreditCard, title: "Payment integration", desc: "Razorpay, PayU for advance booking payment and balance collection via WhatsApp link" },
   { icon: Camera, title: "CTWA campaigns", desc: "Click-to-WhatsApp ads for holiday package promotions on Facebook and Instagram" },
 ];
@@ -162,15 +162,15 @@ const CAPABILITIES = [
 const FAQS = [
   {
     q: "How does WhatsApp improve travel booking conversion in India?",
-    a: "WhatsApp responds to travel enquiries instantly — within seconds of a prospect submitting a form or clicking a WhatsApp ad. The chatbot captures destination interest, sends relevant package options with images and pricing, and routes the prospect to a consultant for personalised assistance. This immediate engagement — vs the 4-6 hour email response common in Indian travel agencies — increases enquiry-to-booking conversion by 2.5x.",
+    a: "WhatsApp responds to travel enquiries instantly- within seconds of a prospect submitting a form or clicking a WhatsApp ad. The chatbot captures destination interest, sends relevant package options with images and pricing, and routes the prospect to a consultant for personalised assistance. This immediate engagement- vs the 4-6 hour email response common in Indian travel agencies- increases enquiry-to-booking conversion by 2.5x.",
   },
   {
     q: "Can WhatsApp send flight and hotel booking confirmations?",
-    a: "Yes. Get Click Media integrates with your booking system — when a booking is confirmed, WhatsApp automatically sends a comprehensive confirmation including: booking reference, passenger names, flight details, hotel name and address, check-in and check-out dates, and a complete document checklist for the trip.",
+    a: "Yes. Get Click Media integrates with your booking system- when a booking is confirmed, WhatsApp automatically sends a comprehensive confirmation including: booking reference, passenger names, flight details, hotel name and address, check-in and check-out dates, and a complete document checklist for the trip.",
   },
   {
     q: "How does WhatsApp support work for travellers during a trip?",
-    a: "A dedicated WhatsApp number (or your existing business number) acts as the in-trip support channel. Common queries — hotel directions, local transport, restaurant recommendations — are handled by a chatbot FAQ. Emergencies — medical, lost documents, flight changes — are immediately escalated to a live agent. WhatsApp enables 24/7 support without requiring 24/7 staffing.",
+    a: "A dedicated WhatsApp number (or your existing business number) acts as the in-trip support channel. Common queries- hotel directions, local transport, restaurant recommendations- are handled by a chatbot FAQ. Emergencies- medical, lost documents, flight changes- are immediately escalated to a live agent. WhatsApp enables 24/7 support without requiring 24/7 staffing.",
   },
   {
     q: "Does Get Click Media support WhatsApp for international tour operators?",
@@ -205,11 +205,11 @@ export default function WhatsAppAPITravelPage() {
           automate booking confirmations, itinerary delivery, visa document collection, pre-trip briefings,
           and in-trip support.
           <strong className="text-gray-900"> Get Click Media integrates WhatsApp with PMS and booking systems</strong>{" "}
-          — reducing manual communication effort by 65% while increasing booking conversion from enquiry by 2.5x.
+         - reducing manual communication effort by 65% while increasing booking conversion from enquiry by 2.5x.
         </>
       }
       heroImage="/images/whatsapp/travel/whatsapp-api-for-travel.webp"
-      heroImageAlt="WhatsApp API Travel dashboard — booking confirmations, itinerary delivery, and in-trip support messaging"
+      heroImageAlt="WhatsApp API Travel dashboard- booking confirmations, itinerary delivery, and in-trip support messaging"
       heroTrustLine="Official Meta BSP · Booking system & PMS integration · Multi-language support · India-based support"
       stats={[
         { value: "2.5x", label: "Enquiry-to-booking conversion via WhatsApp" },
@@ -223,12 +223,12 @@ export default function WhatsAppAPITravelPage() {
           automate booking confirmations, itinerary delivery, visa document collection, pre-trip briefings,
           and in-trip support.
           <strong className="text-gray-900"> Get Click Media integrates WhatsApp with PMS and booking systems</strong>{" "}
-          — reducing manual communication effort by 65% while increasing booking conversion from enquiry by 2.5x.
+         - reducing manual communication effort by 65% while increasing booking conversion from enquiry by 2.5x.
         </>
       }
       insightCallout={
         <>
-          Indian travellers book <strong>60% of their travel</strong> on mobile devices — and WhatsApp is
+          Indian travellers book <strong>60% of their travel</strong> on mobile devices- and WhatsApp is
           their primary communication channel. Travel agents and OTAs that respond to enquiries via WhatsApp
           within minutes convert <strong>3x more</strong> than those responding via email hours later.
         </>
@@ -241,7 +241,7 @@ export default function WhatsAppAPITravelPage() {
         </>,
         <>
           WhatsApp chatbot gives every enquirer an instant response with destination information, package
-          options, and pricing — keeping the prospect engaged while your consultants focus on closing
+          options, and pricing- keeping the prospect engaged while your consultants focus on closing
           high-value bookings. With <strong>2.5x higher booking conversion</strong> and{" "}
           <strong>97% confirmation open rates</strong>, WhatsApp is rapidly becoming the standard for travel
           communication in India.
@@ -251,7 +251,7 @@ export default function WhatsAppAPITravelPage() {
         <>
           💡 <strong>Key insight:</strong> Travel agents and OTAs that respond to enquiries via WhatsApp
           within minutes convert 3x more than those responding via email hours later. The entire travel
-          booking journey — from enquiry to itinerary to in-trip support — is now expected on WhatsApp.
+          booking journey- from enquiry to itinerary to in-trip support- is now expected on WhatsApp.
         </>
       }
       imageSections={[
@@ -263,7 +263,7 @@ export default function WhatsAppAPITravelPage() {
             </>
           ),
           description:
-            "Manage all traveller communication from a single dashboard — booking confirmations, itinerary delivery, visa document collection, pre-trip briefings, and in-trip support — with full integration to your booking system.",
+            "Manage all traveller communication from a single dashboard- booking confirmations, itinerary delivery, visa document collection, pre-trip briefings, and in-trip support- with full integration to your booking system.",
           bullets: [
             "Instant enquiry handling with package carousels",
             "Automated booking confirmation and document checklist",
@@ -271,7 +271,7 @@ export default function WhatsAppAPITravelPage() {
             "24/7 in-trip support with chatbot + agent handoff",
           ],
           image: "/images/whatsapp/travel/whatsapp-api-for-travel-dashboard.webp",
-          imageAlt: "WhatsApp API Travel dashboard — booking confirmations, itinerary delivery, visa collection, and in-trip support",
+          imageAlt: "WhatsApp API Travel dashboard- booking confirmations, itinerary delivery, visa collection, and in-trip support",
         },
         {
           eyebrow: "Itinerary Automation",
@@ -281,7 +281,7 @@ export default function WhatsAppAPITravelPage() {
             </>
           ),
           description:
-            "Automated itinerary delivery 24 hours before departure — day-by-day schedule, hotel confirmations, emergency contacts, and local recommendations. Customers arrive prepared, reducing support escalations during the trip by 30%.",
+            "Automated itinerary delivery 24 hours before departure- day-by-day schedule, hotel confirmations, emergency contacts, and local recommendations. Customers arrive prepared, reducing support escalations during the trip by 30%.",
           bullets: [
             "Day-by-day itinerary PDF with activity details",
             "Hotel confirmation PDFs and check-in details",
@@ -289,7 +289,7 @@ export default function WhatsAppAPITravelPage() {
             "Local SIM and currency exchange recommendations",
           ],
           image: "/images/whatsapp/travel/whatsapp-api-travel-itinerary-preview.webp",
-          imageAlt: "WhatsApp travel itinerary preview — day-by-day schedule, hotel confirmations, and emergency contacts",
+          imageAlt: "WhatsApp travel itinerary preview- day-by-day schedule, hotel confirmations, and emergency contacts",
           imageSide: "left",
         },
         {
@@ -300,14 +300,14 @@ export default function WhatsAppAPITravelPage() {
             </>
           ),
           description:
-            "Get Click Media integrates with leading travel booking systems — Rezdy, TravelCarma, and custom booking engines — enabling automated WhatsApp communication from enquiry to post-trip review. Setup takes 3-5 days after WhatsApp API onboarding is complete.",
+            "Get Click Media integrates with leading travel booking systems- Rezdy, TravelCarma, and custom booking engines- enabling automated WhatsApp communication from enquiry to post-trip review. Setup takes 3-5 days after WhatsApp API onboarding is complete.",
           bullets: ["Rezdy", "TravelCarma", "Custom booking engines", "PMS integration", "Itinerary generation"],
           image: "/images/whatsapp/travel/whatsapp-api-travel-booking-system-integration.webp",
-          imageAlt: "WhatsApp API travel booking system integration — Rezdy, TravelCarma, and custom booking engines",
+          imageAlt: "WhatsApp API travel booking system integration- Rezdy, TravelCarma, and custom booking engines",
           imageSide: "left",
         },
       ]}
-      useCasesTitle="WhatsApp API Use Cases for Travel and Tourism — 6 Automations"
+      useCasesTitle="WhatsApp API Use Cases for Travel and Tourism- 6 Automations"
       useCases={USE_CASES}
       performanceData={PERFORMANCE_DATA}
       capabilitiesTitle="Get Click Media's WhatsApp API Capabilities for Travel and Tourism"

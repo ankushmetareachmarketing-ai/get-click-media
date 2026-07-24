@@ -53,12 +53,12 @@ export default function OtpSmsFinalCTA() {
             </span>
 
             <h2 className="text-[1.4rem] sm:text-[2rem] md:text-[2.75rem] [font-family:var(--font-syne)] font-bold leading-[1.15] tracking-[-0.02em] text-(--ink-1)">
-              Start delivering OTPs in seconds — anywhere in India
+              Start delivering OTPs in seconds- anywhere in India
             </h2>
 
             <p className="text-(--ink-3) text-[0.9375rem] leading-[1.65] max-w-md">
               Join 10,000+ businesses across India. Get a free demo and complete
-              DLT registration assistance — no commitment required.
+              DLT registration assistance- no commitment required.
             </p>
 
             <div className="flex items-center gap-2 sm:gap-3 pt-1">

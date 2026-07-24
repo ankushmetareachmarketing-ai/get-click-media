@@ -1,53 +1,150 @@
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-export async function POST(request: NextRequest) {
-  const body = await request.json();
-  const { name, email, phone, company, service, message } = body;
+function escapeHtml(text: string = "") {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
 
-  if (!name || !email || !message) {
-    return Response.json({ error: "Missing required fields" }, { status: 400 });
-  }
+export async function POST(req: NextRequest) {
+  try {
+    const {
+      name,
+      email,
+      phone,
+      company,
+      service,
+      message,
+    } = await req.json();
 
-  const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST || "smtp.hostinger.com",
-    port: Number(process.env.SMTP_PORT) || 465,
-    secure: true,
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
-    },
-  });
+    if (!name || !email || !message) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Name, Email and Message are required.",
+        },
+        { status: 400 }
+      );
+    }
 
-  await transporter.sendMail({
-    from: `"Get Click Media Website" <${process.env.SMTP_USER}>`,
-    to: process.env.SMTP_USER,
-    replyTo: email,
-    subject: `New Service Inquiry — ${service || "General"} from ${name}`,
-    html: `
-      <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;background:#f8fafc;border-radius:12px;overflow:hidden;">
-        <div style="background:linear-gradient(135deg,#1e3a8a,#2563eb,#38bdf8);padding:32px;text-align:center;">
-          <h1 style="color:#fff;margin:0;font-size:22px;">New Service Inquiry</h1>
-        </div>
-        <div style="padding:32px;background:#fff;">
-          <table style="width:100%;border-collapse:collapse;">
-            <tr><td style="padding:10px 0;color:#64748b;font-size:13px;width:130px;">Name</td><td style="padding:10px 0;color:#0f172a;font-weight:600;">${name}</td></tr>
-            <tr style="border-top:1px solid #e2e8f0;"><td style="padding:10px 0;color:#64748b;font-size:13px;">Email</td><td style="padding:10px 0;color:#0f172a;font-weight:600;">${email}</td></tr>
-            <tr style="border-top:1px solid #e2e8f0;"><td style="padding:10px 0;color:#64748b;font-size:13px;">Phone</td><td style="padding:10px 0;color:#0f172a;font-weight:600;">${phone || "—"}</td></tr>
-            <tr style="border-top:1px solid #e2e8f0;"><td style="padding:10px 0;color:#64748b;font-size:13px;">Company</td><td style="padding:10px 0;color:#0f172a;font-weight:600;">${company || "—"}</td></tr>
-            <tr style="border-top:1px solid #e2e8f0;"><td style="padding:10px 0;color:#64748b;font-size:13px;">Service</td><td style="padding:10px 0;color:#2563eb;font-weight:700;">${service || "—"}</td></tr>
-          </table>
-          <div style="margin-top:20px;padding:20px;background:#f1f5f9;border-radius:8px;border-left:4px solid #2563eb;">
-            <p style="margin:0;color:#64748b;font-size:12px;margin-bottom:8px;">MESSAGE</p>
-            <p style="margin:0;color:#0f172a;">${message}</p>
-          </div>
-        </div>
-        <div style="padding:16px 32px;background:#f8fafc;text-align:center;">
-          <p style="margin:0;color:#94a3b8;font-size:12px;">Sent from Get Click Media website</p>
-        </div>
+    const {
+      SMTP_HOST,
+      SMTP_PORT,
+      SMTP_USER,
+      SMTP_PASS,
+    } = process.env;
+
+    if (!SMTP_HOST || !SMTP_PORT || !SMTP_USER || !SMTP_PASS) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "SMTP configuration is missing.",
+        },
+        { status: 500 }
+      );
+    }
+
+    const port = Number(SMTP_PORT);
+
+    const transporter = nodemailer.createTransport({
+      host: SMTP_HOST,
+      port,
+      secure: port === 465,
+      auth: {
+        user: SMTP_USER,
+        pass: SMTP_PASS,
+      },
+      connectionTimeout: 15000,
+      greetingTimeout: 15000,
+      socketTimeout: 15000,
+      tls: {
+        rejectUnauthorized: false,
+      },
+    });
+
+    await transporter.verify();
+
+    const info = await transporter.sendMail({
+      from: `"Get Click Media" <${SMTP_USER}>`,
+      to: SMTP_USER,
+      replyTo: email,
+      subject: `New Service Inquiry - ${service || "General"}`,
+
+      html: `
+      <div style="font-family:Arial,sans-serif;max-width:650px;margin:auto">
+
+      <h2 style="background:#2563eb;color:#fff;padding:20px">
+      New Service Inquiry
+      </h2>
+
+      <table cellpadding="10" cellspacing="0" width="100%" border="1" style="border-collapse:collapse">
+
+      <tr>
+      <td><strong>Name</strong></td>
+      <td>${escapeHtml(name)}</td>
+      </tr>
+
+      <tr>
+      <td><strong>Email</strong></td>
+      <td>${escapeHtml(email)}</td>
+      </tr>
+
+      <tr>
+      <td><strong>Phone</strong></td>
+      <td>${escapeHtml(phone || "-")}</td>
+      </tr>
+
+      <tr>
+      <td><strong>Company</strong></td>
+      <td>${escapeHtml(company || "-")}</td>
+      </tr>
+
+      <tr>
+      <td><strong>Service</strong></td>
+      <td>${escapeHtml(service || "-")}</td>
+      </tr>
+
+      </table>
+
+      <div style="margin-top:20px;padding:20px;background:#f3f4f6">
+
+      <strong>Message</strong>
+
+      <p style="white-space:pre-wrap">
+      ${escapeHtml(message)}
+      </p>
+
       </div>
-    `,
-  });
 
-  return Response.json({ success: true });
+      </div>
+      `,
+    });
+
+    return NextResponse.json({
+      success: true,
+      messageId: info.messageId,
+    });
+  } catch (err: any) {
+    console.error("SMTP ERROR");
+
+    console.error({
+      code: err.code,
+      response: err.response,
+      responseCode: err.responseCode,
+      command: err.command,
+      message: err.message,
+    });
+
+    return NextResponse.json(
+      {
+        success: false,
+        error: err.message,
+        code: err.code,
+      },
+      { status: 500 }
+    );
+  }
 }

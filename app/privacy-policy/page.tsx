@@ -103,7 +103,7 @@ export default function PrivacyPolicyPage() {
               <p>
                 We implement industry-standard security measures including AES-256 encryption at rest,
                 TLS 1.3 in transit, role-based access controls, regular penetration testing, and
-                SOC 2-aligned security practices. However, no system is completely secure — we encourage
+                SOC 2-aligned security practices. However, no system is completely secure- we encourage
                 you to use strong passwords and enable two-factor authentication on your account.
               </p>
             </PolicySection>
@@ -115,7 +115,7 @@ export default function PrivacyPolicyPage() {
                 <li>Correct inaccurate or incomplete personal data.</li>
                 <li>Request deletion of your personal data (&ldquo;right to be forgotten&rdquo;).</li>
                 <li>Object to or restrict certain processing activities.</li>
-                <li>Data portability — receive your data in a structured, machine-readable format.</li>
+                <li>Data portability- receive your data in a structured, machine-readable format.</li>
                 <li>Withdraw consent at any time (for consent-based processing).</li>
               </ul>
               <p>

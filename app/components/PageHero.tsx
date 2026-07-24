@@ -91,7 +91,7 @@ export default function PageHero({
         />
       )}
 
-      {/* Spotlight glow — replaces the old flat gradient-blob look with a
+      {/* Spotlight glow- replaces the old flat gradient-blob look with a
           designed, angled, blurred glow (fades in once on mount, no loop). */}
       <Spotlight className="-top-20 left-0 lg:left-20" fill="#2563eb" fillOpacity={0.5} />
       <Spotlight className="top-10 right-0 lg:right-10 rotate-180" fill="#38bdf8" fillOpacity={0.4} />

@@ -7,13 +7,13 @@ export interface MarqueeProps {
   children: React.ReactNode;
   className?: string;
   direction?: "left" | "right";
-  /** Seconds for one full loop — lower is faster. */
+  /** Seconds for one full loop- lower is faster. */
   speed?: number;
   pauseOnHover?: boolean;
 }
 
 /**
- * Infinite CSS marquee — duplicates its children once so the loop is
+ * Infinite CSS marquee- duplicates its children once so the loop is
  * seamless, driven by the animate-marquee-left/right keyframes already
  * defined in globals.css (pure CSS transform, GPU-composited, no GSAP
  * ticker needed for something this simple).

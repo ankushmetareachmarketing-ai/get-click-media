@@ -83,7 +83,7 @@ export interface CityPageTemplateProps {
 }
 
 /**
- * Shared template for the 10 `whatsapp-api-{city}` pages — they all had one
+ * Shared template for the 10 `whatsapp-api-{city}` pages- they all had one
  * identical section structure already; this centralises it on the same
  * component library `whatsapp-business-api` was redesigned with, instead of
  * 10 copies of the old hand-rolled markup (raw `<table>`, native `<details>`,
@@ -270,7 +270,7 @@ export function CityPageTemplate({
           <div className="text-center mb-12 space-y-4">
             <span className={EYEBROW_LIGHT}>Client Use Cases</span>
             <h2 className={H2_LIGHT} style={SYNE_FONT}>
-              Client Use Cases — {breadcrumbLabel} Businesses
+              Client Use Cases- {breadcrumbLabel} Businesses
             </h2>
           </div>
           <ResponsiveTable
@@ -296,7 +296,7 @@ export function CityPageTemplate({
           </h2>
           <p className="text-white/50 text-base max-w-2xl mx-auto leading-[1.7]">
             Get Click Media provides WhatsApp Business API to businesses across {breadcrumbLabel} and the
-            surrounding region. Onboarding is fully remote — we set up your WhatsApp API account without
+            surrounding region. Onboarding is fully remote- we set up your WhatsApp API account without
             requiring any in-person meetings.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">

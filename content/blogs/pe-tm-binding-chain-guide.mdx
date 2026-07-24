@@ -17,7 +17,7 @@ faq:
   - question: "What is PE-TM binding in DLT?"
     answer: "PE-TM binding is the process of linking your registered business (Principal Entity) to your SMS service provider (Telemarketer) on the DLT platform. This authorisation allows your provider to send messages on your behalf using your registered headers and templates."
   - question: "Can I bind multiple telemarketers to one PE account?"
-    answer: "Yes. A Principal Entity can bind multiple Telemarketers — useful if you use different SMS providers for different use cases (transactional vs promotional) or want a backup provider."
+    answer: "Yes. A Principal Entity can bind multiple Telemarketers- useful if you use different SMS providers for different use cases (transactional vs promotional) or want a backup provider."
   - question: "What happens if PE-TM binding is missing?"
     answer: "If binding is not completed, messages will be rejected at the operator level even if your entity, headers, and templates are fully approved. The telecom network verifies the entire chain before allowing delivery."
   - question: "How do I get my Telemarketer ID?"
@@ -26,7 +26,7 @@ faq:
     answer: "Binding itself does not expire, but if you switch providers, you need to bind the new Telemarketer and can optionally unbind the old one. Always ensure binding is active before running campaigns."
 ---
 
-Most businesses that complete DLT registration still run into delivery failures — and the most common reason is a missing or incorrect PE-TM binding. You have done the entity registration, got your headers approved, submitted your templates — and yet messages are getting blocked. Nine times out of ten, it is the binding chain.
+Most businesses that complete DLT registration still run into delivery failures- and the most common reason is a missing or incorrect PE-TM binding. You have done the entity registration, got your headers approved, submitted your templates- and yet messages are getting blocked. Nine times out of ten, it is the binding chain.
 
 Understanding why this chain exists and how to set it up properly will save you from a lot of unnecessary debugging mid-campaign.
 
@@ -38,7 +38,7 @@ India's DLT framework requires every commercial SMS to pass through a verified f
 Principal Entity (PE) → Telemarketer (TM) → Header → Template
 ```
 
-Every link must be registered, approved, and correctly connected. The telecom operators check this chain in real time when your SMS hits their network. If any link is broken or missing, the message is dropped — silently, in most cases.
+Every link must be registered, approved, and correctly connected. The telecom operators check this chain in real time when your SMS hits their network. If any link is broken or missing, the message is dropped- silently, in most cases.
 
 Think of it like a chain of custody for your message. TRAI designed it this way specifically so that every SMS delivered to an Indian mobile number can be traced back to a verified business entity, through a registered provider, using a pre-approved message format. No link, no delivery.
 
@@ -46,7 +46,7 @@ For background on why this framework was introduced and how to complete the init
 
 ## What Is a Principal Entity (PE)?
 
-The Principal Entity is your business — the brand whose name appears on the SMS, whose product or service is being communicated, and who is ultimately responsible for the content.
+The Principal Entity is your business- the brand whose name appears on the SMS, whose product or service is being communicated, and who is ultimately responsible for the content.
 
 When you register on a DLT platform like Airtel, Jio, or Vodafone Idea as an enterprise, you become a Principal Entity. Your PE registration covers:
 
@@ -54,13 +54,13 @@ When you register on a DLT platform like Airtel, Jio, or Vodafone Idea as an ent
 - The headers (Sender IDs) registered under your brand
 - The message templates approved for your use cases
 
-The PE is accountable. If your campaigns generate spam complaints or violate TRAI guidelines, it is your entity registration that is at risk — not your SMS provider's.
+The PE is accountable. If your campaigns generate spam complaints or violate TRAI guidelines, it is your entity registration that is at risk- not your SMS provider's.
 
 ## What Is a Telemarketer (TM)?
 
-The Telemarketer is your SMS service provider — the company whose platform and infrastructure you use to actually send the messages.
+The Telemarketer is your SMS service provider- the company whose platform and infrastructure you use to actually send the messages.
 
-Every SMS aggregator and provider operating in India — Get Click Media included — is registered as a Telemarketer on the DLT platform. They have a unique **TM ID** that identifies them in the system.
+Every SMS aggregator and provider operating in India- Get Click Media included- is registered as a Telemarketer on the DLT platform. They have a unique **TM ID** that identifies them in the system.
 
 The Telemarketer is responsible for:
 - Routing your traffic through operator-connected SMPP infrastructure
@@ -88,10 +88,10 @@ Once accepted by both sides, the binding is live. Your provider can now send mes
 
 Completing the PE-TM binding is necessary but not sufficient. Within your SMS platform (your Telemarketer's dashboard), you also need to:
 
-1. **Map your approved headers** — tell the platform which headers to use for which message types
-2. **Map your approved templates** — link each campaign or API trigger to the correct DLT template ID
+1. **Map your approved headers**- tell the platform which headers to use for which message types
+2. **Map your approved templates**- link each campaign or API trigger to the correct DLT template ID
 
-When you send a message, your platform attaches the DLT entity ID, header, and template ID to the message metadata. The operator's DLT system verifies all three against the registered chain. If the template ID does not match the actual message content — even a minor variation — the message is rejected.
+When you send a message, your platform attaches the DLT entity ID, header, and template ID to the message metadata. The operator's DLT system verifies all three against the registered chain. If the template ID does not match the actual message content- even a minor variation- the message is rejected.
 
 This is why template management matters so much. For guidance on writing templates that match your actual messages and get approved quickly, see our [SMS Template Approval Guide](/blog/sms-template-approval-guide).
 
@@ -99,21 +99,21 @@ This is why template management matters so much. For guidance on writing templat
 
 A Principal Entity can bind more than one Telemarketer simultaneously. Common reasons:
 
-**Primary + backup provider:** If your primary SMS provider faces downtime, a bound backup provider can take over without any DLT changes — headers and templates are already authorised for both.
+**Primary + backup provider:** If your primary SMS provider faces downtime, a bound backup provider can take over without any DLT changes- headers and templates are already authorised for both.
 
 **Transactional vs Promotional separation:** Some businesses prefer using one provider for OTPs and alerts (where latency matters) and a different provider for bulk promotional campaigns.
 
 **Regional providers:** Enterprises sometimes work with different providers for different geographies or business units, each bound under the same PE.
 
-There is no limit on the number of TM bindings under one PE. Just ensure each provider you bind is a legitimate registered Telemarketer — if you accidentally bind an unregistered or suspended TM, your messages through that route will fail.
+There is no limit on the number of TM bindings under one PE. Just ensure each provider you bind is a legitimate registered Telemarketer- if you accidentally bind an unregistered or suspended TM, your messages through that route will fail.
 
 ## Troubleshooting Common Binding Problems
 
-**"TM ID not found" error:** You are entering the wrong ID. Ask your provider to share their exact TM ID as registered on the DLT platform — it is usually a numeric string, not their company name.
+**"TM ID not found" error:** You are entering the wrong ID. Ask your provider to share their exact TM ID as registered on the DLT platform- it is usually a numeric string, not their company name.
 
 **Binding shows Pending for days:** Either your provider has not accepted the request, or the request went to the wrong account. Contact your provider's support team with your PE ID and the request timestamp.
 
-**Messages failing despite active binding:** Check whether the header and template are correctly mapped inside your SMS platform. Binding authorises the relationship — mapping is what connects specific messages to specific DLT assets.
+**Messages failing despite active binding:** Check whether the header and template are correctly mapped inside your SMS platform. Binding authorises the relationship- mapping is what connects specific messages to specific DLT assets.
 
 **Template content mismatch rejections:** Your message content at send time must match the registered template exactly, with only the `{#var#}` variables differing. Even an added space, a different punctuation mark, or an extra emoji can cause a mismatch rejection.
 
@@ -126,12 +126,12 @@ The PE-TM binding is one essential piece of a larger compliance structure. The c
 3. **Templates approved** under the correct headers and categories
 4. **PE-TM binding active** with your SMS provider
 5. **Headers and templates mapped** inside your provider's platform
-6. **TRAI scrubbing rules respected** — not sending to DND numbers for promotional content
+6. **TRAI scrubbing rules respected**- not sending to DND numbers for promotional content
 
 If any of these six elements is missing or misconfigured, you will see delivery failures. For the complete compliance framework covering all six elements, read our [TRAI SMS Compliance Guide](/blog/trai-sms-compliance-guide).
 
 ## Conclusion
 
-The PE-TM binding chain is not bureaucratic overhead — it is the mechanism that makes your messages deliverable in India's regulated SMS environment. Once you understand the four-link structure and complete all the binding steps correctly, the system largely runs itself.
+The PE-TM binding chain is not bureaucratic overhead- it is the mechanism that makes your messages deliverable in India's regulated SMS environment. Once you understand the four-link structure and complete all the binding steps correctly, the system largely runs itself.
 
 Get the chain right once, maintain it when you change providers or add templates, and your bulk SMS delivery rates will stay consistently high. Ready to get started with a registered Telemarketer? [Explore Get Click Media's Bulk SMS Service](/bulk-sms-service-provider-india) and we will walk you through the binding process from our side.

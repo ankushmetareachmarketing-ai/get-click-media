@@ -1,5 +1,5 @@
 ---
-title: "WhatsApp API Integration Guide — Connect WhatsApp to Your Platform"
+title: "WhatsApp API Integration Guide- Connect WhatsApp to Your Platform"
 description: "Connect WhatsApp Business API to Shopify, WooCommerce, Salesforce, HubSpot, Zoho, or any custom platform via REST API and webhooks. Code samples, architecture, and pre-built connectors from an official Meta BSP."
 slug: "whatsapp-api-integration"
 image: "/images/blog/whatsapp-api-integration.webp"
@@ -23,41 +23,41 @@ faq:
   - question: "Do I need a developer to integrate WhatsApp API?"
     answer: "For Shopify and WooCommerce, no. For CRM integrations (HubSpot, Zoho, Freshdesk, LeadSquared), most connections are made through the CRM's integration settings with minimal technical knowledge. For custom platforms, a developer is required for REST API calls and webhook handling."
   - question: "Can I integrate WhatsApp API with Salesforce?"
-    answer: "Yes. Get Click Media has a native Salesforce integration on the AppExchange — it triggers WhatsApp from Salesforce workflows, logs interactions in the Activity timeline, and syncs opt-in status. Setup typically takes 2 to 4 hours."
+    answer: "Yes. Get Click Media has a native Salesforce integration on the AppExchange- it triggers WhatsApp from Salesforce workflows, logs interactions in the Activity timeline, and syncs opt-in status. Setup typically takes 2 to 4 hours."
   - question: "How do I handle inbound WhatsApp messages in my integration?"
     answer: "Inbound messages are delivered to your webhook endpoint as JSON POST requests. Your server extracts the phone number and message content, processes it per your business logic, and responds via the REST API."
   - question: "What happens if my webhook endpoint is down?"
-    answer: "Get Click Media retries event delivery with exponential backoff — up to 5 attempts over 24 hours. If the endpoint remains unavailable, undelivered events are queued and replayed once it recovers."
+    answer: "Get Click Media retries event delivery with exponential backoff- up to 5 attempts over 24 hours. If the endpoint remains unavailable, undelivered events are queued and replayed once it recovers."
   - question: "Can WhatsApp API send PDFs, images, and videos?"
-    answer: "Yes — JPEG, PNG, animated GIF, MP4 video, MP3/AAC audio, and PDF attachments. For large campaigns, upload to GCM's CDN and reuse the returned media_id."
+    answer: "Yes- JPEG, PNG, animated GIF, MP4 video, MP3/AAC audio, and PDF attachments. For large campaigns, upload to GCM's CDN and reuse the returned media_id."
   - question: "How do I test my WhatsApp API integration before going live?"
     answer: "Get Click Media provides a sandbox environment mirroring production behaviour without conversation charges. You can also whitelist your own number for real-device testing."
   - question: "What is the rate limit for WhatsApp API messages?"
     answer: "The Growth tier supports 100 messages per second; Enterprise supports 1,000+. A dedicated transactional queue guarantees sub-second delivery for OTPs and fraud alerts independent of campaign traffic."
 ---
 
-WhatsApp API integration is the process of connecting [WhatsApp Business API](/whatsapp-business-api) to your existing business systems — CRM, e-commerce platform, ERP, or custom application — so that WhatsApp messages are automatically triggered, received, and processed without manual intervention. Get Click Media supports integration with Shopify, WooCommerce, Salesforce, HubSpot, Zoho, Freshdesk, LeadSquared, and any custom platform via REST API and webhooks.
+WhatsApp API integration is the process of connecting [WhatsApp Business API](/whatsapp-business-api) to your existing business systems- CRM, e-commerce platform, ERP, or custom application- so that WhatsApp messages are automatically triggered, received, and processed without manual intervention. Get Click Media supports integration with Shopify, WooCommerce, Salesforce, HubSpot, Zoho, Freshdesk, LeadSquared, and any custom platform via REST API and webhooks.
 
 ## How WhatsApp API Integration Works
 
-Get Click Media's platform handles authentication, message queuing, delivery tracking, webhook management, and failover. Your team writes the business logic — we handle the WhatsApp infrastructure.
+Get Click Media's platform handles authentication, message queuing, delivery tracking, webhook management, and failover. Your team writes the business logic- we handle the WhatsApp infrastructure.
 
 | Direction | What Happens | Your Role |
 |---|---|---|
 | **Outbound** (your system → WhatsApp) | Your application sends a message to a customer's WhatsApp. Your system calls Get Click Media's REST API with phone number, template, and variables. | Trigger the API call from your CRM, OMS, or automation platform |
 | **Inbound** (WhatsApp → your system) | A customer messages your business number. GCM posts the message payload to your webhook endpoint as a JSON event in real time. | Your server receives the webhook, processes it, and responds via REST API |
 
-## 3 Ways to Integrate — Choose What Fits Your Stack
+## 3 Ways to Integrate- Choose What Fits Your Stack
 
-- **No-code plugins** — Shopify, WooCommerce, Magento — plug-and-play plugins connect WhatsApp to your store in under 60 minutes. No developer required.
-- **Pre-built CRM connectors** — Native connectors for Salesforce, HubSpot, Zoho, Freshdesk, LeadSquared, Sell.do, and Razorpay — sync contacts and trigger messages on CRM events.
-- **REST API + webhooks** — For custom platforms, proprietary CRMs, and complex workflows — the most flexible option. Any system that can make an HTTP request can integrate.
+- **No-code plugins**- Shopify, WooCommerce, Magento- plug-and-play plugins connect WhatsApp to your store in under 60 minutes. No developer required.
+- **Pre-built CRM connectors**- Native connectors for Salesforce, HubSpot, Zoho, Freshdesk, LeadSquared, Sell.do, and Razorpay- sync contacts and trigger messages on CRM events.
+- **REST API + webhooks**- For custom platforms, proprietary CRMs, and complex workflows- the most flexible option. Any system that can make an HTTP request can integrate.
 
 ## Native Connectors for 8 Platforms
 
 | Platform | Connector Type | Setup Time | What It Does |
 |---|---|---|---|
-| Salesforce | Native app — AppExchange | 2–4 hours | Trigger WA on lead/opportunity events, log in Activity timeline, sync opt-in status |
+| Salesforce | Native app- AppExchange | 2–4 hours | Trigger WA on lead/opportunity events, log in Activity timeline, sync opt-in status |
 | HubSpot | Native integration | 1–2 hours | WA in HubSpot workflows, contact WA status, conversation inbox |
 | Zoho CRM | Zoho Marketplace app | 1–2 hours | WA triggers in workflows, interaction logging, lead qualification via chatbot |
 | Freshdesk | Freshdesk Marketplace | 1 hour | WA as support channel, agent routing, CSAT via WA |
@@ -70,16 +70,16 @@ For a deeper look at connecting WhatsApp to sales and support tools, see [WhatsA
 
 ## From API Credentials to Production: Step by Step
 
-1. **Get your API credentials** — After onboarding, receive your API key and Phone Number ID. Store as environment variables — never hardcode.
-2. **Send your first test message** — POST to our messages endpoint using your own number as the test recipient. Arrives in seconds via the sandbox.
-3. **Set up your webhook endpoint** — Create an HTTPS endpoint that receives inbound messages and status updates. Must respond HTTP 200 within 3 seconds.
-4. **Connect to your data sources** — Integrate WhatsApp logic with your OMS, CRM, or appointment database for live, personalised data replies.
-5. **Handle opt-outs and errors** — Honour STOP events immediately. Implement exponential backoff for 429s; never blindly retry 400 errors.
-6. **Test in staging, then go live** — Full end-to-end testing in GCM's sandbox before moving to production.
+1. **Get your API credentials**- After onboarding, receive your API key and Phone Number ID. Store as environment variables- never hardcode.
+2. **Send your first test message**- POST to our messages endpoint using your own number as the test recipient. Arrives in seconds via the sandbox.
+3. **Set up your webhook endpoint**- Create an HTTPS endpoint that receives inbound messages and status updates. Must respond HTTP 200 within 3 seconds.
+4. **Connect to your data sources**- Integrate WhatsApp logic with your OMS, CRM, or appointment database for live, personalised data replies.
+5. **Handle opt-outs and errors**- Honour STOP events immediately. Implement exponential backoff for 429s; never blindly retry 400 errors.
+6. **Test in staging, then go live**- Full end-to-end testing in GCM's sandbox before moving to production.
 
-## Send Your First Message — Node.js
+## Send Your First Message- Node.js
 
-```js title="Node.js — Send a Template Message"
+```js title="Node.js- Send a Template Message"
 const axios = require('axios');
 
 const sendWhatsApp = async (to, templateName, variables) => {
@@ -108,16 +108,16 @@ sendWhatsApp('+919876543210', 'order_confirmation_v2',
   [{ type: 'text', text: '#ORD-4782' }, { type: 'text', text: 'Nike Air Max' }]);
 ```
 
-SDKs are available for Node.js, Python, PHP, and Java — full documentation at [getclickmedia.com/whatsapp-api-documentation](/whatsapp-api-documentation).
+SDKs are available for Node.js, Python, PHP, and Java- full documentation at [getclickmedia.com/whatsapp-api-documentation](/whatsapp-api-documentation).
 
 ## Common WhatsApp API Integration Patterns in India
 
 | Scenario | What It Enables | Difficulty |
 |---|---|---|
-| Shopify — E-commerce | Order confirmation, shipping updates, cart recovery, review requests | Easy |
-| Salesforce — Enterprise Sales | Lead follow-up, opportunity nurture, meeting confirmation, deal-closed welcome | Medium |
-| HubSpot — Inbound Marketing | Form submission follow-up, lifecycle-stage campaigns, contact timeline logging | Easy |
-| Razorpay — Payment Gateway | Payment links, confirmations, retry nudges, subscription reminders | Medium |
+| Shopify- E-commerce | Order confirmation, shipping updates, cart recovery, review requests | Easy |
+| Salesforce- Enterprise Sales | Lead follow-up, opportunity nurture, meeting confirmation, deal-closed welcome | Medium |
+| HubSpot- Inbound Marketing | Form submission follow-up, lifecycle-stage campaigns, contact timeline logging | Easy |
+| Razorpay- Payment Gateway | Payment links, confirmations, retry nudges, subscription reminders | Medium |
 | Hospital HMS / Clinic Software | Appointment confirmation, reminders, lab reports, feedback forms | Medium |
 | LMS / EdTech Platform | Enrollment welcome, module nudges, re-engagement, exam reminders | Medium |
 | Chatbot + Custom Database | Live order/account/inventory lookups with agent escalation | Medium-High |
@@ -130,7 +130,7 @@ SDKs are available for Node.js, Python, PHP, and Java — full documentation at 
 | Method | Endpoint | Description |
 |---|---|---|
 | POST | `/v2/whatsapp/messages` | Send a WhatsApp message (template or session) |
-| POST | `/v2/whatsapp/messages/batch` | Send bulk messages — campaign broadcast |
+| POST | `/v2/whatsapp/messages/batch` | Send bulk messages- campaign broadcast |
 | GET | `/v2/whatsapp/messages/{id}` | Get status + events for a specific message |
 | POST | `/v2/whatsapp/media` | Upload media file for use in messages |
 | GET | `/v2/whatsapp/contacts/{phone}` | Check if a number is a valid WhatsApp user |
@@ -149,7 +149,7 @@ Full API documentation with schemas, error codes, and rate limit details: [Whats
 - Store API keys in environment variables, never in source code
 - Restrict API key access by IP allowlist
 - Verify webhook signatures with HMAC-SHA256
-- Use HTTPS only — reject HTTP delivery
+- Use HTTPS only- reject HTTP delivery
 
 **Reliability**
 

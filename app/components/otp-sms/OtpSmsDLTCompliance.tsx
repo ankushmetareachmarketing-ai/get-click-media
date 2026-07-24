@@ -31,7 +31,7 @@ export default function OtpSmsDLTCompliance() {
 
         {/* Section heading */}
         <h2 className="text-[1.75rem] sm:text-[2.25rem] md:text-[2.75rem] [font-family:var(--font-syne)] font-bold leading-[1.1] tracking-[-0.02em] text-(--ink-1) mb-10 max-w-3xl">
-          DLT Compliance for OTP SMS — India&apos;s TRAI Mandate Explained
+          DLT Compliance for OTP SMS- India&apos;s TRAI Mandate Explained
         </h2>
 
         {/* Two-column layout */}
@@ -42,7 +42,7 @@ export default function OtpSmsDLTCompliance() {
             <p className="text-base text-(--ink-2) leading-relaxed mb-8">
               All OTP SMS sent in India must travel via the transactional route under TRAI&apos;s
               DLT (Distributed Ledger Technology) framework, effective March 2021. The good news:
-              the transactional route is DND-exempt — your OTPs reach every registered user,
+              the transactional route is DND-exempt- your OTPs reach every registered user,
               regardless of their DND status, 24×7.
             </p>
 
@@ -83,7 +83,7 @@ export default function OtpSmsDLTCompliance() {
             </Link>
           </div>
 
-          {/* RIGHT COLUMN — Info box */}
+          {/* RIGHT COLUMN- Info box */}
           <aside className="bg-white border border-(--border-subtle) rounded-xl p-6 sm:p-8 w-full shadow-(--shadow-card)">
             <h3 className="text-base sm:text-lg [font-family:var(--font-syne)] font-semibold text-primary mb-5">
               Key DLT Facts for OTP SMS
@@ -98,7 +98,7 @@ export default function OtpSmsDLTCompliance() {
             </dl>
             <p className="mt-6 text-sm text-(--ink-2) border-t border-(--border-subtle) pt-4">
               OTP templates with unregistered variables are blocked by telecom operators
-              before delivery — register every template before going live.
+              before delivery- register every template before going live.
             </p>
           </aside>
         </div>

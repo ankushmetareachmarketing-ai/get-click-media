@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   title:
     "RCS Messaging for Banking & Financial Services in India | Get Click Media",
   description:
-    "RCS messaging for Indian banks and NBFCs — verified sender identity, credit card campaigns, EMI reminders, fraud alerts, and loan offers. Compliant, scalable, and higher-ROI than SMS.",
+    "RCS messaging for Indian banks and NBFCs- verified sender identity, credit card campaigns, EMI reminders, fraud alerts, and loan offers. Compliant, scalable, and higher-ROI than SMS.",
   keywords:
     "RCS for Banking, RCS Banking Messages, RCS Banking Notifications, RCS for Financial Services India, RCS BFSI India, Banking RCS Messaging",
   alternates: { canonical: "https://getclickmedia.com/rcs-for-banking" },
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title:
       "RCS Messaging for Banking & Financial Services in India | Get Click Media",
     description:
-      "RCS messaging for Indian banks and NBFCs — verified sender identity, credit card campaigns, EMI reminders, fraud alerts, and loan offers. Compliant, scalable, and higher-ROI than SMS.",
+      "RCS messaging for Indian banks and NBFCs- verified sender identity, credit card campaigns, EMI reminders, fraud alerts, and loan offers. Compliant, scalable, and higher-ROI than SMS.",
     url: "https://getclickmedia.com/rcs-for-banking",
     type: "website",
   },
@@ -66,7 +66,7 @@ const schema = {
         "@type": "Country",
         name: "India",
       },
-      serviceType: "RCS Business Messaging — Banking and Financial Services",
+      serviceType: "RCS Business Messaging- Banking and Financial Services",
       url: "https://getclickmedia.com/rcs-for-banking",
     },
     {
@@ -132,7 +132,7 @@ const schema = {
           name: "Does RCS work for NBFCs?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Any licensed financial services company — bank, NBFC, insurer, or fintech — can use RCS through Get Click Media. NBFCs often achieve higher ROI than banks due to higher acquisition cost environments.",
+            text: "Yes. Any licensed financial services company- bank, NBFC, insurer, or fintech- can use RCS through Get Click Media. NBFCs often achieve higher ROI than banks due to higher acquisition cost environments.",
           },
         },
       ],
@@ -157,7 +157,7 @@ const BANKING_USE_CASES = [
     icon: Wallet,
     title: "EMI & Loan Repayment Reminder",
     scenario:
-      "3 days before EMI due date for personal loans, home loans, auto loans, credit card outstanding. Transactional communication — no DND restriction.",
+      "3 days before EMI due date for personal loans, home loans, auto loans, credit card outstanding. Transactional communication- no DND restriction.",
     solution:
       "Rich card: bank logo + verified, loan/card type, EMI amount, due date, masked account number, 2 buttons: 'Pay Now' (links to payment portal), 'Set Up Auto-Pay'.",
     result:
@@ -179,7 +179,7 @@ const BANKING_USE_CASES = [
     icon: ShieldCheck,
     title: "Fraud Alert with Two-Way Verification",
     scenario:
-      "Real-time trigger: unusual transaction detected. Immediate automated send — sub-30 seconds from trigger.",
+      "Real-time trigger: unusual transaction detected. Immediate automated send- sub-30 seconds from trigger.",
     solution:
       "Rich card: bank logo + verified, transaction details (merchant, amount, time, location), 3 quick-reply chips: 'Yes, this was me', 'No, block this transaction', 'Call Fraud Team'.",
     result:
@@ -203,7 +203,7 @@ const BANKING_USE_CASES = [
     scenario:
       "30 days, 15 days, 7 days, and 1 day before policy expiry. Sent by insurer or bancassurance partner.",
     solution:
-      "Carousel: Card 1 — policy summary (coverage, premium, expiry), Card 2 — what you lose if lapsed, Card 3 — renew now + new plan upgrade options. Buttons: 'Renew Now', 'View Policy', 'Compare Plans'.",
+      "Carousel: Card 1- policy summary (coverage, premium, expiry), Card 2- what you lose if lapsed, Card 3- renew now + new plan upgrade options. Buttons: 'Renew Now', 'View Policy', 'Compare Plans'.",
     result:
       "Renewal rate: +31% vs SMS reminder. 'Compare Plans' button drives 18% upgrade rate. Policy lapse rate: -29% for customers receiving RCS renewal series.",
     image: "/images/rcs/banking-insurance-renewal.webp",
@@ -236,7 +236,7 @@ const BANKING_USE_CASES = [
     scenario:
       "High Net Worth Individual (HNI) and Ultra HNI segment. Quarterly portfolio review reminder, exclusive product pre-launch.",
     solution:
-      "Single premium rich card (not carousel — exclusivity signal). Personalised: client name, portfolio value, performance summary, exclusive offer. Buttons: 'Schedule Portfolio Review', 'Call My RM Now'.",
+      "Single premium rich card (not carousel- exclusivity signal). Personalised: client name, portfolio value, performance summary, exclusive offer. Buttons: 'Schedule Portfolio Review', 'Call My RM Now'.",
     result:
       "RM meeting scheduling rate: +3.8x vs email. Revenue per HNI RCS touchpoint: ₹18,000 (attributed product purchase). HNI engagement score: highest channel for relationship maintenance.",
     image: "/images/rcs/banking-wealth-management.webp",
@@ -259,49 +259,49 @@ const COMPLIANCE_TABLE = [
   {
     regulation: "TRAI DLT",
     covers: "Entity registration, Sender ID, SMS template pre-approval",
-    applies: "No — RCS is not regulated as commercial SMS",
+    applies: "No- RCS is not regulated as commercial SMS",
     handled:
       "RCS bypasses DLT entirely. SMS fallback uses DLT-compliant templates.",
   },
   {
     regulation: "TRAI DND",
-    covers: "Do Not Disturb registry — limits promotional SMS reach and timing",
-    applies: "No — RCS not classified as commercial SMS",
+    covers: "Do Not Disturb registry- limits promotional SMS reach and timing",
+    applies: "No- RCS not classified as commercial SMS",
     handled: "RCS reaches DND-registered customers. No time restriction.",
   },
   {
     regulation: "RBI Guidelines on Digital Comms",
     covers:
       "Fraud disclosure, customer consent, data security for banking comms",
-    applies: "Partial — consent and data security apply",
+    applies: "Partial- consent and data security apply",
     handled:
       "GCM provides consent management, encrypted data, India-hosted infrastructure.",
   },
   {
     regulation: "Google RBM Policy",
     covers: "Brand verification, prohibited content (gambling, alcohol, adult)",
-    applies: "Yes — all senders must comply",
+    applies: "Yes- all senders must comply",
     handled:
       "GCM reviews all banking templates for RBM policy compliance before submission.",
   },
   {
     regulation: "IT Act / DPDP 2023",
     covers: "Personal data handling, consent, right to erasure",
-    applies: "Yes — applies to all digital comms",
+    applies: "Yes- applies to all digital comms",
     handled:
       "GCM platform includes opt-out management and data deletion on request.",
   },
   {
     regulation: "PCI DSS",
     covers: "Payment card data security for card-related messaging",
-    applies: "Partial — no card data in RCS messages",
+    applies: "Partial- no card data in RCS messages",
     handled:
       "GCM never transmits card numbers. Payment links go to bank's PCI-compliant portal.",
   },
   {
     regulation: "SEBI (for investment messaging)",
     covers: "Disclosure requirements for mutual fund/stock messaging",
-    applies: "Yes — for investment product messaging",
+    applies: "Yes- for investment product messaging",
     handled:
       "GCM provides disclosure text insertion in templates for SEBI-regulated products.",
   },
@@ -378,7 +378,7 @@ const SEGMENT_STRATEGIES = [
     useCases:
       "Credit card acquisition campaigns, pre-approved loan offers targeted by credit score band, investment product cross-sell, HNI relationship management.",
     priority:
-      "Build RCS into CRM triggered-communication stack — not treat as separate blast channel.",
+      "Build RCS into CRM triggered-communication stack- not treat as separate blast channel.",
   },
   {
     segment: "Public Sector Banks",
@@ -392,7 +392,7 @@ const SEGMENT_STRATEGIES = [
     useCases:
       "Pre-approved loan offers, EMI reminders, collections communication (verified sender adds seriousness), insurance cross-sell bundled with loan products.",
     priority:
-      "High acquisition cost environment — clear ROI advantage of RCS-driven loan conversion over SMS.",
+      "High acquisition cost environment- clear ROI advantage of RCS-driven loan conversion over SMS.",
   },
   {
     segment: "Insurance Companies",
@@ -406,7 +406,7 @@ const SEGMENT_STRATEGIES = [
     useCases:
       "Quarterly portfolio performance cards, exclusive product pre-launch invitations, SIP reminder and top-up nudges, RM-initiated relationship touchpoints.",
     priority:
-      "Verified sender identity is particularly important — HNI clients have high fraud sensitivity.",
+      "Verified sender identity is particularly important- HNI clients have high fraud sensitivity.",
   },
 ];
 
@@ -488,19 +488,19 @@ const LIFECYCLE_STAGES = [
 const FAQS = [
   {
     q: "How does RCS help Indian banks reduce fraud?",
-    a: "RCS Business Messaging eliminates the spoofed Sender ID attack vector that drives most banking SMS fraud in India. Every RCS message is sent through Google's verified RBM platform with the bank's verified name, logo, and a verification indicator — which cannot be replicated by fraudsters. Banks report 43% reductions in phishing-related support calls within 6 months of RCS launch as customers learn to distinguish verified RCS messages from fraudulent SMS.",
+    a: "RCS Business Messaging eliminates the spoofed Sender ID attack vector that drives most banking SMS fraud in India. Every RCS message is sent through Google's verified RBM platform with the bank's verified name, logo, and a verification indicator- which cannot be replicated by fraudsters. Banks report 43% reductions in phishing-related support calls within 6 months of RCS launch as customers learn to distinguish verified RCS messages from fraudulent SMS.",
   },
   {
     q: "Do banks need TRAI DLT registration for RCS messaging?",
-    a: "No. RCS Business Messaging is not classified as commercial SMS under TRAI's Telecom Commercial Communications Customer Preference Regulations. Banks do not need DLT entity registration, Sender ID registration, or template pre-approval with TRAI for RCS messages. Banks must complete Google's brand verification process instead — which Get Click Media handles as part of onboarding. If banks also send SMS (for fallback or other use cases), DLT registration remains mandatory for those SMS messages.",
+    a: "No. RCS Business Messaging is not classified as commercial SMS under TRAI's Telecom Commercial Communications Customer Preference Regulations. Banks do not need DLT entity registration, Sender ID registration, or template pre-approval with TRAI for RCS messages. Banks must complete Google's brand verification process instead- which Get Click Media handles as part of onboarding. If banks also send SMS (for fallback or other use cases), DLT registration remains mandatory for those SMS messages.",
   },
   {
     q: "Can banks send RCS messages to DND-registered customers?",
-    a: "Yes. RCS is not subject to TRAI's DND (Do Not Disturb) restrictions that limit promotional SMS. Banks can send marketing RCS messages to DND-registered customers — including credit card offers, loan campaigns, and investment product promotions — as long as standard marketing consent is in place. This is a significant regulatory advantage over promotional SMS, which cannot legally reach DND-registered numbers.",
+    a: "Yes. RCS is not subject to TRAI's DND (Do Not Disturb) restrictions that limit promotional SMS. Banks can send marketing RCS messages to DND-registered customers- including credit card offers, loan campaigns, and investment product promotions- as long as standard marketing consent is in place. This is a significant regulatory advantage over promotional SMS, which cannot legally reach DND-registered numbers.",
   },
   {
     q: "Can RCS be used for real-time fraud alerts in banking?",
-    a: "Yes. Real-time fraud alerts are one of RCS's highest-value banking applications. Get Click Media's API supports sub-second trigger-to-delivery for transaction-triggered messages. A fraud alert RCS message with quick-reply chips ('Yes, this was me' / 'No, block this transaction') achieves 68% customer response rates vs 11% for equivalent SMS alerts — dramatically improving fraud detection speed and reducing false positive freezes.",
+    a: "Yes. Real-time fraud alerts are one of RCS's highest-value banking applications. Get Click Media's API supports sub-second trigger-to-delivery for transaction-triggered messages. A fraud alert RCS message with quick-reply chips ('Yes, this was me' / 'No, block this transaction') achieves 68% customer response rates vs 11% for equivalent SMS alerts- dramatically improving fraud detection speed and reducing false positive freezes.",
   },
   {
     q: "Is RCS compliant with RBI guidelines for digital banking communication?",
@@ -508,15 +508,15 @@ const FAQS = [
   },
   {
     q: "How does RCS handle SMS fallback for rural banking customers?",
-    a: "For banking customers in rural and semi-urban areas — who may be on BSNL, on 2G connectivity, or using feature phones — RCS automatically falls back to SMS. Get Click Media's platform detects device capability in real time and routes to SMS when RCS is unavailable. Banks define both the RCS version and the SMS fallback version in a single campaign setup. The SMS fallback is billed at standard SMS rates. This ensures that compliance-critical communication (KYC reminders, EMI alerts) reaches 100% of customers regardless of device or network.",
+    a: "For banking customers in rural and semi-urban areas- who may be on BSNL, on 2G connectivity, or using feature phones- RCS automatically falls back to SMS. Get Click Media's platform detects device capability in real time and routes to SMS when RCS is unavailable. Banks define both the RCS version and the SMS fallback version in a single campaign setup. The SMS fallback is billed at standard SMS rates. This ensures that compliance-critical communication (KYC reminders, EMI alerts) reaches 100% of customers regardless of device or network.",
   },
   {
     q: "What is the typical ROI for a bank deploying RCS?",
-    a: "ROI varies by use case. Credit card acquisition campaigns typically show 4x to 6x higher application rates vs SMS at comparable cost per message — translating to 70–80% lower cost per activated card. Personal loan campaigns show similar conversion improvement. EMI reminder campaigns improve on-time payment rates by 20+ percentage points, directly reducing provisioning costs. For a mid-size Indian private bank sending 50 lakh messages per month, switching from SMS to RCS typically delivers ₹2–5 crore per month in improved conversion value.",
+    a: "ROI varies by use case. Credit card acquisition campaigns typically show 4x to 6x higher application rates vs SMS at comparable cost per message- translating to 70–80% lower cost per activated card. Personal loan campaigns show similar conversion improvement. EMI reminder campaigns improve on-time payment rates by 20+ percentage points, directly reducing provisioning costs. For a mid-size Indian private bank sending 50 lakh messages per month, switching from SMS to RCS typically delivers ₹2–5 crore per month in improved conversion value.",
   },
   {
     q: "Does RCS work for NBFCs as well as banks?",
-    a: "Yes. Any Indian financial services company — bank, NBFC, insurance company, stockbroker, wealth manager, or fintech — can use RCS Business Messaging through Get Click Media. The Google brand verification process requires a legitimate registered business entity, which all licensed BFSI companies have. NBFCs often achieve higher RCS ROI than banks because their cost of customer acquisition is higher and the uplift from verified, visual messaging is proportionally more valuable.",
+    a: "Yes. Any Indian financial services company- bank, NBFC, insurance company, stockbroker, wealth manager, or fintech- can use RCS Business Messaging through Get Click Media. The Google brand verification process requires a legitimate registered business entity, which all licensed BFSI companies have. NBFCs often achieve higher RCS ROI than banks because their cost of customer acquisition is higher and the uplift from verified, visual messaging is proportionally more valuable.",
   },
 ];
 
@@ -531,7 +531,7 @@ export default function RCSBankingPage() {
       />
 
       {/* -----------------------------------------------------------------
-          HERO — with breadcrumb inside
+          HERO- with breadcrumb inside
       ----------------------------------------------------------------- */}
       <section className="relative overflow-hidden mt-2 bg-white bg-[radial-gradient(130%_130%_at_100%_100%,#5b7fe8_0%,#93aef0_25%,#d6e2ff_55%,#ffffff_85%)] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
@@ -579,7 +579,7 @@ export default function RCSBankingPage() {
               <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-xl">
                 Banking and financial services communication in India has a
                 trust problem. RCS Business Messaging solves it with
-                Google-verified brand identity — your bank&apos;s name, logo,
+                Google-verified brand identity- your bank&apos;s name, logo,
                 and verification checkmark on every message. Anti-phishing built
                 into the channel itself.
               </p>
@@ -660,7 +660,7 @@ export default function RCSBankingPage() {
             <div className="w-full lg:w-1/2">
               <Image
                 src="/images/rcs/banking-why-rcs.webp"
-                alt="Banking messaging comparison — SMS vs RCS visual with verified sender"
+                alt="Banking messaging comparison- SMS vs RCS visual with verified sender"
                 width={700}
                 height={525}
                 className="w-full h-auto"
@@ -683,18 +683,18 @@ export default function RCSBankingPage() {
                     India&apos;s banking sector loses an estimated ₹1,000 crore
                     annually to SMS-based financial fraud. Banks have had their
                     Sender IDs spoofed by fraudsters. RCS addresses this with
-                    verified sender identity — your bank&apos;s logo, name, and
+                    verified sender identity- your bank&apos;s logo, name, and
                     Google-verified checkmark on every message.
                   </p>
                 </div>
                 <div className="bg-green-50 rounded-xl p-4 border border-green-100">
                   <h4 className="text-sm font-bold text-green-600 mb-2">
-                    ✓ DND exemption — a regulatory advantage
+                    ✓ DND exemption- a regulatory advantage
                   </h4>
                   <p className="text-sm text-gray-600">
                     RCS is not classified as commercial SMS under TRAI
                     regulations. Banks can send pre-approved loan offers at 7 AM
-                    to DND-registered customers — with full brand verification.
+                    to DND-registered customers- with full brand verification.
                     No 9 AM–9 PM window restriction.
                   </p>
                 </div>
@@ -705,7 +705,7 @@ export default function RCSBankingPage() {
                   <p className="text-sm text-gray-600">
                     A 160-character SMS cannot present the features of a
                     financial product. RCS rich cards show the card image,
-                    welcome bonus, key benefits, and an Apply Now button —
+                    welcome bonus, key benefits, and an Apply Now button-
                     product discovery in the messaging inbox.
                   </p>
                 </div>
@@ -718,7 +718,7 @@ export default function RCSBankingPage() {
                   </span>{" "}
                   Indian banking customers are conditioned to distrust
                   unverified SMS. RCS restores trust through verified sender
-                  identity — and delivers
+                  identity- and delivers
                   <span className="text-white font-bold">
                     {" "}
                     4x–6x higher conversion rates
@@ -861,7 +861,7 @@ export default function RCSBankingPage() {
               promotional SMS: no DLT registration required for RCS message
               content, no DND restrictions, and no 9 AM–9 PM sending window.
               Banks can run pre-approved loan campaigns at 7 AM to customers on
-              the DND registry — legally and with full brand verification.
+              the DND registry- legally and with full brand verification.
             </p>
           </div>
         </div>
@@ -887,8 +887,8 @@ export default function RCSBankingPage() {
               <ul className="space-y-3">
                 {[
                   "Every business must submit identity documentation to Google for explicit approval",
-                  "Brand name, logo, and 'verified' indicator appear on every message — impossible to replicate",
-                  "Carrier network routes RCS through verified platform — spoofed messages cannot reach customers",
+                  "Brand name, logo, and 'verified' indicator appear on every message- impossible to replicate",
+                  "Carrier network routes RCS through verified platform- spoofed messages cannot reach customers",
                   "Customers begin to recognise verification signal and become sceptical of unverified communications",
                 ].map((item) => (
                   <li
@@ -909,7 +909,7 @@ export default function RCSBankingPage() {
                     43% reductions
                   </span>{" "}
                   in phishing-related inbound support calls within 6 months of
-                  RCS launch — as customers learn to distinguish verified RCS
+                  RCS launch- as customers learn to distinguish verified RCS
                   messages from fraudulent SMS.
                 </p>
               </div>
@@ -1109,7 +1109,7 @@ export default function RCSBankingPage() {
                   },
                   {
                     title: "Direct Jio and Airtel carrier integration",
-                    desc: "Fastest delivery, most accurate capability detection, lowest SMS fallback rates — critical for fraud alerts where latency matters in seconds.",
+                    desc: "Fastest delivery, most accurate capability detection, lowest SMS fallback rates- critical for fraud alerts where latency matters in seconds.",
                   },
                   {
                     title: "Real-time API for transaction-triggered messaging",
@@ -1156,7 +1156,7 @@ export default function RCSBankingPage() {
 
       {/* -- FAQ ------------------------------------------------------------ */}
       <section className="py-20 sm:py-28 bg-white" id="faq">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
               Frequently Asked Questions
@@ -1165,25 +1165,38 @@ export default function RCSBankingPage() {
               RCS Messaging for Indian Banking
             </h2>
           </div>
-          <div className="space-y-3">
-            {FAQS.map((faq, i) => (
-              <details
-                key={i}
-                className="group rounded-2xl bg-gray-50 border border-gray-100 shadow-sm open:shadow-md transition-shadow"
-              >
-                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
-                  <span className="text-sm font-semibold text-gray-900 leading-snug">
-                    {faq.q}
-                  </span>
-                  <ChevronDown className="w-4 h-4 text-gray-400 shrink-0 transition-transform group-open:rotate-180" />
-                </summary>
-                <div className="px-6 pb-5">
-                  <p className="text-sm text-gray-500 leading-relaxed">
-                    {faq.a}
-                  </p>
-                </div>
-              </details>
-            ))}
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
+            <div className="hidden lg:block lg:w-[36%] shrink-0 lg:sticky lg:top-24">
+              <div className="relative w-full rounded-2xl overflow-hidden aspect-4/5">
+                <Image
+                  src="/images/rcs/banking-dashboard.webp"
+                  alt="Ask a question about RCS messaging for banking"
+                  fill
+                  className="object-cover"
+                  sizes="36vw"
+                />
+              </div>
+            </div>
+            <div className="flex-1 w-full space-y-3">
+              {FAQS.map((faq, i) => (
+                <details
+                  key={i}
+                  className="group rounded-2xl bg-gray-50 border border-gray-100 shadow-sm open:shadow-md transition-shadow"
+                >
+                  <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
+                    <span className="text-sm font-semibold text-gray-900 leading-snug">
+                      {faq.q}
+                    </span>
+                    <ChevronDown className="w-4 h-4 text-gray-400 shrink-0 transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-5">
+                    <p className="text-sm text-gray-500 leading-relaxed">
+                      {faq.a}
+                    </p>
+                  </div>
+                </details>
+              ))}
+            </div>
           </div>
         </div>
       </section>

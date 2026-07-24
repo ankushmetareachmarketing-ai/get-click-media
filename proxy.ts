@@ -5,13 +5,13 @@ export function proxy(request: NextRequest) {
   const response = NextResponse.next()
   const { pathname } = request.nextUrl
 
-  // -- API routes — never cache ----------------------------------------------
+  // -- API routes- never cache ----------------------------------------------
   if (pathname.startsWith('/api/')) {
     response.headers.set('Cache-Control', 'no-store')
     return response
   }
 
-  // -- HTML pages — always fetch fresh from server ---------------------------
+  // -- HTML pages- always fetch fresh from server ---------------------------
   // Next.js ISR sets "Cache-Control: s-maxage=..., stale-while-revalidate=..."
   // on HTML pages, which browsers can cache for up to 1 year ("Expire: 1y" in
   // build output).  After a new deploy, CSS/JS filenames change (content-hashed)
@@ -31,8 +31,8 @@ export const config = {
   matcher: [
     /*
      * Match every path EXCEPT:
-     *  - _next/static  (JS, CSS, fonts — content-hashed, immutably cached)
-     *  - _next/image   (optimised images — managed by Next.js)
+     *  - _next/static  (JS, CSS, fonts- content-hashed, immutably cached)
+     *  - _next/image   (optimised images- managed by Next.js)
      *  - static files  (favicon, images, xml, txt …)
      */
     '/((?!_next/static|_next/image|.*\\.(?:ico|png|jpg|jpeg|gif|svg|webp|xml|txt|rss)).*)',

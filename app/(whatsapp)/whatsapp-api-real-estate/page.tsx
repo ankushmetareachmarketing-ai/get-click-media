@@ -14,14 +14,14 @@ import { IndustryPageTemplate } from "../_templates/industry-page-template";
 
 /* ── SEO Metadata ────────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: "WhatsApp API for Real Estate — Lead Qualification, Site Visits and Booking India | Get Click Media",
+  title: "WhatsApp API for Real Estate- Lead Qualification, Site Visits and Booking India | Get Click Media",
   description:
     "WhatsApp Business API for real estate enables Indian property developers, brokers, and PropTech platforms to automate property enquiry handling, site visit booking, payment milestone alerts, and post-booking documentation.",
   keywords:
     "WhatsApp API for Real Estate India, WhatsApp Real Estate India, WhatsApp Property Leads India, WhatsApp API Builder India, Real Estate WhatsApp Automation, WhatsApp Site Visit Booking India",
   alternates: { canonical: "https://getclickmedia.com/whatsapp-api-real-estate" },
   openGraph: {
-    title: "WhatsApp API for Real Estate — Lead Qualification, Site Visits and Booking India",
+    title: "WhatsApp API for Real Estate- Lead Qualification, Site Visits and Booking India",
     description:
       "WhatsApp Business API for real estate enables Indian property developers, brokers, and PropTech platforms to automate property enquiry handling, site visit booking, payment milestone alerts, and post-booking documentation.",
     url: "https://getclickmedia.com/whatsapp-api-real-estate",
@@ -69,17 +69,17 @@ const schema = {
         {
           "@type": "Question",
           name: "How does WhatsApp improve real estate lead conversion in India?",
-          acceptedAnswer: { "@type": "Answer", text: "WhatsApp chatbot responds to property enquiries within 5 seconds — critical because 78% of leads are lost if not contacted within 5 minutes. The chatbot qualifies budget, BHK preference, and timeline, sends the relevant project brochure automatically, and books a site visit slot. This entire flow happens without human involvement — ensuring 100% of leads are followed up regardless of team availability." },
+          acceptedAnswer: { "@type": "Answer", text: "WhatsApp chatbot responds to property enquiries within 5 seconds- critical because 78% of leads are lost if not contacted within 5 minutes. The chatbot qualifies budget, BHK preference, and timeline, sends the relevant project brochure automatically, and books a site visit slot. This entire flow happens without human involvement- ensuring 100% of leads are followed up regardless of team availability." },
         },
         {
           "@type": "Question",
           name: "Does Get Click Media integrate WhatsApp with Sell.do CRM?",
-          acceptedAnswer: { "@type": "Answer", text: "Yes. GCM's Sell.do integration is bi-directional — WhatsApp enquiries automatically create leads in Sell.do with qualification data. Stage changes in Sell.do trigger WhatsApp messages. Sales team activities are logged in both systems. Setup takes 3-5 days after WhatsApp API onboarding." },
+          acceptedAnswer: { "@type": "Answer", text: "Yes. GCM's Sell.do integration is bi-directional- WhatsApp enquiries automatically create leads in Sell.do with qualification data. Stage changes in Sell.do trigger WhatsApp messages. Sales team activities are logged in both systems. Setup takes 3-5 days after WhatsApp API onboarding." },
         },
         {
           "@type": "Question",
           name: "How are property portal leads (99acres, MagicBricks) routed to WhatsApp?",
-          acceptedAnswer: { "@type": "Answer", text: "Real estate portals provide lead data via API or email webhooks. Get Click Media connects to these feeds and routes each new enquiry to the WhatsApp chatbot within 30 seconds of receipt — the chatbot sends the first WhatsApp message to the prospect before your sales team has even seen the lead notification." },
+          acceptedAnswer: { "@type": "Answer", text: "Real estate portals provide lead data via API or email webhooks. Get Click Media connects to these feeds and routes each new enquiry to the WhatsApp chatbot within 30 seconds of receipt- the chatbot sends the first WhatsApp message to the prospect before your sales team has even seen the lead notification." },
         },
         {
           "@type": "Question",
@@ -124,7 +124,7 @@ const USE_CASES = [
   {
     icon: FileText,
     title: "Post-Booking Documentation",
-    trigger: "Booking amount received — trigger from CRM",
+    trigger: "Booking amount received- trigger from CRM",
     message: "Booking confirmation + next steps checklist: KYC documents required, allotment letter timeline, loan assistance offer, site visit schedule",
     result: "Post-booking anxiety calls -70%. Document submission rate +40% within 7 days.",
   },
@@ -148,10 +148,10 @@ const PERFORMANCE_DATA = [
 
 // ── Capabilities ──────────────────────────────────────────────────────────
 const CAPABILITIES = [
-  { icon: Database, title: "Sell.do integration", desc: "Bi-directional CRM sync — lead creation, stage updates, task assignments, WhatsApp message logging" },
+  { icon: Database, title: "Sell.do integration", desc: "Bi-directional CRM sync- lead creation, stage updates, task assignments, WhatsApp message logging" },
   { icon: Globe, title: "Portal lead integration", desc: "99acres, MagicBricks, Housing lead auto-routing to WhatsApp chatbot via API" },
-  { icon: Camera, title: "CTWA ads integration", desc: "Click-to-WhatsApp Facebook and Instagram ads for real estate — GCM manages full campaign" },
-  { icon: FileText, title: "Document delivery", desc: "Brochure PDF, master plan, unit plan, pricing sheet — auto-triggered based on project keyword" },
+  { icon: Camera, title: "CTWA ads integration", desc: "Click-to-WhatsApp Facebook and Instagram ads for real estate- GCM manages full campaign" },
+  { icon: FileText, title: "Document delivery", desc: "Brochure PDF, master plan, unit plan, pricing sheet- auto-triggered based on project keyword" },
   { icon: Calendar, title: "Site visit automation", desc: "Slot booking, confirmation, reminder sequence, post-visit follow-up" },
   { icon: CreditCard, title: "Payment gateway", desc: "Razorpay, HDFC PayZapp, and bank transfer for milestone payment collection" },
 ];
@@ -160,15 +160,15 @@ const CAPABILITIES = [
 const FAQS = [
   {
     q: "How does WhatsApp improve real estate lead conversion in India?",
-    a: "WhatsApp chatbot responds to property enquiries within 5 seconds — critical because 78% of leads are lost if not contacted within 5 minutes. The chatbot qualifies budget, BHK preference, and timeline, sends the relevant project brochure automatically, and books a site visit slot. This entire flow happens without human involvement — ensuring 100% of leads are followed up regardless of team availability.",
+    a: "WhatsApp chatbot responds to property enquiries within 5 seconds- critical because 78% of leads are lost if not contacted within 5 minutes. The chatbot qualifies budget, BHK preference, and timeline, sends the relevant project brochure automatically, and books a site visit slot. This entire flow happens without human involvement- ensuring 100% of leads are followed up regardless of team availability.",
   },
   {
     q: "Does Get Click Media integrate WhatsApp with Sell.do CRM?",
-    a: "Yes. GCM's Sell.do integration is bi-directional — WhatsApp enquiries automatically create leads in Sell.do with qualification data. Stage changes in Sell.do trigger WhatsApp messages. Sales team activities are logged in both systems. Setup takes 3-5 days after WhatsApp API onboarding.",
+    a: "Yes. GCM's Sell.do integration is bi-directional- WhatsApp enquiries automatically create leads in Sell.do with qualification data. Stage changes in Sell.do trigger WhatsApp messages. Sales team activities are logged in both systems. Setup takes 3-5 days after WhatsApp API onboarding.",
   },
   {
     q: "How are property portal leads (99acres, MagicBricks) routed to WhatsApp?",
-    a: "Real estate portals provide lead data via API or email webhooks. Get Click Media connects to these feeds and routes each new enquiry to the WhatsApp chatbot within 30 seconds of receipt — the chatbot sends the first WhatsApp message to the prospect before your sales team has even seen the lead notification.",
+    a: "Real estate portals provide lead data via API or email webhooks. Get Click Media connects to these feeds and routes each new enquiry to the WhatsApp chatbot within 30 seconds of receipt- the chatbot sends the first WhatsApp message to the prospect before your sales team has even seen the lead notification.",
   },
   {
     q: "Can WhatsApp handle site visit reminder sequences for real estate?",
@@ -203,12 +203,12 @@ export default function WhatsAppAPIRealEstatePage() {
           platforms to automate property enquiry handling, site visit booking, payment milestone alerts,
           and post-booking documentation.
           <strong className="text-gray-900"> Get Click Media integrates WhatsApp with Sell.do</strong> and
-          custom real estate CRM platforms — tripling site visit conversion rates and reducing lead response
+          custom real estate CRM platforms- tripling site visit conversion rates and reducing lead response
           time from hours to seconds.
         </>
       }
       heroImage="/images/rcs/real-estate-hero.webp"
-      heroImageAlt="WhatsApp API Real Estate — RCS messaging platform with property showcase, site visit bookings, and instant updates"
+      heroImageAlt="WhatsApp API Real Estate- RCS messaging platform with property showcase, site visit bookings, and instant updates"
       heroTrustLine="Official Meta BSP · Sell.do & portal integration · RERA-aware messaging · India-based support"
       stats={[
         { value: "3x", label: "Higher site visit booking rate vs phone follow-up" },
@@ -222,7 +222,7 @@ export default function WhatsAppAPIRealEstatePage() {
           platforms to automate property enquiry handling, site visit booking, payment milestone alerts,
           and post-booking documentation.
           <strong className="text-gray-900"> Get Click Media integrates WhatsApp with Sell.do</strong> and
-          custom real estate CRM platforms — tripling site visit conversion rates and reducing lead response
+          custom real estate CRM platforms- tripling site visit conversion rates and reducing lead response
           time from hours to seconds.
         </>
       }
@@ -241,7 +241,7 @@ export default function WhatsAppAPIRealEstatePage() {
           property portals. These expensive leads are wasted when sales teams cannot follow up within minutes.
         </>,
         <>
-          WhatsApp chatbot eliminates this problem — acknowledging every lead instantly, qualifying budget and
+          WhatsApp chatbot eliminates this problem- acknowledging every lead instantly, qualifying budget and
           timeline, sending relevant property brochures, and booking site visits automatically. With{" "}
           <strong>3x higher site visit conversion</strong> and <strong>92% enquiry open rates</strong>, WhatsApp
           is rapidly becoming the standard for real estate communication in India.
@@ -250,7 +250,7 @@ export default function WhatsAppAPIRealEstatePage() {
       whyIndustryInsight={
         <>
           💡 <strong>Key insight:</strong> Research shows that a lead not responded to within 5 minutes has a
-          78% lower chance of converting. WhatsApp chatbot responds in 5 seconds — ensuring 100% of leads are
+          78% lower chance of converting. WhatsApp chatbot responds in 5 seconds- ensuring 100% of leads are
           followed up regardless of team availability.
         </>
       }
@@ -263,7 +263,7 @@ export default function WhatsAppAPIRealEstatePage() {
             </>
           ),
           description:
-            "Manage all lead and customer communication from a single dashboard — instant lead qualification, site visit booking, brochure delivery, payment milestone reminders, and post-booking documentation — with full integration to your real estate CRM.",
+            "Manage all lead and customer communication from a single dashboard- instant lead qualification, site visit booking, brochure delivery, payment milestone reminders, and post-booking documentation- with full integration to your real estate CRM.",
           bullets: [
             "Instant lead acknowledgement and qualification",
             "Automated site visit booking and confirmation",
@@ -271,7 +271,7 @@ export default function WhatsAppAPIRealEstatePage() {
             "Payment milestone reminders with Pay Now button",
           ],
           image: "/images/whatsapp/whatsapp-api-for-real-estate.webp",
-          imageAlt: "WhatsApp API Real Estate dashboard — lead qualification, site visit booking, brochure delivery, and payment milestone reminders",
+          imageAlt: "WhatsApp API Real Estate dashboard- lead qualification, site visit booking, brochure delivery, and payment milestone reminders",
         },
         {
           eyebrow: "Site Visit Automation",
@@ -289,7 +289,7 @@ export default function WhatsAppAPIRealEstatePage() {
             "Morning-of reminder with sales person contact",
           ],
           image: "/images/whatsapp/whatsapp-site-visit-booking.webp",
-          imageAlt: "WhatsApp site visit booking preview — slot selection, confirmation, and reminder with Google Maps link",
+          imageAlt: "WhatsApp site visit booking preview- slot selection, confirmation, and reminder with Google Maps link",
           imageSide: "left",
         },
         {
@@ -300,14 +300,14 @@ export default function WhatsAppAPIRealEstatePage() {
             </>
           ),
           description:
-            "Get Click Media's bi-directional Sell.do integration — WhatsApp enquiries automatically create leads in Sell.do with qualification data. Stage changes in Sell.do trigger WhatsApp messages. Sales team activities are logged in both systems. Setup takes 3-5 days after WhatsApp API onboarding is complete.",
+            "Get Click Media's bi-directional Sell.do integration- WhatsApp enquiries automatically create leads in Sell.do with qualification data. Stage changes in Sell.do trigger WhatsApp messages. Sales team activities are logged in both systems. Setup takes 3-5 days after WhatsApp API onboarding is complete.",
           bullets: ["Sell.do integration", "99acres lead routing", "MagicBricks lead routing", "Housing lead routing", "Custom CRM API"],
           image: "/images/whatsapp/whatsapp-api-sell-do-integration.png",
-          imageAlt: "WhatsApp API Sell.do integration — bi-directional CRM sync for real estate lead management",
+          imageAlt: "WhatsApp API Sell.do integration- bi-directional CRM sync for real estate lead management",
           imageSide: "left",
         },
       ]}
-      useCasesTitle="WhatsApp API Use Cases for Real Estate — 6 Automations"
+      useCasesTitle="WhatsApp API Use Cases for Real Estate- 6 Automations"
       useCases={USE_CASES}
       performanceData={PERFORMANCE_DATA}
       capabilitiesTitle="Get Click Media's WhatsApp API Capabilities for Real Estate"

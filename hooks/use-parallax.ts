@@ -7,7 +7,7 @@ import { prefersReducedMotion } from "@/lib/animation/config";
 export interface UseParallaxOptions {
   /** Px of vertical travel across the scroll range. Negative = moves up. */
   distance?: number;
-  /** Pin the element in place while its trigger track scrolls past — powers "sticky reveal" sections. */
+  /** Pin the element in place while its trigger track scrolls past- powers "sticky reveal" sections. */
   pin?: boolean;
   /** ScrollTrigger scrub value. `true` ties motion 1:1 to scroll position. */
   scrub?: boolean | number;

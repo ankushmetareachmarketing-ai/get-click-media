@@ -7,7 +7,7 @@ import { prefersReducedMotion } from "@/lib/animation/config";
 /**
  * Next.js re-mounts template.tsx on every navigation (unlike layout.tsx),
  * making it the correct App Router primitive for a per-page enter
- * transition. Keep this cheap — it wraps every route including the 40+
+ * transition. Keep this cheap- it wraps every route including the 40+
  * programmatic SEO pages, so no imports beyond the shared gsap singleton.
  */
 export default function Template({ children }: { children: React.ReactNode }) {

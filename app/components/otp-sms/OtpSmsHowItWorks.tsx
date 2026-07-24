@@ -12,7 +12,7 @@ const steps = [
     title: "DLT Registration",
     description: (
       <>
-        We assist you with TRAI DLT registration — entity, transactional sender ID, and OTP
+        We assist you with TRAI DLT registration- entity, transactional sender ID, and OTP
         template approval. Learn about{" "}
         <Link
           href="/dlt-registration"
@@ -28,7 +28,7 @@ const steps = [
     number: 3,
     title: "Integrate the API",
     description:
-      "Add our REST API or SDK to your app. Trigger an OTP with a single HTTP call — your users receive it in seconds.",
+      "Add our REST API or SDK to your app. Trigger an OTP with a single HTTP call- your users receive it in seconds.",
   },
   {
     number: 4,
@@ -41,7 +41,7 @@ const steps = [
 export default function OtpSmsHowItWorks() {
   return (
     <section
-      aria-label="How OTP SMS works — 4-step process"
+      aria-label="How OTP SMS works- 4-step process"
       className="py-20 sm:py-28 bg-(--surface-1)"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
@@ -58,7 +58,7 @@ export default function OtpSmsHowItWorks() {
           </p>
         </div>
 
-        {/* Steps — mobile: vertical list, desktop: horizontal row */}
+        {/* Steps- mobile: vertical list, desktop: horizontal row */}
         <div className="relative">
           {/* Desktop connector line */}
           <div

@@ -23,30 +23,30 @@ faq:
     answer: "Yes. OTP SMS travels via the transactional route, which is exempt from DND (Do Not Disturb) filtering under TRAI regulations. All registered users receive the OTP regardless of their DND status."
 ---
 
-Integrating an OTP SMS API into your application in India involves more than a simple HTTP call — you need a registered DLT entity, an approved transactional template, and a gateway that prioritises delivery speed. This guide walks you through every step, from DLT onboarding to production-ready code.
+Integrating an OTP SMS API into your application in India involves more than a simple HTTP call- you need a registered DLT entity, an approved transactional template, and a gateway that prioritises delivery speed. This guide walks you through every step, from DLT onboarding to production-ready code.
 
 ## Why OTP SMS Requires Special Handling in India
 
-India's TRAI (Telecom Regulatory Authority of India) introduced the DLT (Distributed Ledger Technology) framework in 2021 to combat SMS spam and phishing. Every commercial SMS sender — including businesses sending OTPs — must register three things before a single message can be delivered:
+India's TRAI (Telecom Regulatory Authority of India) introduced the DLT (Distributed Ledger Technology) framework in 2021 to combat SMS spam and phishing. Every commercial SMS sender- including businesses sending OTPs- must register three things before a single message can be delivered:
 
-1. **Entity registration** — proves your business identity on the DLT portal
-2. **Sender ID (Header)** — the 6-character alphanumeric tag that appears as the sender name (e.g., GCMDIA)
-3. **Message template** — the exact text of your OTP message, with variable placeholders declared
+1. **Entity registration**- proves your business identity on the DLT portal
+2. **Sender ID (Header)**- the 6-character alphanumeric tag that appears as the sender name (e.g., GCMDIA)
+3. **Message template**- the exact text of your OTP message, with variable placeholders declared
 
 Without these three registrations, telecom operators will scrub your messages before they reach recipients. This makes DLT registration the critical first step in any OTP SMS integration.
 
-## Step 1 — Complete DLT Registration
+## Step 1- Complete DLT Registration
 
 ### Choose a DLT Portal
 
 TRAI has authorised multiple telecom operators to run DLT portals. Common options include:
 
-- **Jio Trueconnect** — trueconnect.jio.com
-- **Airtel DLT** — dltconnect.airtel.in
-- **Vi (Vodafone Idea) DLT** — vilpower.in
-- **BSNL DLT** — smsid.bsnl.co.in
+- **Jio Trueconnect**- trueconnect.jio.com
+- **Airtel DLT**- dltconnect.airtel.in
+- **Vi (Vodafone Idea) DLT**- vilpower.in
+- **BSNL DLT**- smsid.bsnl.co.in
 
-Registration on any one portal is sufficient — your data is shared across all operators via the DLT blockchain.
+Registration on any one portal is sufficient- your data is shared across all operators via the DLT blockchain.
 
 ### Register Your Entity
 
@@ -61,20 +61,20 @@ A transactional sender ID is 6 characters (letters only). Example: `GCMDIA`. Reg
 Your template must match the exact format you will send. Variables are declared with curly braces. A typical OTP template:
 
 ```
-Your {#var#} is the OTP for login to {#var#}. Valid for 10 minutes. Do not share it with anyone. — GCMDIA
+Your {#var#} is the OTP for login to {#var#}. Valid for 10 minutes. Do not share it with anyone.- GCMDIA
 ```
 
 Template approval by the telecom operator takes 1–3 business days.
 
-## Step 2 — Obtain API Credentials
+## Step 2- Obtain API Credentials
 
 Sign up with an OTP SMS provider (Get Click Media) and note your:
 
-- **API Key** — used to authenticate every request
-- **Sender ID** — your DLT-registered header
-- **Template ID** — the DLT template ID assigned after approval
+- **API Key**- used to authenticate every request
+- **Sender ID**- your DLT-registered header
+- **Template ID**- the DLT template ID assigned after approval
 
-## Step 3 — Send an OTP via the REST API
+## Step 3- Send an OTP via the REST API
 
 The API endpoint accepts a POST request with your recipient number, message, and authentication headers.
 
@@ -82,7 +82,7 @@ The API endpoint accepts a POST request with your recipient number, message, and
 
 ```js
 const sendOtp = async (mobile, otp) => {
-  const message = `Your ${otp} is the OTP for login. Valid for 10 minutes. Do not share it. — GCMDIA`;
+  const message = `Your ${otp} is the OTP for login. Valid for 10 minutes. Do not share it.- GCMDIA`;
 
   const response = await fetch("https://api.getclickmedia.com/sms/send", {
     method: "POST",
@@ -111,7 +111,7 @@ import os
 import requests
 
 def send_otp(mobile: str, otp: str) -> dict:
-    message = f"Your {otp} is the OTP for login. Valid for 10 minutes. Do not share it. — GCMDIA"
+    message = f"Your {otp} is the OTP for login. Valid for 10 minutes. Do not share it.- GCMDIA"
 
     response = requests.post(
         "https://api.getclickmedia.com/sms/send",
@@ -134,7 +134,7 @@ def send_otp(mobile: str, otp: str) -> dict:
 
 ```php
 function sendOtp(string $mobile, string $otp): array {
-    $message = "Your {$otp} is the OTP for login. Valid for 10 minutes. Do not share it. — GCMDIA";
+    $message = "Your {$otp} is the OTP for login. Valid for 10 minutes. Do not share it.- GCMDIA";
 
     $ch = curl_init("https://api.getclickmedia.com/sms/send");
     curl_setopt_array($ch, [
@@ -159,7 +159,7 @@ function sendOtp(string $mobile, string $otp): array {
 }
 ```
 
-## Step 4 — Handle Delivery Reports via Webhooks
+## Step 4- Handle Delivery Reports via Webhooks
 
 Rather than polling for delivery status, configure a webhook URL in your provider dashboard. The provider will POST a delivery receipt to your endpoint after each OTP is delivered or fails.
 
@@ -183,16 +183,16 @@ app.post("/webhooks/sms-delivery", express.json(), (req, res) => {
 
   if (status === "failed") {
     // Trigger a resend or alert your ops team
-    console.error(`OTP delivery failed for ${to} — messageId: ${messageId}`);
+    console.error(`OTP delivery failed for ${to}- messageId: ${messageId}`);
   }
 
   res.sendStatus(200);
 });
 ```
 
-## Step 5 — OTP Generation Best Practices
+## Step 5- OTP Generation Best Practices
 
-The SMS API only handles delivery — your application is responsible for generating and validating the OTP. Follow these rules:
+The SMS API only handles delivery- your application is responsible for generating and validating the OTP. Follow these rules:
 
 ### Generate a Cryptographically Secure OTP
 
@@ -230,7 +230,7 @@ if (attempts === 1) await redis.expire(`otp_attempts:${mobile}`, 3600);
 if (attempts > 5) throw new Error("Too many OTP requests. Try again in an hour.");
 ```
 
-## Step 6 — Testing Before Go-Live
+## Step 6- Testing Before Go-Live
 
 Before going live, verify:
 
@@ -238,7 +238,7 @@ Before going live, verify:
 - [ ] Test OTP reaches your number within 3 seconds
 - [ ] Delivery webhook fires correctly for both delivered and failed status
 - [ ] OTP expiry and rate-limiting logic is working
-- [ ] Variable substitution in the template matches exactly — mismatches cause scrubbing
+- [ ] Variable substitution in the template matches exactly- mismatches cause scrubbing
 
 ## Common Integration Mistakes to Avoid
 
@@ -252,6 +252,6 @@ Before going live, verify:
 
 ## Summary
 
-Integrating an OTP SMS API in India requires DLT registration before the first API call, a cryptographically secure OTP generation strategy, and webhook-based delivery monitoring for production reliability. With Get Click Media's transactional SMS infrastructure, OTPs reach recipients in under 3 seconds across all Indian telecom operators — including DND-registered numbers.
+Integrating an OTP SMS API in India requires DLT registration before the first API call, a cryptographically secure OTP generation strategy, and webhook-based delivery monitoring for production reliability. With Get Click Media's transactional SMS infrastructure, OTPs reach recipients in under 3 seconds across all Indian telecom operators- including DND-registered numbers.
 
 Ready to get started? [Request a free demo](/get-started) or [view our OTP SMS pricing](/otp-sms-service-provider#pricing).

@@ -16,14 +16,14 @@ import {
 import { IndustryPageTemplate } from "../_templates/industry-page-template";
 
 export const metadata: Metadata = {
-  title: "Bulk SMS for Travel Agencies — Booking & Itinerary Alerts India | Get Click Media",
+  title: "Bulk SMS for Travel Agencies- Booking & Itinerary Alerts India | Get Click Media",
   description:
     "Bulk SMS for travel agencies and tour operators in India automates booking confirmations, e-ticket delivery, flight and train delay alerts, itinerary reminders, and off-season offers.",
   keywords:
     "bulk sms for travel agencies, sms for tour operators india, booking confirmation sms, flight delay alert sms, travel itinerary sms, pnr sms service",
   alternates: { canonical: "https://getclickmedia.com/bulk-sms-for-travel-industry" },
   openGraph: {
-    title: "Bulk SMS for Travel Agencies — Booking & Itinerary Alerts India",
+    title: "Bulk SMS for Travel Agencies- Booking & Itinerary Alerts India",
     description:
       "Automate booking confirmations, e-ticket delivery, delay alerts, and itinerary reminders with DLT-compliant bulk SMS for travel agencies.",
     url: "https://getclickmedia.com/bulk-sms-for-travel-industry",
@@ -67,7 +67,7 @@ const schema = {
           name: "Why do travel agencies send PNR and e-ticket details by SMS?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "A booking or PNR confirmation SMS reaches the traveller instantly and stays accessible in their inbox even without internet access at the airport or station counter — which matters because email can be missed or land in spam, and app notifications require the traveller to have installed and logged into the agency's app. SMS remains the most dependable fallback for must-have travel documents.",
+            text: "A booking or PNR confirmation SMS reaches the traveller instantly and stays accessible in their inbox even without internet access at the airport or station counter- which matters because email can be missed or land in spam, and app notifications require the traveller to have installed and logged into the agency's app. SMS remains the most dependable fallback for must-have travel documents.",
           },
         },
         {
@@ -75,7 +75,7 @@ const schema = {
           name: "Can travel agencies send flight or train delay alerts automatically?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes — when integrated with a flight-status or railway-status API, a delay, gate-change, or cancellation event can trigger an SMS to the affected traveller within moments of the update being published, rather than the traveller finding out only at the airport. This is one of the highest-value automations for agencies managing group or corporate travel bookings.",
+            text: "Yes- when integrated with a flight-status or railway-status API, a delay, gate-change, or cancellation event can trigger an SMS to the affected traveller within moments of the update being published, rather than the traveller finding out only at the airport. This is one of the highest-value automations for agencies managing group or corporate travel bookings.",
           },
         },
         {
@@ -83,7 +83,7 @@ const schema = {
           name: "Is off-season offer SMS effective for travel agencies?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Promotional SMS to a consented, non-DND customer database works well for time-boxed travel offers — early-bird packages, off-season destination deals, and group tour openings — because travel purchase decisions are often price-and-timing triggered, and an SMS with a clear deadline creates urgency an email newsletter usually doesn't. It must run on the promotional route, separate from booking-related transactional SMS.",
+            text: "Promotional SMS to a consented, non-DND customer database works well for time-boxed travel offers- early-bird packages, off-season destination deals, and group tour openings- because travel purchase decisions are often price-and-timing triggered, and an SMS with a clear deadline creates urgency an email newsletter usually doesn't. It must run on the promotional route, separate from booking-related transactional SMS.",
           },
         },
         {
@@ -91,7 +91,7 @@ const schema = {
           name: "How does bulk SMS help reduce no-shows for guided tours?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "A reminder sent the evening before a tour departure — with meeting point, time, and guide contact number — reduces late arrivals and no-shows that disrupt group schedules. Agencies running this reminder alongside the booking confirmation see fewer missed departures on multi-traveller group tours.",
+            text: "A reminder sent the evening before a tour departure- with meeting point, time, and guide contact number- reduces late arrivals and no-shows that disrupt group schedules. Agencies running this reminder alongside the booking confirmation see fewer missed departures on multi-traveller group tours.",
           },
         },
       ],
@@ -105,7 +105,7 @@ const USE_CASES = [
     title: "Booking Confirmation & E-Ticket Delivery",
     trigger: "Flight, train, bus, or package booking confirmed",
     message: "PNR/booking reference, traveller name, and a link to the e-ticket or itinerary PDF.",
-    result: "Instant, always-accessible booking proof — no dependency on email or app login.",
+    result: "Instant, always-accessible booking proof- no dependency on email or app login.",
   },
   {
     icon: BellRing,
@@ -132,7 +132,7 @@ const USE_CASES = [
     icon: Luggage,
     title: "Pre-Departure Checklist & Document Reminder",
     trigger: "A few days before international or long-distance departure",
-    message: "Document checklist — passport, visa, boarding time — and a baggage-allowance reminder.",
+    message: "Document checklist- passport, visa, boarding time- and a baggage-allowance reminder.",
     result: "Fewer departure-day document issues for international travellers.",
   },
   {
@@ -154,7 +154,7 @@ const PERFORMANCE_DATA = [
 
 const CAPABILITIES = [
   { icon: Database, title: "Booking engine & GDS integration", desc: "API integration with booking engines, GDS systems, and flight/railway status feeds for real-time triggers" },
-  { icon: ShieldCheck, title: "DLT-registered dual-route templates", desc: "Transactional templates for bookings and alerts, promotional templates for offers — both DLT-registered" },
+  { icon: ShieldCheck, title: "DLT-registered dual-route templates", desc: "Transactional templates for bookings and alerts, promotional templates for offers- both DLT-registered" },
   { icon: Globe, title: "PAN-India delivery network", desc: "Multi-operator routing for reliable delivery to travellers across every Indian telecom circle" },
   { icon: Clock, title: "Real-time status-triggered alerts", desc: "Instant SMS on delay, gate-change, or cancellation events pulled from flight and railway status APIs" },
   { icon: Bell, title: "Group & corporate booking support", desc: "Bulk-trigger SMS for group tours and corporate travel bookings from a single itinerary update" },
@@ -164,19 +164,19 @@ const CAPABILITIES = [
 const FAQS = [
   {
     q: "Why do travel agencies send PNR and e-ticket details by SMS?",
-    a: "A booking or PNR confirmation SMS reaches the traveller instantly and stays accessible in their inbox even without internet access at the airport or station counter — which matters because email can be missed or land in spam, and app notifications require the traveller to have installed and logged into the agency's app. SMS remains the most dependable fallback for must-have travel documents.",
+    a: "A booking or PNR confirmation SMS reaches the traveller instantly and stays accessible in their inbox even without internet access at the airport or station counter- which matters because email can be missed or land in spam, and app notifications require the traveller to have installed and logged into the agency's app. SMS remains the most dependable fallback for must-have travel documents.",
   },
   {
     q: "Can travel agencies send flight or train delay alerts automatically?",
-    a: "Yes — when integrated with a flight-status or railway-status API, a delay, gate-change, or cancellation event can trigger an SMS to the affected traveller within moments of the update being published, rather than the traveller finding out only at the airport. This is one of the highest-value automations for agencies managing group or corporate travel bookings.",
+    a: "Yes- when integrated with a flight-status or railway-status API, a delay, gate-change, or cancellation event can trigger an SMS to the affected traveller within moments of the update being published, rather than the traveller finding out only at the airport. This is one of the highest-value automations for agencies managing group or corporate travel bookings.",
   },
   {
     q: "Is off-season offer SMS effective for travel agencies?",
-    a: "Promotional SMS to a consented, non-DND customer database works well for time-boxed travel offers — early-bird packages, off-season destination deals, and group tour openings — because travel purchase decisions are often price-and-timing triggered, and an SMS with a clear deadline creates urgency an email newsletter usually doesn't. It must run on the promotional route, separate from booking-related transactional SMS.",
+    a: "Promotional SMS to a consented, non-DND customer database works well for time-boxed travel offers- early-bird packages, off-season destination deals, and group tour openings- because travel purchase decisions are often price-and-timing triggered, and an SMS with a clear deadline creates urgency an email newsletter usually doesn't. It must run on the promotional route, separate from booking-related transactional SMS.",
   },
   {
     q: "How does bulk SMS help reduce no-shows for guided tours?",
-    a: "A reminder sent the evening before a tour departure — with meeting point, time, and guide contact number — reduces late arrivals and no-shows that disrupt group schedules. Agencies running this reminder alongside the booking confirmation see fewer missed departures on multi-traveller group tours.",
+    a: "A reminder sent the evening before a tour departure- with meeting point, time, and guide contact number- reduces late arrivals and no-shows that disrupt group schedules. Agencies running this reminder alongside the booking confirmation see fewer missed departures on multi-traveller group tours.",
   },
 ];
 
@@ -205,12 +205,12 @@ export default function BulkSmsForTravelIndustryPage() {
           travel businesses.{" "}
           <strong className="text-gray-900">
             Get Click Media connects bulk SMS to your booking engine and flight/railway status
-            feeds — keeping travellers informed before they reach the airport or station.
+            feeds- keeping travellers informed before they reach the airport or station.
           </strong>
         </>
       }
       heroImage="/images/bulk-sms/transactional-sms-service-provider.webp"
-      heroImageAlt="Bulk SMS for Travel Agencies — booking and itinerary alert dashboard"
+      heroImageAlt="Bulk SMS for Travel Agencies- booking and itinerary alert dashboard"
       heroTrustLine="TRAI DLT registered · Booking engine & GDS integration · Real-time status alerts · 99.9% uptime"
       stats={[
         { value: "99.9%", label: "SMS delivery uptime" },
@@ -224,7 +224,7 @@ export default function BulkSmsForTravelIndustryPage() {
           and train delay alerts, tour departure reminders, and off-season offer blasts for
           travellers.{" "}
           <strong className="text-gray-900">Get Click Media integrates bulk SMS with booking engines and flight/railway status APIs</strong>{" "}
-          in India — reducing tour no-shows and improving on-time balance payments.
+          in India- reducing tour no-shows and improving on-time balance payments.
         </>
       }
       insightCallout={
@@ -238,14 +238,14 @@ export default function BulkSmsForTravelIndustryPage() {
       whyIndustryTitle="Why Travel Agencies in India Need Bulk SMS"
       whyIndustryParagraphs={[
         <>
-          Travellers are, by definition, often away from familiar networks and Wi-Fi — roaming
+          Travellers are, by definition, often away from familiar networks and Wi-Fi- roaming
           data can be patchy, and a travel agency's own app is rarely something a customer keeps
           open mid-journey. SMS works over the basic cellular network almost anywhere, which
           makes it the most reliable channel for anything a traveller genuinely can't miss:
           booking references, gate changes, and delay alerts.
         </>,
         <>
-          Group and package travel adds a coordination layer — a departure reminder that reaches
+          Group and package travel adds a coordination layer- a departure reminder that reaches
           every traveller in a tour group the evening before does more to prevent a late start
           than any amount of pre-trip briefing. SMS's universal reach makes that kind of
           group-wide reminder simple to run at scale.
@@ -255,7 +255,7 @@ export default function BulkSmsForTravelIndustryPage() {
         <>
           💡 <strong>Key insight:</strong> Agencies that connect SMS to a live flight or railway
           status feed can alert travellers to a delay or gate change within moments of the
-          airline or railway publishing it — often before the traveller sees it on the airport
+          airline or railway publishing it- often before the traveller sees it on the airport
           display board themselves.
         </>
       }
@@ -268,7 +268,7 @@ export default function BulkSmsForTravelIndustryPage() {
             </>
           ),
           description:
-            "Manage every traveller touchpoint — booking confirmations, delay alerts, departure reminders, and payment reminders — from a single SMS dashboard connected to your booking engine and status feeds.",
+            "Manage every traveller touchpoint- booking confirmations, delay alerts, departure reminders, and payment reminders- from a single SMS dashboard connected to your booking engine and status feeds.",
           bullets: [
             "Triggered SMS from booking engine events",
             "Real-time flight/railway status alerts",
@@ -276,7 +276,7 @@ export default function BulkSmsForTravelIndustryPage() {
             "Real-time delivery and read-rate reports",
           ],
           image: "/images/bulk-sms/transactional-sms-india.webp",
-          imageAlt: "Bulk SMS dashboard for travel agencies — booking and delay alerts",
+          imageAlt: "Bulk SMS dashboard for travel agencies- booking and delay alerts",
         },
         {
           eyebrow: "Delay Alert Automation",
@@ -286,7 +286,7 @@ export default function BulkSmsForTravelIndustryPage() {
             </>
           ),
           description:
-            "Connected to live flight and railway status feeds, a delay, gate-change, or cancellation event fires an SMS to the affected traveller within moments — often before they'd otherwise notice at the airport or station.",
+            "Connected to live flight and railway status feeds, a delay, gate-change, or cancellation event fires an SMS to the affected traveller within moments- often before they'd otherwise notice at the airport or station.",
           bullets: [
             "Delay and gate-change alerts",
             "Cancellation and rebooking notice",
@@ -298,7 +298,7 @@ export default function BulkSmsForTravelIndustryPage() {
           imageSide: "left",
         },
       ]}
-      useCasesTitle="Bulk SMS Use Cases for Travel Agencies — 6 Automations"
+      useCasesTitle="Bulk SMS Use Cases for Travel Agencies- 6 Automations"
       useCases={USE_CASES}
       performanceData={PERFORMANCE_DATA}
       capabilitiesTitle="Get Click Media's Bulk SMS Capabilities for Travel Agencies"

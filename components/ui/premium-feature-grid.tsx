@@ -18,7 +18,7 @@ export type FeatureAccent =
   | "red";
 
 export interface PremiumFeature {
-  /** Pre-rendered icon element, e.g. <Bot className="h-6 w-6" /> — a Server Component
+  /** Pre-rendered icon element, e.g. <Bot className="h-6 w-6" />- a Server Component
    *  parent can't hand this Client Component a raw component reference. */
   icon: ReactNode;
   title: string;
@@ -48,7 +48,7 @@ const item: Variants = {
 };
 
 /**
- * Premium enterprise-SaaS feature grid — badge + two-line heading, a
+ * Premium enterprise-SaaS feature grid- badge + two-line heading, a
  * fixed-height responsive card grid (no slider; nothing here needs
  * side-by-side comparison), and a single centered CTA.
  */

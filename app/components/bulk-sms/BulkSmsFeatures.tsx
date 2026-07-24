@@ -11,7 +11,7 @@ const features = [
     icon: ShieldCheck,
     title: "DLT Registration Support",
     description:
-      "We handle your complete TRAI DLT setup — entity, header, and template registration included.",
+      "We handle your complete TRAI DLT setup- entity, header, and template registration included.",
   },
   {
     icon: Code2,
@@ -35,14 +35,14 @@ const features = [
     icon: MapPin,
     title: "Pan-India Coverage",
     description:
-      "Full coverage across all 22 telecom circles — Airtel, Jio, Vi, BSNL and all MVNOs.",
+      "Full coverage across all 22 telecom circles- Airtel, Jio, Vi, BSNL and all MVNOs.",
   },
 ];
 
 export default function BulkSmsFeatures() {
   return (
     <section
-      aria-label="Why choose us — 6 feature cards"
+      aria-label="Why choose us- 6 feature cards"
       className="py-20 sm:py-28 bg-(--surface-1) relative"
       style={{
         backgroundImage: "url('/images/get-click-media-bg.png')",

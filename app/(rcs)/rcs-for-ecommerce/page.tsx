@@ -7,14 +7,14 @@ import { ArrowRight, CheckCheck, Zap, Shield, BarChart3, MessageSquare, Layers, 
 export const metadata: Metadata = {
   title: "RCS Messaging for E-commerce: Drive Sales, Recover Carts & Retain Customers | Get Click Media",
   description:
-    "RCS messaging for e-commerce in India — flash sale carousels, abandoned cart recovery, order tracking, loyalty campaigns. See how Indian brands drive 5x ROI with RCS. Get a free demo.",
+    "RCS messaging for e-commerce in India- flash sale carousels, abandoned cart recovery, order tracking, loyalty campaigns. See how Indian brands drive 5x ROI with RCS. Get a free demo.",
   keywords:
     "RCS for E-commerce, RCS Ecommerce Marketing, RCS for Online Shopping India, RCS Cart Recovery, RCS Product Carousel India",
   alternates: { canonical: "https://getclickmedia.com/rcs-for-ecommerce" },
   openGraph: {
     title: "RCS Messaging for E-commerce: Drive Sales, Recover Carts & Retain Customers | Get Click Media",
     description:
-      "RCS messaging for e-commerce in India — flash sale carousels, abandoned cart recovery, order tracking, loyalty campaigns. See how Indian brands drive 5x ROI with RCS.",
+      "RCS messaging for e-commerce in India- flash sale carousels, abandoned cart recovery, order tracking, loyalty campaigns. See how Indian brands drive 5x ROI with RCS.",
     url: "https://getclickmedia.com/rcs-for-ecommerce",
     type: "website",
   },
@@ -27,7 +27,7 @@ const schema = {
     {
       "@type": "Service",
       "name": "RCS Messaging for E-commerce",
-      "description": "RCS Business Messaging service for Indian e-commerce brands — flash sale carousels, abandoned cart recovery, order tracking, loyalty campaigns, and personalised product recommendations.",
+      "description": "RCS Business Messaging service for Indian e-commerce brands- flash sale carousels, abandoned cart recovery, order tracking, loyalty campaigns, and personalised product recommendations.",
       "provider": {
         "@type": "Organization",
         "name": "Get Click Media",
@@ -37,7 +37,7 @@ const schema = {
         "@type": "Country",
         "name": "India"
       },
-      "serviceType": "RCS Business Messaging — E-commerce",
+      "serviceType": "RCS Business Messaging- E-commerce",
       "url": "https://getclickmedia.com/rcs-for-ecommerce"
     },
     {
@@ -65,11 +65,11 @@ const schema = {
         },
         {
           "@type": "Question", "name": "Does RCS work with Shopify stores in India?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Get Click Media provides a native Shopify plugin for automated order events — confirmations, cart abandonment, delivery tracking, review requests — with no custom development." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Get Click Media provides a native Shopify plugin for automated order events- confirmations, cart abandonment, delivery tracking, review requests- with no custom development." }
         },
         {
           "@type": "Question", "name": "Can RCS reach customers without WhatsApp?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. RCS reaches all Android users via their native messaging app — no WhatsApp app or opt-in required. Get Click Media sends SMS fallback to non-RCS devices automatically." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. RCS reaches all Android users via their native messaging app- no WhatsApp app or opt-in required. Get Click Media sends SMS fallback to non-RCS devices automatically." }
         },
         {
           "@type": "Question", "name": "How quickly can I start RCS for my e-commerce store?",
@@ -109,7 +109,7 @@ const ECOMMERCE_USE_CASES = [
   {
     icon: Package,
     title: "Order Confirmation & Tracking",
-    scenario: "Immediately on order placement. Transactional message — always delivered regardless of DND status.",
+    scenario: "Immediately on order placement. Transactional message- always delivered regardless of DND status.",
     solution: "Rich card: order summary (product name, quantity, price, address snippet), estimated delivery date, and 3 buttons: 'Track Order' (links to tracking URL), 'View Order Details', 'Contact Support'.",
     result: "Reduced support tickets by 35%. 60% of customers track delivery via the message.",
     image: "/images/rcs/ecommerce-order-tracking.webp"
@@ -142,7 +142,7 @@ const ECOMMERCE_USE_CASES = [
     icon: TrendingUp,
     title: "Price Drop Alert",
     scenario: "Customer has wishlisted a product. Triggered when the product price drops by a defined threshold (e.g., 15%+) or when a coupon becomes available.",
-    solution: "Rich card: product image, old price (crossed out), new lower price, savings amount, 'Buy Now — Limited Time' button, stock urgency signal if applicable ('Only 5 left at this price').",
+    solution: "Rich card: product image, old price (crossed out), new lower price, savings amount, 'Buy Now- Limited Time' button, stock urgency signal if applicable ('Only 5 left at this price').",
     result: "41% higher CTR than standard promotional messages. 22% conversion rate from alert to purchase.",
     image: "/images/rcs/ecommerce-price-drop.webp"
   },
@@ -158,7 +158,7 @@ const ECOMMERCE_USE_CASES = [
     icon: Clock,
     title: "New Collection / Brand Launch",
     scenario: "New collection drop, brand collaboration, or category expansion. Sent to engaged customer segments 2–4 hours before public launch.",
-    solution: "Carousel: 6–8 hero products from new collection, each with lifestyle image (not just product), price, 'Early Access — Shop Now' button. Countdown urgency: 'Early access ends in 3 hours'.",
+    solution: "Carousel: 6–8 hero products from new collection, each with lifestyle image (not just product), price, 'Early Access- Shop Now' button. Countdown urgency: 'Early access ends in 3 hours'.",
     result: "3.2x higher CTR vs SMS. 45% of launches sell out within 24 hours.",
     image: "/images/rcs/ecommerce-new-collection.webp"
   }
@@ -169,7 +169,7 @@ const FUNNEL_STAGES = [
   {
     stage: "Awareness",
     challenge: "Reaching new customers without WhatsApp opt-in",
-    solution: "RCS to all Android users on purchased/rented lists — no opt-in barrier",
+    solution: "RCS to all Android users on purchased/rented lists- no opt-in barrier",
     cta: "Explore Collection",
     lift: "+3.2x CTR"
   },
@@ -177,7 +177,7 @@ const FUNNEL_STAGES = [
     stage: "Consideration",
     challenge: "Customer browses but doesn't add to cart",
     solution: "Browse abandonment RCS with viewed product image 30 min later",
-    cta: "View Again — 10% Off",
+    cta: "View Again- 10% Off",
     lift: "+5x engagement"
   },
   {
@@ -191,7 +191,7 @@ const FUNNEL_STAGES = [
     stage: "Conversion",
     challenge: "Price sensitivity blocks final checkout",
     solution: "Price drop alert with product image + expiry countdown",
-    cta: "Buy Now — ₹X Off",
+    cta: "Buy Now- ₹X Off",
     lift: "+41% CTR"
   },
   {
@@ -212,7 +212,7 @@ const FUNNEL_STAGES = [
     stage: "Re-engagement",
     challenge: "Lapsed customers not responding to email",
     solution: "Personalised win-back carousel with last-category products + offer code",
-    cta: "Shop Now — Code X",
+    cta: "Shop Now- Code X",
     lift: "+6.7x vs email"
   }
 ];
@@ -274,9 +274,9 @@ const VERTICAL_STRATEGIES = [
   {
     vertical: "Beauty and Personal Care",
     tactics: [
-      "Use replenishment triggers (customer purchased a moisturiser 45 days ago — send refill prompt)",
+      "Use replenishment triggers (customer purchased a moisturiser 45 days ago- send refill prompt)",
       "Bundle recommendation carousels ('Complete your skincare routine') drive AOV uplift",
-      "RCS loyalty programme messages — points balances, tier upgrades, exclusive member offers",
+      "RCS loyalty programme messages- points balances, tier upgrades, exclusive member offers",
       "Use high-quality product images with lifestyle context"
     ],
     audience: "Driven by repeat purchase and loyalty. Loyalty messages consistently outperform email and SMS."
@@ -287,7 +287,7 @@ const VERTICAL_STRATEGIES = [
       "Focus RCS on highest-friction touchpoints (delivery updates, out-of-stock substitutions)",
       "Out-for-delivery with map button dramatically reduces failed deliveries",
       "Verified sender trust is particularly valuable (fraudulent delivery messages are a growing concern)",
-      "Operate at highest send frequency — multiple messages per week for active customers"
+      "Operate at highest send frequency- multiple messages per week for active customers"
     ],
     audience: "Highest send frequency of any e-commerce vertical. RCS order tracking reduces support tickets significantly."
   },
@@ -296,7 +296,7 @@ const VERTICAL_STRATEGIES = [
     tactics: [
       "Use RCS for new product launches and limited drops (scarcity + exclusivity messaging)",
       "Build a re-engagement flow for customers who haven't purchased in 30 days",
-      "Use post-purchase review requests aggressively — D2C brands live and die by social proof",
+      "Use post-purchase review requests aggressively- D2C brands live and die by social proof",
       "RCS levels the playing field against large platforms with verified sender profile"
     ],
     audience: "D2C brands face the challenge of building brand recall against Flipkart and Meesho without their marketing budgets."
@@ -306,11 +306,11 @@ const VERTICAL_STRATEGIES = [
 const FAQS = [
   {
     q: "How does RCS help e-commerce brands increase sales?",
-    a: "RCS increases e-commerce sales by delivering visual, interactive product messages — carousels with product images, prices, and Buy Now buttons — directly to customers' native messaging apps with verified brand identity. The combination of visual presentation and one-tap purchase action drives click-through rates of 20–35% vs 2–3% for plain SMS. For flash sales, cart recovery, and price drop alerts, RCS consistently generates 5x to 8x higher revenue per message than SMS."
+    a: "RCS increases e-commerce sales by delivering visual, interactive product messages- carousels with product images, prices, and Buy Now buttons- directly to customers' native messaging apps with verified brand identity. The combination of visual presentation and one-tap purchase action drives click-through rates of 20–35% vs 2–3% for plain SMS. For flash sales, cart recovery, and price drop alerts, RCS consistently generates 5x to 8x higher revenue per message than SMS."
   },
   {
     q: "Can RCS recover abandoned carts for Indian e-commerce brands?",
-    a: "Yes. RCS abandoned cart recovery is one of the highest-ROI applications for Indian e-commerce. The message shows the exact product left in the cart — with its image, name, price, and availability signal — along with a 'Complete Your Purchase' button. Triggered automatically 1 hour after cart abandonment, RCS cart recovery generates 18–26% recovery rates vs 3–5% for SMS. A 24-hour follow-up with a small discount offer captures an additional 8–12% of abandons."
+    a: "Yes. RCS abandoned cart recovery is one of the highest-ROI applications for Indian e-commerce. The message shows the exact product left in the cart- with its image, name, price, and availability signal- along with a 'Complete Your Purchase' button. Triggered automatically 1 hour after cart abandonment, RCS cart recovery generates 18–26% recovery rates vs 3–5% for SMS. A 24-hour follow-up with a small discount offer captures an additional 8–12% of abandons."
   },
   {
     q: "Can I show multiple products in one RCS message?",
@@ -318,11 +318,11 @@ const FAQS = [
   },
   {
     q: "How does RCS order tracking work?",
-    a: "RCS order tracking messages are triggered by your logistics or order management system via Get Click Media's API. When an order status changes — confirmed, shipped, out for delivery, delivered — an RCS message is automatically sent with the relevant product image, status update, and action buttons (Track Order, Contact Support, Reschedule Delivery). The out-for-delivery message with a 'Get Directions' map button is particularly effective at reducing failed deliveries."
+    a: "RCS order tracking messages are triggered by your logistics or order management system via Get Click Media's API. When an order status changes- confirmed, shipped, out for delivery, delivered- an RCS message is automatically sent with the relevant product image, status update, and action buttons (Track Order, Contact Support, Reschedule Delivery). The out-for-delivery message with a 'Get Directions' map button is particularly effective at reducing failed deliveries."
   },
   {
     q: "Does RCS work with Shopify stores in India?",
-    a: "Yes. Get Click Media provides a native Shopify plugin that connects your store's order events to RCS campaigns automatically. Order confirmation, dispatch, delivery, cart abandonment, price drop alerts, and review requests are all configured as automated flows within the plugin — no custom development needed. WooCommerce and Magento integrations are also available."
+    a: "Yes. Get Click Media provides a native Shopify plugin that connects your store's order events to RCS campaigns automatically. Order confirmation, dispatch, delivery, cart abandonment, price drop alerts, and review requests are all configured as automated flows within the plugin- no custom development needed. WooCommerce and Magento integrations are also available."
   },
   {
     q: "What is the minimum budget to start RCS e-commerce campaigns in India?",
@@ -330,11 +330,11 @@ const FAQS = [
   },
   {
     q: "Can RCS reach customers who do not have WhatsApp?",
-    a: "Yes. RCS reaches all Android users with Google Messages on Jio, Airtel, and Vi networks — including customers who do not have WhatsApp installed or who are not on your WhatsApp opt-in list. This is a significant advantage for e-commerce brands targeting a broad audience that includes non-WhatsApp users (typically older customers, budget device users, and rural customers). For non-RCS devices, Get Click Media sends SMS fallback automatically."
+    a: "Yes. RCS reaches all Android users with Google Messages on Jio, Airtel, and Vi networks- including customers who do not have WhatsApp installed or who are not on your WhatsApp opt-in list. This is a significant advantage for e-commerce brands targeting a broad audience that includes non-WhatsApp users (typically older customers, budget device users, and rural customers). For non-RCS devices, Get Click Media sends SMS fallback automatically."
   },
   {
     q: "How quickly can I launch my first RCS campaign?",
-    a: "Google brand verification takes 5–7 business days — Get Click Media manages this on your behalf. For Shopify stores, the plugin integration takes under 60 minutes once verification is complete. For custom API integrations, typical development time is 1–2 days for standard event triggers. Most e-commerce clients are live with their first RCS campaign within 7–10 business days of starting the onboarding process."
+    a: "Google brand verification takes 5–7 business days- Get Click Media manages this on your behalf. For Shopify stores, the plugin integration takes under 60 minutes once verification is complete. For custom API integrations, typical development time is 1–2 days for standard event triggers. Most e-commerce clients are live with their first RCS campaign within 7–10 business days of starting the onboarding process."
   }
 ];
 
@@ -346,7 +346,7 @@ export default function RCSCommercePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       {/* -----------------------------------------------------------------
-          HERO — with breadcrumb inside
+          HERO- with breadcrumb inside
       ----------------------------------------------------------------- */}
       <section className="relative overflow-hidden mt-2 bg-white bg-[radial-gradient(130%_130%_at_100%_100%,#5b7fe8_0%,#93aef0_25%,#d6e2ff_55%,#ffffff_85%)] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
@@ -375,7 +375,7 @@ export default function RCSCommercePage() {
 
               <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-xl">
                 India&apos;s e-commerce market crossed ₹5 lakh crore in 2025. Every major platform
-                is fighting for customer attention — and that attention is being won or lost
+                is fighting for customer attention- and that attention is being won or lost
                 in the messaging inbox. RCS gives you product carousels, Buy Now buttons,
                 and verified sender identity that customers trust.
               </p>
@@ -438,7 +438,7 @@ export default function RCSCommercePage() {
             <div className="w-full lg:w-1/2 relative min-h-[250px] sm:min-h-[350px] lg:min-h-[500px]">
               <Image
                 src="/images/rcs/ecommerce-why-rcs.webp"
-                alt="E-commerce messaging comparison — SMS vs RCS visual"
+                alt="E-commerce messaging comparison- SMS vs RCS visual"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-contain"
@@ -460,11 +460,11 @@ export default function RCSCommercePage() {
               <div className="space-y-4">
                 <div className="bg-red-50 rounded-xl p-4 border border-red-100">
                   <h4 className="text-sm font-bold text-red-600 mb-2">✕ Products cannot be sold by text</h4>
-                  <p className="text-sm text-gray-600">A flash sale on a smartphone, a Diwali collection drop — these are visual purchase decisions. SMS cannot show the product. India&apos;s e-commerce CTR on SMS averages 1.5–3%.</p>
+                  <p className="text-sm text-gray-600">A flash sale on a smartphone, a Diwali collection drop- these are visual purchase decisions. SMS cannot show the product. India&apos;s e-commerce CTR on SMS averages 1.5–3%.</p>
                 </div>
                 <div className="bg-amber-50 rounded-xl p-4 border border-amber-100">
                   <h4 className="text-sm font-bold text-amber-600 mb-2">✕ Unverified sender identity destroys trust</h4>
-                  <p className="text-sm text-gray-600">Indian consumers receive dozens of promotional messages daily from unknown sender IDs. RCS puts your brand&apos;s verified name and logo at the top of every message — visible before the customer opens it.</p>
+                  <p className="text-sm text-gray-600">Indian consumers receive dozens of promotional messages daily from unknown sender IDs. RCS puts your brand&apos;s verified name and logo at the top of every message- visible before the customer opens it.</p>
                 </div>
                 <div className="bg-blue-50 rounded-xl p-4 border border-blue-100">
                   <h4 className="text-sm font-bold text-blue-600 mb-2">✓ No engagement data means no optimisation</h4>
@@ -540,7 +540,7 @@ export default function RCSCommercePage() {
               RCS Across the Full E-commerce Marketing Funnel
             </h2>
             <p className="text-gray-400 text-base max-w-2xl mx-auto">
-              RCS maps to every stage of the e-commerce customer lifecycle — from acquisition
+              RCS maps to every stage of the e-commerce customer lifecycle- from acquisition
               through to retention.
             </p>
           </div>
@@ -619,7 +619,7 @@ export default function RCSCommercePage() {
             <p className="text-white/80 text-sm leading-relaxed">
               <span className="text-[#38bdf8] font-bold">Interpretation:</span> RCS costs ₹8,000 more to send.
               It generates <span className="text-white font-bold">₹28,90,800 more in revenue</span>. For every rupee spent on RCS messaging,
-              the brand earns <span className="text-white font-bold">₹151</span> — vs ₹10 for SMS. The ROI differential is structural,
+              the brand earns <span className="text-white font-bold">₹151</span>- vs ₹10 for SMS. The ROI differential is structural,
               driven by visual product presentation, verified trust, and measurable engagement.
             </p>
           </div>
@@ -673,9 +673,9 @@ export default function RCSCommercePage() {
               <ul className="space-y-4">
                 {[
                   { title: "Shopify, WooCommerce & Magento integrations", desc: "Pre-built plugins for the three platforms powering the majority of Indian D2C stores. Install, connect, and your store's order events automatically trigger RCS messages." },
-                  { title: "Real-time personalisation engine", desc: "Dynamic personalisation fields — customer name, product names, prices, order numbers, points balances, discount codes — inserted at the point of send." },
+                  { title: "Real-time personalisation engine", desc: "Dynamic personalisation fields- customer name, product names, prices, order numbers, points balances, discount codes- inserted at the point of send." },
                   { title: "A/B testing for e-commerce campaigns", desc: "Test message format, send time, CTA labels, carousel length, and offer type. Dashboard shows statistical significance alongside performance metrics." },
-                  { title: "Segment-based sending", desc: "Upload segmented customer lists or connect via API to your CDP. Send different campaigns to different segments simultaneously — VIPs, bargain hunters, lapsed customers." },
+                  { title: "Segment-based sending", desc: "Upload segmented customer lists or connect via API to your CDP. Send different campaigns to different segments simultaneously- VIPs, bargain hunters, lapsed customers." },
                   { title: "Unified RCS + SMS + WhatsApp", desc: "RCS for visual campaigns, WhatsApp for support and community, SMS as universal fallback and OTP delivery. One platform, one API, one analytics view." },
                   { title: "Analytics built for e-commerce", desc: "Track delivery, read rate, CTR per carousel card, conversion rate per button, revenue per campaign, cost per order, and ROAS. Export to GA, Mixpanel, or any BI tool." },
                 ].map(p => (
@@ -706,7 +706,7 @@ export default function RCSCommercePage() {
 
       {/* -- FAQ ------------------------------------------------------------ */}
       <section className="py-20 sm:py-28 bg-white" id="faq">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
               Frequently Asked Questions
@@ -715,21 +715,34 @@ export default function RCSCommercePage() {
               RCS Messaging for E-commerce in India
             </h2>
           </div>
-          <div className="space-y-3">
-            {FAQS.map((faq, i) => (
-              <details
-                key={i}
-                className="group rounded-2xl bg-gray-50 border border-gray-100 shadow-sm open:shadow-md transition-shadow"
-              >
-                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
-                  <span className="text-sm font-semibold text-gray-900 leading-snug">{faq.q}</span>
-                  <ChevronDown className="w-4 h-4 text-gray-400 shrink-0 transition-transform group-open:rotate-180" />
-                </summary>
-                <div className="px-6 pb-5">
-                  <p className="text-sm text-gray-500 leading-relaxed">{faq.a}</p>
-                </div>
-              </details>
-            ))}
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
+            <div className="hidden lg:block lg:w-[36%] shrink-0 lg:sticky lg:top-24">
+              <div className="relative w-full rounded-2xl overflow-hidden aspect-4/5">
+                <Image
+                  src="/images/rcs/ecommerce-dashboard.png"
+                  alt="Ask a question about RCS messaging for e-commerce"
+                  fill
+                  className="object-cover"
+                  sizes="36vw"
+                />
+              </div>
+            </div>
+            <div className="flex-1 w-full space-y-3">
+              {FAQS.map((faq, i) => (
+                <details
+                  key={i}
+                  className="group rounded-2xl bg-gray-50 border border-gray-100 shadow-sm open:shadow-md transition-shadow"
+                >
+                  <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
+                    <span className="text-sm font-semibold text-gray-900 leading-snug">{faq.q}</span>
+                    <ChevronDown className="w-4 h-4 text-gray-400 shrink-0 transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-5">
+                    <p className="text-sm text-gray-500 leading-relaxed">{faq.a}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
           </div>
         </div>
       </section>

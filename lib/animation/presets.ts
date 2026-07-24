@@ -21,7 +21,7 @@ const D = REVEAL_DISTANCE;
 
 /**
  * from/to pairs for every reveal preset. `to` intentionally omits
- * duration/ease/delay/stagger — callers (useReveal, Reveal, RevealInit) merge
+ * duration/ease/delay/stagger- callers (useReveal, Reveal, RevealInit) merge
  * those in per-instance so one preset table drives every entry point.
  */
 export const PRESETS: Record<PresetName, PresetDef> = {

@@ -11,7 +11,7 @@ const features = [
     icon: ShieldCheck,
     title: "DLT Registration Support",
     description:
-      "We handle your complete TRAI DLT setup — entity, transactional sender ID, and template registration — so you go live without delays.",
+      "We handle your complete TRAI DLT setup- entity, transactional sender ID, and template registration- so you go live without delays.",
   },
   {
     icon: BellRing,
@@ -29,7 +29,7 @@ const features = [
     icon: Globe,
     title: "Pan-India Coverage",
     description:
-      "Full coverage across all 22 telecom circles — Airtel, Jio, Vi, BSNL and all MVNOs — with real-time delivery confirmation.",
+      "Full coverage across all 22 telecom circles- Airtel, Jio, Vi, BSNL and all MVNOs- with real-time delivery confirmation.",
   },
   {
     icon: Headphones,
@@ -42,7 +42,7 @@ const features = [
 export default function TransactionalSmsFeatures() {
   return (
     <section
-      aria-label="Why choose us — 6 transactional SMS feature cards"
+      aria-label="Why choose us- 6 transactional SMS feature cards"
       className="py-20 sm:py-28 bg-(--surface-1) relative"
       style={{
         backgroundImage: "url('/images/get-click-media-bg.png')",

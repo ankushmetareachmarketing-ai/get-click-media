@@ -1,6 +1,6 @@
 ---
-title: "WhatsApp Business API Setup Guide — Complete Technical Configuration 2026"
-description: "Setting up WhatsApp Business API involves Meta Business Manager, business verification, WABA creation, phone number registration, Cloud API configuration, webhook setup, and message templates. Get Click Media manages all steps — go live in 3 to 5 days."
+title: "WhatsApp Business API Setup Guide- Complete Technical Configuration 2026"
+description: "Setting up WhatsApp Business API involves Meta Business Manager, business verification, WABA creation, phone number registration, Cloud API configuration, webhook setup, and message templates. Get Click Media manages all steps- go live in 3 to 5 days."
 slug: "whatsapp-business-api-setup-guide"
 image: "/images/blog/whatsapp-business-api-setup-guide.webp"
 author: "Get Click Media"
@@ -17,7 +17,7 @@ keywords:
 howTo:
   totalTime: "P5D"
   steps:
-    - name: "Meta Business Manager — create and verify"
+    - name: "Meta Business Manager- create and verify"
       text: "Create or claim your Business Manager account at business.facebook.com. Submit for Meta business verification with Certificate of Incorporation, website URL, and phone number."
     - name: "Create WhatsApp Business Account (WABA)"
       text: "Inside Meta Business Manager, add a WhatsApp Account under Business Settings. The WABA holds your phone number, display name, and templates."
@@ -33,66 +33,66 @@ howTo:
       text: "Send a test message to your own phone, verify webhook delivery receipts, chatbot replies, and CRM sync before signing off on go-live."
 faq:
   - question: "How long does WhatsApp Business API setup take?"
-    answer: "With Get Click Media, 3 to 5 business days end-to-end. Meta verification takes 1 to 3 days. Template approval takes 1 to 3 days. Both run in parallel — reducing total timeline. Businesses with an existing verified Meta Business Manager go live even faster."
+    answer: "With Get Click Media, 3 to 5 business days end-to-end. Meta verification takes 1 to 3 days. Template approval takes 1 to 3 days. Both run in parallel- reducing total timeline. Businesses with an existing verified Meta Business Manager go live even faster."
   - question: "Can I set up WhatsApp Business API without a developer?"
-    answer: "For the basic setup — account creation, number registration, template submission — Get Click Media handles everything without requiring a developer from your team. If you want to build custom integrations (webhook handler, CRM sync, chatbot logic), developer involvement is needed. Get Click Media provides full API documentation and code samples."
+    answer: "For the basic setup- account creation, number registration, template submission- Get Click Media handles everything without requiring a developer from your team. If you want to build custom integrations (webhook handler, CRM sync, chatbot logic), developer involvement is needed. Get Click Media provides full API documentation and code samples."
   - question: "What is WhatsApp Cloud API and do I need it?"
-    answer: "WhatsApp Cloud API is Meta's hosted infrastructure for WhatsApp Business API — you do not manage any servers, and the API is always on the latest version. It is the standard for all new WhatsApp Business Platform accounts. The old On-Premise API (self-hosted) was deprecated by Meta for new accounts. Get Click Media uses Cloud API exclusively."
+    answer: "WhatsApp Cloud API is Meta's hosted infrastructure for WhatsApp Business API- you do not manage any servers, and the API is always on the latest version. It is the standard for all new WhatsApp Business Platform accounts. The old On-Premise API (self-hosted) was deprecated by Meta for new accounts. Get Click Media uses Cloud API exclusively."
   - question: "What is a System User in Meta Business Manager?"
     answer: "A System User is a non-human Meta account used for API authentication. It generates permanent access tokens that do not expire (unlike personal user tokens that expire after 60 days). Get Click Media creates a System User in your Meta Business Manager specifically for WhatsApp API authentication."
 ---
 
-Setting up WhatsApp Business API involves: creating a Meta Business Manager account, completing business verification, creating a WhatsApp Business Account (WABA), registering a dedicated phone number, configuring the WhatsApp Cloud API, setting up a webhook endpoint for inbound messages, and submitting message templates. Get Click Media manages all setup steps — businesses go live in 3 to 5 days without handling any Meta portal directly.
+Setting up WhatsApp Business API involves: creating a Meta Business Manager account, completing business verification, creating a WhatsApp Business Account (WABA), registering a dedicated phone number, configuring the WhatsApp Cloud API, setting up a webhook endpoint for inbound messages, and submitting message templates. Get Click Media manages all setup steps- businesses go live in 3 to 5 days without handling any Meta portal directly.
 
-This guide is for businesses that want to understand the complete technical setup behind [WhatsApp Business API](/whatsapp-business-api) — whether you are a developer configuring the integration, a tech lead evaluating the platform, or a business owner who wants to know what is happening under the hood. If you just want the plain-English overview, see [how to get WhatsApp Business API](/blog/how-to-get-whatsapp-business-api) instead.
+This guide is for businesses that want to understand the complete technical setup behind [WhatsApp Business API](/whatsapp-business-api)- whether you are a developer configuring the integration, a tech lead evaluating the platform, or a business owner who wants to know what is happening under the hood. If you just want the plain-English overview, see [how to get WhatsApp Business API](/blog/how-to-get-whatsapp-business-api) instead.
 
-## WhatsApp Business API Architecture — What Gets Set Up
+## WhatsApp Business API Architecture- What Gets Set Up
 
 | Component | What it is | Setup owner |
 |---|---|---|
-| Meta Business Manager | Central hub for all Meta business assets — Facebook, Instagram, WhatsApp, Commerce | Business owner (GCM assists) |
-| WhatsApp Business Account (WABA) | The enterprise WhatsApp entity tied to your Meta BM — holds your number, name, templates | GCM creates and manages |
-| Phone Number | A dedicated number registered on the Platform — displays your verified business name | Business provides — GCM registers |
-| WhatsApp Cloud API | Meta-hosted API endpoint that handles message routing, delivery, webhooks | Meta provides — GCM integrates |
+| Meta Business Manager | Central hub for all Meta business assets- Facebook, Instagram, WhatsApp, Commerce | Business owner (GCM assists) |
+| WhatsApp Business Account (WABA) | The enterprise WhatsApp entity tied to your Meta BM- holds your number, name, templates | GCM creates and manages |
+| Phone Number | A dedicated number registered on the Platform- displays your verified business name | Business provides- GCM registers |
+| WhatsApp Cloud API | Meta-hosted API endpoint that handles message routing, delivery, webhooks | Meta provides- GCM integrates |
 | Message Templates | Pre-approved message formats for business-initiated outbound messages | GCM drafts and submits to Meta |
-| Webhook Endpoint | HTTPS endpoint on your server that receives inbound messages and delivery events | Your dev team builds — GCM docs provided |
+| Webhook Endpoint | HTTPS endpoint on your server that receives inbound messages and delivery events | Your dev team builds- GCM docs provided |
 | Campaign Dashboard | Get Click Media's no-code interface for broadcast sends and campaign management | GCM provides access |
 
 ## Step-by-Step WhatsApp Business API Setup
 
-### 1. Meta Business Manager — Create and Verify
+### 1. Meta Business Manager- Create and Verify
 
 Go to business.facebook.com. Create a new Business Manager account or claim your existing one. Add your business name, website, and contact details. Submit for [Meta business verification](/blog/meta-business-verification) with: Certificate of Incorporation, business website URL, and the phone number you want to use.
 
-> Tip: Use a business email domain (company.com) rather than Gmail for the Meta BM account — Meta gives higher trust scores to domain emails.
+> Tip: Use a business email domain (company.com) rather than Gmail for the Meta BM account- Meta gives higher trust scores to domain emails.
 
 ### 2. Create WhatsApp Business Account (WABA)
 
 Inside Meta Business Manager, navigate to Business Settings > Accounts > WhatsApp Accounts. Click Add and follow the prompts. Your WABA is the container that holds your WhatsApp phone number, display name, and templates. Get Click Media does this on your behalf after gaining Business Manager access.
 
-> Your WABA is permanently tied to your Meta Business Manager. If you switch BSPs, the WABA transfers — you do not lose your account.
+> Your WABA is permanently tied to your Meta Business Manager. If you switch BSPs, the WABA transfers- you do not lose your account.
 
 ### 3. Register Your Phone Number
 
-Add a new phone number to your WABA. The number can be a mobile, landline, or VoIP number. During registration, Meta sends a verification OTP to the number — you must be able to receive calls or SMS on it. Once registered, the number cannot be used simultaneously on WhatsApp Business App.
+Add a new phone number to your WABA. The number can be a mobile, landline, or VoIP number. During registration, Meta sends a verification OTP to the number- you must be able to receive calls or SMS on it. Once registered, the number cannot be used simultaneously on WhatsApp Business App.
 
-> Choose your phone number carefully — it becomes your permanent WhatsApp business identity. Changing it later requires re-verification.
+> Choose your phone number carefully- it becomes your permanent WhatsApp business identity. Changing it later requires re-verification.
 
 ### 4. Configure WhatsApp Cloud API Access
 
-Get Click Media creates a System User in your Meta Business Manager, generates a permanent access token, and configures it in our platform. This token authenticates all API calls from your account. You also receive a Phone Number ID — required for every API request. These credentials are available in your GCM dashboard.
+Get Click Media creates a System User in your Meta Business Manager, generates a permanent access token, and configures it in our platform. This token authenticates all API calls from your account. You also receive a Phone Number ID- required for every API request. These credentials are available in your GCM dashboard.
 
-> Store credentials in environment variables — never hardcode API keys in application code.
+> Store credentials in environment variables- never hardcode API keys in application code.
 
 ### 5. Set Up Webhook Endpoint
 
-Create an HTTPS endpoint on your server (e.g. `https://yourapp.com/webhook/whatsapp`) to receive events from WhatsApp. Register this URL in your Meta App settings. Meta sends a verification challenge (GET request) — your endpoint must respond with the challenge token. After verification, all inbound messages and status updates are delivered to this endpoint as JSON POST requests.
+Create an HTTPS endpoint on your server (e.g. `https://yourapp.com/webhook/whatsapp`) to receive events from WhatsApp. Register this URL in your Meta App settings. Meta sends a verification challenge (GET request)- your endpoint must respond with the challenge token. After verification, all inbound messages and status updates are delivered to this endpoint as JSON POST requests.
 
 > Your webhook must respond with HTTP 200 within 5 seconds. Acknowledge first, then process asynchronously to prevent timeouts.
 
 ### 6. Submit Message Templates
 
-All business-initiated WhatsApp messages must use pre-approved templates. In your Meta Business Manager > WhatsApp Manager > Message Templates, create templates for your use cases: OTP, order confirmation, appointment reminder, campaign. Get Click Media drafts and submits all templates — most approved within 1 to 3 business days.
+All business-initiated WhatsApp messages must use pre-approved templates. In your Meta Business Manager > WhatsApp Manager > Message Templates, create templates for your use cases: OTP, order confirmation, appointment reminder, campaign. Get Click Media drafts and submits all templates- most approved within 1 to 3 business days.
 
 > Template categories: Marketing (promotions), Utility (transactional), Authentication (OTP). Category determines pricing. Get Click Media reviews all templates for compliance before submission.
 
@@ -106,22 +106,22 @@ Send a test message to your own phone using the approved template and API creden
 
 | Error | Cause | Fix |
 |---|---|---|
-| Template rejected — policy violation | Template contains promotional language in Utility category | Change template category to Marketing or remove promotional elements. GCM reviews all templates before submission. |
+| Template rejected- policy violation | Template contains promotional language in Utility category | Change template category to Marketing or remove promotional elements. GCM reviews all templates before submission. |
 | Webhook verification failing | Endpoint not returning challenge token correctly | Check GET vs POST handling. Endpoint must return the `hub.challenge` query param value as plain text with HTTP 200. |
-| Phone number registration OTP not received | Number already registered on WhatsApp Consumer or Business App | Deregister from existing WhatsApp first — then re-attempt API registration. |
-| Messages not delivering | Account in restricted or flagged state | Check WhatsApp Manager for quality rating and messaging limits. Contact GCM immediately — do not send more messages until resolved. |
+| Phone number registration OTP not received | Number already registered on WhatsApp Consumer or Business App | Deregister from existing WhatsApp first- then re-attempt API registration. |
+| Messages not delivering | Account in restricted or flagged state | Check WhatsApp Manager for quality rating and messaging limits. Contact GCM immediately- do not send more messages until resolved. |
 | API returning 401 Unauthorized | System User access token expired or invalid | Regenerate permanent token in Meta Business Manager > System Users. Update in GCM dashboard. |
 
-## Frequently Asked Questions — WhatsApp API Setup
+## Frequently Asked Questions- WhatsApp API Setup
 
 **How long does WhatsApp Business API setup take?**
-With Get Click Media, 3 to 5 business days end-to-end. Meta verification takes 1 to 3 days. Template approval takes 1 to 3 days. Both run in parallel — reducing total timeline. Businesses with an existing verified Meta Business Manager go live even faster.
+With Get Click Media, 3 to 5 business days end-to-end. Meta verification takes 1 to 3 days. Template approval takes 1 to 3 days. Both run in parallel- reducing total timeline. Businesses with an existing verified Meta Business Manager go live even faster.
 
 **Can I set up WhatsApp Business API without a developer?**
-For the basic setup — account creation, number registration, template submission — Get Click Media handles everything without requiring a developer from your team. If you want to build custom integrations (webhook handler, CRM sync, chatbot logic), developer involvement is needed. Get Click Media provides full API documentation and code samples.
+For the basic setup- account creation, number registration, template submission- Get Click Media handles everything without requiring a developer from your team. If you want to build custom integrations (webhook handler, CRM sync, chatbot logic), developer involvement is needed. Get Click Media provides full API documentation and code samples.
 
 **What is WhatsApp Cloud API and do I need it?**
-WhatsApp Cloud API is Meta's hosted infrastructure for WhatsApp Business API — you do not manage any servers, and the API is always on the latest version. It is the standard for all new WhatsApp Business Platform accounts. The old On-Premise API (self-hosted) was deprecated by Meta for new accounts. Get Click Media uses Cloud API exclusively.
+WhatsApp Cloud API is Meta's hosted infrastructure for WhatsApp Business API- you do not manage any servers, and the API is always on the latest version. It is the standard for all new WhatsApp Business Platform accounts. The old On-Premise API (self-hosted) was deprecated by Meta for new accounts. Get Click Media uses Cloud API exclusively.
 
 **What is a System User in Meta Business Manager?**
 A System User is a non-human Meta account used for API authentication. It generates permanent access tokens that do not expire (unlike personal user tokens that expire after 60 days). Get Click Media creates a System User in your Meta Business Manager specifically for WhatsApp API authentication.
@@ -130,4 +130,4 @@ A System User is a non-human Meta account used for API authentication. It genera
 
 Prefer to skip the technical detail and just get set up? See our plain-English [how to get WhatsApp Business API](/blog/how-to-get-whatsapp-business-api) guide, or dive into [WhatsApp API integration](/blog/whatsapp-api-integration) for CRM and workflow patterns once you're live.
 
-**Get [WhatsApp Business API](/whatsapp-business-api)** — [Start Onboarding](/contact) · [Request a Demo](/contact) · [View Pricing](/blog/whatsapp-api-pricing-india)
+**Get [WhatsApp Business API](/whatsapp-business-api)**- [Start Onboarding](/contact) · [Request a Demo](/contact) · [View Pricing](/blog/whatsapp-api-pricing-india)

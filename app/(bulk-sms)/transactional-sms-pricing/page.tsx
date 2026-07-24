@@ -16,14 +16,14 @@ import {
 import { PricingPageTemplate } from "../_templates/pricing-page-template";
 
 export const metadata: Metadata = {
-  title: "Transactional SMS Pricing in India 2026 — DND-Exempt SMS Rates | Get Click Media",
+  title: "Transactional SMS Pricing in India 2026- DND-Exempt SMS Rates | Get Click Media",
   description:
     "Transactional SMS pricing in India starts at ₹0.09 per SMS on the Growth plan. Compare Starter, Growth, and Enterprise plans for DND-exempt SMS delivery of OTPs, alerts, and service messages.",
   keywords:
     "transactional sms pricing india, transactional sms cost, dnd exempt sms price, transactional sms rate per message, transactional sms plans india",
   alternates: { canonical: "https://getclickmedia.com/transactional-sms-pricing" },
   openGraph: {
-    title: "Transactional SMS Pricing in India 2026 — DND-Exempt SMS Rates",
+    title: "Transactional SMS Pricing in India 2026- DND-Exempt SMS Rates",
     description:
       "Transactional SMS pricing in India starts at ₹0.09 per SMS. Compare plans, volume-based rates, and DND-exempt delivery.",
     url: "https://getclickmedia.com/transactional-sms-pricing",
@@ -44,7 +44,7 @@ const schema = {
     },
     {
       "@type": "Product",
-      name: "Transactional SMS Service — Get Click Media",
+      name: "Transactional SMS Service- Get Click Media",
       description: "Transactional SMS service for DND-exempt OTPs, alerts, and service messages in India with TRAI DLT compliance support and 99.9% delivery uptime.",
       offers: {
         "@type": "AggregateOffer",
@@ -79,7 +79,7 @@ const schema = {
           name: "What's the difference between transactional and promotional SMS pricing?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Transactional SMS reaches DND-registered numbers because it's service or account-related communication — OTPs, alerts, confirmations — while promotional SMS can only reach numbers not registered on DND and is used for marketing content. Get Click Media prices both routes identically per SMS across all plans; the difference is regulatory (which numbers each route may legally reach), not a price premium.",
+            text: "Transactional SMS reaches DND-registered numbers because it's service or account-related communication- OTPs, alerts, confirmations- while promotional SMS can only reach numbers not registered on DND and is used for marketing content. Get Click Media prices both routes identically per SMS across all plans; the difference is regulatory (which numbers each route may legally reach), not a price premium.",
           },
         },
         {
@@ -87,7 +87,7 @@ const schema = {
           name: "Do I need a separate DLT template for transactional SMS?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes — transactional SMS templates are registered separately from promotional templates on the TRAI DLT platform, under the same entity ID, and must match the exact message format that will be sent (with variable fields marked). Get Click Media's onboarding team handles this registration as part of every plan at no extra platform fee.",
+            text: "Yes- transactional SMS templates are registered separately from promotional templates on the TRAI DLT platform, under the same entity ID, and must match the exact message format that will be sent (with variable fields marked). Get Click Media's onboarding team handles this registration as part of every plan at no extra platform fee.",
           },
         },
         {
@@ -95,7 +95,7 @@ const schema = {
           name: "Is transactional SMS pricing the same for OTPs and other alerts?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes — OTPs, payment confirmations, delivery alerts, and account notifications are all transactional content billed at the same per-SMS rate on Get Click Media's plans. There's no separate 'OTP-only' pricing tier; the transactional route pricing applies uniformly to all DND-exempt service messages.",
+            text: "Yes- OTPs, payment confirmations, delivery alerts, and account notifications are all transactional content billed at the same per-SMS rate on Get Click Media's plans. There's no separate 'OTP-only' pricing tier; the transactional route pricing applies uniformly to all DND-exempt service messages.",
           },
         },
         {
@@ -103,7 +103,7 @@ const schema = {
           name: "Can transactional SMS volume be mixed with promotional SMS on the same plan?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes — Starter and Growth plans support both transactional and promotional SMS from the same account, billed at the same per-SMS rate, with the platform automatically routing each message correctly based on its registered template category so DND compliance is handled without manual selection.",
+            text: "Yes- Starter and Growth plans support both transactional and promotional SMS from the same account, billed at the same per-SMS rate, with the platform automatically routing each message correctly based on its registered template category so DND compliance is handled without manual selection.",
           },
         },
       ],
@@ -178,7 +178,7 @@ const COMPARISON_ROWS = [
 ];
 
 const FACTORS = [
-  { icon: Layers, title: "Monthly transactional SMS volume", desc: "Price per SMS drops as your monthly volume slab increases — from ₹0.12 at low volume to ₹0.065-0.07 at 5,00,000+ SMS/month" },
+  { icon: Layers, title: "Monthly transactional SMS volume", desc: "Price per SMS drops as your monthly volume slab increases- from ₹0.12 at low volume to ₹0.065-0.07 at 5,00,000+ SMS/month" },
   { icon: ShieldOff, title: "DND-exempt route access", desc: "Transactional routing that legally reaches DND-registered numbers is included at the standard per-SMS rate, not sold as a premium add-on" },
   { icon: Route, title: "Route priority & reliability", desc: "Direct operator connections for time-critical alerts are included on Growth and Enterprise plans for consistent low-latency delivery" },
   { icon: FileText, title: "Template registration", desc: "Every transactional template must be pre-registered on TRAI DLT with exact message format; GCM includes this in onboarding" },
@@ -202,19 +202,19 @@ const FAQS = [
   },
   {
     q: "What's the difference between transactional and promotional SMS pricing?",
-    a: "Transactional SMS reaches DND-registered numbers because it's service or account-related communication — OTPs, alerts, confirmations — while promotional SMS can only reach numbers not registered on DND and is used for marketing content. Get Click Media prices both routes identically per SMS across all plans; the difference is regulatory (which numbers each route may legally reach), not a price premium.",
+    a: "Transactional SMS reaches DND-registered numbers because it's service or account-related communication- OTPs, alerts, confirmations- while promotional SMS can only reach numbers not registered on DND and is used for marketing content. Get Click Media prices both routes identically per SMS across all plans; the difference is regulatory (which numbers each route may legally reach), not a price premium.",
   },
   {
     q: "Do I need a separate DLT template for transactional SMS?",
-    a: "Yes — transactional SMS templates are registered separately from promotional templates on the TRAI DLT platform, under the same entity ID, and must match the exact message format that will be sent (with variable fields marked). Get Click Media's onboarding team handles this registration as part of every plan at no extra platform fee.",
+    a: "Yes- transactional SMS templates are registered separately from promotional templates on the TRAI DLT platform, under the same entity ID, and must match the exact message format that will be sent (with variable fields marked). Get Click Media's onboarding team handles this registration as part of every plan at no extra platform fee.",
   },
   {
     q: "Is transactional SMS pricing the same for OTPs and other alerts?",
-    a: "Yes — OTPs, payment confirmations, delivery alerts, and account notifications are all transactional content billed at the same per-SMS rate on Get Click Media's plans. There's no separate 'OTP-only' pricing tier; the transactional route pricing applies uniformly to all DND-exempt service messages.",
+    a: "Yes- OTPs, payment confirmations, delivery alerts, and account notifications are all transactional content billed at the same per-SMS rate on Get Click Media's plans. There's no separate 'OTP-only' pricing tier; the transactional route pricing applies uniformly to all DND-exempt service messages.",
   },
   {
     q: "Can transactional SMS volume be mixed with promotional SMS on the same plan?",
-    a: "Yes — Starter and Growth plans support both transactional and promotional SMS from the same account, billed at the same per-SMS rate, with the platform automatically routing each message correctly based on its registered template category so DND compliance is handled without manual selection.",
+    a: "Yes- Starter and Growth plans support both transactional and promotional SMS from the same account, billed at the same per-SMS rate, with the platform automatically routing each message correctly based on its registered template category so DND compliance is handled without manual selection.",
   },
 ];
 
@@ -237,13 +237,13 @@ export default function TransactionalSmsPricingPage() {
       heroHighlight="DND-Exempt SMS Rates"
       heroDescription={
         <>
-          Transparent, volume-based transactional SMS pricing for Indian businesses — starting at{" "}
+          Transparent, volume-based transactional SMS pricing for Indian businesses- starting at{" "}
           <strong className="text-gray-900">₹0.09 per SMS</strong> on a DND-exempt route, with
           DLT registration support included on every plan.
         </>
       }
       heroImage="/images/bulk-sms/transactional-sms-service-provider.webp"
-      heroImageAlt="Transactional SMS pricing in India — plan comparison dashboard"
+      heroImageAlt="Transactional SMS pricing in India- plan comparison dashboard"
       heroTrustLine="DND-exempt route · DLT registration included · GST-exclusive, transparent per-SMS rates"
       stats={[
         { value: "₹0.09", label: "Starting price per SMS (Growth plan)" },
@@ -257,14 +257,14 @@ export default function TransactionalSmsPricingPage() {
           monthly volume, with{" "}
           <strong className="text-gray-900">Get Click Media's Growth plan starting at ₹0.09 per SMS</strong>{" "}
           for up to 1,00,000 SMS/month on the DND-exempt transactional route. Pricing is identical
-          to the promotional route — the difference is regulatory reach, not cost.
+          to the promotional route- the difference is regulatory reach, not cost.
         </>
       }
       insightCallout={
         <>
           A common misconception is that transactional SMS costs more than promotional SMS
-          because it reaches DND numbers. In practice, most providers — Get Click Media included
-          — price both routes the same per SMS. What actually varies is route quality: whether
+          because it reaches DND numbers. In practice, most providers- Get Click Media included
+         - price both routes the same per SMS. What actually varies is route quality: whether
           you're on a shared queue or a direct operator connection, which affects delivery speed
           more than price.
         </>
@@ -283,7 +283,7 @@ export default function TransactionalSmsPricingPage() {
       ]}
       slabRows={SLAB_ROWS}
       comparisonTitle="Transactional SMS Cost vs. Other Service-Alert Channels in India"
-      comparisonSubtitle="Indicative market ranges for India — transactional SMS is the only channel that reliably reaches DND-registered numbers at this cost."
+      comparisonSubtitle="Indicative market ranges for India- transactional SMS is the only channel that reliably reaches DND-registered numbers at this cost."
       comparisonCaption="Cost comparison of transactional/service-alert channels in India"
       comparisonColumns={[
         { key: "channel", label: "Channel" },
@@ -297,7 +297,7 @@ export default function TransactionalSmsPricingPage() {
       factors={FACTORS}
       capabilitiesTitle="What's Included in Every Get Click Media Transactional Plan"
       capabilities={CAPABILITIES}
-      faqHeading="Transactional SMS Pricing in India — FAQs"
+      faqHeading="Transactional SMS Pricing in India- FAQs"
       faqs={FAQS}
       relatedLinks={RELATED_LINKS}
       bottomCtaTitle="Ready to see your exact transactional SMS rate?"

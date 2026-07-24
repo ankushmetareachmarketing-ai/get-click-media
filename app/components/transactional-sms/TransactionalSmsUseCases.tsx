@@ -6,7 +6,7 @@ const industries = [
     iconColor: "text-blue-600",
     Icon: Landmark,
     heading: "Banking & Finance",
-    desc: "OTPs, transaction alerts, account debits, loan disbursement updates, and credit card activity notifications — DND-exempt, 24×7.",
+    desc: "OTPs, transaction alerts, account debits, loan disbursement updates, and credit card activity notifications- DND-exempt, 24×7.",
     link: null,
   },
   {

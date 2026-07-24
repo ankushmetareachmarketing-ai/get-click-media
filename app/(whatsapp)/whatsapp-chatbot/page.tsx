@@ -39,16 +39,16 @@ import {
 
 /* -- SEO Metadata ---------------------------------------------------------- */
 export const metadata: Metadata = {
-  title: "WhatsApp Chatbot — AI-Powered Automation for Your Business | Get Click Media",
+  title: "WhatsApp Chatbot- AI-Powered Automation for Your Business | Get Click Media",
   description:
     "Build a WhatsApp chatbot with drag-and-drop flows, AI/NLP, and CRM integration. Automate FAQs, lead qualification, orders, and support 24/7. Official Meta BSP, go-live in 5–7 business days.",
   keywords:
     "WhatsApp Chatbot, WhatsApp bot India, AI WhatsApp chatbot, WhatsApp chatbot for business, WhatsApp automation, WhatsApp chatbot pricing",
   alternates: { canonical: "https://getclickmedia.com/whatsapp-chatbot" },
   openGraph: {
-    title: "WhatsApp Chatbot — AI-Powered Automation for Your Business | Get Click Media",
+    title: "WhatsApp Chatbot- AI-Powered Automation for Your Business | Get Click Media",
     description:
-      "Rule-based, AI/NLP, or hybrid WhatsApp chatbots — CRM integration, human handoff, and 24/7 automated support. Go-live in 5–7 business days.",
+      "Rule-based, AI/NLP, or hybrid WhatsApp chatbots- CRM integration, human handoff, and 24/7 automated support. Go-live in 5–7 business days.",
     url: "https://getclickmedia.com/whatsapp-chatbot",
     type: "website",
   },
@@ -92,7 +92,7 @@ const schema = {
         {
           "@type": "Question",
           name: "Do I need coding knowledge to build a WhatsApp chatbot?",
-          acceptedAnswer: { "@type": "Answer", text: "No — Get Click Media's flow builder is drag-and-drop; no coding is required for standard flows." },
+          acceptedAnswer: { "@type": "Answer", text: "No- Get Click Media's flow builder is drag-and-drop; no coding is required for standard flows." },
         },
         {
           "@type": "Question",
@@ -112,7 +112,7 @@ const schema = {
 const BOT_TYPES = [
   { type: "Rule-based (menu-driven)", how: "Customer selects from button/list options; bot follows a fixed decision tree", best: "FAQs, order status, appointment booking" },
   { type: "AI / NLP-based", how: "Bot understands free-text messages using natural language processing", best: "Complex queries, lead qualification, support triage" },
-  { type: "Hybrid", how: "Starts with a menu, falls back to AI for anything outside the flow", best: "Most businesses — balances cost and flexibility" },
+  { type: "Hybrid", how: "Starts with a menu, falls back to AI for anything outside the flow", best: "Most businesses- balances cost and flexibility" },
 ];
 
 const FEATURES = [
@@ -158,22 +158,22 @@ const HOW_IT_WORKS = [
 
 const SETUP_STEPS = [
   { n: "01", title: "Consultation", body: "We map your top customer queries and use cases." },
-  { n: "02", title: "Flow design", body: "We build your conversation flows — menu-based, AI, or hybrid." },
+  { n: "02", title: "Flow design", body: "We build your conversation flows- menu-based, AI, or hybrid." },
   { n: "03", title: "Integration", body: "Connect to your CRM, order system, or database." },
   { n: "04", title: "Testing", body: "Sandbox testing across real customer scenarios." },
-  { n: "05", title: "Go-live", body: "Deploy on your verified WhatsApp Business number — 5–7 business days." },
+  { n: "05", title: "Go-live", body: "Deploy on your verified WhatsApp Business number- 5–7 business days." },
 ];
 
 const FAQS = [
   { q: "What is a WhatsApp chatbot?", a: "An automated messaging system on WhatsApp Business API that handles customer conversations using rule-based flows, AI, or both." },
   { q: "How is a WhatsApp chatbot different from the WhatsApp Business App auto-reply?", a: "The free Business App only supports basic greeting/away messages. A chatbot on the API can hold multi-step conversations, pull live data, and integrate with a CRM.", link: { text: "See WhatsApp Business API vs App", href: "/whatsapp-api-vs-whatsapp-business-app" } },
-  { q: "Do I need coding knowledge to build a WhatsApp chatbot?", a: "No — Get Click Media's flow builder is drag-and-drop; no coding is required for standard flows." },
+  { q: "Do I need coding knowledge to build a WhatsApp chatbot?", a: "No- Get Click Media's flow builder is drag-and-drop; no coding is required for standard flows." },
   { q: "Can a WhatsApp chatbot integrate with my CRM?", a: "Yes, our chatbot integrates with major CRMs and order/database systems to pull real-time data mid-conversation.", link: { text: "See WhatsApp CRM integration", href: "/blog/whatsapp-crm-integration" } },
   { q: "How long does it take to launch a WhatsApp chatbot?", a: "Typically 5–7 business days, depending on flow complexity and integrations required." },
-  { q: "Can the chatbot hand off to a human agent?", a: "Yes — the bot can escalate to a live agent at any point, with full conversation history preserved." },
+  { q: "Can the chatbot hand off to a human agent?", a: "Yes- the bot can escalate to a live agent at any point, with full conversation history preserved." },
   { q: "Does the chatbot support Hindi and regional languages?", a: "Yes, our chatbots support Hindi, English, and major regional languages." },
   { q: "What industries use WhatsApp chatbots the most?", a: "E-commerce, banking, healthcare, education, real estate, travel, and logistics are the top adopters in India." },
-  { q: "Is there a limit to how many conversations a chatbot can handle?", a: "No — the chatbot can run unlimited concurrent conversations, unlike a human agent team." },
+  { q: "Is there a limit to how many conversations a chatbot can handle?", a: "No- the chatbot can run unlimited concurrent conversations, unlike a human agent team." },
   { q: "How much does a WhatsApp chatbot cost in India?", a: "Cost depends on conversation volume and flow complexity, plus Meta's per-conversation charges.", link: { text: "See full WhatsApp Business API pricing", href: "/blog/whatsapp-api-pricing-india" } },
 ];
 
@@ -193,7 +193,7 @@ export default function WhatsAppChatbotPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       {/* -----------------------------------------------------------------
-          HERO — "What is this?"
+          HERO- "What is this?"
       ----------------------------------------------------------------- */}
       <DarkHero
         theme="light"
@@ -208,7 +208,7 @@ export default function WhatsAppChatbotPage() {
         description={
           <>
             A WhatsApp chatbot handles customer conversations using rule-based
-            flows, AI/NLP, or a hybrid of both — without a human agent on
+            flows, AI/NLP, or a hybrid of both- without a human agent on
             every message. It answers FAQs, qualifies leads, takes orders,
             and escalates complex queries automatically.
             <strong className="text-gray-900"> Go-live typically within 5–7 business days.</strong>
@@ -242,20 +242,20 @@ export default function WhatsAppChatbotPage() {
                 WhatsApp Business API
               </Link>{" "}
               that handles customer conversations using rule-based flows,
-              AI/NLP, or a hybrid of both — without a human agent on every
+              AI/NLP, or a hybrid of both- without a human agent on every
               message. It can answer FAQs, qualify leads, take orders, send
               order updates, and escalate complex queries to a live agent
               automatically. Get Click Media, an official Meta Business
               Solution Provider headquartered in Noida, builds and deploys
               WhatsApp chatbots for businesses across banking, e-commerce,
-              healthcare, education, and real estate — with go-live typically
+              healthcare, education, and real estate- with go-live typically
               within 5–7 business days.
             </p>
           </div>
         </div>
       </section>
 
-      {/* -- WHAT IS A WHATSAPP CHATBOT — deeper "what is this" -------------- */}
+      {/* -- WHAT IS A WHATSAPP CHATBOT- deeper "what is this" -------------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="what-is-a-chatbot">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
@@ -263,7 +263,7 @@ export default function WhatsAppChatbotPage() {
             <div className="flex-1 text-center lg:text-left space-y-4">
               <span className={EYEBROW_LIGHT}>What Is a WhatsApp Chatbot?</span>
               <h2 className={H2_LIGHT} style={SYNE_FONT}>
-                Instant, automatic replies — day or night
+                Instant, automatic replies- day or night
               </h2>
               <p className="text-gray-500 text-base leading-[1.7]">
                 A WhatsApp chatbot sits on top of the WhatsApp Business API and
@@ -319,7 +319,7 @@ export default function WhatsAppChatbotPage() {
         </div>
       </section>
 
-      {/* -- FEATURES — "What do I get?" -------------------------------------- */}
+      {/* -- FEATURES- "What do I get?" -------------------------------------- */}
       <PremiumFeatureGrid
         id="features"
         badge="WhatsApp Chatbot Features"
@@ -333,7 +333,7 @@ export default function WhatsAppChatbotPage() {
         }))}
       />
 
-      {/* -- BENEFITS — "Why should I care?" ---------------------------------- */}
+      {/* -- BENEFITS- "Why should I care?" ---------------------------------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="benefits">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
@@ -351,7 +351,7 @@ export default function WhatsAppChatbotPage() {
         </div>
       </section>
 
-      {/* -- USE CASES BY INDUSTRY — "Why should I care?" (relevance) -------- */}
+      {/* -- USE CASES BY INDUSTRY- "Why should I care?" (relevance) -------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="use-cases">
         <SectionPattern tone="teal" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
@@ -369,14 +369,14 @@ export default function WhatsAppChatbotPage() {
         </div>
       </section>
 
-      {/* -- HOW IT WORKS — mechanism ----------------------------------------- */}
+      {/* -- HOW IT WORKS- mechanism ----------------------------------------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="how-it-works">
         <SectionPattern tone="green" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4 mx-auto lg:w-[50%]">
             <span className={EYEBROW_DARK}>How It Works</span>
             <h2 className={H2_DARK} style={SYNE_FONT}>
-              From incoming message to resolved query — in under 2 seconds
+              From incoming message to resolved query- in under 2 seconds
             </h2>
           </div>
           <div className="relative">
@@ -395,13 +395,13 @@ export default function WhatsAppChatbotPage() {
           </div>
           <p className="text-center text-sm text-white/40 mt-10 max-w-2xl mx-auto">
             This entire flow typically resolves in under 2 seconds, and can
-            run in parallel across unlimited conversations — something a
+            run in parallel across unlimited conversations- something a
             human team simply cannot do at scale.
           </p>
         </div>
       </section>
 
-      {/* -- PRICING — "How much?" --------------------------------------------- */}
+      {/* -- PRICING- "How much?" --------------------------------------------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="pricing">
         <SectionPattern tone="gold" />
         <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-12 text-center space-y-5">
@@ -423,7 +423,7 @@ export default function WhatsAppChatbotPage() {
         </div>
       </section>
 
-      {/* -- SETUP PROCESS — "How do I start?" --------------------------------- */}
+      {/* -- SETUP PROCESS- "How do I start?" --------------------------------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="setup">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
@@ -448,14 +448,14 @@ export default function WhatsAppChatbotPage() {
           <div className="mt-16">
             <GlowCtaBanner
               title="No-code flow building, backed by AI and CRM integration"
-              description="Get Click Media is an official Meta Business Solution Provider based in Noida, serving 10,000+ Indian businesses with WhatsApp Business API, chatbot automation, RCS messaging, and bulk SMS — with dedicated onboarding support."
+              description="Get Click Media is an official Meta Business Solution Provider based in Noida, serving 10,000+ Indian businesses with WhatsApp Business API, chatbot automation, RCS messaging, and bulk SMS- with dedicated onboarding support."
               ctaLabel="Get a WhatsApp Chatbot"
             />
           </div>
         </div>
       </section>
 
-      {/* -- WHY GET CLICK MEDIA — "Can I trust this?" ------------------------ */}
+      {/* -- WHY GET CLICK MEDIA- "Can I trust this?" ------------------------ */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="why-gcm">
         <SectionPattern tone="teal" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
@@ -481,7 +481,7 @@ export default function WhatsAppChatbotPage() {
                 </Link>
                 . Our chatbot platform combines no-code flow building with
                 AI/NLP, native CRM integration, and dedicated onboarding
-                support — so your bot goes live fast and keeps improving with
+                support- so your bot goes live fast and keeps improving with
                 real conversation data.
               </p>
             </div>
@@ -584,7 +584,7 @@ export default function WhatsAppChatbotPage() {
         <div className={CONTAINER}>
           <GlowCtaBanner
             title="Ready to automate your WhatsApp conversations?"
-            description="Get Click Media designs, builds, and deploys your WhatsApp chatbot — go-live typically within 5–7 business days."
+            description="Get Click Media designs, builds, and deploys your WhatsApp chatbot- go-live typically within 5–7 business days."
             ctaLabel="Get a WhatsApp Chatbot"
           />
         </div>
@@ -593,7 +593,7 @@ export default function WhatsAppChatbotPage() {
   );
 }
 
-/** Tiny local join helper — avoids importing `cn` just for two-string concatenation
+/** Tiny local join helper- avoids importing `cn` just for two-string concatenation
  *  in the many inline `className={cnJoin(...)}` spots above. */
 function cnJoin(...parts: Array<string | false | undefined>) {
   return parts.filter(Boolean).join(" ");

@@ -24,7 +24,7 @@ function parseValue(value: string) {
 
 /**
  * Counts a stat up from 0 when it scrolls into view. Only the leading numeric
- * run animates — any surrounding text ("+", "%", "Days", "×7"...) is preserved
+ * run animates- any surrounding text ("+", "%", "Days", "×7"...) is preserved
  * as a static prefix/suffix around it.
  */
 export function AnimatedStat({ value, className }: AnimatedStatProps) {

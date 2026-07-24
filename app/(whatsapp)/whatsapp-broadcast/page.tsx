@@ -33,14 +33,14 @@ import {
 
 /* -- SEO Metadata ---------------------------------------------------------- */
 export const metadata: Metadata = {
-  title: "WhatsApp Broadcast API — Send Bulk Messages to Thousands Instantly | Get Click Media",
+  title: "WhatsApp Broadcast API- Send Bulk Messages to Thousands Instantly | Get Click Media",
   description:
-    "WhatsApp Broadcast API lets you send approved template messages to unlimited opted-in customers at once — beyond the 256-contact limit of the free app. Segmented targeting, analytics, and template management from an official Meta BSP.",
+    "WhatsApp Broadcast API lets you send approved template messages to unlimited opted-in customers at once- beyond the 256-contact limit of the free app. Segmented targeting, analytics, and template management from an official Meta BSP.",
   keywords:
     "WhatsApp Broadcast API, whatsapp bulk messaging, whatsapp broadcast message, whatsapp marketing campaigns India, whatsapp broadcast list",
   alternates: { canonical: "https://getclickmedia.com/whatsapp-broadcast" },
   openGraph: {
-    title: "WhatsApp Broadcast API — Send Bulk Messages to Thousands Instantly | Get Click Media",
+    title: "WhatsApp Broadcast API- Send Bulk Messages to Thousands Instantly | Get Click Media",
     description:
       "Segmented audience targeting, approved templates, and delivery analytics for marketing, utility, and authentication campaigns at scale.",
     url: "https://getclickmedia.com/whatsapp-broadcast",
@@ -116,7 +116,7 @@ const PRICING_CATEGORIES = [
 const HOW_TO = [
   { n: "01", title: "Build or select a customer list", body: "Import contacts with valid opt-in consent." },
   { n: "02", title: "Create or choose an approved template", body: "Follow Meta-approved message template guidelines.", href: "/whatsapp-template-messages" },
-  { n: "03", title: "Segment your audience", body: "Optional — by location, purchase history, or engagement." },
+  { n: "03", title: "Segment your audience", body: "Optional- by location, purchase history, or engagement." },
   { n: "04", title: "Schedule or send immediately", body: "Via Get Click Media's broadcast dashboard." },
   { n: "05", title: "Track performance", body: "Delivery rate, read rate, replies, and conversions in real time." },
 ];
@@ -132,13 +132,13 @@ const USE_CASES = [
 
 const FAQS = [
   { q: "What is WhatsApp Broadcast API?", a: "A WhatsApp Business API feature that lets businesses send one approved template message to a large list of opted-in customers in a single campaign." },
-  { q: "How many people can I send a WhatsApp broadcast to?", a: "Unlike the free Business App's 256-contact limit, Broadcast API has no practical recipient cap — it depends on your messaging tier." },
-  { q: "Do recipients need to save my business number to receive a broadcast?", a: "No — unlike the free app, Broadcast API doesn't require recipients to have your number saved." },
-  { q: "Can I send any message as a broadcast?", a: "No — broadcasts must use a Meta-approved template. Free-form text broadcasts aren't permitted.", link: { text: "See template message guidelines", href: "/whatsapp-template-messages" } },
-  { q: "How is WhatsApp broadcast messaging priced?", a: "Per conversation window opened, based on template category — marketing, utility, or authentication.", link: { text: "See full WhatsApp API pricing", href: "/blog/whatsapp-api-pricing-india" } },
-  { q: "Can I track how many people read my broadcast?", a: "Yes — Get Click Media's dashboard provides delivery, read, and reply analytics per campaign." },
+  { q: "How many people can I send a WhatsApp broadcast to?", a: "Unlike the free Business App's 256-contact limit, Broadcast API has no practical recipient cap- it depends on your messaging tier." },
+  { q: "Do recipients need to save my business number to receive a broadcast?", a: "No- unlike the free app, Broadcast API doesn't require recipients to have your number saved." },
+  { q: "Can I send any message as a broadcast?", a: "No- broadcasts must use a Meta-approved template. Free-form text broadcasts aren't permitted.", link: { text: "See template message guidelines", href: "/whatsapp-template-messages" } },
+  { q: "How is WhatsApp broadcast messaging priced?", a: "Per conversation window opened, based on template category- marketing, utility, or authentication.", link: { text: "See full WhatsApp API pricing", href: "/blog/whatsapp-api-pricing-india" } },
+  { q: "Can I track how many people read my broadcast?", a: "Yes- Get Click Media's dashboard provides delivery, read, and reply analytics per campaign." },
   { q: "Is WhatsApp broadcast messaging compliant with Indian regulations?", a: "Yes, when sent to properly opted-in customers using approved templates; Get Click Media ensures campaigns follow Meta's commerce and messaging policies." },
-  { q: "Can I personalize broadcast messages for each customer?", a: "Yes — templates support dynamic variables like customer name, order ID, and other personalization fields." },
+  { q: "Can I personalize broadcast messages for each customer?", a: "Yes- templates support dynamic variables like customer name, order ID, and other personalization fields." },
 ];
 
 /* -- Shared layout tokens --------------------------------------------------- */
@@ -157,7 +157,7 @@ export default function WhatsAppBroadcastPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       {/* -----------------------------------------------------------------
-          HERO — "What is this?"
+          HERO- "What is this?"
       ----------------------------------------------------------------- */}
       <DarkHero
         theme="light"
@@ -172,7 +172,7 @@ export default function WhatsAppBroadcastPage() {
         description={
           <>
             Send a single approved template message to thousands of
-            customers simultaneously — with segmented targeting, delivery
+            customers simultaneously- with segmented targeting, delivery
             analytics, and no recipient-saved-your-number requirement.
             <strong className="text-gray-900"> Billed per conversation, by template category.</strong>
           </>
@@ -205,21 +205,21 @@ export default function WhatsAppBroadcastPage() {
               <Link href="/whatsapp-business-api" className="text-[#2563eb] underline underline-offset-2">
                 WhatsApp Business API
               </Link>{" "}
-              — unlike the free WhatsApp Business App, which limits
+             - unlike the free WhatsApp Business App, which limits
               broadcasts to 256 contacts who must have your number saved.
               Broadcast messages require Meta-approved templates and are
               billed per conversation based on category (marketing, utility,
               or authentication). Get Click Media, an official Meta Business
               Solution Provider in Noida, provides WhatsApp Broadcast API with
               segmented audience targeting, delivery and read-rate analytics,
-              and template management — helping Indian businesses run
+              and template management- helping Indian businesses run
               compliant, high-reach WhatsApp campaigns at scale.
             </p>
           </div>
         </div>
       </section>
 
-      {/* -- WHAT IS BROADCAST API — deeper "what is this" ------------------- */}
+      {/* -- WHAT IS BROADCAST API- deeper "what is this" ------------------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="what-is-broadcast">
         <SectionPattern tone="light" />
         <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-12">
@@ -233,14 +233,14 @@ export default function WhatsAppBroadcastPage() {
             WhatsApp Broadcast API is the bulk-messaging capability of
             WhatsApp Business API. It allows a business to send one approved
             template message to a large list of opted-in customers in a
-            single campaign — order updates, promotional offers, payment
-            reminders, or event notifications — without the recipient limit
+            single campaign- order updates, promotional offers, payment
+            reminders, or event notifications- without the recipient limit
             or opt-in restrictions of the free Business App.
           </p>
           <ul className="space-y-3">
             {[
               "Sent to customers who have opted in (via DLT-style consent or existing relationship)",
-              "Must use a Meta-approved message template — free-form text broadcasts aren't allowed",
+              "Must use a Meta-approved message template- free-form text broadcasts aren't allowed",
               "Billed per 24-hour conversation window opened, based on template category",
               "No practical limit on recipient list size (subject to your messaging tier and quality rating)",
             ].map((item) => (
@@ -276,7 +276,7 @@ export default function WhatsAppBroadcastPage() {
         </div>
       </section>
 
-      {/* -- FEATURES — "What do I get?" ---------------------------------------- */}
+      {/* -- FEATURES- "What do I get?" ---------------------------------------- */}
       <PremiumFeatureGrid
         id="features"
         badge="Broadcast API Features"
@@ -290,7 +290,7 @@ export default function WhatsAppBroadcastPage() {
         }))}
       />
 
-      {/* -- PRICING LOGIC — "How much?" ---------------------------------------- */}
+      {/* -- PRICING LOGIC- "How much?" ---------------------------------------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="pricing">
         <SectionPattern tone="light" />
         <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-12">
@@ -325,7 +325,7 @@ export default function WhatsAppBroadcastPage() {
         </div>
       </section>
 
-      {/* -- HOW TO SEND A BROADCAST — "How do I start?" ------------------------ */}
+      {/* -- HOW TO SEND A BROADCAST- "How do I start?" ------------------------ */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="how-to">
         <SectionPattern tone="teal" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
@@ -359,14 +359,14 @@ export default function WhatsAppBroadcastPage() {
           <div className="mt-16">
             <GlowCtaBanner
               title="We protect your number's quality rating"
-              description="Get Click Media manages template approval, audience segmentation, delivery optimization, and quality rating monitoring — so your broadcasts reach customers reliably without risking your number's messaging tier or quality score."
+              description="Get Click Media manages template approval, audience segmentation, delivery optimization, and quality rating monitoring- so your broadcasts reach customers reliably without risking your number's messaging tier or quality score."
               ctaLabel="Start a Broadcast Campaign"
             />
           </div>
         </div>
       </section>
 
-      {/* -- USE CASES — "Why should I care?" (relevance) ----------------------- */}
+      {/* -- USE CASES- "Why should I care?" (relevance) ----------------------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="use-cases">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
@@ -384,7 +384,7 @@ export default function WhatsAppBroadcastPage() {
         </div>
       </section>
 
-      {/* -- WHY GET CLICK MEDIA — "Can I trust this?" -------------------------- */}
+      {/* -- WHY GET CLICK MEDIA- "Can I trust this?" -------------------------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="why-gcm">
         <SectionPattern tone="green" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
@@ -399,7 +399,7 @@ export default function WhatsAppBroadcastPage() {
                 Provider based in Noida, running WhatsApp Broadcast campaigns
                 for 10,000+ Indian businesses. We manage template approval,
                 audience segmentation, delivery optimization, and quality
-                rating monitoring — so your broadcasts reach customers
+                rating monitoring- so your broadcasts reach customers
                 reliably without risking your number&apos;s messaging tier or
                 quality score.
               </p>
@@ -499,7 +499,7 @@ export default function WhatsAppBroadcastPage() {
         <div className={CONTAINER}>
           <GlowCtaBanner
             title="Ready to reach thousands of customers at once?"
-            description="Get Click Media sets up your broadcast dashboard, templates, and audience segments — start sending compliant, high-reach campaigns today."
+            description="Get Click Media sets up your broadcast dashboard, templates, and audience segments- start sending compliant, high-reach campaigns today."
             ctaLabel="Start a Broadcast Campaign"
           />
         </div>
@@ -508,7 +508,7 @@ export default function WhatsAppBroadcastPage() {
   );
 }
 
-/** Tiny local join helper — avoids importing `cn` just for two-string concatenation
+/** Tiny local join helper- avoids importing `cn` just for two-string concatenation
  *  in the many inline `className={cnJoin(...)}` spots above. */
 function cnJoin(...parts: Array<string | false | undefined>) {
   return parts.filter(Boolean).join(" ");

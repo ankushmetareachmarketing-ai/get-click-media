@@ -136,7 +136,7 @@ function IconContainerV({
         onMouseLeave={() => setHovered(false)}
         className="relative flex items-center justify-center rounded-xl bg-gray-100 hover:bg-white transition-colors shadow-sm"
       >
-        {/* Tooltip — appears to the left */}
+        {/* Tooltip- appears to the left */}
         <AnimatePresence>
           {hovered && (
             <motion.div

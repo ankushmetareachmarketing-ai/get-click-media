@@ -21,29 +21,29 @@ faq:
   - question: "What is the maximum length for an SMS template?"
     answer: "A single SMS is 160 characters for standard encoding. For templates with special characters or Devanagari text, each SMS is 70 characters. Most DLT platforms accept templates up to 640 characters (concatenated SMS), but longer messages are billed as multiple SMS units."
   - question: "How many variables can I use in a single template?"
-    answer: "Most DLT platforms allow up to 30 variables per template, but practical limit depends on the operator. Use only as many variables as you genuinely need — excessive variables in a template can trigger manual review."
+    answer: "Most DLT platforms allow up to 30 variables per template, but practical limit depends on the operator. Use only as many variables as you genuinely need- excessive variables in a template can trigger manual review."
   - question: "What happens if my message content doesn't match the approved template?"
     answer: "The message will be rejected by the operator's DLT system before delivery. The content must match the template exactly except for text substituted in {#var#} positions."
 ---
 
-Getting your SMS templates approved on India's DLT platform should not take weeks of back-and-forth rejections. Most delays and rejections are avoidable — they come from a handful of predictable mistakes in how templates are written, categorised, or submitted.
+Getting your SMS templates approved on India's DLT platform should not take weeks of back-and-forth rejections. Most delays and rejections are avoidable- they come from a handful of predictable mistakes in how templates are written, categorised, or submitted.
 
 This guide gives you a clear, practical framework for writing DLT templates that get approved on the first submission and work reliably when you send at scale.
 
 ## Why Templates Are the Most Critical Part of DLT Compliance
 
-Your DLT entity registration and header approval are one-time steps. Template management is ongoing — every new campaign, new use case, or new message type requires a new approved template.
+Your DLT entity registration and header approval are one-time steps. Template management is ongoing- every new campaign, new use case, or new message type requires a new approved template.
 
-Templates are also where the most compliance risk lives. Sending a message that does not match an approved template is not just a delivery failure — it is a TRAI violation that can result in your header being suspended. Understanding the template system properly protects your entire SMS operation.
+Templates are also where the most compliance risk lives. Sending a message that does not match an approved template is not just a delivery failure- it is a TRAI violation that can result in your header being suspended. Understanding the template system properly protects your entire SMS operation.
 
 Before working on templates, make sure your entity and headers are already registered. If you have not done that yet, start with our [DLT Registration Guide](/blog/dlt-registration-guide).
 
 ## The Three Template Categories
 
-Every template you submit must be assigned to one of three categories. Choosing the wrong category is one of the most common mistakes — and one of the most consequential.
+Every template you submit must be assigned to one of three categories. Choosing the wrong category is one of the most common mistakes- and one of the most consequential.
 
 ### Transactional Templates
-Used for messages that contain information a customer needs to complete an action they initiated — OTPs, order confirmations, payment receipts, booking confirmations, account alerts.
+Used for messages that contain information a customer needs to complete an action they initiated- OTPs, order confirmations, payment receipts, booking confirmations, account alerts.
 
 Transactional messages can be sent to **all numbers including DND-registered numbers**. They are high-priority messages that customers expect.
 
@@ -53,7 +53,7 @@ Your OTP for {#var#} is {#var#}. Valid for 10 minutes. Do not share with anyone.
 ```
 
 ### Promotional Templates
-Used for marketing messages — offers, discounts, product launches, event invitations, any message intended to drive a purchase or action.
+Used for marketing messages- offers, discounts, product launches, event invitations, any message intended to drive a purchase or action.
 
 Promotional messages **cannot be sent to DND numbers** and can only be sent between 9 AM and 9 PM. They require explicit customer consent.
 
@@ -63,7 +63,7 @@ Hi {#var#}, get 30% off on all orders above Rs. 999 today. Use code {#var#} at c
 ```
 
 ### Service (Implicit / Explicit)
-A broader category for messages that are neither purely transactional nor promotional — service updates, regulatory notices, government communications, reminder messages.
+A broader category for messages that are neither purely transactional nor promotional- service updates, regulatory notices, government communications, reminder messages.
 
 Service Implicit applies to messages where consent is implied by the customer's relationship with the business (e.g., a reminder SMS to a registered user). Service Explicit requires documented opt-in consent.
 
@@ -71,7 +71,7 @@ If you are unsure whether to use Transactional or Service for your use case, see
 
 ## The Correct Variable Syntax
 
-Dynamic content in DLT templates must use the `{#var#}` placeholder. This is non-negotiable — any other format (like `[name]`, `%s`, or `{{variable}}`) will cause the template to be rejected or, worse, cause message delivery failures even after approval.
+Dynamic content in DLT templates must use the `{#var#}` placeholder. This is non-negotiable- any other format (like `[name]`, `%s`, or `{{variable}}`) will cause the template to be rejected or, worse, cause message delivery failures even after approval.
 
 **Correct:**
 ```
@@ -83,12 +83,12 @@ Dear {#var#}, your appointment on {#var#} at {#var#} is confirmed. - GETCLK
 Dear [name], your appointment on [date] at [time] is confirmed. - GETCLK
 ```
 
-The DLT system does not care what your variable *means* — it just sees `{#var#}` as a placeholder that can be filled with any text at send time. Name them consistently in your own documentation so you know which variable maps to which field.
+The DLT system does not care what your variable *means*- it just sees `{#var#}` as a placeholder that can be filled with any text at send time. Name them consistently in your own documentation so you know which variable maps to which field.
 
 ## Writing Templates That Get Approved First Time
 
 ### 1. Always include your brand name
-Every template should identify your business — either through the Sender ID at the end or within the message body itself. Templates with no clear brand attribution are commonly rejected.
+Every template should identify your business- either through the Sender ID at the end or within the message body itself. Templates with no clear brand attribution are commonly rejected.
 
 Good: `Your invoice from Get Click Media for {#var#} is ready. Download: {#var#} - GETCLK`
 
@@ -96,7 +96,7 @@ Good: `Your invoice from Get Click Media for {#var#} is ready. Download: {#var#}
 Do not try to register a promotional offer as a transactional message to bypass DND restrictions. DLT reviewers check the template content against the declared category. Mismatches cause rejections and, if flagged post-approval, can result in your header being blacklisted.
 
 ### 3. Keep variables to what you actually need
-A template with 15 variables for a simple appointment reminder will get flagged for review. Use variables only for content that genuinely changes per recipient — name, date, order number, amount, URL.
+A template with 15 variables for a simple appointment reminder will get flagged for review. Use variables only for content that genuinely changes per recipient- name, date, order number, amount, URL.
 
 ### 4. Avoid prohibited content
 Templates containing the following are automatically rejected:
@@ -107,7 +107,7 @@ Templates containing the following are automatically rejected:
 - Requests for OTPs, passwords, or PINs from recipients (you can *send* OTPs, not *ask* for them)
 
 ### 5. Register your URL domain separately
-If your template includes a URL, the domain must be registered on the DLT platform before the template will be approved. Register your domain under your entity first, then reference it in templates. Use your actual domain — URL shorteners are increasingly flagged.
+If your template includes a URL, the domain must be registered on the DLT platform before the template will be approved. Register your domain under your entity first, then reference it in templates. Use your actual domain- URL shorteners are increasingly flagged.
 
 ### 6. End with your Sender ID
 While not always mandatory, ending the template with ` - GETCLK` (your header) reinforces brand recognition and aligns with how the network identifies the sender.
@@ -131,13 +131,13 @@ Submitting a batch like this at registration means you are not waiting for appro
 
 When a template is rejected, the DLT platform usually provides a reason code. Common ones:
 
-- **Content mismatch with category** — Reclassify or rewrite the content to match
-- **Brand name not found** — Add your registered business name or Sender ID to the body
-- **Prohibited keywords** — Remove or rephrase flagged terms
-- **Excessive variables** — Reduce variables to only essential ones
-- **URL not registered** — Register your domain on DLT first, then resubmit
+- **Content mismatch with category**- Reclassify or rewrite the content to match
+- **Brand name not found**- Add your registered business name or Sender ID to the body
+- **Prohibited keywords**- Remove or rephrase flagged terms
+- **Excessive variables**- Reduce variables to only essential ones
+- **URL not registered**- Register your domain on DLT first, then resubmit
 
-Do not resubmit the same template without making the required change — it will be rejected again and may flag your account for review.
+Do not resubmit the same template without making the required change- it will be rejected again and may flag your account for review.
 
 ## Keeping Your Templates Organised
 
@@ -164,4 +164,4 @@ For the full picture of ongoing compliance obligations, including scrubbing rule
 
 DLT template approval is straightforward when you understand the rules. Choose the right category, use the correct variable syntax, include your brand name, and register your domain. Submit a full batch at registration rather than one at a time.
 
-The investment you make in getting templates right upfront pays off every time a campaign goes out — no delivery failures, no compliance risk, no last-minute template approval waits. If you need help setting up your template library, [talk to our team at Get Click Media](/bulk-sms-service-provider-india) and we will guide you through the entire process.
+The investment you make in getting templates right upfront pays off every time a campaign goes out- no delivery failures, no compliance risk, no last-minute template approval waits. If you need help setting up your template library, [talk to our team at Get Click Media](/bulk-sms-service-provider-india) and we will guide you through the entire process.

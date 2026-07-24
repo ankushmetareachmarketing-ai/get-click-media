@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   KeyRound,
   Webhook,
@@ -21,14 +22,14 @@ import { SectionPattern } from "@/components/ui/section-pattern";
 export const metadata: Metadata = {
   title: "RCS Messaging API for Businesses | Get Click Media",
   description:
-    "Integrate RCS Business Messaging into your app or CRM with Get Click Media's RCS API — REST endpoints, webhooks, delivery reports, and code samples.",
+    "Integrate RCS Business Messaging into your app or CRM with Get Click Media's RCS API- REST endpoints, webhooks, delivery reports, and code samples.",
   keywords:
     "RCS API, RCS API integration, RCS REST API, RCS API documentation, RCS API authentication, RCS API India, RCS webhook, RCS messaging API, RCS SDK",
   alternates: { canonical: "https://getclickmedia.com/rcs-api" },
   openGraph: {
     title: "RCS Messaging API for Businesses",
     description:
-      "A developer-friendly RCS API — authentication, REST examples, webhooks, and delivery reporting for Indian businesses.",
+      "A developer-friendly RCS API- authentication, REST examples, webhooks, and delivery reporting for Indian businesses.",
     url: "https://getclickmedia.com/rcs-api",
     type: "website",
   },
@@ -43,18 +44,18 @@ const ENDPOINT_ROWS = [
 ];
 
 const BEST_PRACTICES = [
-  { icon: ShieldCheck, title: "Store your API key securely", desc: "Keep your API key server-side only — never ship it in client-side/mobile app code." },
+  { icon: ShieldCheck, title: "Store your API key securely", desc: "Keep your API key server-side only- never ship it in client-side/mobile app code." },
   { icon: Repeat, title: "Always handle the SMS-fallback case", desc: "Check the delivery-status webhook for a fallback event so your app can log or route it correctly." },
   { icon: TimerReset, title: "Use webhooks, not polling", desc: "Register delivery and read-receipt webhooks instead of repeatedly polling the message-status endpoint." },
-  { icon: FileWarning, title: "Validate payloads before sending", desc: "Malformed rich-card or carousel JSON is the most common cause of send failures — validate structure client-side first." },
+  { icon: FileWarning, title: "Validate payloads before sending", desc: "Malformed rich-card or carousel JSON is the most common cause of send failures- validate structure client-side first." },
   { icon: Gauge, title: "Design for rate limits", desc: "Batch sends and back off on 429 responses rather than retrying immediately in a tight loop." },
-  { icon: BarChart3, title: "Monitor delivery rate, not just send success", desc: "A 200 response means the request was accepted — track the delivery webhook to confirm the message actually reached the device." },
+  { icon: BarChart3, title: "Monitor delivery rate, not just send success", desc: "A 200 response means the request was accepted- track the delivery webhook to confirm the message actually reached the device." },
 ];
 
 const FAQS = [
   {
     q: "Does Get Click Media offer an RCS API?",
-    a: "Yes — a REST API for sending rich cards, carousels, and text messages, with webhook support for delivery and read-receipt status.",
+    a: "Yes- a REST API for sending rich cards, carousels, and text messages, with webhook support for delivery and read-receipt status.",
   },
   {
     q: "How do I authenticate with the RCS API?",
@@ -66,11 +67,11 @@ const FAQS = [
   },
   {
     q: "Does the RCS API support webhooks?",
-    a: "Yes — webhooks are available for delivery status and read receipts, so you can track engagement in real time instead of polling.",
+    a: "Yes- webhooks are available for delivery status and read receipts, so you can track engagement in real time instead of polling.",
   },
   {
     q: "Is there a sandbox for testing before going live?",
-    a: "Ask your onboarding contact about sandbox/test-mode access for your account — availability can depend on your plan.",
+    a: "Ask your onboarding contact about sandbox/test-mode access for your account- availability can depend on your plan.",
   },
   {
     q: "What happens if the recipient's device doesn't support RCS?",
@@ -78,11 +79,11 @@ const FAQS = [
   },
   {
     q: "Can I integrate the RCS API with my CRM?",
-    a: "Yes — the REST API integrates with common CRMs and e-commerce platforms via standard HTTP calls, the same way our WhatsApp and SMS APIs do.",
+    a: "Yes- the REST API integrates with common CRMs and e-commerce platforms via standard HTTP calls, the same way our WhatsApp and SMS APIs do.",
   },
   {
     q: "Are there rate limits on the RCS API?",
-    a: "Rate limits apply and vary by plan — your onboarding contact will confirm the exact tier for your account so you can design your integration accordingly.",
+    a: "Rate limits apply and vary by plan- your onboarding contact will confirm the exact tier for your account so you can design your integration accordingly.",
   },
   {
     q: "What are common RCS API error codes?",
@@ -90,7 +91,7 @@ const FAQS = [
   },
   {
     q: "Do you provide code samples?",
-    a: "Yes — illustrative REST examples for sending rich cards and carousels are shown below, and full documentation with tested samples is provided once your API key is issued.",
+    a: "Yes- illustrative REST examples for sending rich cards and carousels are shown below, and full documentation with tested samples is provided once your API key is issued.",
   },
 ];
 
@@ -161,7 +162,7 @@ const RICH_CARD_CODE = `curl -X POST https://api.getclickmedia.com/v1/rcs/messag
     "to": "+9198XXXXXXXX",
     "type": "rich_card",
     "richCard": {
-      "title": "Flash Sale — 30% Off",
+      "title": "Flash Sale- 30% Off",
       "imageUrl": "https://cdn.example.com/sale-banner.jpg",
       "description": "Today only. Tap below to shop the sale.",
       "actions": [
@@ -212,21 +213,21 @@ export default function RCSApiPage() {
         description={
           <>
             Send rich cards, carousels, and text messages programmatically. REST endpoints,
-            webhook-based delivery and read-receipt tracking, and automatic SMS fallback —
+            webhook-based delivery and read-receipt tracking, and automatic SMS fallback-
             <strong className="text-gray-900"> built for CRM and app integration.</strong>
           </>
         }
         primaryCta={{ label: "Get API Access", href: "/contact" }}
         secondaryCta={{ label: "Talk to Our Integration Team", href: "/contact" }}
         imageSrc="/images/rcs/rcs-service-provider-india.png"
-        imageAlt="RCS API integration — rich card message on mobile phone"
+        imageAlt="RCS API integration- rich card message on mobile phone"
         trustLine="Node.js, Python, PHP, and Java SDKs available"
       />
 
-      {/* -- EEAT: last-updated strip ---------------------------------------- */}
+      {/* -- EEAT: byline + last-updated strip -------------------------------- */}
       <div className="bg-white border-b border-gray-100">
         <p className="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 text-center text-xs text-gray-400">
-          Last updated: {LAST_UPDATED} · Reviewed by the Get Click Media engineering team
+          Written by the Get Click Media Pvt. Ltd. Team · Last updated: {LAST_UPDATED} · Reviewed by the Get Click Media engineering team
         </p>
       </div>
 
@@ -241,6 +242,16 @@ export default function RCSApiPage() {
               The Get Click Media RCS API is a REST API for sending rich cards, carousels, and
               plain-text RCS messages from your own app or CRM, with webhooks for delivery status
               and read receipts, and automatic SMS fallback for devices that don&apos;t support RCS.
+              It follows the same RCS Business Messaging model documented in{" "}
+              <a
+                href="https://developers.google.com/business-communications"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#2563eb] underline underline-offset-2"
+              >
+                Google&apos;s official RCS Business Messaging API reference
+              </a>
+              .
             </p>
           </div>
         </div>
@@ -281,7 +292,7 @@ export default function RCSApiPage() {
               Send a Message via the RCS API
             </h2>
             <p className="text-gray-500 text-base max-w-2xl mx-auto">
-              Illustrative request format — your onboarding contact confirms exact field names
+              Illustrative request format- your onboarding contact confirms exact field names
               and base URL for your account before you go live.
             </p>
           </div>
@@ -316,7 +327,7 @@ export default function RCSApiPage() {
           </div>
           <CodeBlock title="Delivery status webhook payload" code={WEBHOOK_CODE} />
           <BentoGrid className="sm:grid-cols-2 lg:grid-cols-2">
-            <BentoCard icon={Webhook} name="Delivery Status Webhook" description="Fires when a message is sent, delivered, falls back to SMS, or fails — with a timestamp and reason." />
+            <BentoCard icon={Webhook} name="Delivery Status Webhook" description="Fires when a message is sent, delivered, falls back to SMS, or fails- with a timestamp and reason." />
             <BentoCard icon={KeyRound} name="Read Receipt Webhook" description="Fires when the recipient opens the message inside Google Messages, for engagement tracking." />
           </BentoGrid>
         </div>
@@ -334,7 +345,7 @@ export default function RCSApiPage() {
               Illustrative RCS API Endpoints
             </h2>
             <p className="text-gray-500 text-base max-w-2xl mx-auto">
-              In addition to webhooks, you can poll message status directly by ID — useful for
+              In addition to webhooks, you can poll message status directly by ID- useful for
               reconciliation jobs and dashboards.
             </p>
           </div>
@@ -372,7 +383,7 @@ export default function RCSApiPage() {
       {/* -- FAQ ------------------------------------------------------------ */}
       <section className="relative py-16 sm:py-20 lg:py-[100px]" id="faq">
         <SectionPattern tone="gold" />
-        <div className="relative z-10 max-w-3xl mx-auto px-6 sm:px-12 lg:px-20">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-12 lg:px-20">
           <div className="text-center mb-12 space-y-4">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
               Frequently Asked Questions
@@ -381,7 +392,23 @@ export default function RCSApiPage() {
               RCS API for Developers
             </h2>
           </div>
-          <AccordionList items={FAQS.map((f) => ({ question: f.q, answer: <p className="text-base text-gray-500 leading-[1.7]">{f.a}</p> }))} />
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
+            <div className="hidden lg:block lg:w-[36%] shrink-0 lg:sticky lg:top-24">
+              <div className="relative w-full rounded-2xl overflow-hidden aspect-[4/5]">
+                <Image
+                  src="/images/rcs/rcs-service-provider-india.png"
+                  alt="Ask a question about the RCS Messaging API"
+                  fill
+                  className="object-cover"
+                  sizes="36vw"
+                />
+              </div>
+            </div>
+            <AccordionList
+              className="flex-1 w-full"
+              items={FAQS.map((f) => ({ question: f.q, answer: <p className="text-base text-gray-500 leading-[1.7]">{f.a}</p> }))}
+            />
+          </div>
         </div>
       </section>
 

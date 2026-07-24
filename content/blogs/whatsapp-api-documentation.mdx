@@ -1,5 +1,5 @@
 ---
-title: "WhatsApp Business API Documentation — Complete Reference India 2026"
+title: "WhatsApp Business API Documentation- Complete Reference India 2026"
 description: "WhatsApp Business API documentation covering REST API endpoints, webhook event schemas, Cloud API authentication, template management, and Catalog and Flows APIs. Code samples in Node.js, Python, PHP, and Java from an official Meta BSP."
 slug: "whatsapp-api-documentation"
 image: "/images/blog/whatsapp-api-documentation.webp"
@@ -16,20 +16,20 @@ keywords:
   - "whatsapp api reference india 2026"
 faq:
   - question: "Where is the official WhatsApp API documentation?"
-    answer: "Meta's official WhatsApp Cloud API documentation is at developers.facebook.com/docs/whatsapp. Get Click Media's platform documentation — including GCM-specific endpoints, code samples in 4 languages, and integration guides — is available on this page. GCM documentation includes India-specific examples and use cases not covered in Meta's generic docs."
+    answer: "Meta's official WhatsApp Cloud API documentation is at developers.facebook.com/docs/whatsapp. Get Click Media's platform documentation- including GCM-specific endpoints, code samples in 4 languages, and integration guides- is available on this page. GCM documentation includes India-specific examples and use cases not covered in Meta's generic docs."
   - question: "What is the difference between WhatsApp Cloud API and On-Premise API documentation?"
     answer: "On-Premise API was deprecated by Meta for new accounts in 2023. All new WhatsApp Business Platform accounts use Cloud API. The Cloud API documentation (developers.facebook.com/docs/whatsapp/cloud-api) is the current reference. If you encounter older documentation referencing On-Premise API, it applies to legacy deployments only."
   - question: "What programming languages does the WhatsApp API support?"
-    answer: "WhatsApp Business API is a REST API — it works with any programming language that can make HTTP requests. Get Click Media provides official SDKs for Node.js, Python, PHP, and Java. Community-maintained libraries exist for Go, Ruby, Kotlin, and other languages."
+    answer: "WhatsApp Business API is a REST API- it works with any programming language that can make HTTP requests. Get Click Media provides official SDKs for Node.js, Python, PHP, and Java. Community-maintained libraries exist for Go, Ruby, Kotlin, and other languages."
   - question: "How do I handle API errors in my integration?"
-    answer: "All API errors return a JSON response with an error object containing code, message, and type. See the complete error code reference at WhatsApp API error codes. Implement specific handling for common codes: 429 (rate limit — backoff and retry), 400 (bad request — fix payload, do not retry), 131030 (template not approved — submit template first)."
+    answer: "All API errors return a JSON response with an error object containing code, message, and type. See the complete error code reference at WhatsApp API error codes. Implement specific handling for common codes: 429 (rate limit- backoff and retry), 400 (bad request- fix payload, do not retry), 131030 (template not approved- submit template first)."
 ---
 
 WhatsApp Business API documentation covers the REST API endpoints for sending messages, the webhook event schemas for receiving messages, the Cloud API authentication method (System User access token), template management, and the Catalog and Flows APIs. Get Click Media provides complete API documentation with code samples in Node.js, Python, PHP, and Java. The official Meta documentation is at developers.facebook.com/docs/whatsapp.
 
 This page is the central reference for developers building on Get Click Media's [WhatsApp Business API](/whatsapp-business-api) platform. It covers authentication, the core messaging endpoints, webhook event schemas, message type formats, and links to deeper technical guides for specific topics. Maintained by Get Click Media's API engineering team as an official Meta Business Solution Provider (BSP).
 
-## Authentication — How API Calls Are Authenticated
+## Authentication- How API Calls Are Authenticated
 
 All API calls to Get Click Media's WhatsApp API require two headers:
 
@@ -45,14 +45,14 @@ X-Phone-Number-ID: {PHONE_NUMBER_ID}
 // https://api.getclickmedia.com/v2/whatsapp/
 ```
 
-## Core API Endpoints — Quick Reference
+## Core API Endpoints- Quick Reference
 
 | Method | Endpoint | Description | Key parameters |
 |---|---|---|---|
 | POST | `/messages` | Send a WhatsApp message (template or session reply) | `to` (phone), `type`, `template` or `text` |
-| POST | `/messages/batch` | Send bulk messages — campaign broadcast | `recipients` array, `template`, `variables` |
+| POST | `/messages/batch` | Send bulk messages- campaign broadcast | `recipients` array, `template`, `variables` |
 | GET | `/messages/{id}` | Get status and delivery events for a message | `message_id` path param |
-| POST | `/media` | Upload media file for use in messages | `multipart/form-data` — file + type |
+| POST | `/media` | Upload media file for use in messages | `multipart/form-data`- file + type |
 | GET | `/media/{id}` | Download previously uploaded media | `media_id` path param |
 | GET | `/contacts/{phone}` | Check if phone number has WhatsApp | `phone` in E.164 format |
 | GET | `/templates` | List all approved message templates | `status` filter optional |
@@ -61,9 +61,9 @@ X-Phone-Number-ID: {PHONE_NUMBER_ID}
 | GET | `/analytics` | Get message delivery and campaign analytics | `date_from`, `date_to`, `template_name` |
 | GET | `/usage` | Get monthly usage summary and conversation counts | `month`, `year` |
 
-## Message Types — Sending Different Content Formats
+## Message Types- Sending Different Content Formats
 
-```json title="Text message — session reply (within 24-hour window)"
+```json title="Text message- session reply (within 24-hour window)"
 {
   "to": "+919876543210",
   "type": "text",
@@ -71,7 +71,7 @@ X-Phone-Number-ID: {PHONE_NUMBER_ID}
 }
 ```
 
-```json title="Template message — business-initiated outbound"
+```json title="Template message- business-initiated outbound"
 {
   "to": "+919876543210",
   "type": "template",
@@ -107,7 +107,7 @@ X-Phone-Number-ID: {PHONE_NUMBER_ID}
 }
 ```
 
-```json title="Interactive message — buttons"
+```json title="Interactive message- buttons"
 {
   "to": "+919876543210",
   "type": "interactive",
@@ -125,18 +125,18 @@ X-Phone-Number-ID: {PHONE_NUMBER_ID}
 }
 ```
 
-```json title="Media message — image with caption"
+```json title="Media message- image with caption"
 {
   "to": "+919876543210",
   "type": "image",
   "image": {
     "link": "https://yourcdn.com/product-abc.jpg",
-    "caption": "Nike Air Max 270 — now available in Black. Rs 12,999. [Shop Now]"
+    "caption": "Nike Air Max 270- now available in Black. Rs 12,999. [Shop Now]"
   }
 }
 ```
 
-## Template Management — Submit and Track Approval
+## Template Management- Submit and Track Approval
 
 ```json title="Submit a new template"
 {
@@ -161,10 +161,10 @@ X-Phone-Number-ID: {PHONE_NUMBER_ID}
 }
 
 // Template status values after submission:
-// PENDING  — Meta is reviewing
-// APPROVED — Ready to use
-// REJECTED — See rejection_reason field for details
-// PAUSED   — Quality score below threshold
+// PENDING - Meta is reviewing
+// APPROVED- Ready to use
+// REJECTED- See rejection_reason field for details
+// PAUSED  - Quality score below threshold
 ```
 
 ## SDK Quickstarts
@@ -184,24 +184,24 @@ X-Phone-Number-ID: {PHONE_NUMBER_ID}
 | Growth | 100 messages/sec | 10,000 – 1,00,000 (tier based) | 3x for 60 seconds |
 | Enterprise | 1,000+ messages/sec | Unlimited | Custom burst negotiated |
 
-> Rate limit response: the API returns HTTP 429 with a `Retry-After` header when a rate limit is exceeded. Implement exponential backoff: wait `Retry-After` seconds, then retry. Do not retry immediately on 429 — it causes cascading failures. Full detail in [WhatsApp API rate limits](/blog/whatsapp-api-rate-limits).
+> Rate limit response: the API returns HTTP 429 with a `Retry-After` header when a rate limit is exceeded. Implement exponential backoff: wait `Retry-After` seconds, then retry. Do not retry immediately on 429- it causes cascading failures. Full detail in [WhatsApp API rate limits](/blog/whatsapp-api-rate-limits).
 
-## Frequently Asked Questions — WhatsApp API Documentation
+## Frequently Asked Questions- WhatsApp API Documentation
 
 **Where is the official WhatsApp API documentation?**
-Meta's official WhatsApp Cloud API documentation is at developers.facebook.com/docs/whatsapp. Get Click Media's platform documentation — including GCM-specific endpoints, code samples in 4 languages, and integration guides — is available on this page. GCM documentation includes India-specific examples and use cases not covered in Meta's generic docs.
+Meta's official WhatsApp Cloud API documentation is at developers.facebook.com/docs/whatsapp. Get Click Media's platform documentation- including GCM-specific endpoints, code samples in 4 languages, and integration guides- is available on this page. GCM documentation includes India-specific examples and use cases not covered in Meta's generic docs.
 
 **What is the difference between WhatsApp Cloud API and On-Premise API documentation?**
 On-Premise API was deprecated by Meta for new accounts in 2023. All new WhatsApp Business Platform accounts use Cloud API. The Cloud API documentation (developers.facebook.com/docs/whatsapp/cloud-api) is the current reference. If you encounter older documentation referencing On-Premise API, it applies to legacy deployments only.
 
 **What programming languages does the WhatsApp API support?**
-WhatsApp Business API is a REST API — it works with any programming language that can make HTTP requests. Get Click Media provides official SDKs for Node.js, Python, PHP, and Java. Community-maintained libraries exist for Go, Ruby, Kotlin, and other languages. Code samples in all four official languages are included in GCM's documentation.
+WhatsApp Business API is a REST API- it works with any programming language that can make HTTP requests. Get Click Media provides official SDKs for Node.js, Python, PHP, and Java. Community-maintained libraries exist for Go, Ruby, Kotlin, and other languages. Code samples in all four official languages are included in GCM's documentation.
 
 **How do I handle API errors in my integration?**
-All API errors return a JSON response with an error object containing: `code` (numeric error code), `message` (human-readable description), and `type` (error category). See the complete error code reference at [WhatsApp API error codes](/blog/whatsapp-api-error-codes). Implement specific handling for common codes: 429 (rate limit — backoff and retry), 400 (bad request — fix payload, do not retry), 131030 (template not approved — submit template first).
+All API errors return a JSON response with an error object containing: `code` (numeric error code), `message` (human-readable description), and `type` (error category). See the complete error code reference at [WhatsApp API error codes](/blog/whatsapp-api-error-codes). Implement specific handling for common codes: 429 (rate limit- backoff and retry), 400 (bad request- fix payload, do not retry), 131030 (template not approved- submit template first).
 
 ## Get Started
 
 Continue building with the full technical guide set: [WhatsApp webhooks](/blog/whatsapp-webhooks) for receiving inbound events, [WhatsApp API error codes](/blog/whatsapp-api-error-codes) for troubleshooting, [WhatsApp API rate limits](/blog/whatsapp-api-rate-limits) for scaling send volume, and [WhatsApp API security](/blog/whatsapp-api-security) before going to production.
 
-**Get [WhatsApp Business API](/whatsapp-business-api)** — [Read API Docs](/blog/whatsapp-api-documentation) · [Get API Access](/contact) · [Talk to Technical Team](/contact)
+**Get [WhatsApp Business API](/whatsapp-business-api)**- [Read API Docs](/blog/whatsapp-api-documentation) · [Get API Access](/contact) · [Talk to Technical Team](/contact)

@@ -1,5 +1,5 @@
 ---
-title: "SMS API CRM Integration Guide (2026) — Salesforce, HubSpot, Zoho & Custom CRMs"
+title: "SMS API CRM Integration Guide (2026)- Salesforce, HubSpot, Zoho & Custom CRMs"
 description: "Step-by-step guide to integrating an SMS API with popular CRMs including Salesforce, HubSpot, Zoho CRM, and custom systems. Covers webhooks, contact sync, automated workflows, DLT compliance, and two-way SMS from your CRM."
 slug: "sms-api-crm-integration"
 image: "/images/blog/sms-api-crm-integration.webp"
@@ -17,18 +17,18 @@ keywords:
   - "bulk SMS CRM India"
 faq:
   - question: "Why should I integrate SMS with my CRM?"
-    answer: "Integrating SMS with your CRM enables automated, contextual messaging triggered by customer actions — lead follow-ups, deal stage changes, appointment reminders, and post-sale nurture sequences. All SMS history is logged against the contact record, giving your sales and support teams complete communication visibility. Indian businesses using CRM-SMS integration report 30–50% higher contact rates compared to email-only outreach."
+    answer: "Integrating SMS with your CRM enables automated, contextual messaging triggered by customer actions- lead follow-ups, deal stage changes, appointment reminders, and post-sale nurture sequences. All SMS history is logged against the contact record, giving your sales and support teams complete communication visibility. Indian businesses using CRM-SMS integration report 30–50% higher contact rates compared to email-only outreach."
   - question: "How does SMS CRM integration work technically?"
     answer: "CRM-SMS integration works via webhooks or native API calls. The CRM fires a webhook when a trigger condition is met (e.g., lead status changes to 'hot'). Your middleware or the SMS provider's native CRM plugin receives the webhook, formats the message using CRM contact data, and calls the SMS API. Delivery receipts are posted back to the CRM via a reverse webhook, updating the contact activity log."
   - question: "Does SMS CRM integration require DLT registration in India?"
-    answer: "Yes. All commercial SMS sent via CRM automation in India requires DLT registration — entity, sender ID, and message templates. Each automated message template used in your CRM workflows must be separately registered and approved on a TRAI DLT portal. Failure to register results in zero delivery, regardless of your CRM or SMS provider."
+    answer: "Yes. All commercial SMS sent via CRM automation in India requires DLT registration- entity, sender ID, and message templates. Each automated message template used in your CRM workflows must be separately registered and approved on a TRAI DLT portal. Failure to register results in zero delivery, regardless of your CRM or SMS provider."
   - question: "Can I receive SMS replies in my CRM?"
     answer: "Yes, if your SMS provider supports two-way messaging (virtual number / long code). When a contact replies to your SMS, the provider forwards the inbound message to a webhook URL you configure. Your middleware parses the reply and logs it as an activity against the matching CRM contact. Some CRM plugins handle this natively without custom code."
   - question: "Which CRMs support native SMS integration without custom code?"
     answer: "Zoho CRM, HubSpot, and Freshsales have native SMS integrations through their marketplace. Salesforce requires custom Apex code or a third-party SMS AppExchange package. For custom CRMs or ERPs, the REST SMS API integrates via standard HTTP webhook triggers. Get Click Media provides plugins for Zoho and HubSpot, with webhook documentation for all other platforms."
 ---
 
-Integrating your SMS API with your CRM turns isolated messaging into an intelligent, automated communication layer. Every lead follow-up, deal nudge, appointment reminder, and post-sale message can be triggered automatically from CRM workflow rules — and every reply lands back in the contact timeline. This guide covers integration architecture, platform-specific setups, and DLT compliance for India.
+Integrating your SMS API with your CRM turns isolated messaging into an intelligent, automated communication layer. Every lead follow-up, deal nudge, appointment reminder, and post-sale message can be triggered automatically from CRM workflow rules- and every reply lands back in the contact timeline. This guide covers integration architecture, platform-specific setups, and DLT compliance for India.
 
 ## Why CRM + SMS Integration Matters
 
@@ -42,10 +42,10 @@ CRM contact rates via phone and email have declined steadily. SMS cuts through:
 | SMS | 95–98% | Under 3 minutes |
 
 With CRM integration, SMS messages are:
-- **Triggered automatically** — no manual send required
-- **Personalised** — using CRM contact fields (name, company, deal value)
-- **Tracked** — delivery and reply status logged against the contact record
-- **Compliant** — DLT templates enforced at the API level
+- **Triggered automatically**- no manual send required
+- **Personalised**- using CRM contact fields (name, company, deal value)
+- **Tracked**- delivery and reply status logged against the contact record
+- **Compliant**- DLT templates enforced at the API level
 
 ## Integration Architecture
 
@@ -77,7 +77,7 @@ Middleware → Match contact by phone → Log to CRM
 
 ## HubSpot SMS Integration
 
-### Option A — HubSpot Workflow + Webhook (No-Code)
+### Option A- HubSpot Workflow + Webhook (No-Code)
 
 1. Go to **Workflows** → Create a contact-based workflow
 2. Set trigger: e.g., "Contact property: Lifecycle stage = SQL"
@@ -88,17 +88,17 @@ Middleware → Match contact by phone → Log to CRM
 ```json
 {
   "to": "91{{ contact.phone }}",
-  "message": "Hi {{ contact.firstname }}, your demo with our team is confirmed for {{ contact.meeting_date }}. — GCMDIA",
+  "message": "Hi {{ contact.firstname }}, your demo with our team is confirmed for {{ contact.meeting_date }}.- GCMDIA",
   "senderId": "GCMDIA",
   "templateId": "YOUR_DLT_TEMPLATE_ID",
   "type": "transactional"
 }
 ```
 
-### Option B — Node.js Middleware
+### Option B- Node.js Middleware
 
 ```js
-// Express webhook receiver — triggered by HubSpot
+// Express webhook receiver- triggered by HubSpot
 app.post("/webhooks/hubspot", express.json(), async (req, res) => {
   const contact = req.body[0]; // HubSpot sends array
 
@@ -115,7 +115,7 @@ app.post("/webhooks/hubspot", express.json(), async (req, res) => {
     },
     body: JSON.stringify({
       to: `91${phone}`,
-      message: `Hi, you've been qualified as a priority lead. Our team will call you within 2 hours. — GCMDIA`,
+      message: `Hi, you've been qualified as a priority lead. Our team will call you within 2 hours.- GCMDIA`,
       senderId: "GCMDIA",
       templateId: process.env.LEAD_QUALIFY_TEMPLATE_ID,
       type: "transactional",
@@ -132,12 +132,12 @@ app.post("/webhooks/hubspot", express.json(), async (req, res) => {
 
 Salesforce requires Apex code or a Process Builder / Flow integration. Using **Salesforce Flow** with a custom HTTP callout:
 
-### Apex Class — SMS Callout
+### Apex Class- SMS Callout
 
 ```apex
 public class GcmSmsService {
     private static final String API_URL = 'https://api.getclickmedia.com/v1/sms/send';
-    private static final String API_KEY  = Label.GCM_API_Key; // Custom Label — never hardcode
+    private static final String API_KEY  = Label.GCM_API_Key; // Custom Label- never hardcode
 
     @future(callout=true)
     public static void sendSms(String phone, String message, String templateId) {
@@ -172,7 +172,7 @@ public class GcmSmsService {
 2. Set trigger: When record is updated → `Stage = Closed Won`
 3. Add Apex Action → call `GcmSmsService.sendSms` with:
    - `phone = {!$Record.Account.PersonMobilePhone}`
-   - `message = Congratulations! Your deal is confirmed. Our team will onboard you within 24 hours. — GCMDIA`
+   - `message = Congratulations! Your deal is confirmed. Our team will onboard you within 24 hours.- GCMDIA`
    - `templateId = YOUR_TEMPLATE_ID`
 
 ---
@@ -181,7 +181,7 @@ public class GcmSmsService {
 
 Zoho CRM supports SMS via **Deluge scripts** in Zoho Flow or native automation rules.
 
-### Zoho Flow — Deluge Script
+### Zoho Flow- Deluge Script
 
 ```deluge
 // Triggered when Lead Status = "Hot"
@@ -190,7 +190,7 @@ leadName  = zoho.crm.getRecordById("Leads", input.Id).get("First_Name");
 
 smsPayload = {
     "to": "91" + leadPhone,
-    "message": "Hi " + leadName + ", thanks for your interest! Our team will call you within 30 minutes. — GCMDIA",
+    "message": "Hi " + leadName + ", thanks for your interest! Our team will call you within 30 minutes.- GCMDIA",
     "senderId": "GCMDIA",
     "templateId": zoho.cliq.getOrganizationParam("GCM_LEAD_TEMPLATE_ID"),
     "type": "transactional"
@@ -236,9 +236,9 @@ def crm_webhook():
         return jsonify({"skipped": True}), 200
 
     messages = {
-        "lead_created":    f"Hi {contact['name']}, thanks for your interest in Get Click Media. We'll be in touch shortly. — GCMDIA",
-        "demo_scheduled":  f"Your demo is confirmed for {data['datetime']}. Join link: {data['meeting_url']} — GCMDIA",
-        "payment_received": f"Payment of {data['amount']} received. Receipt: {data['receipt_url']} — GCMDIA",
+        "lead_created":    f"Hi {contact['name']}, thanks for your interest in Get Click Media. We'll be in touch shortly.- GCMDIA",
+        "demo_scheduled":  f"Your demo is confirmed for {data['datetime']}. Join link: {data['meeting_url']}- GCMDIA",
+        "payment_received": f"Payment of {data['amount']} received. Receipt: {data['receipt_url']}- GCMDIA",
     }
 
     resp = requests.post(
@@ -268,7 +268,7 @@ app.post("/webhooks/sms-dlr", express.json(), async (req, res) => {
 
   const contactId = await lookupContactByPhone(to);
 
-  // HubSpot example — log SMS activity
+  // HubSpot example- log SMS activity
   await fetch(`https://api.hubapi.com/crm/v3/objects/notes`, {
     method: "POST",
     headers: {
@@ -307,14 +307,14 @@ Register all templates before going live. Template approval takes 1–3 business
 
 ## Best Practices for CRM SMS Automation
 
-- **Validate phone numbers** before the API call — Indian mobile numbers must be 10 digits starting with 6–9: `^[6-9]\d{9}$`
-- **Deduplicate recipients** in bulk workflows — CRM data often contains duplicates that inflate costs
-- **Honour opt-outs** — update CRM contact field `sms_opt_out = true` when a user replies STOP; filter these contacts in all workflow triggers
-- **Throttle outbound volume** — CRM workflow bulk fires can spike to thousands of messages per minute; use the batch API and stagger sends
+- **Validate phone numbers** before the API call- Indian mobile numbers must be 10 digits starting with 6–9: `^[6-9]\d{9}$`
+- **Deduplicate recipients** in bulk workflows- CRM data often contains duplicates that inflate costs
+- **Honour opt-outs**- update CRM contact field `sms_opt_out = true` when a user replies STOP; filter these contacts in all workflow triggers
+- **Throttle outbound volume**- CRM workflow bulk fires can spike to thousands of messages per minute; use the batch API and stagger sends
 - **Test with sandbox key** before enabling live triggers in production CRM workflows
 
 ## Summary
 
-CRM SMS integration automates every customer touchpoint — from first-touch lead response to post-sale onboarding — with zero manual effort. Whether you use HubSpot workflows, Salesforce Flow, Zoho Deluge, or a custom webhook pipeline, the Get Click Media REST SMS API provides the same consistent interface. All messages are DLT-compliant, all delivery receipts flow back to your CRM, and your team gets complete communication visibility in one place.
+CRM SMS integration automates every customer touchpoint- from first-touch lead response to post-sale onboarding- with zero manual effort. Whether you use HubSpot workflows, Salesforce Flow, Zoho Deluge, or a custom webhook pipeline, the Get Click Media REST SMS API provides the same consistent interface. All messages are DLT-compliant, all delivery receipts flow back to your CRM, and your team gets complete communication visibility in one place.
 
 [Get your API key and start integrating](/get-started) or [talk to our integration team](/get-started).

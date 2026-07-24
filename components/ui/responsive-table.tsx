@@ -10,7 +10,7 @@ export interface ResponsiveTableColumn {
 export interface ResponsiveTableProps {
   columns: ResponsiveTableColumn[];
   rows: Array<Record<string, ReactNode>>;
-  /** Accessible name for the table / mobile card list — not visually rendered. */
+  /** Accessible name for the table / mobile card list- not visually rendered. */
   caption: string;
   /** Column to visually emphasize (e.g. "this is us" in a comparison table). */
   highlightColumnKey?: string;
@@ -25,7 +25,7 @@ const ALIGN_CLASS: Record<string, string> = {
 
 /**
  * A real <table> at sm: and up; a stacked definition-list card per row below
- * sm: (CSS-only hide/show — display:none is already dropped from the a11y
+ * sm: (CSS-only hide/show- display:none is already dropped from the a11y
  * tree, so there's no double-announcement risk). The first column doubles as
  * each mobile card's title.
  */

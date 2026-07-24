@@ -10,11 +10,11 @@ const FAQS = [
     items: [
       {
         q: "What is Get Click Media?",
-        a: "Get Click Media is an AI-powered customer communication platform that lets businesses engage customers across WhatsApp, RCS, SMS, Voice, and Email — all from one unified dashboard. We help you automate campaigns, deliver OTPs, manage conversations, and drive conversions at scale.",
+        a: "Get Click Media is an AI-powered customer communication platform that lets businesses engage customers across WhatsApp, RCS, SMS, Voice, and Email- all from one unified dashboard. We help you automate campaigns, deliver OTPs, manage conversations, and drive conversions at scale.",
       },
       {
         q: "Which communication channels does Get Click Media support?",
-        a: "We support WhatsApp Business API, RCS Business Messaging, Bulk SMS, OTP & Transactional SMS, Voice & IVR, Toll Free Numbers, Email Marketing, and AI Chatbots — giving you complete omnichannel coverage from a single platform.",
+        a: "We support WhatsApp Business API, RCS Business Messaging, Bulk SMS, OTP & Transactional SMS, Voice & IVR, Toll Free Numbers, Email Marketing, and AI Chatbots- giving you complete omnichannel coverage from a single platform.",
       },
       {
         q: "Is Get Click Media suitable for small businesses or only enterprises?",
@@ -27,11 +27,11 @@ const FAQS = [
     items: [
       {
         q: "How do I get a WhatsApp Business API account?",
-        a: "As an official Meta Business Solution Provider, we handle the entire onboarding process for you — including business verification, phone number registration, and template approval. Most accounts go live within 2–3 business days.",
+        a: "As an official Meta Business Solution Provider, we handle the entire onboarding process for you- including business verification, phone number registration, and template approval. Most accounts go live within 2–3 business days.",
       },
       {
         q: "What is RCS Business Messaging and how is it different from SMS?",
-        a: "RCS (Rich Communication Services) is the next-generation upgrade to SMS. Unlike plain SMS, RCS supports rich media (images, carousels, videos), read receipts, quick-reply buttons, and verified sender branding — all delivered natively inside the default messaging app on Android.",
+        a: "RCS (Rich Communication Services) is the next-generation upgrade to SMS. Unlike plain SMS, RCS supports rich media (images, carousels, videos), read receipts, quick-reply buttons, and verified sender branding- all delivered natively inside the default messaging app on Android.",
       },
       {
         q: "Can I send bulk SMS without DLT registration?",
@@ -44,15 +44,15 @@ const FAQS = [
     items: [
       {
         q: "What can the AI Chatbot do?",
-        a: "Our AI Chatbot handles end-to-end conversations — answering FAQs, qualifying leads, booking appointments, processing orders, and escalating to human agents when needed. It works 24×7 across WhatsApp, web chat, and other channels without any coding.",
+        a: "Our AI Chatbot handles end-to-end conversations- answering FAQs, qualifying leads, booking appointments, processing orders, and escalating to human agents when needed. It works 24×7 across WhatsApp, web chat, and other channels without any coding.",
       },
       {
         q: "Can I build automated workflows without coding?",
-        a: "Yes. Our visual Flow Builder lets you design complex multi-step journeys — from welcome sequences to cart recovery to appointment reminders — using a drag-and-drop interface. No developer needed.",
+        a: "Yes. Our visual Flow Builder lets you design complex multi-step journeys- from welcome sequences to cart recovery to appointment reminders- using a drag-and-drop interface. No developer needed.",
       },
       {
         q: "Does the platform support AI-generated campaign content?",
-        a: "Yes. Our AI Campaign Generator creates personalised message templates, subject lines, and call-to-action copy based on your audience segment and campaign goal — cutting campaign creation time by up to 80%.",
+        a: "Yes. Our AI Campaign Generator creates personalised message templates, subject lines, and call-to-action copy based on your audience segment and campaign goal- cutting campaign creation time by up to 80%.",
       },
     ],
   },
@@ -61,7 +61,7 @@ const FAQS = [
     items: [
       {
         q: "Is there a free trial?",
-        a: "Yes — you can start a free trial with no credit card required. The trial includes access to core messaging features, the chatbot builder, and the analytics dashboard so you can experience the platform before committing.",
+        a: "Yes- you can start a free trial with no credit card required. The trial includes access to core messaging features, the chatbot builder, and the analytics dashboard so you can experience the platform before committing.",
       },
       {
         q: "What kind of support do you offer?",
@@ -69,7 +69,7 @@ const FAQS = [
       },
       {
         q: "How does pricing work?",
-        a: "Pricing is flexible — you pay based on the channels you use and the volume of messages sent. We offer monthly and annual plans. WhatsApp conversations are billed per the Meta conversation pricing model, and we pass through those costs transparently with zero markup.",
+        a: "Pricing is flexible- you pay based on the channels you use and the volume of messages sent. We offer monthly and annual plans. WhatsApp conversations are billed per the Meta conversation pricing model, and we pass through those costs transparently with zero markup.",
       },
     ],
   },
@@ -91,13 +91,13 @@ export default function FAQ() {
             eyebrow="FAQ"
             title="Everything you need to know"
             highlight="to know"
-            description="Can't find your answer? Email us at hello@getclickmedia.com — we reply within a few hours."
+            description="Can't find your answer? Email us at hello@getclickmedia.com- we reply within a few hours."
             align="left"
             size="lg"
           />
         </div>
 
-        {/* FAQ grid — 2 columns on desktop */}
+        {/* FAQ grid- 2 columns on desktop */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {FAQS.map((group, gi) => (
             <div key={group.category}>
@@ -168,7 +168,7 @@ export default function FAQ() {
                         </span>
                       </button>
 
-                      {/* Answer — height-based smooth expand */}
+                      {/* Answer- height-based smooth expand */}
                       <div
                         style={{
                           maxHeight: isOpen ? 300 : 0,
@@ -206,7 +206,7 @@ export default function FAQ() {
           <div>
             <h3 className="text-xl font-bold text-white mb-1">Still have questions?</h3>
             <p className="text-blue-100 text-sm">
-              Our team is available 24×7 — talk to an expert and get answers in minutes.
+              Our team is available 24×7- talk to an expert and get answers in minutes.
             </p>
           </div>
           <div className="flex gap-3 shrink-0">

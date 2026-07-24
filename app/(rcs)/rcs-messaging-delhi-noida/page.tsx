@@ -77,7 +77,7 @@ const schema = {
         },
         {
           "@type": "Question", "name": "What is the RCS reach in Delhi and Noida?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Estimated RCS reach in Delhi-NCR is 65–80% of targeted smartphone audiences — above the national average of 45–55%, driven by high Jio and Airtel penetration and premium device quality." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Estimated RCS reach in Delhi-NCR is 65–80% of targeted smartphone audiences- above the national average of 45–55%, driven by high Jio and Airtel penetration and premium device quality." }
         },
         {
           "@type": "Question", "name": "How long does RCS setup take for a Delhi-NCR business?",
@@ -85,7 +85,7 @@ const schema = {
         },
         {
           "@type": "Question", "name": "Can I use RCS for B2B messaging in Noida and Gurugram?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Noida and Gurugram are among India's highest-quality B2B RCS markets — high device specification, senior decision-makers, and strong engagement rates for professional services and SaaS messaging." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Noida and Gurugram are among India's highest-quality B2B RCS markets- high device specification, senior decision-makers, and strong engagement rates for professional services and SaaS messaging." }
         },
         {
           "@type": "Question", "name": "Which Delhi-NCR industries use RCS messaging?",
@@ -121,10 +121,10 @@ const INDUSTRY_USE_CASES = [
     textColor: "text-blue-600",
     useCases: [
       "Credit card offer campaigns from Gurugram-headquartered banks (HDFC, Kotak, Axis)",
-      "EMI payment reminders with Pay Now button — verified sender reduces missed payments",
+      "EMI payment reminders with Pay Now button- verified sender reduces missed payments",
       "Personal loan pre-approval messages with Apply Now CTA",
       "Startup/SME banking offers for Noida and Gurugram tech corridor companies",
-      "Insurance renewal reminders — LIC, Max Life, Bajaj Allianz all active in NCR"
+      "Insurance renewal reminders- LIC, Max Life, Bajaj Allianz all active in NCR"
     ],
     image: "/images/rcs/delhi-banking.webp"
   },
@@ -136,7 +136,7 @@ const INDUSTRY_USE_CASES = [
     textColor: "text-purple-600",
     useCases: [
       "Admission enquiry follow-ups for Delhi University, Amity, Sharda, and private colleges",
-      "Coaching institute campaigns (FIITJEE, Allen, Aakash — all NCR-based)",
+      "Coaching institute campaigns (FIITJEE, Allen, Aakash- all NCR-based)",
       "EdTech platform course recommendations for Noida's working professional population",
       "Exam schedule reminders and result notifications for coaching students",
       "Fee payment reminders with Pay Now button for school and college management"
@@ -153,7 +153,7 @@ const INDUSTRY_USE_CASES = [
       "Appointment reminders from Fortis, Max, Apollo, and BLK hospitals in Delhi-NCR",
       "Lab report notifications from SRL, Dr Lal PathLabs (HQ: Gurugram), Metropolis",
       "Health insurance renewal campaigns targeting NCR's large salaried workforce",
-      "Pharmacy refill reminders — Apollo Pharmacy, MedPlus, 1mg (HQ: Gurugram)",
+      "Pharmacy refill reminders- Apollo Pharmacy, MedPlus, 1mg (HQ: Gurugram)",
       "Post-consultation follow-up messages with prescription download button"
     ],
     image: "/images/rcs/delhi-healthcare.webp"
@@ -168,8 +168,8 @@ const INDUSTRY_USE_CASES = [
       "Flash sale campaigns for Noida and Gurugram-headquartered D2C brands",
       "Abandoned cart recovery for fashion, electronics, and home décor brands in NCR",
       "Order tracking with delivery map button for NCR's dense urban delivery corridors",
-      "Meesho, Nykaa, boAt, Mamaearth (all NCR HQ) — prime RCS adoption candidates",
-      "Quick commerce (Swiggy Instamart, Blinkit — HQ Gurugram) delivery updates"
+      "Meesho, Nykaa, boAt, Mamaearth (all NCR HQ)- prime RCS adoption candidates",
+      "Quick commerce (Swiggy Instamart, Blinkit- HQ Gurugram) delivery updates"
     ],
     image: "/images/rcs/delhi-ecommerce.webp"
   },
@@ -182,9 +182,9 @@ const INDUSTRY_USE_CASES = [
     useCases: [
       "Table booking confirmations for Delhi's premium restaurant segment",
       "Hotel check-in reminders with Google Maps and check-in time buttons",
-      "Loyalty programme updates for hotel chains (ITC Hotels, The Lalit — both NCR)",
+      "Loyalty programme updates for hotel chains (ITC Hotels, The Lalit- both NCR)",
       "Event and banquet booking confirmations for Delhi's large MICE market",
-      "Food delivery order tracking (Zomato HQ: Gurugram) — RCS verified delivery updates"
+      "Food delivery order tracking (Zomato HQ: Gurugram)- RCS verified delivery updates"
     ],
     image: "/images/rcs/delhi-hospitality.webp"
   },
@@ -209,25 +209,25 @@ const INDUSTRY_USE_CASES = [
 const CITY_NOTES = [
   {
     city: "Delhi",
-    description: "Delhi proper — South Delhi, West Delhi, Central Delhi, East Delhi, and New Delhi — is one of India's densest RCS-capable markets. South Delhi's affluent residential areas (Defence Colony, Lajpat Nagar, Saket, Vasant Kunj) have particularly high iOS 18+ penetration alongside Android, giving RCS campaigns near-universal device reach.",
+    description: "Delhi proper- South Delhi, West Delhi, Central Delhi, East Delhi, and New Delhi- is one of India's densest RCS-capable markets. South Delhi's affluent residential areas (Defence Colony, Lajpat Nagar, Saket, Vasant Kunj) have particularly high iOS 18+ penetration alongside Android, giving RCS campaigns near-universal device reach.",
     industries: "High-end retail, healthcare (AIIMS, Safdarjung, BLK catchment), hospitality, education (DU, JNU, coaching institutes), and government contractor companies.",
     image: "/images/rcs/delhi-city.webp"
   },
   {
     city: "Noida & Greater Noida",
-    description: "Noida is Get Click Media's home market. The Noida-Greater Noida corridor is India's second-largest IT and tech company cluster after Bengaluru, housing the NCR offices of HCL, Infosys, Tech Mahindra, Samsung, and hundreds of mid-size software companies. This translates into a large, young, digitally active workforce with high-specification Android devices — the optimal RCS demographic.",
+    description: "Noida is Get Click Media's home market. The Noida-Greater Noida corridor is India's second-largest IT and tech company cluster after Bengaluru, housing the NCR offices of HCL, Infosys, Tech Mahindra, Samsung, and hundreds of mid-size software companies. This translates into a large, young, digitally active workforce with high-specification Android devices- the optimal RCS demographic.",
     industries: "IT and software, real estate (Noida Extension, Sector 150, Greater Noida West), EdTech (Amity, Sharda), manufacturing (Noida Special Economic Zone), healthcare (Kailash Hospital, Fortis Noida).",
     image: "/images/rcs/noida-city.webp"
   },
   {
     city: "Gurugram",
-    description: "Gurugram is India's most concentrated B2B corporate messaging market — home to the India headquarters of American Express, Microsoft, Google, Deloitte, EY, KPMG, and several hundred other MNC India offices. Corporate decision-makers here are among the highest-value B2B RCS recipients in India.",
+    description: "Gurugram is India's most concentrated B2B corporate messaging market- home to the India headquarters of American Express, Microsoft, Google, Deloitte, EY, KPMG, and several hundred other MNC India offices. Corporate decision-makers here are among the highest-value B2B RCS recipients in India.",
     industries: "Financial services, professional services (consulting, legal, accounting), IT and tech, B2B SaaS, premium retail and hospitality.",
     image: "/images/rcs/gurugram-city.webp"
   },
   {
     city: "Faridabad & Ghaziabad",
-    description: "Faridabad and Ghaziabad are predominantly manufacturing and trading hubs with a mix of B2B and B2C RCS use cases. Device quality is more variable than Noida or Gurugram, meaning SMS fallback rates will be higher (typically 30–40%). For FMCG, automotive, and industrial supply companies targeting these markets, RCS is still effective — but campaigns should be designed with a robust SMS fallback version.",
+    description: "Faridabad and Ghaziabad are predominantly manufacturing and trading hubs with a mix of B2B and B2C RCS use cases. Device quality is more variable than Noida or Gurugram, meaning SMS fallback rates will be higher (typically 30–40%). For FMCG, automotive, and industrial supply companies targeting these markets, RCS is still effective- but campaigns should be designed with a robust SMS fallback version.",
     industries: "Manufacturing, automotive, FMCG, industrial supply, B2B trading, warehousing and logistics.",
     image: "/images/rcs/faridabad-city.webp"
   }
@@ -236,11 +236,11 @@ const CITY_NOTES = [
 // -- Performance Benchmarks ---------------------------------------------
 const PERFORMANCE_BENCHMARKS = [
   { metric: "RCS delivery rate (vs total sends)", ncr: "72–82%", national: "55–65%", reason: "Higher Jio/Airtel penetration + better device quality" },
-  { metric: "Message open rate", ncr: "78%", national: "72%", reason: "Higher trust environment — premium audience" },
+  { metric: "Message open rate", ncr: "78%", national: "72%", reason: "Higher trust environment- premium audience" },
   { metric: "Click-through rate (campaigns)", ncr: "24–32%", national: "18–26%", reason: "Higher smartphone sophistication drives button usage" },
-  { metric: "Cart recovery rate (e-comm)", ncr: "22–29%", national: "18–24%", reason: "Higher AOV audience — more motivated to recover" },
+  { metric: "Cart recovery rate (e-comm)", ncr: "22–29%", national: "18–24%", reason: "Higher AOV audience- more motivated to recover" },
   { metric: "Site visit booking rate (RE)", ncr: "18–28%", national: "15–22%", reason: "Jio 5G speeds = faster rich card load in NCR" },
-  { metric: "Payment on-time rate (reminders)", ncr: "83%", national: "79%", reason: "Corporate/salaried NCR audience — higher financial engagement" },
+  { metric: "Payment on-time rate (reminders)", ncr: "83%", national: "79%", reason: "Corporate/salaried NCR audience- higher financial engagement" },
   { metric: "SMS fallback rate", ncr: "18–28%", national: "35–45%", reason: "Better RCS coverage in urban NCR vs national average" }
 ];
 
@@ -248,7 +248,7 @@ const PERFORMANCE_BENCHMARKS = [
 const FAQS = [
   {
     q: "Is Get Click Media based in Noida or Delhi?",
-    a: "Get Click Media is headquartered in Noida, Uttar Pradesh — in the Delhi-NCR region. Our team serves businesses across the entire NCR including Delhi, Noida, Greater Noida, Gurugram, Faridabad, and Ghaziabad. Delhi-NCR clients benefit from local account management and in-person support that remote providers cannot offer."
+    a: "Get Click Media is headquartered in Noida, Uttar Pradesh- in the Delhi-NCR region. Our team serves businesses across the entire NCR including Delhi, Noida, Greater Noida, Gurugram, Faridabad, and Ghaziabad. Delhi-NCR clients benefit from local account management and in-person support that remote providers cannot offer."
   },
   {
     q: "Which industries in Delhi-NCR use RCS messaging most actively?",
@@ -256,15 +256,15 @@ const FAQS = [
   },
   {
     q: "What is the RCS reach in Delhi and Noida specifically?",
-    a: "Estimated RCS reach in Delhi-NCR is 65–80% of targeted smartphone audiences — significantly above the national average of 45–55%. This is driven by high Jio and Airtel penetration, above-average device quality (newer Android devices with Google Messages pre-installed), and high 4G/5G coverage across urban NCR. For campaigns targeting South Delhi, Gurugram, and Noida's corporate corridors, RCS reach can approach 80%."
+    a: "Estimated RCS reach in Delhi-NCR is 65–80% of targeted smartphone audiences- significantly above the national average of 45–55%. This is driven by high Jio and Airtel penetration, above-average device quality (newer Android devices with Google Messages pre-installed), and high 4G/5G coverage across urban NCR. For campaigns targeting South Delhi, Gurugram, and Noida's corporate corridors, RCS reach can approach 80%."
   },
   {
     q: "How long does it take to set up RCS messaging for a Delhi-NCR business?",
-    a: "Google brand verification — the one-time setup required before sending RCS Business Messages — typically takes 5 to 7 business days. Get Click Media manages this entire process. For Delhi-NCR clients, our Noida-based team can also provide in-person onboarding support, which accelerates the documentation collection phase. Most clients are live within 7 to 10 business days."
+    a: "Google brand verification- the one-time setup required before sending RCS Business Messages- typically takes 5 to 7 business days. Get Click Media manages this entire process. For Delhi-NCR clients, our Noida-based team can also provide in-person onboarding support, which accelerates the documentation collection phase. Most clients are live within 7 to 10 business days."
   },
   {
     q: "Can I use RCS for B2B messaging in Noida and Gurugram?",
-    a: "Yes. RCS works for B2B messaging just as it does for B2C. Noida's IT corridor and Gurugram's MNC district are among the highest-quality B2B RCS audiences in India — high device specification, high engagement, and high decision-making authority. Common B2B RCS use cases in NCR include SaaS product demos, financial services offers, professional development programme invitations, and corporate event registrations."
+    a: "Yes. RCS works for B2B messaging just as it does for B2C. Noida's IT corridor and Gurugram's MNC district are among the highest-quality B2B RCS audiences in India- high device specification, high engagement, and high decision-making authority. Common B2B RCS use cases in NCR include SaaS product demos, financial services offers, professional development programme invitations, and corporate event registrations."
   },
   {
     q: "Does RCS work in areas like Faridabad, Ghaziabad, and Greater Noida?",
@@ -272,11 +272,11 @@ const FAQS = [
   },
   {
     q: "What is the minimum commitment to start RCS with Get Click Media in Delhi-NCR?",
-    a: "There is no minimum contract length or minimum monthly volume requirement to get started. Get Click Media works with Delhi-NCR businesses ranging from early-stage startups to enterprise brands. For very small volumes (under 5,000 messages per month), we recommend evaluating whether the campaign ROI justifies the setup effort — our sales team will give you an honest assessment during the initial consultation."
+    a: "There is no minimum contract length or minimum monthly volume requirement to get started. Get Click Media works with Delhi-NCR businesses ranging from early-stage startups to enterprise brands. For very small volumes (under 5,000 messages per month), we recommend evaluating whether the campaign ROI justifies the setup effort- our sales team will give you an honest assessment during the initial consultation."
   },
   {
     q: "Can Get Click Media help with RCS campaign strategy for my specific Delhi-NCR industry?",
-    a: "Yes. Our Noida-based account team has direct experience with RCS campaign strategy across Delhi-NCR's major industries — real estate, banking, healthcare, EdTech, e-commerce, and logistics. We provide industry-specific campaign templates, send-time recommendations based on NCR audience behaviour data, and performance benchmarks specific to your industry and geography — not generic national averages."
+    a: "Yes. Our Noida-based account team has direct experience with RCS campaign strategy across Delhi-NCR's major industries- real estate, banking, healthcare, EdTech, e-commerce, and logistics. We provide industry-specific campaign templates, send-time recommendations based on NCR audience behaviour data, and performance benchmarks specific to your industry and geography- not generic national averages."
   }
 ];
 
@@ -288,11 +288,11 @@ export default function RCSDelhiNoidaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       {/* -----------------------------------------------------------------
-          HERO — EXACT SAME AS PREVIOUS PAGES (dark gradient)
+          HERO- EXACT SAME AS PREVIOUS PAGES (dark gradient)
       ----------------------------------------------------------------- */}
       <section className="relative overflow-hidden mt-2 bg-white bg-[radial-gradient(130%_130%_at_100%_100%,#5b7fe8_0%,#93aef0_25%,#d6e2ff_55%,#ffffff_85%)] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
-          {/* -- BREADCRUMB — NOW INSIDE HERO WITH VISIBLE BACKGROUND -- */}
+          {/* -- BREADCRUMB- NOW INSIDE HERO WITH VISIBLE BACKGROUND -- */}
           <nav aria-label="Breadcrumb" className="mb-8">
             <ol className="flex items-center gap-2 text-xs text-gray-500 bg-white/70 backdrop-blur-sm rounded-full px-4 py-2 w-fit">
               <li><Link href="/" className="hover:text-gray-900 transition-colors">Home</Link></li>
@@ -316,7 +316,7 @@ export default function RCSDelhiNoidaPage() {
               </h1>
 
               <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-xl">
-                Get Click Media is one of Delhi-NCR&apos;s leading RCS Business Messaging providers —
+                Get Click Media is one of Delhi-NCR&apos;s leading RCS Business Messaging providers-
                 headquartered in Noida and serving businesses across Delhi, Noida, Gurugram,
                 Faridabad, and Greater Noida with enterprise-grade RCS messaging infrastructure.
               </p>
@@ -345,7 +345,7 @@ export default function RCSDelhiNoidaPage() {
             </div>
           </div>
 
-          {/* Stats row — same style as previous pages */}
+          {/* Stats row- same style as previous pages */}
           <div className="relative mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-gray-200">
             {[
               { value: "10,000+", label: "Businesses served across India" },
@@ -392,7 +392,7 @@ export default function RCSDelhiNoidaPage() {
                   {
                     icon: Users,
                     title: "India's largest Jio and Airtel subscriber base outside Mumbai",
-                    desc: "65–80% of Delhi-NCR audiences are fully RCS-reachable — significantly higher than the national average of 45–55%."
+                    desc: "65–80% of Delhi-NCR audiences are fully RCS-reachable- significantly higher than the national average of 45–55%."
                   },
                   {
                     icon: TrendingUp,
@@ -406,7 +406,7 @@ export default function RCSDelhiNoidaPage() {
                   },
                   {
                     icon: MapPinned,
-                    title: "Get Click Media is based in Noida — local advantage",
+                    title: "Get Click Media is based in Noida- local advantage",
                     desc: "Local account management, in-person campaign strategy sessions, and direct access to our technical team without the delays of a remote provider."
                   }
                 ].map((item, i) => (
@@ -425,7 +425,7 @@ export default function RCSDelhiNoidaPage() {
               <div className="bg-[#0f172a] rounded-xl p-4">
                 <p className="text-white/80 text-sm leading-relaxed">
                   <span className="text-[#38bdf8] font-bold">Delhi-NCR RCS coverage:</span> Estimated RCS-reachable audience:
-                  <span className="text-white font-bold"> 1.8–2.2 crore smartphone users</span> — the largest single-geography
+                  <span className="text-white font-bold"> 1.8–2.2 crore smartphone users</span>- the largest single-geography
                   RCS addressable market in India after Mumbai.
                 </p>
               </div>
@@ -464,8 +464,8 @@ export default function RCSDelhiNoidaPage() {
                 {[
                   { provider: "MetaReach Marketing", page: "/rcs.php", pos: "~12", clicks: "~214", opportunity: "Beatable with better on-page SEO, local schema" },
                   { provider: "MSG91", page: "/rcs-messaging", pos: "~18", clicks: "~95", opportunity: "Strong domain authority but no Delhi-NCR specificity" },
-                  { provider: "Kaleyra", page: "/rcs", pos: "~24", clicks: "~52", opportunity: "Weak local content — no NCR geo targeting" },
-                  { provider: "Textlocal", page: "/rcs-sms", pos: "~31", clicks: "~28", opportunity: "Old page, not updated — opportunity to outrank" },
+                  { provider: "Kaleyra", page: "/rcs", pos: "~24", clicks: "~52", opportunity: "Weak local content- no NCR geo targeting" },
+                  { provider: "Textlocal", page: "/rcs-sms", pos: "~31", clicks: "~28", opportunity: "Old page, not updated- opportunity to outrank" },
                   { provider: "Get Click Media", page: "(this page)", pos: "—", clicks: "0 currently", opportunity: "Target: position 1–5 for 'RCS messaging Delhi Noida'" }
                 ].map((row, i) => (
                   <tr key={row.provider} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
@@ -567,7 +567,7 @@ export default function RCSDelhiNoidaPage() {
               </thead>
               <tbody>
                 {[
-                  { metric: "Smartphone penetration", ncr: "76%", national: "54%", note: "Delhi-NCR urban areas — TRAI 2025" },
+                  { metric: "Smartphone penetration", ncr: "76%", national: "54%", note: "Delhi-NCR urban areas- TRAI 2025" },
                   { metric: "4G/5G users (% of mobile base)", ncr: "82%", national: "61%", note: "Jio + Airtel combined data" },
                   { metric: "Google Messages as default app", ncr: "~68%", national: "~58%", note: "Est. based on Android device mix" },
                   { metric: "Jio subscriber share", ncr: "~44%", national: "43%", note: "TRAI subscriber data" },
@@ -685,12 +685,12 @@ export default function RCSDelhiNoidaPage() {
               <div className="space-y-4">
                 {[
                   {
-                    title: "We are based in Noida — no remote vendor disadvantage",
+                    title: "We are based in Noida- no remote vendor disadvantage",
                     desc: "In-person campaign strategy sessions, same-day response, local market intelligence, and account managers who know your industry and geography."
                   },
                   {
-                    title: "Direct Jio and Airtel integration — critical for NCR",
-                    desc: "Direct carrier integrations with both networks — faster message delivery, more accurate capability detection, and lower SMS fallback rates."
+                    title: "Direct Jio and Airtel integration- critical for NCR",
+                    desc: "Direct carrier integrations with both networks- faster message delivery, more accurate capability detection, and lower SMS fallback rates."
                   },
                   {
                     title: "Delhi-NCR client track record",
@@ -698,7 +698,7 @@ export default function RCSDelhiNoidaPage() {
                   },
                   {
                     title: "Onboarding support in your timezone, in your language",
-                    desc: "IST-based team, understanding of local business calendar, and communication in English or Hindi — whichever works best for your team."
+                    desc: "IST-based team, understanding of local business calendar, and communication in English or Hindi- whichever works best for your team."
                   }
                 ].map((item) => (
                   <div key={item.title} className="flex items-start gap-4 p-3 rounded-xl hover:bg-blue-50/50 transition-colors">
@@ -750,11 +750,11 @@ export default function RCSDelhiNoidaPage() {
 
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {[
-              { step: "01", title: "Contact Our Noida Team", desc: "Tell us your business type, primary industry, and what you want to achieve with RCS — lead generation, customer retention, transactional messaging, or all three." },
+              { step: "01", title: "Contact Our Noida Team", desc: "Tell us your business type, primary industry, and what you want to achieve with RCS- lead generation, customer retention, transactional messaging, or all three." },
               { step: "02", title: "We Assess Your RCS Opportunity", desc: "We estimate your audience's RCS reachability based on geography and industry, providing a campaign ROI projection based on comparable clients." },
               { step: "03", title: "Google Brand Verification", desc: "We handle all documentation, submission, and follow-up. Timeline: 5–7 business days." },
               { step: "04", title: "Campaign Infrastructure Setup", desc: "Message templates, carrier launch on Jio and Airtel, CRM or platform integration, and your Get Click Media dashboard access." },
-              { step: "05", title: "Test Sends", desc: "We confirm delivery and rich card rendering on your target devices — Android and iOS 18+." },
+              { step: "05", title: "Test Sends", desc: "We confirm delivery and rich card rendering on your target devices- Android and iOS 18+." },
               { step: "06", title: "First Campaign Launches", desc: "Your Noida-based account manager monitors delivery, reads, and engagement in real time." }
             ].map((item) => (
               <div key={item.step} className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow space-y-3">
@@ -776,7 +776,7 @@ export default function RCSDelhiNoidaPage() {
 
       {/* -- FAQ ------------------------------------------------------------ */}
       <section className="py-20 sm:py-28 bg-white" id="faq">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
               Frequently Asked Questions
@@ -785,26 +785,39 @@ export default function RCSDelhiNoidaPage() {
               RCS Messaging in Delhi and Noida
             </h2>
           </div>
-          <div className="space-y-3">
-            {FAQS.map((faq, i) => (
-              <details
-                key={i}
-                className="group rounded-2xl bg-gray-50 border border-gray-100 shadow-sm open:shadow-md transition-shadow"
-              >
-                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
-                  <span className="text-sm font-semibold text-gray-900 leading-snug">{faq.q}</span>
-                  <ChevronDown className="w-4 h-4 text-gray-400 shrink-0 transition-transform group-open:rotate-180" />
-                </summary>
-                <div className="px-6 pb-5">
-                  <p className="text-sm text-gray-500 leading-relaxed">{faq.a}</p>
-                </div>
-              </details>
-            ))}
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
+            <div className="hidden lg:block lg:w-[36%] shrink-0 lg:sticky lg:top-24">
+              <div className="relative w-full rounded-2xl overflow-hidden aspect-4/5">
+                <Image
+                  src="/images/rcs/rcs-service-provider-india.png"
+                  alt="Ask a question about RCS messaging in Delhi and Noida"
+                  fill
+                  className="object-cover"
+                  sizes="36vw"
+                />
+              </div>
+            </div>
+            <div className="flex-1 w-full space-y-3">
+              {FAQS.map((faq, i) => (
+                <details
+                  key={i}
+                  className="group rounded-2xl bg-gray-50 border border-gray-100 shadow-sm open:shadow-md transition-shadow"
+                >
+                  <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
+                    <span className="text-sm font-semibold text-gray-900 leading-snug">{faq.q}</span>
+                    <ChevronDown className="w-4 h-4 text-gray-400 shrink-0 transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-5">
+                    <p className="text-sm text-gray-500 leading-relaxed">{faq.a}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* -- BOTTOM CTA — EXACT SAME AS PREVIOUS PAGES -------------------- */}
+      {/* -- BOTTOM CTA- EXACT SAME AS PREVIOUS PAGES -------------------- */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#0c1a3a] via-[#1e3a8a] to-[#1e40af] px-8 sm:px-16 py-16 text-center space-y-6">

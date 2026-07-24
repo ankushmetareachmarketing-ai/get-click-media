@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   MessageSquare,
   Radio,
@@ -40,17 +41,17 @@ export const metadata: Metadata = {
 const LAST_UPDATED = "July 2026";
 
 const CHANNELS = [
-  { icon: Hash, title: "SMS", desc: "Universal reach for time-critical alerts, OTPs, and reminders — the channel every customer can receive.", href: "/bulk-sms-service-provider-india" },
+  { icon: Hash, title: "SMS", desc: "Universal reach for time-critical alerts, OTPs, and reminders- the channel every customer can receive.", href: "/bulk-sms-service-provider-india" },
   { icon: MessageSquare, title: "WhatsApp", desc: "Two-way, rich-media conversations for support, updates, and marketing where customers already spend their time.", href: "/whatsapp-business-api" },
   { icon: Radio, title: "RCS", desc: "Branded, interactive rich cards for campaigns that need to look and feel like more than plain text.", href: "/rcs-messaging" },
-  { icon: Mail, title: "Email", desc: "Detailed, non-urgent content — newsletters, invoices, and longer-form updates — alongside your messaging channels.", href: "/" },
+  { icon: Mail, title: "Email", desc: "Detailed, non-urgent content- newsletters, invoices, and longer-form updates- alongside your messaging channels.", href: "/" },
 ];
 
 const METRICS = [
-  { icon: Eye, title: "Open & read rate", desc: "How many recipients actually saw the message — the first signal of whether a channel and send-time are working." },
-  { icon: MousePointerClick, title: "Click-through rate", desc: "How many recipients acted on a link or button — the metric that connects a message to real intent." },
+  { icon: Eye, title: "Open & read rate", desc: "How many recipients actually saw the message- the first signal of whether a channel and send-time are working." },
+  { icon: MousePointerClick, title: "Click-through rate", desc: "How many recipients acted on a link or button- the metric that connects a message to real intent." },
   { icon: Reply, title: "Response rate", desc: "For two-way channels like WhatsApp and RCS, how often a message starts an actual conversation instead of a one-way broadcast." },
-  { icon: Repeat, title: "Retention & repeat engagement", desc: "Whether customers who receive consistent, well-timed messages keep coming back — the metric that ties engagement to revenue." },
+  { icon: Repeat, title: "Retention & repeat engagement", desc: "Whether customers who receive consistent, well-timed messages keep coming back- the metric that ties engagement to revenue." },
 ];
 
 const SEGMENTS = [
@@ -63,15 +64,15 @@ const SEGMENTS = [
 const FAQS = [
   {
     q: "What is a customer engagement platform?",
-    a: "A customer engagement platform is a system businesses use to communicate with customers across channels — SMS, WhatsApp, RCS, and email — with the goal of driving response, retention, and conversion, backed by data on what's actually working.",
+    a: "A customer engagement platform is a system businesses use to communicate with customers across channels- SMS, WhatsApp, RCS, and email- with the goal of driving response, retention, and conversion, backed by data on what's actually working.",
   },
   {
     q: "Is a customer engagement platform the same as a messaging API?",
-    a: "Not quite — a messaging API is the delivery infrastructure that sends and receives messages. A customer engagement platform sits on top of that infrastructure, adding campaign building, engagement metrics, and channel selection so the business can focus on the customer relationship rather than the technical delivery layer.",
+    a: "Not quite- a messaging API is the delivery infrastructure that sends and receives messages. A customer engagement platform sits on top of that infrastructure, adding campaign building, engagement metrics, and channel selection so the business can focus on the customer relationship rather than the technical delivery layer.",
   },
   {
     q: "Is Get Click Media a CRM or a messaging platform?",
-    a: "Get Click Media is a messaging-infrastructure company, not a full CRM or customer-support suite — we don't replace tools like a sales pipeline, ticketing system, or contact database. What we provide is the multi-channel messaging layer — SMS, WhatsApp, RCS, and delivery/engagement reporting — that plugs into the CRM or business system you already use, so your existing customer data drives messages across every channel from one place.",
+    a: "Get Click Media is a messaging-infrastructure company, not a full CRM or customer-support suite- we don't replace tools like a sales pipeline, ticketing system, or contact database. What we provide is the multi-channel messaging layer- SMS, WhatsApp, RCS, and delivery/engagement reporting- that plugs into the CRM or business system you already use, so your existing customer data drives messages across every channel from one place.",
   },
   {
     q: "Which engagement metrics matter most?",
@@ -79,7 +80,7 @@ const FAQS = [
   },
   {
     q: "Can engagement data be compared across SMS, WhatsApp, and RCS?",
-    a: "Yes — Get Click Media normalises delivery and engagement data across all supported channels into one reporting view, so you can compare true performance between an SMS campaign and a WhatsApp or RCS campaign rather than exporting separate reports from separate vendor dashboards.",
+    a: "Yes- Get Click Media normalises delivery and engagement data across all supported channels into one reporting view, so you can compare true performance between an SMS campaign and a WhatsApp or RCS campaign rather than exporting separate reports from separate vendor dashboards.",
   },
 ];
 
@@ -111,11 +112,18 @@ const schema = {
     },
     {
       "@type": "Service",
-      name: "Customer Engagement Platform — Get Click Media",
+      name: "Customer Engagement Platform- Get Click Media",
       provider: { "@id": "https://getclickmedia.com/#org" },
       areaServed: { "@type": "Country", name: "India" },
       serviceType: "Multi-Channel Customer Engagement (SMS, WhatsApp, RCS, Email)",
       url: "https://getclickmedia.com/customer-engagement-platform",
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://getclickmedia.com/customer-engagement-platform",
+      url: "https://getclickmedia.com/customer-engagement-platform",
+      name: "Customer Engagement Platform for Indian Businesses | Get Click Media",
+      primaryImageOfPage: { "@type": "ImageObject", url: "https://getclickmedia.com/images/rcs/rcs-service-provider-india.png" },
     },
     {
       "@type": "FAQPage",
@@ -145,7 +153,7 @@ export default function CustomerEngagementPlatformPage() {
         description={
           <>
             Engage customers across <strong className="text-gray-900">SMS, WhatsApp, RCS, and
-            Email</strong> from one platform — with delivery data that shows what's actually
+            Email</strong> from one platform- with delivery data that shows what's actually
             driving response and retention, not just what got sent.
           </>
         }
@@ -158,7 +166,7 @@ export default function CustomerEngagementPlatformPage() {
 
       <div className="bg-white border-b border-gray-100">
         <p className="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 text-center text-xs text-gray-400">
-          Last updated: {LAST_UPDATED} · Reviewed by the Get Click Media platform team
+          Written by the Get Click Media Pvt. Ltd. Team · Last updated: {LAST_UPDATED} · Reviewed by the Get Click Media platform team
         </p>
       </div>
 
@@ -171,10 +179,10 @@ export default function CustomerEngagementPlatformPage() {
           <div className="max-w-[680px] mx-auto rounded-2xl border-l-4 border-[#2563eb] bg-blue-50/60 px-6 py-5">
             <p className="text-base leading-[1.7] text-gray-700">
               A <strong className="text-gray-900">customer engagement platform</strong> is a
-              system businesses use to communicate with customers across channels — SMS,
-              WhatsApp, RCS, and email — to drive response, retention, and conversion, with
+              system businesses use to communicate with customers across channels- SMS,
+              WhatsApp, RCS, and email- to drive response, retention, and conversion, with
               engagement data to show what's working. Get Click Media provides the multi-channel
-              messaging layer for this — it plugs into the CRM or business system you already
+              messaging layer for this- it plugs into the CRM or business system you already
               use, rather than replacing it.
             </p>
           </div>
@@ -197,14 +205,14 @@ export default function CustomerEngagementPlatformPage() {
             "Customer engagement platform" gets used to describe two genuinely different kinds of
             product: full CX/CRM suites that manage the entire customer record and relationship,
             and the messaging layer that actually delivers the communication those systems
-            decide to send. Get Click Media is the second kind — we're a messaging-infrastructure
+            decide to send. Get Click Media is the second kind- we're a messaging-infrastructure
             company, not a replacement for your CRM.
           </p>
           <p>
             What that means in practice: your CRM, e-commerce platform, or in-house system stays
             the source of truth for customer data and business logic. Get Click Media plugs into
             it to actually deliver the resulting SMS, WhatsApp, RCS, or email message, and feeds
-            back delivery and engagement data — open rate, click-through, response, retention —
+            back delivery and engagement data- open rate, click-through, response, retention-
             so you can see which channel and message is genuinely moving the relationship
             forward.
           </p>
@@ -274,7 +282,7 @@ export default function CustomerEngagementPlatformPage() {
       {/* -- FAQ ------------------------------------------------------------ */}
       <section className="relative py-16 sm:py-20 lg:py-[100px]" id="faq">
         <SectionPattern tone="gold" />
-        <div className="relative z-10 max-w-3xl mx-auto px-6 sm:px-12 lg:px-20">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-12 lg:px-20">
           <div className="text-center mb-12 space-y-4">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
               Frequently Asked Questions
@@ -283,7 +291,23 @@ export default function CustomerEngagementPlatformPage() {
               Customer Engagement Platform FAQs
             </h2>
           </div>
-          <AccordionList items={FAQS.map((f) => ({ question: f.q, answer: <p className="text-base text-gray-500 leading-[1.7]">{f.a}</p> }))} />
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
+            <div className="hidden lg:block lg:w-[36%] shrink-0 lg:sticky lg:top-24">
+              <div className="relative w-full rounded-2xl overflow-hidden aspect-4/5">
+                <Image
+                  src="/images/rcs/rcs-service-provider-india.png"
+                  alt="Ask a question about the Customer Engagement Platform"
+                  fill
+                  className="object-cover"
+                  sizes="36vw"
+                />
+              </div>
+            </div>
+            <AccordionList
+              className="flex-1 w-full"
+              items={FAQS.map((f) => ({ question: f.q, answer: <p className="text-base text-gray-500 leading-[1.7]">{f.a}</p> }))}
+            />
+          </div>
         </div>
       </section>
 

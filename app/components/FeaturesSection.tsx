@@ -105,7 +105,7 @@ function ServiceCard({ service }: { service: Service }) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Image box — overflow-hidden only here, never on the card wrapper */}
+      {/* Image box- overflow-hidden only here, never on the card wrapper */}
       <div
         className={`
           relative rounded-3xl overflow-hidden border

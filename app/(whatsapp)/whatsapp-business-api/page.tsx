@@ -42,7 +42,7 @@ import HeroLeadForm from "@/app/components/HeroLeadForm";
 
 /* -- SEO Metadata ---------------------------------------------------------- */
 export const metadata: Metadata = {
-  title: "WhatsApp Business API — Official Provider in India | Get Click Media",
+  title: "WhatsApp Business API- Official Provider in India | Get Click Media",
   description:
     "Get Click Media is an official Meta Business Solution Provider offering WhatsApp Business API to 10,000+ Indian businesses. 3–5 day setup, chatbot automation, CRM integration, broadcast & analytics. Pricing from ₹0.40/conversation.",
   keywords:
@@ -50,9 +50,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://getclickmedia.com/whatsapp-business-api" },
   openGraph: {
     title:
-      "WhatsApp Business API — Official Provider in India | Get Click Media",
+      "WhatsApp Business API- Official Provider in India | Get Click Media",
     description:
-      "Official Meta BSP. Automated, rich, interactive WhatsApp messaging at scale — chatbots, broadcast, CRM integration & analytics. 10,000+ businesses served. Setup in 3–5 days.",
+      "Official Meta BSP. Automated, rich, interactive WhatsApp messaging at scale- chatbots, broadcast, CRM integration & analytics. 10,000+ businesses served. Setup in 3–5 days.",
     url: "https://getclickmedia.com/whatsapp-business-api",
     type: "website",
   },
@@ -120,7 +120,7 @@ const schema = {
           name: "What is WhatsApp Business API and how is it different from WhatsApp Business App?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "WhatsApp Business API is Meta's enterprise messaging platform for large-scale, automated business communication. Unlike the free WhatsApp Business App — built for small businesses on a single device — the API supports unlimited messages, full automation, multi-agent inboxes, CRM integration, and chatbot flows. It requires a Meta-authorised provider (BSP) like Get Click Media to access.",
+            text: "WhatsApp Business API is Meta's enterprise messaging platform for large-scale, automated business communication. Unlike the free WhatsApp Business App- built for small businesses on a single device- the API supports unlimited messages, full automation, multi-agent inboxes, CRM integration, and chatbot flows. It requires a Meta-authorised provider (BSP) like Get Click Media to access.",
           },
         },
         {
@@ -128,7 +128,7 @@ const schema = {
           name: "Is WhatsApp Business API free in India?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "No — but the first 1,000 service conversations per month are free. Beyond that, Meta charges per 24-hour conversation session: marketing ₹0.80–0.90, utility and authentication ₹0.40–0.50. Get Click Media charges a platform fee on top of Meta's rates.",
+            text: "No- but the first 1,000 service conversations per month are free. Beyond that, Meta charges per 24-hour conversation session: marketing ₹0.80–0.90, utility and authentication ₹0.40–0.50. Get Click Media charges a platform fee on top of Meta's rates.",
           },
         },
         {
@@ -136,7 +136,7 @@ const schema = {
           name: "How long does WhatsApp Business API setup take in India?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "With Get Click Media managing onboarding, most businesses go live in 3 to 5 business days — covering Meta Business Manager verification, WhatsApp Business Account setup, phone number registration, and template approval, run in parallel.",
+            text: "With Get Click Media managing onboarding, most businesses go live in 3 to 5 business days- covering Meta Business Manager verification, WhatsApp Business Account setup, phone number registration, and template approval, run in parallel.",
           },
         },
         {
@@ -152,7 +152,7 @@ const schema = {
           name: "Can I send WhatsApp messages to DND-registered numbers?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. WhatsApp Business API is not subject to TRAI DND restrictions. You can message opted-in customers on WhatsApp regardless of their DND registry status — a key advantage over promotional SMS.",
+            text: "Yes. WhatsApp Business API is not subject to TRAI DND restrictions. You can message opted-in customers on WhatsApp regardless of their DND registry status- a key advantage over promotional SMS.",
           },
         },
         {
@@ -184,7 +184,7 @@ const FEATURES = [
   {
     icon: LayoutTemplate,
     title: "Message Templates",
-    description: "Pre-approved utility, marketing and OTP templates — submitted and managed on your behalf.",
+    description: "Pre-approved utility, marketing and OTP templates- submitted and managed on your behalf.",
     accent: "blue",
   },
   {
@@ -196,13 +196,13 @@ const FEATURES = [
   {
     icon: Inbox,
     title: "Shared Team Inbox",
-    description: "Multiple agents, one inbox — with routing rules, assignment and SLA tracking built in.",
+    description: "Multiple agents, one inbox- with routing rules, assignment and SLA tracking built in.",
     accent: "indigo",
   },
   {
     icon: ShoppingBag,
     title: "WhatsApp Catalog",
-    description: "A full product catalogue customers can browse, ask about and buy — without leaving the chat.",
+    description: "A full product catalogue customers can browse, ask about and buy- without leaving the chat.",
     accent: "green",
   },
   {
@@ -222,13 +222,13 @@ const FEATURES = [
 const COMPARISON_APP_API = [
   {
     feature: "Who it is for",
-    app: "Small businesses — 1–5 people",
+    app: "Small businesses- 1–5 people",
     api: "Medium and large businesses",
   },
   {
     feature: "Message volume",
-    app: "Limited — manual sending",
-    api: "Unlimited — fully automated",
+    app: "Limited- manual sending",
+    api: "Unlimited- fully automated",
   },
   {
     feature: "Automation",
@@ -245,11 +245,11 @@ const COMPARISON_APP_API = [
     app: "Not supported",
     api: "Salesforce, HubSpot, Zoho & more",
   },
-  { feature: "API access", app: "No", api: "Yes — REST API + webhooks" },
+  { feature: "API access", app: "No", api: "Yes- REST API + webhooks" },
   {
     feature: "Broadcast limit",
     app: "256 contacts per list",
-    api: "Unlimited — to opted-in users",
+    api: "Unlimited- to opted-in users",
   },
   {
     feature: "Green tick verification",
@@ -273,7 +273,7 @@ const HOW_IT_WORKS = [
   {
     n: "02",
     title: "Get Click Media (BSP)",
-    body: "As an official Meta BSP, we handle account setup, verification, and template submission. You never need to interact with Meta directly — we're your single point of contact.",
+    body: "As an official Meta BSP, we handle account setup, verification, and template submission. You never need to interact with Meta directly- we're your single point of contact.",
   },
   {
     n: "03",
@@ -283,12 +283,12 @@ const HOW_IT_WORKS = [
   {
     n: "04",
     title: "WhatsApp Delivery",
-    body: "Messages reach the customer's WhatsApp app on any device or carrier — showing your verified business name and logo, with tap-to-act buttons.",
+    body: "Messages reach the customer's WhatsApp app on any device or carrier- showing your verified business name and logo, with tap-to-act buttons.",
   },
   {
     n: "05",
     title: "Webhook Events",
-    body: "Delivery, read, click, and reply events push to your webhook in real time. Your CRM updates and your dashboard populates live — no custom dev needed.",
+    body: "Delivery, read, click, and reply events push to your webhook in real time. Your CRM updates and your dashboard populates live- no custom dev needed.",
   },
 ];
 
@@ -313,7 +313,7 @@ const CONVERSATION_TYPES = [
   },
   {
     cat: "Service",
-    when: "Customer-initiated queries — free 24-hr window",
+    when: "Customer-initiated queries- free 24-hr window",
     who: "Customer",
     price: "Free (first 1,000/mo)",
   },
@@ -389,22 +389,22 @@ const INDUSTRIES = [
 const WHY_GCM = [
   {
     title: "Official Meta Business Solution Provider",
-    body: "We have direct access to the WhatsApp Business API platform with Meta's official authorisation — not a reseller arrangement.",
+    body: "We have direct access to the WhatsApp Business API platform with Meta's official authorisation- not a reseller arrangement.",
   },
   {
-    title: "Noida-based — local support in your timezone",
+    title: "Noida-based- local support in your timezone",
     body: "Your account manager works in IST, understands the Indian business calendar, and responds in English or Hindi.",
   },
   {
     title: "10,000+ businesses already served",
-    body: "Across banking, e-commerce, education, healthcare, real estate, and logistics — with pre-built templates and CRM connectors ready to go.",
+    body: "Across banking, e-commerce, education, healthcare, real estate, and logistics- with pre-built templates and CRM connectors ready to go.",
   },
   {
-    title: "Unified platform — WhatsApp, RCS, and SMS",
+    title: "Unified platform- WhatsApp, RCS, and SMS",
     body: "One dashboard, one API, one analytics view. Add RCS messaging or bulk SMS anytime with zero migration.",
   },
   {
-    title: "No hidden charges — transparent pricing",
+    title: "No hidden charges- transparent pricing",
     body: "WhatsApp API access, template management, and CRM integration assistance are all included. No setup fees, no lock-in for growth-tier clients.",
   },
   {
@@ -427,7 +427,7 @@ const PROVIDER_COMPARISON = [
   { feature: "Hindi support", gcm: "Yes", others: "Limited / No" },
   {
     feature: "RCS + SMS on same platform",
-    gcm: "Yes — unified",
+    gcm: "Yes- unified",
     others: "No / Limited",
   },
   {
@@ -441,7 +441,7 @@ const PROVIDER_COMPARISON = [
 const FAQS = [
   {
     q: "What is WhatsApp Business API and how is it different from WhatsApp Business App?",
-    a: "WhatsApp Business API is Meta's enterprise messaging platform for large-scale, automated business communication. Unlike the free WhatsApp Business App — designed for small businesses managing conversations manually on a single device — the API supports unlimited messages, full automation, multi-agent inboxes, CRM integration, and chatbot flows. The API requires a Meta-authorised provider (BSP) like Get Click Media to access, whereas the App can be downloaded directly by anyone. See our full ",
+    a: "WhatsApp Business API is Meta's enterprise messaging platform for large-scale, automated business communication. Unlike the free WhatsApp Business App- designed for small businesses managing conversations manually on a single device- the API supports unlimited messages, full automation, multi-agent inboxes, CRM integration, and chatbot flows. The API requires a Meta-authorised provider (BSP) like Get Click Media to access, whereas the App can be downloaded directly by anyone. See our full ",
     link: {
       text: "WhatsApp Business API vs WhatsApp Business App",
       href: "/whatsapp-api-vs-whatsapp-business-app",
@@ -449,7 +449,7 @@ const FAQS = [
   },
   {
     q: "Is WhatsApp Business API free in India?",
-    a: "No — but the first 1,000 service conversations per month are free. Beyond that, Meta charges per 24-hour conversation session. Marketing conversations cost approximately ₹0.80–0.90; utility and authentication conversations cost ₹0.40–0.50. Get Click Media charges a platform fee on top of Meta's rates.",
+    a: "No- but the first 1,000 service conversations per month are free. Beyond that, Meta charges per 24-hour conversation session. Marketing conversations cost approximately ₹0.80–0.90; utility and authentication conversations cost ₹0.40–0.50. Get Click Media charges a platform fee on top of Meta's rates.",
     link: {
       text: "See our full pricing breakdown",
       href: "/blog/whatsapp-api-pricing-india",
@@ -457,7 +457,7 @@ const FAQS = [
   },
   {
     q: "How long does WhatsApp Business API setup take in India?",
-    a: "With Get Click Media managing your onboarding, most businesses go live in 3 to 5 business days. This includes Meta Business Manager verification (1–3 days), WhatsApp Business Account setup (1 day), phone number registration (1 day), and template approval (1–3 days) — run in parallel to minimise total time.",
+    a: "With Get Click Media managing your onboarding, most businesses go live in 3 to 5 business days. This includes Meta Business Manager verification (1–3 days), WhatsApp Business Account setup (1 day), phone number registration (1 day), and template approval (1–3 days)- run in parallel to minimise total time.",
   },
   {
     q: "Do I need TRAI DLT registration for WhatsApp API messages?",
@@ -465,19 +465,19 @@ const FAQS = [
   },
   {
     q: "Can I send WhatsApp messages to DND-registered numbers?",
-    a: "Yes. WhatsApp Business API is not subject to TRAI DND restrictions. You can send WhatsApp messages — including marketing messages — to customers on the DND registry, as long as they've given explicit opt-in consent. This is a significant advantage over promotional SMS.",
+    a: "Yes. WhatsApp Business API is not subject to TRAI DND restrictions. You can send WhatsApp messages- including marketing messages- to customers on the DND registry, as long as they've given explicit opt-in consent. This is a significant advantage over promotional SMS.",
   },
   {
     q: "What is a WhatsApp Business Solution Provider (BSP)?",
-    a: "A WhatsApp BSP is a company authorised by Meta to provide WhatsApp Business API access to other businesses. BSPs handle account setup, Meta verification, template submission, API infrastructure, and ongoing support. Businesses cannot access the WhatsApp API directly from Meta — they must go through a BSP like Get Click Media.",
+    a: "A WhatsApp BSP is a company authorised by Meta to provide WhatsApp Business API access to other businesses. BSPs handle account setup, Meta verification, template submission, API infrastructure, and ongoing support. Businesses cannot access the WhatsApp API directly from Meta- they must go through a BSP like Get Click Media.",
   },
   {
     q: "Can I use WhatsApp Business API for OTP delivery?",
-    a: "Yes. WhatsApp authentication-category messages are designed for OTP delivery and benefit from verified sender identity and higher open rates than SMS OTPs. Since WhatsApp needs internet connectivity, we recommend keeping SMS OTP as a fallback for customers with poor connectivity — Get Click Media supports both from one platform.",
+    a: "Yes. WhatsApp authentication-category messages are designed for OTP delivery and benefit from verified sender identity and higher open rates than SMS OTPs. Since WhatsApp needs internet connectivity, we recommend keeping SMS OTP as a fallback for customers with poor connectivity- Get Click Media supports both from one platform.",
   },
   {
     q: "What is the difference between WhatsApp Cloud API and on-premise API?",
-    a: "WhatsApp Cloud API is hosted on Meta's cloud — faster to set up, always current, no infrastructure management. On-premise API requires you to host it yourself with significantly higher overhead. Meta has deprecated on-premise for new registrations, so Get Click Media's platform uses WhatsApp Cloud API exclusively.",
+    a: "WhatsApp Cloud API is hosted on Meta's cloud- faster to set up, always current, no infrastructure management. On-premise API requires you to host it yourself with significantly higher overhead. Meta has deprecated on-premise for new registrations, so Get Click Media's platform uses WhatsApp Cloud API exclusively.",
   },
   {
     q: "How many messages can I send per day with WhatsApp Business API?",
@@ -485,7 +485,7 @@ const FAQS = [
   },
   {
     q: "What happens if WhatsApp is not installed on the customer's phone?",
-    a: "Your message won't be delivered — WhatsApp has no SMS fallback. For critical communications like OTPs and payment alerts, Get Click Media recommends WhatsApp as the primary channel with SMS as a fallback, both available from our unified platform.",
+    a: "Your message won't be delivered- WhatsApp has no SMS fallback. For critical communications like OTPs and payment alerts, Get Click Media recommends WhatsApp as the primary channel with SMS as a fallback, both available from our unified platform.",
     link: { text: "Compare WhatsApp vs SMS", href: "/whatsapp-vs-sms" },
   },
 ];
@@ -495,7 +495,7 @@ const WHATSAPP_TESTIMONIALS = [
     image: "https://randomuser.me/api/portraits/women/68.jpg",
     name: "Ananya Iyer",
     role: "Head of Growth, UrbanCart",
-    text: "Our WhatsApp chatbot now handles 70% of order-status queries automatically — support tickets dropped by half in the first month.",
+    text: "Our WhatsApp chatbot now handles 70% of order-status queries automatically- support tickets dropped by half in the first month.",
   },
   {
     image: "https://randomuser.me/api/portraits/men/46.jpg",
@@ -513,7 +513,7 @@ const WHATSAPP_TESTIMONIALS = [
     image: "https://randomuser.me/api/portraits/men/62.jpg",
     name: "Vikram Desai",
     role: "Support Lead, TechFix Solutions",
-    text: "The shared inbox means our whole team sees full conversation history — no more asking customers to repeat themselves after a handoff.",
+    text: "The shared inbox means our whole team sees full conversation history- no more asking customers to repeat themselves after a handoff.",
   },
   {
     image: "https://randomuser.me/api/portraits/women/33.jpg",
@@ -525,19 +525,19 @@ const WHATSAPP_TESTIMONIALS = [
     image: "https://randomuser.me/api/portraits/men/29.jpg",
     name: "Arjun Nair",
     role: "Founder, LocalBazaar",
-    text: "Customers now browse and buy straight from our WhatsApp catalog — no separate app, no friction, just a chat.",
+    text: "Customers now browse and buy straight from our WhatsApp catalog- no separate app, no friction, just a chat.",
   },
   {
     image: "https://randomuser.me/api/portraits/women/52.jpg",
     name: "Dr. Meera Pillai",
     role: "Clinic Director, CarePlus Wellness",
-    text: "Appointment reminders on WhatsApp cut our no-show rate noticeably within weeks — patients simply engage with it more than SMS.",
+    text: "Appointment reminders on WhatsApp cut our no-show rate noticeably within weeks- patients simply engage with it more than SMS.",
   },
   {
     image: "https://randomuser.me/api/portraits/men/71.jpg",
     name: "Rajesh Kumar",
     role: "Collections Head, SafeLoan NBFC",
-    text: "EMI reminder delivery and read-rates on WhatsApp are far better than SMS ever gave us — collections follow-up got measurably easier.",
+    text: "EMI reminder delivery and read-rates on WhatsApp are far better than SMS ever gave us- collections follow-up got measurably easier.",
   },
   {
     image: "https://randomuser.me/api/portraits/women/12.jpg",
@@ -567,7 +567,7 @@ export default function WhatsAppBusinessAPIPage() {
       />
 
       {/* -----------------------------------------------------------------
-          HERO — "What is this?"
+          HERO- "What is this?"
       ----------------------------------------------------------------- */}
       <DarkHero
         theme="light"
@@ -582,7 +582,7 @@ export default function WhatsAppBusinessAPIPage() {
           <>
             Get Click Media is an official Meta BSP headquartered in Noida,
             offering WhatsApp Business API to over 10,000 businesses across
-            India — automated, rich, interactive messaging at scale,
+            India- automated, rich, interactive messaging at scale,
             delivered straight to any WhatsApp user.
             <strong className="text-gray-900">
               {" "}
@@ -607,10 +607,10 @@ export default function WhatsAppBusinessAPIPage() {
       {/* -- TRUST LOGOS ------------------------------------------------------ */}
       <ClientMarquee />
 
-      {/* -- TRUST STAT BAND — icons + key numbers, right under the hero ---- */}
+      {/* -- TRUST STAT BAND- icons + key numbers, right under the hero ---- */}
       <WhatsappStatBand />
 
-      {/* -- SEE IT IN ACTION — concrete "what is this" proof --------------- */}
+      {/* -- SEE IT IN ACTION- concrete "what is this" proof --------------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="see-it-in-action">
         <SectionPattern tone="gold" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
@@ -632,8 +632,8 @@ export default function WhatsAppBusinessAPIPage() {
                 One shared inbox for every WhatsApp conversation
               </h2>
               <p className="text-gray-500 text-base leading-[1.7]">
-                Every inbound message — from a chatbot escalation, a broadcast
-                reply, or a direct customer query — lands in a single team
+                Every inbound message- from a chatbot escalation, a broadcast
+                reply, or a direct customer query- lands in a single team
                 inbox. Agents see full conversation history, assign chats, and
                 reply with templates or free text, all synced back to your CRM
                 in real time.
@@ -662,7 +662,7 @@ export default function WhatsAppBusinessAPIPage() {
         </div>
       </section>
 
-      {/* -- WHAT IS WHATSAPP BUSINESS API — deeper "what is this" ---------- */}
+      {/* -- WHAT IS WHATSAPP BUSINESS API- deeper "what is this" ---------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="what-is-whatsapp-api">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
@@ -673,7 +673,7 @@ export default function WhatsAppBusinessAPIPage() {
             </h2>
             <p className="text-gray-500 text-base max-w-[680px] mx-auto leading-[1.7]">
               WhatsApp Business API (or WABA) is Meta&apos;s enterprise platform
-              for messaging customers at scale — it powers every automated
+              for messaging customers at scale- it powers every automated
               message you get from banks, e-commerce, and healthcare providers
               in India, with no device limit or message cap.
             </p>
@@ -701,21 +701,21 @@ export default function WhatsAppBusinessAPIPage() {
         </div>
       </section>
 
-      {/* -- BENEFITS — "Why should I care?" --------------------------------- */}
+      {/* -- BENEFITS- "Why should I care?" --------------------------------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="benefits">
         <SectionPattern tone="gold" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
             <span className={EYEBROW_LIGHT}>Why WhatsApp API for Indian Businesses</span>
             <h2 className={H2_LIGHT} style={SYNE_FONT}>
-              10,000+ Indian businesses already use it — here&apos;s why
+              10,000+ Indian businesses already use it- here&apos;s why
             </h2>
           </div>
           <BentoGrid className="lg:grid-cols-3 lg:auto-rows-[minmax(11rem,auto)]">
             <BentoCard
               icon={TrendingUp}
               name="Highest open rates of any channel in India"
-              description="WhatsApp achieves 98% open rates in India, versus 20–25% for email and 30–35% for SMS — your customers open every message."
+              description="WhatsApp achieves 98% open rates in India, versus 20–25% for email and 30–35% for SMS- your customers open every message."
               className="lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-3"
               image={
                 <Image
@@ -735,13 +735,13 @@ export default function WhatsAppBusinessAPIPage() {
             <BentoCard
               icon={Clock}
               name="No DND or time restrictions for service messages"
-              description="Service-category messages like OTPs and appointment reminders can be sent any time — no TRAI DND filtering for non-promotional content."
+              description="Service-category messages like OTPs and appointment reminders can be sent any time- no TRAI DND filtering for non-promotional content."
               className="lg:col-start-3 lg:col-end-4 lg:row-start-2 lg:row-end-3"
             />
             <BentoCard
               icon={MessagesSquare}
               name="Two-way conversations at scale"
-              description="Customers can reply, ask questions, or place orders in the same thread — with chatbot automation scaling this to thousands of conversations."
+              description="Customers can reply, ask questions, or place orders in the same thread- with chatbot automation scaling this to thousands of conversations."
               className="lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4"
             />
             <BentoCard
@@ -753,14 +753,14 @@ export default function WhatsAppBusinessAPIPage() {
             <BentoCard
               icon={BarChart3}
               name="Complete analytics visibility"
-              description="Delivery, read, and click tracking on every message — data that email, SMS, and phone calls simply cannot provide."
+              description="Delivery, read, and click tracking on every message- data that email, SMS, and phone calls simply cannot provide."
               className="lg:col-start-3 lg:col-end-4 lg:row-start-3 lg:row-end-4"
             />
           </BentoGrid>
         </div>
       </section>
 
-      {/* -- USE CASES BY INDUSTRY — "Why should I care?" (relevance) ------- */}
+      {/* -- USE CASES BY INDUSTRY- "Why should I care?" (relevance) ------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="use-cases">
         <SectionPattern tone="teal" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
@@ -782,7 +782,7 @@ export default function WhatsAppBusinessAPIPage() {
         </div>
       </section>
 
-      {/* -- HOW IT WORKS — mechanism ---------------------------------------- */}
+      {/* -- HOW IT WORKS- mechanism ---------------------------------------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="how-it-works">
         <SectionPattern tone="green" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
@@ -815,7 +815,7 @@ export default function WhatsAppBusinessAPIPage() {
         </div>
       </section>
 
-      {/* -- FEATURES — "What do I get?" -------------------------------------- */}
+      {/* -- FEATURES- "What do I get?" -------------------------------------- */}
       <PremiumFeatureGrid
         id="features"
         badge="WhatsApp Business API Features"
@@ -829,7 +829,7 @@ export default function WhatsAppBusinessAPIPage() {
         }))}
       />
 
-      {/* -- WHY GET CLICK MEDIA — "Can I trust this?" ----------------------- */}
+      {/* -- WHY GET CLICK MEDIA- "Can I trust this?" ----------------------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="why-gcm">
         <SectionPattern tone="teal" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
@@ -846,7 +846,7 @@ export default function WhatsAppBusinessAPIPage() {
                 <strong className="text-gray-800">
                   WhatsApp Business API provider
                 </strong>{" "}
-                — we have direct access to the platform and onboard your
+               - we have direct access to the platform and onboard your
                 business with Meta&apos;s official authorisation.
               </p>
               <div className="flex flex-wrap items-center gap-2.5">
@@ -889,7 +889,7 @@ export default function WhatsAppBusinessAPIPage() {
         </div>
       </section>
 
-      {/* -- CUSTOMER REVIEWS — "Can I trust this?" -------------------------- */}
+      {/* -- CUSTOMER REVIEWS- "Can I trust this?" -------------------------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="testimonials">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
@@ -903,7 +903,7 @@ export default function WhatsAppBusinessAPIPage() {
         </div>
       </section>
 
-      {/* -- PROVIDER COMPARISON — "Can I trust this?" ----------------------- */}
+      {/* -- PROVIDER COMPARISON- "Can I trust this?" ----------------------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="comparison">
         <SectionPattern tone="teal" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
@@ -950,14 +950,14 @@ export default function WhatsAppBusinessAPIPage() {
         </div>
       </section>
 
-      {/* -- CONVERSATION CATEGORIES / PRICING — "How much?" ----------------- */}
+      {/* -- CONVERSATION CATEGORIES / PRICING- "How much?" ----------------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="pricing">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-12 space-y-4">
             <span className={EYEBROW_LIGHT}>Conversation Categories</span>
             <h2 className={H2_LIGHT} style={SYNE_FONT}>
-              WhatsApp API pricing in India — by conversation type
+              WhatsApp API pricing in India- by conversation type
             </h2>
             <p className="text-gray-500 text-base max-w-[680px] mx-auto leading-[1.7]">
               Pricing is based on 24-hour conversation sessions, not individual
@@ -979,8 +979,8 @@ export default function WhatsAppBusinessAPIPage() {
           <p className="text-center text-base text-gray-400 mt-6">
             Get Click Media charges a platform fee on top of Meta&apos;s
             conversation charges for API access, campaign management, and
-            support. See the full breakdown — including volume tiers and a cost
-            comparison with SMS and RCS — on our{" "}
+            support. See the full breakdown- including volume tiers and a cost
+            comparison with SMS and RCS- on our{" "}
             <Link
               href="/blog/whatsapp-api-pricing-india"
               className="text-[#2563eb] font-semibold underline underline-offset-2"
@@ -992,14 +992,14 @@ export default function WhatsAppBusinessAPIPage() {
         </div>
       </section>
 
-      {/* -- HOW TO GET WHATSAPP API — "How do I start?" --------------------- */}
+      {/* -- HOW TO GET WHATSAPP API- "How do I start?" --------------------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="get-started">
         <SectionPattern tone="gold" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
             <span className={EYEBROW_LIGHT}>How to Get WhatsApp Business API</span>
             <h2 className={H2_LIGHT} style={SYNE_FONT}>
-              3 steps with Get Click Media — you never talk to Meta directly
+              3 steps with Get Click Media- you never talk to Meta directly
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6 mb-10">
@@ -1007,7 +1007,7 @@ export default function WhatsAppBusinessAPIPage() {
               {
                 n: "01",
                 title: "Business Verification",
-                body: "We guide you through Meta Business Manager verification — submitting your registration documents and website. Most businesses finish in 1–3 business days.",
+                body: "We guide you through Meta Business Manager verification- submitting your registration documents and website. Most businesses finish in 1–3 business days.",
               },
               {
                 n: "02",
@@ -1162,7 +1162,7 @@ export default function WhatsAppBusinessAPIPage() {
   );
 }
 
-/** Tiny local join helper — avoids importing `cn` just for two-string concatenation
+/** Tiny local join helper- avoids importing `cn` just for two-string concatenation
  *  in the many inline `className={cnJoin(...)}` spots above. */
 function cnJoin(...parts: Array<string | false | undefined>) {
   return parts.filter(Boolean).join(" ");

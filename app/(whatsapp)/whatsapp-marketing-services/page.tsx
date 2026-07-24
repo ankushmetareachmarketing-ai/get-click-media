@@ -28,16 +28,16 @@ import {
 
 /* -- SEO Metadata ---------------------------------------------------------- */
 export const metadata: Metadata = {
-  title: "WhatsApp Marketing Services in India — Campaigns, Automation & ROI | Get Click Media",
+  title: "WhatsApp Marketing Services in India- Campaigns, Automation & ROI | Get Click Media",
   description:
-    "End-to-end WhatsApp marketing services in India — campaign strategy, template creation, broadcast management, chatbot automation, and performance reporting. Official Meta BSP based in Noida. Go live in 5 days.",
+    "End-to-end WhatsApp marketing services in India- campaign strategy, template creation, broadcast management, chatbot automation, and performance reporting. Official Meta BSP based in Noida. Go live in 5 days.",
   keywords:
     "WhatsApp Marketing Services India, whatsapp marketing api, whatsapp marketing company india, whatsapp marketing agency india, bulk whatsapp marketing india, whatsapp marketing platform india, whatsapp campaign management india",
   alternates: { canonical: "https://getclickmedia.com/whatsapp-marketing-services" },
   openGraph: {
-    title: "WhatsApp Marketing Services in India — Campaigns, Automation & ROI | Get Click Media",
+    title: "WhatsApp Marketing Services in India- Campaigns, Automation & ROI | Get Click Media",
     description:
-      "Campaign strategy, template management, broadcast execution, chatbot automation, and analytics — the complete WhatsApp marketing service from an official Meta BSP.",
+      "Campaign strategy, template management, broadcast execution, chatbot automation, and analytics- the complete WhatsApp marketing service from an official Meta BSP.",
     url: "https://getclickmedia.com/whatsapp-marketing-services",
     type: "website",
   },
@@ -55,7 +55,7 @@ const schema = {
       serviceType: "WhatsApp Marketing Platform",
       url: "https://getclickmedia.com/whatsapp-marketing-services",
       description:
-        "End-to-end WhatsApp marketing services in India — campaign strategy, template management, broadcast execution, chatbot automation, and analytics. Official Meta BSP.",
+        "End-to-end WhatsApp marketing services in India- campaign strategy, template management, broadcast execution, chatbot automation, and analytics. Official Meta BSP.",
     },
     {
       "@type": "BreadcrumbList",
@@ -87,17 +87,17 @@ const WHY_DIFFERENT = [
   {
     icon: Target,
     title: "It enables two-way conversations",
-    body: "Customers can reply, ask questions, tap buttons, and complete transactions in the same thread — driving 5x–8x higher conversion than SMS.",
+    body: "Customers can reply, ask questions, tap buttons, and complete transactions in the same thread- driving 5x–8x higher conversion than SMS.",
   },
   {
     icon: ShieldCheck,
     title: "Verified sender identity builds instant trust",
-    body: "Your brand name, logo, and Green Tick appear on every message — WhatsApp campaigns see 60–70% lower opt-out rates than SMS.",
+    body: "Your brand name, logo, and Green Tick appear on every message- WhatsApp campaigns see 60–70% lower opt-out rates than SMS.",
   },
 ];
 
 const MARKETING_TYPES = [
-  { type: "Promotional / Campaign Marketing", what: "Business-initiated messages to opted-in customers — offers, launches, events. Uses Marketing-category templates.", best: "Flash sales, festive campaigns, launches, re-engagement, loyalty rewards" },
+  { type: "Promotional / Campaign Marketing", what: "Business-initiated messages to opted-in customers- offers, launches, events. Uses Marketing-category templates.", best: "Flash sales, festive campaigns, launches, re-engagement, loyalty rewards" },
   { type: "Transactional / Utility Marketing", what: "Automated messages triggered by customer actions. Uses Utility-category templates.", best: "Order flows, appointments, payments, delivery updates, OTPs" },
   { type: "Conversational Marketing", what: "Two-way engagement, chatbot-handled, escalating to agents for complex cases.", best: "Lead qualification, support, product discovery, feedback collection" },
 ];
@@ -106,7 +106,7 @@ const CAMPAIGNS = [
   { icon: Tag, name: "Flash Sale & Seasonal Campaign", when: "Sale launch day, festive season", kpi: "Open rate 96% · CTR 22–30% · 5x–8x revenue vs SMS" },
   { icon: Repeat, name: "Abandoned Cart Recovery", when: "1 hour + 24 hours after abandonment", kpi: "18–26% recovery rate vs 4–6% for email" },
   { icon: Sparkles, name: "New Product / Collection Launch", when: "Early access, 2–4 hrs before public launch", kpi: "78% open rate · 3x first-hour conversion" },
-  { icon: Percent, name: "Price Drop & Wishlist Alert", when: "15%+ price drop on wishlisted item", kpi: "41% CTR — highest of any e-commerce campaign" },
+  { icon: Percent, name: "Price Drop & Wishlist Alert", when: "15%+ price drop on wishlisted item", kpi: "41% CTR- highest of any e-commerce campaign" },
   { icon: Gift, name: "Loyalty & Rewards Update", when: "Post-purchase, tier upgrade, points expiry", kpi: "31% engagement vs 8% via email" },
   { icon: Bell, name: "Win-Back / Re-engagement", when: "Customer inactive 60–90 days", kpi: "12% win-back rate vs 2.5% email, 1.8% SMS" },
   { icon: CalendarClock, name: "Event & Webinar Registration", when: "14 days, 3 days, and morning-of reminders", kpi: "+30% attendance vs email · -40% no-show" },
@@ -114,7 +114,7 @@ const CAMPAIGNS = [
 ] as const;
 
 const LIFECYCLE = [
-  { stage: "Awareness", problem: "High paid ad costs for new customers", solution: "Click-to-WhatsApp ads on Meta — direct into conversation", result: "Cost per lead 40–60% lower" },
+  { stage: "Awareness", problem: "High paid ad costs for new customers", solution: "Click-to-WhatsApp ads on Meta- direct into conversation", result: "Cost per lead 40–60% lower" },
   { stage: "Consideration", problem: "Leads go cold after first enquiry", solution: "Automated follow-up: product info + comparison + offer", result: "3x lead-to-sale vs email" },
   { stage: "Purchase", problem: "70% of Indian e-commerce carts abandoned", solution: "Cart recovery with product image + urgency + discount", result: "18–26% recovery vs 4–6% email" },
   { stage: "Onboarding", problem: "New customers confused, high early churn", solution: "Welcome sequence: tips, how-to, exclusive offer", result: "Early churn -35%, NPS +12 pts" },
@@ -126,9 +126,9 @@ const LIFECYCLE = [
 const SERVICES = [
   { icon: Target, title: "Campaign Strategy & Audience Segmentation", body: "Define your WhatsApp marketing calendar, segment your database by behaviour, and plan the right campaign type per segment." },
   { icon: FileCheck, title: "Template Creation & Meta Approval Management", body: "We draft templates in the correct Meta format, review for policy compliance, and manage submission and approval.", href: "/whatsapp-template-messages" },
-  { icon: CalendarClock, title: "Campaign Execution — Broadcast & Scheduling", body: "List upload, variable personalisation, send-time optimisation, and real-time delivery monitoring.", href: "/whatsapp-broadcast" },
+  { icon: CalendarClock, title: "Campaign Execution- Broadcast & Scheduling", body: "List upload, variable personalisation, send-time optimisation, and real-time delivery monitoring.", href: "/whatsapp-broadcast" },
   { icon: MessageCircle, title: "WhatsApp Chatbot Automation", body: "Chatbot flows that qualify leads, answer FAQs, book appointments, and escalate complex queries.", href: "/whatsapp-chatbot" },
-  { icon: BarChart3, title: "Performance Analytics & Reporting", body: "Delivery, read rate, CTR per button, conversion, revenue attributed, and cost per conversion — tracked end-to-end." },
+  { icon: BarChart3, title: "Performance Analytics & Reporting", body: "Delivery, read rate, CTR per button, conversion, revenue attributed, and cost per conversion- tracked end-to-end." },
   { icon: ShieldCheck, title: "Compliance & Opt-in Management", body: "Opt-in database management, automated opt-outs, and audit-ready DPDP 2023 records." },
 ];
 
@@ -136,20 +136,20 @@ const COMPARISON = [
   { metric: "Average open rate India", wa: "98%", email: "20–25%", sms: "30–35%", ads: "Impressions-based" },
   { metric: "Average CTR", wa: "20–28%", email: "3–5%", sms: "1.5–2%", ads: "1–3%" },
   { metric: "Cost per 1,000 messages", wa: "₹790–910", email: "₹50–200", sms: "₹120–180", ads: "₹3,000–15,000 CPM" },
-  { metric: "Two-way conversation", wa: "Yes — native", email: "No", sms: "No", ads: "No" },
+  { metric: "Two-way conversation", wa: "Yes- native", email: "No", sms: "No", ads: "No" },
   { metric: "DND restriction", wa: "No", email: "No", sms: "Yes (promo)", ads: "No" },
   { metric: "Best use case", wa: "Conversational, opted-in base", email: "Newsletter, long-form", sms: "Universal reach, OTP", ads: "New audience acquisition" },
 ];
 
 const FAQS = [
-  { q: "What is WhatsApp marketing and how does it work in India?", a: "WhatsApp marketing is the use of WhatsApp Business API to send promotional campaigns, transactional notifications, and automated customer journeys to opted-in customers. It works by sending Meta-approved templates via the API — delivering rich media messages with verified sender identity. India consistently sees 98% open rates and 20–28% click-through rates." },
+  { q: "What is WhatsApp marketing and how does it work in India?", a: "WhatsApp marketing is the use of WhatsApp Business API to send promotional campaigns, transactional notifications, and automated customer journeys to opted-in customers. It works by sending Meta-approved templates via the API- delivering rich media messages with verified sender identity. India consistently sees 98% open rates and 20–28% click-through rates." },
   { q: "Is WhatsApp marketing legal in India?", a: "Yes, when done correctly: you need explicit opt-in consent, all promotional messages must use Meta-approved Marketing-category templates, opt-outs must be honoured immediately, and you must comply with India's DPDP Act 2023 for data handling." },
-  { q: "How many customers can I message on WhatsApp at once?", a: "There's no absolute cap, but throughput is governed by your messaging tier — starting at 1,000/day (Tier 1), scaling to 10,000 (Tier 2), 1,00,000 (Tier 3), and unlimited based on quality and volume history." },
-  { q: "Can I send WhatsApp marketing messages to customers on the DND list?", a: "Yes. WhatsApp Business API is not classified as commercial SMS under TRAI's regulations, so it's not subject to DND restrictions — as long as customers have given explicit opt-in consent." },
+  { q: "How many customers can I message on WhatsApp at once?", a: "There's no absolute cap, but throughput is governed by your messaging tier- starting at 1,000/day (Tier 1), scaling to 10,000 (Tier 2), 1,00,000 (Tier 3), and unlimited based on quality and volume history." },
+  { q: "Can I send WhatsApp marketing messages to customers on the DND list?", a: "Yes. WhatsApp Business API is not classified as commercial SMS under TRAI's regulations, so it's not subject to DND restrictions- as long as customers have given explicit opt-in consent." },
   { q: "What is the difference between WhatsApp broadcast and WhatsApp marketing?", a: "WhatsApp broadcast via the consumer app is limited to 256 mutual contacts with no automation or analytics. WhatsApp marketing via the Business API has no contact limit and supports full automation, personalisation, and analytics.", link: { text: "See WhatsApp Broadcast API", href: "/whatsapp-broadcast" } },
   { q: "How do I collect WhatsApp opt-ins for marketing?", a: "Through website opt-in forms, Click-to-WhatsApp ads, WhatsApp Flows, SMS opt-in campaigns, offline point-of-sale consent, and in-app prompts. Get Click Media's onboarding includes an opt-in strategy review." },
-  { q: "Can WhatsApp marketing messages include images and buttons?", a: "Yes — JPEG/PNG images, animated GIFs, video thumbnails, up to 3 interactive buttons, quick-reply chips, and product carousels of 2–10 cards." },
-  { q: "How does Get Click Media measure WhatsApp marketing performance?", a: "Delivery rate, read rate, CTR per button, conversion rate, revenue per campaign, cost per conversion, and opt-out rate — with monthly reports benchmarked against industry data." },
+  { q: "Can WhatsApp marketing messages include images and buttons?", a: "Yes- JPEG/PNG images, animated GIFs, video thumbnails, up to 3 interactive buttons, quick-reply chips, and product carousels of 2–10 cards." },
+  { q: "How does Get Click Media measure WhatsApp marketing performance?", a: "Delivery rate, read rate, CTR per button, conversion rate, revenue per campaign, cost per conversion, and opt-out rate- with monthly reports benchmarked against industry data." },
 ];
 
 /* -- Shared layout tokens --------------------------------------------------- */
@@ -168,7 +168,7 @@ export default function WhatsAppMarketingServicesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       {/* -----------------------------------------------------------------
-          HERO — "What is this?"
+          HERO- "What is this?"
       ----------------------------------------------------------------- */}
       <DarkHero
         theme="light"
@@ -183,7 +183,7 @@ export default function WhatsAppMarketingServicesPage() {
         description={
           <>
             Campaign strategy, message templates, broadcast management, chatbot
-            automation, and performance reporting — the complete WhatsApp
+            automation, and performance reporting- the complete WhatsApp
             marketing service for Indian businesses.
           </>
         }
@@ -215,9 +215,9 @@ export default function WhatsAppMarketingServicesPage() {
               </Link>{" "}
               to run promotional campaigns, transactional communications, and
               automated customer journeys at scale. Get Click Media provides
-              end-to-end WhatsApp marketing services in India — including
+              end-to-end WhatsApp marketing services in India- including
               campaign strategy, message template creation, broadcast
-              management, chatbot automation, and performance reporting — for
+              management, chatbot automation, and performance reporting- for
               businesses across banking, e-commerce, education, healthcare,
               and real estate.
             </p>
@@ -225,7 +225,7 @@ export default function WhatsAppMarketingServicesPage() {
         </div>
       </section>
 
-      {/* -- WHY WHATSAPP MARKETING IS DIFFERENT — "What is this?" ----------- */}
+      {/* -- WHY WHATSAPP MARKETING IS DIFFERENT- "What is this?" ----------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="what-is-whatsapp-marketing">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
@@ -237,7 +237,7 @@ export default function WhatsAppMarketingServicesPage() {
               </h2>
               <p className="text-gray-500 text-base leading-[1.7]">
                 WhatsApp marketing puts your campaigns in the one app Indian
-                consumers check dozens of times a day — rich media, verified
+                consumers check dozens of times a day- rich media, verified
                 sender identity, and two-way replies, all in a single thread.
               </p>
               <div className="pt-2 flex justify-center lg:justify-start">
@@ -264,7 +264,7 @@ export default function WhatsAppMarketingServicesPage() {
         </div>
       </section>
 
-      {/* -- 3 TYPES — "How does it work" ------------------------------------ */}
+      {/* -- 3 TYPES- "How does it work" ------------------------------------ */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="types">
         <SectionPattern tone="teal" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-12">
@@ -284,14 +284,14 @@ export default function WhatsAppMarketingServicesPage() {
             rows={MARKETING_TYPES}
           />
           <p className="text-center text-sm text-gray-400 mt-6 max-w-2xl mx-auto">
-            Most mature programmes run all three simultaneously — promotional
+            Most mature programmes run all three simultaneously- promotional
             for acquisition, transactional for retention, and conversational
             for support and upsell.
           </p>
         </div>
       </section>
 
-      {/* -- 8 CAMPAIGN TYPES — "What do I get?" ------------------------------ */}
+      {/* -- 8 CAMPAIGN TYPES- "What do I get?" ------------------------------ */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="campaigns">
         <SectionPattern tone="green" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
@@ -406,7 +406,7 @@ export default function WhatsAppMarketingServicesPage() {
         </div>
       </section>
 
-      {/* -- COMPLIANCE — "Can I trust this?" ----------------------------------- */}
+      {/* -- COMPLIANCE- "Can I trust this?" ----------------------------------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="compliance">
         <SectionPattern tone="green" />
         <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-12">
@@ -423,10 +423,10 @@ export default function WhatsAppMarketingServicesPage() {
               <h3 className="text-base font-bold text-white">Meta&apos;s WhatsApp Business Messaging Policy</h3>
               <ul className="space-y-2.5">
                 {[
-                  "Opt-in mandatory — no cold contacts or purchased lists",
+                  "Opt-in mandatory- no cold contacts or purchased lists",
                   "Marketing templates require Meta approval before use",
                   "Quality rating monitors opt-out and report rates",
-                  "Prohibited categories — gambling, alcohol, adult content, misleading claims",
+                  "Prohibited categories- gambling, alcohol, adult content, misleading claims",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-white/60">
                     <FileCheck className="w-4 h-4 text-[#38bdf8] shrink-0 mt-0.5" />
@@ -561,7 +561,7 @@ export default function WhatsAppMarketingServicesPage() {
   );
 }
 
-/** Tiny local join helper — avoids importing `cn` just for two-string concatenation
+/** Tiny local join helper- avoids importing `cn` just for two-string concatenation
  *  in the many inline `className={cnJoin(...)}` spots above. */
 function cnJoin(...parts: Array<string | false | undefined>) {
   return parts.filter(Boolean).join(" ");

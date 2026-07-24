@@ -8,7 +8,7 @@ const SECTIONS = [
     step: "01",
     tag: "WhatsApp Business API",
     title: "Send Messages That Actually Get Read",
-    desc: "Reach every customer on India's most-used app with the official WhatsApp Business API. 98% open rates, rich media, and instant delivery — all from one dashboard.",
+    desc: "Reach every customer on India's most-used app with the official WhatsApp Business API. 98% open rates, rich media, and instant delivery- all from one dashboard.",
     features: [
       "Meta-verified green tick badge",
       "Broadcast to unlimited contacts",

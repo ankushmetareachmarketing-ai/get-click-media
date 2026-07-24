@@ -34,7 +34,7 @@ import {
 /* -- SEO Metadata ---------------------------------------------------------- */
 export const metadata: Metadata = {
   title:
-    "WhatsApp Business API Provider in India — Official Meta BSP | Get Click Media",
+    "WhatsApp Business API Provider in India- Official Meta BSP | Get Click Media",
   description:
     "Get Click Media is an official WhatsApp Business API provider in India, authorised by Meta as a Business Solution Provider. Noida HQ, 10,000+ businesses onboarded, 3–5 day setup, transparent pricing, 24×7 support.",
   keywords:
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "WhatsApp Business API Provider in India — Official Meta BSP | Get Click Media",
+      "WhatsApp Business API Provider in India- Official Meta BSP | Get Click Media",
     description:
       "Official Meta BSP headquartered in Noida. Complete onboarding, template management, and dedicated account management. Setup in 3–5 business days.",
     url: "https://getclickmedia.com/whatsapp-business-api-provider-india",
@@ -137,7 +137,7 @@ const schema = {
           name: "What is the minimum commitment with Get Click Media?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "No minimum monthly commitment for growth-tier clients. Pay per usage — Meta conversation charges plus platform fee.",
+            text: "No minimum monthly commitment for growth-tier clients. Pay per usage- Meta conversation charges plus platform fee.",
           },
         },
         {
@@ -157,32 +157,32 @@ const BSP_VS_RESELLER = [
   {
     aspect: "Meta authorisation",
     gcm: "Directly authorised by Meta",
-    other: "No Meta authorisation — uses another BSP's credentials",
+    other: "No Meta authorisation- uses another BSP's credentials",
   },
   {
     aspect: "Account ownership",
     gcm: "Your WABA is owned by your business",
-    other: "WABA may be owned by provider — risk of account loss",
+    other: "WABA may be owned by provider- risk of account loss",
   },
   {
     aspect: "Compliance",
     gcm: "Fully compliant with Meta's policies",
-    other: "May violate Meta's terms — account suspension risk",
+    other: "May violate Meta's terms- account suspension risk",
   },
   {
     aspect: "API stability",
     gcm: "Direct access to Meta's infrastructure",
-    other: "Dependent on upstream provider — lower reliability",
+    other: "Dependent on upstream provider- lower reliability",
   },
   {
     aspect: "Template approval",
     gcm: "Submits directly to Meta",
-    other: "Submitted through another layer — slower, riskier",
+    other: "Submitted through another layer- slower, riskier",
   },
   {
     aspect: "Support escalation",
     gcm: "Can escalate to Meta directly",
-    other: "No direct Meta access — limited support capability",
+    other: "No direct Meta access- limited support capability",
   },
   {
     aspect: "Green Tick availability",
@@ -199,22 +199,22 @@ const BSP_VS_RESELLER = [
 const WHY_GCM = [
   {
     icon: ShieldCheck,
-    title: "Official Meta BSP — Direct Authorisation",
-    body: "We have a direct relationship with Meta and the ability to onboard your business with full authorisation. Your WABA is registered under your business entity — not shared infrastructure.",
+    title: "Official Meta BSP- Direct Authorisation",
+    body: "We have a direct relationship with Meta and the ability to onboard your business with full authorisation. Your WABA is registered under your business entity- not shared infrastructure.",
   },
   {
     icon: MapPin,
-    title: "Headquartered in Noida — India-First Operations",
-    body: "Our entire operations team works in IST. Account managers speak English and Hindi. For NCR clients, in-person meetings are available — no offshore queues, no timezone delays.",
+    title: "Headquartered in Noida- India-First Operations",
+    body: "Our entire operations team works in IST. Account managers speak English and Hindi. For NCR clients, in-person meetings are available- no offshore queues, no timezone delays.",
   },
   {
     icon: Users,
     title: "10,000+ Indian Businesses Already Onboarded",
-    body: "Across banking, e-commerce, education, healthcare, real estate, logistics, insurance, and retail — with pre-built connectors, code samples, and templates ready for your industry.",
+    body: "Across banking, e-commerce, education, healthcare, real estate, logistics, insurance, and retail- with pre-built connectors, code samples, and templates ready for your industry.",
   },
   {
     icon: Layers,
-    title: "Unified Platform — WhatsApp + RCS + Bulk SMS",
+    title: "Unified Platform- WhatsApp + RCS + Bulk SMS",
     body: "The only provider in NCR offering all three channels from one dashboard, one API, one analytics view, and one account manager.",
   },
   {
@@ -225,16 +225,16 @@ const WHY_GCM = [
   {
     icon: Headphones,
     title: "24×7 Technical Support with SLA",
-    body: "Our support team operates 24×7. Enterprise clients get a sub-30-minute response SLA for P1 incidents — API downtime, template rejections, account health issues.",
+    body: "Our support team operates 24×7. Enterprise clients get a sub-30-minute response SLA for P1 incidents- API downtime, template rejections, account health issues.",
   },
   {
     icon: Wallet,
-    title: "Transparent Pricing — No Hidden Charges",
+    title: "Transparent Pricing- No Hidden Charges",
     body: "Meta's conversation charges passed through at cost, plus a clearly stated platform fee. No setup fees for standard onboarding. No lock-in contracts for growth-tier clients.",
   },
   {
     icon: ShieldCheck,
-    title: "Full Compliance Support — TRAI, Meta, DPDP",
+    title: "Full Compliance Support- TRAI, Meta, DPDP",
     body: "All customer data is processed on India-hosted infrastructure with no cross-border transfer, keeping your campaigns within Meta, TRAI, and DPDP 2023 requirements.",
   },
 ];
@@ -242,17 +242,17 @@ const WHY_GCM = [
 const CHECKLIST = [
   {
     criteria: "Official Meta BSP?",
-    gcm: "Yes — listed in Meta's BSP directory",
+    gcm: "Yes- listed in Meta's BSP directory",
     ask: "Are you listed in Meta's official BSP directory?",
   },
   {
     criteria: "India-based operations?",
-    gcm: "Yes — Noida, UP headquarters",
+    gcm: "Yes- Noida, UP headquarters",
     ask: "Where is your support team located?",
   },
   {
     criteria: "WABA owned by your business?",
-    gcm: "Yes — your entity owns the WABA",
+    gcm: "Yes- your entity owns the WABA",
     ask: "Who owns the WABA? Can I transfer it?",
   },
   {
@@ -267,7 +267,7 @@ const CHECKLIST = [
   },
   {
     criteria: "24×7 support?",
-    gcm: "Yes — with SLA for enterprise",
+    gcm: "Yes- with SLA for enterprise",
     ask: "What are your support hours and response SLA?",
   },
   {
@@ -277,27 +277,27 @@ const CHECKLIST = [
   },
   {
     criteria: "RCS and SMS on same platform?",
-    gcm: "Yes — unified platform",
+    gcm: "Yes- unified platform",
     ask: "Do you offer RCS and SMS alongside WhatsApp?",
   },
   {
     criteria: "India data residency?",
-    gcm: "Yes — India-hosted infra",
+    gcm: "Yes- India-hosted infra",
     ask: "Where is customer data stored?",
   },
   {
     criteria: "Transparent pricing?",
-    gcm: "Yes — no hidden charges",
+    gcm: "Yes- no hidden charges",
     ask: "Show me a complete pricing breakdown with all fees",
   },
   {
     criteria: "CRM integration support?",
-    gcm: "Yes — Salesforce, HubSpot, Zoho+",
+    gcm: "Yes- Salesforce, HubSpot, Zoho+",
     ask: "Which CRMs do you have pre-built connectors for?",
   },
   {
     criteria: "Green Tick support?",
-    gcm: "Yes — managed end to end",
+    gcm: "Yes- managed end to end",
     ask: "Do you manage the Green Tick verification process?",
   },
 ];
@@ -400,7 +400,7 @@ const ONBOARDING = [
     n: "06",
     title: "Test Send & Go-Live",
     when: "Day 4–5",
-    body: "We verify template rendering, buttons, webhooks, and fallback behaviour, then launch your first live campaign — staying on call to monitor delivery.",
+    body: "We verify template rendering, buttons, webhooks, and fallback behaviour, then launch your first live campaign- staying on call to monitor delivery.",
   },
 ];
 
@@ -417,7 +417,7 @@ const INCLUDED = [
   {
     item: "Template submission & management",
     detail:
-      "We draft, submit, and track all templates — initial batch and ongoing additions",
+      "We draft, submit, and track all templates- initial batch and ongoing additions",
   },
   {
     item: "Campaign dashboard",
@@ -426,7 +426,7 @@ const INCLUDED = [
   },
   {
     item: "REST API + webhooks",
-    detail: "Full API access — Node.js, Python, PHP, and Java SDKs available",
+    detail: "Full API access- Node.js, Python, PHP, and Java SDKs available",
   },
   {
     item: "CRM integration support",
@@ -440,7 +440,7 @@ const INCLUDED = [
   {
     item: "24×7 technical support",
     detail:
-      "Phone, WhatsApp, and email support — enterprise clients get SLA guarantee",
+      "Phone, WhatsApp, and email support- enterprise clients get SLA guarantee",
   },
   {
     item: "Analytics dashboard",
@@ -454,12 +454,12 @@ const INCLUDED = [
   {
     item: "Opt-out management",
     detail:
-      "Automated opt-out handling — customers who opt out are removed immediately",
+      "Automated opt-out handling- customers who opt out are removed immediately",
   },
   {
     item: "India data residency",
     detail:
-      "All customer data processed on India-hosted servers — DPDP 2023 compliant",
+      "All customer data processed on India-hosted servers- DPDP 2023 compliant",
   },
 ];
 
@@ -468,7 +468,7 @@ const BUSINESS_SIZES = [
     icon: Users,
     tag: "Under ₹10 crore ARR",
     title: "Startups & D2C brands",
-    body: "A growth-tier plan with no minimum monthly commitment — you pay for what you use. Shopify and WooCommerce plugins mean cart recovery and order confirmation flows can go live in under an hour without writing code.",
+    body: "A growth-tier plan with no minimum monthly commitment- you pay for what you use. Shopify and WooCommerce plugins mean cart recovery and order confirmation flows can go live in under an hour without writing code.",
     stat: "Cart abandonment recovery on WhatsApp: 18–26% vs 4–6% for email. Review requests: 5x higher submission rate than email.",
   },
   {
@@ -476,25 +476,25 @@ const BUSINESS_SIZES = [
     tag: "₹10 crore – ₹200 crore ARR",
     title: "Mid-market businesses",
     body: "Pre-built connectors for Salesforce, HubSpot, Zoho, Freshdesk, and LeadSquared. For custom integrations, our API is fully documented with code samples in four languages.",
-    stat: "Highest-ROI move: replacing SMS campaigns with WhatsApp for opted-in segments — 5x to 8x CTR uplift at comparable per-message cost.",
+    stat: "Highest-ROI move: replacing SMS campaigns with WhatsApp for opted-in segments- 5x to 8x CTR uplift at comparable per-message cost.",
   },
   {
     icon: Landmark,
     tag: "₹200 crore+ ARR or 1M+ customers",
     title: "Enterprise",
     body: "Dedicated infrastructure, custom SLAs, a named enterprise account manager, and monthly business reviews. Supports 1,000+ messages per second, with SEBI, IRDAI, and RBI audit documentation for regulated industries.",
-    stat: "Typical deployment: WhatsApp for conversational campaigns, RCS for Android-native reach, SMS for guaranteed delivery — one unified integration.",
+    stat: "Typical deployment: WhatsApp for conversational campaigns, RCS for Android-native reach, SMS for guaranteed delivery- one unified integration.",
   },
 ];
 
 const FAQS = [
   {
     q: "What makes Get Click Media different from other WhatsApp API providers in India?",
-    a: "Get Click Media is an official Meta BSP based in Noida — India-first, Hindi-supported, and the only provider in NCR that offers WhatsApp API, RCS messaging, and bulk SMS from a single unified platform. Our onboarding timeline (3–5 days), 24×7 support with SLA, and transparent pricing distinguish us from both large international BSPs, who lack India-specific support, and grey-market resellers, who lack Meta authorisation.",
+    a: "Get Click Media is an official Meta BSP based in Noida- India-first, Hindi-supported, and the only provider in NCR that offers WhatsApp API, RCS messaging, and bulk SMS from a single unified platform. Our onboarding timeline (3–5 days), 24×7 support with SLA, and transparent pricing distinguish us from both large international BSPs, who lack India-specific support, and grey-market resellers, who lack Meta authorisation.",
   },
   {
     q: "How do I verify that a WhatsApp API provider is an official Meta BSP?",
-    a: "Meta maintains a public directory of authorised Business Solution Providers at developers.facebook.com/docs/whatsapp/partners. Any provider claiming BSP status should be searchable in this directory. Get Click Media is listed as an official Meta BSP. If a provider can't point you to their listing, they're likely a reseller — ask who their upstream BSP is.",
+    a: "Meta maintains a public directory of authorised Business Solution Providers at developers.facebook.com/docs/whatsapp/partners. Any provider claiming BSP status should be searchable in this directory. Get Click Media is listed as an official Meta BSP. If a provider can't point you to their listing, they're likely a reseller- ask who their upstream BSP is.",
   },
   {
     q: "Can I transfer my WhatsApp Business Account to Get Click Media from another provider?",
@@ -502,15 +502,15 @@ const FAQS = [
   },
   {
     q: "Is Get Click Media available for businesses outside Delhi-NCR?",
-    a: "Yes. We serve businesses across India — from Mumbai and Bangalore to Hyderabad, Chennai, and Tier 2 cities. Onboarding is entirely digital, and Delhi-NCR clients get the added option of in-person support from our Noida headquarters.",
+    a: "Yes. We serve businesses across India- from Mumbai and Bangalore to Hyderabad, Chennai, and Tier 2 cities. Onboarding is entirely digital, and Delhi-NCR clients get the added option of in-person support from our Noida headquarters.",
   },
   {
     q: "What is the minimum commitment to start with Get Click Media?",
-    a: "There is no minimum monthly message commitment for growth-tier clients — you pay Meta's conversation charges plus our platform fee, both based on actual usage. Enterprise clients can opt for committed-volume contracts with lower per-conversation rates.",
+    a: "There is no minimum monthly message commitment for growth-tier clients- you pay Meta's conversation charges plus our platform fee, both based on actual usage. Enterprise clients can opt for committed-volume contracts with lower per-conversation rates.",
   },
   {
     q: "Does Get Click Media manage WhatsApp Green Tick verification?",
-    a: "Yes. Green Tick verification requires a Meta business verification process. Get Click Media manages the entire application — document preparation, submission, and follow-up. Most businesses with a verified Meta Business Manager receive Green Tick status within 5 to 14 business days.",
+    a: "Yes. Green Tick verification requires a Meta business verification process. Get Click Media manages the entire application- document preparation, submission, and follow-up. Most businesses with a verified Meta Business Manager receive Green Tick status within 5 to 14 business days.",
     link: { text: "Learn about WhatsApp Green Tick verification", href: "/blog/whatsapp-green-tick-verification" },
   },
   {
@@ -520,7 +520,7 @@ const FAQS = [
   },
   {
     q: "How does Get Click Media handle WhatsApp opt-outs?",
-    a: "When a customer sends a WhatsApp opt-out message, such as 'STOP' or clicking an unsubscribe button, our platform immediately removes them from all future sends and logs the opt-out with a timestamp — fully automated, with records retained for audit purposes under India's DPDP Act 2023.",
+    a: "When a customer sends a WhatsApp opt-out message, such as 'STOP' or clicking an unsubscribe button, our platform immediately removes them from all future sends and logs the opt-out with a timestamp- fully automated, with records retained for audit purposes under India's DPDP Act 2023.",
   },
 ];
 
@@ -543,7 +543,7 @@ export default function WhatsAppProviderIndiaPage() {
       />
 
       {/* -----------------------------------------------------------------
-          HERO — "What is this?"
+          HERO- "What is this?"
       ----------------------------------------------------------------- */}
       <DarkHero
         theme="light"
@@ -601,7 +601,7 @@ export default function WhatsAppProviderIndiaPage() {
           <p className="text-gray-500 text-base leading-[1.7] mt-8">
             Choosing the right WhatsApp Business API provider in India is one
             of the most important decisions in your business messaging
-            strategy. Not all providers are equal — the difference between an
+            strategy. Not all providers are equal- the difference between an
             official Meta BSP and an unauthorised reseller is the difference
             between a stable, compliant, scalable solution and a risk to your
             business communications.
@@ -615,7 +615,7 @@ export default function WhatsAppProviderIndiaPage() {
         </div>
       </section>
 
-      {/* -- WHAT IS A BSP — "What is this?" ---------------------------------- */}
+      {/* -- WHAT IS A BSP- "What is this?" ---------------------------------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="what-is-a-bsp">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
@@ -631,7 +631,7 @@ export default function WhatsAppProviderIndiaPage() {
                 WhatsApp Business API on behalf of businesses. BSPs sit
                 between Meta&apos;s infrastructure and the end businesses that
                 want to use WhatsApp for customer communication. Businesses
-                cannot access the API directly from Meta — they must work
+                cannot access the API directly from Meta- they must work
                 through an authorised BSP, which handles account setup,
                 verification, template approval, infrastructure, and ongoing
                 support.
@@ -650,7 +650,7 @@ export default function WhatsAppProviderIndiaPage() {
           </div>
 
           <h3 className="text-lg font-bold text-gray-900 mb-5 text-center">
-            Official BSP vs unofficial reseller — the critical difference
+            Official BSP vs unofficial reseller- the critical difference
           </h3>
           <ResponsiveTable
             caption="Official Meta BSP vs unofficial reseller / grey-market provider"
@@ -669,14 +669,14 @@ export default function WhatsAppProviderIndiaPage() {
               <strong>Important:</strong> Always verify that your WhatsApp API
               provider is listed in Meta&apos;s official BSP directory before
               signing up. Using an unofficial provider risks your WhatsApp
-              account being suspended without warning — and losing access to
+              account being suspended without warning- and losing access to
               all your customer conversations.
             </p>
           </div>
         </div>
       </section>
 
-      {/* -- WHY GCM — "Why should I care?" ------------------------------------ */}
+      {/* -- WHY GCM- "Why should I care?" ------------------------------------ */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="why-gcm">
         <SectionPattern tone="green" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
@@ -694,7 +694,7 @@ export default function WhatsAppProviderIndiaPage() {
         </div>
       </section>
 
-      {/* -- HOW TO CHOOSE A PROVIDER — "Can I trust this?" -------------------- */}
+      {/* -- HOW TO CHOOSE A PROVIDER- "Can I trust this?" -------------------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="how-to-choose">
         <SectionPattern tone="light" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-12">
@@ -704,7 +704,7 @@ export default function WhatsAppProviderIndiaPage() {
               A checklist for evaluating any WhatsApp API provider
             </h2>
             <p className="text-gray-500 text-base max-w-2xl mx-auto leading-[1.7]">
-              The Indian WhatsApp API provider market has dozens of players —
+              The Indian WhatsApp API provider market has dozens of players-
               official BSPs, resellers, and grey-market providers. Use this
               checklist before signing up with anyone.
             </p>
@@ -734,7 +734,7 @@ export default function WhatsAppProviderIndiaPage() {
         </div>
       </section>
 
-      {/* -- INDUSTRIES — "Why should I care?" (relevance) --------------------- */}
+      {/* -- INDUSTRIES- "Why should I care?" (relevance) --------------------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="industries">
         <SectionPattern tone="teal" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
@@ -757,14 +757,14 @@ export default function WhatsAppProviderIndiaPage() {
         </div>
       </section>
 
-      {/* -- ONBOARDING PROCESS — "How do I start?" ---------------------------- */}
+      {/* -- ONBOARDING PROCESS- "How do I start?" ---------------------------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="onboarding">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
           <div className="text-center mb-14 space-y-4">
             <span className={EYEBROW_LIGHT}>Onboarding Process</span>
             <h2 className={H2_LIGHT} style={SYNE_FONT}>
-              From sign-up to first live campaign — exactly what happens
+              From sign-up to first live campaign- exactly what happens
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
@@ -792,21 +792,21 @@ export default function WhatsAppProviderIndiaPage() {
               <strong className="text-gray-900">Typical total timeline:</strong>{" "}
               3 to 5 business days from signing up to sending your first
               WhatsApp campaign. The primary variable is Meta&apos;s WABA
-              approval timeline — which Get Click Media actively manages and
+              approval timeline- which Get Click Media actively manages and
               follows up on.
             </p>
           </div>
         </div>
       </section>
 
-      {/* -- WHAT'S INCLUDED — "What do I get?" -------------------------------- */}
+      {/* -- WHAT'S INCLUDED- "What do I get?" -------------------------------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="included">
         <SectionPattern tone="teal" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-12">
           <div className="text-center mb-12 space-y-4">
             <span className={EYEBROW_LIGHT}>What&apos;s Included</span>
             <h2 className={H2_LIGHT} style={SYNE_FONT}>
-              Every plan includes all of this — no add-on fees
+              Every plan includes all of this- no add-on fees
             </h2>
           </div>
           <BentoGrid className="sm:grid-cols-2 lg:grid-cols-3">
@@ -817,7 +817,7 @@ export default function WhatsAppProviderIndiaPage() {
         </div>
       </section>
 
-      {/* -- BUSINESS SIZES — "Is this for me?" --------------------------------- */}
+      {/* -- BUSINESS SIZES- "Is this for me?" --------------------------------- */}
       <section className={cnJoin(SECTION_PADDING, "relative")} id="business-sizes">
         <SectionPattern tone="light" />
         <div className={cnJoin(CONTAINER, "relative z-10")}>
@@ -832,7 +832,7 @@ export default function WhatsAppProviderIndiaPage() {
               <BentoCard
                 key={b.title}
                 icon={b.icon}
-                name={`${b.title} — ${b.tag}`}
+                name={`${b.title}- ${b.tag}`}
                 description={`${b.body} ${b.stat}`}
               />
             ))}
@@ -954,7 +954,7 @@ export default function WhatsAppProviderIndiaPage() {
   );
 }
 
-/** Tiny local join helper — avoids importing `cn` just for two-string concatenation
+/** Tiny local join helper- avoids importing `cn` just for two-string concatenation
  *  in the many inline `className={cnJoin(...)}` spots above. */
 function cnJoin(...parts: Array<string | false | undefined>) {
   return parts.filter(Boolean).join(" ");

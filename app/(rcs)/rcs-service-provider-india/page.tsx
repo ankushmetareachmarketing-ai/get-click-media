@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ShieldCheck,
   Layers,
@@ -22,14 +23,14 @@ import { SectionPattern } from "@/components/ui/section-pattern";
 export const metadata: Metadata = {
   title: "Best RCS Service Provider in India (2026) | Get Click Media",
   description:
-    "Looking for a reliable RCS service provider in India? Compare capabilities, network coverage, and setup process — trusted by 10,000+ Indian businesses. Book a free RCS demo.",
+    "Looking for a reliable RCS service provider in India? Compare capabilities, network coverage, and setup process- trusted by 10,000+ Indian businesses. Book a free RCS demo.",
   keywords:
     "RCS service provider India, best RCS provider India, RCS messaging company India, RCS business messaging provider, RCS API provider India, RCS vendor India, RCS aggregator India",
   alternates: { canonical: "https://getclickmedia.com/rcs-service-provider-india" },
   openGraph: {
     title: "Best RCS Service Provider in India",
     description:
-      "Get Click Media is a trusted RCS Business Messaging provider for Indian companies — capabilities, coverage, and setup process.",
+      "Get Click Media is a trusted RCS Business Messaging provider for Indian companies- capabilities, coverage, and setup process.",
     url: "https://getclickmedia.com/rcs-service-provider-india",
     type: "website",
   },
@@ -40,8 +41,8 @@ const LAST_UPDATED = "July 2026";
 const CAPABILITIES = [
   { icon: ShieldCheck, title: "Verified sender badge", desc: "Google brand verification handled end-to-end, so every message shows your business name and logo." },
   { icon: Repeat, title: "Intelligent SMS fallback", desc: "Every recipient's device is checked for RCS support; non-RCS devices automatically get an SMS fallback so delivery is never lost." },
-  { icon: Layers, title: "Rich cards & carousels", desc: "Swipeable product carousels, suggested replies, and up to three action buttons per message — no code required to build them." },
-  { icon: BarChart3, title: "Delivery & read reporting", desc: "Real-time delivery, read, and click data per recipient — not just \"sent,\" like plain SMS." },
+  { icon: Layers, title: "Rich cards & carousels", desc: "Swipeable product carousels, suggested replies, and up to three action buttons per message- no code required to build them." },
+  { icon: BarChart3, title: "Delivery & read reporting", desc: "Real-time delivery, read, and click data per recipient- not just \"sent,\" like plain SMS." },
   { icon: Code2, title: "REST API & webhooks", desc: "Full API access for sending programmatically, plus webhooks for delivery-status and read-receipt callbacks." },
   { icon: Headset, title: "Dedicated onboarding support", desc: "A single point of contact walks you through brand verification and your first campaign build." },
 ];
@@ -74,7 +75,7 @@ const FAQS = [
   },
   {
     q: "Does Get Click Media offer RCS SMS fallback?",
-    a: "Yes — messages automatically fall back to SMS when the recipient's device or network doesn't support RCS, so delivery is never lost.",
+    a: "Yes- messages automatically fall back to SMS when the recipient's device or network doesn't support RCS, so delivery is never lost.",
   },
   {
     q: "How fast is RCS onboarding with Get Click Media?",
@@ -82,7 +83,7 @@ const FAQS = [
   },
   {
     q: "Can I switch from another RCS provider to Get Click Media?",
-    a: "Yes — our onboarding team handles brand re-verification and helps migrate your existing message templates as part of the switch.",
+    a: "Yes- our onboarding team handles brand re-verification and helps migrate your existing message templates as part of the switch.",
   },
   {
     q: "Is there a minimum volume commitment?",
@@ -90,7 +91,7 @@ const FAQS = [
   },
   {
     q: "Do you provide delivery and read-receipt reports?",
-    a: "Yes — real-time delivery, read, and click reporting is included on every RCS account, so you can see engagement per recipient rather than just \"sent.\"",
+    a: "Yes- real-time delivery, read, and click reporting is included on every RCS account, so you can see engagement per recipient rather than just \"sent.\"",
   },
   {
     q: "What carriers does Get Click Media's RCS support in India?",
@@ -102,7 +103,7 @@ const FAQS = [
   },
   {
     q: "Do you offer a free trial or demo?",
-    a: "Yes — book a free RCS demo to see rich cards, carousels, and action buttons rendered on a live test device before you commit to anything.",
+    a: "Yes- book a free RCS demo to see rich cards, carousels, and action buttons rendered on a live test device before you commit to anything.",
   },
 ];
 
@@ -170,7 +171,7 @@ export default function RCSServiceProviderIndiaPage() {
         highlight="in India"
         description={
           <>
-            Direct carrier integrations with Jio, Airtel, and Vi — no aggregator hop in between.
+            Direct carrier integrations with Jio, Airtel, and Vi- no aggregator hop in between.
             Verified sender setup, automatic SMS fallback, and real-time reporting, backed by a
             dedicated onboarding team.
             <strong className="text-gray-900"> Trusted by 10,000+ Indian businesses.</strong>
@@ -183,10 +184,10 @@ export default function RCSServiceProviderIndiaPage() {
         trustLine="Trusted by 10,000+ businesses across India"
       />
 
-      {/* -- EEAT: last-updated strip ---------------------------------------- */}
+      {/* -- EEAT: byline + last-updated strip -------------------------------- */}
       <div className="bg-white border-b border-gray-100">
         <p className="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 text-center text-xs text-gray-400">
-          Last updated: {LAST_UPDATED} · Reviewed by the Get Click Media RCS team
+          Written by the Get Click Media Pvt. Ltd. Team · Last updated: {LAST_UPDATED} · Reviewed by the Get Click Media RCS team
         </p>
       </div>
 
@@ -222,7 +223,7 @@ export default function RCSServiceProviderIndiaPage() {
             </h2>
             <p className="text-gray-500 text-base max-w-2xl mx-auto">
               We connect directly to Jio, Airtel, and Vi rather than routing through a third-party
-              aggregator — that means faster delivery, better reliability, and accurate device
+              aggregator- that means faster delivery, better reliability, and accurate device
               capability detection for every recipient.
             </p>
           </div>
@@ -247,7 +248,7 @@ export default function RCSServiceProviderIndiaPage() {
             </h2>
             <p className="text-gray-500 text-base max-w-2xl mx-auto">
               RCS delivery depends on both the recipient's carrier and their default messaging
-              app — here's what Get Click Media's direct integrations cover today.
+              app- here's what Get Click Media's direct integrations cover today.
             </p>
           </div>
           <ResponsiveTable
@@ -260,6 +261,27 @@ export default function RCSServiceProviderIndiaPage() {
             rows={COVERAGE_ROWS}
             highlightColumnKey="support"
           />
+          <p className="text-xs text-gray-400 text-center mt-4">
+            Sources:{" "}
+            <a
+              href="https://developers.google.com/business-communications"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 hover:text-gray-600"
+            >
+              Google Business Communications documentation
+            </a>{" "}
+            and the{" "}
+            <a
+              href="https://www.gsma.com/futurenetworks/rcs/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 hover:text-gray-600"
+            >
+              GSMA RCS Universal Profile
+            </a>
+            .
+          </p>
         </div>
       </section>
 
@@ -277,7 +299,7 @@ export default function RCSServiceProviderIndiaPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { n: "01", icon: FileCheck2, title: "Brand Verification", body: "Submit your business documents, logo, and sender details. Our team handles Google brand verification end-to-end — typically 5–7 business days." },
+              { n: "01", icon: FileCheck2, title: "Brand Verification", body: "Submit your business documents, logo, and sender details. Our team handles Google brand verification end-to-end- typically 5–7 business days." },
               { n: "02", icon: Code2, title: "API Integration", body: "Connect via our REST API or no-code campaign builder. SDKs are available for Node.js, Python, PHP, and Java." },
               { n: "03", icon: Rocket, title: "Go Live", body: "Launch your first campaign or transactional flow, with real-time delivery and engagement data from message one." },
             ].map((s) => (
@@ -352,7 +374,7 @@ export default function RCSServiceProviderIndiaPage() {
       {/* -- FAQ ------------------------------------------------------------ */}
       <section className="relative py-16 sm:py-20 lg:py-[100px] bg-gray-50" id="faq">
         <SectionPattern tone="gold" />
-        <div className="relative z-10 max-w-3xl mx-auto px-6 sm:px-12 lg:px-20">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-12 lg:px-20">
           <div className="text-center mb-12 space-y-4">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
               Frequently Asked Questions
@@ -361,7 +383,23 @@ export default function RCSServiceProviderIndiaPage() {
               Choosing an RCS Service Provider in India
             </h2>
           </div>
-          <AccordionList items={FAQS.map((f) => ({ question: f.q, answer: <p className="text-base text-gray-500 leading-[1.7]">{f.a}</p> }))} />
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
+            <div className="hidden lg:block lg:w-[36%] shrink-0 lg:sticky lg:top-24">
+              <div className="relative w-full rounded-2xl overflow-hidden aspect-4/5">
+                <Image
+                  src="/images/rcs/rcs-service-provider-india.png"
+                  alt="Ask a question about choosing an RCS service provider in India"
+                  fill
+                  className="object-cover"
+                  sizes="36vw"
+                />
+              </div>
+            </div>
+            <AccordionList
+              className="flex-1 w-full"
+              items={FAQS.map((f) => ({ question: f.q, answer: <p className="text-base text-gray-500 leading-[1.7]">{f.a}</p> }))}
+            />
+          </div>
         </div>
       </section>
 
@@ -391,7 +429,7 @@ export default function RCSServiceProviderIndiaPage() {
         <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-20">
           <GlowCtaBanner
             title="Ready to switch to a direct-integration RCS provider?"
-            description="Get Click Media handles brand verification, campaign setup, and carrier connectivity end-to-end — most clients go live within a week."
+            description="Get Click Media handles brand verification, campaign setup, and carrier connectivity end-to-end- most clients go live within a week."
             ctaLabel="Book a Free RCS Demo"
           />
         </div>

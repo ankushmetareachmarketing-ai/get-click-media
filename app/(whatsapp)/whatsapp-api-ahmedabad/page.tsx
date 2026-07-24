@@ -13,14 +13,14 @@ import { CityPageTemplate } from "../_templates/city-page-template";
 
 /* ── SEO Metadata ────────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: "WhatsApp Business API in Ahmedabad — Official Meta BSP | Get Click Media",
+  title: "WhatsApp Business API in Ahmedabad- Official Meta BSP | Get Click Media",
   description:
     "Get Click Media provides WhatsApp Business API in Ahmedabad as an official Meta Business Solution Provider. 3-5 day onboarding with Gujarati and Hindi chatbot support for Ahmedabad's textile, MSME, real estate, and diamond businesses.",
   keywords:
     "WhatsApp Business API Ahmedabad, whatsapp api provider ahmedabad, whatsapp business api ahmedabad, whatsapp marketing ahmedabad, whatsapp chatbot gujarat, whatsapp api service ahmedabad gujarat",
   alternates: { canonical: "https://getclickmedia.com/whatsapp-api-ahmedabad" },
   openGraph: {
-    title: "WhatsApp Business API in Ahmedabad — Official Meta BSP | Get Click Media",
+    title: "WhatsApp Business API in Ahmedabad- Official Meta BSP | Get Click Media",
     description:
       "Get Click Media provides WhatsApp Business API in Ahmedabad as an official Meta Business Solution Provider, with Gujarati and Hindi language chatbot capabilities.",
     url: "https://getclickmedia.com/whatsapp-api-ahmedabad",
@@ -69,7 +69,7 @@ const schema = {
         {
           "@type": "Question",
           name: "Does Get Click Media support Gujarati-language WhatsApp chatbots?",
-          acceptedAnswer: { "@type": "Answer", text: "Yes. Get Click Media supports Gujarati-language chatbots — understanding messages in Gujarati script and Gujarati-romanised text, and responding in Gujarati. For Ahmedabad's trading and MSME businesses where Gujarati is the primary business communication language, GCM configures bilingual Gujarati-Hindi or Gujarati-English chatbots." },
+          acceptedAnswer: { "@type": "Answer", text: "Yes. Get Click Media supports Gujarati-language chatbots- understanding messages in Gujarati script and Gujarati-romanised text, and responding in Gujarati. For Ahmedabad's trading and MSME businesses where Gujarati is the primary business communication language, GCM configures bilingual Gujarati-Hindi or Gujarati-English chatbots." },
         },
         {
           "@type": "Question",
@@ -79,7 +79,7 @@ const schema = {
         {
           "@type": "Question",
           name: "Is WhatsApp API suitable for textile traders in Ahmedabad?",
-          acceptedAnswer: { "@type": "Answer", text: "Yes. Ahmedabad's textile trading community — one of the most WhatsApp-active B2B segments in India — uses WhatsApp API for fabric availability alerts to regular buyers, order confirmation and dispatch notification, payment reminder for credit buyers, new collection announcement with product images, and customer support for export inquiries. GCM has pre-built textile trade templates for Ahmedabad." },
+          acceptedAnswer: { "@type": "Answer", text: "Yes. Ahmedabad's textile trading community- one of the most WhatsApp-active B2B segments in India- uses WhatsApp API for fabric availability alerts to regular buyers, order confirmation and dispatch notification, payment reminder for credit buyers, new collection announcement with product images, and customer support for export inquiries. GCM has pre-built textile trade templates for Ahmedabad." },
         },
         {
           "@type": "Question",
@@ -146,25 +146,25 @@ const INDUSTRIES = [
 
 const CAPABILITIES = [
   { label: "Onboarding timeline", value: "3 to 5 business days from consultation to first live WhatsApp message" },
-  { label: "Meta BSP status", value: "Official Meta Business Solution Provider — GCM manages your full WhatsApp Business Account registration" },
+  { label: "Meta BSP status", value: "Official Meta Business Solution Provider- GCM manages your full WhatsApp Business Account registration" },
   { label: "Local support", value: "India-based support team available 9 AM to 7 PM IST, Monday to Saturday. WhatsApp support available." },
-  { label: "Pricing", value: "Same as national rates — marketing Rs 0.79-0.91/conv, utility Rs 0.14-0.17/conv. Platform fee based on volume." },
+  { label: "Pricing", value: "Same as national rates- marketing Rs 0.79-0.91/conv, utility Rs 0.14-0.17/conv. Platform fee based on volume." },
   { label: "Languages supported", value: "Hindi + English + regional language chatbot flows as required by your customer base" },
   { label: "Integration partners", value: "Shopify, WooCommerce, Salesforce, HubSpot, Zoho, LeadSquared, and custom systems" },
 ];
 
 const CLIENT_USE_CASES = [
-  { sector: "Textile trader — Kankaria", automation: "B2B WhatsApp for fabric availability + order confirmation + payment reminder", result: "Order query calls -55%. Payment default -28%." },
-  { sector: "MSME manufacturer — Vatva", automation: "Dealer WhatsApp communication + payment reminders in Gujarati", result: "Dealer engagement +45%. Payment on-time +38%." },
-  { sector: "Real estate developer — SG Highway", automation: "Gujarati-language lead qualification + site visit automation", result: "Site visit rate 3x. No-show -35%." },
-  { sector: "Multi-speciality hospital — Satellite", automation: "Gujarati appointment reminders + lab report delivery", result: "No-show -35%. Lab call volume -60%." },
-  { sector: "D2C brand — Prahlad Nagar", automation: "Cart recovery + festive campaign (Navratri, Diwali)", result: "Navratri campaign ROAS 24x. Cart recovery 21%." },
+  { sector: "Textile trader- Kankaria", automation: "B2B WhatsApp for fabric availability + order confirmation + payment reminder", result: "Order query calls -55%. Payment default -28%." },
+  { sector: "MSME manufacturer- Vatva", automation: "Dealer WhatsApp communication + payment reminders in Gujarati", result: "Dealer engagement +45%. Payment on-time +38%." },
+  { sector: "Real estate developer- SG Highway", automation: "Gujarati-language lead qualification + site visit automation", result: "Site visit rate 3x. No-show -35%." },
+  { sector: "Multi-speciality hospital- Satellite", automation: "Gujarati appointment reminders + lab report delivery", result: "No-show -35%. Lab call volume -60%." },
+  { sector: "D2C brand- Prahlad Nagar", automation: "Cart recovery + festive campaign (Navratri, Diwali)", result: "Navratri campaign ROAS 24x. Cart recovery 21%." },
 ];
 
 const FAQS = [
   {
     q: "Does Get Click Media support Gujarati-language WhatsApp chatbots?",
-    a: "Yes. Get Click Media supports Gujarati-language chatbots — understanding messages in Gujarati script and Gujarati-romanised text, and responding in Gujarati. For Ahmedabad's trading and MSME businesses where Gujarati is the primary business communication language, GCM configures bilingual Gujarati-Hindi or Gujarati-English chatbots.",
+    a: "Yes. Get Click Media supports Gujarati-language chatbots- understanding messages in Gujarati script and Gujarati-romanised text, and responding in Gujarati. For Ahmedabad's trading and MSME businesses where Gujarati is the primary business communication language, GCM configures bilingual Gujarati-Hindi or Gujarati-English chatbots.",
   },
   {
     q: "How does WhatsApp API help Ahmedabad's MSME and manufacturing sector?",
@@ -172,7 +172,7 @@ const FAQS = [
   },
   {
     q: "Is WhatsApp API suitable for textile traders in Ahmedabad?",
-    a: "Yes. Ahmedabad's textile trading community — one of the most WhatsApp-active B2B segments in India — uses WhatsApp API for: fabric availability alerts to regular buyers, order confirmation and dispatch notification, payment reminder for credit buyers, new collection announcement with product images, and customer support for export inquiries. GCM has pre-built textile trade templates for Ahmedabad.",
+    a: "Yes. Ahmedabad's textile trading community- one of the most WhatsApp-active B2B segments in India- uses WhatsApp API for: fabric availability alerts to regular buyers, order confirmation and dispatch notification, payment reminder for credit buyers, new collection announcement with product images, and customer support for export inquiries. GCM has pre-built textile trade templates for Ahmedabad.",
   },
   {
     q: "Which Navratri campaign approach works best for Ahmedabad retail brands on WhatsApp?",
@@ -198,7 +198,7 @@ export default function WhatsAppAPIAhmedabadPage() {
       breadcrumbLabel="Ahmedabad"
       heroEyebrow="WhatsApp Business API Ahmedabad"
       heroTitle="WhatsApp Business API"
-      heroHighlight="in Ahmedabad — Official Meta BSP"
+      heroHighlight="in Ahmedabad- Official Meta BSP"
       heroDescription={
         <>
           Get Click Media provides WhatsApp Business API in Ahmedabad as an official Meta Business
@@ -208,7 +208,7 @@ export default function WhatsAppAPIAhmedabadPage() {
         </>
       }
       heroImage="/images/whatsapp/whatsapp-bussiness-api.webp"
-      heroImageAlt="WhatsApp Business API for Ahmedabad businesses — rich message preview on a phone"
+      heroImageAlt="WhatsApp Business API for Ahmedabad businesses- rich message preview on a phone"
       heroTrustLine="Official Meta BSP · 3–5 Day Setup · Gujarati & Hindi chatbot support · India-based support"
       stats={[
         { value: "#1", label: "India's fastest-growing major city" },
@@ -218,14 +218,14 @@ export default function WhatsAppAPIAhmedabadPage() {
       ]}
       aeoParagraphs={[
         "Get Click Media provides WhatsApp Business API in Ahmedabad as an official Meta Business Solution Provider. Ahmedabad's trading and MSME sector, textile and diamond industry, manufacturing, real estate, and healthcare are the primary WhatsApp API adopters. GCM delivers 3 to 5 day onboarding for Ahmedabad businesses with Gujarati and Hindi language chatbot capabilities.",
-        "Ahmedabad is India's fastest-growing major city and Gujarat's commercial capital — home to one of India's most vibrant MSME sectors, the world's largest diamond processing cluster (Surat-Ahmedabad corridor), India's largest textile market (Kankaria Textiles, Sindhi Market), and a growing startup ecosystem in areas like SG Highway and Prahlad Nagar.",
-        "Gujarat's business community is among India's most entrepreneurial — Ahmedabad businesses adopt WhatsApp Business API faster than the national average, driven by the state's digital-forward business culture and strong trading community that has historically adopted communication tools early.",
+        "Ahmedabad is India's fastest-growing major city and Gujarat's commercial capital- home to one of India's most vibrant MSME sectors, the world's largest diamond processing cluster (Surat-Ahmedabad corridor), India's largest textile market (Kankaria Textiles, Sindhi Market), and a growing startup ecosystem in areas like SG Highway and Prahlad Nagar.",
+        "Gujarat's business community is among India's most entrepreneurial- Ahmedabad businesses adopt WhatsApp Business API faster than the national average, driven by the state's digital-forward business culture and strong trading community that has historically adopted communication tools early.",
       ]}
       whyCity={{
         eyebrow: "Why Ahmedabad Businesses Choose WhatsApp API",
         title: "A trading-and-MSME-driven market built for WhatsApp automation",
         description:
-          "Ahmedabad's business landscape is shaped by a digital-first consumer base — smartphone penetration, WhatsApp usage rates, and e-commerce adoption are all above India's national average. Businesses that deploy WhatsApp Business API in Ahmedabad report faster lead conversion, higher customer retention, and lower support costs compared to SMS and email alternatives.",
+          "Ahmedabad's business landscape is shaped by a digital-first consumer base- smartphone penetration, WhatsApp usage rates, and e-commerce adoption are all above India's national average. Businesses that deploy WhatsApp Business API in Ahmedabad report faster lead conversion, higher customer retention, and lower support costs compared to SMS and email alternatives.",
         image: "/images/whatsapp/direct-meta-partner.webp",
         points: [
           { icon: Factory, title: "One of India's most vibrant MSME sectors", desc: "GIDC Vatva, Naroda, and Odhav drive heavy B2B WhatsApp adoption for dealer and supplier communication." },
@@ -241,7 +241,7 @@ export default function WhatsAppAPIAhmedabadPage() {
         description: (
           <>
             Get Click Media provides WhatsApp API to Ahmedabad businesses with
-            <strong className="text-gray-900"> Gujarati-language chatbot support</strong> — essential for
+            <strong className="text-gray-900"> Gujarati-language chatbot support</strong>- essential for
             the city&apos;s trading and MSME community where business communication happens in Gujarati.
             GCM&apos;s B2B and manufacturing WhatsApp flows are specifically designed for Gujarat&apos;s
             trade-heavy business culture.
@@ -255,7 +255,7 @@ export default function WhatsAppAPIAhmedabadPage() {
       faqs={FAQS}
       relatedLinks={RELATED_LINKS}
       bottomCtaTitle="Ready to launch WhatsApp API for your Ahmedabad business?"
-      bottomCtaDescription="Get Click Media manages Meta business verification, template approval, and Gujarati-language chatbot setup — fully remote, no in-person visit required."
+      bottomCtaDescription="Get Click Media manages Meta business verification, template approval, and Gujarati-language chatbot setup- fully remote, no in-person visit required."
       schema={schema}
     />
   );

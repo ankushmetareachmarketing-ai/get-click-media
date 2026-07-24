@@ -7,14 +7,14 @@ import { ArrowRight, CheckCheck, Zap, Shield, BarChart3, MessageSquare, Layers, 
 export const metadata: Metadata = {
   title: "RCS Messaging for Real Estate: Drive Site Visits & Bookings | Get Click Media",
   description:
-    "Use RCS messaging for real estate marketing in India — property carousels, site visit bookings, payment reminders, and verified sender trust. See how it works with Get Click Media.",
+    "Use RCS messaging for real estate marketing in India- property carousels, site visit bookings, payment reminders, and verified sender trust. See how it works with Get Click Media.",
   keywords:
     "RCS for Real Estate, Real Estate RCS Messaging, RCS Real Estate India, RCS Property Marketing, RCS for Builders India",
   alternates: { canonical: "https://getclickmedia.com/rcs-for-real-estate" },
   openGraph: {
     title: "RCS Messaging for Real Estate: Drive Site Visits & Bookings | Get Click Media",
     description:
-      "Use RCS messaging for real estate marketing in India — property carousels, site visit bookings, payment reminders, and verified sender trust. See how it works with Get Click Media.",
+      "Use RCS messaging for real estate marketing in India- property carousels, site visit bookings, payment reminders, and verified sender trust. See how it works with Get Click Media.",
     url: "https://getclickmedia.com/rcs-for-real-estate",
     type: "website",
   },
@@ -37,7 +37,7 @@ const schema = {
         "@type": "Country",
         "name": "India"
       },
-      "serviceType": "RCS Business Messaging — Real Estate",
+      "serviceType": "RCS Business Messaging- Real Estate",
       "url": "https://getclickmedia.com/rcs-for-real-estate"
     },
     {
@@ -57,15 +57,15 @@ const schema = {
         },
         {
           "@type": "Question", "name": "Can I show property images in RCS messages?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. RCS supports high-resolution images, GIFs, and video thumbnails natively inside the message — no link, no app switch required. A property developer can send a rich card with the project hero render, floor plan image, or actual site photo, along with a headline, description, and action buttons — all in a single message delivered to the buyer's default messaging app." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. RCS supports high-resolution images, GIFs, and video thumbnails natively inside the message- no link, no app switch required. A property developer can send a rich card with the project hero render, floor plan image, or actual site photo, along with a headline, description, and action buttons- all in a single message delivered to the buyer's default messaging app." }
         },
         {
           "@type": "Question", "name": "How does RCS reduce no-shows for site visits?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The primary mechanism is the confirmation + reschedule chip. A rich card sent 24 hours before the visit shows the visit details, a 'Confirm' quick-reply chip, and a 'Reschedule' quick-reply chip. Buyers who need to reschedule do so immediately via a tap — rather than simply not showing up. Developers using this flow report no-show rates dropping from 50–55% to 20–25%." }
+          "acceptedAnswer": { "@type": "Answer", "text": "The primary mechanism is the confirmation + reschedule chip. A rich card sent 24 hours before the visit shows the visit details, a 'Confirm' quick-reply chip, and a 'Reschedule' quick-reply chip. Buyers who need to reschedule do so immediately via a tap- rather than simply not showing up. Developers using this flow report no-show rates dropping from 50–55% to 20–25%." }
         },
         {
           "@type": "Question", "name": "Can RCS include a Google Maps link to the project site?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. RCS action buttons support a 'View Location' button type that opens Google Maps directly to a specified latitude/longitude coordinate. Buyers tap the button and get turn-by-turn navigation to the project site immediately — without copying an address or searching manually." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. RCS action buttons support a 'View Location' button type that opens Google Maps directly to a specified latitude/longitude coordinate. Buyers tap the button and get turn-by-turn navigation to the project site immediately- without copying an address or searching manually." }
         },
         {
           "@type": "Question", "name": "Can I integrate RCS with my real estate CRM?",
@@ -73,15 +73,15 @@ const schema = {
         },
         {
           "@type": "Question", "name": "Does RCS work for NRI real estate buyers outside India?",
-          "acceptedAnswer": { "@type": "Answer", "text": "RCS works for NRI buyers if their local carrier supports RCS. In major NRI markets — UAE (Etisalat, du), UK (EE, O2, Vodafone), USA (T-Mobile, Verizon), Singapore (Singtel) — RCS is increasingly available. Get Click Media checks carrier capability for international numbers. Where RCS is not available, SMS fallback delivers the message." }
+          "acceptedAnswer": { "@type": "Answer", "text": "RCS works for NRI buyers if their local carrier supports RCS. In major NRI markets- UAE (Etisalat, du), UK (EE, O2, Vodafone), USA (T-Mobile, Verizon), Singapore (Singtel)- RCS is increasingly available. Get Click Media checks carrier capability for international numbers. Where RCS is not available, SMS fallback delivers the message." }
         },
         {
           "@type": "Question", "name": "Is RCS messaging RERA compliant for real estate in India?",
-          "acceptedAnswer": { "@type": "Answer", "text": "RCS Business Messaging is not currently regulated under TRAI's commercial SMS framework. However, all real estate communications — including RCS — must comply with RERA guidelines on advertising and disclosure. Get Click Media's platform includes opt-out management and campaign record retention to support your RERA compliance." }
+          "acceptedAnswer": { "@type": "Answer", "text": "RCS Business Messaging is not currently regulated under TRAI's commercial SMS framework. However, all real estate communications- including RCS- must comply with RERA guidelines on advertising and disclosure. Get Click Media's platform includes opt-out management and campaign record retention to support your RERA compliance." }
         },
         {
           "@type": "Question", "name": "What is the minimum volume needed to make RCS worth it for a real estate developer?",
-          "acceptedAnswer": { "@type": "Answer", "text": "RCS is cost-effective for real estate developers sending as few as 5,000 to 10,000 messages per month — particularly because the cost per site visit booking from RCS is significantly lower than portal lead costs (₹250–600 per RCS-driven site visit vs ₹1,500–5,000 for a portal lead). For project launches, festive campaigns, and payment milestone reminders, RCS consistently delivers positive ROI even at lower volumes." }
+          "acceptedAnswer": { "@type": "Answer", "text": "RCS is cost-effective for real estate developers sending as few as 5,000 to 10,000 messages per month- particularly because the cost per site visit booking from RCS is significantly lower than portal lead costs (₹250–600 per RCS-driven site visit vs ₹1,500–5,000 for a portal lead). For project launches, festive campaigns, and payment milestone reminders, RCS consistently delivers positive ROI even at lower volumes." }
         }
       ]
     }
@@ -100,9 +100,9 @@ const REAL_ESTATE_USE_CASES = [
   },
   {
     icon: Layers,
-    title: "Property Carousel — Multiple Units",
+    title: "Property Carousel- Multiple Units",
     scenario: "Broker wants to showcase 6 properties across different budgets and locations.",
-    solution: "Carousel of 6 rich cards — each with property image, location, configuration, price, key features, 'Schedule Visit' button. Buyer swipes to compare.",
+    solution: "Carousel of 6 rich cards- each with property image, location, configuration, price, key features, 'Schedule Visit' button. Buyer swipes to compare.",
     result: "Average 2.3 cards viewed per session. 22% tap-through to Schedule Visit on at least one card.",
     image: "/images/rcs/real-estate-carousel.webp"
   },
@@ -125,8 +125,8 @@ const REAL_ESTATE_USE_CASES = [
   {
     icon: Star,
     title: "Festive & Seasonal Offer Campaign",
-    scenario: "Developer running a Diwali offer — stamp duty waiver + free parking for bookings in October.",
-    solution: "Rich card: festive visual, project image, offer headline, 3 USPs, offer validity countdown, 2 buttons: 'Book Now — Offer Ends 31 Oct' and 'Download Offer Details'.",
+    scenario: "Developer running a Diwali offer- stamp duty waiver + free parking for bookings in October.",
+    solution: "Rich card: festive visual, project image, offer headline, 3 USPs, offer validity countdown, 2 buttons: 'Book Now- Offer Ends 31 Oct' and 'Download Offer Details'.",
     result: "35–50% higher enquiry reopening rate vs plain SMS for re-engagement campaigns. Visual festive card outperforms text-only equivalent 4:1 on click-through.",
     image: "/images/rcs/real-estate-festive.webp"
   },
@@ -149,7 +149,7 @@ const REAL_ESTATE_USE_CASES = [
   {
     icon: Bell,
     title: "Post-Possession Move-In Support",
-    scenario: "Developer wants to support buyers at possession stage — sharing move-in checklist, utility connection guides, and society contacts.",
+    scenario: "Developer wants to support buyers at possession stage- sharing move-in checklist, utility connection guides, and society contacts.",
     solution: "Rich card series (carousel): Card 1: move-in checklist PDF, Card 2: electricity/water connection guide with utility office map button, Card 3: RWA contact details with Call button, Card 4: developer's next project teaser with 'Register Interest' button.",
     result: "Buyer NPS increases. Utility card map button reduces post-possession call centre load 40%. Next project teaser generates 12% registration rate from satisfied existing buyers.",
     image: "/images/rcs/real-estate-possession.webp"
@@ -185,7 +185,7 @@ const PERFORMANCE_DATA = [
 const SEGMENT_STRATEGIES = [
   {
     segment: "Affordable housing (under ₹40 Lakh)",
-    strategy: "Lead with the EMI figure prominently (e.g., 'Own your home at ₹18,000/month EMI'). Use a single rich card with project image, location map, and two buttons: 'Check EMI Eligibility' and 'Book Free Site Visit'. Keep the message simple — avoid carousels. Ensure SMS fallback is clean and compelling.",
+    strategy: "Lead with the EMI figure prominently (e.g., 'Own your home at ₹18,000/month EMI'). Use a single rich card with project image, location map, and two buttons: 'Check EMI Eligibility' and 'Book Free Site Visit'. Keep the message simple- avoid carousels. Ensure SMS fallback is clean and compelling.",
     audience: "First-time homebuyers, limited digital comfort, entry-level Android devices"
   },
   {
@@ -195,17 +195,17 @@ const SEGMENT_STRATEGIES = [
   },
   {
     segment: "Premium and luxury (above ₹1.5 Crore)",
-    strategy: "Use a single rich card with a high-quality architect render or lifestyle photo — not generic stock. The message should feel exclusive: 'Only 12 units remaining in Tower A' or 'By invitation only — preview on 28 June'. Buttons: 'Reserve Your Preview Slot' and 'Download The Brand Book'. Avoid price — premium buyers respond to exclusivity.",
+    strategy: "Use a single rich card with a high-quality architect render or lifestyle photo- not generic stock. The message should feel exclusive: 'Only 12 units remaining in Tower A' or 'By invitation only- preview on 28 June'. Buttons: 'Reserve Your Preview Slot' and 'Download The Brand Book'. Avoid price- premium buyers respond to exclusivity.",
     audience: "Brand-sensitive, high expectations, discerning buyers"
   },
   {
     segment: "Commercial real estate",
-    strategy: "Lead with the investment thesis — expected rental yield, occupancy data for the micro-market, tenant mix if pre-leased. Use a carousel to showcase the building, floor plans, location connectivity (metro, airport, expressway), and amenities. Buttons: 'Download Investment Deck', 'Schedule a Property Walk-through', 'Request Lease Terms'.",
+    strategy: "Lead with the investment thesis- expected rental yield, occupancy data for the micro-market, tenant mix if pre-leased. Use a carousel to showcase the building, floor plans, location connectivity (metro, airport, expressway), and amenities. Buttons: 'Download Investment Deck', 'Schedule a Property Walk-through', 'Request Lease Terms'.",
     audience: "Corporate decision-makers, business owners, ROI-focused"
   },
   {
     segment: "Resale and broker-led inventory",
-    strategy: "Enable fast, rich showcase messages for newly listed properties to your database of registered buyers. A new 3 BHK listing in a popular Bangalore housing society can be showcased to 2,000 registered buyers within 90 seconds — with full property photo, floor plan, asking price, and 'Schedule Viewing' button — before any portal listing is indexed.",
+    strategy: "Enable fast, rich showcase messages for newly listed properties to your database of registered buyers. A new 3 BHK listing in a popular Bangalore housing society can be showcased to 2,000 registered buyers within 90 seconds- with full property photo, floor plan, asking price, and 'Schedule Viewing' button- before any portal listing is indexed.",
     audience: "Brokers managing resale inventory, registered buyer database"
   }
 ];
@@ -217,19 +217,19 @@ const FAQS = [
   },
   {
     q: "Can I show property images in RCS messages?",
-    a: "Yes. RCS supports high-resolution images, GIFs, and video thumbnails natively inside the message — no link, no app switch required. A property developer can send a rich card with the project hero render, floor plan image, or actual site photo, along with a headline, description, and action buttons — all in a single message delivered to the buyer's default messaging app."
+    a: "Yes. RCS supports high-resolution images, GIFs, and video thumbnails natively inside the message- no link, no app switch required. A property developer can send a rich card with the project hero render, floor plan image, or actual site photo, along with a headline, description, and action buttons- all in a single message delivered to the buyer's default messaging app."
   },
   {
     q: "How does RCS reduce no-shows for site visits?",
-    a: "The primary mechanism is the confirmation + reschedule chip. A rich card sent 24 hours before the visit shows the visit details, a 'Confirm' quick-reply chip, and a 'Reschedule' quick-reply chip. Buyers who need to reschedule do so immediately via a tap — rather than simply not showing up. Developers using this flow report no-show rates dropping from 50–55% to 20–25%."
+    a: "The primary mechanism is the confirmation + reschedule chip. A rich card sent 24 hours before the visit shows the visit details, a 'Confirm' quick-reply chip, and a 'Reschedule' quick-reply chip. Buyers who need to reschedule do so immediately via a tap- rather than simply not showing up. Developers using this flow report no-show rates dropping from 50–55% to 20–25%."
   },
   {
     q: "Can RCS messages include a Google Maps link to the project site?",
-    a: "Yes. RCS action buttons support a 'View Location' button type that opens Google Maps directly to a specified latitude/longitude coordinate. Buyers tap the button and get turn-by-turn navigation to the project site immediately — without copying an address or searching manually. This reduces no-shows by removing the friction of finding the location."
+    a: "Yes. RCS action buttons support a 'View Location' button type that opens Google Maps directly to a specified latitude/longitude coordinate. Buyers tap the button and get turn-by-turn navigation to the project site immediately- without copying an address or searching manually. This reduces no-shows by removing the friction of finding the location."
   },
   {
     q: "Does RCS work for NRI real estate buyers outside India?",
-    a: "RCS works for NRI buyers if their local carrier supports RCS. In major NRI markets — UAE (Etisalat, du), UK (EE, O2, Vodafone), USA (T-Mobile, Verizon), Singapore (Singtel) — RCS is increasingly available. Get Click Media checks carrier capability for international numbers. Where RCS is not available, SMS fallback delivers the message. The 'Book a Video Call' button is particularly effective for NRI conversion."
+    a: "RCS works for NRI buyers if their local carrier supports RCS. In major NRI markets- UAE (Etisalat, du), UK (EE, O2, Vodafone), USA (T-Mobile, Verizon), Singapore (Singtel)- RCS is increasingly available. Get Click Media checks carrier capability for international numbers. Where RCS is not available, SMS fallback delivers the message. The 'Book a Video Call' button is particularly effective for NRI conversion."
   },
   {
     q: "Can I integrate RCS with my real estate CRM?",
@@ -237,11 +237,11 @@ const FAQS = [
   },
   {
     q: "Is RCS messaging RERA compliant for real estate in India?",
-    a: "RCS Business Messaging is not currently regulated under TRAI's commercial SMS framework, so the specific SMS content regulations do not apply. However, all real estate communications — including RCS — must comply with RERA guidelines on advertising and disclosure. Get Click Media's platform includes opt-out management and campaign record retention to support your RERA and general consumer protection compliance."
+    a: "RCS Business Messaging is not currently regulated under TRAI's commercial SMS framework, so the specific SMS content regulations do not apply. However, all real estate communications- including RCS- must comply with RERA guidelines on advertising and disclosure. Get Click Media's platform includes opt-out management and campaign record retention to support your RERA and general consumer protection compliance."
   },
   {
     q: "What is the minimum volume needed to make RCS worth it for a real estate developer?",
-    a: "RCS is cost-effective for real estate developers sending as few as 5,000 to 10,000 messages per month — particularly because the cost per site visit booking from RCS is significantly lower than portal lead costs (₹250–600 per RCS-driven site visit vs ₹1,500–5,000 for a portal lead). For project launches, festive campaigns, and payment milestone reminders, RCS consistently delivers positive ROI even at lower volumes due to the high value of each conversion."
+    a: "RCS is cost-effective for real estate developers sending as few as 5,000 to 10,000 messages per month- particularly because the cost per site visit booking from RCS is significantly lower than portal lead costs (₹250–600 per RCS-driven site visit vs ₹1,500–5,000 for a portal lead). For project launches, festive campaigns, and payment milestone reminders, RCS consistently delivers positive ROI even at lower volumes due to the high value of each conversion."
   }
 ];
 
@@ -253,7 +253,7 @@ export default function RCSRealEstatePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       {/* -----------------------------------------------------------------
-          HERO — with breadcrumb inside
+          HERO- with breadcrumb inside
       ----------------------------------------------------------------- */}
       <section className="relative overflow-hidden mt-2 bg-white bg-[radial-gradient(130%_130%_at_100%_100%,#5b7fe8_0%,#93aef0_25%,#d6e2ff_55%,#ffffff_85%)] mx-1 sm:mx-2 rounded-2xl sm:rounded-3xl">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
@@ -345,7 +345,7 @@ export default function RCSRealEstatePage() {
             <div className="w-full lg:w-1/2">
               <Image
                 src="/images/rcs/real-estate-why-rcs.webp"
-                alt="Real estate messaging comparison — SMS vs RCS visual"
+                alt="Real estate messaging comparison- SMS vs RCS visual"
                 width={700}
                 height={525}
                 className="w-full h-auto"
@@ -371,11 +371,11 @@ export default function RCSRealEstatePage() {
                 </div>
                 <div className="bg-amber-50 rounded-xl p-4 border border-amber-100">
                   <h4 className="text-sm font-bold text-amber-600 mb-2">✕ WhatsApp opt-in lists miss your most valuable new leads</h4>
-                  <p className="text-sm text-gray-600">The highest-value real estate leads are often first-time enquirers who just submitted a form on 99acres, MagicBricks, or Housing.com. These leads haven&apos;t opted into your WhatsApp. RCS reaches them without requiring opt-in — via the carrier network, within seconds.</p>
+                  <p className="text-sm text-gray-600">The highest-value real estate leads are often first-time enquirers who just submitted a form on 99acres, MagicBricks, or Housing.com. These leads haven&apos;t opted into your WhatsApp. RCS reaches them without requiring opt-in- via the carrier network, within seconds.</p>
                 </div>
                 <div className="bg-blue-50 rounded-xl p-4 border border-blue-100">
-                  <h4 className="text-sm font-bold text-blue-600 mb-2">✓ Trust is the most expensive thing to build — RCS builds it instantly</h4>
-                  <p className="text-sm text-gray-600">Your brand name, logo, and Google-verified checkmark appear at the top of every message. The buyer knows exactly who is sending the message before they open it. Verified identity is not a nice-to-have — it&apos;s the prerequisite for engagement.</p>
+                  <h4 className="text-sm font-bold text-blue-600 mb-2">✓ Trust is the most expensive thing to build- RCS builds it instantly</h4>
+                  <p className="text-sm text-gray-600">Your brand name, logo, and Google-verified checkmark appear at the top of every message. The buyer knows exactly who is sending the message before they open it. Verified identity is not a nice-to-have- it&apos;s the prerequisite for engagement.</p>
                 </div>
               </div>
 
@@ -450,7 +450,7 @@ export default function RCSRealEstatePage() {
               The Complete RCS Customer Journey: Enquiry to Possession
             </h2>
             <p className="text-gray-400 text-base max-w-2xl mx-auto">
-              Here is how RCS fits into every stage of the Indian real estate buyer journey — 
+              Here is how RCS fits into every stage of the Indian real estate buyer journey- 
               from first enquiry to post-possession engagement.
             </p>
           </div>
@@ -558,11 +558,11 @@ export default function RCSRealEstatePage() {
               </h2>
               <ul className="space-y-4">
                 {[
-                  { title: "Real estate campaign templates — ready on day one", desc: "Pre-built RCS campaign templates for project launch, site visit booking, payment reminder, festive offer, referral programme, and possession support. Launch within hours." },
+                  { title: "Real estate campaign templates- ready on day one", desc: "Pre-built RCS campaign templates for project launch, site visit booking, payment reminder, festive offer, referral programme, and possession support. Launch within hours." },
                   { title: "CRM integration for instant enquiry response", desc: "REST API integrates with Sell.do, LeadSquared, Salesforce, and custom CRMs. Sub-minute automated RCS responses to new enquiries." },
-                  { title: "Direct Jio and Airtel connectivity", desc: "Direct carrier connectivity with Jio and Airtel — faster delivery, higher reliability, and better capability detection for SMS fallback. No aggregator latency." },
-                  { title: "Pan-India reach with local SMS fallback", desc: "Intelligent fallback ensures your message delivers as RCS to urban audiences and as SMS to everyone else — with no manual segmentation required." },
-                  { title: "RERA compliance and opt-out management", desc: "Automated opt-out management. Campaign records and opt-out logs are retained for audit purposes — supporting RERA and consumer protection compliance." },
+                  { title: "Direct Jio and Airtel connectivity", desc: "Direct carrier connectivity with Jio and Airtel- faster delivery, higher reliability, and better capability detection for SMS fallback. No aggregator latency." },
+                  { title: "Pan-India reach with local SMS fallback", desc: "Intelligent fallback ensures your message delivers as RCS to urban audiences and as SMS to everyone else- with no manual segmentation required." },
+                  { title: "RERA compliance and opt-out management", desc: "Automated opt-out management. Campaign records and opt-out logs are retained for audit purposes- supporting RERA and consumer protection compliance." },
                   { title: "Dedicated real estate account support", desc: "Dedicated account managers with sector-specific experience. Help with message copy, A/B testing, send-time optimisation, and campaign performance review." },
                 ].map(p => (
                   <div key={p.title} className="flex items-start gap-4 p-3 rounded-xl hover:bg-white transition-colors">
@@ -592,7 +592,7 @@ export default function RCSRealEstatePage() {
 
       {/* -- FAQ ------------------------------------------------------------ */}
       <section className="py-20 sm:py-28 bg-white" id="faq">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
               Frequently Asked Questions
@@ -601,21 +601,34 @@ export default function RCSRealEstatePage() {
               RCS Messaging for Real Estate in India
             </h2>
           </div>
-          <div className="space-y-3">
-            {FAQS.map((faq, i) => (
-              <details
-                key={i}
-                className="group rounded-2xl bg-gray-50 border border-gray-100 shadow-sm open:shadow-md transition-shadow"
-              >
-                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
-                  <span className="text-sm font-semibold text-gray-900 leading-snug">{faq.q}</span>
-                  <ChevronDown className="w-4 h-4 text-gray-400 shrink-0 transition-transform group-open:rotate-180" />
-                </summary>
-                <div className="px-6 pb-5">
-                  <p className="text-sm text-gray-500 leading-relaxed">{faq.a}</p>
-                </div>
-              </details>
-            ))}
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
+            <div className="hidden lg:block lg:w-[36%] shrink-0 lg:sticky lg:top-24">
+              <div className="relative w-full rounded-2xl overflow-hidden aspect-4/5">
+                <Image
+                  src="/images/rcs/real-estate-why-rcs.webp"
+                  alt="Ask a question about RCS messaging for real estate"
+                  fill
+                  className="object-cover"
+                  sizes="36vw"
+                />
+              </div>
+            </div>
+            <div className="flex-1 w-full space-y-3">
+              {FAQS.map((faq, i) => (
+                <details
+                  key={i}
+                  className="group rounded-2xl bg-gray-50 border border-gray-100 shadow-sm open:shadow-md transition-shadow"
+                >
+                  <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
+                    <span className="text-sm font-semibold text-gray-900 leading-snug">{faq.q}</span>
+                    <ChevronDown className="w-4 h-4 text-gray-400 shrink-0 transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-5">
+                    <p className="text-sm text-gray-500 leading-relaxed">{faq.a}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
           </div>
         </div>
       </section>

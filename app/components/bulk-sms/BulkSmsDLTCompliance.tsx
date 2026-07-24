@@ -31,7 +31,7 @@ export default function BulkSmsDLTCompliance() {
 
         {/* Section heading */}
         <h2 className="text-[1.75rem] sm:text-[2.25rem] md:text-[2.75rem] [font-family:var(--font-syne)] font-bold leading-[1.1] tracking-[-0.02em] text-(--ink-1) mb-10 max-w-3xl">
-          DLT Compliance for Bulk SMS — India&apos;s TRAI Mandate Explained
+          DLT Compliance for Bulk SMS- India&apos;s TRAI Mandate Explained
         </h2>
 
         {/* Two-column layout */}
@@ -54,7 +54,7 @@ export default function BulkSmsDLTCompliance() {
             <p className="text-base text-(--ink-2) leading-relaxed mb-8">
               DLT is a blockchain-based regulatory platform introduced by TRAI
               to curb SMS spam and phishing in India. Every commercial SMS
-              sender — brands, enterprises, and SMS providers — must register on
+              sender- brands, enterprises, and SMS providers- must register on
               one of the approved telecom operator DLT portals (Airtel, Jio, Vi,
               BSNL, Tata, Videocon or Tanla).
             </p>
@@ -85,7 +85,7 @@ export default function BulkSmsDLTCompliance() {
             </Link>
           </div>
 
-          {/* RIGHT COLUMN — Info box */}
+          {/* RIGHT COLUMN- Info box */}
           <aside className="bg-white border border-(--border-subtle) rounded-xl p-6 sm:p-8 w-full shadow-(--shadow-card)">
             <h3 className="text-base sm:text-lg [font-family:var(--font-syne)] font-semibold text-primary mb-5">
               Key DLT Facts

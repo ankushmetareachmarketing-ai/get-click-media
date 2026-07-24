@@ -13,14 +13,14 @@ import { CityPageTemplate } from "../_templates/city-page-template";
 
 /* ── SEO Metadata ────────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: "WhatsApp Business API in Mumbai — Official Meta BSP | Get Click Media",
+  title: "WhatsApp Business API in Mumbai- Official Meta BSP | Get Click Media",
   description:
     "Get Click Media provides WhatsApp Business API in Mumbai as an official Meta Business Solution Provider. 3-5 day onboarding for BFSI, insurance, real estate, D2C, and logistics businesses across Mumbai, Navi Mumbai, and Thane.",
   keywords:
     "WhatsApp Business API Mumbai, whatsapp api provider mumbai, whatsapp business api mumbai, whatsapp marketing services mumbai, whatsapp chatbot mumbai, whatsapp api cost mumbai maharashtra",
   alternates: { canonical: "https://getclickmedia.com/whatsapp-api-mumbai" },
   openGraph: {
-    title: "WhatsApp Business API in Mumbai — Official Meta BSP | Get Click Media",
+    title: "WhatsApp Business API in Mumbai- Official Meta BSP | Get Click Media",
     description:
       "Get Click Media provides WhatsApp Business API in Mumbai as an official Meta Business Solution Provider, with remote delivery across Mumbai, Navi Mumbai, and Thane.",
     url: "https://getclickmedia.com/whatsapp-api-mumbai",
@@ -69,22 +69,22 @@ const schema = {
         {
           "@type": "Question",
           name: "Does Get Click Media offer WhatsApp API in Mumbai?",
-          acceptedAnswer: { "@type": "Answer", text: "Yes. Get Click Media provides WhatsApp Business API across Mumbai including South Mumbai, Bandra, Andheri, Powai, Navi Mumbai, Thane, and all surrounding areas. Onboarding is fully remote — consultations by phone or video call, setup handled entirely by GCM." },
+          acceptedAnswer: { "@type": "Answer", text: "Yes. Get Click Media provides WhatsApp Business API across Mumbai including South Mumbai, Bandra, Andheri, Powai, Navi Mumbai, Thane, and all surrounding areas. Onboarding is fully remote- consultations by phone or video call, setup handled entirely by GCM." },
         },
         {
           "@type": "Question",
           name: "Is WhatsApp API suitable for Mumbai's BFSI sector?",
-          acceptedAnswer: { "@type": "Answer", text: "Yes — BFSI is the largest WhatsApp API user segment in Mumbai. Banks, NBFCs, insurance companies, and wealth managers use WhatsApp API for OTP delivery, transaction alerts, EMI reminders, policy renewal, and customer support. Get Click Media's India-hosted infrastructure and compliance-ready template framework are specifically designed for regulated BFSI deployments." },
+          acceptedAnswer: { "@type": "Answer", text: "Yes- BFSI is the largest WhatsApp API user segment in Mumbai. Banks, NBFCs, insurance companies, and wealth managers use WhatsApp API for OTP delivery, transaction alerts, EMI reminders, policy renewal, and customer support. Get Click Media's India-hosted infrastructure and compliance-ready template framework are specifically designed for regulated BFSI deployments." },
         },
         {
           "@type": "Question",
           name: "How does WhatsApp API pricing work for Mumbai businesses?",
-          acceptedAnswer: { "@type": "Answer", text: "Pricing is the same across India — Meta charges Rs 0.79-0.91 per marketing conversation and Rs 0.14-0.17 per utility conversation. There is no Mumbai surcharge. Get Click Media's platform fee is volume-based and quoted on request." },
+          acceptedAnswer: { "@type": "Answer", text: "Pricing is the same across India- Meta charges Rs 0.79-0.91 per marketing conversation and Rs 0.14-0.17 per utility conversation. There is no Mumbai surcharge. Get Click Media's platform fee is volume-based and quoted on request." },
         },
         {
           "@type": "Question",
           name: "Can WhatsApp API be used for Bollywood and media industry communication?",
-          acceptedAnswer: { "@type": "Answer", text: "Yes — Mumbai's media and entertainment companies use WhatsApp API for talent/artist management communication, movie or show promotional campaigns, fan engagement automation, press release distribution, and event management. GCM has experience in entertainment industry WhatsApp deployments." },
+          acceptedAnswer: { "@type": "Answer", text: "Yes- Mumbai's media and entertainment companies use WhatsApp API for talent/artist management communication, movie or show promotional campaigns, fan engagement automation, press release distribution, and event management. GCM has experience in entertainment industry WhatsApp deployments." },
         },
       ],
     },
@@ -98,7 +98,7 @@ const INDUSTRIES = [
     color: "from-blue-500 to-indigo-600",
     bgColor: "bg-blue-50",
     textColor: "text-blue-600",
-    why: "India's banking capital — home to major national banks and hundreds of NBFCs and fintechs.",
+    why: "India's banking capital- home to major national banks and hundreds of NBFCs and fintechs.",
     useCase: "EMI reminders, loan pre-approval campaigns, OTP delivery, fraud alerts, wealth management alerts.",
     image: "/images/rcs/banking-hero.webp",
   },
@@ -114,7 +114,7 @@ const INDUSTRIES = [
   },
   {
     icon: Home,
-    title: "Real Estate — Premium",
+    title: "Real Estate- Premium",
     color: "from-emerald-500 to-teal-600",
     bgColor: "bg-emerald-50",
     textColor: "text-emerald-600",
@@ -146,37 +146,37 @@ const INDUSTRIES = [
 
 const CAPABILITIES = [
   { label: "Onboarding timeline", value: "3 to 5 business days from consultation to first live WhatsApp message" },
-  { label: "Meta BSP status", value: "Official Meta Business Solution Provider — GCM manages your full WhatsApp Business Account registration" },
+  { label: "Meta BSP status", value: "Official Meta Business Solution Provider- GCM manages your full WhatsApp Business Account registration" },
   { label: "Local support", value: "India-based support team available 9 AM to 7 PM IST, Monday to Saturday. WhatsApp support available." },
-  { label: "Pricing", value: "Same as national rates — marketing Rs 0.79-0.91/conv, utility Rs 0.14-0.17/conv. Platform fee based on volume." },
+  { label: "Pricing", value: "Same as national rates- marketing Rs 0.79-0.91/conv, utility Rs 0.14-0.17/conv. Platform fee based on volume." },
   { label: "Languages supported", value: "Hindi + English + regional language chatbot flows as required by your customer base" },
   { label: "Integration partners", value: "Shopify, WooCommerce, Salesforce, HubSpot, Zoho, LeadSquared, and custom systems" },
 ];
 
 const CLIENT_USE_CASES = [
-  { sector: "NBFC — Bandra Kurla Complex", automation: "EMI reminder sequence + loan pre-approval WhatsApp campaign", result: "On-time EMI +30%. Loan application conversion 3.5x." },
-  { sector: "Insurance broker — Lower Parel", automation: "Policy renewal WhatsApp sequence + claims chatbot", result: "Renewal rate +28%. Claims call volume -40%." },
-  { sector: "D2C beauty brand — Andheri", automation: "Cart recovery + replenishment reminder + festive campaign", result: "Cart recovery 24%. Repeat purchase +38%." },
-  { sector: "Logistics company — Navi Mumbai", automation: "B2B shipment tracking + delivery notification automation", result: "B2B client satisfaction +32%. Support calls -50%." },
-  { sector: "Premium real estate — Worli", automation: "NRI buyer WhatsApp management + payment alerts", result: "NRI conversion 2.8x. Milestone payment on-time +35%." },
+  { sector: "NBFC- Bandra Kurla Complex", automation: "EMI reminder sequence + loan pre-approval WhatsApp campaign", result: "On-time EMI +30%. Loan application conversion 3.5x." },
+  { sector: "Insurance broker- Lower Parel", automation: "Policy renewal WhatsApp sequence + claims chatbot", result: "Renewal rate +28%. Claims call volume -40%." },
+  { sector: "D2C beauty brand- Andheri", automation: "Cart recovery + replenishment reminder + festive campaign", result: "Cart recovery 24%. Repeat purchase +38%." },
+  { sector: "Logistics company- Navi Mumbai", automation: "B2B shipment tracking + delivery notification automation", result: "B2B client satisfaction +32%. Support calls -50%." },
+  { sector: "Premium real estate- Worli", automation: "NRI buyer WhatsApp management + payment alerts", result: "NRI conversion 2.8x. Milestone payment on-time +35%." },
 ];
 
 const FAQS = [
   {
     q: "Does Get Click Media offer WhatsApp API in Mumbai?",
-    a: "Yes. Get Click Media provides WhatsApp Business API across Mumbai including South Mumbai, Bandra, Andheri, Powai, Navi Mumbai, Thane, and all surrounding areas. Onboarding is fully remote — consultations by phone or video call, setup handled entirely by GCM.",
+    a: "Yes. Get Click Media provides WhatsApp Business API across Mumbai including South Mumbai, Bandra, Andheri, Powai, Navi Mumbai, Thane, and all surrounding areas. Onboarding is fully remote- consultations by phone or video call, setup handled entirely by GCM.",
   },
   {
     q: "Is WhatsApp API suitable for Mumbai's BFSI sector?",
-    a: "Yes — BFSI is the largest WhatsApp API user segment in Mumbai. Banks, NBFCs, insurance companies, and wealth managers use WhatsApp API for OTP delivery, transaction alerts, EMI reminders, policy renewal, and customer support. Get Click Media's India-hosted infrastructure and compliance-ready template framework are specifically designed for regulated BFSI deployments.",
+    a: "Yes- BFSI is the largest WhatsApp API user segment in Mumbai. Banks, NBFCs, insurance companies, and wealth managers use WhatsApp API for OTP delivery, transaction alerts, EMI reminders, policy renewal, and customer support. Get Click Media's India-hosted infrastructure and compliance-ready template framework are specifically designed for regulated BFSI deployments.",
   },
   {
     q: "How does WhatsApp API pricing work for Mumbai businesses?",
-    a: "Pricing is the same across India — Meta charges Rs 0.79-0.91 per marketing conversation and Rs 0.14-0.17 per utility conversation. There is no Mumbai surcharge. Get Click Media's platform fee is volume-based and quoted on request.",
+    a: "Pricing is the same across India- Meta charges Rs 0.79-0.91 per marketing conversation and Rs 0.14-0.17 per utility conversation. There is no Mumbai surcharge. Get Click Media's platform fee is volume-based and quoted on request.",
   },
   {
     q: "Can WhatsApp API be used for Bollywood and media industry communication?",
-    a: "Yes — Mumbai's media and entertainment companies use WhatsApp API for: talent/artist management communication, movie or show promotional campaigns, fan engagement automation, press release distribution, and event management. GCM has experience in entertainment industry WhatsApp deployments.",
+    a: "Yes- Mumbai's media and entertainment companies use WhatsApp API for: talent/artist management communication, movie or show promotional campaigns, fan engagement automation, press release distribution, and event management. GCM has experience in entertainment industry WhatsApp deployments.",
   },
 ];
 
@@ -200,7 +200,7 @@ export default function WhatsAppAPIMumbaiPage() {
       breadcrumbLabel="Mumbai"
       heroEyebrow="WhatsApp Business API Mumbai"
       heroTitle="WhatsApp Business API"
-      heroHighlight="in Mumbai — Official Meta BSP"
+      heroHighlight="in Mumbai- Official Meta BSP"
       heroDescription={
         <>
           Get Click Media provides WhatsApp Business API in Mumbai as an official Meta Business Solution
@@ -211,24 +211,24 @@ export default function WhatsAppAPIMumbaiPage() {
         </>
       }
       heroImage="/images/whatsapp/whatsapp-bussiness-api.webp"
-      heroImageAlt="WhatsApp Business API for Mumbai businesses — rich message preview on a phone"
+      heroImageAlt="WhatsApp Business API for Mumbai businesses- rich message preview on a phone"
       heroTrustLine="Official Meta BSP · 3–5 Day Setup · Fully remote onboarding · Mumbai, Navi Mumbai & Thane coverage"
       stats={[
         { value: "96%+", label: "WhatsApp penetration among Mumbai smartphone users" },
         { value: "BFSI", label: "Largest WhatsApp API user segment in Mumbai" },
         { value: "3–5 days", label: "Onboarding timeline" },
-        { value: "100%", label: "Remote onboarding — no in-person visit required" },
+        { value: "100%", label: "Remote onboarding- no in-person visit required" },
       ]}
       aeoParagraphs={[
         "Get Click Media provides WhatsApp Business API in Mumbai as an official Meta Business Solution Provider. Mumbai businesses spanning BFSI, media and entertainment, real estate, logistics, and D2C brands use GCM's WhatsApp API for customer engagement, lead conversion, and operational automation. Onboarding takes 3 to 5 business days with remote delivery across Mumbai, Navi Mumbai, and Thane.",
-        "Mumbai is India's financial capital and largest commercial city — home to the Bombay Stock Exchange, RBI, SEBI, and the headquarters of India's top banks, insurance companies, media houses, and financial institutions. The city's business environment is dominated by BFSI, real estate (South Mumbai to Thane corridor), Bollywood and media, and a thriving startup ecosystem.",
-        "Mumbai's consumer base is India's most affluent and digitally active — WhatsApp penetration exceeds 96% among smartphone users. For Mumbai businesses in banking, insurance, and premium retail, WhatsApp API provides both the engagement rates and the professional brand verification that these regulated industries require.",
+        "Mumbai is India's financial capital and largest commercial city- home to the Bombay Stock Exchange, RBI, SEBI, and the headquarters of India's top banks, insurance companies, media houses, and financial institutions. The city's business environment is dominated by BFSI, real estate (South Mumbai to Thane corridor), Bollywood and media, and a thriving startup ecosystem.",
+        "Mumbai's consumer base is India's most affluent and digitally active- WhatsApp penetration exceeds 96% among smartphone users. For Mumbai businesses in banking, insurance, and premium retail, WhatsApp API provides both the engagement rates and the professional brand verification that these regulated industries require.",
       ]}
       whyCity={{
         eyebrow: "Why Mumbai Businesses Choose WhatsApp API",
         title: "India's most affluent market, built for WhatsApp automation",
         description:
-          "Mumbai's business landscape is shaped by a digital-first consumer base — smartphone penetration, WhatsApp usage rates, and e-commerce adoption are all above India's national average. Businesses that deploy WhatsApp Business API in Mumbai report faster lead conversion, higher customer retention, and lower support costs compared to SMS and email alternatives.",
+          "Mumbai's business landscape is shaped by a digital-first consumer base- smartphone penetration, WhatsApp usage rates, and e-commerce adoption are all above India's national average. Businesses that deploy WhatsApp Business API in Mumbai report faster lead conversion, higher customer retention, and lower support costs compared to SMS and email alternatives.",
         image: "/images/whatsapp/direct-meta-partner.webp",
         points: [
           { icon: Landmark, title: "India's financial capital", desc: "RBI, SEBI, the Bombay Stock Exchange, and the HQs of India's top banks and insurers drive the country's largest BFSI WhatsApp deployments." },
@@ -243,7 +243,7 @@ export default function WhatsAppAPIMumbaiPage() {
         title: "Get Click Media's WhatsApp API Service in Mumbai",
         description: (
           <>
-            Get Click Media delivers WhatsApp API services to Mumbai clients fully remotely — the
+            Get Click Media delivers WhatsApp API services to Mumbai clients fully remotely- the
             onboarding process requires no in-person meetings. Mumbai businesses get the same
             enterprise-grade WhatsApp API capabilities as local providers, with the additional advantage
             of GCM&apos;s proximity to Meta&apos;s India-based technical support and our NCR headquarters
@@ -259,7 +259,7 @@ export default function WhatsAppAPIMumbaiPage() {
       faqs={FAQS}
       relatedLinks={RELATED_LINKS}
       bottomCtaTitle="Ready to launch WhatsApp API for your Mumbai business?"
-      bottomCtaDescription="Get Click Media manages Meta business verification, template approval, and onboarding — fully remote, no in-person visit required."
+      bottomCtaDescription="Get Click Media manages Meta business verification, template approval, and onboarding- fully remote, no in-person visit required."
       schema={schema}
     />
   );

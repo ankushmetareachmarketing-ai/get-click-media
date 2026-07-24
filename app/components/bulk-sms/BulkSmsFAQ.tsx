@@ -42,7 +42,7 @@ const faqs = [
   {
     question: "Can I send bulk SMS to DND (Do Not Disturb) numbers?",
     answer:
-      "Promotional SMS cannot be sent to DND-registered numbers — telecom operators block such messages automatically. However, transactional SMS (OTPs, alerts, service messages) are exempt from DND filtering and can be delivered to all numbers, provided the sender has valid DLT registration.",
+      "Promotional SMS cannot be sent to DND-registered numbers- telecom operators block such messages automatically. However, transactional SMS (OTPs, alerts, service messages) are exempt from DND filtering and can be delivered to all numbers, provided the sender has valid DLT registration.",
   },
 ];
 

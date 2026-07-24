@@ -10,13 +10,13 @@ export interface GradientCarouselCard {
   description: string;
   /** Tailwind gradient stops for this card's soft background, e.g. "from-blue-50 to-sky-50" */
   gradient?: string;
-  /** Optional extra line under the description — e.g. a result stat like "+45% conversion" */
+  /** Optional extra line under the description- e.g. a result stat like "+45% conversion" */
   footnote?: string;
   href?: string;
 }
 
 /**
- * Light card background paired with a deeper, saturated icon tone —
+ * Light card background paired with a deeper, saturated icon tone-
  * cycled per card so a row never looks monochrome. Icon gradients are
  * one notch darker than the card wash so the badge pops off the page.
  */
@@ -33,7 +33,7 @@ const PALETTE = [
 
 /**
  * A horizontally-swipeable row of light-gradient cards. Uses native CSS
- * scroll-snap instead of a JS drag/carousel library — free on mobile,
+ * scroll-snap instead of a JS drag/carousel library- free on mobile,
  * works with touch out of the box, no motion library needed for the
  * scrolling itself (the two nav buttons just call scrollBy).
  */
@@ -102,7 +102,7 @@ export function GradientCardCarousel({
         })}
       </div>
 
-      {/* Desktop nav arrows — hidden on touch/mobile where swipe is natural */}
+      {/* Desktop nav arrows- hidden on touch/mobile where swipe is natural */}
       <div className="hidden sm:flex justify-end gap-2 mt-2">
         <button
           type="button"

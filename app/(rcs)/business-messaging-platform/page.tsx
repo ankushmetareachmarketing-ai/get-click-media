@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   MessageSquare,
   Radio,
@@ -25,14 +26,14 @@ import { SectionPattern } from "@/components/ui/section-pattern";
 export const metadata: Metadata = {
   title: "Business Messaging Platform for Indian Companies | Get Click Media",
   description:
-    "One platform for SMS, WhatsApp, RCS, and Voice — Get Click Media's business messaging platform for Indian companies. Unified API, single dashboard, one delivery report.",
+    "One platform for SMS, WhatsApp, RCS, and Voice- Get Click Media's business messaging platform for Indian companies. Unified API, single dashboard, one delivery report.",
   keywords:
     "business messaging platform, business messaging platform india, unified messaging platform, multi-channel messaging platform, omnichannel messaging platform india, cpaas platform india, sms whatsapp rcs platform, communication platform for business",
   alternates: { canonical: "https://getclickmedia.com/business-messaging-platform" },
   openGraph: {
     title: "Business Messaging Platform for Indian Companies",
     description:
-      "One platform for SMS, WhatsApp, RCS, and Voice — unified API, single dashboard, one delivery report, for Indian businesses.",
+      "One platform for SMS, WhatsApp, RCS, and Voice- unified API, single dashboard, one delivery report, for Indian businesses.",
     url: "https://getclickmedia.com/business-messaging-platform",
     type: "website",
   },
@@ -41,9 +42,9 @@ export const metadata: Metadata = {
 const LAST_UPDATED = "July 2026";
 
 const CHANNELS = [
-  { icon: Hash, title: "Bulk SMS", desc: "The universal fallback channel — reaches any phone, no app or data connection required. Best for OTPs, alerts, and high-volume campaigns.", href: "/bulk-sms-service-provider-india" },
-  { icon: MessageSquare, title: "WhatsApp Business API", desc: "Rich media, two-way chat, and the highest open rates in India — for support, marketing, and conversational commerce.", href: "/whatsapp-business-api" },
-  { icon: Radio, title: "RCS Messaging", desc: "Branded, interactive rich cards delivered natively in Google Messages — no app install, verified sender badge included.", href: "/rcs-messaging" },
+  { icon: Hash, title: "Bulk SMS", desc: "The universal fallback channel- reaches any phone, no app or data connection required. Best for OTPs, alerts, and high-volume campaigns.", href: "/bulk-sms-service-provider-india" },
+  { icon: MessageSquare, title: "WhatsApp Business API", desc: "Rich media, two-way chat, and the highest open rates in India- for support, marketing, and conversational commerce.", href: "/whatsapp-business-api" },
+  { icon: Radio, title: "RCS Messaging", desc: "Branded, interactive rich cards delivered natively in Google Messages- no app install, verified sender badge included.", href: "/rcs-messaging" },
   { icon: Mic2, title: "Voice & IVR", desc: "Automated voice calls and interactive voice response for confirmations, reminders, and support escalation.", href: "/" },
 ];
 
@@ -51,7 +52,7 @@ const PLATFORM_FEATURES = [
   { icon: LayoutDashboard, title: "One dashboard, every channel", desc: "Build, schedule, and monitor SMS, WhatsApp, RCS, and Voice campaigns from a single screen instead of four separate vendor logins." },
   { icon: Webhook, title: "One API, every channel", desc: "A single REST API and webhook contract for sending and receiving delivery-status callbacks across all four channels." },
   { icon: BarChart3, title: "One report, every channel", desc: "Delivery, read, and click-through data normalised across channels so you can compare true performance, not just raw counts." },
-  { icon: ShieldCheck, title: "One compliance layer", desc: "DLT registration for SMS, Meta BSP verification for WhatsApp, and Google brand verification for RCS — all handled by the same onboarding team." },
+  { icon: ShieldCheck, title: "One compliance layer", desc: "DLT registration for SMS, Meta BSP verification for WhatsApp, and Google brand verification for RCS- all handled by the same onboarding team." },
 ];
 
 const COMPARISON_ROWS = [
@@ -62,32 +63,32 @@ const COMPARISON_ROWS = [
 ];
 
 const SEGMENTS = [
-  { icon: Building2, title: "Real Estate & Financial Services", desc: "Site-visit reminders on SMS, EMI alerts on the DND-exempt route, and rich project brochures on RCS — one platform coordinating all three." },
+  { icon: Building2, title: "Real Estate & Financial Services", desc: "Site-visit reminders on SMS, EMI alerts on the DND-exempt route, and rich project brochures on RCS- one platform coordinating all three." },
   { icon: ShoppingCart, title: "Ecommerce & D2C Brands", desc: "Order and OTP alerts on SMS, cart recovery and support on WhatsApp, and branded delivery updates on RCS, triggered from the same order event." },
   { icon: Landmark, title: "Banking & NBFC", desc: "OTPs and fraud alerts on the DND-exempt SMS route, EMI reminders on WhatsApp with a Pay Now button, and statement delivery on RCS." },
-  { icon: GraduationCap, title: "Schools & Education", desc: "Absence alerts on SMS for universal reach, fee reminders on WhatsApp, and admission-drive rich cards on RCS — one parent database, three channels." },
+  { icon: GraduationCap, title: "Schools & Education", desc: "Absence alerts on SMS for universal reach, fee reminders on WhatsApp, and admission-drive rich cards on RCS- one parent database, three channels." },
 ];
 
 const FAQS = [
   {
     q: "What is a business messaging platform?",
-    a: "A business messaging platform lets a company send and manage customer communication — SMS, WhatsApp, RCS, and voice — from one unified system instead of maintaining separate accounts, dashboards, and integrations per channel.",
+    a: "A business messaging platform lets a company send and manage customer communication- SMS, WhatsApp, RCS, and voice- from one unified system instead of maintaining separate accounts, dashboards, and integrations per channel.",
   },
   {
     q: "Does Get Click Media offer a unified messaging platform?",
-    a: "Yes — Bulk SMS, WhatsApp Business API, RCS Messaging, and Voice/IVR are all manageable through one Get Click Media account, with a shared API, shared delivery reporting, and one onboarding process for DLT, Meta BSP, and Google brand verification.",
+    a: "Yes- Bulk SMS, WhatsApp Business API, RCS Messaging, and Voice/IVR are all manageable through one Get Click Media account, with a shared API, shared delivery reporting, and one onboarding process for DLT, Meta BSP, and Google brand verification.",
   },
   {
     q: "Why use a unified platform instead of separate tools per channel?",
-    a: "Running SMS, WhatsApp, and RCS through separate vendors means separate contracts, separate APIs to integrate, separate dashboards to check, and no easy way to compare channel performance side by side. A unified platform collapses that into one integration and one source of truth for delivery data — which is also what lets you run true channel-fallback logic (RCS to SMS, for example) automatically.",
+    a: "Running SMS, WhatsApp, and RCS through separate vendors means separate contracts, separate APIs to integrate, separate dashboards to check, and no easy way to compare channel performance side by side. A unified platform collapses that into one integration and one source of truth for delivery data- which is also what lets you run true channel-fallback logic (RCS to SMS, for example) automatically.",
   },
   {
     q: "Can I start with one channel and add others later?",
-    a: "Yes — most businesses start with Bulk SMS or WhatsApp for a specific use case (OTPs, order alerts, support) and add RCS or Voice as those needs grow. Because the account, API, and compliance groundwork are shared, adding a channel later doesn't require a new integration from scratch.",
+    a: "Yes- most businesses start with Bulk SMS or WhatsApp for a specific use case (OTPs, order alerts, support) and add RCS or Voice as those needs grow. Because the account, API, and compliance groundwork are shared, adding a channel later doesn't require a new integration from scratch.",
   },
   {
     q: "Is this the same as a CPaaS platform?",
-    a: "Yes, in category terms — Get Click Media functions as a CPaaS (Communications Platform as a Service) provider for the Indian market, with the addition of India-specific compliance handling (TRAI DLT, Meta BSP, Google RBM verification) built into onboarding rather than left to the business to manage separately.",
+    a: "Yes, in category terms- Get Click Media functions as a CPaaS (Communications Platform as a Service) provider for the Indian market, with the addition of India-specific compliance handling (TRAI DLT, Meta BSP, Google RBM verification) built into onboarding rather than left to the business to manage separately.",
   },
 ];
 
@@ -119,7 +120,7 @@ const schema = {
     },
     {
       "@type": "Service",
-      name: "Business Messaging Platform — Get Click Media",
+      name: "Business Messaging Platform- Get Click Media",
       provider: { "@id": "https://getclickmedia.com/#org" },
       areaServed: { "@type": "Country", name: "India" },
       serviceType: "Unified Business Messaging Platform (SMS, WhatsApp, RCS, Voice)",
@@ -152,7 +153,7 @@ export default function BusinessMessagingPlatformPage() {
         highlight="for Indian Businesses"
         description={
           <>
-            One platform for <strong className="text-gray-900">SMS, WhatsApp, RCS, and Voice</strong> —
+            One platform for <strong className="text-gray-900">SMS, WhatsApp, RCS, and Voice</strong>-
             a single API, a single dashboard, and one delivery report across every channel your
             customers actually use.
           </>
@@ -180,7 +181,7 @@ export default function BusinessMessagingPlatformPage() {
             <p className="text-base leading-[1.7] text-gray-700">
               A <strong className="text-gray-900">business messaging platform</strong> is a
               single system for sending and managing customer communication across SMS,
-              WhatsApp, RCS, and voice — instead of running each channel through a separate
+              WhatsApp, RCS, and voice- instead of running each channel through a separate
               vendor, API, and dashboard. Get Click Media's platform gives Indian businesses one
               account, one API, and one delivery report across all four channels, with DLT, Meta
               BSP, and Google brand verification handled as part of onboarding.
@@ -203,7 +204,7 @@ export default function BusinessMessagingPlatformPage() {
           </div>
           <p>
             Most Indian businesses end up assembling their customer communication stack one
-            channel at a time — an SMS gateway for OTPs, a separate WhatsApp Business Solution
+            channel at a time- an SMS gateway for OTPs, a separate WhatsApp Business Solution
             Provider for marketing, maybe a voice/IVR vendor for support calls. Each comes with
             its own contract, its own API to integrate, and its own dashboard to check.
           </p>
@@ -225,7 +226,7 @@ export default function BusinessMessagingPlatformPage() {
               Four Channels, One Platform
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight font-(family-name:--font-syne)">
-              SMS, WhatsApp, RCS, and Voice — Together
+              SMS, WhatsApp, RCS, and Voice- Together
             </h2>
           </div>
           <BentoGrid className="lg:grid-cols-2">
@@ -268,7 +269,7 @@ export default function BusinessMessagingPlatformPage() {
               Which Channel Fits Which Message
             </h2>
             <p className="text-gray-500 text-base max-w-2xl mx-auto">
-              Most businesses don't pick one channel — they route each message type to the
+              Most businesses don't pick one channel- they route each message type to the
               channel that fits it best, and let the platform fall back automatically when a
               recipient's device doesn't support the richer option.
             </p>
@@ -309,7 +310,7 @@ export default function BusinessMessagingPlatformPage() {
       {/* -- FAQ ------------------------------------------------------------ */}
       <section className="relative py-16 sm:py-20 lg:py-[100px] bg-gray-50" id="faq">
         <SectionPattern tone="gold" />
-        <div className="relative z-10 max-w-3xl mx-auto px-6 sm:px-12 lg:px-20">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-12 lg:px-20">
           <div className="text-center mb-12 space-y-4">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
               Frequently Asked Questions
@@ -318,7 +319,23 @@ export default function BusinessMessagingPlatformPage() {
               Business Messaging Platform FAQs
             </h2>
           </div>
-          <AccordionList items={FAQS.map((f) => ({ question: f.q, answer: <p className="text-base text-gray-500 leading-[1.7]">{f.a}</p> }))} />
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
+            <div className="hidden lg:block lg:w-[36%] shrink-0 lg:sticky lg:top-24">
+              <div className="relative w-full rounded-2xl overflow-hidden aspect-4/5">
+                <Image
+                  src="/images/rcs/rcs-service-provider-india.png"
+                  alt="Ask a question about the Business Messaging Platform"
+                  fill
+                  className="object-cover"
+                  sizes="36vw"
+                />
+              </div>
+            </div>
+            <AccordionList
+              className="flex-1 w-full"
+              items={FAQS.map((f) => ({ question: f.q, answer: <p className="text-base text-gray-500 leading-[1.7]">{f.a}</p> }))}
+            />
+          </div>
         </div>
       </section>
 

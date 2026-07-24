@@ -14,14 +14,14 @@ import { IndustryPageTemplate } from "../_templates/industry-page-template";
 
 /* ── SEO Metadata ────────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: "WhatsApp API for E-commerce — Order Updates, Cart Recovery & D2C Growth India | Get Click Media",
+  title: "WhatsApp API for E-commerce- Order Updates, Cart Recovery & D2C Growth India | Get Click Media",
   description:
     "WhatsApp Business API for e-commerce enables Indian online retailers and D2C brands to automate order confirmations, shipping updates, cart abandonment recovery, product recommendations, and review collection.",
   keywords:
     "WhatsApp API for E-commerce India, WhatsApp E-commerce India, WhatsApp Order Notification, WhatsApp Cart Recovery India, WhatsApp D2C India, E-commerce WhatsApp API India 2026",
   alternates: { canonical: "https://getclickmedia.com/whatsapp-api-ecommerce" },
   openGraph: {
-    title: "WhatsApp API for E-commerce — Order Updates, Cart Recovery & D2C Growth India",
+    title: "WhatsApp API for E-commerce- Order Updates, Cart Recovery & D2C Growth India",
     description:
       "WhatsApp Business API for e-commerce enables Indian online retailers and D2C brands to automate order confirmations, shipping updates, cart abandonment recovery, product recommendations, and review collection.",
     url: "https://getclickmedia.com/whatsapp-api-ecommerce",
@@ -74,7 +74,7 @@ const schema = {
         {
           "@type": "Question",
           name: "Does WhatsApp e-commerce integration work with Shopify?",
-          acceptedAnswer: { "@type": "Answer", text: "Yes. Get Click Media's native Shopify plugin connects your Shopify store to WhatsApp in real time — product catalog syncs automatically, orders trigger WhatsApp notifications, and customer interactions from WhatsApp are synced back to Shopify customer profiles. Setup takes 1-2 hours after WhatsApp API onboarding." },
+          acceptedAnswer: { "@type": "Answer", text: "Yes. Get Click Media's native Shopify plugin connects your Shopify store to WhatsApp in real time- product catalog syncs automatically, orders trigger WhatsApp notifications, and customer interactions from WhatsApp are synced back to Shopify customer profiles. Setup takes 1-2 hours after WhatsApp API onboarding." },
         },
         {
           "@type": "Question",
@@ -148,8 +148,8 @@ const PERFORMANCE_DATA = [
 
 // ── Capabilities ──────────────────────────────────────────────────────────
 const CAPABILITIES = [
-  { icon: Database, title: "Shopify integration", desc: "Native Shopify plugin — catalog sync, order trigger automation, customer data sync" },
-  { icon: Settings, title: "WooCommerce integration", desc: "WooCommerce plugin — same capabilities as Shopify integration" },
+  { icon: Database, title: "Shopify integration", desc: "Native Shopify plugin- catalog sync, order trigger automation, customer data sync" },
+  { icon: Settings, title: "WooCommerce integration", desc: "WooCommerce plugin- same capabilities as Shopify integration" },
   { icon: ShoppingCart, title: "Cart recovery automation", desc: "1hr, 24hr, 48hr recovery sequence with dynamic product cards" },
   { icon: Star, title: "Review collection", desc: "Post-delivery review flow with Google review redirect for positive responses" },
   { icon: CreditCard, title: "Payment integration", desc: "Razorpay, PayU, UPI payment links for COD-to-prepaid conversion and re-ordering" },
@@ -164,7 +164,7 @@ const FAQS = [
   },
   {
     q: "Does WhatsApp e-commerce integration work with Shopify?",
-    a: "Yes. Get Click Media's native Shopify plugin connects your Shopify store to WhatsApp in real time — product catalog syncs automatically, orders trigger WhatsApp notifications, and customer interactions from WhatsApp are synced back to Shopify customer profiles. Setup takes 1-2 hours after WhatsApp API onboarding.",
+    a: "Yes. Get Click Media's native Shopify plugin connects your Shopify store to WhatsApp in real time- product catalog syncs automatically, orders trigger WhatsApp notifications, and customer interactions from WhatsApp are synced back to Shopify customer profiles. Setup takes 1-2 hours after WhatsApp API onboarding.",
   },
   {
     q: "What is the ROI of WhatsApp for Indian D2C brands?",
@@ -202,11 +202,11 @@ export default function WhatsAppAPIEcommercePage() {
           WhatsApp Business API for e-commerce enables Indian online retailers and D2C brands to
           automate order confirmations, shipping updates, cart abandonment recovery, product
           recommendations, and review collection.
-          <strong className="text-gray-900"> Get Click Media integrates WhatsApp with Shopify, WooCommerce, and custom OMS platforms — reducing cart abandonment by 18-26% and increasing repeat purchase rates by 35%.</strong>
+          <strong className="text-gray-900"> Get Click Media integrates WhatsApp with Shopify, WooCommerce, and custom OMS platforms- reducing cart abandonment by 18-26% and increasing repeat purchase rates by 35%.</strong>
         </>
       }
       heroImage="/images/whatsapp/ecommerce/whatsapp-bussiness-api-for-ecommerce.png"
-      heroImageAlt="WhatsApp Business API for E-commerce — order updates, cart recovery, and D2C growth dashboard"
+      heroImageAlt="WhatsApp Business API for E-commerce- order updates, cart recovery, and D2C growth dashboard"
       heroTrustLine="Official Meta BSP · Native Shopify & WooCommerce integration · Razorpay, PayU & UPI payments · India-based support"
       stats={[
         { value: "98%", label: "Order notification open rate vs 22% email" },
@@ -220,28 +220,28 @@ export default function WhatsAppAPIEcommercePage() {
           order confirmations, shipping updates, cart abandonment recovery, product recommendations, and
           review collection.
           <strong className="text-gray-900"> Get Click Media integrates WhatsApp with Shopify, WooCommerce,</strong> and
-          custom OMS platforms — reducing cart abandonment by 18-26% and increasing repeat purchase rates by 35%.
+          custom OMS platforms- reducing cart abandonment by 18-26% and increasing repeat purchase rates by 35%.
         </>
       }
       insightCallout={
         <>
           Indian e-commerce brands lose an estimated <strong>₹95,000 crore annually</strong> to cart
-          abandonment. Traditional cart recovery channels — email (4-6% recovery) and retargeting ads
-          (2-3% conversion) — leave significant revenue on the table. WhatsApp cart recovery messages
+          abandonment. Traditional cart recovery channels- email (4-6% recovery) and retargeting ads
+          (2-3% conversion)- leave significant revenue on the table. WhatsApp cart recovery messages
           with product images, prices, and one-tap checkout links achieve{" "}
-          <strong>18-26% recovery rates</strong> — 4x to 6x higher than email.
+          <strong>18-26% recovery rates</strong>- 4x to 6x higher than email.
         </>
       }
       whyIndustryTitle="Why E-commerce and D2C Businesses in India Need WhatsApp API"
       whyIndustryParagraphs={[
         <>
           Indian e-commerce brands lose an estimated <strong>₹95,000 crore annually</strong> to cart
-          abandonment. Traditional cart recovery channels — email (4-6% recovery) and retargeting ads
-          (2-3% conversion) — leave significant revenue on the table.
+          abandonment. Traditional cart recovery channels- email (4-6% recovery) and retargeting ads
+          (2-3% conversion)- leave significant revenue on the table.
         </>,
         <>
           WhatsApp cart recovery messages with product images, prices, and one-tap checkout links
-          achieve <strong>18-26% recovery rates</strong> — 4x to 6x higher than email. With{" "}
+          achieve <strong>18-26% recovery rates</strong>- 4x to 6x higher than email. With{" "}
           <strong>98% order notification open rates</strong> and{" "}
           <strong>35% increase in repeat purchases</strong>, WhatsApp is rapidly becoming the standard
           for e-commerce customer communication in India.
@@ -249,9 +249,9 @@ export default function WhatsAppAPIEcommercePage() {
       ]}
       whyIndustryInsight={
         <>
-          💡 <strong>Key insight:</strong> Order communication via email achieves 20-25% open rates —
+          💡 <strong>Key insight:</strong> Order communication via email achieves 20-25% open rates-
           meaning 75-80% of customers do not see their order updates. WhatsApp achieves 98% open rates.
-          For Indian D2C brands, the difference is not incremental — it is transformational.
+          For Indian D2C brands, the difference is not incremental- it is transformational.
         </>
       }
       imageSections={[
@@ -263,7 +263,7 @@ export default function WhatsAppAPIEcommercePage() {
             </>
           ),
           description:
-            "Manage all customer communication from a single dashboard — order confirmations, shipping updates, cart recovery, review collection, and replenishment reminders — with full integration to your e-commerce platform.",
+            "Manage all customer communication from a single dashboard- order confirmations, shipping updates, cart recovery, review collection, and replenishment reminders- with full integration to your e-commerce platform.",
           bullets: [
             "Automated order confirmation and tracking updates",
             "Cart recovery sequence with product images and discounts",
@@ -271,7 +271,7 @@ export default function WhatsAppAPIEcommercePage() {
             "Replenishment reminders for repeat purchases",
           ],
           image: "/images/whatsapp/ecommerce/whatsapp-bussiness-api-for-ecommerce-dashboard.webp",
-          imageAlt: "WhatsApp API E-commerce dashboard — order confirmations, cart recovery, review collection, and replenishment reminders",
+          imageAlt: "WhatsApp API E-commerce dashboard- order confirmations, cart recovery, review collection, and replenishment reminders",
         },
         {
           eyebrow: "Cart Recovery Automation",
@@ -281,15 +281,15 @@ export default function WhatsAppAPIEcommercePage() {
             </>
           ),
           description:
-            "Interactive WhatsApp cart recovery messages with product images, prices, and one-tap checkout links. A 3-message sequence (1hr, 24hr, 48hr) with escalating urgency and discount offers achieves 18-26% recovery rates — 4x to 6x higher than email.",
+            "Interactive WhatsApp cart recovery messages with product images, prices, and one-tap checkout links. A 3-message sequence (1hr, 24hr, 48hr) with escalating urgency and discount offers achieves 18-26% recovery rates- 4x to 6x higher than email.",
           bullets: [
             "Product image and price in every recovery message",
-            "Social proof — how many people bought this item",
+            "Social proof- how many people bought this item",
             "Discount offer escalation at 48 hours",
             "One-tap checkout link directly to cart",
           ],
           image: "/images/whatsapp/ecommerce/whatsapp-cart-recovery-message-preview.webp",
-          imageAlt: "WhatsApp cart recovery message preview — product image, price, discount offer, and one-tap checkout link",
+          imageAlt: "WhatsApp cart recovery message preview- product image, price, discount offer, and one-tap checkout link",
           imageSide: "left",
         },
         {
@@ -300,14 +300,14 @@ export default function WhatsAppAPIEcommercePage() {
             </>
           ),
           description:
-            "Get Click Media's native plugins for Shopify and WooCommerce connect your store to WhatsApp in real time — product catalog syncs automatically, orders trigger WhatsApp notifications, and customer interactions are synced back to your e-commerce platform. Setup takes 1-2 hours after WhatsApp API onboarding is complete.",
+            "Get Click Media's native plugins for Shopify and WooCommerce connect your store to WhatsApp in real time- product catalog syncs automatically, orders trigger WhatsApp notifications, and customer interactions are synced back to your e-commerce platform. Setup takes 1-2 hours after WhatsApp API onboarding is complete.",
           bullets: ["Shopify native plugin", "WooCommerce plugin", "Custom OMS API", "Product catalog sync", "Order trigger automation"],
           image: "/images/whatsapp/ecommerce/whatsapp-api-shopify-woocommerce-integration.webp",
-          imageAlt: "WhatsApp API Shopify and WooCommerce integration — native plugin for order sync, catalog sync, and customer data sync",
+          imageAlt: "WhatsApp API Shopify and WooCommerce integration- native plugin for order sync, catalog sync, and customer data sync",
           imageSide: "left",
         },
       ]}
-      useCasesTitle="WhatsApp API Use Cases for E-commerce — 6 Automations"
+      useCasesTitle="WhatsApp API Use Cases for E-commerce- 6 Automations"
       useCases={USE_CASES}
       performanceData={PERFORMANCE_DATA}
       capabilitiesTitle="Get Click Media's WhatsApp API Capabilities for E-commerce"
@@ -315,7 +315,7 @@ export default function WhatsAppAPIEcommercePage() {
       faqs={FAQS}
       relatedLinks={RELATED_LINKS}
       bottomCtaTitle="Ready to transform e-commerce communication with WhatsApp?"
-      bottomCtaDescription="Get Click Media provides WhatsApp API for e-commerce with Shopify, WooCommerce, and custom OMS integration — automated order updates, cart recovery, and review collection."
+      bottomCtaDescription="Get Click Media provides WhatsApp API for e-commerce with Shopify, WooCommerce, and custom OMS integration- automated order updates, cart recovery, and review collection."
       schema={schema}
     />
   );

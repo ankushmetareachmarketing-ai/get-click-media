@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
+import toast from "react-hot-toast";
 import { X, ArrowRight, CheckCircle2, Loader2 } from "lucide-react";
 
 // -- shadcn UI components ------------------------------------------------------
@@ -103,8 +104,10 @@ export default function ServiceModal() {
       });
       if (!res.ok) throw new Error();
       setStatus("success");
+      toast.success("Inquiry sent! We'll be in touch within 24 hours.");
     } catch {
-      setStatus("error");
+      setStatus("idle");
+      toast.error("Something went wrong — please try again.");
     }
   };
 
@@ -184,7 +187,7 @@ export default function ServiceModal() {
           <X size={15} />
         </button>
 
-        {/* -- LEFT — image panel ----------------------------------------- */}
+        {/* -- LEFT- image panel ----------------------------------------- */}
         <div
           style={{
             position: "relative",
@@ -216,7 +219,7 @@ export default function ServiceModal() {
           />
         </div>
 
-        {/* -- RIGHT — form panel ----------------------------------------- */}
+        {/* -- RIGHT- form panel ----------------------------------------- */}
         <div style={{
           flex: 1,
           overflowY: "auto",
@@ -242,7 +245,7 @@ export default function ServiceModal() {
                   fontSize: 13,
                   color: "var(--text-muted)",
                 }}>
-                  Fill in the details below — our team will reach out shortly.
+                  Fill in the details below- our team will reach out shortly.
                 </p>
               </div>
 
@@ -343,21 +346,6 @@ export default function ServiceModal() {
                                focus-visible:border-[#2563eb] focus-visible:ring-[#2563eb]/20"
                   />
                 </FieldWrap>
-
-                {/* Error */}
-                {status === "error" && (
-                  <p style={{
-                    margin: 0,
-                    fontSize: 13,
-                    color: "#dc2626",
-                    background: "#fef2f2",
-                    border: "1px solid #fecaca",
-                    borderRadius: 12,
-                    padding: "10px 14px",
-                  }}>
-                    Something went wrong — please try again.
-                  </p>
-                )}
 
                 {/* Submit */}
                 <Button

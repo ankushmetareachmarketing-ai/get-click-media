@@ -55,7 +55,7 @@
   /* 🎨 RADIUS */
   --radius: 12px;
 
-  /* ✦ DESIGN SYSTEM v2 — surface / ink / shadow / radius tokens */
+  /* ✦ DESIGN SYSTEM v2- surface / ink / shadow / radius tokens */
 
   /* Surfaces */
   --surface-0: #ffffff;
@@ -150,7 +150,7 @@ body {
 }
 
 /* Description/body copy reads better in Montserrat than the UI-chrome
-   Manrope — headings stay on Syne (set explicitly per-heading elsewhere). */
+   Manrope- headings stay on Syne (set explicitly per-heading elsewhere). */
 p {
   font-family: var(--font-montserrat), sans-serif;
 }
@@ -165,7 +165,7 @@ p {
 
 body {
   position: relative;
-  /* Dot grid — tiny 1px dots on a 28px grid, brand blue at 18% opacity */
+  /* Dot grid- tiny 1px dots on a 28px grid, brand blue at 18% opacity */
   background-color: var(--background);
   background-image: radial-gradient(
     circle,
@@ -209,7 +209,7 @@ body::after {
   animation: float-ball linear infinite;
 }
 
-/* Ball 1 — large navy, top-left */
+/* Ball 1- large navy, top-left */
 .bg-balls span:nth-child(1) {
   width: 520px;
   height: 520px;
@@ -220,7 +220,7 @@ body::after {
   animation-delay: 0s;
 }
 
-/* Ball 2 — sky blue, top-right */
+/* Ball 2- sky blue, top-right */
 .bg-balls span:nth-child(2) {
   width: 380px;
   height: 380px;
@@ -231,7 +231,7 @@ body::after {
   animation-delay: -6s;
 }
 
-/* Ball 3 — mid blue, center-left */
+/* Ball 3- mid blue, center-left */
 .bg-balls span:nth-child(3) {
   width: 300px;
   height: 300px;
@@ -242,7 +242,7 @@ body::after {
   animation-delay: -10s;
 }
 
-/* Ball 4 — indigo, center-right */
+/* Ball 4- indigo, center-right */
 .bg-balls span:nth-child(4) {
   width: 440px;
   height: 440px;
@@ -253,7 +253,7 @@ body::after {
   animation-delay: -3s;
 }
 
-/* Ball 5 — sky blue, bottom-center */
+/* Ball 5- sky blue, bottom-center */
 .bg-balls span:nth-child(5) {
   width: 500px;
   height: 500px;
@@ -264,7 +264,7 @@ body::after {
   animation-delay: -14s;
 }
 
-/* Ball 6 — navy, bottom-left */
+/* Ball 6- navy, bottom-left */
 .bg-balls span:nth-child(6) {
   width: 260px;
   height: 260px;

@@ -30,7 +30,7 @@ export default function WhatIsBulkSMS() {
               <p>
                 In India, bulk SMS is regulated by TRAI (Telecom Regulatory Authority of India).
                 All commercial SMS senders must register on the DLT (Distributed Ledger
-                Technology) platform before sending any messages — this ensures compliance and
+                Technology) platform before sending any messages- this ensures compliance and
                 protects consumers from spam.{" "}
                 <Link href="/dlt-registration" className="text-primary font-medium hover:underline">
                   Learn about the DLT registration process →
@@ -39,8 +39,8 @@ export default function WhatIsBulkSMS() {
 
               <p>
                 There are two main types: <strong className="text-(--ink-1) font-semibold">Transactional SMS</strong> (OTPs,
-                account alerts, order updates — can reach DND numbers) and{" "}
-                <strong className="text-(--ink-1) font-semibold">Promotional SMS</strong> (marketing campaigns —
+                account alerts, order updates- can reach DND numbers) and{" "}
+                <strong className="text-(--ink-1) font-semibold">Promotional SMS</strong> (marketing campaigns-
                 restricted to non-DND numbers between 9 AM–9 PM).{" "}
                 <Link href="/transactional-sms" className="text-primary font-medium hover:underline">
                   Explore our transactional SMS services →

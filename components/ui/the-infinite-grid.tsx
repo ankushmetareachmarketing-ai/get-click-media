@@ -12,7 +12,7 @@ import {
 /**
  * A faint grid-line background that continuously drifts and reveals a
  * brighter patch of the grid around the cursor via a radial mask. Meant to
- * sit as an absolutely-positioned layer inside a `relative` dark container —
+ * sit as an absolutely-positioned layer inside a `relative` dark container-
  * see `AnimatedGridBackground` below for the piece actually meant for reuse
  * (e.g. inside `DarkHero`). This full-page `Component` is kept as the
  * original standalone demo.
@@ -61,13 +61,13 @@ export const Component = () => {
  * The reusable piece: two stacked grid-line layers (a very low-opacity base
  * grid, plus a brighter copy revealed only inside a radial mask that follows
  * the cursor) that continuously drift. Drop it as the first child of any
- * `relative overflow-hidden` dark container — it fills via `absolute inset-0`
+ * `relative overflow-hidden` dark container- it fills via `absolute inset-0`
  * and never blocks clicks on the content rendered after it.
  */
 export function AnimatedGridBackground({
   className,
   lineClassName = "text-white",
-  /** Opacity of the always-visible base grid — tune up on light backgrounds. */
+  /** Opacity of the always-visible base grid- tune up on light backgrounds. */
   baseOpacity = 0.05,
   /** Opacity of the copy revealed inside the cursor-following radial mask. */
   revealOpacity = 0.4,
@@ -78,7 +78,7 @@ export function AnimatedGridBackground({
   baseOpacity?: number;
   revealOpacity?: number;
 }) {
-  // Each mounted instance needs its own <pattern> id — a duplicate id would
+  // Each mounted instance needs its own <pattern> id- a duplicate id would
   // make every `url(#id)` reference resolve to only the first one in the DOM.
   // useId (not a module-level counter) keeps server and client render in sync.
   const patternId = `infinite-grid-pattern-${useId()}`;

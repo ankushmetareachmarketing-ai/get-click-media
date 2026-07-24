@@ -1,4 +1,4 @@
-# Get Click Media — Bulk SMS Page Design Spec
+# Get Click Media- Bulk SMS Page Design Spec
 _Last updated: 2026-06-12_
 
 ---
@@ -9,13 +9,13 @@ All CSS variables live in `app/globals.css` under `:root`. These tokens are the 
 
 ### 1.1 Color
 
-#### Surfaces (3 levels — deliberate alternation)
+#### Surfaces (3 levels- deliberate alternation)
 | Token | Value | Usage |
 |---|---|---|
-| `--surface-0` | `#ffffff` | Cards, pricing, FAQ — pure white |
-| `--surface-1` | `#f7f8fc` | First-level section tint — Features, HowItWorks |
-| `--surface-2` | `#eef1f8` | Second-level tint — DLTCompliance |
-| `--surface-hero` | `#e8ecf5` | PageHero background — cool intentional tint |
+| `--surface-0` | `#ffffff` | Cards, pricing, FAQ- pure white |
+| `--surface-1` | `#f7f8fc` | First-level section tint- Features, HowItWorks |
+| `--surface-2` | `#eef1f8` | Second-level tint- DLTCompliance |
+| `--surface-hero` | `#e8ecf5` | PageHero background- cool intentional tint |
 
 #### Brand (keep existing values)
 | Token | Value | Usage |
@@ -27,7 +27,7 @@ All CSS variables live in `app/globals.css` under `:root`. These tokens are the 
 #### Ink (4-level text hierarchy)
 | Token | Value | Usage |
 |---|---|---|
-| `--ink-1` | `#0c1220` | H1, H2, H3 — deepest |
+| `--ink-1` | `#0c1220` | H1, H2, H3- deepest |
 | `--ink-2` | `#334155` | Body copy, card descriptions |
 | `--ink-3` | `#64748b` | Secondary text, subtitles |
 | `--ink-4` | `#94a3b8` | Captions, trust strips, placeholders |
@@ -57,7 +57,7 @@ All CSS variables live in `app/globals.css` under `:root`. These tokens are the 
 ### 1.2 Typography
 
 Fonts: **Manrope** (body) / **Syne** (headings).
-Always use `[font-family:var(--font-syne)]` — NOT `font-heading` (Tailwind v4 `font-*` group conflicts with `font-bold`).
+Always use `[font-family:var(--font-syne)]`- NOT `font-heading` (Tailwind v4 `font-*` group conflicts with `font-bold`).
 
 #### Scale
 | Role | Classes | Notes |
@@ -85,9 +85,9 @@ inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border
 
 | Element | Value | Change from current |
 |---|---|---|
-| Section padding | `py-20 sm:py-28` | Up from py-16/py-20 — consistent everywhere |
+| Section padding | `py-20 sm:py-28` | Up from py-16/py-20- consistent everywhere |
 | PageHero bottom | `pb-12 sm:pb-16` | Up from pb-10/pb-14 |
-| Container | `max-w-7xl mx-auto px-5 sm:px-8` | `px-5` not `px-4` — slightly more air |
+| Container | `max-w-7xl mx-auto px-5 sm:px-8` | `px-5` not `px-4`- slightly more air |
 | Section header mb | `mb-12 sm:mb-16` | Consistent before card grids |
 | Card padding | `p-6 sm:p-8` | Generous, modern SaaS |
 | Card gap | `gap-6` | Between grid items |
@@ -116,7 +116,7 @@ In Tailwind: `shadow-[var(--shadow-card)]` / `hover:shadow-[var(--shadow-card-ho
 | `--radius-lg` | `20px` | `rounded-[20px]` | Hero image, featured cards |
 | `--radius-pill` | `9999px` | `rounded-full` | All buttons, eyebrow badges |
 
-Cards use `rounded-xl` (12px) — tighter than current `rounded-2xl` (16px). More architectural, less bubbly.
+Cards use `rounded-xl` (12px)- tighter than current `rounded-2xl` (16px). More architectural, less bubbly.
 
 ---
 
@@ -138,7 +138,7 @@ Cards use `rounded-xl` (12px) — tighter than current `rounded-2xl` (16px). Mor
 - Background: `bg-[var(--surface-1)]`
 - H2: Use H2 scale
 - Cards: `rounded-xl shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] hover:-translate-y-1 transition-all duration-200`
-- Icon container: `rounded-lg` (8px — tighter)
+- Icon container: `rounded-lg` (8px- tighter)
 
 ### BulkSmsUseCases
 - Cards: Add `shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)]`
@@ -151,7 +151,7 @@ Cards use `rounded-xl` (12px) — tighter than current `rounded-2xl` (16px). Mor
 
 ### BulkSmsPricing
 - H2: Use H2 scale
-- Highlighted card: remove `scale-105` (breaks mobile layout) — use `shadow-[var(--shadow-elevated)] border-2 border-primary` instead
+- Highlighted card: remove `scale-105` (breaks mobile layout)- use `shadow-[var(--shadow-elevated)] border-2 border-primary` instead
 - Section padding: `py-20 sm:py-28`
 
 ### BulkSmsDLTCompliance
@@ -214,7 +214,7 @@ transition-all duration-150
 - No structural/layout changes
 - No JSON-LD or heading hierarchy changes
 - No routing changes
-- Light mode only — no dark variants
+- Light mode only- no dark variants
 - No new npm packages
 - Do NOT modify `body > *:not(.bg-balls):not(.layout-header)` rule in globals.css
 

@@ -64,7 +64,7 @@ export function useReveal<T extends HTMLElement = HTMLElement>({
   return ref;
 }
 
-/** Force a ScrollTrigger recalculation — call after layout-affecting async content loads. */
+/** Force a ScrollTrigger recalculation- call after layout-affecting async content loads. */
 export function refreshScrollTrigger() {
   if (typeof window === "undefined") return;
   ScrollTrigger.refresh();

@@ -13,12 +13,12 @@ export interface TestimonialItem {
 export interface TestimonialsGridProps {
   testimonials: TestimonialItem[];
   className?: string;
-  /** Cards shown before the "Load More" reveal — omit to show every card. */
+  /** Cards shown before the "Load More" reveal- omit to show every card. */
   maxDisplayed?: number;
 }
 
 /**
- * A card grid of testimonials with a "Load More" reveal — global, reusable
+ * A card grid of testimonials with a "Load More" reveal- global, reusable
  * (no page-specific copy baked in). Callers own the section wrapper/heading,
  * same as every other section on this page (eyebrow + H2 pattern), so this
  * component is just the grid + expand behaviour.

@@ -1,5 +1,5 @@
 /**
- * Central animation configuration — durations, eases and the reduced-motion
+ * Central animation configuration- durations, eases and the reduced-motion
  * check every hook/preset in lib/animation and components/motion reads from.
  * Change values here to retune motion across the entire site at once.
  */

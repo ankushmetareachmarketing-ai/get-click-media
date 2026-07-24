@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
       {/* -- Content with side shapes -- */}
       <div className="relative w-full pt-28 sm:pt-32 lg:pt-40 pb-4 sm:pb-6 lg:pb-8">
 
-        {/* Left shape — hidden on mobile */}
+        {/* Left shape- hidden on mobile */}
         <div className="absolute left-0 sm:left-[4%] lg:left-[18%] top-1/2 -translate-y-1/2 pointer-events-none select-none hidden sm:block">
           <Image
             src="/images/hero/right-shape.png"
@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
           />
         </div>
 
-        {/* Right shape — hidden on mobile */}
+        {/* Right shape- hidden on mobile */}
         <div className="absolute right-0 sm:right-[4%] lg:right-[18%] top-1/2 -translate-y-1/2 pointer-events-none select-none hidden sm:block">
           <Image
             src="/images/hero/left-shape.png"
@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
         <div className="w-full max-w-2xl sm:max-w-3xl lg:max-w-5xl mx-auto px-4 sm:px-8 flex flex-col items-center gap-2.5 sm:gap-3.5 text-center">
 
           {/* Badge
-              Mobile : compact single-line pill — "What's New · Official CPaaS Platform"
+              Mobile : compact single-line pill- "What's New · Official CPaaS Platform"
               Desktop: full two-part badge (unchanged)
           */}
           {/* Mobile badge */}
@@ -94,7 +94,7 @@ const Hero: React.FC = () => {
             </span>
           </h1>
 
-          {/* Description — shorter on mobile */}
+          {/* Description- shorter on mobile */}
           <p
             data-reveal="fade-up"
             data-reveal-delay="0.2"
@@ -102,11 +102,11 @@ const Hero: React.FC = () => {
           >
             {/* Mobile text */}
             <span className="sm:hidden">
-              WhatsApp, RCS, SMS &amp; Voice — all from one unified platform.
+              WhatsApp, RCS, SMS &amp; Voice- all from one unified platform.
             </span>
             {/* Desktop text */}
             <span className="hidden sm:inline">
-              WhatsApp, RCS, SMS, Voice &amp; Email — automated campaigns, OTP delivery,
+              WhatsApp, RCS, SMS, Voice &amp; Email- automated campaigns, OTP delivery,
               AI chatbots and deep analytics from one unified platform built for modern businesses.
             </span>
           </p>
@@ -139,7 +139,7 @@ const Hero: React.FC = () => {
 
       {/* -- Dashboard image -- */}
 
-      {/* Mobile image — wider + bottom fade shadow */}
+      {/* Mobile image- wider + bottom fade shadow */}
       <div data-reveal="scale-in" data-reveal-delay="0.35" className="relative sm:hidden mt-2 overflow-hidden">
         <Image
           src="/images/hero-mob.webp"
@@ -150,7 +150,7 @@ const Hero: React.FC = () => {
           priority
           unoptimized
         />
-        {/* Bottom fade — matches section gradient end colour */}
+        {/* Bottom fade- matches section gradient end colour */}
         <div
           className="absolute bottom-0 left-0 right-0 h-28 pointer-events-none"
           style={{
@@ -159,7 +159,7 @@ const Hero: React.FC = () => {
         />
       </div>
 
-      {/* Desktop image — home-page.png (unchanged) */}
+      {/* Desktop image- home-page.png (unchanged) */}
       <div data-reveal="scale-in" data-reveal-delay="0.35" className="hidden sm:flex sm:mt-0 justify-center">
         <Image
           src="/images/hero/home-page.png"

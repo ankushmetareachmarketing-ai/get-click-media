@@ -13,14 +13,14 @@ import { CityPageTemplate } from "../_templates/city-page-template";
 
 /* ── SEO Metadata ────────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: "WhatsApp Business API in Noida — Official Meta BSP | Get Click Media",
+  title: "WhatsApp Business API in Noida- Official Meta BSP | Get Click Media",
   description:
     "Get Click Media is headquartered in Noida, Uttar Pradesh, and provides WhatsApp Business API as an official Meta BSP to businesses across Noida, Greater Noida, and the Yamuna Expressway corridor. Same-day consultation, 3-5 day onboarding.",
   keywords:
     "WhatsApp Business API Noida, whatsapp api provider noida, whatsapp business api noida, whatsapp marketing noida, whatsapp chatbot noida, whatsapp api service noida up",
   alternates: { canonical: "https://getclickmedia.com/whatsapp-api-noida" },
   openGraph: {
-    title: "WhatsApp Business API in Noida — Official Meta BSP | Get Click Media",
+    title: "WhatsApp Business API in Noida- Official Meta BSP | Get Click Media",
     description:
       "Get Click Media is headquartered in Noida and provides WhatsApp Business API as an official Meta BSP to businesses across Noida, Greater Noida, and the Yamuna Expressway corridor.",
     url: "https://getclickmedia.com/whatsapp-api-noida",
@@ -69,12 +69,12 @@ const schema = {
         {
           "@type": "Question",
           name: "Is Get Click Media based in Noida?",
-          acceptedAnswer: { "@type": "Answer", text: "Yes. Get Click Media is headquartered in Noida, Uttar Pradesh — making us the closest WhatsApp API provider for Noida businesses. We offer in-person consultations at our Noida office and remote onboarding for businesses anywhere in the region." },
+          acceptedAnswer: { "@type": "Answer", text: "Yes. Get Click Media is headquartered in Noida, Uttar Pradesh- making us the closest WhatsApp API provider for Noida businesses. We offer in-person consultations at our Noida office and remote onboarding for businesses anywhere in the region." },
         },
         {
           "@type": "Question",
           name: "What is WhatsApp Business API and how does it help Noida businesses?",
-          acceptedAnswer: { "@type": "Answer", text: "WhatsApp Business API is Meta's enterprise messaging platform — it allows businesses to send automated messages, run chatbots, integrate with CRM systems, and broadcast to opted-in customers at scale. Noida businesses use it most commonly for real estate lead management, EdTech admission automation, IT support workflows, and e-commerce order communication." },
+          acceptedAnswer: { "@type": "Answer", text: "WhatsApp Business API is Meta's enterprise messaging platform- it allows businesses to send automated messages, run chatbots, integrate with CRM systems, and broadcast to opted-in customers at scale. Noida businesses use it most commonly for real estate lead management, EdTech admission automation, IT support workflows, and e-commerce order communication." },
         },
         {
           "@type": "Question",
@@ -146,29 +146,29 @@ const INDUSTRIES = [
 
 const CAPABILITIES = [
   { label: "Onboarding timeline", value: "3 to 5 business days from consultation to first live WhatsApp message" },
-  { label: "Meta BSP status", value: "Official Meta Business Solution Provider — GCM manages your full WhatsApp Business Account registration" },
+  { label: "Meta BSP status", value: "Official Meta Business Solution Provider- GCM manages your full WhatsApp Business Account registration" },
   { label: "Local support", value: "India-based support team available 9 AM to 7 PM IST, Monday to Saturday. WhatsApp support available." },
-  { label: "Pricing", value: "Same as national rates — marketing Rs 0.79-0.91/conv, utility Rs 0.14-0.17/conv. Platform fee based on volume." },
+  { label: "Pricing", value: "Same as national rates- marketing Rs 0.79-0.91/conv, utility Rs 0.14-0.17/conv. Platform fee based on volume." },
   { label: "Languages supported", value: "Hindi + English + regional language chatbot flows as required by your customer base" },
   { label: "Integration partners", value: "Shopify, WooCommerce, Salesforce, HubSpot, Zoho, LeadSquared, and custom systems" },
 ];
 
 const CLIENT_USE_CASES = [
-  { sector: "PropTech startup — Sector 125", automation: "WhatsApp lead qualification + Sell.do CRM integration for Noida Expressway project leads", result: "Lead qualification time: 2 days to 4 minutes. Site visit rate 3x." },
-  { sector: "IT services company — Sector 62", automation: "WhatsApp chatbot for B2B demo booking and support ticket routing", result: "Demo booking +45%. Support tickets routed instantly 24/7." },
-  { sector: "Coaching institute — Sector 2", automation: "Admission chatbot + fee reminder + exam notification for JEE/NEET preparation", result: "Admission conversion 2.8x. Fee on-time payment +38%." },
-  { sector: "Multi-speciality clinic — Sector 18", automation: "Appointment automation + prescription reminders", result: "No-show -32%. Prescription compliance +28%." },
-  { sector: "E-commerce warehouse — Noida Expressway", automation: "Order notification + delivery tracking WhatsApp automation", result: "Support call volume -55%. Delivery success +28%." },
+  { sector: "PropTech startup- Sector 125", automation: "WhatsApp lead qualification + Sell.do CRM integration for Noida Expressway project leads", result: "Lead qualification time: 2 days to 4 minutes. Site visit rate 3x." },
+  { sector: "IT services company- Sector 62", automation: "WhatsApp chatbot for B2B demo booking and support ticket routing", result: "Demo booking +45%. Support tickets routed instantly 24/7." },
+  { sector: "Coaching institute- Sector 2", automation: "Admission chatbot + fee reminder + exam notification for JEE/NEET preparation", result: "Admission conversion 2.8x. Fee on-time payment +38%." },
+  { sector: "Multi-speciality clinic- Sector 18", automation: "Appointment automation + prescription reminders", result: "No-show -32%. Prescription compliance +28%." },
+  { sector: "E-commerce warehouse- Noida Expressway", automation: "Order notification + delivery tracking WhatsApp automation", result: "Support call volume -55%. Delivery success +28%." },
 ];
 
 const FAQS = [
   {
     q: "Is Get Click Media based in Noida?",
-    a: "Yes. Get Click Media is headquartered in Noida, Uttar Pradesh — making us the closest WhatsApp API provider for Noida businesses. We offer in-person consultations at our Noida office and remote onboarding for businesses anywhere in the region.",
+    a: "Yes. Get Click Media is headquartered in Noida, Uttar Pradesh- making us the closest WhatsApp API provider for Noida businesses. We offer in-person consultations at our Noida office and remote onboarding for businesses anywhere in the region.",
   },
   {
     q: "What is WhatsApp Business API and how does it help Noida businesses?",
-    a: "WhatsApp Business API is Meta's enterprise messaging platform — it allows businesses to send automated messages, run chatbots, integrate with CRM systems, and broadcast to opted-in customers at scale. Noida businesses use it most commonly for real estate lead management, EdTech admission automation, IT support workflows, and e-commerce order communication.",
+    a: "WhatsApp Business API is Meta's enterprise messaging platform- it allows businesses to send automated messages, run chatbots, integrate with CRM systems, and broadcast to opted-in customers at scale. Noida businesses use it most commonly for real estate lead management, EdTech admission automation, IT support workflows, and e-commerce order communication.",
   },
   {
     q: "Does Get Click Media serve Greater Noida and Yamuna Expressway businesses?",
@@ -202,7 +202,7 @@ export default function WhatsAppAPINoidaPage() {
       breadcrumbLabel="Noida"
       heroEyebrow="WhatsApp Business API Noida"
       heroTitle="WhatsApp Business API"
-      heroHighlight="in Noida — Official Meta BSP"
+      heroHighlight="in Noida- Official Meta BSP"
       heroDescription={
         <>
           Get Click Media is headquartered in Noida, Uttar Pradesh, and provides WhatsApp Business API
@@ -213,24 +213,24 @@ export default function WhatsAppAPINoidaPage() {
         </>
       }
       heroImage="/images/whatsapp/whatsapp-bussiness-api.webp"
-      heroImageAlt="WhatsApp Business API for Noida businesses — rich message preview on a phone"
+      heroImageAlt="WhatsApp Business API for Noida businesses- rich message preview on a phone"
       heroTrustLine="Official Meta BSP · 3–5 Day Setup · Headquartered in Noida · Same-day consultation"
       stats={[
         { value: "100+", label: "Noida-based businesses served" },
         { value: "Sector 62", label: "India's second-largest IT corridor" },
         { value: "3–5 days", label: "Onboarding timeline" },
-        { value: "Noida", label: "GCM headquarters — same-city support" },
+        { value: "Noida", label: "GCM headquarters- same-city support" },
       ]}
       aeoParagraphs={[
         "Get Click Media is headquartered in Noida, Uttar Pradesh, and provides WhatsApp Business API as an official Meta BSP to businesses across Noida, Greater Noida, and the Yamuna Expressway corridor. Noida businesses in IT services, real estate, EdTech, healthcare, and manufacturing use GCM's WhatsApp API for lead generation, customer communication, and automation. Same-day consultation available. Onboarding in 3 to 5 business days.",
-        "Noida is the fastest-growing commercial hub in the Delhi NCR region — home to India's second-largest IT corridor (Sectors 62, 63, 125, 132), major real estate developments along the Expressway, and a booming EdTech and startup ecosystem. The city's tech-savvy business population and high smartphone penetration make WhatsApp Business API adoption particularly high.",
+        "Noida is the fastest-growing commercial hub in the Delhi NCR region- home to India's second-largest IT corridor (Sectors 62, 63, 125, 132), major real estate developments along the Expressway, and a booming EdTech and startup ecosystem. The city's tech-savvy business population and high smartphone penetration make WhatsApp Business API adoption particularly high.",
         "Get Click Media's Noida headquarters makes it the closest WhatsApp API provider to businesses in Sectors 18, 62, 63, 125, 132, and the Greater Noida-Yamuna Expressway belt. Clients in Noida benefit from same-city support and faster onboarding consultations.",
       ]}
       whyCity={{
         eyebrow: "Why Noida Businesses Choose WhatsApp API",
         title: "A tech-forward market built for WhatsApp automation",
         description:
-          "Noida's business landscape is shaped by a digital-first consumer base — smartphone penetration, WhatsApp usage rates, and e-commerce adoption are all above India's national average. Businesses that deploy WhatsApp Business API in Noida report faster lead conversion, higher customer retention, and lower support costs compared to SMS and email alternatives.",
+          "Noida's business landscape is shaped by a digital-first consumer base- smartphone penetration, WhatsApp usage rates, and e-commerce adoption are all above India's national average. Businesses that deploy WhatsApp Business API in Noida report faster lead conversion, higher customer retention, and lower support costs compared to SMS and email alternatives.",
         image: "/images/whatsapp/direct-meta-partner.webp",
         points: [
           { icon: Cpu, title: "India's second-largest IT corridor", desc: "Sectors 62, 63, 125, and 132 house thousands of IT companies and startups running B2B WhatsApp workflows." },
@@ -245,7 +245,7 @@ export default function WhatsAppAPINoidaPage() {
         title: "Get Click Media's WhatsApp API Service in Noida",
         description: (
           <>
-            Get Click Media is based in Noida, Uttar Pradesh — making us the most accessible WhatsApp API
+            Get Click Media is based in Noida, Uttar Pradesh- making us the most accessible WhatsApp API
             provider for Noida businesses. Our team has delivered WhatsApp API solutions to
             <strong className="text-gray-900"> 100+ Noida-based businesses</strong> across IT, real
             estate, EdTech, and healthcare. In-person consultations are available at our Noida office. We
@@ -261,7 +261,7 @@ export default function WhatsAppAPINoidaPage() {
       faqs={FAQS}
       relatedLinks={RELATED_LINKS}
       bottomCtaTitle="Ready to launch WhatsApp API for your Noida business?"
-      bottomCtaDescription="Get Click Media manages Meta business verification, template approval, and onboarding — same-day consultations available at our Noida office."
+      bottomCtaDescription="Get Click Media manages Meta business verification, template approval, and onboarding- same-day consultations available at our Noida office."
       schema={schema}
     />
   );

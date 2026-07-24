@@ -22,7 +22,7 @@ export default function WhatIsTransactionalSMS() {
             <div className="flex flex-col gap-4 text-[0.9375rem] sm:text-base text-(--ink-2) leading-[1.65]">
               <p>
                 Transactional SMS is a category of business messaging used to send critical,
-                non-promotional information to customers — OTPs, account alerts, order updates,
+                non-promotional information to customers- OTPs, account alerts, order updates,
                 appointment reminders, payment confirmations, and more. Unlike promotional SMS,
                 transactional messages can be delivered to <strong className="text-(--ink-1) font-semibold">DND-registered numbers</strong> around
                 the clock.
@@ -40,7 +40,7 @@ export default function WhatIsTransactionalSMS() {
               <p>
                 Get Click Media delivers transactional SMS through carrier-grade infrastructure
                 with 99.9% uptime, real-time delivery receipts, and full DLT registration
-                support — so your customers receive the right message at the right moment,
+                support- so your customers receive the right message at the right moment,
                 every time.
               </p>
             </div>

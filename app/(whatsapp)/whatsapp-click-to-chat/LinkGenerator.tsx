@@ -32,7 +32,7 @@ export default function LinkGenerator() {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
-      // clipboard unavailable — no-op
+      // clipboard unavailable- no-op
     }
   };
 
@@ -67,7 +67,7 @@ export default function LinkGenerator() {
           placeholder="Website Enquiry"
           className="w-full px-3 py-2.5 rounded-xl border border-gray-200 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#2563eb]/30 focus:border-[#2563eb]"
         />
-        <p className="text-[11px] text-gray-400 mt-1">Keep it under 10 words — long pre-filled messages get edited or deleted.</p>
+        <p className="text-[11px] text-gray-400 mt-1">Keep it under 10 words- long pre-filled messages get edited or deleted.</p>
       </div>
 
       <div className="rounded-xl bg-gray-50 border border-gray-100 p-4">
@@ -94,7 +94,7 @@ export default function LinkGenerator() {
           <img src={qrSrc} alt="WhatsApp Click to Chat QR code" width={96} height={96} className="rounded-lg border border-gray-200" />
           <div className="text-xs text-gray-500 leading-relaxed">
             <p className="flex items-center gap-1.5 font-semibold text-gray-700 mb-1"><QrCode className="w-3.5 h-3.5" /> Scan to test</p>
-            Use this QR code on business cards, packaging, or in-store signage — or scan it now to test the link
+            Use this QR code on business cards, packaging, or in-store signage- or scan it now to test the link
             on your own phone.
           </div>
         </div>

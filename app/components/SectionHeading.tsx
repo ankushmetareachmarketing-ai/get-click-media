@@ -14,7 +14,7 @@ interface SectionHeadingProps {
 }
 
 /**
- * SectionHeading — globally reusable heading block
+ * SectionHeading- globally reusable heading block
  * Colors pulled from CSS variables defined in globals.css
  *
  * Usage:
@@ -68,7 +68,7 @@ export default function SectionHeading({
   return (
     <Reveal preset="fade-up" stagger className={cn('flex flex-col gap-3', alignClass, className)}>
 
-      {/* Eyebrow pill — uses --accent + --accent-foreground from globals */}
+      {/* Eyebrow pill- uses --accent + --accent-foreground from globals */}
       {eyebrow && (
         <span
           className="self-start inline-flex items-center gap-2 rounded-full px-3.5 py-1
@@ -87,7 +87,7 @@ export default function SectionHeading({
         </span>
       )}
 
-      {/* Title — Syne for strong brand personality, foreground from globals */}
+      {/* Title- Syne for strong brand personality, foreground from globals */}
       <h2
         className={cn(titleSize, 'font-bold leading-[1.15] tracking-[-0.02em]')}
         style={{
@@ -98,7 +98,7 @@ export default function SectionHeading({
         {renderTitle()}
       </h2>
 
-      {/* Description — text-muted from globals */}
+      {/* Description- text-muted from globals */}
       {description && (
         <p
           className="mt-1 max-w-full sm:max-w-xl text-sm sm:text-[15px] leading-relaxed"

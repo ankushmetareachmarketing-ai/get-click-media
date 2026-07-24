@@ -12,7 +12,7 @@ const steps = [
     title: "DLT Registration",
     description: (
       <>
-        We assist with mandatory TRAI DLT registration — entity, transactional sender ID, and
+        We assist with mandatory TRAI DLT registration- entity, transactional sender ID, and
         template approval. Learn about{" "}
         <Link
           href="/dlt-registration"
@@ -28,7 +28,7 @@ const steps = [
     number: 3,
     title: "Integrate the API",
     description:
-      "Use our REST API or SDK to trigger transactional messages from your application. One HTTP call — message delivered in seconds.",
+      "Use our REST API or SDK to trigger transactional messages from your application. One HTTP call- message delivered in seconds.",
   },
   {
     number: 4,
@@ -41,7 +41,7 @@ const steps = [
 export default function TransactionalSmsHowItWorks() {
   return (
     <section
-      aria-label="How transactional SMS works — 4-step process"
+      aria-label="How transactional SMS works- 4-step process"
       className="py-20 sm:py-28 bg-(--surface-1)"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8">

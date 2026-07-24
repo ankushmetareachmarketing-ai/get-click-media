@@ -15,14 +15,14 @@ import { IndustryPageTemplate } from "../_templates/industry-page-template";
 
 /* ── SEO Metadata ────────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: "WhatsApp API for Automobile Dealers — Test Drive Booking, Service Reminders and Lead Nurture India | Get Click Media",
+  title: "WhatsApp API for Automobile Dealers- Test Drive Booking, Service Reminders and Lead Nurture India | Get Click Media",
   description:
     "WhatsApp Business API for automobile dealers and OEMs enables automated test drive booking, service appointment reminders, EMI pre-approval alerts, new model launch campaigns, and post-sales relationship management.",
   keywords:
     "WhatsApp API for Automobile India, WhatsApp Automobile India, WhatsApp Car Dealer India, Test Drive Booking WhatsApp, Auto Service Reminder WhatsApp India, WhatsApp API Automotive India",
   alternates: { canonical: "https://getclickmedia.com/whatsapp-api-automobile" },
   openGraph: {
-    title: "WhatsApp API for Automobile Dealers — Test Drive Booking, Service Reminders and Lead Nurture India",
+    title: "WhatsApp API for Automobile Dealers- Test Drive Booking, Service Reminders and Lead Nurture India",
     description:
       "WhatsApp Business API for automobile dealers and OEMs enables automated test drive booking, service appointment reminders, EMI pre-approval alerts, new model launch campaigns, and post-sales relationship management.",
     url: "https://getclickmedia.com/whatsapp-api-automobile",
@@ -70,7 +70,7 @@ const schema = {
         {
           "@type": "Question",
           name: "How does WhatsApp improve test drive bookings for car dealers in India?",
-          acceptedAnswer: { "@type": "Answer", text: "WhatsApp chatbot responds to car enquiries within seconds — sending the relevant model brochure, variant comparison, and available test drive slots instantly. Portal leads that are responded to within 5 minutes convert at 3x the rate of leads followed up after an hour. The [Book Test Drive] button in the WhatsApp message makes booking instant — no phone tag, no email chains." },
+          acceptedAnswer: { "@type": "Answer", text: "WhatsApp chatbot responds to car enquiries within seconds- sending the relevant model brochure, variant comparison, and available test drive slots instantly. Portal leads that are responded to within 5 minutes convert at 3x the rate of leads followed up after an hour. The [Book Test Drive] button in the WhatsApp message makes booking instant- no phone tag, no email chains." },
         },
         {
           "@type": "Question",
@@ -80,12 +80,12 @@ const schema = {
         {
           "@type": "Question",
           name: "How does WhatsApp reduce service no-shows at automobile dealerships?",
-          acceptedAnswer: { "@type": "Answer", text: "WhatsApp service appointment reminders — 48 hours before, morning of — with [Confirm], [Reschedule], and [Cancel] buttons reduce no-shows by 40% compared to no-reminder or SMS reminder. When a customer reschedules, the slot is immediately available for another customer — improving workshop utilisation." },
+          acceptedAnswer: { "@type": "Answer", text: "WhatsApp service appointment reminders- 48 hours before, morning of- with [Confirm], [Reschedule], and [Cancel] buttons reduce no-shows by 40% compared to no-reminder or SMS reminder. When a customer reschedules, the slot is immediately available for another customer- improving workshop utilisation." },
         },
         {
           "@type": "Question",
           name: "Is WhatsApp suitable for OEM (car manufacturer) direct customer communication in India?",
-          acceptedAnswer: { "@type": "Answer", text: "Yes. Several Indian automotive OEMs use WhatsApp for direct owner communication — warranty alerts, recall notices, software update notifications, and anniversary offers. OEM WhatsApp implementations require Green Tick verification, which Get Click Media manages for automotive brands. OEM deployments integrate with dealership DMS systems to maintain a consistent customer journey from manufacturer to dealer." },
+          acceptedAnswer: { "@type": "Answer", text: "Yes. Several Indian automotive OEMs use WhatsApp for direct owner communication- warranty alerts, recall notices, software update notifications, and anniversary offers. OEM WhatsApp implementations require Green Tick verification, which Get Click Media manages for automotive brands. OEM deployments integrate with dealership DMS systems to maintain a consistent customer journey from manufacturer to dealer." },
         },
       ],
     },
@@ -104,7 +104,7 @@ const USE_CASES = [
   {
     icon: Sparkles,
     title: "Model Launch Campaign",
-    trigger: "New model launch — campaign send to opted-in enquiry database",
+    trigger: "New model launch- campaign send to opted-in enquiry database",
     message: "Launch video link, key highlights, introductory price, and [Book Test Drive] or [Contact Dealer] button. Personalised by last enquired model segment.",
     result: "Launch day test drive bookings 4x vs SMS announcement. Walk-in footfall +55%.",
   },
@@ -118,7 +118,7 @@ const USE_CASES = [
   {
     icon: Star,
     title: "Post-Service Follow-Up and CSAT",
-    trigger: "Service completed — vehicle delivered to customer",
+    trigger: "Service completed- vehicle delivered to customer",
     message: "Service completion summary: work done, parts replaced, amount paid. [Rate Your Experience 1-5] buttons. 1-3: escalate to service manager. 4-5: Google review link.",
     result: "Service CSAT +22 points. Google reviews +400%. Service dispute reduction -35%.",
   },
@@ -149,19 +149,19 @@ const PERFORMANCE_DATA = [
 
 // ── Capabilities ──────────────────────────────────────────────────────────
 const CAPABILITIES = [
-  { icon: Database, title: "DMS integration", desc: "Automate, CDK Global, custom DMS — enquiry routing, service due triggers, purchase events" },
+  { icon: Database, title: "DMS integration", desc: "Automate, CDK Global, custom DMS- enquiry routing, service due triggers, purchase events" },
   { icon: Globe, title: "CarDekho/CarWale integration", desc: "Portal lead API routing to WhatsApp chatbot within 30 seconds of lead submission" },
   { icon: Camera, title: "CTWA ads management", desc: "Click-to-WhatsApp Facebook and Instagram ads for new model launches and offers" },
-  { icon: CreditCard, title: "EMI calculator", desc: "In-chat interactive EMI calculator — loan amount, tenure, interest rate, monthly EMI" },
+  { icon: CreditCard, title: "EMI calculator", desc: "In-chat interactive EMI calculator- loan amount, tenure, interest rate, monthly EMI" },
   { icon: Wrench, title: "Service management", desc: "Service due triggers, appointment booking, reminder sequence, post-service CSAT" },
-  { icon: Shield, title: "Verified Green Tick", desc: "Dealer or OEM brand verification — critical for purchase-decision trust in India" },
+  { icon: Shield, title: "Verified Green Tick", desc: "Dealer or OEM brand verification- critical for purchase-decision trust in India" },
 ];
 
 // ── FAQ ──────────────────────────────────────────────────────────────────
 const FAQS = [
   {
     q: "How does WhatsApp improve test drive bookings for car dealers in India?",
-    a: "WhatsApp chatbot responds to car enquiries within seconds — sending the relevant model brochure, variant comparison, and available test drive slots instantly. Portal leads that are responded to within 5 minutes convert at 3x the rate of leads followed up after an hour. The [Book Test Drive] button in the WhatsApp message makes booking instant — no phone tag, no email chains.",
+    a: "WhatsApp chatbot responds to car enquiries within seconds- sending the relevant model brochure, variant comparison, and available test drive slots instantly. Portal leads that are responded to within 5 minutes convert at 3x the rate of leads followed up after an hour. The [Book Test Drive] button in the WhatsApp message makes booking instant- no phone tag, no email chains.",
   },
   {
     q: "Can WhatsApp API integrate with automobile DMS platforms?",
@@ -169,11 +169,11 @@ const FAQS = [
   },
   {
     q: "How does WhatsApp reduce service no-shows at automobile dealerships?",
-    a: "WhatsApp service appointment reminders — 48 hours before, morning of — with [Confirm], [Reschedule], and [Cancel] buttons reduce no-shows by 40% compared to no-reminder or SMS reminder. When a customer reschedules, the slot is immediately available for another customer — improving workshop utilisation.",
+    a: "WhatsApp service appointment reminders- 48 hours before, morning of- with [Confirm], [Reschedule], and [Cancel] buttons reduce no-shows by 40% compared to no-reminder or SMS reminder. When a customer reschedules, the slot is immediately available for another customer- improving workshop utilisation.",
   },
   {
     q: "Is WhatsApp suitable for OEM (car manufacturer) direct customer communication in India?",
-    a: "Yes. Several Indian automotive OEMs use WhatsApp for direct owner communication — warranty alerts, recall notices, software update notifications, and anniversary offers. OEM WhatsApp implementations require Green Tick verification, which Get Click Media manages for automotive brands. OEM deployments integrate with dealership DMS systems to maintain a consistent customer journey from manufacturer to dealer.",
+    a: "Yes. Several Indian automotive OEMs use WhatsApp for direct owner communication- warranty alerts, recall notices, software update notifications, and anniversary offers. OEM WhatsApp implementations require Green Tick verification, which Get Click Media manages for automotive brands. OEM deployments integrate with dealership DMS systems to maintain a consistent customer journey from manufacturer to dealer.",
   },
 ];
 
@@ -202,7 +202,7 @@ export default function WhatsAppAPIAutomobilePage() {
         <>
           Automate test drive bookings, service reminders, EMI updates, and customer support with
           WhatsApp Business API integrated with your CRM or DMS.
-          <strong className="text-gray-900"> Get Click Media integrates WhatsApp with DMS platforms and automotive CRMs — tripling test drive conversions and reducing service no-shows by 40%.</strong>
+          <strong className="text-gray-900"> Get Click Media integrates WhatsApp with DMS platforms and automotive CRMs- tripling test drive conversions and reducing service no-shows by 40%.</strong>
         </>
       }
       heroImage="/images/whatsapp/automobile/whatsapp-api-for-automotive.webp"
@@ -220,7 +220,7 @@ export default function WhatsAppAPIAutomobilePage() {
           service appointment reminders, EMI pre-approval alerts, new model launch campaigns, and
           post-sales relationship management.
           <strong className="text-gray-900"> Get Click Media integrates WhatsApp with DMS platforms</strong> and
-          automotive CRMs — tripling test drive conversions and reducing service no-shows by 40%.
+          automotive CRMs- tripling test drive conversions and reducing service no-shows by 40%.
         </>
       }
       insightCallout={
@@ -235,13 +235,13 @@ export default function WhatsAppAPIAutomobilePage() {
       whyIndustryTitle="Why Automobile Businesses in India Need WhatsApp API"
       whyIndustryParagraphs={[
         <>
-          Automobile dealers receive enquiries from multiple channels — manufacturer website, car
+          Automobile dealers receive enquiries from multiple channels- manufacturer website, car
           portals (CarDekho, CarWale), CTWA ads, and walk-ins. Without instant WhatsApp follow-up,
           portal leads go cold within 30 minutes.
         </>,
         <>
           WhatsApp chatbot responds immediately to every enquiry with model brochure, EMI calculator,
-          and test drive booking — converting expensive portal leads into showroom visits. With{" "}
+          and test drive booking- converting expensive portal leads into showroom visits. With{" "}
           <strong>3x test drive bookings</strong> and <strong>40% reduction in service no-shows</strong>,
           WhatsApp is rapidly becoming the standard for automotive customer engagement in India.
         </>,
@@ -263,7 +263,7 @@ export default function WhatsAppAPIAutomobilePage() {
             </>
           ),
           description:
-            "Manage all customer communication from a single dashboard — test drive booking, model launch campaigns, service reminders, finance pre-approval, and trade-in offers — with full integration to your DMS and CRM systems.",
+            "Manage all customer communication from a single dashboard- test drive booking, model launch campaigns, service reminders, finance pre-approval, and trade-in offers- with full integration to your DMS and CRM systems.",
           bullets: [
             "Instant test drive booking with slot selection",
             "Automated service reminders with confirm/reschedule",
@@ -271,7 +271,7 @@ export default function WhatsAppAPIAutomobilePage() {
             "Post-service CSAT and Google review collection",
           ],
           image: "/images/whatsapp/automobile/automobile-dashboard.png",
-          imageAlt: "WhatsApp API Automobile dashboard — test drive booking, service reminders, model launch campaigns, and finance pre-approval",
+          imageAlt: "WhatsApp API Automobile dashboard- test drive booking, service reminders, model launch campaigns, and finance pre-approval",
         },
         {
           eyebrow: "Test Drive Automation",
@@ -289,7 +289,7 @@ export default function WhatsAppAPIAutomobilePage() {
             "Dealer location and directions via Google Maps",
           ],
           image: "/images/whatsapp/automobile/automobile-test-drive.webp",
-          imageAlt: "WhatsApp test drive booking preview — model brochure, variant comparison, and one-tap test drive booking",
+          imageAlt: "WhatsApp test drive booking preview- model brochure, variant comparison, and one-tap test drive booking",
           imageSide: "left",
         },
         {
@@ -300,14 +300,14 @@ export default function WhatsAppAPIAutomobilePage() {
             </>
           ),
           description:
-            "Get Click Media integrates with leading automotive DMS platforms — Automate, CDK Global, and custom dealer management systems — enabling automated WhatsApp communication from first enquiry to annual service reminder. Setup takes 3-5 days after WhatsApp API onboarding is complete.",
+            "Get Click Media integrates with leading automotive DMS platforms- Automate, CDK Global, and custom dealer management systems- enabling automated WhatsApp communication from first enquiry to annual service reminder. Setup takes 3-5 days after WhatsApp API onboarding is complete.",
           bullets: ["Automate", "CDK Global", "Custom DMS", "CarDekho leads", "CarWale leads", "Service triggers"],
           image: "/images/whatsapp/automobile/automobile-dms-integration.webp",
-          imageAlt: "WhatsApp API DMS integration — Automate, CDK Global for automobile dealer management",
+          imageAlt: "WhatsApp API DMS integration- Automate, CDK Global for automobile dealer management",
           imageSide: "left",
         },
       ]}
-      useCasesTitle="WhatsApp API Use Cases for Automobile — 6 Automations"
+      useCasesTitle="WhatsApp API Use Cases for Automobile- 6 Automations"
       useCases={USE_CASES}
       performanceData={PERFORMANCE_DATA}
       capabilitiesTitle="Get Click Media's WhatsApp API Capabilities for Automobile"

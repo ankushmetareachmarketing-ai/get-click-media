@@ -18,7 +18,7 @@ export interface RevealProps extends UseRevealOptions {
  *   <Reveal preset="fade-up" stagger><Card /><Card /><Card /></Reveal>
  *
  * For markup you don't control directly (CMS/MDX content, deeply nested
- * trees), prefer the `data-reveal="fade-up"` attribute instead — see
+ * trees), prefer the `data-reveal="fade-up"` attribute instead- see
  * components/motion/RevealInit.tsx. Both read the same preset table.
  */
 export function Reveal({

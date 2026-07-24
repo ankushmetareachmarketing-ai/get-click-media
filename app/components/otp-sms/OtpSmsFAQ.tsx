@@ -7,12 +7,12 @@ const faqs = [
   {
     question: "What is an OTP SMS service and how does it work in India?",
     answer:
-      "An OTP SMS service sends One-Time Passwords to users' mobile numbers for authentication — login, payment confirmation, account verification, etc. In India, OTP SMS travels via the transactional route under TRAI's DLT framework. The sending entity, sender ID, and message template must all be pre-registered on a TRAI DLT portal before any OTP can be delivered.",
+      "An OTP SMS service sends One-Time Passwords to users' mobile numbers for authentication- login, payment confirmation, account verification, etc. In India, OTP SMS travels via the transactional route under TRAI's DLT framework. The sending entity, sender ID, and message template must all be pre-registered on a TRAI DLT portal before any OTP can be delivered.",
   },
   {
     question: "Can OTP SMS reach DND-registered numbers in India?",
     answer:
-      "Yes. OTP SMS is classified as a transactional message and is exempt from DND (Do Not Disturb) filtering. This means your OTPs will be delivered to all recipients — including those on the DND registry — 24 hours a day, 7 days a week, provided your DLT registration is in place.",
+      "Yes. OTP SMS is classified as a transactional message and is exempt from DND (Do Not Disturb) filtering. This means your OTPs will be delivered to all recipients- including those on the DND registry- 24 hours a day, 7 days a week, provided your DLT registration is in place.",
   },
   {
     question: "Is DLT registration mandatory for sending OTPs in India?",
@@ -37,12 +37,12 @@ const faqs = [
   {
     question: "What happens if an OTP is not delivered?",
     answer:
-      "Get Click Media automatically retries failed OTP deliveries across alternate telecom routes. You receive a real-time delivery receipt (via dashboard or webhook) indicating the final delivery status — delivered, failed, or pending — so your application can trigger a resend if needed.",
+      "Get Click Media automatically retries failed OTP deliveries across alternate telecom routes. You receive a real-time delivery receipt (via dashboard or webhook) indicating the final delivery status- delivered, failed, or pending- so your application can trigger a resend if needed.",
   },
   {
     question: "How long is an OTP SMS valid?",
     answer:
-      "The validity of an OTP is controlled by your application — Get Click Media only handles the delivery. A typical best practice is a 5–10 minute expiry window. The SMS itself is delivered instantly; it is your backend that enforces the time limit and invalidates the code after use or expiry.",
+      "The validity of an OTP is controlled by your application- Get Click Media only handles the delivery. A typical best practice is a 5–10 minute expiry window. The SMS itself is delivered instantly; it is your backend that enforces the time limit and invalidates the code after use or expiry.",
   },
 ];
 

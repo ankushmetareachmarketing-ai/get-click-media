@@ -28,7 +28,7 @@ export const metadata = {
         url: "https://getclickmedia.com/images/bulk-sms/bulk-sms-service-provider-india-hero.webp",
         width: 1200,
         height: 630,
-        alt: "Bulk SMS Service Provider in India — Get Click Media",
+        alt: "Bulk SMS Service Provider in India- Get Click Media",
       },
     ],
   },
@@ -137,7 +137,7 @@ export default function BulkSmsPage() {
         primaryCta="Request a Demo"
         secondaryCta="Explore SMS Plans"
         imageSrc="/images/bulk-sms/bulk-sms-service-provider-india-hero.webp"
-        imageAlt="Bulk SMS Service Provider in India — Get Click Media platform dashboard"
+        imageAlt="Bulk SMS Service Provider in India- Get Click Media platform dashboard"
       />
       <BulkSmsBrandsStrip />
       

@@ -23,7 +23,7 @@ export interface GlowCtaBannerProps {
 /**
  * The animated navy-glow CTA treatment from `CTABanner.tsx` (blobs, cursor
  * glow, sparkles, arrow-in-circle button), extracted into a parameterized,
- * reusable piece — `CTABanner` itself keeps its own fixed homepage copy
+ * reusable piece- `CTABanner` itself keeps its own fixed homepage copy
  * untouched, this is for any section that needs the same look with its own
  * title/description/CTA.
  */
@@ -63,17 +63,17 @@ export function GlowCtaBanner({ title, description, ctaLabel, ctaHref, className
       {/* Base gradient */}
       <div className="absolute inset-0 [background:linear-gradient(125deg,#0c1a3a_0%,#1e3a8a_50%,#1e40af_100%)]" />
 
-      {/* Blob 1 — sky cyan, top-left */}
+      {/* Blob 1- sky cyan, top-left */}
       <div
         aria-hidden="true"
         className="absolute pointer-events-none top-[-20%] left-[-5%] w-[45%] h-[180%] blur-[44px] [background:radial-gradient(ellipse,rgba(56,189,248,0.28)_0%,transparent_65%)] animate-[glow-cta-blob1_12s_ease-in-out_infinite]"
       />
-      {/* Blob 2 — brand blue, bottom-right */}
+      {/* Blob 2- brand blue, bottom-right */}
       <div
         aria-hidden="true"
         className="absolute pointer-events-none bottom-[-25%] right-[-10%] w-[50%] h-[190%] blur-[48px] [background:radial-gradient(ellipse,rgba(37,99,235,0.32)_0%,transparent_65%)] animate-[glow-cta-blob2_16s_ease-in-out_infinite]"
       />
-      {/* Blob 3 — light blue, centre drift */}
+      {/* Blob 3- light blue, centre drift */}
       <div
         aria-hidden="true"
         className="absolute pointer-events-none top-[10%] left-[35%] w-[35%] h-[140%] blur-[40px] [background:radial-gradient(ellipse,rgba(96,165,250,0.20)_0%,transparent_65%)] animate-[glow-cta-blob3_10s_ease-in-out_infinite]"

@@ -12,7 +12,7 @@ export interface AccordionItem {
 
 /**
  * A single-open accordion with a real height animation (motion/react animates
- * to `height: "auto"` correctly) instead of the native <details> snap-open —
+ * to `height: "auto"` correctly) instead of the native <details> snap-open-
  * that's the whole reason this is a Client Component rather than markup.
  */
 export function AccordionList({ items, className }: { items: AccordionItem[]; className?: string }) {

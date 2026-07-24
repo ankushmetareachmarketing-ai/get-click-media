@@ -11,7 +11,7 @@ const features = [
     icon: ShieldCheck,
     title: "DLT Compliant Transactional Route",
     description:
-      "We handle your TRAI DLT entity, sender ID, and template registration — ensuring your OTPs bypass DND filters legally.",
+      "We handle your TRAI DLT entity, sender ID, and template registration- ensuring your OTPs bypass DND filters legally.",
   },
   {
     icon: Code2,
@@ -29,7 +29,7 @@ const features = [
     icon: BarChart2,
     title: "Real-Time Delivery Reports",
     description:
-      "Track every OTP — sent, delivered, failed — in real time from your dashboard or via webhook callbacks.",
+      "Track every OTP- sent, delivered, failed- in real time from your dashboard or via webhook callbacks.",
   },
   {
     icon: Headphones,
@@ -42,7 +42,7 @@ const features = [
 export default function OtpSmsFeatures() {
   return (
     <section
-      aria-label="Why choose us — 6 OTP SMS feature cards"
+      aria-label="Why choose us- 6 OTP SMS feature cards"
       className="py-20 sm:py-28 bg-(--surface-1) relative"
       style={{
         backgroundImage: "url('/images/get-click-media-bg.png')",

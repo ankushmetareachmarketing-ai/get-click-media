@@ -21,7 +21,7 @@ export default function WhatIsOtpSMS() {
 
             <div className="flex flex-col gap-4 text-[0.9375rem] sm:text-base text-(--ink-2) leading-[1.65]">
               <p>
-                OTP SMS service delivers One-Time Passwords — short-lived numeric codes used
+                OTP SMS service delivers One-Time Passwords- short-lived numeric codes used
                 to authenticate users during login, payment authorisation, account verification,
                 and other sensitive actions. Unlike standard promotional messages, OTPs travel
                 via the <strong className="text-(--ink-1) font-semibold">transactional route</strong> and
@@ -40,7 +40,7 @@ export default function WhatIsOtpSMS() {
 
               <p>
                 Get Click Media routes your OTPs through carrier-grade infrastructure with
-                sub-second delivery, automatic retries, and real-time delivery receipts — so
+                sub-second delivery, automatic retries, and real-time delivery receipts- so
                 your users never wait and your conversions never drop.
               </p>
             </div>

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import toast from "react-hot-toast";
 import { ArrowRight, Loader2, CheckCircle2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -56,8 +57,10 @@ const BookConsultation: React.FC = () => {
       if (!res.ok) throw new Error();
       setStatus("success");
       setForm(EMPTY);
+      toast.success("Slot booked! We'll confirm shortly.");
     } catch {
-      setStatus("error");
+      setStatus("idle");
+      toast.error("Something went wrong — please try again.");
     }
   };
 
@@ -68,7 +71,7 @@ const BookConsultation: React.FC = () => {
         {/* -- Header -- */}
         <div className="flex flex-col items-center text-center mb-10 sm:mb-14 gap-3">
 
-          {/* Badge — brand blue border, orange quote accents */}
+          {/* Badge- brand blue border, orange quote accents */}
           <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#b8c8f0] bg-white text-gray-800 text-[13px] font-medium shadow-sm">
             <span style={{ color: "#f59e0b", fontSize: "20px", lineHeight: 1, fontFamily: "Georgia, serif" }}>&ldquo;</span>
             Let&apos;s Customize this for You
@@ -116,7 +119,7 @@ const BookConsultation: React.FC = () => {
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-5">
 
-                  {/* Row 1 — Name / Phone */}
+                  {/* Row 1- Name / Phone */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="flex flex-col gap-1.5">
                       <Label htmlFor="bc-name" className="text-sm font-semibold text-[#2563eb]">
@@ -145,7 +148,7 @@ const BookConsultation: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Row 2 — Email / Website */}
+                  {/* Row 2- Email / Website */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="flex flex-col gap-1.5">
                       <Label htmlFor="bc-email" className="text-sm font-semibold text-[#2563eb]">
@@ -224,10 +227,6 @@ const BookConsultation: React.FC = () => {
                       </>
                     )}
                   </Button>
-
-                  {status === "error" && (
-                    <p className="text-xs text-red-500">Something went wrong. Please try again.</p>
-                  )}
 
                 </form>
               )}

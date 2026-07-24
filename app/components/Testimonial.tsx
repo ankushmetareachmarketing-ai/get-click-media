@@ -6,7 +6,7 @@ import SectionHeading from "./SectionHeading";
 
 const testimonials = [
   {
-    text: "Get Click Media's WhatsApp API integration doubled our lead conversion rate within 30 days. The chatbot handles 80% of inquiries automatically — our sales team now focuses only on hot leads.",
+    text: "Get Click Media's WhatsApp API integration doubled our lead conversion rate within 30 days. The chatbot handles 80% of inquiries automatically- our sales team now focuses only on hot leads.",
     image: "https://randomuser.me/api/portraits/men/32.jpg",
     name: "Rohan Mehta",
     role: "VP Sales, NeoRetail India",
@@ -18,7 +18,7 @@ const testimonials = [
     role: "Marketing Head, EduNext",
   },
   {
-    text: "OTP delivery is now under 3 seconds flat. Get Click Media's infrastructure handled our Diwali sale — 2 million messages — without a single failure. Exceptional reliability.",
+    text: "OTP delivery is now under 3 seconds flat. Get Click Media's infrastructure handled our Diwali sale- 2 million messages- without a single failure. Exceptional reliability.",
     image: "https://randomuser.me/api/portraits/men/56.jpg",
     name: "Aditya Kapoor",
     role: "CTO, QuickPay Fintech",
@@ -36,7 +36,7 @@ const testimonials = [
     role: "Operations Head, CarePlus Hospitals",
   },
   {
-    text: "Our abandoned cart recovery campaigns via WhatsApp achieve a 38% recovery rate — ten times better than email. Get Click Media's platform is incredibly intuitive to use.",
+    text: "Our abandoned cart recovery campaigns via WhatsApp achieve a 38% recovery rate- ten times better than email. Get Click Media's platform is incredibly intuitive to use.",
     image: "https://randomuser.me/api/portraits/women/29.jpg",
     name: "Meghna Joshi",
     role: "E-commerce Manager, FashionVault",
@@ -83,7 +83,7 @@ export default function Testimonial() {
               eyebrow="Customer Stories"
               title="Trusted by 10,000+ businesses across India"
               highlight="10,000+ businesses"
-              description="Real results from real customers — see how Get Click Media transforms customer communication at scale."
+              description="Real results from real customers- see how Get Click Media transforms customer communication at scale."
               align="left"
               size="lg"
             />

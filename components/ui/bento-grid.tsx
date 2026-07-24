@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 /**
  * Aceternity-style BentoGrid, recolored/restyled to the site's card tokens
  * (--surface, --border-subtle, --shadow-card) instead of Aceternity's stock
- * dark-mode-first neutral palette. Pure CSS hover — no JS, so it's free on
+ * dark-mode-first neutral palette. Pure CSS hover- no JS, so it's free on
  * mobile and never needs a reduced-motion guard.
  */
 export const BentoGrid = ({
@@ -40,7 +40,7 @@ export const BentoGridItem = ({
   title: React.ReactNode;
   description?: React.ReactNode;
   icon?: React.ReactNode;
-  /** span 2 columns on sm+ — use for one hero-ish standout tile per grid */
+  /** span 2 columns on sm+- use for one hero-ish standout tile per grid */
   span?: boolean;
   /** Which kind of section background this card sits on. */
   tone?: "light" | "dark";
@@ -98,7 +98,7 @@ export interface BentoCardProps {
   description: string;
   icon: LucideIcon;
   /**
-   * Grid placement — pass explicit `lg:col-start-*`/`lg:col-end-*`/
+   * Grid placement- pass explicit `lg:col-start-*`/`lg:col-end-*`/
    * `lg:row-start-*`/`lg:row-end-*` here for a true asymmetric bento layout
    * (tiles of different sizes), matched against `BentoGrid`'s own
    * `lg:grid-cols-*`/`lg:grid-rows-*`. Omit for a plain equal-size tile.
@@ -115,7 +115,7 @@ export interface BentoCardProps {
 }
 
 /**
- * The richer bento tile — same tokens/hover language as `BentoGridItem`,
+ * The richer bento tile- same tokens/hover language as `BentoGridItem`,
  * but supports a background layer and an optional hover-reveal CTA link,
  * and is meant to be positioned via explicit grid-line classes for a real
  * varied-size bento layout (see `BentoGrid`'s doc comment for an example).

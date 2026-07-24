@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 /**
  * Aceternity-style Spotlight, recolored to the brand blue scale
  * (--primary / --primary-light) instead of Aceternity's stock purple.
- * Pure SVG + CSS opacity fade — no JS animation loop, so it's free on
+ * Pure SVG + CSS opacity fade- no JS animation loop, so it's free on
  * mobile and doesn't fight prefers-reduced-motion.
  */
 export const Spotlight = ({
@@ -21,7 +21,7 @@ export const Spotlight = ({
 }) => {
   return (
     <svg
-      // Fixed width + auto height (SVG keeps its own aspect ratio via viewBox) —
+      // Fixed width + auto height (SVG keeps its own aspect ratio via viewBox)-
       // percentage sizing here would need the parent to have an explicit height,
       // which a content-sized hero section doesn't have, so it silently collapses.
       className={cn(

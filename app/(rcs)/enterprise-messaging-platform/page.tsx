@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ShieldCheck,
   Server,
@@ -23,14 +24,14 @@ import { SectionPattern } from "@/components/ui/section-pattern";
 export const metadata: Metadata = {
   title: "Enterprise Messaging Platform India | Get Click Media",
   description:
-    "Enterprise-grade messaging for high-volume Indian businesses — RCS, WhatsApp, and SMS with custom SLAs, dedicated support, and custom integrations.",
+    "Enterprise-grade messaging for high-volume Indian businesses- RCS, WhatsApp, and SMS with custom SLAs, dedicated support, and custom integrations.",
   keywords:
     "enterprise messaging platform, enterprise messaging platform india, enterprise sms platform, enterprise whatsapp api, enterprise rcs platform, high volume messaging platform india, enterprise communication platform, enterprise messaging sla, b2b messaging platform india",
   alternates: { canonical: "https://getclickmedia.com/enterprise-messaging-platform" },
   openGraph: {
     title: "Enterprise Messaging Platform India",
     description:
-      "Enterprise-grade messaging for high-volume Indian businesses — RCS, WhatsApp, and SMS with custom SLAs, dedicated support, and custom integrations.",
+      "Enterprise-grade messaging for high-volume Indian businesses- RCS, WhatsApp, and SMS with custom SLAs, dedicated support, and custom integrations.",
     url: "https://getclickmedia.com/enterprise-messaging-platform",
     type: "website",
   },
@@ -41,7 +42,7 @@ const LAST_UPDATED = "July 2026";
 const ENTERPRISE_TRAITS = [
   { icon: Gauge, title: "High-volume capacity", desc: "Infrastructure sized for millions of messages a month across SMS, WhatsApp, and RCS, without the throughput ceilings of a standard small-business plan." },
   { icon: ShieldCheck, title: "Custom SLA terms", desc: "Uptime, delivery-latency, and support-response commitments negotiated to your business's actual risk tolerance, not a fixed one-size-fits-all number." },
-  { icon: Headset, title: "Dedicated account management", desc: "A named account manager and technical contact instead of a shared support queue — for escalations that can't wait in line." },
+  { icon: Headset, title: "Dedicated account management", desc: "A named account manager and technical contact instead of a shared support queue- for escalations that can't wait in line." },
   { icon: Database, title: "Custom system integration", desc: "Direct integration work with your core banking system, ERP, CRM, or in-house platform, beyond what a standard API doc alone gets you to." },
   { icon: Server, title: "Dedicated infrastructure options", desc: "Isolated sending infrastructure for businesses whose volume or compliance requirements call for it, rather than fully shared multi-tenant capacity." },
   { icon: Lock, title: "Security and compliance depth", desc: "India-hosted data processing, audit-trail logging, and support for sector-specific compliance reviews (banking, healthcare) beyond baseline DLT/BSP registration." },
@@ -57,23 +58,23 @@ const SEGMENTS = [
 const FAQS = [
   {
     q: "What defines an enterprise messaging platform?",
-    a: "An enterprise messaging platform offers high-volume sending capacity, negotiated SLA terms, dedicated account and technical support, and custom system integration work — the layer of service beyond what a standard self-serve small-business plan includes.",
+    a: "An enterprise messaging platform offers high-volume sending capacity, negotiated SLA terms, dedicated account and technical support, and custom system integration work- the layer of service beyond what a standard self-serve small-business plan includes.",
   },
   {
     q: "Does Get Click Media serve enterprise and high-volume clients?",
-    a: "Yes — Get Click Media's platform is built on infrastructure already handling delivery for 10,000+ businesses across SMS, WhatsApp, and RCS with 99.9% uptime. High-volume and enterprise accounts move to custom SLA terms, dedicated account management, and direct integration support rather than the standard self-serve plan.",
+    a: "Yes- Get Click Media's platform is built on infrastructure already handling delivery for 10,000+ businesses across SMS, WhatsApp, and RCS with 99.9% uptime. High-volume and enterprise accounts move to custom SLA terms, dedicated account management, and direct integration support rather than the standard self-serve plan.",
   },
   {
     q: "What SLA can an enterprise account expect?",
-    a: "SLA terms — uptime commitments, delivery-latency targets, and support-response times — are negotiated per account based on your volume, criticality, and compliance requirements, rather than published as a single fixed number. Talk to our sales team for the specific terms that apply to your use case.",
+    a: "SLA terms- uptime commitments, delivery-latency targets, and support-response times- are negotiated per account based on your volume, criticality, and compliance requirements, rather than published as a single fixed number. Talk to our sales team for the specific terms that apply to your use case.",
   },
   {
     q: "Can Get Click Media integrate directly with our core banking, ERP, or CRM system?",
-    a: "Yes — enterprise onboarding includes direct integration work with core banking systems, ERP platforms, and CRMs, beyond the standard REST API and webhook documentation available to all accounts.",
+    a: "Yes- enterprise onboarding includes direct integration work with core banking systems, ERP platforms, and CRMs, beyond the standard REST API and webhook documentation available to all accounts.",
   },
   {
     q: "Is enterprise pricing different from the standard plans?",
-    a: "Yes — enterprise accounts move to custom, volume-negotiated pricing rather than the published Starter/Growth per-message rates, reflecting dedicated infrastructure, SLA commitments, and account management that scale with your usage.",
+    a: "Yes- enterprise accounts move to custom, volume-negotiated pricing rather than the published Starter/Growth per-message rates, reflecting dedicated infrastructure, SLA commitments, and account management that scale with your usage.",
   },
 ];
 
@@ -106,11 +107,18 @@ const schema = {
     },
     {
       "@type": "Service",
-      name: "Enterprise Messaging Platform — Get Click Media",
+      name: "Enterprise Messaging Platform- Get Click Media",
       provider: { "@id": "https://getclickmedia.com/#org" },
       areaServed: { "@type": "Country", name: "India" },
       serviceType: "Enterprise Business Messaging (SMS, WhatsApp, RCS)",
       url: "https://getclickmedia.com/enterprise-messaging-platform",
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://getclickmedia.com/enterprise-messaging-platform",
+      url: "https://getclickmedia.com/enterprise-messaging-platform",
+      name: "Enterprise Messaging Platform India | Get Click Media",
+      primaryImageOfPage: { "@type": "ImageObject", url: "https://getclickmedia.com/images/rcs/rcs-service-provider-india.png" },
     },
     {
       "@type": "FAQPage",
@@ -142,7 +150,7 @@ export default function EnterpriseMessagingPlatformPage() {
           <>
             High-volume SMS, WhatsApp, and RCS messaging with{" "}
             <strong className="text-gray-900">custom SLAs, dedicated support, and direct
-            system integration</strong> — for Indian businesses whose messaging needs have
+            system integration</strong>- for Indian businesses whose messaging needs have
             outgrown a standard self-serve plan.
           </>
         }
@@ -155,7 +163,7 @@ export default function EnterpriseMessagingPlatformPage() {
 
       <div className="bg-white border-b border-gray-100">
         <p className="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 text-center text-xs text-gray-400">
-          Last updated: {LAST_UPDATED} · Reviewed by the Get Click Media platform team
+          Written by the Get Click Media Pvt. Ltd. Team · Last updated: {LAST_UPDATED} · Reviewed by the Get Click Media platform team
         </p>
       </div>
 
@@ -168,7 +176,7 @@ export default function EnterpriseMessagingPlatformPage() {
           <div className="max-w-[680px] mx-auto rounded-2xl border-l-4 border-[#2563eb] bg-blue-50/60 px-6 py-5">
             <p className="text-base leading-[1.7] text-gray-700">
               An <strong className="text-gray-900">enterprise messaging platform</strong> is a
-              tier of messaging service built for high-volume senders — offering negotiated SLA
+              tier of messaging service built for high-volume senders- offering negotiated SLA
               terms, dedicated account and technical support, and direct integration with core
               business systems, beyond what a standard self-serve plan provides. Get Click Media
               offers this as an upgrade path from its standard SMS, WhatsApp, and RCS plans for
@@ -201,7 +209,7 @@ export default function EnterpriseMessagingPlatformPage() {
           </p>
           <p>
             We'd rather be direct about this than oversell it: enterprise terms are negotiated
-            per account, based on your volume, compliance requirements, and integration scope —
+            per account, based on your volume, compliance requirements, and integration scope-
             they're not a fixed public number we can quote out of context. What we can tell you
             up front is the infrastructure this tier runs on, which already handles delivery for
             10,000+ businesses across India at 99.9% uptime.
@@ -289,7 +297,7 @@ export default function EnterpriseMessagingPlatformPage() {
       {/* -- FAQ ------------------------------------------------------------ */}
       <section className="relative py-16 sm:py-20 lg:py-[100px]" id="faq">
         <SectionPattern tone="gold" />
-        <div className="relative z-10 max-w-3xl mx-auto px-6 sm:px-12 lg:px-20">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-12 lg:px-20">
           <div className="text-center mb-12 space-y-4">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#2563eb] text-xs font-bold uppercase tracking-widest">
               Frequently Asked Questions
@@ -298,7 +306,23 @@ export default function EnterpriseMessagingPlatformPage() {
               Enterprise Messaging Platform FAQs
             </h2>
           </div>
-          <AccordionList items={FAQS.map((f) => ({ question: f.q, answer: <p className="text-base text-gray-500 leading-[1.7]">{f.a}</p> }))} />
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
+            <div className="hidden lg:block lg:w-[36%] shrink-0 lg:sticky lg:top-24">
+              <div className="relative w-full rounded-2xl overflow-hidden aspect-4/5">
+                <Image
+                  src="/images/rcs/rcs-service-provider-india.png"
+                  alt="Ask a question about the Enterprise Messaging Platform"
+                  fill
+                  className="object-cover"
+                  sizes="36vw"
+                />
+              </div>
+            </div>
+            <AccordionList
+              className="flex-1 w-full"
+              items={FAQS.map((f) => ({ question: f.q, answer: <p className="text-base text-gray-500 leading-[1.7]">{f.a}</p> }))}
+            />
+          </div>
         </div>
       </section>
 

@@ -88,7 +88,7 @@ export interface IndustryPageTemplateProps {
 }
 
 /**
- * Shared template for the `bulk-sms-for-{industry}` pages — mirrors the
+ * Shared template for the `bulk-sms-for-{industry}` pages- mirrors the
  * WhatsApp industry-page template (same component library, same layout
  * rhythm) so every product line under getclickmedia.com reads as one
  * design system. Kept as its own copy (not imported cross-folder) because

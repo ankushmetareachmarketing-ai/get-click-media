@@ -57,7 +57,7 @@ export default function TransactionalSmsFinalCTA() {
 
             <p className="text-(--ink-3) text-[0.9375rem] leading-[1.65] max-w-md">
               Join 10,000+ businesses across India. Get a free demo and complete
-              DLT registration assistance — no commitment required.
+              DLT registration assistance- no commitment required.
             </p>
 
             <div className="flex items-center gap-2 sm:gap-3 pt-1">

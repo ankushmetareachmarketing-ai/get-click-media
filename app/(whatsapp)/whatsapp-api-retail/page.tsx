@@ -17,17 +17,17 @@ import { IndustryPageTemplate } from "../_templates/industry-page-template";
 /* ── SEO Metadata ────────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
   title:
-    "WhatsApp API for Retail — Festive Campaigns, Loyalty and Customer Engagement India | Get Click Media",
+    "WhatsApp API for Retail- Festive Campaigns, Loyalty and Customer Engagement India | Get Click Media",
   description:
-    "WhatsApp Business API for retail enables Indian retailers — from large format stores to kirana chains — to automate festive sale campaigns, loyalty programme updates, stock availability alerts, and customer re-engagement.",
+    "WhatsApp Business API for retail enables Indian retailers- from large format stores to kirana chains- to automate festive sale campaigns, loyalty programme updates, stock availability alerts, and customer re-engagement.",
   keywords:
     "WhatsApp API for Retail India, WhatsApp Retail India, WhatsApp Loyalty Programme, WhatsApp Festive Sale India, Retail WhatsApp Automation India, WhatsApp for Kiranas India",
   alternates: { canonical: "https://getclickmedia.com/whatsapp-api-retail" },
   openGraph: {
     title:
-      "WhatsApp API for Retail — Festive Campaigns, Loyalty and Customer Engagement India",
+      "WhatsApp API for Retail- Festive Campaigns, Loyalty and Customer Engagement India",
     description:
-      "WhatsApp Business API for retail enables Indian retailers — from large format stores to kirana chains — to automate festive sale campaigns, loyalty programme updates, stock availability alerts, and customer re-engagement.",
+      "WhatsApp Business API for retail enables Indian retailers- from large format stores to kirana chains- to automate festive sale campaigns, loyalty programme updates, stock availability alerts, and customer re-engagement.",
     url: "https://getclickmedia.com/whatsapp-api-retail",
     type: "website",
   },
@@ -60,7 +60,7 @@ const schema = {
       areaServed: { "@type": "Country", name: "India" },
       url: "https://getclickmedia.com/whatsapp-api-retail",
       description:
-        "WhatsApp Business API for retail enables Indian retailers — from large format stores to kirana chains — to automate festive sale campaigns, loyalty programme updates, stock availability alerts, and customer re-engagement.",
+        "WhatsApp Business API for retail enables Indian retailers- from large format stores to kirana chains- to automate festive sale campaigns, loyalty programme updates, stock availability alerts, and customer re-engagement.",
     },
     {
       "@type": "BreadcrumbList",
@@ -117,7 +117,7 @@ const schema = {
           name: "Is WhatsApp suitable for kirana and small retail stores?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes — WhatsApp Business API is cost-effective even for kirana chains and small retailers. For a neighbourhood store with 2,000 customers: a single Diwali campaign WhatsApp send costs approximately Rs 1,700 (at Rs 0.85 per conversation) but drives Rs 15,000-25,000 in incremental footfall if well-executed. GCM's Starter plan is designed for small and mid-size retailers entering WhatsApp API for the first time.",
+            text: "Yes- WhatsApp Business API is cost-effective even for kirana chains and small retailers. For a neighbourhood store with 2,000 customers: a single Diwali campaign WhatsApp send costs approximately Rs 1,700 (at Rs 0.85 per conversation) but drives Rs 15,000-25,000 in incremental footfall if well-executed. GCM's Starter plan is designed for small and mid-size retailers entering WhatsApp API for the first time.",
           },
         },
       ],
@@ -138,7 +138,7 @@ const USE_CASES = [
   {
     icon: Gift,
     title: "Loyalty Programme Points Update",
-    trigger: "Purchase completed — points credited to loyalty account",
+    trigger: "Purchase completed- points credited to loyalty account",
     message:
       "Points earned this transaction, total balance, points value, redemption threshold, and [View Rewards] button",
     result:
@@ -166,7 +166,7 @@ const USE_CASES = [
   {
     icon: Sparkles,
     title: "Stock Clearance and Flash Sale",
-    trigger: "Excess inventory identified in POS — clearance campaign trigger",
+    trigger: "Excess inventory identified in POS- clearance campaign trigger",
     message:
       "Flash sale: product name, original price, sale price, validity (24 hours), [Buy Now] button. Creates urgency with countdown.",
     result:
@@ -174,7 +174,7 @@ const USE_CASES = [
   },
   {
     icon: Users,
-    title: "Win-Back Campaign — Lapsed Customers",
+    title: "Win-Back Campaign- Lapsed Customers",
     trigger: "Customer has not visited or purchased in 90 days",
     message:
       "We miss you message + personalised offer based on past purchase category + [Claim Offer] button",
@@ -222,17 +222,17 @@ const CAPABILITIES = [
   {
     icon: Database,
     title: "POS integration",
-    desc: "Marg ERP, Posist, Lightspeed, custom POS — purchase trigger, loyalty credit events",
+    desc: "Marg ERP, Posist, Lightspeed, custom POS- purchase trigger, loyalty credit events",
   },
   {
     icon: Gift,
     title: "Loyalty platform integration",
-    desc: "LoyLap, Capillary, custom loyalty — points update triggers, tier upgrade notifications",
+    desc: "LoyLap, Capillary, custom loyalty- points update triggers, tier upgrade notifications",
   },
   {
     icon: Store,
     title: "Product catalog",
-    desc: "Retail product catalog sync — category-based personalised campaign targeting",
+    desc: "Retail product catalog sync- category-based personalised campaign targeting",
   },
   {
     icon: Calendar,
@@ -242,7 +242,7 @@ const CAPABILITIES = [
   {
     icon: MapPin,
     title: "Store visit attribution",
-    desc: "WhatsApp offer code redemption tracking in POS — campaign ROI measurement",
+    desc: "WhatsApp offer code redemption tracking in POS- campaign ROI measurement",
   },
   {
     icon: Building2,
@@ -267,7 +267,7 @@ const FAQS = [
   },
   {
     q: "Is WhatsApp suitable for kirana and small retail stores?",
-    a: "Yes — WhatsApp Business API is cost-effective even for kirana chains and small retailers. For a neighbourhood store with 2,000 customers: a single Diwali campaign WhatsApp send costs approximately Rs 1,700 (at Rs 0.85 per conversation) but drives Rs 15,000-25,000 in incremental footfall if well-executed. GCM's Starter plan is designed for small and mid-size retailers entering WhatsApp API for the first time.",
+    a: "Yes- WhatsApp Business API is cost-effective even for kirana chains and small retailers. For a neighbourhood store with 2,000 customers: a single Diwali campaign WhatsApp send costs approximately Rs 1,700 (at Rs 0.85 per conversation) but drives Rs 15,000-25,000 in incremental footfall if well-executed. GCM's Starter plan is designed for small and mid-size retailers entering WhatsApp API for the first time.",
   },
 ];
 
@@ -294,15 +294,15 @@ export default function WhatsAppAPIRetailPage() {
       heroHighlight="Festive Campaigns, Loyalty and Customer Engagement India"
       heroDescription={
         <>
-          WhatsApp Business API for retail enables Indian retailers — from large format stores to kirana
-          chains — to automate festive sale campaigns, loyalty programme updates, stock availability alerts,
+          WhatsApp Business API for retail enables Indian retailers- from large format stores to kirana
+          chains- to automate festive sale campaigns, loyalty programme updates, stock availability alerts,
           and customer re-engagement.
           <strong className="text-gray-900"> Get Click Media integrates WhatsApp with POS systems</strong> and
-          loyalty platforms — achieving 3x higher festive campaign revenue and 28% higher repeat visit rates.
+          loyalty platforms- achieving 3x higher festive campaign revenue and 28% higher repeat visit rates.
         </>
       }
       heroImage="/images/whatsapp/retail/whatsapp-api-for-retail.png"
-      heroImageAlt="WhatsApp API Retail — RCS product carousel with festive discount offers for grocery and retail customers"
+      heroImageAlt="WhatsApp API Retail- RCS product carousel with festive discount offers for grocery and retail customers"
       heroTrustLine="Official Meta BSP · POS & loyalty platform integration · DPDP compliant · India-based support"
       stats={[
         { value: "3x", label: "Festive campaign revenue vs single SMS blast" },
@@ -312,16 +312,16 @@ export default function WhatsAppAPIRetailPage() {
       ]}
       aeoParagraph={
         <>
-          WhatsApp Business API for retail enables Indian retailers — from large format stores to kirana
-          chains — to automate festive sale campaigns, loyalty programme updates, stock availability alerts,
+          WhatsApp Business API for retail enables Indian retailers- from large format stores to kirana
+          chains- to automate festive sale campaigns, loyalty programme updates, stock availability alerts,
           and customer re-engagement.
           <strong className="text-gray-900"> Get Click Media integrates WhatsApp with POS systems</strong> and
-          loyalty platforms — achieving 3x higher festive campaign revenue and 28% higher repeat visit rates.
+          loyalty platforms- achieving 3x higher festive campaign revenue and 28% higher repeat visit rates.
         </>
       }
       insightCallout={
         <>
-          Indian retail is deeply seasonal — Diwali, Dussehra, Eid, Christmas, and regional festivals drive{" "}
+          Indian retail is deeply seasonal- Diwali, Dussehra, Eid, Christmas, and regional festivals drive{" "}
           <strong>40-60% of annual revenue</strong> for many categories. The retailers who communicate Diwali
           offers to their WhatsApp customer list 3 days before launch consistently outperform competitors who
           rely on print, SMS, and email.
@@ -356,7 +356,7 @@ export default function WhatsAppAPIRetailPage() {
             </>
           ),
           description:
-            "Manage all customer communication from a single dashboard — festive campaigns, loyalty programme updates, new arrival alerts, stock clearance, and win-back campaigns — with full integration to your POS and loyalty systems.",
+            "Manage all customer communication from a single dashboard- festive campaigns, loyalty programme updates, new arrival alerts, stock clearance, and win-back campaigns- with full integration to your POS and loyalty systems.",
           bullets: [
             "Automated festive campaign carousels with product images",
             "Real-time loyalty points updates after each purchase",
@@ -364,7 +364,7 @@ export default function WhatsAppAPIRetailPage() {
             "Store visit attribution with offer code tracking",
           ],
           image: "/images/whatsapp/retail/whatsapp-api-retail-dashboard.png",
-          imageAlt: "WhatsApp API Retail dashboard — festive campaigns, loyalty updates, new arrivals, and win-back campaigns",
+          imageAlt: "WhatsApp API Retail dashboard- festive campaigns, loyalty updates, new arrivals, and win-back campaigns",
         },
         {
           eyebrow: "Festive Campaign Automation",
@@ -382,7 +382,7 @@ export default function WhatsAppAPIRetailPage() {
             "Pre-built templates for all major Indian festivals",
           ],
           image: "/images/whatsapp/retail/whatsapp-api-retail-festive-campaign.png",
-          imageAlt: "WhatsApp retail festive campaign preview — product carousel with Diwali offers, discount percentages, and Shop Now button",
+          imageAlt: "WhatsApp retail festive campaign preview- product carousel with Diwali offers, discount percentages, and Shop Now button",
           imageSide: "left",
         },
         {
@@ -393,14 +393,14 @@ export default function WhatsAppAPIRetailPage() {
             </>
           ),
           description:
-            "Get Click Media integrates with leading retail POS and loyalty platforms — Marg ERP, Posist, Lightspeed, LoyLap, and Capillary — enabling automated customer communication at every retail touchpoint. Setup takes 3-5 days after WhatsApp API onboarding is complete.",
+            "Get Click Media integrates with leading retail POS and loyalty platforms- Marg ERP, Posist, Lightspeed, LoyLap, and Capillary- enabling automated customer communication at every retail touchpoint. Setup takes 3-5 days after WhatsApp API onboarding is complete.",
           bullets: ["Marg ERP", "Posist", "Lightspeed", "LoyLap", "Capillary", "Custom POS"],
           image: "/images/whatsapp/retail/whatsapp-api-retail-pos-loyalty-integration.png",
-          imageAlt: "WhatsApp API POS integration — Marg ERP, Posist, Lightspeed for retail customer engagement",
+          imageAlt: "WhatsApp API POS integration- Marg ERP, Posist, Lightspeed for retail customer engagement",
           imageSide: "left",
         },
       ]}
-      useCasesTitle="WhatsApp API Use Cases for Retail — 6 Automations"
+      useCasesTitle="WhatsApp API Use Cases for Retail- 6 Automations"
       useCases={USE_CASES}
       performanceData={PERFORMANCE_DATA}
       capabilitiesTitle="Get Click Media's WhatsApp API Capabilities for Retail"

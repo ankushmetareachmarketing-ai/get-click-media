@@ -29,7 +29,7 @@ export default function TransactionalSmsDLTCompliance() {
         </div>
 
         <h2 className="text-[1.75rem] sm:text-[2.25rem] md:text-[2.75rem] [font-family:var(--font-syne)] font-bold leading-[1.1] tracking-[-0.02em] text-(--ink-1) mb-10 max-w-3xl">
-          DLT Compliance for Transactional SMS — India&apos;s TRAI Mandate Explained
+          DLT Compliance for Transactional SMS- India&apos;s TRAI Mandate Explained
         </h2>
 
         <div className="flex flex-col lg:grid lg:grid-cols-[3fr_2fr] gap-10 lg:gap-14 items-start">
@@ -38,8 +38,8 @@ export default function TransactionalSmsDLTCompliance() {
             <p className="text-base text-(--ink-2) leading-relaxed mb-8">
               DLT (Distributed Ledger Technology) registration is mandatory for all
               commercial SMS senders in India as per TRAI regulations effective March 2021.
-              Transactional SMS must be sent via the transactional route — which exempts
-              messages from DND filters — but only after entity, sender ID, and template
+              Transactional SMS must be sent via the transactional route- which exempts
+              messages from DND filters- but only after entity, sender ID, and template
               registration are complete.
             </p>
 
@@ -50,7 +50,7 @@ export default function TransactionalSmsDLTCompliance() {
               TRAI uses the DLT blockchain platform to verify that every commercial message
               sender is a legitimate business. Every template must declare its variables and
               be approved by the telecom operator before use. Unapproved or mismatched
-              templates are scrubbed at the operator level — meaning your message never
+              templates are scrubbed at the operator level- meaning your message never
               reaches the recipient.
             </p>
 
@@ -78,7 +78,7 @@ export default function TransactionalSmsDLTCompliance() {
             </Link>
           </div>
 
-          {/* RIGHT COLUMN — Info box */}
+          {/* RIGHT COLUMN- Info box */}
           <aside className="bg-white border border-(--border-subtle) rounded-xl p-6 sm:p-8 w-full shadow-(--shadow-card)">
             <h3 className="text-base sm:text-lg [font-family:var(--font-syne)] font-semibold text-primary mb-5">
               Key DLT Facts for Transactional SMS

@@ -45,7 +45,7 @@ export default function TrustBar({
           </p>
         </div>
 
-        {/* Right — marquee */}
+        {/* Right- marquee */}
         <div className="flex-1 overflow-hidden relative flex items-center py-5">
           <div className="absolute left-0 top-0 h-full w-16 bg-[linear-gradient(to_right,white,transparent)] z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 h-full w-16 bg-[linear-gradient(to_left,white,transparent)] z-10 pointer-events-none" />

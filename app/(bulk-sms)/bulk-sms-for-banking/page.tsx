@@ -16,14 +16,14 @@ import {
 import { IndustryPageTemplate } from "../_templates/industry-page-template";
 
 export const metadata: Metadata = {
-  title: "Bulk SMS for Banks & NBFCs — OTP, EMI & Fraud Alerts India | Get Click Media",
+  title: "Bulk SMS for Banks & NBFCs- OTP, EMI & Fraud Alerts India | Get Click Media",
   description:
     "Bulk SMS for banks, NBFCs, and fintechs in India delivers OTPs, EMI reminders, low-balance alerts, and fraud notifications on a DND-exempt transactional route with 99.9% delivery uptime.",
   keywords:
     "bulk sms for banking, sms for banks india, bank sms alert service, emi reminder sms, otp sms for banking, nbfc sms service provider",
   alternates: { canonical: "https://getclickmedia.com/bulk-sms-for-banking" },
   openGraph: {
-    title: "Bulk SMS for Banks & NBFCs — OTP, EMI & Fraud Alerts India",
+    title: "Bulk SMS for Banks & NBFCs- OTP, EMI & Fraud Alerts India",
     description:
       "Deliver OTPs, EMI reminders, low-balance alerts, and fraud notifications on a DND-exempt transactional SMS route for banks and NBFCs.",
     url: "https://getclickmedia.com/bulk-sms-for-banking",
@@ -67,7 +67,7 @@ const schema = {
           name: "Why do banks in India still depend on SMS for OTPs instead of app notifications?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "SMS OTP delivery doesn't depend on the customer having the bank's app installed, being logged in, or having a data connection at the moment of the transaction — it works on any handset over the basic cellular network. That universal reach, combined with the transactional route being exempt from DND filtering, is why SMS remains the primary OTP channel for net banking, UPI, and card transactions across Indian banks and NBFCs.",
+            text: "SMS OTP delivery doesn't depend on the customer having the bank's app installed, being logged in, or having a data connection at the moment of the transaction- it works on any handset over the basic cellular network. That universal reach, combined with the transactional route being exempt from DND filtering, is why SMS remains the primary OTP channel for net banking, UPI, and card transactions across Indian banks and NBFCs.",
           },
         },
         {
@@ -75,7 +75,7 @@ const schema = {
           name: "Can EMI reminder SMS be sent to customers on the DND registry?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes — EMI due-date reminders, payment confirmations, and account alerts to an existing customer are transactional service messages and are sent on the DND-exempt transactional SMS route, not the promotional route. This is distinct from a marketing offer SMS, which does require the recipient to be off the DND registry. Get Click Media configures templates on the correct route so critical alerts are never blocked.",
+            text: "Yes- EMI due-date reminders, payment confirmations, and account alerts to an existing customer are transactional service messages and are sent on the DND-exempt transactional SMS route, not the promotional route. This is distinct from a marketing offer SMS, which does require the recipient to be off the DND registry. Get Click Media configures templates on the correct route so critical alerts are never blocked.",
           },
         },
         {
@@ -83,7 +83,7 @@ const schema = {
           name: "How fast can a fraud alert SMS reach a bank customer?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "On a properly configured transactional SMS route with a direct operator connection, a fraud or unusual-transaction alert can reach the customer within seconds of the trigger firing from the bank's fraud management system — fast enough for the customer to respond before further transactions go through. Delivery speed depends on route quality, which is why banks work with providers offering direct-to-operator SMS routes rather than shared low-priority ones.",
+            text: "On a properly configured transactional SMS route with a direct operator connection, a fraud or unusual-transaction alert can reach the customer within seconds of the trigger firing from the bank's fraud management system- fast enough for the customer to respond before further transactions go through. Delivery speed depends on route quality, which is why banks work with providers offering direct-to-operator SMS routes rather than shared low-priority ones.",
           },
         },
         {
@@ -131,7 +131,7 @@ const USE_CASES = [
   {
     icon: FileText,
     title: "KYC Renewal & Document Reminder",
-    trigger: "KYC expiry approaching — 60, 30, and 7 days out",
+    trigger: "KYC expiry approaching- 60, 30, and 7 days out",
     message: "Renewal notice with branch or online-update instructions ahead of the compliance deadline.",
     result: "Higher on-time KYC completion, fewer accounts frozen for non-compliance.",
   },
@@ -164,15 +164,15 @@ const CAPABILITIES = [
 const FAQS = [
   {
     q: "Why do banks in India still depend on SMS for OTPs instead of app notifications?",
-    a: "SMS OTP delivery doesn't depend on the customer having the bank's app installed, being logged in, or having a data connection at the moment of the transaction — it works on any handset over the basic cellular network. That universal reach, combined with the transactional route being exempt from DND filtering, is why SMS remains the primary OTP channel for net banking, UPI, and card transactions across Indian banks and NBFCs.",
+    a: "SMS OTP delivery doesn't depend on the customer having the bank's app installed, being logged in, or having a data connection at the moment of the transaction- it works on any handset over the basic cellular network. That universal reach, combined with the transactional route being exempt from DND filtering, is why SMS remains the primary OTP channel for net banking, UPI, and card transactions across Indian banks and NBFCs.",
   },
   {
     q: "Can EMI reminder SMS be sent to customers on the DND registry?",
-    a: "Yes — EMI due-date reminders, payment confirmations, and account alerts to an existing customer are transactional service messages and are sent on the DND-exempt transactional SMS route, not the promotional route. This is distinct from a marketing offer SMS, which does require the recipient to be off the DND registry. Get Click Media configures templates on the correct route so critical alerts are never blocked.",
+    a: "Yes- EMI due-date reminders, payment confirmations, and account alerts to an existing customer are transactional service messages and are sent on the DND-exempt transactional SMS route, not the promotional route. This is distinct from a marketing offer SMS, which does require the recipient to be off the DND registry. Get Click Media configures templates on the correct route so critical alerts are never blocked.",
   },
   {
     q: "How fast can a fraud alert SMS reach a bank customer?",
-    a: "On a properly configured transactional SMS route with a direct operator connection, a fraud or unusual-transaction alert can reach the customer within seconds of the trigger firing from the bank's fraud management system — fast enough for the customer to respond before further transactions go through. Delivery speed depends on route quality, which is why banks work with providers offering direct-to-operator SMS routes rather than shared low-priority ones.",
+    a: "On a properly configured transactional SMS route with a direct operator connection, a fraud or unusual-transaction alert can reach the customer within seconds of the trigger firing from the bank's fraud management system- fast enough for the customer to respond before further transactions go through. Delivery speed depends on route quality, which is why banks work with providers offering direct-to-operator SMS routes rather than shared low-priority ones.",
   },
   {
     q: "What compliance does a bank need for SMS communication in India?",
@@ -203,13 +203,13 @@ export default function BulkSmsForBankingPage() {
           Deliver OTPs, EMI reminders, low-balance alerts, and fraud notifications on a DND-exempt
           transactional route built for regulated financial communication in India.{" "}
           <strong className="text-gray-900">
-            Get Click Media provides direct-operator SMS routing for banks and NBFCs — improving
+            Get Click Media provides direct-operator SMS routing for banks and NBFCs- improving
             on-time EMI payments and cutting fraud-alert delivery time to seconds.
           </strong>
         </>
       }
       heroImage="/images/bulk-sms/what-is-transactional-sms-service.webp"
-      heroImageAlt="Bulk SMS for Banking and NBFC — OTP and EMI alert dashboard"
+      heroImageAlt="Bulk SMS for Banking and NBFC- OTP and EMI alert dashboard"
       heroTrustLine="TRAI DLT registered · DND-exempt transactional route · India-hosted infrastructure · 99.9% uptime"
       stats={[
         { value: "99.9%", label: "OTP delivery rate" },
@@ -222,12 +222,12 @@ export default function BulkSmsForBankingPage() {
           Bulk SMS for banking delivers OTPs, EMI due reminders, low-balance alerts, KYC renewal
           notices, and fraud alerts to customers on a DND-exempt transactional route.{" "}
           <strong className="text-gray-900">Get Click Media integrates bulk SMS with core banking and NBFC loan systems</strong>{" "}
-          in India — improving on-time EMI payments and reducing collections team workload.
+          in India- improving on-time EMI payments and reducing collections team workload.
         </>
       }
       insightCallout={
         <>
-          Financial communication has zero tolerance for delay or drop — an OTP that arrives late
+          Financial communication has zero tolerance for delay or drop- an OTP that arrives late
           fails a transaction, and a fraud alert that arrives late is too late to help. SMS on a
           DND-exempt transactional route with a direct operator connection is still the fastest,
           most universal way to guarantee that critical banking messages land on time.
@@ -236,14 +236,14 @@ export default function BulkSmsForBankingPage() {
       whyIndustryTitle="Why Banks and NBFCs in India Need Bulk SMS"
       whyIndustryParagraphs={[
         <>
-          Indian banks and NBFCs send millions of time-critical messages daily — OTPs, EMI
-          reminders, fraud alerts, and account updates — to a customer base that spans every kind
+          Indian banks and NBFCs send millions of time-critical messages daily- OTPs, EMI
+          reminders, fraud alerts, and account updates- to a customer base that spans every kind
           of phone and every level of digital comfort. SMS is the one channel guaranteed to work
           across all of them, with no app, login, or data connection required.
         </>,
         <>
           The DND-exempt transactional route matters specifically because regulatory and service
-          communication — OTPs, payment confirmations, fraud alerts — must never be filtered the
+          communication- OTPs, payment confirmations, fraud alerts- must never be filtered the
           way a promotional message legitimately can be. Getting that routing right is as much a
           compliance requirement as a delivery-performance one.
         </>,
@@ -265,7 +265,7 @@ export default function BulkSmsForBankingPage() {
             </>
           ),
           description:
-            "Manage every customer touchpoint — OTP delivery, EMI reminders, low-balance alerts, KYC renewals, and fraud notifications — from a single SMS dashboard connected to your core banking or loan management system.",
+            "Manage every customer touchpoint- OTP delivery, EMI reminders, low-balance alerts, KYC renewals, and fraud notifications- from a single SMS dashboard connected to your core banking or loan management system.",
           bullets: [
             "Direct-operator OTP routing",
             "EMI due-date reminder sequences",
@@ -273,7 +273,7 @@ export default function BulkSmsForBankingPage() {
             "Audit-trail logging for compliance review",
           ],
           image: "/images/bulk-sms/transactional-sms-service-provider.webp",
-          imageAlt: "Bulk SMS dashboard for banking — OTP, EMI, and fraud alerts",
+          imageAlt: "Bulk SMS dashboard for banking- OTP, EMI, and fraud alerts",
         },
         {
           eyebrow: "EMI Collection Automation",
@@ -283,7 +283,7 @@ export default function BulkSmsForBankingPage() {
             </>
           ),
           description:
-            "Every upcoming EMI due date triggers a reminder 7 days before, 2 days before, and on the due date itself — masked account number, amount, and due date in every message — reducing pre-delinquency collections workload.",
+            "Every upcoming EMI due date triggers a reminder 7 days before, 2 days before, and on the due date itself- masked account number, amount, and due date in every message- reducing pre-delinquency collections workload.",
           bullets: [
             "7-day and 2-day advance reminders",
             "Due-date-of final reminder",
@@ -295,7 +295,7 @@ export default function BulkSmsForBankingPage() {
           imageSide: "left",
         },
       ]}
-      useCasesTitle="Bulk SMS Use Cases for Banking and NBFC — 6 Automations"
+      useCasesTitle="Bulk SMS Use Cases for Banking and NBFC- 6 Automations"
       useCases={USE_CASES}
       performanceData={PERFORMANCE_DATA}
       capabilitiesTitle="Get Click Media's Bulk SMS Capabilities for Banking and NBFC"

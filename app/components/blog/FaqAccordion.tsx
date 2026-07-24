@@ -43,7 +43,7 @@ export default function FaqAccordion({ faqs }: { faqs: FaqItem[] }) {
               </span>
             </button>
 
-            {/* Collapsible body — grid-rows trick for smooth height animation */}
+            {/* Collapsible body- grid-rows trick for smooth height animation */}
             <div
               className="grid transition-all duration-300 ease-in-out"
               style={{ gridTemplateRows: isOpen ? '1fr' : '0fr' }}

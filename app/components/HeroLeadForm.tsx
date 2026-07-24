@@ -2,6 +2,7 @@
 
 import { useState, ChangeEvent, FormEvent, ReactNode, InputHTMLAttributes } from 'react';
 import Image from 'next/image';
+import toast from 'react-hot-toast';
 
 
 
@@ -32,8 +33,6 @@ interface LeadFormState {
     newsletter: boolean;
 }
 
-type SubmitStatus = 'success' | 'error' | null;
-
 type FormFieldKey = keyof LeadFormState;
 
 const initialFormState: LeadFormState = {
@@ -53,7 +52,6 @@ export default function HeroLeadForm({
 }: HeroLeadFormProps) {
     const [form, setForm] = useState<LeadFormState>(initialFormState);
     const [submitting, setSubmitting] = useState<boolean>(false);
-    const [status, setStatus] = useState<SubmitStatus>(null);
 
     const update =
         (key: FormFieldKey) =>
@@ -69,20 +67,30 @@ export default function HeroLeadForm({
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!form.consent) {
-            setStatus('error');
+            toast.error('Please accept the consent checkbox to continue.');
             return;
         }
         try {
             setSubmitting(true);
-            setStatus(null);
 
-            // Wire this up to your API route / CRM webhook.
-            // await fetch('/api/lead', { method: 'POST', body: JSON.stringify(form) });
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: form.fullName,
+                    email: form.email,
+                    phone: form.phone,
+                    company: form.company,
+                    service: form.product,
+                    message: form.remarks || `New hero form lead - interested in ${form.product || 'a service'}. Newsletter opt-in: ${form.newsletter ? 'yes' : 'no'}.`,
+                }),
+            });
+            if (!res.ok) throw new Error('Request failed');
 
-            setStatus('success');
+            toast.success("Thanks! We'll be in touch shortly.");
             setForm(initialFormState);
-        } catch (err) {
-            setStatus('error');
+        } catch {
+            toast.error('Something went wrong - please try again.');
         } finally {
             setSubmitting(false);
         }
@@ -103,7 +111,7 @@ export default function HeroLeadForm({
                 {/* subtle gradient so the card edge blends on desktop */}
                 <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-transparent to-transparent" />
             </div>
-            {/* Form card — centered over the banner on all screen sizes */}
+            {/* Form card- centered over the banner on all screen sizes */}
             <div
                 className="
     absolute top-1/2 z-10
@@ -121,7 +129,7 @@ export default function HeroLeadForm({
                     change your business.
                 </h2>
                 <p className="mt-3 text-[15px] text-slate-600">
-                    Big or small, we power communication for all — talk to us today.
+                    Big or small, we power communication for all- talk to us today.
                 </p>
 
                 <form onSubmit={handleSubmit} className="mt-7 space-y-5">
@@ -206,17 +214,6 @@ export default function HeroLeadForm({
                     >
                         {submitting ? 'Sending…' : 'Talk to an expert'}
                     </button>
-
-                    {status === 'success' && (
-                        <p className="text-sm text-green-600">
-                            Thanks! We&apos;ll be in touch shortly.
-                        </p>
-                    )}
-                    {status === 'error' && (
-                        <p className="text-sm text-red-600">
-                            Please fill required fields and accept the consent checkbox.
-                        </p>
-                    )}
                 </form>
             </div>
         </section>

@@ -12,7 +12,7 @@ const steps = [
     title: "DLT Registration",
     description: (
       <>
-        We assist you with mandatory TRAI DLT registration — entity, headers and
+        We assist you with mandatory TRAI DLT registration- entity, headers and
         templates. Learn about{" "}
         <Link
           href="/dlt-registration"
@@ -41,7 +41,7 @@ const steps = [
 export default function BulkSmsHowItWorks() {
   return (
     <section
-      aria-label="How it works — 4-step process"
+      aria-label="How it works- 4-step process"
       className="py-20 sm:py-28 bg-(--surface-1)"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
@@ -58,7 +58,7 @@ export default function BulkSmsHowItWorks() {
           </p>
         </div>
 
-        {/* Steps — mobile: vertical list, desktop: horizontal row */}
+        {/* Steps- mobile: vertical list, desktop: horizontal row */}
         <div className="relative">
           {/* Desktop connector line */}
           <div

@@ -7,6 +7,7 @@ import {
   getCategoryStyle,
   formatDate,
 } from "@/lib/blogs";
+import NewsletterForm from "@/app/components/NewsletterForm";
 
 // -- Config --------------------------------------------------------------------
 
@@ -27,7 +28,7 @@ export async function generateMetadata({
   return {
     title:
       pageNum > 1
-        ? `Blog — Page ${pageNum} | Get Click Media`
+        ? `Blog- Page ${pageNum} | Get Click Media`
         : "Blog | SMS Marketing, WhatsApp API & Business Communication | Get Click Media",
     description:
       "Expert guides on bulk SMS, WhatsApp Business API, RCS messaging, AI chatbots, and DLT compliance for Indian businesses. Stay ahead with actionable communication insights.",
@@ -247,7 +248,7 @@ export default async function BlogPage({
               </ol>
             </nav>
             <h1 className="text-[1.75rem] sm:text-[2.25rem] [font-family:var(--font-syne)] font-bold text-(--ink-1) tracking-[-0.02em]">
-              Blog &amp; Insights — Page {page}
+              Blog &amp; Insights- Page {page}
             </h1>
           </div>
         </section>
@@ -280,7 +281,7 @@ export default async function BlogPage({
       <section id="posts" className="py-14 sm:py-20 bg-(--surface-0)">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
 
-          {/* Featured post — page 1 only */}
+          {/* Featured post- page 1 only */}
           {featured && (
             <article className="mb-10 sm:mb-14 group" itemScope itemType="https://schema.org/BlogPosting">
               <meta itemProp="author" content="Get Click Media" />
@@ -417,24 +418,7 @@ export default async function BlogPage({
               Weekly insights on SMS marketing, WhatsApp API, and compliance updates for
               Indian businesses. No spam, unsubscribe anytime.
             </p>
-            <form
-              className="flex flex-col sm:flex-row items-center gap-3 max-w-md mx-auto"
-              aria-label="Newsletter signup"
-            >
-              <input
-                type="email"
-                placeholder="Enter your work email"
-                required
-                aria-label="Email address"
-                className="flex-1 w-full h-11 px-4 rounded-full bg-white text-(--ink-1) text-sm placeholder:text-(--ink-4) border-0 outline-none focus:ring-2 focus:ring-white/50"
-              />
-              <button
-                type="submit"
-                className="w-full sm:w-auto flex-none h-11 px-6 rounded-full bg-white text-primary text-sm font-bold hover:bg-blue-50 transition-colors whitespace-nowrap"
-              >
-                Subscribe Free
-              </button>
-            </form>
+            <NewsletterForm />
           </div>
         </div>
       </section>

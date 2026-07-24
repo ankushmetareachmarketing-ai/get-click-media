@@ -15,14 +15,14 @@ import { IndustryPageTemplate } from "../_templates/industry-page-template";
 
 /* ── SEO Metadata ────────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: "WhatsApp API for Healthcare — Appointments, Reports & Patient Engagement India | Get Click Media",
+  title: "WhatsApp API for Healthcare- Appointments, Reports & Patient Engagement India | Get Click Media",
   description:
     "WhatsApp Business API for healthcare enables Indian hospitals, clinics, and diagnostic labs to automate appointment reminders, lab report delivery, prescription reminders, and patient follow-ups. Reduce no-shows by 38%.",
   keywords:
     "WhatsApp API for Healthcare India, WhatsApp for Hospitals India, WhatsApp Appointment Booking, WhatsApp Patient Engagement, WhatsApp API Clinic India, Healthcare WhatsApp Automation India",
   alternates: { canonical: "https://getclickmedia.com/whatsapp-api-healthcare" },
   openGraph: {
-    title: "WhatsApp API for Healthcare — Appointments, Reports & Patient Engagement India",
+    title: "WhatsApp API for Healthcare- Appointments, Reports & Patient Engagement India",
     description:
       "WhatsApp Business API for healthcare enables Indian hospitals, clinics, and diagnostic labs to automate appointment reminders, lab report delivery, prescription reminders, and patient follow-ups.",
     url: "https://getclickmedia.com/whatsapp-api-healthcare",
@@ -70,7 +70,7 @@ const schema = {
         {
           "@type": "Question",
           name: "How does WhatsApp API reduce appointment no-shows for hospitals?",
-          acceptedAnswer: { "@type": "Answer", text: "WhatsApp appointment reminders achieve 90%+ open rates compared to 30-35% for SMS. The automated sequence — confirmation immediately after booking, reminder 48 hours before, and day-of reminder — gives patients multiple touchpoints to confirm or reschedule rather than simply not showing up. The reschedule button in the WhatsApp message makes rescheduling instant — increasing rescheduled slots that can be filled by other patients." },
+          acceptedAnswer: { "@type": "Answer", text: "WhatsApp appointment reminders achieve 90%+ open rates compared to 30-35% for SMS. The automated sequence- confirmation immediately after booking, reminder 48 hours before, and day-of reminder- gives patients multiple touchpoints to confirm or reschedule rather than simply not showing up. The reschedule button in the WhatsApp message makes rescheduling instant- increasing rescheduled slots that can be filled by other patients." },
         },
         {
           "@type": "Question",
@@ -105,7 +105,7 @@ const USE_CASES = [
     icon: FileText,
     title: "Lab Report Ready Notification",
     trigger: "Lab report finalised in LIS system",
-    message: "Your report is ready. Tap to view — [View Report] button. Reply CALLBACK for doctor consultation.",
+    message: "Your report is ready. Tap to view- [View Report] button. Reply CALLBACK for doctor consultation.",
     result: "Report collection time -60%. Patient satisfaction +22 points. Lab call volume -70%.",
   },
   {
@@ -118,7 +118,7 @@ const USE_CASES = [
   {
     icon: HeartPulse,
     title: "Post-Discharge Follow-Up",
-    trigger: "Patient discharge from HMS — trigger at 48 hours post-discharge",
+    trigger: "Patient discharge from HMS- trigger at 48 hours post-discharge",
     message: "Recovery check-in message with symptom questions, medication compliance check, and escalation path for complications",
     result: "Readmission rate -15%. Complication detection improved. Patient satisfaction +18 points.",
   },
@@ -141,7 +141,7 @@ const USE_CASES = [
 // ── Performance Data ──────────────────────────────────────────────────────
 const PERFORMANCE_DATA = [
   { metric: "Appointment no-show rate", before: "35-45%", after: "8-15%", source: "GCM India healthcare client data" },
-  { metric: "Lab report collection time", before: "3-5 days average", after: "Same day notification + 94% collected within 24hr", source: "GCM client — diagnostic chain" },
+  { metric: "Lab report collection time", before: "3-5 days average", after: "Same day notification + 94% collected within 24hr", source: "GCM client- diagnostic chain" },
   { metric: "Prescription refill compliance", before: "52% (chronic disease patients)", after: "71%", source: "India pharma adherence study" },
   { metric: "Patient satisfaction score (CSAT)", before: "68/100 average", after: "84/100 with WhatsApp engagement", source: "GCM post-deployment survey" },
   { metric: "OPD front desk call volume", before: "100% manual", after: "35% reduction with WhatsApp automation", source: "GCM India hospital client" },
@@ -150,10 +150,10 @@ const PERFORMANCE_DATA = [
 // ── Capabilities ──────────────────────────────────────────────────────────
 const CAPABILITIES = [
   { icon: Database, title: "HMS integration", desc: "Practo, eHospital, Meddbase, custom HMS via HL7 FHIR or REST API webhook" },
-  { icon: Settings, title: "LIS integration", desc: "Lab Information System webhook — triggers report notification on report finalisation" },
+  { icon: Settings, title: "LIS integration", desc: "Lab Information System webhook- triggers report notification on report finalisation" },
   { icon: Calendar, title: "Appointment flow", desc: "Automated confirmation + 48hr + day-of reminder sequence with confirm/reschedule/cancel buttons" },
-  { icon: ShieldCheck, title: "DPDP compliance", desc: "Patient data handled per India's Digital Personal Data Protection Act 2023 — India-hosted infrastructure" },
-  { icon: Languages, title: "Multilingual support", desc: "Hindi, Tamil, Telugu, Kannada, Marathi, Bengali — AI language detection in single conversation" },
+  { icon: ShieldCheck, title: "DPDP compliance", desc: "Patient data handled per India's Digital Personal Data Protection Act 2023- India-hosted infrastructure" },
+  { icon: Languages, title: "Multilingual support", desc: "Hindi, Tamil, Telugu, Kannada, Marathi, Bengali- AI language detection in single conversation" },
   { icon: PhoneCall, title: "Telemedicine integration", desc: "Video consultation link delivery + waiting room notifications" },
 ];
 
@@ -161,7 +161,7 @@ const CAPABILITIES = [
 const FAQS = [
   {
     q: "How does WhatsApp API reduce appointment no-shows for hospitals?",
-    a: "WhatsApp appointment reminders achieve 90%+ open rates compared to 30-35% for SMS. The automated sequence — confirmation immediately after booking, reminder 48 hours before, and day-of reminder — gives patients multiple touchpoints to confirm or reschedule rather than simply not showing up. The reschedule button in the WhatsApp message makes rescheduling instant — increasing rescheduled slots that can be filled by other patients.",
+    a: "WhatsApp appointment reminders achieve 90%+ open rates compared to 30-35% for SMS. The automated sequence- confirmation immediately after booking, reminder 48 hours before, and day-of reminder- gives patients multiple touchpoints to confirm or reschedule rather than simply not showing up. The reschedule button in the WhatsApp message makes rescheduling instant- increasing rescheduled slots that can be filled by other patients.",
   },
   {
     q: "Can WhatsApp send lab reports directly to patients?",
@@ -207,7 +207,7 @@ export default function WhatsAppAPIHealthcarePage() {
         </>
       }
       heroImage="/images/whatsapp/healthcare/whatsapp-api-healthcare.webp"
-      heroImageAlt="WhatsApp API Healthcare dashboard — patient appointment reminders, lab report notifications, and prescription refill automation"
+      heroImageAlt="WhatsApp API Healthcare dashboard- patient appointment reminders, lab report notifications, and prescription refill automation"
       heroTrustLine="Official Meta BSP · HMS & LIS integration · DPDP compliant · India-based support"
       stats={[
         { value: "38%", label: "Reduction in appointment no-shows" },
@@ -235,9 +235,9 @@ export default function WhatsAppAPIHealthcarePage() {
       whyIndustryTitle="Why Healthcare Businesses in India Need WhatsApp API"
       whyIndustryParagraphs={[
         <>
-          Indian hospitals and clinics manage thousands of patient interactions daily — appointment booking,
+          Indian hospitals and clinics manage thousands of patient interactions daily- appointment booking,
           reminders, lab results, discharge summaries, follow-up scheduling, and payment collection. These are
-          handled by phone calls and SMS — expensive, low-response, and creating significant administrative
+          handled by phone calls and SMS- expensive, low-response, and creating significant administrative
           overhead.
         </>,
         <>
@@ -264,15 +264,15 @@ export default function WhatsAppAPIHealthcarePage() {
             </>
           ),
           description:
-            "Manage all patient communication from a single dashboard — appointment reminders, lab reports, prescription refills, and post-discharge follow-ups — with full integration to your existing hospital management system.",
+            "Manage all patient communication from a single dashboard- appointment reminders, lab reports, prescription refills, and post-discharge follow-ups- with full integration to your existing hospital management system.",
           bullets: [
             "Automated appointment confirmation and reminder sequences",
             "Secure lab report delivery with patient portal links",
-            "Multilingual support — Hindi, Tamil, Telugu, Kannada, Marathi, Bengali",
+            "Multilingual support- Hindi, Tamil, Telugu, Kannada, Marathi, Bengali",
             "DPDP 2023 compliant with India-hosted data infrastructure",
           ],
           image: "/images/whatsapp/healthcare/whatsapp-api-platform-healthcare.png",
-          imageAlt: "WhatsApp API Healthcare dashboard — patient appointment reminders, lab report notifications, and prescription refill automation",
+          imageAlt: "WhatsApp API Healthcare dashboard- patient appointment reminders, lab report notifications, and prescription refill automation",
         },
         {
           eyebrow: "Interactive Patient Messaging",
@@ -282,7 +282,7 @@ export default function WhatsAppAPIHealthcarePage() {
             </>
           ),
           description:
-            "Interactive WhatsApp templates with confirm, reschedule, and cancel buttons — patients can manage appointments, access lab reports, and request prescription refills directly from the message, without calling the front desk.",
+            "Interactive WhatsApp templates with confirm, reschedule, and cancel buttons- patients can manage appointments, access lab reports, and request prescription refills directly from the message, without calling the front desk.",
           bullets: [
             "One-tap appointment confirmation and rescheduling",
             "Secure lab report access with view and download buttons",
@@ -290,7 +290,7 @@ export default function WhatsAppAPIHealthcarePage() {
             "Post-discharge follow-ups with symptom reporting",
           ],
           image: "/images/whatsapp/healthcare/whatsapp-healthcare-message-preview.png",
-          imageAlt: "WhatsApp healthcare message preview — appointment reminder with confirm, reschedule buttons and lab report notification",
+          imageAlt: "WhatsApp healthcare message preview- appointment reminder with confirm, reschedule buttons and lab report notification",
           imageSide: "left",
         },
         {
@@ -301,13 +301,13 @@ export default function WhatsAppAPIHealthcarePage() {
             </>
           ),
           description:
-            "Get Click Media integrates with your Hospital Management System (HMS), Lab Information System (LIS), and patient CRM — enabling automated patient communication without disrupting existing clinical workflows. Integration setup typically takes 5-7 business days after WhatsApp API onboarding is complete.",
+            "Get Click Media integrates with your Hospital Management System (HMS), Lab Information System (LIS), and patient CRM- enabling automated patient communication without disrupting existing clinical workflows. Integration setup typically takes 5-7 business days after WhatsApp API onboarding is complete.",
           bullets: ["Practo", "eHospital", "Meddbase", "HMS via HL7 FHIR", "LIS webhook", "Custom REST API"],
           image: "/images/whatsapp/healthcare/whatsapp-api-healthcare-integration-architecture.png",
-          imageAlt: "WhatsApp API healthcare integration architecture — HMS, LIS, and CRM integration with patient communication",
+          imageAlt: "WhatsApp API healthcare integration architecture- HMS, LIS, and CRM integration with patient communication",
         },
       ]}
-      useCasesTitle="WhatsApp API Use Cases for Healthcare — 6 Automations"
+      useCasesTitle="WhatsApp API Use Cases for Healthcare- 6 Automations"
       useCases={USE_CASES}
       performanceData={PERFORMANCE_DATA}
       capabilitiesTitle="Get Click Media's WhatsApp API Capabilities for Healthcare"

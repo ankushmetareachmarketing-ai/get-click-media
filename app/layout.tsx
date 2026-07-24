@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope, Syne, Montserrat } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import GlobalBackground from "./components/GlobalBackground";
@@ -7,6 +8,8 @@ import ServiceModal from "./components/ServiceModal";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import FloatingActions from "./components/FloatingActions";
+import StickyBookDemoCta from "./components/StickyBookDemoCta";
+import FloatingContactIcons from "./components/FloatingContactIcons";
 import SmoothScroll from "@/components/motion/SmoothScroll";
 import RevealInit from "@/components/motion/RevealInit";
 import ScrollProgressBar from "@/components/motion/ScrollProgressBar";
@@ -23,7 +26,7 @@ const syne = Syne({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-// Description/body copy (paragraphs) — distinct from the Syne display
+// Description/body copy (paragraphs)- distinct from the Syne display
 // headings and the Manrope UI chrome, per the brand's typographic hierarchy.
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -37,7 +40,7 @@ export const metadata: Metadata = {
     template: "%s | Get Click Media",
   },
   description:
-    "AI-Powered Customer Communication Platform for Modern Businesses. WhatsApp API, Bulk SMS, RCS, Voice & Email — trusted by 10,000+ Indian businesses.",
+    "AI-Powered Customer Communication Platform for Modern Businesses. WhatsApp API, Bulk SMS, RCS, Voice & Email- trusted by 10,000+ Indian businesses.",
   metadataBase: new URL("https://getclickmedia.com"),
   openGraph: {
     siteName: "Get Click Media",
@@ -52,7 +55,7 @@ const orgSchema = {
   url: "https://getclickmedia.com",
   logo: "https://getclickmedia.com/images/gcm-logo.png",
   telephone: "+91-9667694088",
-  email: "hello@getclickmedia.com",
+  email: "info@getclickmedia.com",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Mumbai",
@@ -81,7 +84,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         />
 
-        {/* Full-page preloader — shown on the initial hard load only (persists
+        {/* Full-page preloader- shown on the initial hard load only (persists
             hidden across client-side <Link> navigations since this layout
             doesn't remount). Hidden by the inline script below once the
             window has fully loaded, with a safety timeout in case "load"
@@ -111,10 +114,10 @@ export default function RootLayout({
           }}
         />
 
-        {/* Fixed dot-grid + floating balls — sits behind everything */}
+        {/* Fixed dot-grid + floating balls- sits behind everything */}
         <GlobalBackground />
 
-        {/* Global animation system — Lenis smooth scroll synced to GSAP's
+        {/* Global animation system- Lenis smooth scroll synced to GSAP's
             ticker, the site-wide data-reveal scroll engine, and the top
             scroll-progress bar. All three are no-ops under
             prefers-reduced-motion. See lib/animation + components/motion. */}
@@ -126,7 +129,25 @@ export default function RootLayout({
         {children}
         <Footer />
         <FloatingActions />
+        <StickyBookDemoCta />
+        <FloatingContactIcons />
         <ServiceModal />
+        <Toaster
+          position="top-center"
+          toastOptions={{
+            duration: 4000,
+            style: {
+              borderRadius: "12px",
+              background: "#0f172a",
+              color: "#fff",
+              fontSize: "14px",
+              fontWeight: 600,
+              padding: "12px 16px",
+            },
+            success: { iconTheme: { primary: "#22c55e", secondary: "#fff" } },
+            error: { iconTheme: { primary: "#ef4444", secondary: "#fff" } },
+          }}
+        />
       </body>
     </html>
   );

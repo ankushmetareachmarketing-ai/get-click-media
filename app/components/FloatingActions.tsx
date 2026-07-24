@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
 import { FloatingDock } from "@/components/ui/floating-dock";
+import { useNearFooter } from "@/hooks/use-near-footer";
 
 const AI_ITEMS = [
   {
@@ -46,6 +47,8 @@ const FloatingActions: React.FC = () => {
   const [mounted, setMounted] = useState(false);
   useEffect(() => { setMounted(true); }, []);
 
+  const nearFooter = useNearFooter();
+
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, base: string) => {
     e.preventDefault();
     const prompt = buildPrompt(window.location.href);
@@ -73,7 +76,15 @@ const FloatingActions: React.FC = () => {
   return createPortal(
     <div
       className="floating-dock-portal"
-      style={{ position: "fixed", bottom: "24px", right: "24px", zIndex: 9999 }}
+      style={{
+        position: "fixed",
+        bottom: "24px",
+        right: "24px",
+        zIndex: 9999,
+        opacity: nearFooter ? 0 : 1,
+        pointerEvents: nearFooter ? "none" : "auto",
+        transition: "opacity 0.3s ease",
+      }}
     >
       <FloatingDock items={items} />
     </div>,

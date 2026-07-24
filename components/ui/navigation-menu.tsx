@@ -99,17 +99,22 @@ function NavigationMenuViewport({
   className,
   ...props
 }: React.ComponentProps<typeof NavigationMenuPrimitive.Viewport>) {
+  // Fixed + centered to the viewport, sized to match the header pill's own
+  // width formula (w-[95%] sm:w-[80%] max-w-screen-xl)- this is the only
+  // consumer of this primitive today, so the dropdown spans the *entire*
+  // navbar pill edge-to-edge instead of just the flex space left over
+  // between the nav links and the right-side CTA buttons.
   return (
     <div
       className={cn(
-        "absolute top-full left-0 isolate z-[10001] flex justify-center"
+        "fixed top-24 left-1/2 -translate-x-1/2 isolate z-[10001] flex justify-center w-[95%] sm:w-[80%] max-w-screen-xl"
       )}
       style={{ zIndex: 10001 }}
     >
       <NavigationMenuPrimitive.Viewport
         data-slot="navigation-menu-viewport"
         className={cn(
-          "origin-top-center relative mt-1.5 h-(--radix-navigation-menu-viewport-height) w-full overflow-hidden rounded-lg bg-popover text-popover-foreground shadow ring-1 ring-foreground/10 transition-[width,height] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] md:w-(--radix-navigation-menu-viewport-width) data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-90 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-90",
+          "origin-top-center relative mt-1.5 h-(--radix-navigation-menu-viewport-height) w-full overflow-hidden rounded-lg bg-popover text-popover-foreground shadow ring-1 ring-foreground/10 transition-[width,height] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-90 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-90",
           className
         )}
         {...props}

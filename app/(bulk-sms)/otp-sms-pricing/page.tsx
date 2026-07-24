@@ -16,14 +16,14 @@ import {
 import { PricingPageTemplate } from "../_templates/pricing-page-template";
 
 export const metadata: Metadata = {
-  title: "OTP SMS Cost in India 2026 — Per-OTP Pricing & Plans | Get Click Media",
+  title: "OTP SMS Cost in India 2026- Per-OTP Pricing & Plans | Get Click Media",
   description:
     "OTP SMS pricing in India starts at ₹0.09 per OTP on the Growth plan. Compare Starter, Growth, and Enterprise plans, volume-based rates, and see how OTP SMS cost compares to WhatsApp OTP delivery.",
   keywords:
     "otp sms cost india, otp sms pricing india, otp sms price per message, sms otp api pricing, cheapest otp sms provider india, otp gateway pricing india",
   alternates: { canonical: "https://getclickmedia.com/otp-sms-pricing" },
   openGraph: {
-    title: "OTP SMS Cost in India 2026 — Per-OTP Pricing & Plans",
+    title: "OTP SMS Cost in India 2026- Per-OTP Pricing & Plans",
     description:
       "OTP SMS pricing in India starts at ₹0.09 per OTP. Compare plans, volume-based rates, and channel cost comparisons.",
     url: "https://getclickmedia.com/otp-sms-pricing",
@@ -44,7 +44,7 @@ const schema = {
     },
     {
       "@type": "Product",
-      name: "OTP SMS Service — Get Click Media",
+      name: "OTP SMS Service- Get Click Media",
       description: "OTP SMS service for transactional one-time-password delivery in India with TRAI DLT compliance support and 99.9% delivery uptime.",
       offers: {
         "@type": "AggregateOffer",
@@ -79,7 +79,7 @@ const schema = {
           name: "Is OTP SMS more expensive than regular promotional SMS?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "OTP SMS runs on the transactional (DND-exempt) route, which prioritises delivery speed and reliability over the shared promotional route — that priority routing can carry a modest premium in some providers' pricing structures. Get Click Media prices OTP and promotional SMS at the same per-message rate across all plans, so businesses don't pay extra simply for choosing the transactional route.",
+            text: "OTP SMS runs on the transactional (DND-exempt) route, which prioritises delivery speed and reliability over the shared promotional route- that priority routing can carry a modest premium in some providers' pricing structures. Get Click Media prices OTP and promotional SMS at the same per-message rate across all plans, so businesses don't pay extra simply for choosing the transactional route.",
           },
         },
         {
@@ -103,7 +103,7 @@ const schema = {
           name: "Is there a faster or priority OTP delivery option at extra cost?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Growth and Enterprise plans include a priority delivery queue and direct operator routing for OTP traffic at no additional per-message surcharge — this is built into the plan rather than sold as a separate add-on, since OTP delivery speed is treated as a core requirement, not a premium feature.",
+            text: "Growth and Enterprise plans include a priority delivery queue and direct operator routing for OTP traffic at no additional per-message surcharge- this is built into the plan rather than sold as a separate add-on, since OTP delivery speed is treated as a core requirement, not a premium feature.",
           },
         },
       ],
@@ -178,7 +178,7 @@ const COMPARISON_ROWS = [
 ];
 
 const FACTORS = [
-  { icon: Layers, title: "Monthly OTP volume", desc: "Price per OTP drops as your monthly volume slab increases — from ₹0.12 at low volume to ₹0.065-0.07 at 5,00,000+ OTPs/month" },
+  { icon: Layers, title: "Monthly OTP volume", desc: "Price per OTP drops as your monthly volume slab increases- from ₹0.12 at low volume to ₹0.065-0.07 at 5,00,000+ OTPs/month" },
   { icon: Zap, title: "Route priority", desc: "Direct operator routing for faster, more reliable OTP delivery is included on Growth and Enterprise plans at no separate surcharge" },
   { icon: ShieldAlert, title: "Traffic spike handling", desc: "Businesses with sharp OTP volume spikes (flash sales, app launches) may need Enterprise-tier failover routing for consistent delivery" },
   { icon: FileText, title: "Template & DLT registration", desc: "OTP templates must be pre-registered on TRAI DLT; GCM includes registration assistance in the platform fee" },
@@ -202,7 +202,7 @@ const FAQS = [
   },
   {
     q: "Is OTP SMS more expensive than regular promotional SMS?",
-    a: "OTP SMS runs on the transactional (DND-exempt) route, which prioritises delivery speed and reliability over the shared promotional route — that priority routing can carry a modest premium in some providers' pricing structures. Get Click Media prices OTP and promotional SMS at the same per-message rate across all plans, so businesses don't pay extra simply for choosing the transactional route.",
+    a: "OTP SMS runs on the transactional (DND-exempt) route, which prioritises delivery speed and reliability over the shared promotional route- that priority routing can carry a modest premium in some providers' pricing structures. Get Click Media prices OTP and promotional SMS at the same per-message rate across all plans, so businesses don't pay extra simply for choosing the transactional route.",
   },
   {
     q: "Does OTP SMS pricing include DLT and sender ID registration?",
@@ -214,7 +214,7 @@ const FAQS = [
   },
   {
     q: "Is there a faster or priority OTP delivery option at extra cost?",
-    a: "Growth and Enterprise plans include a priority delivery queue and direct operator routing for OTP traffic at no additional per-message surcharge — this is built into the plan rather than sold as a separate add-on, since OTP delivery speed is treated as a core requirement, not a premium feature.",
+    a: "Growth and Enterprise plans include a priority delivery queue and direct operator routing for OTP traffic at no additional per-message surcharge- this is built into the plan rather than sold as a separate add-on, since OTP delivery speed is treated as a core requirement, not a premium feature.",
   },
 ];
 
@@ -237,13 +237,13 @@ export default function OtpSmsPricingPage() {
       heroHighlight="Per-OTP Pricing & Plans"
       heroDescription={
         <>
-          Transparent, volume-based OTP SMS pricing for Indian businesses — starting at{" "}
+          Transparent, volume-based OTP SMS pricing for Indian businesses- starting at{" "}
           <strong className="text-gray-900">₹0.09 per OTP</strong> with direct operator routing
           and DLT registration support included on every plan.
         </>
       }
       heroImage="/images/otp-sms/best-otp-sms-service-provider-india.webp"
-      heroImageAlt="OTP SMS pricing in India — plan comparison dashboard"
+      heroImageAlt="OTP SMS pricing in India- plan comparison dashboard"
       heroTrustLine="Direct operator routing · DLT registration included · GST-exclusive, transparent per-OTP rates"
       stats={[
         { value: "₹0.09", label: "Starting price per OTP (Growth plan)" },
@@ -262,7 +262,7 @@ export default function OtpSmsPricingPage() {
       }
       insightCallout={
         <>
-          For OTP specifically, price is only half the decision — delivery speed is the other
+          For OTP specifically, price is only half the decision- delivery speed is the other
           half. A cheaper OTP that arrives 30 seconds late fails the login or checkout it was
           meant to secure. That's why OTP routing quality (direct operator vs shared route)
           matters as much as the per-message rate when comparing providers.
@@ -282,7 +282,7 @@ export default function OtpSmsPricingPage() {
       ]}
       slabRows={SLAB_ROWS}
       comparisonTitle="OTP SMS Cost vs. Other OTP Delivery Channels in India"
-      comparisonSubtitle="Indicative market ranges for India — SMS remains the fastest, widest-reach OTP channel at the lowest cost."
+      comparisonSubtitle="Indicative market ranges for India- SMS remains the fastest, widest-reach OTP channel at the lowest cost."
       comparisonCaption="Cost comparison of OTP delivery channels in India"
       comparisonColumns={[
         { key: "channel", label: "Channel" },
@@ -296,7 +296,7 @@ export default function OtpSmsPricingPage() {
       factors={FACTORS}
       capabilitiesTitle="What's Included in Every Get Click Media OTP Plan"
       capabilities={CAPABILITIES}
-      faqHeading="OTP SMS Pricing in India — FAQs"
+      faqHeading="OTP SMS Pricing in India- FAQs"
       faqs={FAQS}
       relatedLinks={RELATED_LINKS}
       bottomCtaTitle="Ready to see your exact OTP SMS rate?"

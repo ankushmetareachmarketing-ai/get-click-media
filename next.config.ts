@@ -44,7 +44,7 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     return [
-      // Legacy .php URLs with typos or duplicate intent — consolidate to canonical pages
+      // Legacy .php URLs with typos or duplicate intent- consolidate to canonical pages
       {
         source: '/tips-to-unblock-your-bloked-whatsapp-account.php',
         destination: '/whatsapp-business-api-provider-india',

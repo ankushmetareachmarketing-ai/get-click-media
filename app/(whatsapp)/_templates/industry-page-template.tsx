@@ -84,12 +84,12 @@ export interface IndustryPageTemplateProps {
 }
 
 /**
- * Shared template for the 10 `whatsapp-api-{industry}` pages — previously each
+ * Shared template for the 10 `whatsapp-api-{industry}` pages- previously each
  * had its own centered, image-less hero and hand-rolled markup (raw
  * `<table>`, native `<details>`, broken `href="/contact"` links). Standardized
  * onto the same component library as `whatsapp-business-api`: hero now uses
  * the shared `DarkHero` (same navy gradient, same responsive right-image
- * treatment — no fixed width/shadow — as every other redesigned page),
+ * treatment- no fixed width/shadow- as every other redesigned page),
  * reusing each industry's own existing dashboard image as the hero image
  * rather than fabricating a new one.
  */

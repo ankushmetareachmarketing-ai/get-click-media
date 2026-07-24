@@ -11,7 +11,7 @@ export default function Scroll() {
             eyebrow="Platform Overview"
             title="One dashboard to manage Every Conversation"
             highlight="Every Conversation"
-            description="WhatsApp, RCS, SMS, Voice & Email — unified in a single intelligent platform built for modern businesses."
+            description="WhatsApp, RCS, SMS, Voice & Email- unified in a single intelligent platform built for modern businesses."
             align="left"
           />
         </div>

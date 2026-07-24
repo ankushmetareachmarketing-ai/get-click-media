@@ -16,14 +16,14 @@ import {
 import { IndustryPageTemplate } from "../_templates/industry-page-template";
 
 export const metadata: Metadata = {
-  title: "Bulk SMS for Hospitals — Appointment & Lab Report Alerts India | Get Click Media",
+  title: "Bulk SMS for Hospitals- Appointment & Lab Report Alerts India | Get Click Media",
   description:
-    "Bulk SMS for hospitals and clinics in India automates appointment reminders, lab report ready alerts, OPD token updates, medicine refill reminders, and health camp notifications — DLT compliant.",
+    "Bulk SMS for hospitals and clinics in India automates appointment reminders, lab report ready alerts, OPD token updates, medicine refill reminders, and health camp notifications- DLT compliant.",
   keywords:
     "bulk sms for hospitals, sms for hospitals india, appointment reminder sms, lab report sms alert, hospital sms service, patient sms notification system",
   alternates: { canonical: "https://getclickmedia.com/bulk-sms-for-hospitals" },
   openGraph: {
-    title: "Bulk SMS for Hospitals — Appointment & Lab Report Alerts India",
+    title: "Bulk SMS for Hospitals- Appointment & Lab Report Alerts India",
     description:
       "Automate appointment reminders, lab report alerts, OPD token updates, and medicine refill reminders with DLT-compliant bulk SMS for hospitals.",
     url: "https://getclickmedia.com/bulk-sms-for-hospitals",
@@ -75,7 +75,7 @@ const schema = {
           name: "Is it safe to send lab report alerts by SMS given patient privacy?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Hospitals should send a results-ready notification rather than clinical values in the SMS body — the message tells the patient their report is available and links to a secure, authenticated patient portal to view it. This keeps sensitive health data off the SMS itself while still giving patients an immediate, universal notification that doesn't depend on them opening an app.",
+            text: "Hospitals should send a results-ready notification rather than clinical values in the SMS body- the message tells the patient their report is available and links to a secure, authenticated patient portal to view it. This keeps sensitive health data off the SMS itself while still giving patients an immediate, universal notification that doesn't depend on them opening an app.",
           },
         },
         {
@@ -83,7 +83,7 @@ const schema = {
           name: "Can hospitals send medicine refill reminders automatically?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes — for chronic-condition patients on a known prescription cycle, an SMS reminder timed to when their current supply is expected to run out prompts a pharmacy refill or a follow-up consultation before they lapse on medication. This is commonly used by diabetes, cardiac, and dialysis care programs to support medication adherence.",
+            text: "Yes- for chronic-condition patients on a known prescription cycle, an SMS reminder timed to when their current supply is expected to run out prompts a pharmacy refill or a follow-up consultation before they lapse on medication. This is commonly used by diabetes, cardiac, and dialysis care programs to support medication adherence.",
           },
         },
         {
@@ -91,7 +91,7 @@ const schema = {
           name: "Do hospital SMS alerts need TRAI DLT registration?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes — appointment reminders, lab alerts, and refill notifications are transactional healthcare communication and must be sent through a DLT-registered entity and template, same as any other business SMS in India. Get Click Media handles entity registration, sender ID approval, and template registration so hospital communication is compliant from day one.",
+            text: "Yes- appointment reminders, lab alerts, and refill notifications are transactional healthcare communication and must be sent through a DLT-registered entity and template, same as any other business SMS in India. Get Click Media handles entity registration, sender ID approval, and template registration so hospital communication is compliant from day one.",
           },
         },
       ],
@@ -111,7 +111,7 @@ const USE_CASES = [
     icon: FileText,
     title: "Lab Report Ready Alert",
     trigger: "Diagnostic report uploaded to the lab information system",
-    message: "Results-ready SMS with a secure patient-portal link — no clinical values sent in the message body.",
+    message: "Results-ready SMS with a secure patient-portal link- no clinical values sent in the message body.",
     result: "Faster patient awareness without waiting for a phone call from the lab desk.",
   },
   {
@@ -156,7 +156,7 @@ const CAPABILITIES = [
   { icon: Database, title: "HMS & LIS integration", desc: "API and webhook integration with hospital management and lab information systems for appointments, reports, and discharge triggers" },
   { icon: ShieldCheck, title: "DLT-registered templates", desc: "Appointment, report, and refill templates pre-approved on TRAI DLT under your hospital's registered entity" },
   { icon: Globe, title: "PAN-India delivery network", desc: "Multi-operator routing for reliable delivery to patients across metro hospitals and district-level clinics" },
-  { icon: Clock, title: "Real-time triggered alerts", desc: "Instant SMS on report upload, discharge, or queue change — no batch delay between clinical event and patient notification" },
+  { icon: Clock, title: "Real-time triggered alerts", desc: "Instant SMS on report upload, discharge, or queue change- no batch delay between clinical event and patient notification" },
   { icon: Bell, title: "Two-way opt-out handling", desc: "Automatic STOP/unsubscribe handling for camp and outreach promotional SMS, kept separate from clinical transactional alerts" },
   { icon: BadgeCheck, title: "Sender ID approval support", desc: "GCM manages your hospital's approved sender ID so patients instantly recognise who the SMS is from" },
 ];
@@ -168,15 +168,15 @@ const FAQS = [
   },
   {
     q: "Is it safe to send lab report alerts by SMS given patient privacy?",
-    a: "Hospitals should send a results-ready notification rather than clinical values in the SMS body — the message tells the patient their report is available and links to a secure, authenticated patient portal to view it. This keeps sensitive health data off the SMS itself while still giving patients an immediate, universal notification that doesn't depend on them opening an app.",
+    a: "Hospitals should send a results-ready notification rather than clinical values in the SMS body- the message tells the patient their report is available and links to a secure, authenticated patient portal to view it. This keeps sensitive health data off the SMS itself while still giving patients an immediate, universal notification that doesn't depend on them opening an app.",
   },
   {
     q: "Can hospitals send medicine refill reminders automatically?",
-    a: "Yes — for chronic-condition patients on a known prescription cycle, an SMS reminder timed to when their current supply is expected to run out prompts a pharmacy refill or a follow-up consultation before they lapse on medication. This is commonly used by diabetes, cardiac, and dialysis care programs to support medication adherence.",
+    a: "Yes- for chronic-condition patients on a known prescription cycle, an SMS reminder timed to when their current supply is expected to run out prompts a pharmacy refill or a follow-up consultation before they lapse on medication. This is commonly used by diabetes, cardiac, and dialysis care programs to support medication adherence.",
   },
   {
     q: "Do hospital SMS alerts need TRAI DLT registration?",
-    a: "Yes — appointment reminders, lab alerts, and refill notifications are transactional healthcare communication and must be sent through a DLT-registered entity and template, same as any other business SMS in India. Get Click Media handles entity registration, sender ID approval, and template registration so hospital communication is compliant from day one.",
+    a: "Yes- appointment reminders, lab alerts, and refill notifications are transactional healthcare communication and must be sent through a DLT-registered entity and template, same as any other business SMS in India. Get Click Media handles entity registration, sender ID approval, and template registration so hospital communication is compliant from day one.",
   },
 ];
 
@@ -209,7 +209,7 @@ export default function BulkSmsForHospitalsPage() {
         </>
       }
       heroImage="/images/bulk-sms/transactional-sms-india.webp"
-      heroImageAlt="Bulk SMS for Hospitals — appointment and lab report alert dashboard"
+      heroImageAlt="Bulk SMS for Hospitals- appointment and lab report alert dashboard"
       heroTrustLine="TRAI DLT registered · HMS & LIS integration · Secure report-link delivery · 99.9% uptime"
       stats={[
         { value: "99.9%", label: "SMS delivery uptime" },
@@ -222,14 +222,14 @@ export default function BulkSmsForHospitalsPage() {
           Bulk SMS for hospitals automates appointment reminders, lab report ready alerts, OPD
           token updates, medicine refill reminders, and health camp notifications for patients.{" "}
           <strong className="text-gray-900">Get Click Media integrates bulk SMS with hospital management systems</strong>{" "}
-          in India — reducing OPD no-shows and improving chronic-care medication adherence.
+          in India- reducing OPD no-shows and improving chronic-care medication adherence.
         </>
       }
       insightCallout={
         <>
           Healthcare communication has one non-negotiable requirement: it has to reach the
           patient, reliably, without assuming they have data, an app, or time to answer a call.
-          SMS meets that bar for appointment reminders, report alerts, and refill nudges — which
+          SMS meets that bar for appointment reminders, report alerts, and refill nudges- which
           is why it remains the default channel even at hospitals running a full patient app.
         </>
       }
@@ -237,7 +237,7 @@ export default function BulkSmsForHospitalsPage() {
       whyIndustryParagraphs={[
         <>
           A hospital's patient base includes people who are unwell, anxious, or simply not
-          checking an app regularly — appointment day is not the moment to expect proactive
+          checking an app regularly- appointment day is not the moment to expect proactive
           engagement. SMS removes that burden: the reminder arrives on its own, on any phone,
           without the patient needing to open anything.
         </>,
@@ -252,7 +252,7 @@ export default function BulkSmsForHospitalsPage() {
         <>
           💡 <strong>Key insight:</strong> Hospitals that pair a day-before and hours-before SMS
           reminder consistently see fewer OPD no-shows than single-reminder or call-only
-          workflows — because the second reminder catches patients who forgot the first one, at a
+          workflows- because the second reminder catches patients who forgot the first one, at a
           point where they can still reschedule instead of skipping the visit.
         </>
       }
@@ -265,7 +265,7 @@ export default function BulkSmsForHospitalsPage() {
             </>
           ),
           description:
-            "Manage every patient touchpoint — appointment reminders, lab report alerts, OPD queue updates, and refill nudges — from a single SMS dashboard connected to your hospital management system.",
+            "Manage every patient touchpoint- appointment reminders, lab report alerts, OPD queue updates, and refill nudges- from a single SMS dashboard connected to your hospital management system.",
           bullets: [
             "Triggered SMS from HMS appointment changes",
             "Report-ready alerts with secure portal link",
@@ -273,7 +273,7 @@ export default function BulkSmsForHospitalsPage() {
             "Real-time delivery and read-rate reports",
           ],
           image: "/images/bulk-sms/transactional-sms-service-provider.webp",
-          imageAlt: "Bulk SMS dashboard for hospitals — appointment, report, and refill alerts",
+          imageAlt: "Bulk SMS dashboard for hospitals- appointment, report, and refill alerts",
         },
         {
           eyebrow: "Appointment No-Show Reduction",
@@ -283,7 +283,7 @@ export default function BulkSmsForHospitalsPage() {
             </>
           ),
           description:
-            "Every booked appointment triggers a day-before reminder and an hours-before nudge with doctor name, room number, and a reschedule link — cutting no-shows without adding staff workload.",
+            "Every booked appointment triggers a day-before reminder and an hours-before nudge with doctor name, room number, and a reschedule link- cutting no-shows without adding staff workload.",
           bullets: [
             "Day-before reminder with appointment details",
             "Hours-before final nudge",
@@ -295,7 +295,7 @@ export default function BulkSmsForHospitalsPage() {
           imageSide: "left",
         },
       ]}
-      useCasesTitle="Bulk SMS Use Cases for Hospitals — 6 Automations"
+      useCasesTitle="Bulk SMS Use Cases for Hospitals- 6 Automations"
       useCases={USE_CASES}
       performanceData={PERFORMANCE_DATA}
       capabilitiesTitle="Get Click Media's Bulk SMS Capabilities for Hospitals"

@@ -10,7 +10,7 @@ export interface MarketingCtaProps {
   /** Omit to open the sitewide lead-capture modal instead of navigating. */
   href?: string;
   variant?: "primary" | "secondary";
-  /** Which kind of section background this sits on — controls contrast. */
+  /** Which kind of section background this sits on- controls contrast. */
   tone?: "light" | "dark";
   className?: string;
 }
@@ -25,7 +25,7 @@ const STYLES: Record<string, string> = {
 };
 
 /**
- * The one pill CTA button for this page's net-new touchpoints — 52px tall,
+ * The one pill CTA button for this page's net-new touchpoints- 52px tall,
  * 999px radius, arrow that shifts on hover. `href` renders a Link; omitting
  * it opens the sitewide lead-capture modal (the only mechanism on the site
  * that actually persists a lead), matching how Header/CTABanner already do it.

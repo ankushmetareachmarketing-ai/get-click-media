@@ -404,7 +404,7 @@ const IndustriesSection: React.FC = () => {
             eyebrow="Industry Solutions"
             title="Your industry, your rules. Build the perfect stack."
             highlight="Build the perfect stack."
-            description="A smarter, fully customizable communication system — ready to scale with every channel and vertical."
+            description="A smarter, fully customizable communication system- ready to scale with every channel and vertical."
 
           />
         </div>

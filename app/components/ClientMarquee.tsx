@@ -31,7 +31,7 @@ const doubled = [...CLIENTS, ...CLIENTS];
 const ClientMarquee: React.FC = () => {
   return (
     <section className="py-8 sm:py-12 overflow-hidden">
-      {/* Keyframes injected inline — no Tailwind class dependency */}
+      {/* Keyframes injected inline- no Tailwind class dependency */}
       <style>{`
         @keyframes scroll-left {
           from { transform: translateX(0); }
@@ -55,7 +55,7 @@ const ClientMarquee: React.FC = () => {
           WebkitMaskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
         }}
       >
-        {/* Scrolling track — doubled list for seamless loop */}
+        {/* Scrolling track- doubled list for seamless loop */}
         <div className="marquee-track flex w-max">
           {doubled.map((client, i) => (
             <div

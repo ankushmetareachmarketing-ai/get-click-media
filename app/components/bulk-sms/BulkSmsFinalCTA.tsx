@@ -14,13 +14,13 @@ export default function BulkSmsFinalCTA() {
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
 
-        {/* Unified card — one smooth gradient background, no hard divide */}
+        {/* Unified card- one smooth gradient background, no hard divide */}
         <div
           className="rounded-[20px] overflow-hidden shadow-(--shadow-elevated) grid grid-cols-1 lg:grid-cols-[1fr_420px] relative"
           style={{ background: "linear-gradient(110deg, #ffffff 0%, #ffffff 45%, #fef0e8 100%)" }}
         >
 
-          {/* -- Blobs — bottom on mobile, right column on desktop -- */}
+          {/* -- Blobs- bottom on mobile, right column on desktop -- */}
           <div className="absolute bottom-0 left-0 right-0 h-80 lg:top-0 lg:left-auto lg:h-auto lg:w-105 pointer-events-none" aria-hidden="true">
             <div
               className="absolute top-0 bottom-0 my-auto -right-20 w-120 h-120 rounded-full"
@@ -58,7 +58,7 @@ export default function BulkSmsFinalCTA() {
 
             <p className="text-(--ink-3) text-[0.9375rem] leading-[1.65] max-w-md">
               Join 10,000+ businesses across India. Get a free demo and complete
-              DLT registration assistance — no commitment required.
+              DLT registration assistance- no commitment required.
             </p>
 
             <div className="flex items-center gap-2 sm:gap-3 pt-1">
@@ -86,7 +86,7 @@ export default function BulkSmsFinalCTA() {
             </p>
           </div>
 
-          {/* -- Right: image (no background — blobs above provide the color) -- */}
+          {/* -- Right: image (no background- blobs above provide the color) -- */}
           <div className="relative z-10 flex items-end justify-center min-h-75 sm:min-h-90 lg:min-h-0">
             <Image
               src="/images/bulk-sms/book-free demo-for-bulk-sms-service-provider-in-india.png"

@@ -1,6 +1,6 @@
 ---
 title: "RCS API Integration Guide for Indian Developers (2026)"
-description: "Complete RCS API integration guide — authentication, sending rich cards, carousels, webhooks, SMS fallback, and code examples in Node.js, Python, and PHP for Indian businesses."
+description: "Complete RCS API integration guide- authentication, sending rich cards, carousels, webhooks, SMS fallback, and code examples in Node.js, Python, and PHP for Indian businesses."
 slug: "rcs-api-integration-guide"
 image: "/images/blog/rcs-api-integration-guide.webp"
 author: "Get Click Media"
@@ -16,16 +16,16 @@ keywords:
   - "Google RCS API"
 faq:
   - question: "What programming languages does Get Click Media's RCS API support?"
-    answer: "The RCS API is REST over HTTPS — any language works. Official SDKs are available for Node.js (npm), Python (pip), PHP (Composer), and Java (Maven). For other languages such as Go, Ruby, Rust, or .NET, use the raw REST API with your language's standard HTTP client library."
+    answer: "The RCS API is REST over HTTPS- any language works. Official SDKs are available for Node.js (npm), Python (pip), PHP (Composer), and Java (Maven). For other languages such as Go, Ruby, Rust, or .NET, use the raw REST API with your language's standard HTTP client library."
   - question: "Do I need to handle SMS fallback in my code?"
     answer: "You define the fallback SMS content in your API payload via the fallback_sms object, but Get Click Media's platform handles the routing automatically. Your application sends one API call; the platform checks RCS capability and routes to RCS or SMS without any additional code from your side. You receive a message.fallback webhook event when a fallback occurs."
   - question: "What is the maximum throughput of the RCS API?"
-    answer: "The Growth tier supports 100 messages per second — sufficient for most Indian business use cases including real-time OTP delivery and mid-size campaign sends. Enterprise tier supports 1,000+ messages per second with a custom SLA. For transactional messages such as OTPs and fraud alerts, request a dedicated transactional queue to guarantee latency SLAs independent of campaign traffic."
+    answer: "The Growth tier supports 100 messages per second- sufficient for most Indian business use cases including real-time OTP delivery and mid-size campaign sends. Enterprise tier supports 1,000+ messages per second with a custom SLA. For transactional messages such as OTPs and fraud alerts, request a dedicated transactional queue to guarantee latency SLAs independent of campaign traffic."
   - question: "Can I test RCS messages without sending to real customers?"
     answer: "Yes. Get Click Media provides a sandbox environment at api-sandbox.getclickmedia.com with the same endpoint structure as production. Sandbox messages are not delivered to real devices but return realistic mock responses and fire simulated webhook events. You can also whitelist your own verified numbers to receive actual RCS messages in development."
 ---
 
-This guide covers everything a developer needs to integrate [RCS Business Messaging](/rcs-messaging) into an application using Get Click Media's REST API — from authentication and your first message send, through rich card and carousel construction, to webhook handling, SMS fallback configuration, and production best practices.
+This guide covers everything a developer needs to integrate [RCS Business Messaging](/rcs-messaging) into an application using Get Click Media's REST API- from authentication and your first message send, through rich card and carousel construction, to webhook handling, SMS fallback configuration, and production best practices.
 
 Whether you are building a triggered transactional flow (order confirmations, OTPs, fraud alerts), a campaign automation system, or a full conversational chatbot on RCS, this guide gives you working code examples in Node.js, Python, and PHP, and explains the design decisions that matter for production reliability.
 
@@ -62,8 +62,8 @@ https://api.getclickmedia.com/v2/rcs
 
 After onboarding, Get Click Media issues two credentials:
 
-- **API Key** — a long-lived secret for server-side use. Never expose in client-side code or public repositories.
-- **Agent ID** — identifies your verified RCS brand sender. Included in all message send requests.
+- **API Key**- a long-lived secret for server-side use. Never expose in client-side code or public repositories.
+- **Agent ID**- identifies your verified RCS brand sender. Included in all message send requests.
 
 ```http
 Authorization: Bearer gcm_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -71,11 +71,11 @@ Content-Type: application/json
 X-Agent-ID: agent_xxxxxxxx
 ```
 
-### Test your credentials — capability check
+### Test your credentials- capability check
 
 Before sending your first message, verify your credentials are working by calling the capability check endpoint:
 
-```js title="Node.js — Capability Check"
+```js title="Node.js- Capability Check"
 const axios = require('axios');
 
 const checkCapability = async (phoneNumber) => {
@@ -94,15 +94,15 @@ const checkCapability = async (phoneNumber) => {
 checkCapability('+919876543210').then(console.log);
 ```
 
-> **Note:** The capability check is optional — Get Click Media's API performs automatic capability detection before every send. Use explicit capability checks only when your application needs to pre-segment audiences or display channel-specific UI to users.
+> **Note:** The capability check is optional- Get Click Media's API performs automatic capability detection before every send. Use explicit capability checks only when your application needs to pre-segment audiences or display channel-specific UI to users.
 
 ## Sending Your First RCS Message
 
 ### Basic text message with suggested actions
 
-The simplest RCS message — text with your verified sender identity and optional action buttons:
+The simplest RCS message- text with your verified sender identity and optional action buttons:
 
-```js title="Node.js — Basic RCS Message"
+```js title="Node.js- Basic RCS Message"
 const sendRCSMessage = async () => {
   const payload = {
     to: '+919876543210',
@@ -128,7 +128,7 @@ const sendRCSMessage = async () => {
 };
 ```
 
-```python title="Python — Basic RCS Message"
+```python title="Python- Basic RCS Message"
 import requests, os
 
 def send_rcs_message():
@@ -157,9 +157,9 @@ def send_rcs_message():
 
 ## Sending a Rich Card: The Workhorse RCS Format
 
-A rich card is the most commonly used RCS format for business communication — an image or video thumbnail at the top, a title, description text, and action buttons. For a full breakdown of what rich cards can do, see [RCS business messaging features](/blog/rcs-business-messaging-features).
+A rich card is the most commonly used RCS format for business communication- an image or video thumbnail at the top, a title, description text, and action buttons. For a full breakdown of what rich cards can do, see [RCS business messaging features](/blog/rcs-business-messaging-features).
 
-```js title="Node.js — Rich Card Message"
+```js title="Node.js- Rich Card Message"
 const sendRichCard = async () => {
   const payload = {
     to: '+919876543210',
@@ -169,7 +169,7 @@ const sendRichCard = async () => {
         orientation: 'VERTICAL', // or 'HORIZONTAL'
         image_url: 'https://cdn.getclickmedia.com/campaigns/diwali-sale.jpg',
         image_height: 'TALL', // SHORT | MEDIUM | TALL
-        title: 'Diwali Flash Sale — 60% Off',
+        title: 'Diwali Flash Sale- 60% Off',
         description: 'Shop our biggest Diwali sale. Deals on electronics, fashion, home.',
         suggestions: [
           { type: 'action', action: 'open_url',
@@ -191,17 +191,17 @@ const sendRichCard = async () => {
 
 **Image hosting requirements:**
 
-- Images must be publicly accessible via HTTPS URL — no authentication, no signed URLs that expire
+- Images must be publicly accessible via HTTPS URL- no authentication, no signed URLs that expire
 - Recommended formats: JPEG (preferred), PNG, GIF (animated supported), WebP
 - Recommended dimensions: 1440×720px (landscape/TALL) or 720×720px (square/MEDIUM)
-- Max file size: 5MB for images, 100MB for video — keep images under 500KB for fast mobile load
-- Host on a CDN (Cloudfront, Cloudflare, Fastly) — do not host on your application server
+- Max file size: 5MB for images, 100MB for video- keep images under 500KB for fast mobile load
+- Host on a CDN (Cloudfront, Cloudflare, Fastly)- do not host on your application server
 
 ## Sending a Carousel: Multiple Cards in One Message
 
 A carousel sends 2 to 10 rich cards in a single swipeable message. The payload is an array of card objects:
 
-```js title="Node.js — Carousel Message"
+```js title="Node.js- Carousel Message"
 const sendCarousel = async () => {
   const products = [
     { name: 'Nike Air Max 270', price: '7,499', img: 'https://cdn.example.com/nike.jpg', id: 'SKU001' },
@@ -218,7 +218,7 @@ const sendCarousel = async () => {
         image_url: p.img,
         image_height: 'MEDIUM',
         title: p.name,
-        description: `₹${p.price} — Free delivery above ₹999`,
+        description: `₹${p.price}- Free delivery above ₹999`,
         suggestions: [
           { type: 'action', action: 'open_url', text: 'Buy Now',
             url: `https://yourstore.com/product/${p.id}?utm_source=rcs` },
@@ -237,7 +237,7 @@ const sendCarousel = async () => {
 };
 ```
 
-**Carousel best practices:** Keep card descriptions under 100 characters for clean rendering on smaller screens. Use consistent image dimensions across all cards. Limit to 6 cards for campaign carousels — 10-card carousels see diminishing CTR on cards 7+. Always include a global 'View All' suggestion button.
+**Carousel best practices:** Keep card descriptions under 100 characters for clean rendering on smaller screens. Use consistent image dimensions across all cards. Limit to 6 cards for campaign carousels- 10-card carousels see diminishing CTR on cards 7+. Always include a global 'View All' suggestion button.
 
 ## Handling Webhooks: Delivery, Read, and Interaction Events
 
@@ -254,7 +254,7 @@ Webhooks are how Get Click Media's API notifies your application of message even
 | `message.failed` | Delivery failed | message_id, to, error_code, error_message |
 | `message.fallback` | Fell back to SMS | message_id, to, reason (no_rcs_support / offline) |
 
-```js title="Node.js — Webhook Handler (Express)"
+```js title="Node.js- Webhook Handler (Express)"
 const express = require('express');
 const crypto = require('crypto');
 const app = express();
@@ -314,7 +314,7 @@ Every RCS API call should include a `fallback_sms` object. This is the SMS versi
 **Fallback SMS design principles:**
 
 - Keep under 160 characters to avoid multipart SMS and extra charges
-- Include the core CTA as a URL — use a proper tracking URL (not bit.ly — many Indian users distrust shortened links)
+- Include the core CTA as a URL- use a proper tracking URL (not bit.ly- many Indian users distrust shortened links)
 - Always end with your brand name (DLT regulations require it for SMS)
 - The fallback SMS must have a DLT-registered template if it is a promotional message
 - Do not include sensitive data (card numbers, account details) in the fallback SMS text
@@ -327,7 +327,7 @@ fallback_sms: {
   template_id: 'tpl_xxxx'   // DLT template ID for this message type
 }
 
-// Transactional fallback (OTPs, order alerts) — DND exempt:
+// Transactional fallback (OTPs, order alerts)- DND exempt:
 fallback_sms: {
   text: 'Your OTP: 847291. Valid 10 min. Do not share. -BrandName',
   sender_id: 'BRNDOTP',
@@ -340,17 +340,17 @@ fallback_sms: {
 
 For sending campaigns to large contact lists, use the batch send endpoint rather than looping individual message sends. Batch sends are rate-optimised, support personalisation via template variables, and provide campaign-level analytics.
 
-```js title="Node.js — Batch Campaign Send"
+```js title="Node.js- Batch Campaign Send"
 const sendBatchCampaign = async (contacts) => {
   const payload = {
     campaign_name: 'Diwali_Flash_Sale_2026',
-    schedule_at: '2026-10-20T19:00:00+05:30', // IST — send at 7 PM
+    schedule_at: '2026-10-20T19:00:00+05:30', // IST- send at 7 PM
     message_template: {
       type: 'rich_card',
       card: {
         image_url: 'https://cdn.example.com/diwali-banner.jpg',
         title: 'Happy Diwali, {{name}}! Your Deal Is Ready',
-        description: '{{product}} at just ₹{{price}} — today only.',
+        description: '{{product}} at just ₹{{price}}- today only.',
         suggestions: [
           { type: 'action', action: 'open_url', text: 'Shop Now',
             url: 'https://yourstore.com/p/{{sku}}?utm_campaign=diwali26&utm_source=rcs' }
@@ -375,7 +375,7 @@ const sendBatchCampaign = async (contacts) => {
 };
 ```
 
-## Get Click Media RCS API — Endpoints Quick Reference
+## Get Click Media RCS API- Endpoints Quick Reference
 
 | Method | Endpoint | Description |
 |---|---|---|
@@ -402,7 +402,7 @@ Get Click Media's API applies rate limits by tier:
 | Growth | 100 msg/sec | Up to 5,00,000 | 25 concurrent |
 | Enterprise | 1,000+ msg/sec | Unlimited | Custom SLA |
 
-For transactional messages (OTPs, fraud alerts), request a dedicated rate limit pool — transactional messages share a separate queue from campaign messages to ensure latency SLAs.
+For transactional messages (OTPs, fraud alerts), request a dedicated rate limit pool- transactional messages share a separate queue from campaign messages to ensure latency SLAs.
 
 ### Idempotency
 
@@ -419,7 +419,7 @@ headers: {
 
 ### Error handling and retry logic
 
-```js title="Node.js — Retry with Exponential Backoff"
+```js title="Node.js- Retry with Exponential Backoff"
 const sendWithRetry = async (payload, maxRetries = 3) => {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
@@ -442,9 +442,9 @@ const sendWithRetry = async (payload, maxRetries = 3) => {
 };
 ```
 
-### PHP example — sending a rich card
+### PHP example- sending a rich card
 
-```php title="PHP — Rich Card Send"
+```php title="PHP- Rich Card Send"
 <?php
 function sendRCSRichCard(string $phone, array $card): array {
     $payload = [
@@ -484,13 +484,13 @@ function sendRCSRichCard(string $phone, array $card): array {
 
 ### Security checklist
 
-- Store API keys in environment variables — never hardcode in source code or commit to Git
-- Restrict API key by IP allowlist in the GCM dashboard — only your application server IPs should be able to use the key
+- Store API keys in environment variables- never hardcode in source code or commit to Git
+- Restrict API key by IP allowlist in the GCM dashboard- only your application server IPs should be able to use the key
 - Verify webhook signatures on every inbound event using HMAC-SHA256 (see webhook section above)
-- Use HTTPS for your webhook endpoint — reject any webhook delivery to an HTTP endpoint
-- Log all API calls with `message_id` for debugging and audit — retain for 90 days minimum
+- Use HTTPS for your webhook endpoint- reject any webhook delivery to an HTTP endpoint
+- Log all API calls with `message_id` for debugging and audit- retain for 90 days minimum
 - Never include full account numbers, card numbers, or passwords in RCS message text
-- Rotate your API key every 90 days — GCM supports key rotation with zero downtime via dual-key overlap
+- Rotate your API key every 90 days- GCM supports key rotation with zero downtime via dual-key overlap
 
 ---
 

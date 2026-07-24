@@ -16,14 +16,14 @@ import {
 import { IndustryPageTemplate } from "../_templates/industry-page-template";
 
 export const metadata: Metadata = {
-  title: "Bulk SMS for Ecommerce — Order & Delivery Alerts India | Get Click Media",
+  title: "Bulk SMS for Ecommerce- Order & Delivery Alerts India | Get Click Media",
   description:
-    "Bulk SMS for ecommerce brands in India automates order confirmations, checkout OTPs, shipping and delivery updates, COD verification, and cart abandonment reminders — DLT compliant.",
+    "Bulk SMS for ecommerce brands in India automates order confirmations, checkout OTPs, shipping and delivery updates, COD verification, and cart abandonment reminders- DLT compliant.",
   keywords:
     "bulk sms for ecommerce, sms for online store india, order confirmation sms, delivery update sms, cart abandonment sms, cod verification sms",
   alternates: { canonical: "https://getclickmedia.com/bulk-sms-for-ecommerce" },
   openGraph: {
-    title: "Bulk SMS for Ecommerce — Order & Delivery Alerts India",
+    title: "Bulk SMS for Ecommerce- Order & Delivery Alerts India",
     description:
       "Automate order confirmations, checkout OTPs, delivery updates, and cart abandonment reminders with DLT-compliant bulk SMS for ecommerce.",
     url: "https://getclickmedia.com/bulk-sms-for-ecommerce",
@@ -67,7 +67,7 @@ const schema = {
           name: "How does SMS reduce COD order return rates for ecommerce?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "A COD confirmation SMS sent right after checkout — asking the customer to reply or click a link to confirm the order — filters out fake, mistaken, or impulse COD orders before they enter the fulfilment pipeline. Sellers running COD confirmation SMS see fewer RTO (return-to-origin) shipments, since unconfirmed orders can be flagged or held before a courier is dispatched.",
+            text: "A COD confirmation SMS sent right after checkout- asking the customer to reply or click a link to confirm the order- filters out fake, mistaken, or impulse COD orders before they enter the fulfilment pipeline. Sellers running COD confirmation SMS see fewer RTO (return-to-origin) shipments, since unconfirmed orders can be flagged or held before a courier is dispatched.",
           },
         },
         {
@@ -83,7 +83,7 @@ const schema = {
           name: "Why use SMS for order updates when the marketplace app already sends notifications?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Not every ecommerce buyer has the seller's own app installed — many shop through marketplaces, WhatsApp catalogues, or a website checkout with no app at all. SMS order-confirmation and delivery-update alerts reach every buyer regardless of which app (if any) they used to purchase, which is why most D2C and marketplace sellers run SMS as their baseline order-communication channel.",
+            text: "Not every ecommerce buyer has the seller's own app installed- many shop through marketplaces, WhatsApp catalogues, or a website checkout with no app at all. SMS order-confirmation and delivery-update alerts reach every buyer regardless of which app (if any) they used to purchase, which is why most D2C and marketplace sellers run SMS as their baseline order-communication channel.",
           },
         },
         {
@@ -91,7 +91,7 @@ const schema = {
           name: "Can ecommerce brands send checkout OTPs by SMS at scale?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes — checkout and login OTPs are high-volume, latency-sensitive transactional SMS, and Get Click Media routes them over direct operator connections for fast, reliable delivery even during flash-sale traffic spikes when OTP volume can jump sharply within minutes.",
+            text: "Yes- checkout and login OTPs are high-volume, latency-sensitive transactional SMS, and Get Click Media routes them over direct operator connections for fast, reliable delivery even during flash-sale traffic spikes when OTP volume can jump sharply within minutes.",
           },
         },
       ],
@@ -154,7 +154,7 @@ const PERFORMANCE_DATA = [
 
 const CAPABILITIES = [
   { icon: Database, title: "Ecommerce platform integration", desc: "Native plugins and API integration with Shopify, WooCommerce, Magento, and custom checkout stacks" },
-  { icon: ShieldCheck, title: "DLT-registered dual-route templates", desc: "Transactional templates for order and OTP alerts, promotional templates for cart recovery and offers — both DLT-registered" },
+  { icon: ShieldCheck, title: "DLT-registered dual-route templates", desc: "Transactional templates for order and OTP alerts, promotional templates for cart recovery and offers- both DLT-registered" },
   { icon: Globe, title: "PAN-India delivery network", desc: "Multi-operator routing for consistent delivery to buyers across metro and Tier 2/3 pin codes" },
   { icon: Clock, title: "Flash-sale-ready OTP routing", desc: "Direct operator connectivity built to handle sharp OTP volume spikes during sale events without delivery lag" },
   { icon: Bell, title: "Logistics partner webhooks", desc: "Real-time integration with courier and 3PL tracking APIs for shipped, out-for-delivery, and delivered triggers" },
@@ -164,7 +164,7 @@ const CAPABILITIES = [
 const FAQS = [
   {
     q: "How does SMS reduce COD order return rates for ecommerce?",
-    a: "A COD confirmation SMS sent right after checkout — asking the customer to reply or click a link to confirm the order — filters out fake, mistaken, or impulse COD orders before they enter the fulfilment pipeline. Sellers running COD confirmation SMS see fewer RTO (return-to-origin) shipments, since unconfirmed orders can be flagged or held before a courier is dispatched.",
+    a: "A COD confirmation SMS sent right after checkout- asking the customer to reply or click a link to confirm the order- filters out fake, mistaken, or impulse COD orders before they enter the fulfilment pipeline. Sellers running COD confirmation SMS see fewer RTO (return-to-origin) shipments, since unconfirmed orders can be flagged or held before a courier is dispatched.",
   },
   {
     q: "Is cart abandonment SMS allowed under Indian SMS regulations?",
@@ -172,11 +172,11 @@ const FAQS = [
   },
   {
     q: "Why use SMS for order updates when the marketplace app already sends notifications?",
-    a: "Not every ecommerce buyer has the seller's own app installed — many shop through marketplaces, WhatsApp catalogues, or a website checkout with no app at all. SMS order-confirmation and delivery-update alerts reach every buyer regardless of which app (if any) they used to purchase, which is why most D2C and marketplace sellers run SMS as their baseline order-communication channel.",
+    a: "Not every ecommerce buyer has the seller's own app installed- many shop through marketplaces, WhatsApp catalogues, or a website checkout with no app at all. SMS order-confirmation and delivery-update alerts reach every buyer regardless of which app (if any) they used to purchase, which is why most D2C and marketplace sellers run SMS as their baseline order-communication channel.",
   },
   {
     q: "Can ecommerce brands send checkout OTPs by SMS at scale?",
-    a: "Yes — checkout and login OTPs are high-volume, latency-sensitive transactional SMS, and Get Click Media routes them over direct operator connections for fast, reliable delivery even during flash-sale traffic spikes when OTP volume can jump sharply within minutes.",
+    a: "Yes- checkout and login OTPs are high-volume, latency-sensitive transactional SMS, and Get Click Media routes them over direct operator connections for fast, reliable delivery even during flash-sale traffic spikes when OTP volume can jump sharply within minutes.",
   },
 ];
 
@@ -204,13 +204,13 @@ export default function BulkSmsForEcommercePage() {
           verification, and cart abandonment reminders with DLT-compliant bulk SMS built for
           Indian online sellers.{" "}
           <strong className="text-gray-900">
-            Get Click Media connects bulk SMS to your ecommerce platform and logistics partners —
+            Get Click Media connects bulk SMS to your ecommerce platform and logistics partners-
             cutting COD returns and 'where is my order' support tickets.
           </strong>
         </>
       }
       heroImage="/images/bulk-sms/small_Covering_All_Your_SMS_Needs_Be_It_Promotional_Or_Transactional_85a655ff7b.webp"
-      heroImageAlt="Bulk SMS for Ecommerce — order and delivery alert dashboard"
+      heroImageAlt="Bulk SMS for Ecommerce- order and delivery alert dashboard"
       heroTrustLine="TRAI DLT registered · Ecommerce platform integration · Logistics partner webhooks · 99.9% uptime"
       stats={[
         { value: "99.9%", label: "SMS delivery uptime" },
@@ -223,12 +223,12 @@ export default function BulkSmsForEcommercePage() {
           Bulk SMS for ecommerce automates order confirmations, checkout OTPs, shipping and
           delivery updates, COD verification, and cart abandonment reminders for online buyers.{" "}
           <strong className="text-gray-900">Get Click Media integrates bulk SMS with Shopify, WooCommerce, and courier tracking APIs</strong>{" "}
-          in India — reducing COD return rates and order-status support volume.
+          in India- reducing COD return rates and order-status support volume.
         </>
       }
       insightCallout={
         <>
-          Ecommerce buyers in India span every kind of shopper — app users, marketplace
+          Ecommerce buyers in India span every kind of shopper- app users, marketplace
           browsers, and COD-first buyers who've never entered a card number online. SMS is the
           one channel that reaches every one of them at each order milestone, without depending
           on which app or platform they used to check out.
@@ -238,7 +238,7 @@ export default function BulkSmsForEcommercePage() {
       whyIndustryParagraphs={[
         <>
           Cash-on-delivery still accounts for a large share of Indian ecommerce orders, which
-          means order confirmation can't be assumed — it has to be verified. A quick COD
+          means order confirmation can't be assumed- it has to be verified. A quick COD
           confirmation SMS catches fake and mistaken orders before a courier is dispatched,
           directly cutting the return-to-origin shipments that erode seller margins.
         </>,
@@ -253,7 +253,7 @@ export default function BulkSmsForEcommercePage() {
         <>
           💡 <strong>Key insight:</strong> Sellers running a COD confirmation SMS step before
           dispatch consistently see lower RTO rates than sellers who ship every COD order as
-          placed — because unconfirmed or accidental orders get caught before they cost a courier
+          placed- because unconfirmed or accidental orders get caught before they cost a courier
           run.
         </>
       }
@@ -266,7 +266,7 @@ export default function BulkSmsForEcommercePage() {
             </>
           ),
           description:
-            "Manage every buyer touchpoint — checkout OTPs, order confirmations, COD verification, shipping updates, and cart recovery — from a single SMS dashboard connected to your store and logistics partners.",
+            "Manage every buyer touchpoint- checkout OTPs, order confirmations, COD verification, shipping updates, and cart recovery- from a single SMS dashboard connected to your store and logistics partners.",
           bullets: [
             "Triggered SMS from platform order events",
             "COD confirmation before dispatch",
@@ -274,7 +274,7 @@ export default function BulkSmsForEcommercePage() {
             "Real-time delivery and read-rate reports",
           ],
           image: "/images/bulk-sms/bulk-sms-service-provider-india-hero.webp",
-          imageAlt: "Bulk SMS dashboard for ecommerce — order, OTP, and delivery alerts",
+          imageAlt: "Bulk SMS dashboard for ecommerce- order, OTP, and delivery alerts",
         },
         {
           eyebrow: "Delivery Update Automation",
@@ -284,7 +284,7 @@ export default function BulkSmsForEcommercePage() {
             </>
           ),
           description:
-            "Every order triggers a shipped alert, an out-for-delivery notice on delivery day, and a delivered confirmation — each with a live tracking link — so customers stop messaging support to ask where their order is.",
+            "Every order triggers a shipped alert, an out-for-delivery notice on delivery day, and a delivered confirmation- each with a live tracking link- so customers stop messaging support to ask where their order is.",
           bullets: [
             "Shipped confirmation with tracking link",
             "Delivery-day heads-up SMS",
@@ -296,7 +296,7 @@ export default function BulkSmsForEcommercePage() {
           imageSide: "left",
         },
       ]}
-      useCasesTitle="Bulk SMS Use Cases for Ecommerce — 6 Automations"
+      useCasesTitle="Bulk SMS Use Cases for Ecommerce- 6 Automations"
       useCases={USE_CASES}
       performanceData={PERFORMANCE_DATA}
       capabilitiesTitle="Get Click Media's Bulk SMS Capabilities for Ecommerce"

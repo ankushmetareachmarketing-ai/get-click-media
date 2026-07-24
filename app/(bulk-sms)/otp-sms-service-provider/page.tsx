@@ -28,7 +28,7 @@ export const metadata = {
         url: "https://getclickmedia.com/images/bulk-sms/bulk-sms-service-provider-india-hero.webp",
         width: 1200,
         height: 630,
-        alt: "OTP SMS Service Provider in India — Get Click Media",
+        alt: "OTP SMS Service Provider in India- Get Click Media",
       },
     ],
   },
@@ -129,7 +129,7 @@ export default function OtpSmsPage() {
         eyebrow="OTP SMS Services"
         title="Best OTP SMS Service Provider in India"
         highlight="OTP SMS Service Provider"
-        description="Deliver one-time passwords in under 3 seconds. Transactional route bypasses DND filters — every user gets their OTP, every time, with 99.9% delivery uptime."
+        description="Deliver one-time passwords in under 3 seconds. Transactional route bypasses DND filters- every user gets their OTP, every time, with 99.9% delivery uptime."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "OTP SMS Service Provider in India" },
@@ -137,7 +137,7 @@ export default function OtpSmsPage() {
         primaryCta="Request a Demo"
         secondaryCta="Explore OTP Plans"
         imageSrc="/images/otp-sms/best-otp-sms-service-provider-india.webp"
-        imageAlt="OTP SMS Service Provider in India — Get Click Media platform dashboard"
+        imageAlt="OTP SMS Service Provider in India- Get Click Media platform dashboard"
       />
       <BulkSmsBrandsStrip />
 
